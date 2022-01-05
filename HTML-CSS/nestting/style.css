@@ -1,0 +1,15 @@
+.wrapper{
+    background-color: rgb(209, 205, 205);
+    width: 400px;
+    border:2px dashed black;
+    margin: auto;
+    color: yellow;
+}
+
+.wrapper img{
+    width: 100%;
+}
+
+.wrapper p{
+    font-style: italic;
+}

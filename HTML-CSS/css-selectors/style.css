@@ -1,0 +1,19 @@
+h1{
+    color: rgb(6, 221, 221)
+}
+p{
+    color:rgb(255, 0, 0);
+}
+
+.italic_under{
+    font-style:italic ;
+    text-decoration: underline;
+}
+
+.rotate{
+    transform: rotate(3deg);
+}
+
+#theHeader{
+    font-size:5rem;
+}
