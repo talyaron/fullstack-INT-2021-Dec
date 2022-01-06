@@ -1,0 +1,29 @@
+#a{
+    width: 400px;
+    margin: auto;
+    border-style: solid;
+}
+.a{
+    display: flex;
+    margin: auto;
+
+    }
+.a img{
+    border-radius: 50%;
+    width: 5mm;
+    height: 10mm;
+    margin: 2mm;
+}
+#b{
+  width: 800px;  
+}
+.c{
+    display: flex;
+    border-radius: 50%;
+    width: 5mm;
+    height: 10mm;
+    margin: 2mm;
+}
+#c{
+    color: gray;
+}
