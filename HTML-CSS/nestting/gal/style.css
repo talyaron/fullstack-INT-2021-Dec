@@ -1,0 +1,37 @@
+body{
+    display: flex;
+    align-items: stretch;
+}
+h1{
+    color: black;
+}
+p{
+    color: black;
+
+}
+
+
+.wrapper{
+        background-color: whitesmoke;
+        width: 400px;
+        border:2px dashed black;
+        margin: auto;
+        color: yellow;
+    }
+    
+    .wrapper img{
+        width: 100%;
+    }
+    
+    .wrapper p {
+        font-style: normal;
+    }
+
+
+
+.wrapper img{
+    width: 100%;
+    background-color: wheat
+    
+}
+
