@@ -60,3 +60,21 @@ font-weight: bold;
     font: italic;
 }
 
+textarea{
+    resize: none;
+}
+#emojis{
+
+    height: auto;
+    width: 30px;
+}
+.text-area{
+    display: flex;
+    align-items: center;
+}
+button{
+color: rgb(8, 121, 121);
+    height: 41px;
+    background-color: white;
+ 
+}
