@@ -5,15 +5,15 @@
     align-items: center;
     margin: auto;
     display: grid;
-    height: 50cm;
-  
+    height: 55cm;
+  background-color: black;
 }
       
 .items{
 background: rgb(255, 255, 255);
 border-style: outset;
 box-shadow: 2px 2px 5px black;
-height: 600px;
+height: 660px;
 
 }
 
@@ -59,3 +59,4 @@ font-weight: bold;
     color: gray;
     font: italic;
 }
+
