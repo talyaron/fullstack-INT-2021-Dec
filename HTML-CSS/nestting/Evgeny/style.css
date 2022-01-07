@@ -5,10 +5,10 @@
     align-items: center;
     margin: auto;
     display: grid;
-    
-   background: rgb(0, 0, 0);
+    height: 50cm;
+  
 }
-    
+      
 .items{
 background: rgb(255, 255, 255);
 border-style: outset;
