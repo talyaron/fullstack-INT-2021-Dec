@@ -1,7 +1,9 @@
 #a{
     width: 400px;
-    margin: auto;
+    margin: 2mm auto;
     border-style: solid;
+    flex-direction: column;
+    align-items: center;
 }
 .a{
     display: flex;
@@ -14,8 +16,8 @@
     height: 10mm;
     margin: 2mm;
 }
-#b{
-  width: 800px;  
+#b img{
+  width: 400px;  
 }
 .c{
     display: flex;
