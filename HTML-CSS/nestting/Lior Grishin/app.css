@@ -1,0 +1,218 @@
+@font-face {
+    font-family: SegoeUI;
+    src:
+        local("Segoe UI Light"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.woff2) format("woff2"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.woff) format("woff"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/light/latest.ttf) format("truetype");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: SegoeUI;
+    src:
+        local("Segoe UI Semilight"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.woff2) format("woff2"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.woff) format("woff"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.ttf) format("truetype");
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: SegoeUI;
+    src:
+        local("Segoe UI"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff2) format("woff2"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff) format("woff"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.ttf) format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: SegoeUI;
+    src:
+        local("Segoe UI Bold"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.woff2) format("woff2"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.woff) format("woff"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/bold/latest.ttf) format("truetype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: SegoeUI;
+    src:
+        local("Segoe UI Semibold"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.woff2) format("woff2"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.woff) format("woff"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.ttf) format("truetype");
+    font-weight: 700;
+}
+
+body{
+    font-size: 14px;
+    line-height: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-container{
+    border: 1px solid #dbdbdb;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.feed-title{
+    display: flex;
+    height: 69px;
+    width: 600px;
+    align-items: center;
+}
+
+.user-picture img{
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    padding: 15px;
+}
+
+.username-place span{
+    display: flex;
+}
+
+.username-name{
+    font-weight: 600;
+}
+
+.place-name{
+    font-size: 12px;
+}
+
+.svg-holder{
+    width: 40px;
+    height: 40px;
+    background: 0;
+    border: 0;
+}
+
+.more-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    padding-right: 5px;
+}
+
+.feed-picture img{
+    width: 600px;
+    height: 700px;
+}
+
+.icon-feedback-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.liked-profile-icon{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline;
+}
+
+.feedback-container{
+    display: flex;
+    flex-direction: column;
+    padding-right: 15px;
+    padding-left: 15px;
+    line-height: 22px;
+}
+
+.likes-line-holder{
+    display: flex;
+    align-items: center;
+}
+
+.likes-profile-icons-holder{
+    display: flex;
+    margin-right: 5px;
+}
+
+.feedback-container a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.feed-description-holder{
+    display: flex;
+    flex-direction: column;
+}
+
+.user-feed-description{
+    display: flex;
+    flex-direction: column;
+}
+
+.other-comments{
+    display: flex;
+    flex-direction: column;
+}
+
+.like-comment{
+    display: flex;
+    align-items: center;
+}
+
+#all-comments{
+    color: #8e8e8e;
+    font-weight: 400;
+}
+
+.time-passed-post{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.time-passed{
+    text-transform: uppercase;
+    color: #8e8e8e;
+    font-size: 10px;
+}
+
+.new-comment{
+    margin-bottom: 10px;
+    border: 1px solid #dbdbdb;
+}
+
+.add-new-comment{
+    display: flex;
+    align-items: center;
+}
+
+textarea{
+    resize: none;
+    border: none;
+    width: 480px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+
+button{
+    background: 0;
+    border: 0;
+    color: #0095f6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
