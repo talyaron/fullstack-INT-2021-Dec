@@ -6,14 +6,15 @@
     margin: auto;
     display: grid;
     height: 55cm;
-  background-color: moccasin;
+    background-color: moccasin;
+    
 }
 #sitename {
     font-size: 2.5rem;
     text-align: center;
     padding: 1rem;
     font-family: 'Lobster', cursive;
-    background-color: moccasin;
+    
     width: 650px;
     margin: 0 auto;
 }
