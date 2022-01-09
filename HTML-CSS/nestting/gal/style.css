@@ -18,7 +18,10 @@
     width: 650px;
     margin: 0 auto;
 }
-
+.footer{
+    text-align: center;
+    font-style: italic;
+}
 .fab {
     font-weight: 600;
 }
@@ -112,6 +115,8 @@ color: rgb(8, 121, 121);
 .location{
    display: flex;
    flex-direction: column;
+   position: relative;
+   left: 40px;
 }
 .img{
     display: flex;
