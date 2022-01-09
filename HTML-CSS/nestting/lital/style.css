@@ -97,9 +97,7 @@
     opacity: 0.8;
 }
 
-.writecomment:focus {
-    outline: 0;
-}
+
 
 .postbutton {
     margin: 0 2rem 0 auto;
