@@ -1,0 +1,52 @@
+.instapic img{
+    width: 1250px;
+    height: 55px;
+    border: 0.1px solid gray;
+    left: 6px;
+    margin-top: 0em;
+}
+.wrapper img{
+    background-color: whitesmoke;
+    width: 800px;
+    height:45px;
+}
+.picture img{
+    background-color: whitesmoke;
+    width: 800px;
+    height: 400px;
+    display: block;
+}
+.footer img{
+    width: 800px;
+    height: 150px;
+    display: block; 
+}
+#text{
+    display: flex;
+    height:50px;
+    align-items: center;
+    width:50px;
+    border: 0.05px solid rgb(241, 233, 233)
+
+}
+#text img{
+    width: 25px;
+    border:none;
+}
+#text p{
+    width:20em;
+    font-size: 1rem;
+    text-align:left;
+    padding: 3rem;
+    font-family: 'David';
+    color:grey;
+}
+#text h1{
+    font-size: 1rem;
+    text-align:right;
+    width:325px;
+    font-family: 'Lobster';
+    color:royalblue;
+}.spaceholder{
+    height: 30px;
+}

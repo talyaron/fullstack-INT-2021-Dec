@@ -6,22 +6,9 @@
     margin: auto;
     display: grid;
     height: 55cm;
-    background-color: moccasin;
-    
+  background-color: black;
 }
-#sitename {
-    font-size: 2.5rem;
-    text-align: center;
-    padding: 1rem;
-    font-family: 'Lobster', cursive;
-    
-    width: 650px;
-    margin: 0 auto;
-}
-
-.fab {
-    font-weight: 600;
-}
+      
 .items{
 background: rgb(255, 255, 255);
 border-style: outset;
@@ -46,13 +33,12 @@ border-radius: 2%;
 #like-bar{
 height: auto;
     width: 30px;
-    margin: 5px;
 
 
 }
 
 #like-bar2{
-    margin: right 5px;;
+    margin-right:0;
     margin-left: auto ;
     
    
@@ -65,7 +51,6 @@ height: auto;
 #name{
     font: serif ;
 font-weight: bold;
-
 }
 
 #views{
@@ -90,7 +75,7 @@ textarea{
 }
 button{
 color: rgb(8, 121, 121);
-    height: 22px;
+    height: 41px;
     background-color: white;
  
 }
@@ -99,22 +84,8 @@ color: rgb(8, 121, 121);
 
 .p{
     margin: 5px;
-    font: serif ;
-    font-weight: bold;
-   
-    
 }
 
 .like-bar{
     display: flex;
-}
-
-.location{
-   display: flex;
-   flex-direction: column;
-}
-.img{
-    display: flex;
-    flex-direction: column;
-    width: 500px;
 }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/202bcec69b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="container">
+      <div class="header" id="myHeader">
+      <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="left" srcset="">
+      <div class="topright">
+        <i class="far fa-plus-square"></i>  
+        <i class="far fa-heart"></i>
+        <i class="fab fa-facebook-messenger"></i>
+      </div>
+    </div>   
+    </div>
+    
+    <div class="story-container"> 
+    <img src="https://i.pinimg.com/originals/6c/e5/40/6ce540cbce050b9191a9b6ae0215b80c.jpg">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHCTdDG318r11khv2kHT4y0hrVoFl3AbaurcCQsQaKkb9FGi4hsocKqePIwmekiKPBy2w&usqp=CAU" alt="" srcset="">
+    <img src="https://i.pinimg.com/originals/5c/52/61/5c5261fdb032912098f2d853ec807bca.jpg">
+    <img src="https://i.pinimg.com/originals/8d/02/75/8d0275880ed962c8eb21a5f9cc498514.jpg">
+    <img src="https://i.pinimg.com/236x/ef/7b/2c/ef7b2c104c7de9451e4e8aae5862f9bc--minecraft-pixel-craft-patterns.jpg">
+    <img src="https://i.pinimg.com/originals/6c/e5/40/6ce540cbce050b9191a9b6ae0215b80c.jpg">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHCTdDG318r11khv2kHT4y0hrVoFl3AbaurcCQsQaKkb9FGi4hsocKqePIwmekiKPBy2w&usqp=CAU" alt="" srcset="">
+    <img src="https://i.pinimg.com/originals/5c/52/61/5c5261fdb032912098f2d853ec807bca.jpg">
+    <img src="https://i.pinimg.com/originals/8d/02/75/8d0275880ed962c8eb21a5f9cc498514.jpg">
+    <img src="https://i.pinimg.com/236x/ef/7b/2c/ef7b2c104c7de9451e4e8aae5862f9bc--minecraft-pixel-craft-patterns.jpg">
+    <img src="https://i.pinimg.com/originals/6c/e5/40/6ce540cbce050b9191a9b6ae0215b80c.jpg">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHCTdDG318r11khv2kHT4y0hrVoFl3AbaurcCQsQaKkb9FGi4hsocKqePIwmekiKPBy2w&usqp=CAU" alt="" srcset="">
+    <img src="https://i.pinimg.com/originals/5c/52/61/5c5261fdb032912098f2d853ec807bca.jpg">
+
+    </div>
+
+    <div class="story1">
+      <img src="https://i.pinimg.com/474x/eb/f6/88/ebf68862fe9ec9d457cef3f484719d32--knitting-ideas-knitting-patterns.jpg" alt="">
+          <h2>תלמדו כיצד לאמן</h2>
+          <p>באמצעות מכשור מתקדם
+              <br>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint veniam maxime quidem illo itaque eos impedit qui adipisci eaque repellat dolorum, blanditiis officiis, quis magni error tenetur. Nostrum, nihil error.
+          </p>
+      </div>
+  
+      <div class="story1">
+          <img src="https://i.pinimg.com/236x/7a/4e/07/7a4e071596229da0037471f925f9d59f--project-mc-hermione-granger.jpg" alt="" srcset="">
+          <h2>תלמדו חומר עיוני</h2>
+          <p>שיהפוך אתכם למאמנים טובים יותר!
+              <br>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, esse? Reprehenderit, cumque fuga modi sequi vel a cupiditate reiciendis corrupti temporibus quibusdam omnis alias qui molestiae aliquam iste unde! Voluptatem!
+          </p>
+      </div>
+  
+      <div class="story1">
+          <img src="https://i.pinimg.com/236x/01/3c/eb/013ceb2f43faae29ebdffb89c478d84e--harry-potter-perler-beads-harry-potter-crochet.jpg">
+          <h2>תסיימו את הלימודים עם תעודה של מאמני כושר</h2>
+          <p>איתה תוכלו לעבוד בחוץ!
+              <br>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, esse? Reprehenderit, cumque fuga modi sequi vel a cupiditate reiciendis corrupti temporibus quibusdam omnis alias qui molestiae aliquam iste unde! Voluptatem!
+          </p>
+      </div>
+
+<script>
+
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {myFunction()};
+    
+    // Get the header
+    var header = document.getElementById("myHeader");
+    
+    // Get the offset position of the navbar
+    var sticky = header.offsetTop;
+    
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+</script>
+
+    
+</body>
+</html>
