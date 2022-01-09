@@ -42,7 +42,38 @@
   }
 .wrapper img{
     width: 200px;
+    height: 250px
+    grid-column: auto;   
 }
 .wrapper p{
 font-style: italic;
 }
+#post1{
+  width: 200px;
+  height:285px;
+border: 2px solid black;
+}
+#post2{
+  width: 200px;
+  height: 270px;
+border: 2px solid black;
+}
+#post3{
+  width: 200px;
+  height:200px;
+border: 2px solid black;
+}
+#comment1{
+  border: 2px solid black;
+  width: 200px;
+  height: 35px;
+}
+#comment2{
+  border: 2px solid black;
+  width: 200px;
+  height: 35px;
+}
+#comment3{
+  border: 2px solid black;
+  width: 200px;
+  height: 35px;
