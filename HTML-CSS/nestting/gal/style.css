@@ -117,6 +117,7 @@ color: rgb(8, 121, 121);
    flex-direction: column;
    position: relative;
    left: 40px;
+   line-height: 1em ;
 }
 .img{
     display: flex;
