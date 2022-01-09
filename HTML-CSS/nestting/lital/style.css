@@ -70,5 +70,32 @@
 }
 .border{
     padding: 15px;
+    margin-bottom: 80px;
 }
+
+.comment h5{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    color: rgb(0, 0, 0);
+    font-size: 14px;  
+  position: absolute;
+  left: 480px;
+  margin-top: 5px;
+} 
+.post h6{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    color: rgba(44, 80, 241, 0.61);
+    font-size: 14px;  
+  margin-left: 530px;
+  margin-top: 30px;
+}
+.comment svg{
+
+    position: absolute;
+}
+
+
+
+
 

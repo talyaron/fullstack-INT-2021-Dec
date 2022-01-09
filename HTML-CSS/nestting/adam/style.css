@@ -1,0 +1,79 @@
+.body{
+    background-color: white
+}
+.insta {  
+   width: 150px;  
+   height: 150px;  
+   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);  
+   border-radius: 35px;  
+   display: grid;  
+   place-items: center;  
+ }   .innerbox::before {  
+    content: '';  
+    width: 45px;  
+    height: 45px;  
+    border: 10px solid #fff;  
+    border-radius: 50%;  
+    background: transparent;  
+    position: absolute;  
+  }   
+  .innerbox::after {  
+    content: '';  
+    width: 10px;  
+    height: 10px;  
+    border: 2px solid #fff;  
+    border-radius: 50%;  
+    background: #fff;  
+    position: absolute;  
+    top: 8px;  
+    right: 10px;  
+  }  
+
+.wrapper{
+    background-color: white;
+    border: 2px dashed black;
+    border-style: ridge;
+    width: 500px;
+    height: 50%;
+    overflow: hidden;
+    border: 0px solid black;
+    margin: 50px auto;
+    padding: 10px;
+  }
+.wrapper img{
+    width: 200px;
+    height: 250px
+    grid-column: auto;   
+}
+.wrapper p{
+font-style: italic;
+}
+#post1{
+  width: 200px;
+  height:285px;
+border: 2px solid black;
+}
+#post2{
+  width: 200px;
+  height: 270px;
+border: 2px solid black;
+}
+#post3{
+  width: 200px;
+  height:200px;
+border: 2px solid black;
+}
+#comment1{
+  border: 2px solid black;
+  width: 200px;
+  height: 35px;
+}
+#comment2{
+  border: 2px solid black;
+  width: 200px;
+  height: 35px;
+}
+#comment3{
+  border: 2px solid black;
+  width: 200px;
+  height: 35px;
