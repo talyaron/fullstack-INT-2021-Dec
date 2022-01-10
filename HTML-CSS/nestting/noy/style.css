@@ -1,8 +1,49 @@
-.html{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+html{
+    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
 }
-.header{
+body{
+    width: 100%;
+    margin: auto;
+    background-color: #fafafa;
+}
+header{
+    margin: 0;
     position: sticky;
-    font-size: 50px;
+    top: 0;
+    font-size: 1.5rem;
+    background-color: #ffffff;
+    display: flex;
+    width: 100%;
+}
+header div{
+    justify-content: space-evenly;
+}
+header img{
+    width: 10rem;
+    margin: 1rem;
+    align-self: right;
+}
+header i{
+    padding: 5px;
+    text-align: right;
+}
+main{
+    width: 100%;
+    max-width: 500px;
+    background-color: #ffffff;
+    margin: auto;
+}
+.postImg img{
+    display: block;
+    width: 100%;
+}
+.userName{
+    font-weight: bold;
+}
+.profilePic{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: inline;
 }
