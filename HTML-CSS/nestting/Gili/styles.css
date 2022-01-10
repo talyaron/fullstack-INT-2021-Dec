@@ -38,6 +38,20 @@
 
 }
 
+.fa-comment {
+  color: black;
+  padding: 5px;
+  font-size: 30px;
+
+}
+
+.fa-paper-plane {
+  color: black;
+  padding: 5px;
+  font-size: 30px; 
+}
+
+
 .fa-facebook-messenger {
     color: black;
     padding: 5px;
@@ -83,7 +97,13 @@
   border: 3px solid rgb(211, 23, 86) ;
   padding: 2px;
   margin: 10px;
-
-
 }
 
+.comments {
+  color: gray;
+}
+
+.time {
+    color: gray;
+    font-size: smaller;
+}
