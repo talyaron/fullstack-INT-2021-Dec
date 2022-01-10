@@ -64,10 +64,12 @@ height: auto;
 }
 .person{
     display: flex;
+    line-height: 0.1em;
 }
 #name{
     font: serif ;
 font-weight: bold;
+line-height: 0.1em;
 
 }
 
