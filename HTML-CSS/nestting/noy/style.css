@@ -61,6 +61,7 @@ main{
     border-bottom: #f0f0f0 1px solid;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .postHeader i{
     margin: 25px;
@@ -74,7 +75,8 @@ main{
 .postHeader div{
     display: flex;
     flex-direction: row;
-}
+    align-items: center;
+} 
 
 .profilePic{
     height: 50px;
