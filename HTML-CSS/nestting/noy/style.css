@@ -1,54 +1,83 @@
 html{
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
+    background-color: #fafafa;
 }
+
 body{
     width: 100%;
     margin: auto;
-    background-color: #fafafa;
 }
+
 header{
     margin: 0;
     position: sticky;
     top: 0;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     background-color: #ffffff;
+    width: 100%;
+    border-bottom: #f0f0f0 1px solid;
     display: flex;
     justify-content:space-between;
     flex-direction: row;
-    width: 100%;
 }
+
+.headBar{
+    display: flex;
+    justify-content:right;
+    flex-direction: row;
+}
+
 header img{
     width: 10rem;
-    margin: 1rem;
-    align-self: right;
+    margin: 1.5rem;
 }
+
 header i{
-    padding: 25px 10px;
+    padding: 20px 10px;
     text-align: right;
 }
+
 main{
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     background-color: #fafafa;
-    margin: auto;
+    margin: 10px auto;
 }
+
 .post{
     border: #f0f0f0 1px solid;
     border-radius: 3px;
     margin-bottom: 1rem;
     background-color: #ffffff;
 }
+
 .postImg img{
     display: block;
     width: 100%;
 }
+
 .postHeader{
     border-bottom: #f0f0f0 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+.postHeader i{
+    margin: 25px;
+}
+
 .userName{
-    font-weight:600;
+    font-weight: 600;
+    padding: 8px 10px;
 }
+
+.postHeader div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+} 
+
 .profilePic{
     height: 50px;
     width: 50px;
@@ -56,36 +85,52 @@ main{
     display: inline;
     margin:10px;
 }
-.userName{
-    padding: 8px 10px;
+
+.headBar .profilePic{
+    padding-top: 5px;
+    width: 30px;
+    height: 30px;
 }
+
 .likes{
     display: block;
     font-weight: 600;
     padding: 8px 10px;
 }
+
 .time{
     color:#adb5bf;
     font-size: 0.8rem;
     display: block;
     padding: 10px;
 }
+
 .comment{
     color:#adb5bf;
     display: block;
     padding: 8px 10px;
 }
+
 .postImg i{
     font-size: 2rem;
     padding: 10px;
 }
+
 .addComment i{
     font-size: 2rem;
     padding: 10px;
 }
+
 .addComment{
     border-top: #f0f0f0 1px solid;
 }
+
 .addComment span{
     color:#adb5bf;
+    padding-bottom: 15px;
+}
+
+.imgIcons{
+    display: flex;
+    justify-content: space-between;
 }
