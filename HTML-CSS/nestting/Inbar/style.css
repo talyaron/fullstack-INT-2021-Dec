@@ -1,0 +1,23 @@
+body{
+    background: lightgray;
+    margin: 0;
+}
+header{
+    background: white
+}
+header h1{
+    margin: 0;
+}
+div.Post{
+    background: white;
+}
+div.Post img{
+    width: 100%;
+}
+div.Post h2, div.Post p{
+    padding: 10px;
+}
+div.Container{
+    width: 600px;
+    margin: auto;
+}
