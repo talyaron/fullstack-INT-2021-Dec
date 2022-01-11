@@ -79,15 +79,16 @@ main{
 } 
 
 .profilePic{
-    height: 50px;
-    width: 50px;
+    border: #f0f0f0 1px solid;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     display: inline;
     margin:10px;
 }
 
 .headBar .profilePic{
-    padding-top: 5px;
+    margin-top: 15px;
     width: 30px;
     height: 30px;
 }
@@ -123,11 +124,18 @@ main{
 
 .addComment{
     border-top: #f0f0f0 1px solid;
+    display: flex;
+    align-items: center;
 }
 
+.addComment input{
+    border: 0;
+    width: 85%;
+    height: 30px;
+}
 .addComment span{
-    color:#adb5bf;
-    padding-bottom: 15px;
+    color: #bce0f6;
+    font-weight: 600;
 }
 
 .imgIcons{
