@@ -2,7 +2,7 @@
 #first{
 float: left;
 }
-#round{
+#profilepic{
     width: 80px;
     border-radius: 40px;   
 }
@@ -10,11 +10,17 @@ h2{
     font-family: 'Qwitcher Grypen', cursive;
     font-size: 35px;
 }
-#highlights{
-    width: 60px;
-    border-radius: 20px;
-    margin-left: 20px;
+.highlights{
+    width: 500px;
+    margin: auto;
+   
 }
+.highlights img{
+    width: 16%;
+    border-radius: 50%;
+    
+}
+
 .upper{
     width: 500px;
     margin:auto;
@@ -23,4 +29,10 @@ h2{
     width: 100%;
     margin: auto;
 }
-
+.pic{
+    width: 600px;
+    margin:auto;
+}
+.pic img{
+    width: 100%;
+}
