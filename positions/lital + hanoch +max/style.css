@@ -1,0 +1,20 @@
+.box1{
+    width: 100vw;
+    height: 50px;
+    background-color: red;
+    position: fixed;
+
+}
+.title img{
+    position: absolute;
+    top: 0ch;
+    right: 0ch;
+    width: 50px;
+}
+.title{
+    top: 50px;
+    height: 75px;
+    width: 100vw;
+    background-color: black;
+position: sticky;
+}
