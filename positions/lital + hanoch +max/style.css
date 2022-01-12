@@ -3,9 +3,10 @@
     height: 50px;
     background-color: red;
     position: fixed;
+    
 }
 .box1 img{
-    position: absolute;
+    position: fixed;
     top: 0ch;
     right: 0ch;
     width: 50px;
