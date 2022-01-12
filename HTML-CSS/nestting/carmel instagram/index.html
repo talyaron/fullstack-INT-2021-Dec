@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header" id="instaheader">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6eIAI3vPny47MZsr1B56PGjwLI-VQYG0DCQ&usqp=CAU" alt="">
+        <div class="icons">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAYFBMVEX///8AAAAwMDAODg77+/s6Ojrv7+9GRkZsbGyYmJjGxsatra00NDQnJyf29vY+Pj5PT09mZmbCwsLg4OB8fHyMjIyfn5+NjY2GhoZFRUVbW1ttbW0XFxfx8fFYWFhnZ2fOV9kqAAADt0lEQVR4nO2d63KCMBBGUREUVPBSq7Wt7/+WndaxY5sV2GRx1/Cd385OjpAlF8ImCQAAAAAAAAAAAAAAAAAAwNNSlLu6WowfzaKqd2XRu122n450me6zHv2KN2W9C5+bvvxybbVfjn3crdlaW+sPa/F7daOt5CB8qx60fQgOkoJnbRuStZxgre1yh1pK0FaOueUsI2ixD14R6Yv2sugtAhk103ZoIfy5aLcTXghOqIW2QSuhA7ijtkAreeyXMPQi2pguNfMWItiQSCeP5n5TQtLpng556n8xgaI40c3ZB8QklyyqrVibuWwrskEBEal4giN6Pin5ePaPR2XSkD9MAuoq+neakoimd4te2BJtKr2j7dxgJ8HG+jFzG7XzDkbMfHWy6C1E1/GfCRP3vGBTfXEb5Z8bFk9iuPCONXZiTQRb6os7uhl7x4KhDjDkAEMdYMgBhjrAkAMMdYAhBxjqAEMOMNTBuGGapaEhLBtm83z5vsznYTvThg1ffsO8hIQxa7i6fbUxX/kHMmv4993NgL1pq4bzf5Hm3pGMGrq7yd7pxqihu43lvWFk1NDdMZr5hjJq6L4j7p1rbBqm7hsBU9/BDQw5wLA7MOQAQw4w7A4MOcCQAwy7A0MOMOQAw+7AkAMMOfgapg4rwnDl/uwpDLNylk9d3GZNiF/ls7J9kVHZ8P/CL5/WpWJVw5XEZxfa9jRUDWW+K9Gyzqhp+CoiOBq9WjWUOzLcmG4UDcOzzJXGbKNoKPd1l8aeqGeYLsUMl03Pfj3Dj3cxw/cPk4bxX8P4++EAcmn8z8P4xzQDGJcOYG4R//wwGcAc/4e412loYltrc4EhBxhygGF3YMgBhhxg2B0YcoAhBxh2B4YcYMgBht2J3zD+MzMDOPcU/9k1d0+jaYuwEaOG8Z8hHcA54AGc5Y7/PH4ygG8qfBP5dzFkgCEHGOoAQw4w1AGGHGCoAww5wFAHGHKAoQ4w5BC/Yfw1SuKvMxN/rSCi3pP3jpEYovWe4q/ZRdZdC17vDCKVrbtG187TVJSunTeA+od3aljOlGpYEknmm5AalvHXIY2/luwA6gELnnzti8Cazk9wEYOzXvS11QUP9/ZD2I75Dxtth0Y24YJJctC2aOAgIZgkZ22Pu5xlBMmZsAn8Z74ONq+iaIVwi31RqA9esffkF8mit2S27tS19+upDRR2xqjHviaohY3J1GefE/BsT64jPJBqLzBOa6Eod3W1GD+aRVXvSv0FaQAAAAAAAAAAAAAAAAAAAG++AL9rTK0MM5/OAAAAAElFTkSuQmCC" alt="">
+            <img src="data:image/png;base64,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" alt="">
+            <img src="https://previews.123rf.com/images/djvstock/djvstock1703/djvstock170302599/73546259-bubble-chat-speakbox-icon-vector-illustration-graphic-design.jpg" alt="">
+        </div>
+    </div>
+    <div id="rapper">
+       
+        <div id="stories">
+
+        </div>
+        <div class="post">
+            <div class="header">
+                <img class="profilepic" src="IMG_4552.JPG" alt="">
+                <div class="wrapper">
+                    <p class="username">bobipilee223</p>
+                    <p class="location">some trashy place</p>
+                </div>
+               <img src="https://icon-library.com/images/android-three-dots-icon/android-three-dots-icon-9.jpg" alt="">
+            </div>
+            <img class="postpic" src="IMG_2111.JPG" alt="">
+            <div class="icons">
+                <img src="data:image/png;base64,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" alt="">
+                <img src="https://previews.123rf.com/images/djvstock/djvstock1703/djvstock170302599/73546259-bubble-chat-speakbox-icon-vector-illustration-graphic-design.jpg" alt="">
+                <img src="https://www.shareicon.net/data/2015/08/12/84013_sent_512x512.png" alt="">
+            </div>
+            <div class="dicription">
+                <p class="username">bobipilee223</p>
+                <p class="caption">look at this shit</p>
+            </div>
+            <p class="comments">view all 23 comments</p>
+
+        </div>
+
+        <div class="post">
+            <div class="header">
+                <img class="profilepic" src="IMG_2366.JPG" alt="">
+                <div class="wrapper">
+                    <p class="username">frootloops24</p>
+                    <p class="location">night school</p>
+                </div>
+               <img src="https://icon-library.com/images/android-three-dots-icon/android-three-dots-icon-9.jpg" alt="">
+            </div>
+            <img class="postpic" src="המצלמה שלי 1161.JPG" alt="">
+            <div class="icons">
+                <img src="data:image/png;base64,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" alt="">
+                <img src="https://previews.123rf.com/images/djvstock/djvstock1703/djvstock170302599/73546259-bubble-chat-speakbox-icon-vector-illustration-graphic-design.jpg" alt="">
+                <img src="https://www.shareicon.net/data/2015/08/12/84013_sent_512x512.png" alt="">
+            </div>
+            <div class="dicription">
+                <p class="username">frootloops24</p>
+                <p class="caption">look at this shit</p>
+            </div>
+            <p class="comments">view all 3 comments</p>
+
+        </div>
+
+        <div class="post">
+            <div class="header">
+                <img class="profilepic" src="IMG_2782.JPG" alt="">
+                <div class="wrapper">
+                    <p class="username">thefoodgogeter888</p>
+                    <p class="location">night school</p>
+                </div>
+               <img src="https://icon-library.com/images/android-three-dots-icon/android-three-dots-icon-9.jpg" alt="">
+            </div>
+            <img class="postpic" src="המצלמה שלי 1170.JPG" alt="">
+            <div class="icons">
+                <img src="data:image/png;base64,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" alt="">
+                <img src="https://previews.123rf.com/images/djvstock/djvstock1703/djvstock170302599/73546259-bubble-chat-speakbox-icon-vector-illustration-graphic-design.jpg" alt="">
+                <img src="https://www.shareicon.net/data/2015/08/12/84013_sent_512x512.png" alt="">
+            </div>
+            <div class="dicription">
+                <p class="username">thefoodgogeter888</p>
+                <p class="caption">look at this shit</p>
+            </div>
+            <p class="comments">view all 555 comments</p>
+
+        </div>
+
+        <div class="post">
+            <div class="header">
+                <img class="profilepic" src="IMG_2782.JPG" alt="">
+                <div class="wrapper">
+                    <p class="username">carmacookies69</p>
+                    <p class="location">shooping funtime</p>
+                </div>
+               <img src="https://icon-library.com/images/android-three-dots-icon/android-three-dots-icon-9.jpg" alt="">
+            </div>
+            <img class="postpic" src="IMG_4543.JPG" alt="">
+            <div class="icons">
+                <img src="data:image/png;base64,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" alt="">
+                <img src="https://previews.123rf.com/images/djvstock/djvstock1703/djvstock170302599/73546259-bubble-chat-speakbox-icon-vector-illustration-graphic-design.jpg" alt="">
+                <img src="https://www.shareicon.net/data/2015/08/12/84013_sent_512x512.png" alt="">
+            </div>
+            <div class="dicription">
+                <p class="username">carmacookies69</p>
+                <p class="caption">look at this shit</p>
+            </div>
+            <p class="comments">view all 9005 comments</p>
+
+        </div>
+
+
+
+    
+        <div id="menu">
+            <img src="instagram-bottom-banner-iconssddsd.png" alt="">
+        </div>
+    </div>
+</body>
+</html>
