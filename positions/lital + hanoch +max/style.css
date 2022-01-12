@@ -3,17 +3,20 @@
     height: 50px;
     background-color: red;
     position: fixed;
+
 }
-.box1 img{
+.title img{
     position: absolute;
-    top: 0ch;
-    right: 0ch;
+    top: -35px;
+    right: 0px;
     width: 50px;
+
+
 }
 .title{
     top: 50px;
     height: 75px;
     width: 100vw;
     background-color: black;
-
+position: sticky;
 }
