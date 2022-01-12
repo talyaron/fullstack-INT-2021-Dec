@@ -31,3 +31,7 @@ body {
     margin: auto;
     margin-top: 2rem;
 }
+
+img .logo {
+    width: 300px;
+}
