@@ -1,0 +1,6 @@
+.box1{
+    width: 100vw;
+    height: 50px;
+    background-color: red;
+    position: fixed;
+}
