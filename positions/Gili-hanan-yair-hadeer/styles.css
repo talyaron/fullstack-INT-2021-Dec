@@ -1,0 +1,17 @@
+.menured {
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    margin: 0%;
+  position: fixed;
+
+
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: gray;
+}
+
+
