@@ -3,6 +3,9 @@
     height: 50px;
     background-color: red;
     margin: 0%;
+  position: fixed;
+
+
 }
 
 .header {
@@ -10,3 +13,5 @@
     height: 100px;
     background-color: gray;
 }
+
+
