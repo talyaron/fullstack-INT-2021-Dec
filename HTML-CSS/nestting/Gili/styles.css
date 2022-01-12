@@ -5,7 +5,16 @@
     color: #f1f1f1;
     width: 200px;
     background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
+
+  .topright {
+    display: flex;
+    margin-right: 20px;
+   
+   }
   
   /* Page content */
   .content {
@@ -67,14 +76,7 @@
 
 }
 
-.topright {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-  font-size: 18px;
-  padding: 30px;
 
-}
 
 .story1 {
   width: 600px;
