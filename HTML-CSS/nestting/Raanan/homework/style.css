@@ -3,6 +3,8 @@
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    position: sticky;
+    top: 10px;
 }
 .post1{ 
     background-color: rgb(250, 249, 249);
