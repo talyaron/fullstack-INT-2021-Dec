@@ -4,3 +4,15 @@
     background-color: red;
     position: fixed;
 }
+.box1 img{
+    position: absolute;
+    top: 0ch;
+    right: 0ch;
+    width: 50px;
+}
+.title{
+    height: 75px;
+    width: 100vw;
+    background-color: black;
+    
+}
