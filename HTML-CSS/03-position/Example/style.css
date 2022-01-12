@@ -1,0 +1,29 @@
+.wrapper-parent{
+    background-color: whitesmoke;
+    padding: 40px;
+    width: 50ch;
+    margin: auto;
+}
+
+.wrapper{
+    background-color: wheat;
+    padding: 20px;
+    margin: auto;
+    max-width: 35ch;
+}
+
+.box{
+    background-color: blueviolet;
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+    position: relative;
+    border:1px solid black;
+}
+
+.move{
+    background: burlywood;
+    position: relative;
+    top:10px;
+    left: 10px;
+}
