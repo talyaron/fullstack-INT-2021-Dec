@@ -32,6 +32,11 @@ body {
     margin-top: 2rem;
 }
 
-img .logo {
-    width: 300px;
+.logo {
+    width: 5%;
+    display: flex;
+    position:absolute; 
+    right:0;
+    top: 1.5rem;
+    margin-right: 2rem;
 }
