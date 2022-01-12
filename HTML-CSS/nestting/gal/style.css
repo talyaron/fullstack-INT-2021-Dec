@@ -9,7 +9,9 @@
     background-color: moccasin;
     
 }
-
+.main-text{
+    padding: 20px;
+}
 
 #sitename {
     font-size: 2.5rem;
