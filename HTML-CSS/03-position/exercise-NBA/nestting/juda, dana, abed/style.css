@@ -1,43 +1,42 @@
+.box {
 
-.box{
-    
     position: fixed;
-background-color: blue;
-width: 100vw;
-height: 60px;
+    background-color: blue;
+    width: 100vw;
+    height: 60px;
 
 }
 
-.box2{
-background-color: rgb(100, 237, 141);
-width: 100vw;
-height: 90px;
-z-index: -1;
-padding-top: 80px;
+.box2 {
+    background-color: rgb(100, 237, 141);
+    width: 100vw;
+    height: 90px;
+    z-index: -1;
+    padding-top: 80px;
 }
 
-p{
+p {
     display: flex;
     flex-direction: column;
-   justify-items: center;
-align-items: center;
-padding-top: 15px;
-font-size: 20px;
+    justify-items: center;
+    align-items: center;
+    padding-top: 15px;
+    font-size: 20px;
 
 }
 
-.img{
+.img {
     position: fixed;
     right: 5px;
     top: 5px;
     display: flex;
- margin: auto;
-height: 80px;
-width: 80px;
+    margin: auto;
+    height: 80px;
+    width: 80px;
 
 }
 
-.sticky{
-position: sticky;
-top: 1px;
+.sticky {
+    position: sticky;
+    top: 8px;
 }
