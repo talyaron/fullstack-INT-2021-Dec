@@ -1,0 +1,45 @@
+.wrapper{
+    
+    width:75%;
+    margin:1.5rem;
+    display: block;
+   text-align: center;
+}
+
+body{
+    width: 100%;
+    margin: auto;
+}
+
+header{
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    font-size: 1.8rem;
+    background-color: #ffffff;
+    width:100%;
+    border-bottom:whitesmoke 1px solid;
+    display: flex;
+    justify-content:space-between;
+    flex-direction:row-reverse;
+  
+}
+header img{
+    width:10rem;
+}
+
+.icon{
+   display:flex;
+}
+ 
+ .post{
+     border-radius: 3px;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    padding: 10px; 
+    justify-content:space-between;
+ }
+ .icons{
+    display:flex;
+    justify-content:space-between;
+ }
