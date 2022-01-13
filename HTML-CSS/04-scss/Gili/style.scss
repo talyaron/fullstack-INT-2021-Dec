@@ -21,6 +21,10 @@ body {
             font-style: italic;
             text-align: center;
             font-size: 36px;
+
+            &:hover {
+                background-color: gray;
+            }
         }
 
         p {

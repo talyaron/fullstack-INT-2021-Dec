@@ -21,6 +21,9 @@ body {
   text-align: center;
   font-size: 36px;
 }
+.card_text h3:hover {
+  background-color: gray;
+}
 .card_text p {
   font-size: 24px;
 }
