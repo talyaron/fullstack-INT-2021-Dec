@@ -14,14 +14,22 @@ body {
         border-radius: 5% 5% 0% 0%;
     }
 
-    .card_text {
+    &_text {
         padding: 20px;
-        
-    }
+    
+        h3 {
+            font-style: italic;
+            text-align: center;
+            font-size: 36px;
+        }
 
-    .card_header {
-        font-style: italic;
-        text-align: center;
-        font-size: 24px;
+        p {
+            font-size: 24px;
+
+            span {
+                font-weight: bolder;
+            }
+        }
+        
     }
 }
