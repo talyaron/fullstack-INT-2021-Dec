@@ -7,11 +7,7 @@
 }
 
 body{
-<<<<<<< HEAD
     width: 75%;
-=======
-    width: 100%;
->>>>>>> parent of 3958f3d (Revert "instagram")
     margin: auto;
 }
 
@@ -37,10 +33,7 @@ header img{
 }
  
  .post{
-<<<<<<< HEAD
      width: 85%;
-=======
->>>>>>> parent of 3958f3d (Revert "instagram")
      border-radius: 3px;
     margin-bottom: 1rem;
     font-size: 2rem;
