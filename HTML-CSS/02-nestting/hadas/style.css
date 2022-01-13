@@ -7,7 +7,7 @@
 }
 
 body{
-    width: 100%;
+    width: 75%;
     margin: auto;
 }
 
@@ -33,6 +33,7 @@ header img{
 }
  
  .post{
+     width: 85%;
      border-radius: 3px;
     margin-bottom: 1rem;
     font-size: 2rem;
