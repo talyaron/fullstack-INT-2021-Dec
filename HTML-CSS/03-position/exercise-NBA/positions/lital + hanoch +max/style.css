@@ -5,8 +5,8 @@
     position: fixed;
 
 }
-.title img{
-    position: absolute;
+.bigdiv img{
+    position: sticky;
     top: -35px;
     right: 0px;
     width: 50px;
@@ -18,5 +18,5 @@
     height: 75px;
     width: 100vw;
     background-color: black;
-position: sticky;
+
 }

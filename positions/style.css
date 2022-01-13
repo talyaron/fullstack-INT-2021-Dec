@@ -1,0 +1,39 @@
+.wrapper{
+    position: relative;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    top: 300px;
+}
+ 
+ 
+ .box1{
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    border: 1px;
+}
+.box2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(56, 165, 42);
+    border: 1px;
+}
+.box3{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(95, 42, 165);
+    border: 1px;
+    left: 50%;
+    top: 50%;
+}
+.box4{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(42, 147, 165);
+    border: 1px;
+    bottom: 75%;
+    left: 65%;
+}
