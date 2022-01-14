@@ -1,0 +1,22 @@
+.box1{
+    width: 100vw;
+    height: 50px;
+    background-color: red;
+    position: fixed;
+
+}
+.bigdiv img{
+    position: sticky;
+    top: -35px;
+    right: 0px;
+    width: 50px;
+
+
+}
+.title{
+    top: 50px;
+    height: 75px;
+    width: 100vw;
+    background-color: black;
+
+}
