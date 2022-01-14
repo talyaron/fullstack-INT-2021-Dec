@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body {
+    background-image: radial-gradient(circle, #00deff, #76e2ff, #a9e6ff, #cfebff, #eaf2ff, #eaf2ff, #eaf2ff, #eaf2ff, #cfebff, #a9e6ff, #76e2ff, #00deff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 700px;
+    height: 600px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 10px black, 0 0 7px 13px rgb(19, 19, 136), 0 0 15px 17px rgb(255, 255, 255);
+
+    .divimg {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 73%;
+        background-image: url('http://4.bp.blogspot.com/-_WSUQHOjmts/T3NxHZbjJ0I/AAAAAAAAH4Q/RRED8eBnD44/s1600/up_movie_balloons_house-wide.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: 15px 15px 0px 0px;
+
+        .text {
+            position: relative;
+            width: 400px;
+            height: 200px;
+
+            p {
+                font-size: 3rem;
+                font-family: 'Oleo Script Swash Caps', sans-serif;
+                text-shadow: 1px 1px 4px white;
+            }
+
+            .fword {
+                position: absolute;
+                top: 0;
+                left: 130px;
+
+                &:hover {
+                    color: #fff;
+                    text-shadow: 1px 1px 4px #000;
+                }
+            }
+
+            .sword {
+                position: absolute;
+                top: 60px;
+                right: 110px;
+
+                &:hover {
+                    color: rgb(209, 24, 24);
+                    text-shadow: 1px 1px 2px #000;
+                }
+            }
+
+            .tword {
+                position: absolute;
+                top: 120px;
+                right: 0px;
+
+                &:hover {
+                    color: #fff;
+                    text-shadow: 1px 1px 4px #000;
+                }
+            }
+        }
+    }
+
+    .par {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 27%;
+
+        border-radius: 0 0 25px 25px;
+
+        p {
+            font-size: 2rem;
+            font-family: 'princess sofia';
+
+        }
+    }
+}
