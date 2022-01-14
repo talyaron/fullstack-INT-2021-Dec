@@ -99,11 +99,21 @@ section .par {
       -ms-flex-align: center;
           align-items: center;
   height: 27%;
+  border-top: solid 5px black;
   border-radius: 0 0 25px 25px;
 }
 
 section .par p {
   font-size: 2rem;
   font-family: 'princess sofia';
+}
+
+section .par p::first-letter {
+  font-size: 2.5rem;
+}
+
+span {
+  color: #1818df;
+  font-weight: 600;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,9 @@
+body {
+  background-color: blueviolet;
+}
+.box{
+  width: 100px;
+  height: 100px;
+  background-color: rgb(230, 230, 230);
+  margin: 1px;
+}
