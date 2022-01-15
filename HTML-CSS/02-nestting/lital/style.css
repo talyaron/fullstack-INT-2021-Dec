@@ -1,6 +1,15 @@
-.container img{
-    color: lawngreen;
-    margin-left: 600px;
+.navbar{
+    display: flex;
+    position: sticky;
+    width: 100vw;
+    align-items: 50%;
+    padding: 20px;
+
+}
+.navbar img{
+position: absolute;
+margin-left: 690px;
+margin-top: -15px;
 }
 .username{
     background-color: rgb(255, 255, 255);
@@ -107,7 +116,6 @@
     border: 0;
     background-color: #fff;
 }
-
 
 
 

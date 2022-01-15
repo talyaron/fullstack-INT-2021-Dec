@@ -41,6 +41,12 @@ body {
     margin-right: 2rem;
 }
 
- .logo {
+ .fixed .logo {
     position: fixed;
+    z-index: 1;
+}
+
+.box {
+    position: sticky;
+    z-index: 0;
 }

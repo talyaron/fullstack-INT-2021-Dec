@@ -1,0 +1,52 @@
+body {
+  background-color: aqua;
+}
+
+.wrapper {
+  border: 1px solid navy;
+}
+
+.wrapper .box {
+  width: 100px;
+  height: 100px;
+  background-color: navy;
+  margin: 1px;
+}
+
+.wrapper .box p {
+  color: white;
+  font-size: 6px;
+}
+
+.card {
+  border-radius: 10px;
+  background-color: white;
+  margin: 10px;
+}
+
+.card img {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+}
+
+.card__text {
+  padding: 20px;
+}
+
+.card__text h3 {
+  font-style: italic;
+}
+
+.card__text h3:hover {
+  background-color: gray;
+}
+
+.card__text p {
+  color: #505050;
+  font-size: small;
+}
+
+.card__text p span {
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */

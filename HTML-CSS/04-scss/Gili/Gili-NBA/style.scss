@@ -1,0 +1,68 @@
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+}
+
+.box {
+    width: 100%;
+    height: 40px;
+    margin: 0px;
+}
+
+.menu {
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    position: fixed;
+    top: 0px;
+
+    .fa-bars {
+        font-size: 30px;
+        color: rgb(0, 0, 0);
+        position: relative;
+        top: 5px;
+        left: 5px;
+
+        &:hover {
+            color: darkgray;
+        }
+    }
+
+}
+
+.header {
+    width: 100%;
+    height: 200px;
+    background-color: gray;
+    position: sticky;
+    top: 0px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    p {
+        font-size: 50px;
+    }
+
+}
+
+.wrapper {
+    p {
+        font-size: 100px;
+    }
+
+
+}
+
+.image_pos {
+
+    img {
+        position: fixed;
+        width: 150px;
+        top: 30px;
+        right: 50px;
+        border-radius: 15%;
+    }
+}

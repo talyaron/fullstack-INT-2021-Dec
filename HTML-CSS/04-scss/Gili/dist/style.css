@@ -1,0 +1,32 @@
+body {
+  background-color: aquamarine;
+}
+
+.card {
+  width: 600px;
+  height: 800px;
+  background-color: white;
+  border-radius: 5%;
+  margin: auto;
+}
+.card img {
+  width: 100%;
+  border-radius: 5% 5% 0% 0%;
+}
+.card_text {
+  padding: 20px;
+}
+.card_text h3 {
+  font-style: italic;
+  text-align: center;
+  font-size: 36px;
+}
+.card_text h3:hover {
+  background-color: gray;
+}
+.card_text p {
+  font-size: 24px;
+}
+.card_text p span {
+  font-weight: bolder;
+}
