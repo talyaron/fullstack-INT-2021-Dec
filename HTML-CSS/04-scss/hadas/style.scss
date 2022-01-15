@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(211, 14, 14);
+}
+
+.card{
+    width: 500px;
+    height:600px;
+background-color: wheat;
+border-radius: 10px;
+margin: auto;
+img{
+    width: 100%;
+    border-radius: (10px 10px 0px 0px);
+    }
+    .text{
+       padding: 20px;
+
+       h1{
+text-align: center;
+font-style: italic;
+font-size: 40px;
+}
+p{
+    font-size: 20px;
+    span{
+        font-weight: bold;
+    }
+}
+
+
+        
+    }
+}
