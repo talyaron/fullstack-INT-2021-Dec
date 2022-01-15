@@ -1,0 +1,26 @@
+.card {
+  border-radius: 10px;
+  background-color: white;
+  margin: 10px;
+}
+.card .img {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+}
+.card .img .text {
+  padding: 20px;
+}
+
+.wrapper {
+  border: 1px solid navy;
+}
+.wrapper .box {
+  width: 100px;
+  height: 100px;
+  background-color: navy;
+  margin: 1px;
+}
+.wrapper .box .p {
+  color: white;
+  font-size: 6px;
+}

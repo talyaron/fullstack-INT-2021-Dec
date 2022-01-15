@@ -1,0 +1,71 @@
+
+
+body{
+    height: 2000px;
+    font-size: 26px;
+    background-color: moccasin;
+}
+
+.nbalogo{
+    width: 100px;
+    position: sticky;
+    top: 0px;
+    margin-left: 1520px;
+    margin-top: -180px;
+    background: none;
+}
+
+.menuWrapper{
+    max-width: 1560px;
+    margin: 0 auto;
+    position: relative;
+    padding: 50px;
+}
+
+.menu{
+    width: 100%;
+    background-color: red;
+    text-align: center;
+    padding: 30px;
+}
+
+.stickyBox{
+    width: 100%;
+    background-color: gray;
+    padding: 30px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+.lorem{
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: lightgray;
+    margin-top: 40px;
+    padding: 50px;
+}
+
+.lorem2{
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: pink;
+    margin-top: 40px;
+    padding: 50px;
+}
+
+.lorem3{
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: greenyellow;
+    margin-top: 40px;
+    padding: 50px;
+}
+
+.lorem4{
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: coral;
+    margin-top: 40px;
+    padding: 50px;
+}

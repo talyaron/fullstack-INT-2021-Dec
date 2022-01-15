@@ -1,0 +1,162 @@
+html{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background-color: #fafafa;
+
+    body{
+        width: 100%;
+        margin: auto;
+
+        header{
+            margin: 0;
+            position: sticky;
+            top: 0;
+            font-size: 1.8rem;
+            background-color: #ffffff;
+            width: 100%;
+            border-bottom: #f0f0f0 1px solid;
+            display: flex;
+            justify-content:space-between;
+            flex-direction: row;
+
+            img{
+                width: 10rem;
+                margin: 1.5rem;
+            }
+
+            .headBar{
+                display: flex;
+                justify-content:right;
+                flex-direction: row;
+
+                img{
+                    margin-top: 15px;
+                    width: 30px;
+                    height: 30px;
+                    border: #f0f0f0 1px solid;
+                    border-radius: 50%;
+                    display: inline;
+                }
+
+                i{
+                    padding: 20px 10px;
+                    text-align: right;
+                }
+            }
+        }
+
+        main{
+            width: 100%;
+            max-width: 600px;
+            background-color: #fafafa;
+            margin: 10px auto;
+
+            .post{
+                border: #f0f0f0 1px solid;
+                border-radius: 3px;
+                margin-bottom: 1rem;
+                background-color: #ffffff;
+
+                .userName{
+                    font-weight: 600;
+                    padding: 8px 10px;
+                }
+
+                .postHeader{
+                    border-bottom: #f0f0f0 1px solid;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    img{
+                        border: #f0f0f0 1px solid;
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 50%;
+                        display: inline;
+                        margin:10px;
+                    }
+
+                    div{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        i{
+                            margin: 25px;
+                        }
+                    } 
+                }
+
+                .postImg {
+
+                    img{
+                        display: block;
+                        width: 100%;
+                    }
+                
+                    .imgIcons{
+                        display: flex;
+                        justify-content: space-between;
+                    }
+
+                    i{
+                        font-size: 2rem;
+                        padding: 10px;
+                    }
+                }
+
+                .postDescription{
+
+                    .likes{
+                        display: block;
+                        font-weight: 600;
+                        padding: 8px 10px;
+                    }
+                
+                    .comment{
+                        color:#adb5bf;
+                        display: block;
+                        padding: 8px 10px;
+                    }
+                
+                    .time{
+                        color:#adb5bf;
+                        font-size: 0.8rem;
+                        display: block;
+                        padding: 10px;
+                    }
+                }
+
+                .addComment{
+                    border-top: #f0f0f0 1px solid;
+                    display: flex;
+                    align-items: center;
+                
+                    i{
+                        font-size: 2rem;
+                        padding: 10px;
+                    }
+                
+                    input{
+                        border: 0;
+                        width: 85%;
+                        height: 30px;
+                    }
+                
+                    span{
+                        color: #bce0f6;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

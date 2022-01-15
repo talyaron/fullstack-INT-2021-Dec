@@ -1,0 +1,136 @@
+/* Style the header */
+.header {
+  padding: 16px;
+  background: white;
+  color: #f1f1f1;
+  width: 200px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.topright {
+  display: flex;
+  margin-right: 20px;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
+.fa-plus-square {
+  color: black;
+  padding: 5px;
+  font-size: 30px;
+}
+
+.fa-heart {
+  color: black;
+  padding: 5px;
+  font-size: 30px;
+}
+
+.fa-facebook-messenger {
+  color: black;
+  padding: 5px;
+  size: 20px;
+  font-size: 30px;
+}
+
+.container {
+  display: inline-block;
+  position: relative;
+}
+
+.story-container {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+}
+
+.story-container img {
+  border-radius: 50%;
+  width: 60px;
+  border: 3px solid #d31756;
+  padding: 2px;
+  margin: 10px;
+}
+
+.wrapper {
+  border: 1px solid #b6b6b6;
+  width: 600px;
+  margin: auto;
+  background-color: white;
+  margin-bottom: 5px;
+}
+.wrapper .comments {
+  color: gray;
+}
+.wrapper .time {
+  color: gray;
+  font-size: smaller;
+}
+.wrapper .icons_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.wrapper .icons_wrapper .fa-comment {
+  color: black;
+  padding: 5px;
+  font-size: 30px;
+}
+.wrapper .icons_wrapper .fa-paper-plane {
+  color: black;
+  padding: 5px;
+  font-size: 30px;
+}
+.wrapper .icons_wrapper .fa-bookmark {
+  color: black;
+  padding: 5px;
+  font-size: 30px;
+  margin-right: 5px;
+}
+.wrapper .story1 {
+  width: 600px;
+  margin: auto;
+}
+.wrapper .story1 img {
+  width: 100%;
+}
+.wrapper .storytop {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+.wrapper .storytop h5 {
+  line-height: 50px;
+}
+.wrapper .storytop img {
+  border-radius: 50%;
+  width: 60px;
+  border: 3px solid #d31756;
+  padding: 2px;
+  margin: 10px;
+}
+
+body {
+  background-color: whitesmoke;
+  margin: 0%;
+}
