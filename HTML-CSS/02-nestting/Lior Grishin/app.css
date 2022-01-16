@@ -59,8 +59,9 @@ body{
 }
 
 .page-container{
+    background-color: rgb(255, 255, 255);
     border: 1px solid #dbdbdb;
-    max-width: 600px;
+    width: 600px;
     display: flex;
     flex-direction: column;
 }

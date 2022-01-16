@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 100x;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+}
+
+h1 {
+    height: 100px;
+    font-family: 'oleo script';
+    transform: rotate(30deg);
+    text-shadow: 2px 2px black;
+    margin-left: 20px;
+
+    &::first-letter {
+        font-size: 2.5rem;
+    }
+
+    .t {
+        font-size: 2.5rem;
+        transform: rotate(20deg);
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    height: 450px;
+    width: 80%;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+    .wrapperstretch {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 2rem;
+        padding: 0 2rem;
+        background: red;
+        height: 35px;
+        direction: rtl;
+        flex-basis: 100%;
+
+    }
+
+    .godwrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-basis: 100%;
+        height: 450px;
+    }
+
+    .wrapper {
+        width: 300px;
+        height: 350px;
+
+        img {
+            width: 300px;
+            height: 250px;
+        }
+
+        p {
+            direction: rtl;
+            font-size: 1.5rem;
+        }
+    }
+}
