@@ -1,22 +1,28 @@
-.card {
-  border-radius: 80px;
-  background-color: #eb0d0d;
-  margin: 10px;
-  height: 1px;
+.mega-wrapper {
+  width: 700px;
+  height: 850px;
+  margin: 20px;
+  background-color: antiquewhite;
+  border-radius: 12px;
+  box-shadow: 0 0 8px #0258f8;
 }
-.card .img {
-  border-radius: 10px 10px 0px 0px;
+.mega-wrapper .photo img {
   width: 100%;
+  border-radius: 12px;
 }
-.card .text {
-  padding: 20px;
+.mega-wrapper .card-text h1 {
+  padding-left: 60px;
+  margin-top: inherit;
+  font-style: italic;
 }
-.card .text .h3 {
-  font-style: initial;
+.mega-wrapper .card-text h2 {
+  font-style: italic;
+  padding-left: 35px;
 }
-.card .text .p {
-  color: lightslategray;
+.mega-wrapper .card-text span {
+  padding-left: 200px;
 }
-.card .text .p .span {
-  font-weight: bold;
+.mega-wrapper .card-text h4 {
+  padding-left: 45px;
+  font-size: 17px;
 }
