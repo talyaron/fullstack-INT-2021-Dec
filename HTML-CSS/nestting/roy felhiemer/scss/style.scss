@@ -1,0 +1,101 @@
+.wrapper{
+      display: list-item;
+      font-style: italic;
+      color: black, solid;
+      font-size:2rem;
+      text-align: left;
+      float: left;
+      background-color: rgb(255, 255, 255);
+      border: black;
+      border-radius: 4px;
+      border-style: solid;
+     
+     #theheader{
+       color: black;
+       text-align: left;
+       float: left;
+       font-style: italic;
+       font-size: 2rem;
+
+      img{
+        border-radius: 50%;
+        margin-left: auto;
+        width: 50px;
+        float: left;
+        margin-top: -45px;
+        margin-left: 2px;
+      }
+        button{ 
+        background: none;
+        display: flex;
+        border: none;
+        margin-top: -30px;
+        margin-left: 535px;    
+      }
+    }
+      .header{
+        margin-top: 0px;
+        margin-left: 50px;
+    }
+    .icon img{
+        border: none;
+        position: absolute;
+        margin-top: -5px;
+    }
+    .comment{
+        border: none;
+        position: absolute;
+        margin-top: -25px;
+        margin-left: 50px;
+    }
+    .share{
+        background: none;
+        margin-top: -5px;
+        margin-left: 120px;
+    }
+    .save{
+        background: none;
+        margin-left: 535px;
+        margin-top: -45px;
+    }
+    #likes{
+        font-size: 2rem;
+        margin-top: -3px;
+        font-style: normal;
+    }
+    #post{
+        margin-top: -25px;
+    }
+    .details{
+        font-size: 2rem;
+    color: lightgray;
+    margin-top: -25px;
+    font-style: normal;
+    }
+    .timeline{
+        font-size: 1rem;
+        color: lightgray;
+        margin-top: -25px;
+        font-style: normal;
+    }
+    #line{
+        margin-top: 20px;
+    }
+    .emoji{
+        margin-top: -10px;
+    }
+    .com{
+        font-size: 1rem;
+        color: lightgray;
+        margin-top: -35px;
+        margin-left: 60px;
+        font-style: normal;
+    }
+    .post{
+        font-size: 1rem;
+        color: lightskyblue;
+        margin-top: -35px;
+        margin-left: 535px;
+        font-style: normal;
+    }
+}
