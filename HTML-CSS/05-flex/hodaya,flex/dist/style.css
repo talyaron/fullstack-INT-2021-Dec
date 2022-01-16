@@ -1,0 +1,14 @@
+.red_header {
+  width: 100%;
+  height: 50px;
+  background-color: red;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.red_header p {
+  position: relative;
+  color: white;
+  font-size: 15px;
+  line-height: 20px;
+}
