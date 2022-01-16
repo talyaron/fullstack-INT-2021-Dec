@@ -6,7 +6,7 @@ body {
   margin: 0%;
   box-sizing: border-box;
   /*hero*/
-  /*cards*/
+
 }
 body .hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1611771341253-dadb347165a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fG5vcmRpY3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1296&q=60");
