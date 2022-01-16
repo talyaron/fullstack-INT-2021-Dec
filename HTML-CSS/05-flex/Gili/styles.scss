@@ -1,0 +1,40 @@
+body {
+    direction: rtl
+}
+
+.red_header {
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    p {
+        color: white;
+        font-size: 20px;
+        line-height: 15px;
+        font-weight: bolder;
+    }
+}
+
+.wrapper {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    .article {
+
+        p {
+            font-weight: bolder;
+            font-size: 20px;
+        }
+
+        img {
+            width: 100%;
+            height: 200px;
+        }
+    }
+}

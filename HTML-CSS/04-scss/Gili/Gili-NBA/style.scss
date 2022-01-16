@@ -55,3 +55,14 @@ body {
 
 
 }
+
+.image_pos {
+
+    img {
+        position: fixed;
+        width: 150px;
+        top: 30px;
+        right: 50px;
+        border-radius: 15%;
+    }
+}
