@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+body {
+  background-image: radial-gradient(circle, #00deff, #76e2ff, #a9e6ff, #cfebff, #eaf2ff, #eaf2ff, #eaf2ff, #eaf2ff, #cfebff, #a9e6ff, #76e2ff, #00deff);
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section {
+  width: 700px;
+  height: 600px;
+  background-color: #fff;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 10px 10px black, 0 0 7px 13px #131388, 0 0 15px 17px white;
+          box-shadow: 0 0 10px 10px black, 0 0 7px 13px #131388, 0 0 15px 17px white;
+}
+
+section .divimg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 73%;
+  background-image: url("http://4.bp.blogspot.com/-_WSUQHOjmts/T3NxHZbjJ0I/AAAAAAAAH4Q/RRED8eBnD44/s1600/up_movie_balloons_house-wide.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 15px 15px 0px 0px;
+}
+
+section .divimg .text {
+  position: relative;
+  width: 400px;
+  height: 200px;
+}
+
+section .divimg .text p {
+  font-size: 3rem;
+  font-family: 'Oleo Script Swash Caps', sans-serif;
+  text-shadow: 1px 1px 4px white;
+}
+
+section .divimg .text .fword {
+  position: absolute;
+  top: 0;
+  left: 130px;
+}
+
+section .divimg .text .fword:hover {
+  color: #fff;
+  text-shadow: 1px 1px 4px #000;
+}
+
+section .divimg .text .sword {
+  position: absolute;
+  top: 60px;
+  right: 110px;
+}
+
+section .divimg .text .sword:hover {
+  color: #d11818;
+  text-shadow: 1px 1px 2px #000;
+}
+
+section .divimg .text .tword {
+  position: absolute;
+  top: 120px;
+  right: 0px;
+}
+
+section .divimg .text .tword:hover {
+  color: #fff;
+  text-shadow: 1px 1px 4px #000;
+}
+
+section .par {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 27%;
+  border-top: solid 5px black;
+  border-radius: 0 0 25px 25px;
+}
+
+section .par p {
+  font-size: 2rem;
+  font-family: 'princess sofia';
+}
+
+section .par p::first-letter {
+  font-size: 2.5rem;
+}
+
+span {
+  color: #1818df;
+  font-weight: 600;
+}
+/*# sourceMappingURL=style.css.map */
