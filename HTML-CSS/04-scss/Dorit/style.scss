@@ -1,0 +1,24 @@
+.card {
+    border-radius: 10px;
+    background-color: white;
+    margin: 10px;
+    img {
+        border-radius: 10px 10px 0px 0px;
+        width: 100%
+    }
+    &__text {
+        padding: 20px;
+
+        h3 {
+            font-style: intalic;
+            margin: auto;
+        }
+        p {
+            color: rgb(80 80 80);
+            font-size: small;
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+}

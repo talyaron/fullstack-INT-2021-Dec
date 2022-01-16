@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 180vh;
+  display: flow-root;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+  background: #ebe7e7;
+}
+
+.container {
+  width: 640px;
+  background: #ffffff;
+  overflow: hidden;
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.top_bar {
+  width: 100%;
+  height: 75px;
+  padding: 25px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile_img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.profile_img img {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: inline-block;
+  object-fit: cover;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.profile_img span {
+  margin-left: 50px;
+}
+
+.main_img {
+  width: 640px;
+  height: 640px;
+  margin-bottom: 15px;
+}
+
+.main_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.icons .fa {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.icons .left_side .fa {
+  margin: 0px 3px;
+  color: #010101;
+}
+
+.likeCount p {
+  color: #010101;
+  font-size: 14px;
+}
+
+.content p {
+  padding: 5px 0;
+}
+
+.comments p {
+  font-size: 14px;
+  color: #dbdbdb;
+  padding: 5px 0;
+  padding-bottom: 10px;
+}
+
+.comments_box {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  padding: 8px 16px 8px 0;
+  font-size: 24px;
+}
+
+.input_field {
+  width: 100%;
+}
+
+.input_field input {
+  width: 100%;
+  padding: 10px;
+  border: none !important;
+  outline: none;
+}
+
+.btn button {
+  background: transparent;
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: #207be2;
+  font-weight: 600;
+  cursor: pointer;
+}
+    </style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloning Instagram Website Post Card using Html CSS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="top_bar">
+            <div class="profile_img">
+                <img src="https://static.wixstatic.com/media/497e16_7e01eb38737847d990acd1cfa4c4378a~mv2.jpg/v1/fill/w_340,h_344,al_c,q_80,usm_0.66_1.00_0.01/%D7%AA%D7%9E%D7%95%D7%A0%D7%AA%20%D7%A4%D7%A8%D7%95%D7%A4%D7%99%D7%9C_JPG.webp"
+                    alt="">
+                <span>ziv malka </span>
+            </div>
+            <i class="fa fa-ellipsis-h"></i>
+        </div>
+        <div class="main_img">
+            <img src="https://static.wixstatic.com/media/497e16_7391ec82ba5e40dca8d80c641bb86c56~mv2.jpg/v1/fill/w_490,h_622,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01/497e16_7391ec82ba5e40dca8d80c641bb86c56~mv2.webp"
+                alt="">
+        </div>
+        <div class="footer">
+            <div class="icons">
+                <div class="left_side">
+                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    <i class="fa fa-comment-o" aria-hidden="true"></i>
+                    <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                </div>
+                <div class="right_side">
+                    <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="likeCount">
+                <p>10,890 Likes</p>
+            </div>
+            <div class="content">
+               <p>
+                We designed our project with a modern, clean look that is both practical and inspirational. The design offers a unique and enjoyable experience suited to every visitor, no matter their age. YZ design studio was inspired by the region’s architecture and natural environment and our team decided to base the design of the project on those elements.</p>
+            </div>
+            <div class="comments">
+                <p>View All 954 Comments</p>
+            </div>
+            <div class="comments_box">
+                <div class="icon">📝</div>
+                <div class="input_field">
+                    <input type="text" placeholder="Add a Comments..." id="">
+                </div>
+                <div class="btn"><button>Post</button></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="top_bar">
+            <div class="profile_img">
+                <img src="https://static.wixstatic.com/media/497e16_7e01eb38737847d990acd1cfa4c4378a~mv2.jpg/v1/fill/w_340,h_344,al_c,q_80,usm_0.66_1.00_0.01/%D7%AA%D7%9E%D7%95%D7%A0%D7%AA%20%D7%A4%D7%A8%D7%95%D7%A4%D7%99%D7%9C_JPG.webp"
+                    alt="">
+                <span>ziv malka </span>
+            </div>
+            <i class="fa fa-ellipsis-h"></i>
+        </div>
+        <div class="main_img">
+            <img src="https://static.wixstatic.com/media/497e16_71642042c43349aa9ada8c4f09f3fda0~mv2.jpg/v1/fill/w_1664,h_936,al_c,q_90/497e16_71642042c43349aa9ada8c4f09f3fda0~mv2.webp"
+                alt="">
+        </div>
+        <div class="footer">
+            <div class="icons">
+                <div class="left_side">
+                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    <i class="fa fa-comment-o" aria-hidden="true"></i>
+                    <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                </div>
+                <div class="right_side">
+                    <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="likeCount">
+                <p>7,481 Likes</p>
+            </div>
+            <div class="content">
+                
+                <p>Creating custom furniture is very close to our heart and concept. We love interior design and through passion and persistence, we create furniture designs that fit your personal lifestyle. Our concept is all about you, your world, and your exciting, personal taste.
+
+
+                    That’s why we’re creating design pieces with personal freedom. 
+                    
+                    Your freedom of expression is here</p>
+            </div>
+            <div class="comments">
+                <p>View All 789 Comments</p>
+            </div>
+            <div class="comments_box">
+                <div class="icon">📝</div>
+                <div class="input_field">
+                    <input type="text" placeholder="Add a Comments..." id="">
+                </div>
+                <div class="btn"><button>Post</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="top_bar">
+            <div class="profile_img">
+                <img src="https://static.wixstatic.com/media/497e16_7e01eb38737847d990acd1cfa4c4378a~mv2.jpg/v1/fill/w_340,h_344,al_c,q_80,usm_0.66_1.00_0.01/%D7%AA%D7%9E%D7%95%D7%A0%D7%AA%20%D7%A4%D7%A8%D7%95%D7%A4%D7%99%D7%9C_JPG.webp"
+                    alt="">
+                <span>ziv malka </span>
+            </div>
+            <i class="fa fa-ellipsis-h"></i>
+        </div>
+        <div class="main_img">
+            <img src="https://static.wixstatic.com/media/11062b_e454078d2ded40a69b25f4016b234211~mv2.jpg/v1/fill/w_740,h_493,al_c,q_90/11062b_e454078d2ded40a69b25f4016b234211~mv2.webp"
+                alt="">
+        </div>
+        <div class="footer">
+            <div class="icons">
+                <div class="left_side">
+                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    <i class="fa fa-comment-o" aria-hidden="true"></i>
+                    <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                </div>
+                <div class="right_side">
+                    <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="likeCount">
+                <p>9,821 Likes</p>
+            </div>
+            <div class="content">
+                <p>more then wellcome to visit our site @https://www.yzdesignstudio.com/  
+                    sustainable construction" is a comprehensive systemic approach to the design, construction and operation of buildings in order to save energy, water and raw materials, implemented from the early planning stage to the use of the building.</p>
+                
+            </div>
+            <div class="comments">
+                <p>View All 247 Comments</p>
+            </div>
+            <div class="comments_box">
+                <div class="icon">📝</div>
+                <div class="input_field">
+                    <input type="text" placeholder="Add a Comments..." id="">
+                </div>
+                <div class="btn"><button>Post</button></div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+</body>
+</html>
