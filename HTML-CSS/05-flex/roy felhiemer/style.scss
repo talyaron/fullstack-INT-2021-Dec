@@ -1,0 +1,125 @@
+
+.wrapper{
+    border: black;
+    margin: 0px;
+
+    
+    .header{
+        background-color: red;  
+        width:100%;
+        height: 30px;
+        color: white;
+        font-size: small;
+        font-style: normal;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: bold;
+        display: flex;
+        flex-direction:row;
+        justify-content:space-between;
+         align-items: center;
+         margin-bottom: 5px;
+        .p1{
+            padding: 5px;
+             font-size: 17px;
+          
+        }
+        .p2{
+           font-size: 13px;
+           padding: 2px;
+           
+        }  
+     }
+     .img{
+         display: flex;
+         flex-direction: row-reverse;
+         justify-content:space-between;
+         color: black;
+         font-size: 18px;
+         align-items: center;
+         font-weight: bold;
+         width: 100%;
+         padding: 0px;
+         
+         
+         .img1{
+            position: relative;
+            top:20px;
+            right: 10px;
+
+            img{
+                width: 240px;
+               
+            }
+              .icon{
+                  img{
+                 width: 50px;
+                 height: 18px;
+                 position: absolute;
+                 top: 110px;
+                 z-index: 1;
+                 }
+                }  
+             
+            
+         }
+         .img2{
+            
+            position: relative;
+            top:10px;
+            right: -10px;
+            img{
+                width: 240px;
+               
+            }
+              .icon2{
+                  img{
+                 width: 50px;
+                 height: 18px;
+                 position: absolute;
+                 top: 110px;
+                 z-index: 1;
+                 }
+                }  
+         }
+         .img3{
+            
+            position: relative;
+            top:10px;
+            right: 0px;
+            img{
+                width: 240px;
+               
+            }
+              .icon3{
+                  img{
+                 width: 50px;
+                 height: 18px;
+                 position: absolute;
+                 top: 110px;
+                 z-index: 1;
+                 }
+                }  
+         }
+         .img4{
+            
+            position: relative;
+            top:10px;
+           
+            img{
+                width: 240px;
+               
+            }
+              .icon4{
+                  img{
+                 width: 50px;
+                 height: 18px;
+                 position: absolute;
+                 top: 110px;
+                 z-index: 1;
+                 }
+                }  
+         }
+        }
+    }
+    
+    
