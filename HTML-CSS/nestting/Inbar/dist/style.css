@@ -1,0 +1,41 @@
+body {
+  background-color: aquamarine;
+}
+
+.wrapper {
+  border: navy 1px solid;
+}
+.wrapper .box {
+  width: 100px;
+  height: 100px;
+  background-color: navy;
+  margin: 1px;
+}
+.wrapper .box p {
+  color: white;
+  font-size: 6px;
+}
+
+.card {
+  width: 548px;
+  border-radius: 10px;
+  background-color: white;
+  margin: auto;
+}
+.card img {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+}
+.card .card_text {
+  padding: 20px;
+}
+.card .card_text h3 {
+  font-style: italic;
+}
+.card .card_text p {
+  color: #505050;
+  font-size: small;
+}
+.card .card_text span {
+  font-weight: bold;
+}
