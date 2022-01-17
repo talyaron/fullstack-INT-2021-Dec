@@ -1,0 +1,68 @@
+body {
+  background-color: black;
+}
+
+.username {
+  background-color: #050505;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  display: flex;
+  width: 400px;
+  position: absolute;
+  right: 280;
+}
+.username i {
+  color: white;
+  display: flex;
+  margin-left: 220px;
+  margin-top: 6px;
+}
+.username i img {
+  border-radius: 50%;
+  margin-left: 10px;
+  margin-top: 3px;
+}
+.username i img h1 {
+  font-size: 14px;
+  color: white;
+  margin-left: 13px;
+  margin-top: 8px;
+  display: flex;
+}
+
+.wrapper i {
+  padding: 9px;
+  font-size: 20px;
+  width: 400px;
+}
+.wrapper i .wrapper {
+  width: 4oopx;
+  margin: 0;
+}
+.wrapper i .wrapper img {
+  width: 400px;
+}
+.wrapper i .wrapper img .border {
+  padding: 30px;
+  width: 400px;
+  color: red;
+  font-size: 30px;
+  font-family: "Courier New";
+}
+.wrapper i .wrapper img .border p {
+  font-size: 10px;
+  font-family: serif;
+  font-style: italic;
+}
+.wrapper i .wrapper img .border p h1 {
+  font-size: 15px;
+}
+.wrapper i .wrapper img .border p h1 h3 {
+  font-size: 15px;
+  font-family: Georgia;
+}
+.wrapper i .wrapper img .border p h1 h3 h4 {
+  font-size: 20px;
+  font-family: cursive;
+}
