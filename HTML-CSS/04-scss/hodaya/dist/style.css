@@ -1,3 +1,42 @@
-.body {
-  background-color: aqua;
+body {
+  background-color: white;
+}
+
+.card {
+  border-radius: 30px;
+  background-color: black;
+  width: 500px;
+  height: 500px;
+  margin: auto;
+}
+.card img {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+}
+.card h1 {
+  color: silver;
+  font-size: 30px;
+  margin: 15px;
+}
+.card p {
+  color: white;
+  font-size: 20px;
+  margin: 10px;
+}
+.card span {
+  color: sienna;
+}
+
+.wrapper {
+  border: 1px solid crimson;
+}
+.wrapper .box {
+  width: 100px;
+  height: 100px;
+  margin: 1px;
+  background-color: orangered;
+}
+.wrapper .box p {
+  color: white;
+  font-size: 8px;
 }

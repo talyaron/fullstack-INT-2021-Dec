@@ -1,0 +1,30 @@
+.wrapper{
+    border: 1px solid gray;
+    background-color: wheat;
+    width: fit-content;
+    margin: auto;
+}
+
+.box{
+width: 100%;
+    height: 100px;
+    background-color: red;
+    border: 1px solid green;
+    
+
+}
+.box2{
+    width: 100vw;
+    top: 0px;
+    left: 0px;
+    background-color: green;
+    border: 1px solid red;
+    position: fixed;
+    height: 40px;
+}
+.box3{
+    width: 100%;
+    height: 100px;
+    background-color: turquoise;
+    border: 1px solid slateblue;
+}

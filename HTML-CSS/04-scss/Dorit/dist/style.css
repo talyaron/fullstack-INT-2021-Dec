@@ -1,0 +1,25 @@
+.card {
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: white;
+  margin: 10px;
+}
+.card img {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+}
+.card__text {
+  padding: 20px;
+}
+.card__text h3 {
+  font-style: italic;
+  margin: auto;
+  text-align: center;
+}
+.card__text p {
+  color: #505050;
+  font-size: small;
+}
+.card__text p span {
+  font-weight: bold;
+}

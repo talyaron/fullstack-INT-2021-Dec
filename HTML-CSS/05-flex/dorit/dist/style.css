@@ -1,0 +1,50 @@
+.supercont {
+  margin-left: 300px;
+  width: 1000px;
+}
+.supercont .container {
+  background-color: red;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  gap: 600px;
+}
+.supercont .container .box {
+  height: 30px;
+  margin-left: 55px;
+}
+.supercont .container .box p {
+  color: black;
+  text-align: justify;
+}
+.supercont .wrapper {
+  background-color: white;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.supercont .wrapper .minibox {
+  background-color: #eee6ed;
+  position: relative;
+  top: -10px;
+  margin: 2px;
+  height: 250px;
+  width: 250px;
+}
+.supercont .wrapper .minibox :nth-child(1) {
+  width: 245px;
+  height: 180;
+}
+.supercont .wrapper .minibox :nth-child(2) {
+  position: absolute;
+  border-radius: 30%;
+  width: 38px;
+  height: 19px;
+  left: 200px;
+  top: 140px;
+}
+.supercont .wrapper .minibox p {
+  text-align: center;
+}
