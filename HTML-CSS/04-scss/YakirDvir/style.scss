@@ -1,20 +1,21 @@
 body {
     background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
 
     .post {
 
+        position: relative;
         width: 600px;
-        height: 850px;
-        margin-top: 20px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
+        height: auto;
+        margin: 20px auto;
 
         background-color: #fff;
         border: ridge;
         border-radius: 1%;
 
         .header {
+            position: relative;
             .profilLogo {
                 float: left;
                 border-radius: 50%;
@@ -22,13 +23,17 @@ body {
             }
 
             .profileName {
+                position: relative;
+                left: 5px;
                 flex-flow: column;
                 font-size: 20px;
             }
 
             .location {
+                position: relative;
+                top: 5px;
+                left: 5px;
                 font-size: 15px;
-                font-style: normal;
 
             }
 
@@ -41,58 +46,52 @@ body {
                 width: 100%;
             }
 
-
         }
 
         .footer {
-            float: left;
-            width: 100%;
-
             img {
                 width: 20px;
             }
 
             .footer-right {
-                float: right;
+                position: absolute;
+                right: 0px;
             }
-
 
         }
 
-
         .discription {
+            
             font-size: 14px;
+
             .likes_count {
                 font: bold;
             }
+
+            .comments {
+                color: gray;
+            }
         }
 
-        .comments {
-            color: gray;
-        }
-
-        .comments_input {
-            width: 80%;
-            height: 100%;
-            border: none;
-            outline: none;
-        }
-
-        .post_comment img {
-            width: 20px;
-        }
 
         .post_comment {
-            float: left;
-            border: none;
-        }
+            display: flex;
 
-        .post_comment_btn {
-            float: left;
-            font-size: 16px;
-            color: blue;
-        }
+            .post_comment img {
+                width: 30px;
+            }
 
+            .comments_input {
+                width: 100%;
+                height: 100%;
+                border: none;
+                outline: none;
+            }
+
+            .post_comment_btn {
+                font-size: 16px;
+                color: blue;
+            }
+        }
     }
-
 }

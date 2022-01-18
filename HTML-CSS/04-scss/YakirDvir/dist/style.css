@@ -1,16 +1,19 @@
 body {
   background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
 }
 body .post {
+  position: relative;
   width: 600px;
-  height: 850px;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
+  height: auto;
+  margin: 20px auto;
   background-color: #fff;
   border: ridge;
   border-radius: 1%;
+}
+body .post .header {
+  position: relative;
 }
 body .post .header .profilLogo {
   float: left;
@@ -18,12 +21,16 @@ body .post .header .profilLogo {
   width: 30px;
 }
 body .post .header .profileName {
+  position: relative;
+  left: 5px;
   flex-flow: column;
   font-size: 20px;
 }
 body .post .header .location {
+  position: relative;
+  top: 5px;
+  left: 5px;
   font-size: 15px;
-  font-style: normal;
 }
 body .post .header .menu {
   float: right;
@@ -32,15 +39,12 @@ body .post .header .menu {
 body .post .header .postImg {
   width: 100%;
 }
-body .post .footer {
-  float: left;
-  width: 100%;
-}
 body .post .footer img {
   width: 20px;
 }
 body .post .footer .footer-right {
-  float: right;
+  position: absolute;
+  right: 0px;
 }
 body .post .discription {
   font-size: 14px;
@@ -48,24 +52,22 @@ body .post .discription {
 body .post .discription .likes_count {
   font: bold;
 }
-body .post .comments {
+body .post .discription .comments {
   color: gray;
 }
-body .post .comments_input {
-  width: 80%;
+body .post .post_comment {
+  display: flex;
+}
+body .post .post_comment .post_comment img {
+  width: 30px;
+}
+body .post .post_comment .comments_input {
+  width: 100%;
   height: 100%;
   border: none;
   outline: none;
 }
-body .post .post_comment img {
-  width: 20px;
-}
-body .post .post_comment {
-  float: left;
-  border: none;
-}
-body .post .post_comment_btn {
-  float: left;
+body .post .post_comment .post_comment_btn {
   font-size: 16px;
   color: blue;
 }
