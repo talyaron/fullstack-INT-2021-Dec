@@ -1,0 +1,54 @@
+.topbar {
+    height: 50px;
+    width: 100vw;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    .rigth_titel {
+        direction: rtl;
+        color: white;
+        font-size: 17px;
+        font-weight: bold;
+        line-height: 45px;
+        position: absolute;
+        right: 0px;
+    }
+    .left_title {
+        direction: rtl;
+        font-size: 13px;
+        font-weight: blod;
+        line-height: 45px;
+        color: white;
+        justify-content: left;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    background-color: whitesmoke;
+    margin-top: 30%;
+    justify-content: space-between;
+    margin-right: 7%;
+    .post {
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+        width: 300px;
+        position: relative;
+        img {
+            height: 200px;
+            width: 300px;
+        }
+        .icon {
+            position: absolute;
+            right: 0;
+            bottom: 100px;
+            img {
+                width: 40px;
+                height: 20px;
+            }
+        }
+    }
+}
