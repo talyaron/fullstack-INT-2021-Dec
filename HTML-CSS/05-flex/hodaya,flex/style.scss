@@ -1,20 +1,54 @@
 
+
 .red_header{
-    width: 100%;
+    width: 800px;
     height: 50px;
     background-color: red;
-    display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-       
-       p{ 
-        position: relative;
+    display: flex;
+    margin: auto;
+    h1{
         color: white;
-        font-size: 15px;
-        line-height: 20px;
-
+        font-weight: bold;
+        font-size: 20px;
+        display: flex;
+        margin-right: 10px;
 }
+        p{ 
+            color: rgb(255, 255, 255);
+            font-weight: lighter;
+            font-size: 15px;
+            margin-top: -2px;
+            margin-left: 5px;
+        }
+  
+}  
+.wrapper{
+    justify-content: space-evenly;
+    background-color: rgb(177, 92, 92);
+    width: 800px;
+    height: 300px;
+    display: flex;
+    margin: auto;
 
+    .miniwrapper{
+        width: 200px;
+        height: 300px;
+        background-color: white;
+        padding:10px;
+    }
+
+img{
+    width: 100%;
+    height: 60%;
+}
+h2{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+}
 
 
 }
