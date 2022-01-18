@@ -1,0 +1,42 @@
+body {
+  background-color: aqua;
+}
+
+.wraper {
+  border: 1px solid navy;
+}
+.wraper .box {
+  width: 100px;
+  height: 100px;
+  background-color: navy;
+  margin: 1px;
+}
+.wraper .box p {
+  color: white;
+  font-size: 6px;
+}
+
+.card {
+  border-radius: 10px;
+  background-color: white;
+  margin: 10px;
+}
+.card img {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+}
+.card .card_text {
+  padding: 20px;
+}
+.card .card_text h3 {
+  font-style: italic;
+}
+.card .card_text p {
+  color: gray;
+  font-size: small;
+}
+.card .card_text p span {
+  font-weight: bold;
+}
+
+
