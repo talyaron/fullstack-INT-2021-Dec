@@ -26,16 +26,19 @@ body {
   border-radius: 10px 10px 0px 0px;
   width: 100%;
 }
-.card .card_text {
+.card_text {
   padding: 20px;
 }
-.card .card_text h3 {
+.card_text h3 {
   font-style: italic;
 }
-.card .card_text p {
+.card_text h3:hover {
+  background-color: lightgray;
+}
+.card_text p {
   color: #505050;
   font-size: small;
 }
-.card .card_text span {
+.card_text p span {
   font-weight: bold;
 }

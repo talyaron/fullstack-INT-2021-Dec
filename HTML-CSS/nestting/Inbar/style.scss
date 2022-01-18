@@ -29,19 +29,22 @@ body{
                 width: 100%;
             }
 
-            .card_text{
+            &_text{
                 padding: 20px;
             
             
                 h3{
                     font-style: italic;
+                    &:hover{
+                        background-color: lightgray;
+                    }
                 }
                 p{
                     color: #505050;
                     font-size: small;
-                }
-                span{
-                    font-weight: bold;
+                    span{
+                        font-weight: bold;
+                    }
                 }
             }
     }
