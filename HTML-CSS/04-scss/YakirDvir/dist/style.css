@@ -1,3 +1,71 @@
 body {
   background-color: #fafafa;
 }
+body .post {
+  width: 600px;
+  height: 850px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: ridge;
+  border-radius: 1%;
+}
+body .post .header .profilLogo {
+  float: left;
+  border-radius: 50%;
+  width: 30px;
+}
+body .post .header .profileName {
+  flex-flow: column;
+  font-size: 20px;
+}
+body .post .header .location {
+  font-size: 15px;
+  font-style: normal;
+}
+body .post .header .menu {
+  float: right;
+  width: 15px;
+}
+body .post .header .postImg {
+  width: 100%;
+}
+body .post .footer {
+  float: left;
+  width: 100%;
+}
+body .post .footer img {
+  width: 20px;
+}
+body .post .footer .footer-right {
+  float: right;
+}
+body .post .discription {
+  font-size: 14px;
+}
+body .post .discription .likes_count {
+  font: bold;
+}
+body .post .comments {
+  color: gray;
+}
+body .post .comments_input {
+  width: 80%;
+  height: 100%;
+  border: none;
+  outline: none;
+}
+body .post .post_comment img {
+  width: 20px;
+}
+body .post .post_comment {
+  float: left;
+  border: none;
+}
+body .post .post_comment_btn {
+  float: left;
+  font-size: 16px;
+  color: blue;
+}
