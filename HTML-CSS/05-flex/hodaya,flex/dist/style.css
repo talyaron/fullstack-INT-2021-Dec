@@ -1,22 +1,48 @@
 .red_header {
-  width: 100%;
+  width: 800px;
   height: 50px;
   background-color: red;
-  display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+  display: flex;
+  margin: auto;
+}
+.red_header h1 {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  margin-right: 10px;
 }
 .red_header p {
-  position: relative;
   color: white;
+  font-weight: lighter;
   font-size: 15px;
-  line-height: 20px;
+  margin-top: -2px;
+  margin-left: 5px;
 }
 
-.wrappwer {
-  width: 100px;
-  height: 100px;
+.wrapper {
+  justify-content: space-evenly;
+  background-color: #b15c5c;
+  width: 800px;
+  height: 300px;
+  display: flex;
+  margin: auto;
 }
-.wrappwer .box {
-  background-color: brown;
+.wrapper .miniwrapper {
+  width: 200px;
+  height: 300px;
+  background-color: white;
+  padding: 10px;
+}
+.wrapper img {
+  width: 100%;
+  height: 60%;
+}
+.wrapper h2 {
+  color: black;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: right;
 }
