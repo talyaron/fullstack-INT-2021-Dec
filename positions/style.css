@@ -1,16 +1,20 @@
 
-
-  .img-card{
-   width: 100px; 
-   height: 100px;
+  .card{
+    width: 150px;
+    height: 100px;
+   border-radius: 500px;
   }
-   .img{
+  .img-card{
+   width: 5px;
+   
+  }
+  .img{
    width: 100px;
    height: 100px;
-
-   }
+  }
     
-    
-
+  .card-text{
+   background-color: aquamarine;
+  }
     
  
