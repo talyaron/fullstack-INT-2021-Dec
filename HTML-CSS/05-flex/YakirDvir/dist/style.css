@@ -29,9 +29,9 @@ body .container .post img {
   height: 200px;
 }
 body .container .post h1 {
+  font-family: "Open Sans", sans-serif;
   font-size: 18px;
   color: black;
-  font-family: "NarkisBlock";
 }
 body .container .post .ynetLogo {
   display: flex;
