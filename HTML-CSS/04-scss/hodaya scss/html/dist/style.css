@@ -1,0 +1,19 @@
+body {
+  background-color: black;
+}
+
+.wrapper h1 {
+  color: burlywood;
+}
+.wrapper h1 .wrapper h2 {
+  color: red;
+  font-size: 50px;
+}
+
+img {
+  width: 300px;
+}
+img p {
+  color: red;
+  font-size: 30px;
+}
