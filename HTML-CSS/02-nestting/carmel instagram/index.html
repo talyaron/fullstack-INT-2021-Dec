@@ -4,121 +4,208 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header" id="instaheader">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6eIAI3vPny47MZsr1B56PGjwLI-VQYG0DCQ&usqp=CAU" alt="">
-        <div class="icons">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAYFBMVEX///8AAAAwMDAODg77+/s6Ojrv7+9GRkZsbGyYmJjGxsatra00NDQnJyf29vY+Pj5PT09mZmbCwsLg4OB8fHyMjIyfn5+NjY2GhoZFRUVbW1ttbW0XFxfx8fFYWFhnZ2fOV9kqAAADt0lEQVR4nO2d63KCMBBGUREUVPBSq7Wt7/+WndaxY5sV2GRx1/Cd385OjpAlF8ImCQAAAAAAAAAAAAAAAAAAwNNSlLu6WowfzaKqd2XRu122n450me6zHv2KN2W9C5+bvvxybbVfjn3crdlaW+sPa/F7daOt5CB8qx60fQgOkoJnbRuStZxgre1yh1pK0FaOueUsI2ixD14R6Yv2sugtAhk103ZoIfy5aLcTXghOqIW2QSuhA7ijtkAreeyXMPQi2pguNfMWItiQSCeP5n5TQtLpng556n8xgaI40c3ZB8QklyyqrVibuWwrskEBEal4giN6Pin5ePaPR2XSkD9MAuoq+neakoimd4te2BJtKr2j7dxgJ8HG+jFzG7XzDkbMfHWy6C1E1/GfCRP3vGBTfXEb5Z8bFk9iuPCONXZiTQRb6os7uhl7x4KhDjDkAEMdYMgBhjrAkAMMdYAhBxjqAEMOMNTBuGGapaEhLBtm83z5vsznYTvThg1ffsO8hIQxa7i6fbUxX/kHMmv4993NgL1pq4bzf5Hm3pGMGrq7yd7pxqihu43lvWFk1NDdMZr5hjJq6L4j7p1rbBqm7hsBU9/BDQw5wLA7MOQAQw4w7A4MOcCQAwy7A0MOMOQAw+7AkAMMOfgapg4rwnDl/uwpDLNylk9d3GZNiF/ls7J9kVHZ8P/CL5/WpWJVw5XEZxfa9jRUDWW+K9Gyzqhp+CoiOBq9WjWUOzLcmG4UDcOzzJXGbKNoKPd1l8aeqGeYLsUMl03Pfj3Dj3cxw/cPk4bxX8P4++EAcmn8z8P4xzQDGJcOYG4R//wwGcAc/4e412loYltrc4EhBxhygGF3YMgBhhxg2B0YcoAhBxh2B4YcYMgBht2J3zD+MzMDOPcU/9k1d0+jaYuwEaOG8Z8hHcA54AGc5Y7/PH4ygG8qfBP5dzFkgCEHGOoAQw4w1AGGHGCoAww5wFAHGHKAoQ4w5BC/Yfw1SuKvMxN/rSCi3pP3jpEYovWe4q/ZRdZdC17vDCKVrbtG187TVJSunTeA+od3aljOlGpYEknmm5AalvHXIY2/luwA6gELnnzti8Cazk9wEYOzXvS11QUP9/ZD2I75Dxtth0Y24YJJctC2aOAgIZgkZ22Pu5xlBMmZsAn8Z74ONq+iaIVwi31RqA9esffkF8mit2S27tS19+upDRR2xqjHviaohY3J1GefE/BsT64jPJBqLzBOa6Eod3W1GD+aRVXvSv0FaQAAAAAAAAAAAAAAAAAAAG++AL9rTK0MM5/OAAAAAElFTkSuQmCC" alt="">
-            <img src="data:image/png;base64,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" alt="">
-            <img src="https://previews.123rf.com/images/djvstock/djvstock1703/djvstock170302599/73546259-bubble-chat-speakbox-icon-vector-illustration-graphic-design.jpg" alt="">
+    <div id="topmenu">
+        <div id="logo">
+            <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="">
+        </div>
+        <div id="searchbar">
+            <input type="text" placeholder="Search..">
+        </div>
+        <div id="icons">
+            <svg aria-label="Home" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M22 23h-6.001a1 1 0 01-1-1v-5.455a2.997 2.997 0 10-5.993 0V22a1 1 0 01-1 1H2a1 1 0 01-1-1V11.543a1.002 1.002 0 01.31-.724l10-9.543a1.001 1.001 0 011.38 0l10 9.543a1.002 1.002 0 01.31.724V22a1 1 0 01-1 1z"></path></svg>
+            <svg aria-label="Messenger" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M12.003 2.001a9.705 9.705 0 110 19.4 10.876 10.876 0 01-2.895-.384.798.798 0 00-.533.04l-1.984.876a.801.801 0 01-1.123-.708l-.054-1.78a.806.806 0 00-.27-.569 9.49 9.49 0 01-3.14-7.175 9.65 9.65 0 0110-9.7z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="1.739"></path><path d="M17.79 10.132a.659.659 0 00-.962-.873l-2.556 2.05a.63.63 0 01-.758.002L11.06 9.47a1.576 1.576 0 00-2.277.42l-2.567 3.98a.659.659 0 00.961.875l2.556-2.049a.63.63 0 01.759-.002l2.452 1.84a1.576 1.576 0 002.278-.42z" fill-rule="evenodd"></path></svg>
+            <svg aria-label="New Post" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M2 12v3.45c0 2.849.698 4.005 1.606 4.944.94.909 2.098 1.608 4.946 1.608h6.896c2.848 0 4.006-.7 4.946-1.608C21.302 19.455 22 18.3 22 15.45V8.552c0-2.849-.698-4.006-1.606-4.945C19.454 2.7 18.296 2 15.448 2H8.552c-2.848 0-4.006.699-4.946 1.607C2.698 4.547 2 5.703 2 8.552z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="6.545" x2="17.455" y1="12.001" y2="12.001"></line><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" x1="12.003" x2="12.003" y1="6.545" y2="17.455"></line></svg>
+            <svg aria-label="Find People" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="13.941 13.953 7.581 16.424 10.06 10.056 16.42 7.585 13.941 13.953" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon><polygon fill-rule="evenodd" points="10.06 10.056 13.949 13.945 7.581 16.424 10.06 10.056"></polygon><circle cx="12.001" cy="12.005" fill="none" r="10.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></circle></svg>
+            <svg aria-label="Activity Feed" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg>
         </div>
     </div>
-    <div id="rapper">
-       
+    <div class="feed">
         <div id="stories">
-
+            <img src="IMG_7649.JPG" alt="">
+            <img src="IMG_7676.JPG" alt="">
+            <img src="IMG_7691.JPG" alt="">
+            <img src="IMG_7718.JPG" alt="">
+            <img src="IMG_7833.JPG" alt="">
+            <img src="IMG_8173.JPG" alt="">
+            <img src="IMG_8248.JPG" alt="">
         </div>
         <div class="post">
             <div class="header">
-                <img class="profilepic" src="IMG_4552.JPG" alt="">
-                <div class="wrapper">
-                    <p class="username">bobipilee223</p>
-                    <p class="location">some trashy place</p>
+                <div class="profilpic">
+                    <img src="IMG_7718.JPG" alt="">
+                    
                 </div>
-               <img src="https://icon-library.com/images/android-three-dots-icon/android-three-dots-icon-9.jpg" alt="">
+                <div class="username">
+                        peepeepoopo_time
+                </div>
+                <div class="more">
+                    <svg aria-label="More options" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><circle cx="12" cy="12" r="1.5"></circle><circle cx="6" cy="12" r="1.5"></circle><circle cx="18" cy="12" r="1.5"></circle></svg>
+                </div>
             </div>
-            <img class="postpic" src="IMG_2111.JPG" alt="">
-            <div class="icons">
-                <img src="data:image/png;base64,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" alt="">
-                <img src="https://previews.123rf.com/images/djvstock/djvstock1703/djvstock170302599/73546259-bubble-chat-speakbox-icon-vector-illustration-graphic-design.jpg" alt="">
-                <img src="https://www.shareicon.net/data/2015/08/12/84013_sent_512x512.png" alt="">
+            <div class="photo">
+                <img src="IMG_2111.JPG" alt="">
             </div>
-            <div class="dicription">
-                <p class="username">bobipilee223</p>
-                <p class="caption">look at this shit</p>
+            <div class="lowerpost">
+                <div class="lowerheader">
+                <div class="lefticons">
+                    <svg aria-label="Like" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg>
+                    <svg aria-label="Comment" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 10-3.59 3.615L22 22z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
+                    <svg aria-label="Share Post" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                </div>
+                <div class="righticons">    
+                        <svg aria-label="Save" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                </div>
+                </div>
+                <div class="likes">
+                    liked by einstine_the_barbarian and 339 others 
+                </div>
+                <div class="caption">
+                    peepeepoopo_time lets go shopping
+                </div>
+                <div class="comments">
+                    view all comments <br>
+                    5 days ago
+                </div>
+                <div class="addcomment">
+                    <path d="M15.83 10.997a1.167 1.167 0 101.167 1.167 1.167 1.167 0 00-1.167-1.167zm-6.5 1.167a1.167 1.167 0 10-1.166 1.167 1.167 1.167 0 001.166-1.167zm5.163 3.24a3.406 3.406 0 01-4.982.007 1 1 0 10-1.557 1.256 5.397 5.397 0 008.09 0 1 1 0 00-1.55-1.263zM12 .503a11.5 11.5 0 1011.5 11.5A11.513 11.513 0 0012 .503zm0 21a9.5 9.5 0 119.5-9.5 9.51 9.51 0 01-9.5 9.5z"></path>
+                    add a comment...
+                </div>
             </div>
-            <p class="comments">view all 23 comments</p>
+        </div>
 
+
+        <div class="post">
+            <div class="header">
+                <div class="profilpic">
+                    <img src="IMG_7745.JPG" alt="">
+                </div>
+                <div class="username">
+                    lisa_is_love
+                </div>
+                <div class="more">
+                    <svg aria-label="More options" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><circle cx="12" cy="12" r="1.5"></circle><circle cx="6" cy="12" r="1.5"></circle><circle cx="18" cy="12" r="1.5"></circle></svg>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="IMG_4543.JPG" alt="">
+            </div>
+            <div class="lowerpost">
+                <div class="lowerheader">
+                <div class="lefticons">
+                    <svg aria-label="Like" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg>
+                    <svg aria-label="Comment" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 10-3.59 3.615L22 22z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
+                    <svg aria-label="Share Post" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                </div>
+                <div class="righticons">    
+                        <svg aria-label="Save" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                </div>
+                </div>
+                <div class="likes">
+                    liked by everyone and 2 others 
+                </div>
+                <div class="caption">
+                    lisa_is_love such a nice day
+                </div>
+                <div class="comments">
+                    view all comments <br>
+                    23 hours ago
+                </div>
+                <div class="addcomment">
+                    <path d="M15.83 10.997a1.167 1.167 0 101.167 1.167 1.167 1.167 0 00-1.167-1.167zm-6.5 1.167a1.167 1.167 0 10-1.166 1.167 1.167 1.167 0 001.166-1.167zm5.163 3.24a3.406 3.406 0 01-4.982.007 1 1 0 10-1.557 1.256 5.397 5.397 0 008.09 0 1 1 0 00-1.55-1.263zM12 .503a11.5 11.5 0 1011.5 11.5A11.513 11.513 0 0012 .503zm0 21a9.5 9.5 0 119.5-9.5 9.51 9.51 0 01-9.5 9.5z"></path>
+                    add a comment...
+                </div>
+            </div>
         </div>
 
         <div class="post">
             <div class="header">
-                <img class="profilepic" src="IMG_2366.JPG" alt="">
-                <div class="wrapper">
-                    <p class="username">frootloops24</p>
-                    <p class="location">night school</p>
+                <div class="profilpic">
+                    <img src="IMG_7745.JPG" alt="">
                 </div>
-               <img src="https://icon-library.com/images/android-three-dots-icon/android-three-dots-icon-9.jpg" alt="">
+                <div class="username">
+                    larry_is_love
+                </div>
+                <div class="more">
+                    <svg aria-label="More options" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><circle cx="12" cy="12" r="1.5"></circle><circle cx="6" cy="12" r="1.5"></circle><circle cx="18" cy="12" r="1.5"></circle></svg>
+                </div>
             </div>
-            <img class="postpic" src="המצלמה שלי 1161.JPG" alt="">
-            <div class="icons">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAgVBMVEX///8AAADu7u6enp76+vqIiIjz8/Pp6emioqK1tbXl5eW9vb26urrc3NylpaW/v793d3eRkZFDQ0OsrKzGxsbOzs5+fn5cXFxNTU2ZmZk7OztsbGxkZGQfHx9UVFQlJSUvLy97e3sMDAwsLCzU1NSOjo4WFhYhISFycnJISEg1NTXOBTD5AAAI2UlEQVR4nO2dbVvyOgyA2dgYoKggLwK+gajo//+BB+TxaJN0W9p0K165v+pCs7VNmqZpp6MoiqIoiqIoiqIoiqIoiqIoiqIoiiJEOhvcdvP5zTxf3g5mhYDE4iBx+SWxe5CYCkh0JSsG+SSBrOZXw8xV4vB2vkISJ/mts0QPetPNJ2rLNy/7C/6r713sX6wSPzfTXgAt7OzWD9bGnNjeX7MkTu/fKiS+rWeBtEFk/arG/GNZ97X3uvUEvvWb6K3puF5rvpjXmXmKOUPiOPTMk423jOYcyKu+Yy/nCUyWQb/jZdXwI+iXSrxivrEDD5fB9Cse+fodWI2sEkfYNtThTsLsEgycWnNkaZFYc4IhGATQL1s7NydJHqnR2HPrEifW4qNx+OTRnIN53CGJu5o2x8LDUFbBmVdrjsB+5d7nv5lKKnjr3Zwk6RoS3YfgD7dyCl6V/tBq/brs9rvL8b58Zhz/kljuNqz24y+Jr+tyiVdSCvatP/E0vzQn7vQ6f7b+d/7/v9mt/HN+bXotxeXcPgWU29ra2LroakkbumEfr6lMFW0KTvr09DFa2r6lSEed0rIXZQN9ty9T8ZX+4x7Ptz/M7umHBKabIa2f3U85UdDmM7cquK6a/UcL8rmqhlTSo/zGVZ2V2uiOVpHsond1Gjqj+urWd2VMvbhu9WNfkAOY1LvucKJszMJVNavIp/r9Ymibckwm9d2TERHo8JpQR1jePcshvKmh4A1HYEbMOD5DEdu2V6YEuy39pm6f/wZPVM9MCb/AfdS2DrJT5X/y10G4VdyX9D+piKjrUgUvHCRiFV2DN8hs87/gkTIVXRTsdJZQzN5JDJ5mHOV0Lq0KukZc0Lt3m2ygV7JybE6ncyGsYKcDbf/aRQhy1zzCP3RHdeuidONcVvzQlHkFfygVPRTEUzTLqJ7oARGezhHuqJ5RT+hO8t1T6FT6hijhV/T6ggcKII+/UgRjOa9+ogJTRV8F0TJ6wn0emgqB3bvfHVUgMA+HEddgAKPq/wk7v78ib2/RAviIXHcELONkwq/Dk9Q7IWlmE+94TwOX9F6kSUe514NrsR1AsJDiyQXmRqRXiQOmZ57BBn28hVSIGmQ+c4UZLBDrpMKY3fSZ9azP928OMJY4jwJrGGjL1Rvg13AsosfLaRSzmRw3wowfeTrdATHdb85WlLlyGlc/0BLmJh1nBWXusItt04ljbmw+Mp40FxZx2vsjps3nhFnMPcmyXa922RntfGE8+W48KZz1IIjpfD8xnjSTu9pM0y3HNIgPjCf/voZmL43VpYEavjOeNGca743kYJjeJWccmkuLeOdSM1XrmfHkudhDMwrLsYdmlEYwu0oYd5/G3JRx21RrAjMiyNmeMYMY82At9MXMgeeEMcyQPjNO1yDuownsaQZroS9mMzkrYNOjjTTUhgL7HKsG4nSi2biCgKRC1ocwH3XO5ggMSMpgPWsu8jmGpknMVvLCSWYAZBuohb6YeZO8cBLYEmjsXBwLcICA51yCvac4o20gHZ65jDXzJtlbyI3g10ZwJjDGUA3YIeX6lmAgxuh8g4147hovNeepzyBt9MM8ab1lR5PAwbL41vnAs+TbbJAx5JqXGA6QWMhfpsP02WaPw1cD02kcQp6gm8Y214B5xsWxBGvEh7iWUBk4c+2UZAW6QVx7bPDAoJMQkHHyEtNHzMDJEresNJi8F1NQEeaGOoblYZKqbCO9AC1zzTSAJw/jWWHAQ7bOYRaYER+LTYS20P0UATwo4ZAuHgSYZO+RjwuLAsSx1ofFATg7oxD4EeNYCcNTjV4541BYDGYfGnu/144Ocre/p49O1HnGq2H9kQ+ZZnoADxL7BnPRAba2+ymqYOGdZbCBEtsNSqEjXRtvkRkU6W5eJUCnwwXWA+hUvcjpEkdQuQKRBG1UI6C9zTY0tctsT6PJ5q0tk5GiwktCyUzo7HRbrg0ahGIbm6jiRjvZGaj6oNykh4tHtHECA9cuEEy4w7Ufms/mw69Z1PlA9Tb42wSe4FlG9pBEigrxNO2gfoR+x7halNMhf2dwUSZxq4yLHzUZmML13QJ4VriOY3MTKp5GQyTA4KHeWNhmh345jFuFf6ehHHdYXCAJtmGLyyd6lxKrQw93nmDL8A36qUn47ZoMFwwLGLfFxdbCn03EFeNCZvT2cC3o0GYRG8K3oEODqKLoHygpAw+M0IEioiASt4QbB6KKZPDTH0SJuXAJtkRRQ6GirGUQtStDqUgo2EgYjCiHGcY+EeWLG6ruQFzdEUJFQsGm0ut6ROlieRUJBd8b24QuiHLq0jlTqHLgwRA2eNSTqGsqvFwkFGw2NkQViJac5qhiww2H2qkienITHVVIuvFznlTl1UeZlUZGlWduIUJLVXr+kFh6pyislrSUckaVnn73d4uH74Tclk5ekVcm+MZuyJs0GnBGachCz362n6xy3pqCFhV9YgybyBS0dNSJq3PVo+aYdhW0lOveug1G+jKb1hN36ULPLl4q5aiJ1AH1ha6CzCu/36EL5ieRVKzYkVenbXlu5Iy+/SmSw0iW2644njh988xTNIcCe/SFnZO6y50RfQ/GZyxZ1x2Lr5zUXTPSU0yyiOmAh/X+n+fqzziy3NjaZnIZie1WqHH5l8hst3e1bgYxtsvnnsom1antPq44cuYBqe3enLVt1Zja7lRctZ9sTbOxNJi+HTWzzDChN3u8sN4i+IJPDFxYr6CLcAj+MLQ2+8N0T3bkzVZfLyPe8nAnNraWJ4sfD2VosZ9JPCePSri03/B7c9KxsN9ztY1gKVFNav9ARx3LLqlexDqHQsquLS1RP+4pxsTp9udQNzUHgn/7bNuHcdiklms1LSzO6wOemNa/iH0bRbDCgfJbf38Ima8SmBLL/quDRhOrcGJKXKtpULq4Og8Gdh8nOSsTaMe6jK8MAJwPKR3Fyc/FR6tDukH67c/RApZRmDre/DX9jhQ/ge38vA2EnX/j8fUvjT9EsfuL3VNRFEVRFEVRFEVRFEVRFEVRFEVRlPPgPxQVWldTo/DjAAAAAElFTkSuQmCC" alt="">
-                <img src="https://previews.123rf.com/images/djvstock/djvstock1703/djvstock170302599/73546259-bubble-chat-speakbox-icon-vector-illustration-graphic-design.jpg" alt="">
-                <img src="https://www.shareicon.net/data/2015/08/12/84013_sent_512x512.png" alt="">
+            <div class="photo">
+                <img src="המצלמה שלי 1170.JPG" alt="">
             </div>
-            <div class="dicription">
-                <p class="username">frootloops24</p>
-                <p class="caption">look at this shit</p>
+            <div class="lowerpost">
+                <div class="lowerheader">
+                <div class="lefticons">
+                    <svg aria-label="Like" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg>
+                    <svg aria-label="Comment" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 10-3.59 3.615L22 22z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
+                    <svg aria-label="Share Post" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                </div>
+                <div class="righticons">    
+                        <svg aria-label="Save" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+                </div>
+                </div>
+                <div class="likes">
+                    liked by everyone and 4 others 
+                </div>
+                <div class="caption">
+                    larry_is_love such a nice week
+                </div>
+                <div class="comments">
+                    view all comments <br>
+                    2 weeks ago
+                </div>
+                <div class="addcomment">
+                    <path d="M15.83 10.997a1.167 1.167 0 101.167 1.167 1.167 1.167 0 00-1.167-1.167zm-6.5 1.167a1.167 1.167 0 10-1.166 1.167 1.167 1.167 0 001.166-1.167zm5.163 3.24a3.406 3.406 0 01-4.982.007 1 1 0 10-1.557 1.256 5.397 5.397 0 008.09 0 1 1 0 00-1.55-1.263zM12 .503a11.5 11.5 0 1011.5 11.5A11.513 11.513 0 0012 .503zm0 21a9.5 9.5 0 119.5-9.5 9.51 9.51 0 01-9.5 9.5z"></path>
+                    add a comment...
+                </div>
             </div>
-            <p class="comments">view all 3 comments</p>
-
         </div>
+
 
         <div class="post">
             <div class="header">
-                <img class="profilepic" src="IMG_2782.JPG" alt="">
-                <div class="wrapper">
-                    <p class="username">thefoodgogeter888</p>
-                    <p class="location">night school</p>
+                <class class="profilpic">
+                    <img src="https://img.wattpad.com/1862180787ae8dff2b38171ec97003ab67cb0485/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f7836416c5845495756452d7730773d3d2d3635333236303439352e3135363631303362373365336532666634373630333032373135362e6a7067?s=fit&w=720&h=720" alt="">
+                </class>
+                <class class="username">
+                    einstine_the_barbarian
+                </class>
+                <class class="more">
+                    <svg aria-label="More options" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><circle cx="12" cy="12" r="1.5"></circle><circle cx="6" cy="12" r="1.5"></circle><circle cx="18" cy="12" r="1.5"></circle></svg>
+                </class>
+            </div>
+            <div class="photo">
+                <img src="המצלמה שלי 1161.JPG" alt="">
+            </div>
+            <div class="lowerpost">
+                <div class="lowerheader">
+                <div class="lefticons">
+                    <svg aria-label="Like" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z"></path></svg>
+                    <svg aria-label="Comment" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 10-3.59 3.615L22 22z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
+                    <svg aria-label="Share Post" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
                 </div>
-               <img src="https://icon-library.com/images/android-three-dots-icon/android-three-dots-icon-9.jpg" alt="">
-            </div>
-            <img class="postpic" src="המצלמה שלי 1170.JPG" alt="">
-            <div class="icons">
-                <img src="data:image/png;base64,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" alt="">
-                <img src="https://previews.123rf.com/images/djvstock/djvstock1703/djvstock170302599/73546259-bubble-chat-speakbox-icon-vector-illustration-graphic-design.jpg" alt="">
-                <img src="https://www.shareicon.net/data/2015/08/12/84013_sent_512x512.png" alt="">
-            </div>
-            <div class="dicription">
-                <p class="username">thefoodgogeter888</p>
-                <p class="caption">look at this shit</p>
-            </div>
-            <p class="comments">view all 555 comments</p>
-
-        </div>
-
-        <div class="post">
-            <div class="header">
-                <img class="profilepic" src="IMG_2782.JPG" alt="">
-                <div class="wrapper">
-                    <p class="username">carmacookies69</p>
-                    <p class="location">shooping funtime</p>
+                <div class="righticons">    
+                        <svg aria-label="Save" class="_8-yf5 " color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
                 </div>
-               <img src="https://icon-library.com/images/android-three-dots-icon/android-three-dots-icon-9.jpg" alt="">
+                </div>
+                <div class="likes">
+                    liked by everyone
+                </div>
+                <div class="caption">
+                    einstine_the_barbarian i am the only man ever
+                </div>
+                <div class="comments">
+                    view all comments <br>
+                    3 hours ago
+                </div>
+                <div class="addcomment">
+                    <path d="M15.83 10.997a1.167 1.167 0 101.167 1.167 1.167 1.167 0 00-1.167-1.167zm-6.5 1.167a1.167 1.167 0 10-1.166 1.167 1.167 1.167 0 001.166-1.167zm5.163 3.24a3.406 3.406 0 01-4.982.007 1 1 0 10-1.557 1.256 5.397 5.397 0 008.09 0 1 1 0 00-1.55-1.263zM12 .503a11.5 11.5 0 1011.5 11.5A11.513 11.513 0 0012 .503zm0 21a9.5 9.5 0 119.5-9.5 9.51 9.51 0 01-9.5 9.5z"></path>
+                    add a comment...
+                </div>
             </div>
-            <img class="postpic" src="IMG_4543.JPG" alt="">
-            <div class="icons">
-                <img src="data:image/png;base64,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" alt="">
-                <img src="https://previews.123rf.com/images/djvstock/djvstock1703/djvstock170302599/73546259-bubble-chat-speakbox-icon-vector-illustration-graphic-design.jpg" alt="">
-                <img src="https://www.shareicon.net/data/2015/08/12/84013_sent_512x512.png" alt="">
-            </div>
-            <div class="dicription">
-                <p class="username">carmacookies69</p>
-                <p class="caption">look at this shit</p>
-            </div>
-            <p class="comments">view all 9005 comments</p>
-
-        </div>
-
-
-
-    
-        <div id="menu">
-            <img src="instagram-bottom-banner-iconssddsd.png" alt="">
-        </div>
     </div>
 </body>
 </html>
