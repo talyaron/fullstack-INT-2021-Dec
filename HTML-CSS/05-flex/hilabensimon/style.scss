@@ -1,0 +1,27 @@
+.redhead{
+    background-color: red;
+    height: 15px; 
+    border: 10px solid red; 
+    margin: auto;
+    position: relative;
+    margin-top: 60px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    .first{
+        margin-top: auto; 
+         float: right;
+         color: white;   
+         line-height: 1.15;
+     }
+     .second{    
+        margin-top: auto;
+        float: left;
+        color: white;
+    }   
+} 
+
+    
+  
+
+.container{
+    display: flex;
