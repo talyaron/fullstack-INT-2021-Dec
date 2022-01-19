@@ -1,0 +1,12 @@
+.container {
+  background-color: wheat;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .item {
+  height: 100px;
+  background-color: pink;
+  margin: 1px;
+}
