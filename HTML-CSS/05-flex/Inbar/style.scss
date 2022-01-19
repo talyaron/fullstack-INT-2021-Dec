@@ -1,17 +1,41 @@
+.header{
+    .wrapper{
+        height: 30px;
+        width: 100%;
+        background-color: red;
+        position: relative;
+        
+        .alignright{
+        float: right;
+        margin-top: 0;
+        margin-right: 10px;
+        }
+
+        .alightleft{
+            float: left;
+
+            margin-left: 10px;
+        }
+    }
+}
+
 .container{
-    background-color: wheat;
+    margin: 50px;
+    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: row;
+
+   
+
     
 
 
     .item{
-        height: 100px;
-        background-color: pink;
+        height: 168px;
+        width: 298px;
         margin: 1px;
-
-        
-    }
+        position: relative;
+     }
 }
