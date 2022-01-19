@@ -1,37 +1,8 @@
-.redhead {
+.headline {
   background-color: red;
-  height: 15px;
-  border: 10px solid red;
-  margin: auto;
+  height: 5vh;
+  width: 100%;
+  border: 1px solid red;
+  margin-top: 70px;
   position: relative;
-  margin-top: 100px;
-  font-weight: bold;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-.redhead .first {
-  margin-top: auto;
-  float: right;
-  color: white;
-  line-height: 1.15;
-}
-.redhead .second {
-  margin-top: auto;
-  float: left;
-  color: white;
-  line-height: 1.15;
-}
-
-.container {
-  display: flex;
-  margin: auto;
-  background-color: white;
-  justify-content: center;
-}
-.container .img3 {
-  height: 150px;
-  width: 25%;
-}
-.container .img4 {
-  height: 150px;
-  width: 25%;
 }
