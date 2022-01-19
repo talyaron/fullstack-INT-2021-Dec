@@ -45,7 +45,15 @@ padding-right: 5px;
         height: 200px;
         position: relative;}
 
+        .icon-box
 
+        {
+            height: 20px;
+            width: auto;
+            position: absolute;
+            bottom:0px; right:0px;
+            align-items: center;
+                }
         
     
 .p { font-family: arial;
@@ -55,12 +63,6 @@ padding-right: 5px;
 }
 }
 
-.icon-box
 
-{box-sizing: border-box;
-    height: 20px;
-    width: auto;
-    position: absolute;
-        }
         
     
