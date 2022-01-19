@@ -1,0 +1,41 @@
+.header{
+    .wrapper{
+        height: 30px;
+        width: 100%;
+        background-color: red;
+        position: relative;
+        
+        .alignright{
+        float: right;
+        margin-top: 0;
+        margin-right: 10px;
+        }
+
+        .alightleft{
+            float: left;
+
+            margin-left: 10px;
+        }
+    }
+}
+
+.container{
+    margin: 50px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: row;
+
+   
+
+    
+
+
+    .item{
+        height: 168px;
+        width: 298px;
+        margin: 1px;
+        position: relative;
+     }
+}

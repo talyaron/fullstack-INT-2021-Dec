@@ -1,0 +1,187 @@
+.top-bar {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    left: 0;
+    background-color: rgb(243, 243, 243);
+    border-bottom: rgb(0, 0, 0);
+    border-width: 1px;
+    display: flex;
+    z-index: 1;
+    .insta {
+        height: 40px;
+        padding-left: 2px;
+        padding-top: 2px;
+    }
+    .search {
+        width: 15rem;
+        margin: auto;
+        background-color: rgb(243, 243, 243);
+    }
+    .home {
+        padding-top: 7px;
+        vertical-align: middle;
+        height: 30px;
+        width: 30px;
+    }
+    .share {
+        padding-top: 7px;
+        vertical-align: middle;
+        height: 30px;
+        width: 30px;
+        float: left;
+    }
+    .add {
+        vertical-align: middle;
+        height: 30px;
+        width: 30px;
+        padding-top: 7px;
+    }
+    .compas {
+        vertical-align: middle;
+        height: 30px;
+        width: 30px;
+        padding-top: 7px;
+    }
+    .heart {
+        vertical-align: middle;
+        height: 30px;
+        width: 30px;
+        padding-top: 7px;
+        float: left;
+    }
+    .avatar {
+        vertical-align: middle;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        padding-top: 5px;
+    }
+}
+
+.stories {
+    background-color: rgb(250, 249, 249);
+    border-radius: 5px;
+    width: 500px;
+    height: 700px;
+    position: absolute;
+    left: 35%;
+    margin-left: -50px;
+    top: 20%;
+    margin-top: 50px;
+    .avatar {
+        vertical-align: middle;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        padding-top: 5px;
+    }
+    .dots {
+        vertical-align: middle;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        float: right;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+    .funcat {
+        height: 400px;
+        margin: auto;
+        max-width: 500px;
+    }
+    .comment {
+        vertical-align: middle;
+        height: 30px;
+        width: 30px;
+        float: left;
+        padding-top: 5px;
+    }
+    .bookmark {
+        vertical-align: middle;
+        height: 30px;
+        width: 30px;
+        float: right;
+        padding-top: 7px;
+    }
+    .heart {
+        vertical-align: middle;
+        height: 30px;
+        width: 30px;
+        padding-top: 7px;
+        float: left;
+    }
+    .share {
+        padding-top: 7px;
+        vertical-align: middle;
+        height: 30px;
+        width: 30px;
+        float: left;
+    }
+}
+
+.stories-2 {
+    background-color: rgb(250, 249, 249);
+    border-radius: 5px;
+    width: 500px;
+    height: 700px;
+    position: absolute;
+    left: 10%;
+    margin-left: -50px;
+    top: 95%;
+    margin-top: 50px;
+}
+
+.stories-3 {
+    background-color: rgb(250, 249, 249);
+    border-radius: 5px;
+    width: 500px;
+    height: 700px;
+    position: absolute;
+    left: 10%;
+    margin-left: -50px;
+    top: 95%;
+    margin-top: 50px;
+}
+
+.small-avatar {
+    img {
+        vertical-align: middle;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        padding-top: 7px;
+        float: left;
+    }
+    span {
+        vertical-align: middle;
+    }
+    p {
+        color: gray;
+    }
+}
+
+.smily {
+    vertical-align: middle;
+    height: 30px;
+    width: 30px;
+    float: left;
+    padding-top: 5px;
+}
+
+.comment-bar {
+    margin-left: 19%;
+    width: 15rem;
+    margin-top: 7px;
+    background-color: rgb(250, 249, 249);
+    border: 0px;
+}
+
+.click {
+    float: right;
+    border: 0px;
+    color: rgb(133, 207, 231);
+    background-color: rgb(250, 249, 249);
+    margin-top: 7px;
+}

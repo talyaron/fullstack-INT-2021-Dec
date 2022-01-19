@@ -1,0 +1,92 @@
+body {
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+
+    .post {
+
+        position: relative;
+        width: 600px;
+        height: auto;
+        margin: 20px auto;
+
+        background-color: #fff;
+        border: ridge;
+        border-radius: 1%;
+
+        .header {
+            position: relative;
+
+            .profilLogo {
+                float: left;
+                border-radius: 50%;
+                width: 30px;
+            }
+
+            .profileName {
+                position: relative;
+                left: 5px;
+                flex-flow: column;
+                font-size: 20px;
+            }
+
+            .location {
+                position: absolute;
+                top: 5px;
+                left: 35px;
+                font-size: 15px;
+            }
+
+            .menu {
+                float: right;
+                width: 15px;
+            }
+
+            .postImg {
+                width: 100%;
+            }
+
+        }
+
+        .footer {
+            img {
+                width: 20px;
+            }
+
+            .footer-right {
+                position: absolute;
+                right: 0px;
+            }
+
+        }
+
+        .discription {
+
+            font-size: 14px;
+
+            .likes_count {
+                font: bold;
+            }
+
+            .comments {
+                color: gray;
+            }
+        }
+
+
+        .post_comment {
+            display: flex;
+            justify-content: space-between;
+            width: 200px;
+
+            .post_comment img {
+                width: 20px;
+            }
+
+            .post_comment_btn {
+                font-size: 18px;
+                color: blue;
+            }
+        }
+    }
+}

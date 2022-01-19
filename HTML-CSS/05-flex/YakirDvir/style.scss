@@ -1,0 +1,65 @@
+
+
+body {
+    color: lightblue;
+
+    margin: auto;
+    direction: rtl;
+    width: 1240px;
+
+    .red-bar {
+        background-color: red;
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            margin: 10px;
+            color: white;
+        }
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 310px;
+
+        .post {
+            position: relative;
+            margin: 5px;
+            width: 300px;
+
+            img {
+                width: 300px;
+                height: 200px;
+            }
+
+            h1 {
+                font-family: 'Open Sans', sans-serif;
+                font-size: 18px;
+                color: black;
+                
+
+            }
+
+            .ynetLogo {
+                display: flex;
+                direction: ltr;
+                position: absolute;
+                bottom: 85px;
+                right: 15px;
+                background-color: red;
+                color: white;
+                width: 50px;
+                border-radius: 30px 30px 30px 30px;
+
+                .ynetPlus {
+                    background-color: black;
+                    border-radius: 100%;
+                }
+            }
+        }
+
+    }
+
+}
