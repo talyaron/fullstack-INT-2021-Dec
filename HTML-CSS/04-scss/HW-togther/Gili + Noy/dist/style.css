@@ -27,3 +27,18 @@ nav {
   display: flex;
   flex-direction: row;
 }
+
+/* contaier of things */
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.wrapper .article img {
+  width: 100%;
+}
+.wrapper .article span {
+  font-size: 15px;
+}
