@@ -1,0 +1,363 @@
+body {
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* gray line */
+hr {
+    width: 570px;
+    border-top: solid 1px rgb(216, 216, 216);
+}
+
+/* count likes */
+p {
+    position: relative;
+    left: 20px;
+
+    font: inherit;
+}
+
+/* Add a comment */
+h6 {
+    position: relative;
+    left: 50px;
+    bottom: 25px;
+    font: inherit;
+    color: rgb(161, 161, 161);
+}
+
+/* view all comments */
+h3 {
+    position: relative;
+    color: #949494;
+    left: 20px;
+    bottom: 5px;
+    font: inherit;
+}
+
+/* hours ago */
+h5 {
+    position: relative;
+    color: #949494;
+    left: 20px;
+    bottom: 5px;
+    font: inherit;
+    font-size: 12px;
+
+
+}
+
+.header {
+    z-index: 1;
+    position: fixed;
+    top: 0px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    width: 100%;
+    height: 50px;
+    background-color: white;
+
+    img {
+        padding-left: 20px;
+    }
+
+    .search {
+        position: relative;
+        left: 100px;
+
+        textarea {
+            color: #969696;
+            height: 30px;
+            resize: none;
+            left: 280px;
+            padding-right: 40px;
+            background-color: #fafafa;
+            border: #fafafa;
+            border-radius: 4px;
+            font: inherit;
+
+
+        }
+
+    }
+
+
+    .header-icons {
+        position: relative;
+        left: 150px;
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+
+        img {
+            border-radius: 50;
+            height: 30px;
+            width: 30px;
+        }
+    }
+}
+
+
+.wrapper {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+
+
+    .post1 {
+        background-color: white;
+        border: solid 1px #d6d6d6;
+        width: 600px;
+        position: absolute;
+        top: 100px;
+
+        .post-header {
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: inherit;
+
+            img {
+
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                position: relative;
+                left: 15px;
+            }
+
+
+            svg {
+                position: relative;
+                left: 420px;
+            }
+        }
+
+
+        .img1 {
+            display: flex;
+            width: 600px;
+        }
+
+        .likebar {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-content: center;
+
+
+            .like-icons {
+                display: flex;
+                margin: 10px;
+                justify-content: space-around;
+                padding: 220px;
+                position: relative;
+                right: 220px;
+            }
+
+            .simania {
+                display: flex;
+                position: relative;
+                left: 440px;
+            }
+
+        }
+
+        .comment-bar {
+            display: flex;
+            flex-direction: row;
+            height: 50px;
+
+
+            .smiley {
+                position: relative;
+                left: 20px;
+                top: 7px;
+            }
+
+        }
+    }
+
+    .post2{
+
+        background-color: white;
+        border: solid 1px #d6d6d6;
+        width: 600px;
+        position: relative;
+       top: 1050px;
+
+        .post-header {
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: inherit;
+
+            img {
+
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                position: relative;
+                left: 15px;
+            }
+
+       
+
+            svg {
+                position: relative;
+                left: 420px;
+            }
+        }
+
+
+        .img2 {
+            img{
+            display: flex;
+            width: 100%;
+        }
+    }
+        .likebar {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-content: center;
+
+
+            .like-icons {
+                display: flex;
+                margin: 10px;
+                justify-content: space-around;
+                padding: 220px;
+                position: relative;
+                right: 220px;
+            }
+
+            .simania {
+                display: flex;
+                position: relative;
+                left: 440px;
+            }
+
+        }
+
+        .comment-bar {
+            display: flex;
+            flex-direction: row;
+            height: 50px;
+
+
+            .smiley {
+                position: relative;
+                left: 20px;
+                top: 7px;
+            }
+
+        }
+
+
+    }
+
+    .post3{
+
+        background-color: white;
+        border: solid 1px #d6d6d6;
+        width: 600px;
+        position: relative;
+       top: 1100px;
+
+        .post-header {
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: inherit;
+
+            img {
+
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                position: relative;
+                left: 15px;
+            }
+
+       
+
+            svg {
+                position: relative;
+                left: 490px;
+            }
+        }
+
+
+        .img3 {
+            img{
+            display: flex;
+            width: 100%;
+        }
+    }
+        .likebar {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-content: center;
+
+
+            .like-icons {
+                display: flex;
+                margin: 10px;
+                justify-content: space-around;
+                padding: 220px;
+                position: relative;
+                right: 220px;
+            }
+
+            .simania {
+                display: flex;
+                position: relative;
+                left: 440px;
+            }
+
+        }
+
+        .comment-bar {
+            display: flex;
+            flex-direction: row;
+            height: 50px;
+
+
+            .smiley {
+                position: relative;
+                left: 20px;
+                top: 7px;
+            }
+
+        }
+
+
+    }
+
+}
