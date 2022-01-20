@@ -1,6 +1,7 @@
 body {
     margin: 0%;
     padding: 0%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header {
@@ -22,6 +23,8 @@ header {
 }
 
 nav {
+    position:sticky;
+    top: 0px;
     background-color: rgb(32, 32, 32);
     height: 50px;
     width: 100%;
@@ -31,10 +34,25 @@ nav {
     flex-direction: row;
     color: white;
     font-size: 15px;
-    div {
-        margin-left: 15px;
+    align-items: center;
 
+    a:link , a:visited , a:active {
+        color: #ffffff;
+        text-decoration: none;
     }
+    .links {
+        display: flex;
+        flex-direction: row;
+        width: 72%;
+        margin: auto;
+        div{
+            margin-right: 20px;
+        }
+    }
+}
+.headline{
+    width: 72%;
+    margin: auto;
 }
 
 /* contaier of things */
@@ -45,8 +63,10 @@ nav {
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
+
     .article {
         margin: 15px;
+        width: 250px;
         img {
             width: 100%;
         }
