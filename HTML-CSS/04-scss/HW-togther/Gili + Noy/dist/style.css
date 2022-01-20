@@ -1,6 +1,7 @@
 body {
   margin: 0%;
   padding: 0%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header {
@@ -21,6 +22,8 @@ header h1 {
 }
 
 nav {
+  position: sticky;
+  top: 0px;
   background-color: #202020;
   height: 50px;
   width: 100%;
@@ -30,9 +33,25 @@ nav {
   flex-direction: row;
   color: white;
   font-size: 15px;
+  align-items: center;
 }
-nav div {
-  margin-left: 15px;
+nav a:link, nav a:visited, nav a:active {
+  color: #ffffff;
+  text-decoration: none;
+}
+nav .links {
+  display: flex;
+  flex-direction: row;
+  width: 72%;
+  margin: auto;
+}
+nav .links div {
+  margin-right: 20px;
+}
+
+.headline {
+  width: 72%;
+  margin: auto;
 }
 
 /* contaier of things */
@@ -45,6 +64,7 @@ nav div {
 }
 .wrapper .article {
   margin: 15px;
+  width: 250px;
 }
 .wrapper .article img {
   width: 100%;
