@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 0 10%;
+}
+body header nav .nav-logo {
+  border: 5px solid white;
+  background-color: white;
+  width: 100px;
+  height: 35px;
+  cursor: pointer;
+  margin: 5px 0;
+}
+body header nav .nav-links {
+  list-style: none;
+}
+body header nav .nav-links li {
+  display: inline-block;
+  padding: 12px 15px;
+  border-right: 1px solid #5a5a5a;
+  margin-left: -5px;
+}
+body header nav .nav-links li a {
+  padding: 10px 0;
+  transition: all 0.3 ease 0;
+}
+body header nav .nav-links li a:hover {
+  border-bottom: 3px solid #5e5e5e;
+  color: rgba(255, 255, 255, 0.9);
+}
+body header nav .nav-links li:first-child {
+  border-left: 1px solid #5a5a5a;
+}
+body header nav button {
+  border: none;
+  background-color: black;
+  padding: 12px 10px;
+  border-left: 1px solid #5a5a5a;
+  border-right: 1px solid #5a5a5a;
+  cursor: pointer;
+}
+body header nav button a {
+  padding: 10px 0;
+  color: white;
+}
+body header nav button a:hover {
+  border-bottom: 3px solid #5a5a5a;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+li, a, button {
+  font-family: "Arial", sans-serif;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+}
