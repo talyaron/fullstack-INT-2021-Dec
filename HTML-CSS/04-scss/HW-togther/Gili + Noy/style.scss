@@ -9,6 +9,7 @@ header {
     background-color: black;
     margin: 0%;
     position: relative;
+    border-bottom: 1px solid rgb(233, 233, 233);
 
     h1 {
         color: white;
@@ -16,17 +17,23 @@ header {
         font-weight: bolder;
         position: absolute;
         top: 30px;
+        margin-left: 60px;
     }
 }
 
 nav {
-    background-color: gray;
+    background-color: rgb(32, 32, 32);
     height: 50px;
     width: 100%;
     padding: 0%;
     margin: 0%;
     display: flex;
     flex-direction: row;
+    color: white;
+    font-size: 15px;
+    div {
+        margin-left: 15px;
+    }
 }
 
 /* contaier of things */
@@ -38,6 +45,7 @@ nav {
     flex-wrap: wrap;
     justify-content: center;
     .article {
+        margin: 15px;
         img {
             width: 100%;
         }

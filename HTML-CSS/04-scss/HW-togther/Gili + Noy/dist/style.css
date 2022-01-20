@@ -9,6 +9,7 @@ header {
   background-color: black;
   margin: 0%;
   position: relative;
+  border-bottom: 1px solid #e9e9e9;
 }
 header h1 {
   color: white;
@@ -16,16 +17,22 @@ header h1 {
   font-weight: bolder;
   position: absolute;
   top: 30px;
+  margin-left: 60px;
 }
 
 nav {
-  background-color: gray;
+  background-color: #202020;
   height: 50px;
   width: 100%;
   padding: 0%;
   margin: 0%;
   display: flex;
   flex-direction: row;
+  color: white;
+  font-size: 15px;
+}
+nav div {
+  margin-left: 15px;
 }
 
 /* contaier of things */
@@ -35,6 +42,9 @@ nav {
   width: 100%;
   flex-wrap: wrap;
   justify-content: center;
+}
+.wrapper .article {
+  margin: 15px;
 }
 .wrapper .article img {
   width: 100%;
