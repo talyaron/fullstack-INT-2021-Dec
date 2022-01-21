@@ -5,16 +5,23 @@ nav {
     height: 40px;
     width: 1000px;
     padding: 0%;
-    margin: 0%;
+    margin: auto;
     display: flex;
     flex-direction: row;
     color: black;
     font-size: 15px;
     align-items: center;
-
-    a{
-        color:blue;
-    }
+    .links{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        margin: auto;
+        div{
+            margin-right: 20px;
+        }
+        a{
+            color:blue;
+        }
         a:visited{
             color: orange;
         }
@@ -24,17 +31,8 @@ nav {
         a:hover {
             color: green;
         }
+       }
     }
-    .links {
-        display: flex;
-        flex-direction: row;
-        width: 80%;
-        margin: auto;
-        div{
-            margin-right: 20px;
-        }
-    }
-}
 .firstRow{
     font-size: 41px;
     color: black;
