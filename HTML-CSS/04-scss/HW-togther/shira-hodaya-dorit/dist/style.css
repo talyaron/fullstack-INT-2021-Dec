@@ -1,21 +1,21 @@
 nav {
-  text-align: center;
   position: sticky;
-  top: 0px;
+  width: 1500px;
   height: 40px;
-  width: 1000px;
+  top: 0px;
   padding: 0%;
-  margin: auto;
+  margin-left: 400px;
   display: flex;
   flex-direction: row;
   color: black;
-  font-size: 15px;
+  font-size: 16px;
   align-items: center;
 }
 nav .links {
   display: flex;
   flex-direction: row;
-  width: 80%;
+  text-align: center;
+  width: 100%;
   margin: auto;
 }
 nav .links div {
