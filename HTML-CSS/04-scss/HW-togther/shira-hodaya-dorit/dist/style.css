@@ -11,10 +11,6 @@ nav {
   font-size: 16px;
   align-items: center;
 }
-nav a:link, nav a:visited, nav a:active {
-  color: blue;
-  text-decoration: none;
-}
 nav .links {
   display: flex;
   flex-direction: row;
@@ -24,6 +20,12 @@ nav .links {
 }
 nav .links div {
   margin-right: 20px;
+}
+nav .links a:visited {
+  color: orange;
+}
+nav .links a:hover {
+  color: green;
 }
 
 .firstRow {

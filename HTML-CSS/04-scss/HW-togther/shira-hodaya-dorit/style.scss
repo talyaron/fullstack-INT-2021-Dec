@@ -11,11 +11,7 @@ nav {
     color: black;
     font-size: 16px;
     align-items: center;
-
-    a:link , a:visited , a:active {
-        color: blue;
-        text-decoration: none;
-    }
+    
     .links {
         display: flex;
         flex-direction: row;
@@ -25,6 +21,12 @@ nav {
         div{
             margin-right: 20px;
         }
+        a:visited{
+            color: orange;
+        }
+        a:hover{
+            color:green;
+        } 
     }
 }
 .firstRow{
