@@ -5,6 +5,11 @@ body {
         font-size: 16px;
         line-height: 1.4;
         margin: 0;
+        font-weight: bold;
+    }
+    h4:hover {
+        color: rgb(3, 122, 151);
+        text-decoration: underline;
     }
     /* wrapper */
     .wrapper {

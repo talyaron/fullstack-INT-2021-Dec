@@ -7,6 +7,11 @@ body h4 {
   font-size: 16px;
   line-height: 1.4;
   margin: 0;
+  font-weight: bold;
+}
+body h4:hover {
+  color: #037a97;
+  text-decoration: underline;
 }
 body .wrapper {
   width: 1250px;
