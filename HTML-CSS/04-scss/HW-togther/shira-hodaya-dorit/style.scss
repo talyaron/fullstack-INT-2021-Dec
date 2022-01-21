@@ -103,8 +103,32 @@ nav {
             text-align: center;
        } 
     }
+    .searchLine{
+        background-color: black;
+        width: 90px;
+        height: 55px;
+        .search{
+            position:relative;
+            left:2px;
+            width: 85px;
+            height:20px;
+            background-color: white;
+            p{
+              font-size: 16px;;  
+           } 
+            img{
+                position:absolute;
+                left:70px;
+                top: 2px;
+                width:15px;
+                height:15px;
+           }
+        }
+    }
 }
 .firstRow{
+    position:relative;
+    left: 75px;
     font-size: 41px;
     color: black;
     text-align:left;
@@ -125,6 +149,7 @@ nav {
     flex-direction: column;
     margin-top:10px;
     position:relative;
+    left:45px;
     .wrapper1{
         width: 1000px;
         display:flex;
