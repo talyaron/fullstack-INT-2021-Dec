@@ -1,22 +1,17 @@
 <<<<<<< Updated upstream
 nav {
+  text-align: center;
   position: sticky;
-  left: 400px;
   top: 0px;
-  background-color: white;
-  height: 50px;
-  width: 100%;
+  height: 40px;
+  width: 1000px;
   padding: 0%;
-  margin: 0%;
+  margin: auto;
   display: flex;
   flex-direction: row;
   color: black;
   font-size: 15px;
   align-items: center;
-}
-nav a:link, nav a:visited, nav a:active {
-  color: blue;
-  text-decoration: none;
 }
 nav .links {
   display: flex;
@@ -26,6 +21,18 @@ nav .links {
 }
 nav .links div {
   margin-right: 20px;
+}
+nav .links a {
+  color: blue;
+}
+nav .links a:visited {
+  color: orange;
+}
+nav .links a:active {
+  color: red;
+}
+nav .links a:hover {
+  color: green;
 }
 
 .firstRow {
