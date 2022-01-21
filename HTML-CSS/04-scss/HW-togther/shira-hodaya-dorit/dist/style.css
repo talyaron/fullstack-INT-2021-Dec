@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 nav {
   position: sticky;
   left: 400px;
@@ -138,4 +139,9 @@ nav .links div {
   margin: top 235px;
   margin-left: -10px;
   text-align: left;
+=======
+.links_of_pages {
+  display: flex;
+  flex-direction: row;
+>>>>>>> Stashed changes
 }
