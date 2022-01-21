@@ -15,9 +15,6 @@ nav {
     a{
         color:blue;
     }
-        a:link{
-            color:blue;
-        }
         a:visited{
             color: orange;
         }
@@ -27,8 +24,6 @@ nav {
         a:hover {
             background-color: #111;
         }
-          
-        text-decoration: none;
     }
     .links {
         display: flex;
