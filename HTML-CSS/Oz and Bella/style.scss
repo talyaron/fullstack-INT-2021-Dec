@@ -1,54 +1,68 @@
-.wrapper {
-    width: 1344px;
-    height: 301px;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    padding: 0;
-    box-sizing: border-box;
-    margin-top: 40px;
-    h2 {
-        direction: rtl;
-        font-size: 18px;
+body {
+    font-family: 'Lato', sans-serif;
+    h4 {
+        font-size: 16px;
+        line-height: 1.4;
+        margin-top: 0;
     }
-    .top-heading {
-        height: 30px;
-        background-color: red;
-        color: white;
+    .wrapper {
+        width: 1250px;
         display: flex;
-        justify-content: space-between;
-        flex-direction: row-reverse;
-        align-items: center;
-        padding: 0 10px;
-        position: relative;
-        margin-bottom: 15px;
-    }
-    .cards {
-        display: flex;
-        flex-direction: row-reverse;
+        flex-direction: column;
         margin: auto;
-        position: relative;
-        .card {
-            margin-left: 16px;
+        box-sizing: border-box;
+        margin-top: 40px;
+        // .top-heading {
+        //     height: 30px;
+        //     background-color: red;
+        //     color: white;
+        //     display: flex;
+        //     justify-content: space-between;
+        //     flex-direction: row;
+        //     align-items: center;
+        //     padding: 0 10px;
+        //     position: relative;
+        //     margin-bottom: 15px;
+        // }
+        .cards {
             display: flex;
-            flex-direction: column;
-            .icon {
-                width: 50px;
-                height: 18px;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: contain;
-                position: relative;
-                left: 80%;
-                bottom: 34px;
-                z-index: 1;
+            flex-direction: row;
+            margin: auto;
+            position: relative;
+            .card {
+                margin-left: 16px;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 200px;
+                &.card:nth-of-type(1) {
+                    margin: 0;
+                }
+                img {
+                    height: 135px;
+                    width: 240;
+                    margin-bottom: 8px;
+                }
+                h2 {
+                    margin-top: 0;
+                }
+                .inline {
+                    display: flex;
+                    align-items: center;
+                    svg {
+                        width: 13px;
+                        height: 13px;
+                        margin-right: 4px;
+                    }
+                    .datetime {
+                        font-size: 13px;
+                        font-weight: 400;
+                    }
+                    // div {
+                    //     border-right: 2px solid rgb(136, 41, 41);
+                    // }
+                }
             }
-            h2 {
-                margin-top: 0;
-            }
-        }
-        .card:nth-of-type(4) {
-            margin-left: 0px;
         }
     }
 }

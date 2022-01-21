@@ -1,0 +1,141 @@
+nav {
+  position: sticky;
+  left: 400px;
+  top: 0px;
+  background-color: white;
+  height: 50px;
+  width: 100%;
+  padding: 0%;
+  margin: 0%;
+  display: flex;
+  flex-direction: row;
+  color: black;
+  font-size: 15px;
+  align-items: center;
+}
+nav a:link, nav a:visited, nav a:active {
+  color: blue;
+  text-decoration: none;
+}
+nav .links {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto;
+}
+nav .links div {
+  margin-right: 20px;
+}
+
+.firstRow {
+  font-size: 41px;
+  color: black;
+  text-align: left;
+  margin-left: 20px;
+  padding: 30px;
+}
+.firstRow span {
+  color: dodgerblue;
+  font-size: 36px;
+  font-weight: heavy;
+  position: relative;
+  margin-left: 10px;
+  top: -8px;
+  text-align: left;
+}
+
+.bigwrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  position: relative;
+}
+.bigwrapper .wrapper1 {
+  width: 1000px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.bigwrapper .wrapper1 .box {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.bigwrapper .wrapper1 .box img {
+  width: 100%;
+  height: 150px;
+}
+.bigwrapper .wrapper1 .box h1 {
+  font-size: 14px;
+  text-align: left;
+}
+.bigwrapper .wrapper1 .box p {
+  font-size: 13px;
+  color: black;
+  text-align: left;
+  position: absolute;
+  top: 185px;
+}
+.bigwrapper .wrapper1 .box .last-row {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 20px;
+  color: black;
+  text-align: left;
+  position: absolute;
+  top: 230px;
+}
+.bigwrapper .wrapper1 .box .last-row span {
+  color: dodgerblue;
+  font-size: 20px;
+  font-weight: heavy;
+  position: absolute;
+  margin: top 235px;
+  margin-left: -10px;
+  text-align: left;
+}
+.bigwrapper .wrapper2 {
+  position: relative;
+  bottom: -100px;
+  width: 1000px;
+  height: 1000px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.bigwrapper .wrapper2 .box {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.bigwrapper .wrapper2 .box img {
+  width: 100%;
+  height: 150px;
+}
+.bigwrapper .wrapper2 .box h1 {
+  font-size: 14px;
+  text-align: left;
+}
+.bigwrapper .wrapper2 .box p {
+  font-size: 13px;
+  color: black;
+  text-align: left;
+  position: absolute;
+  top: 185px;
+}
+.bigwrapper .wrapper2 .box .last-row {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 20px;
+  color: black;
+  text-align: left;
+  position: absolute;
+  top: 230px;
+}
+.bigwrapper .wrapper2 .box .last-row span {
+  color: dodgerblue;
+  font-size: 20px;
+  font-weight: heavy;
+  position: absolute;
+  margin: top 235px;
+  margin-left: -10px;
+  text-align: left;
+}

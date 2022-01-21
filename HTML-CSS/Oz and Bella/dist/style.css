@@ -1,54 +1,53 @@
-.wrapper {
-  width: 1344px;
-  height: 301px;
+body {
+  font-family: "Lato", sans-serif;
+}
+body h4 {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-top: 0;
+}
+body .wrapper {
+  width: 1250px;
   display: flex;
   flex-direction: column;
   margin: auto;
-  padding: 0;
   box-sizing: border-box;
   margin-top: 40px;
 }
-.wrapper h2 {
-  direction: rtl;
-  font-size: 18px;
-}
-.wrapper .top-heading {
-  height: 30px;
-  background-color: red;
-  color: white;
+body .wrapper .cards {
   display: flex;
-  justify-content: space-between;
-  flex-direction: row-reverse;
-  align-items: center;
-  padding: 0 10px;
-  position: relative;
-  margin-bottom: 15px;
-}
-.wrapper .cards {
-  display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   margin: auto;
   position: relative;
 }
-.wrapper .cards .card {
+body .wrapper .cards .card {
   margin-left: 16px;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 200px;
 }
-.wrapper .cards .card .icon {
-  width: 50px;
-  height: 18px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
-  left: 80%;
-  bottom: 34px;
-  z-index: 1;
+body .wrapper .cards .card.card:nth-of-type(1) {
+  margin: 0;
 }
-.wrapper .cards .card h2 {
+body .wrapper .cards .card img {
+  height: 135px;
+  width: 240;
+  margin-bottom: 8px;
+}
+body .wrapper .cards .card h2 {
   margin-top: 0;
 }
-.wrapper .cards .card:nth-of-type(4) {
-  margin-left: 0px;
+body .wrapper .cards .card .inline {
+  display: flex;
+  align-items: center;
+}
+body .wrapper .cards .card .inline svg {
+  width: 13px;
+  height: 13px;
+  margin-right: 4px;
+}
+body .wrapper .cards .card .inline .datetime {
+  font-size: 13px;
+  font-weight: 400;
 }
