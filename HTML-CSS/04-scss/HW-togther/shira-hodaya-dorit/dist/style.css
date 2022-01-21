@@ -43,6 +43,7 @@ nav .links a:hover {
   padding: 10px;
 }
 .bigRow .letter {
+  position: sticky;
   left: 5px;
   width: 120px;
   height: 40px;
