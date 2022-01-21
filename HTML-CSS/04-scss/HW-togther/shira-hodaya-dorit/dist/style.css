@@ -36,7 +36,7 @@ nav .links a:hover {
   background-color: white;
   display: flex;
   flex-direction: row;
-  width: 70%;
+  width: 90%;
   height: 40px;
   align-content: center;
   justify-content: space-around;
@@ -98,7 +98,7 @@ nav .links a:hover {
 .bigRow .case {
   background-color: black;
   height: 55px;
-  width: 70px;
+  width: 100px;
 }
 .bigRow .case p {
   color: white;
@@ -106,13 +106,13 @@ nav .links a:hover {
 }
 .bigRow .searchLine {
   background-color: black;
-  width: 90px;
+  width: 110px;
   height: 55px;
 }
 .bigRow .searchLine .search {
   position: relative;
-  left: 2px;
-  width: 85px;
+  left: 5px;
+  width: 100px;
   height: 20px;
   background-color: white;
 }
@@ -121,7 +121,7 @@ nav .links a:hover {
 }
 .bigRow .searchLine .search img {
   position: absolute;
-  left: 70px;
+  left: 78px;
   top: 2px;
   width: 15px;
   height: 15px;
@@ -151,21 +151,21 @@ nav .links a:hover {
   flex-direction: column;
   margin-top: 10px;
   position: relative;
-  left: 45px;
+  left: -35px;
 }
 .bigwrapper .wrapper1 {
-  width: 1000px;
+  width: 1400px;
   display: flex;
   justify-content: space-evenly;
 }
 .bigwrapper .wrapper1 .box {
-  width: 200px;
-  height: 200px;
+  width: 350px;
+  height: 300px;
   position: relative;
 }
 .bigwrapper .wrapper1 .box img {
   width: 100%;
-  height: 150px;
+  height: 200px;
 }
 .bigwrapper .wrapper1 .box h1 {
   font-size: 14px;
@@ -176,7 +176,7 @@ nav .links a:hover {
   color: black;
   text-align: left;
   position: absolute;
-  top: 185px;
+  top: 220px;
 }
 .bigwrapper .wrapper1 .box .last-row {
   margin-top: 20px;
@@ -185,7 +185,7 @@ nav .links a:hover {
   color: black;
   text-align: left;
   position: absolute;
-  top: 230px;
+  top: 250px;
 }
 .bigwrapper .wrapper1 .box .last-row span {
   color: dodgerblue;
@@ -199,19 +199,19 @@ nav .links a:hover {
 .bigwrapper .wrapper2 {
   position: relative;
   bottom: -100px;
-  width: 1000px;
+  width: 1400px;
   height: 1000px;
   display: flex;
   justify-content: space-evenly;
 }
 .bigwrapper .wrapper2 .box {
-  width: 200px;
-  height: 200px;
+  width: 350px;
+  height: 300px;
   position: relative;
 }
 .bigwrapper .wrapper2 .box img {
   width: 100%;
-  height: 150px;
+  height: 200px;
 }
 .bigwrapper .wrapper2 .box h1 {
   font-size: 14px;
@@ -222,7 +222,7 @@ nav .links a:hover {
   color: black;
   text-align: left;
   position: absolute;
-  top: 185px;
+  top: 220px;
 }
 .bigwrapper .wrapper2 .box .last-row {
   margin-top: 20px;
@@ -231,7 +231,7 @@ nav .links a:hover {
   color: black;
   text-align: left;
   position: absolute;
-  top: 230px;
+  top: 250px;
 }
 .bigwrapper .wrapper2 .box .last-row span {
   color: dodgerblue;

@@ -37,7 +37,7 @@ nav {
     background-color: white;
     display:flex;
     flex-direction: row;
-    width:70%;
+    width:90%;
     height:40px;
     align-content: center;
     justify-content: space-around;
@@ -98,7 +98,7 @@ nav {
     .case{
         background-color: black;
         height: 55px;
-        width: 70px;
+        width: 100px;
        p{
             color:white;
             text-align: center;
@@ -106,20 +106,20 @@ nav {
     }
     .searchLine{
         background-color: black;
-        width: 90px;
+        width: 110px;
         height: 55px;
         .search{
             position:relative;
-            left:2px;
-            width: 85px;
+            left:5px;
+            width: 100px;
             height:20px;
             background-color: white;
             p{
-              font-size: 16px;;  
+              font-size: 16px;  
            } 
             img{
                 position:absolute;
-                left:70px;
+                left:78px;
                 top: 2px;
                 width:15px;
                 height:15px;
@@ -150,19 +150,19 @@ nav {
     flex-direction: column;
     margin-top:10px;
     position:relative;
-    left:45px;
+    left:-35px;
     .wrapper1{
-        width: 1000px;
+        width: 1400px;
         display:flex;
         justify-content:space-evenly;
         .box{
-            width: 200px;
-            height: 200px;
+            width: 350px;
+            height: 300px;
             position:relative;
             
             img{
             width: 100%;
-            height: 150px;  
+            height: 200px;  
             }
             h1{
                 font-size: 14px;
@@ -173,7 +173,7 @@ nav {
                 color:black;
                 text-align: left;
                 position: absolute;
-                top:185px;
+                top:220px;
             }
             .last-row{
                 margin-top: 20px;
@@ -182,7 +182,7 @@ nav {
                 color: black;
                 text-align:left;
                 position: absolute;
-                top: 230px;
+                top: 250px;
                 span{
                     color:dodgerblue;
                     font-size: 20px;
@@ -201,17 +201,17 @@ nav {
     .wrapper2{
         position:relative;
         bottom: -100px;
-        width: 1000px;
+        width: 1400px;
         height: 1000px;
         display:flex;
         justify-content:space-evenly;
         .box{
-            width: 200px;
-            height: 200px;
+            width: 350px;
+            height: 300px;
             position:relative;
             img{
                 width: 100%;
-                height: 150px;  
+                height: 200px;  
             }
             h1{
                 font-size: 14px;
@@ -222,7 +222,7 @@ nav {
                 color:black;
                 text-align: left;
                 position: absolute;
-                top:185px;
+                top:220px;
             }
             .last-row{
                 margin-top: 20px;
@@ -231,7 +231,7 @@ nav {
                 color: black;
                 text-align:left;
                 position: absolute;
-                top: 230px;
+                top: 250px;
                 span{
                     color:dodgerblue;
                     font-size: 20px;
