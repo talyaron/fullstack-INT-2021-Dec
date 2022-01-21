@@ -4,6 +4,7 @@ body {
     margin: auto;
     direction: ltr;
     width: 100%;
+    position: absolute;
 
     .nav-bar {
         background-color: black;
@@ -12,13 +13,29 @@ body {
         width: 100%;
         height: 40px;
     }
+ .subject{
+            border-left: rgb(51, 49, 138); 
+            border-left-style: outset;
+            font-size: 45px ;
+            position: relative;
+            top: 50px;  
+            margin: auto;   
+            width: 200px;
 
+ }
     .container {
+        
+        position: relative;
+        top: 50px;
+        margin: auto;
         background-color: white;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        width: 310px;
+        flex-wrap:  wrap; 
+        width: 1000px;
+        
+        
+
         .artical {
             position: relative;
             margin: 5px;

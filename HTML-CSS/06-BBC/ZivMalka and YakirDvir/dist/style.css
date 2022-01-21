@@ -3,6 +3,7 @@ body {
   margin: auto;
   direction: ltr;
   width: 100%;
+  position: absolute;
 }
 body .nav-bar {
   background-color: black;
@@ -11,12 +12,24 @@ body .nav-bar {
   width: 100%;
   height: 40px;
 }
+body .subject {
+  border-left: #33318a;
+  border-left-style: outset;
+  font-size: 45px;
+  position: relative;
+  top: 50px;
+  margin: auto;
+  width: 200px;
+}
 body .container {
+  position: relative;
+  top: 50px;
+  margin: auto;
   background-color: white;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: 310px;
+  flex-wrap: wrap;
+  width: 1000px;
 }
 body .container .artical {
   position: relative;
