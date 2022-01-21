@@ -1,18 +1,24 @@
-<<<<<<< Updated upstream
+
 nav {
-    text-align: center;
     position:sticky;
+    left: 400px;
     top: 0px;
-    height: 40px;
-    width: 1000px;
+    background-color: white;
+    height: 50px;
+    width: 100%;
     padding: 0%;
-    margin: auto;
+    margin: 0%;
     display: flex;
     flex-direction: row;
     color: black;
     font-size: 15px;
     align-items: center;
-    .links{
+
+    a:link , a:visited , a:active {
+        color: blue;
+        text-decoration: none;
+    }
+    .links {
         display: flex;
         flex-direction: row;
         width: 80%;
@@ -20,20 +26,8 @@ nav {
         div{
             margin-right: 20px;
         }
-        a{
-            color:blue;
-        }
-        a:visited{
-            color: orange;
-        }
-        a:active{
-            color:red;
-        } 
-        a:hover {
-            color: green;
-        }
-       }
     }
+}
 .firstRow{
     font-size: 41px;
     color: black;
@@ -152,11 +146,3 @@ nav {
         }
     }
 }
-=======
-.links_of_pages{
-    display: flex;
-    flex-direction: row;
-    //  margin: 1px
-}
-
->>>>>>> Stashed changes
