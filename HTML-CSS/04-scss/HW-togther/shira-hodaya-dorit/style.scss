@@ -1,3 +1,4 @@
+
 nav {
     position:sticky;
     width: 1500px;
@@ -10,7 +11,12 @@ nav {
     color: black;
     font-size: 16px;
     align-items: center;
-    .links{
+
+    a:link , a:visited , a:active {
+        color: blue;
+        text-decoration: none;
+    }
+    .links {
         display: flex;
         flex-direction: row;
         text-align: center;
@@ -19,20 +25,8 @@ nav {
         div{
             margin-right: 20px;
         }
-        a{
-            color:blue;
-        }
-        a:visited{
-            color: orange;
-        }
-        a:active{
-            color:red;
-        } 
-        a:hover {
-            color: green;
-        }
-       }
     }
+}
 .firstRow{
     font-size: 41px;
     color: black;
