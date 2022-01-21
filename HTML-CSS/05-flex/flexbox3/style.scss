@@ -1,0 +1,169 @@
+
+
+
+
+.main{
+  max-width: 1200px;
+  height: 400px;
+  direction: ltr;
+  margin: 200px auto;
+  background-color: royalblue;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;/*  הפלקס לאמצע הפעם מיישר לאמצע וגם שומר על הגבולות בין המין דיו לבין הבנים שלו*/
+  position: relative;
+  .header{
+      width: 100%;
+      height: 30px;
+      background-color: #DE1A1A;
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      position: relative;
+      padding:0px 10px;
+      
+
+
+
+       a{
+           color: white;
+           font-weight: bold;
+           text-decoration: none;
+            
+           .head20{
+
+            font-size: 18px;
+            span{
+                font-size: 18px;
+                font-weight:bolder;
+            }
+           }
+           .head10{
+
+            font-size: 15px;
+            span{
+                position: relative;
+                top:1px;
+
+            }
+           }
+          
+       }
+  }
+
+    .mainpicp{
+        
+        width: 100%;
+        height: 250px;
+        background-color: yellow;
+        position: absolute;
+        top:45px;
+        display: flex;
+        justify-content: space-between;
+        
+        
+
+        .box-1{
+            width: 25%;
+            height: 230px;
+            background-color: gray;
+            direction: rtl;
+            padding: 0px 5px;
+            position: relative;
+
+            .button{
+                width: 50px;
+                height: 18px;
+                font-size: 12px;
+                font-weight: bold;
+                color: white;
+                background-color: #DE1A1A;
+                border-top-right-radius: 20px; 
+                border-end-end-radius: 20px;  /*  שיטה לרדיוס קצה עגול כפתור*/
+                border-end-start-radius: 20px;
+                border-top-left-radius: 20px ;
+                position: absolute;
+                top:130px;
+                right: 10px;
+              
+
+                .p100{
+                    font-size: 12px;
+                    font-weight: bold;
+                    color: white;
+                    margin-right: 17px;
+                    position: relative;
+                    top:-13px;
+                    right:0px;
+                   
+
+                }
+
+                .bflex{
+
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     background-color: black;
+                     width: 15px;
+                     height: 15px;
+                     border-radius: 50%;
+                     position: absolute;
+                     top:1px;
+
+                    .pluse{
+                        
+                       font-size: 16px;
+                       font-weight: bold;
+    
+                    }
+                }
+                
+            
+            }
+    
+            .picdiv{
+                width: 100%;
+                height: 160px;
+                background-color: rgb(145, 64, 64);
+                overflow: hidden;
+                position: relative;
+
+            
+                .img{
+                    width: 100%;
+                    margin-top: -110px;
+                    
+                }
+         
+                
+         
+            }
+       
+            
+            p{
+                color: rgb(0, 0, 0);
+                font-size: 16px;
+                letter-spacing: 0.09px;
+                font-weight: bold;
+                line-height: 20px;
+                position: absolute;
+                top:160px;
+                right: 7px;
+                direction: rtl;
+                inline-size: 270px;/*שובר טקטס*/
+               /* overflow-wrap: break-word;*/
+                /*hyphens: manual;*/
+                
+            }  
+         
+       
+        }
+
+      
+
+    }
+
+
+}
+
