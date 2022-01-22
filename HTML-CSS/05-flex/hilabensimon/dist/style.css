@@ -1,8 +1,36 @@
-.headline {
+.redtop {
   background-color: red;
-  height: 5vh;
-  width: 100%;
-  border: 1px solid red;
-  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+body {
+  margin: 10%;
+}
+
+.redtop div {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.headline {
+  font-size: 13px;
+}
+
+.container {
+  display: flex;
+  margin: auto;
+}
+
+.container div {
+  flex-direction: row;
+  position: static;
+  background-color: white;
+}
+.container div .container_item {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
   position: relative;
 }

@@ -1,16 +1,26 @@
-.headline{
+.redtop {
     background-color: red;
-    height: 5vh;
-    
-    border: 1px solid red;
-    margin-top: 70px;
-    position: relative
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
 
-    .first{
-        float: left;
-    }
-    .second{
-       
-    }
+body {
+    margin: 10%
+}
+
+.redtop div {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.headline {
+    font-size: 13px;
+
+}
+
+
+
+
 
 }
