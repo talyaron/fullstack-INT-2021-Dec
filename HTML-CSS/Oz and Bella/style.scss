@@ -1,54 +1,71 @@
-.wrapper {
-    width: 1344px;
-    height: 301px;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    padding: 0;
-    box-sizing: border-box;
-    margin-top: 40px;
-    h2 {
-        direction: rtl;
-        font-size: 18px;
+body {
+    font-family: 'Lato', sans-serif;
+    /* articles headings */
+    h4 {
+        font-size: 16px;
+        line-height: 1.4;
+        margin: 0;
+        font-weight: bold;
     }
-    .top-heading {
-        height: 30px;
-        background-color: red;
-        color: white;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row-reverse;
-        align-items: center;
-        padding: 0 10px;
-        position: relative;
-        margin-bottom: 15px;
+    h4:hover {
+        color: rgb(3, 122, 151);
+        text-decoration: underline;
+        transition: 0.4s;
     }
-    .cards {
+    /* wrapper */
+    .wrapper {
+        width: 1250px;
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: column;
         margin: auto;
-        position: relative;
-        .card {
-            margin-left: 16px;
+        box-sizing: border-box;
+        margin-top: 40px;
+        /* articles */
+        .cards {
             display: flex;
-            flex-direction: column;
-            .icon {
-                width: 50px;
-                height: 18px;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: contain;
-                position: relative;
-                left: 80%;
-                bottom: 34px;
-                z-index: 1;
+            flex-direction: row;
+            margin: 68px auto;
+            position: relative;
+            /* article */
+            .card {
+                margin-left: 16px;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 200px;
+                &.card:nth-of-type(1) {
+                    margin: 0;
+                }
+                img {
+                    height: 135px;
+                    width: 240;
+                    margin-bottom: 8px;
+                }
+                /* inline elements inside the article card*/
+                .inline {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 4px;
+                    svg {
+                        fill: rgb(73, 73, 73);
+                        width: 13px;
+                        height: 13px;
+                        margin-right: 4px;
+                    }
+                    .datetime {
+                        color: rgb(73, 73, 73);
+                        font-size: 13px;
+                        font-weight: 400;
+                        border-right: 1px solid lightgray;
+                        padding-right: 4px;
+                    }
+                    .tag {
+                        font-size: 13px;
+                        color: rgb(73, 73, 73);
+                        padding-left: 4px;
+                    }
+                }
             }
-            h2 {
-                margin-top: 0;
-            }
-        }
-        .card:nth-of-type(4) {
-            margin-left: 0px;
         }
     }
 }

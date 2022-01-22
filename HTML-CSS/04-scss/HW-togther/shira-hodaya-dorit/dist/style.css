@@ -1,0 +1,244 @@
+nav {
+  position: sticky;
+  width: 1500px;
+  height: 40px;
+  top: 0px;
+  padding: 0%;
+  margin-left: 580px;
+  display: flex;
+  flex-direction: row;
+  color: black;
+  font-size: 16px;
+  align-items: center;
+}
+nav .links {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  color: blue;
+}
+nav .links div {
+  margin-right: 20px;
+}
+nav .links a:active {
+  color: orange;
+}
+nav .links a:hover {
+  color: green;
+}
+
+.bigRow {
+  position: sticky;
+  left: 0px;
+  margin: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  width: 93%;
+  height: 40px;
+  align-content: center;
+  justify-content: space-around;
+  padding: 10px;
+}
+.bigRow .letter {
+  position: sticky;
+  left: 5px;
+  width: 120px;
+  height: 40px;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  background-color: black;
+}
+.bigRow .letter .incase {
+  width: 30px;
+  position: relative;
+  top: 7px;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+}
+.bigRow .letter .incase p {
+  position: absolute;
+  top: -15px;
+  left: 5px;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  width: 15px;
+  height: 15px;
+}
+.bigRow .signIn {
+  position: relative;
+  width: 90px;
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  justify-content: space-evenly;
+  align-content: center;
+}
+.bigRow .signIn img {
+  position: absolute;
+  left: 4px;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+}
+.bigRow .signIn p {
+  position: absolute;
+  top: 1px;
+  left: 30px;
+  color: white;
+}
+.bigRow .case {
+  background-color: black;
+  height: 55px;
+  width: 100px;
+}
+.bigRow .case p {
+  color: white;
+  text-align: center;
+}
+.bigRow .searchLine {
+  background-color: black;
+  width: 130px;
+  height: 55px;
+}
+.bigRow .searchLine .search {
+  position: relative;
+  left: 5px;
+  width: 90%;
+  height: 20px;
+  background-color: white;
+}
+.bigRow .searchLine .search p {
+  font-size: 16px;
+}
+.bigRow .searchLine .search img {
+  position: absolute;
+  left: 75px;
+  top: 1px;
+  width: 15px;
+  height: 15px;
+}
+
+.firstRow {
+  position: relative;
+  left: 75px;
+  font-size: 41px;
+  color: black;
+  text-align: left;
+  margin-left: 20px;
+  padding: 30px;
+}
+.firstRow span {
+  color: dodgerblue;
+  font-size: 36px;
+  font-weight: heavy;
+  position: relative;
+  margin-left: 10px;
+  top: -8px;
+  text-align: left;
+}
+
+.bigwrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  position: relative;
+  left: -35px;
+}
+.bigwrapper .wrapper1 {
+  width: 1400px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.bigwrapper .wrapper1 .box {
+  width: 350px;
+  height: 300px;
+  position: relative;
+}
+.bigwrapper .wrapper1 .box img {
+  width: 100%;
+  height: 200px;
+}
+.bigwrapper .wrapper1 .box h1 {
+  font-size: 14px;
+  text-align: left;
+}
+.bigwrapper .wrapper1 .box p {
+  font-size: 13px;
+  color: black;
+  text-align: left;
+  position: absolute;
+  top: 220px;
+}
+.bigwrapper .wrapper1 .box .last-row {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 20px;
+  color: black;
+  text-align: left;
+  position: absolute;
+  top: 250px;
+}
+.bigwrapper .wrapper1 .box .last-row span {
+  color: dodgerblue;
+  font-size: 20px;
+  font-weight: heavy;
+  position: absolute;
+  margin: top 235px;
+  margin-left: -10px;
+  text-align: left;
+}
+.bigwrapper .wrapper2 {
+  position: relative;
+  bottom: -100px;
+  width: 1400px;
+  height: 1000px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.bigwrapper .wrapper2 .box {
+  width: 350px;
+  height: 300px;
+  position: relative;
+}
+.bigwrapper .wrapper2 .box img {
+  width: 100%;
+  height: 200px;
+}
+.bigwrapper .wrapper2 .box h1 {
+  font-size: 14px;
+  text-align: left;
+}
+.bigwrapper .wrapper2 .box p {
+  font-size: 13px;
+  color: black;
+  text-align: left;
+  position: absolute;
+  top: 220px;
+}
+.bigwrapper .wrapper2 .box .last-row {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 20px;
+  color: black;
+  text-align: left;
+  position: absolute;
+  top: 250px;
+}
+.bigwrapper .wrapper2 .box .last-row span {
+  color: dodgerblue;
+  font-size: 20px;
+  font-weight: heavy;
+  position: absolute;
+  margin: top 235px;
+  margin-left: -10px;
+  text-align: left;
+}
