@@ -38,6 +38,8 @@
 .main .main2 {
   display: flex;
   padding: 10px;
+  margin-top: 50px;
+  margin-left: 50px;
 }
 .main .main2 .story img {
   height: 200px;
@@ -47,9 +49,10 @@
 }
 .main .main2 .story .subject {
   border-left: red solid 4px;
-  padding: 4px;
+  padding-left: 5px;
+  height: 10px;
 }
-.main .main2 .story .subject h1 {
+.main .main2 .story .subject p {
   color: gray;
 }
 
