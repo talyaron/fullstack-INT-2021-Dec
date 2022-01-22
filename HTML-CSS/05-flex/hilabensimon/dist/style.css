@@ -26,10 +26,12 @@
   justify-content: center
   
   
+  
 }
 
 .container div{
   flex-direction: row
+  
   
 }
 
