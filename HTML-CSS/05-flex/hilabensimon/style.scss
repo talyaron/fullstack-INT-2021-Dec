@@ -7,7 +7,6 @@
 
 body {
     margin: 10%
-    
 }
 
 .redtop div {
@@ -21,33 +20,22 @@ body {
 }
 
 .container {
-
     display: flex;
-    margin: auto
+    height: 200px;
+    width: 150px;
+
 }
 
 .container div {
     flex-direction: row;
     position: static;
     background-color: white;
-    
-    
-    
-  .container_item{
-      font-weight: bold;
-      font-family: Arial, Helvetica, sans-serif;
-      text-align: center;
-      position: relative;
-  } 
- .container_item2{
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(255, 255, 255);
-    height: 50px;
-    border: 10px solid white;
-    
- }
 }
 
 
+.container_item{
+    
 
+}
+
+}
