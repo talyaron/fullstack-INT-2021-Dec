@@ -1,0 +1,42 @@
+.header {
+  background-color: black;
+  height: 40px;
+  display: flex;
+  padding-left: 150px;
+}
+.header .sub {
+  border-left: #8f8d8b solid 1px;
+  width: 80px;
+  height: 30px;
+  justify-content: space-around;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+}
+.header .sub :hover {
+  border-bottom: 4px blueviolet solid;
+}
+.header .logo {
+  border-left: none;
+  padding-top: 0px;
+}
+.header .sign {
+  width: 160px;
+}
+.header img {
+  height: 40px;
+}
+
+.main .title {
+  border-left: red solid 4px;
+  padding-left: 5px;
+  margin-top: 50px;
+  margin-left: 50px;
+  font-size: 30px;
+  font-weight: bold;
+}
+a:-webkit-any-link {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
