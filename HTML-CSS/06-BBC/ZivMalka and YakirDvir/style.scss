@@ -2,55 +2,85 @@ body {
 
     background-color: white;
     margin: auto;
-    direction: ltr;
+
     width: 100%;
     position: absolute;
 
     .nav-bar {
         background-color: black;
         margin: auto;
-        position: fixed;
+        position: absolute;
         width: 100%;
         height: 40px;
-    }
- .subject{
-            border-left: rgb(51, 49, 138); 
-            border-left-style: outset;
-            font-size: 45px ;
-            position: relative;
-            top: 50px;  
-            margin: auto;   
-            width: 200px;
 
- }
-    .container {
-        
+        .nav-link {
+            position: relative;
+            top: 5px;
+            margin: auto;
+            width: 1280px;
+            font-size: 20px;
+            font-family: 'Open Sans';
+
+            a {
+                margin: 15px;
+                width: 100px;
+                color: white;
+                border-left: solid, gray;
+                border-right: outset, gray;
+            }
+        }
+
+    }
+
+    .subject {
+        font-family: 'Open Sans', ;
+        border-left: rgb(51, 49, 138);
+        border-left-style: solid;
+        font-size: 24px;
         position: relative;
-        top: 50px;
+        top: 70px;
+        left: 5px;
+        margin: auto;
+        width: 1248px;
+        height: 28px;
+    }
+
+    .container {
+        position: relative;
+        top: 90px;
         margin: auto;
         background-color: white;
         display: flex;
         flex-direction: row;
-        flex-wrap:  wrap; 
-        width: 1000px;
-        
-        
+        flex-wrap: wrap;
+        width: 1248px;
+
+
 
         .artical {
             position: relative;
             margin: 5px;
-            width: 300px;
+            width: 381.56px;
 
             img {
-                width: 300px;
-                height: 200px;
+                width: 381.56px;
+                height: 190px;
             }
 
             h1 {
                 font-family: 'Open Sans', sans-serif;
-                font-size: 18px;
+                font-size: 22px;
                 color: black;
             }
+
+            h2 {
+
+                font-family: 'open Sans'sans-serif;
+                font-size: 15px;
+                color: black;
+               
+            }
+
         }
     }
 }
