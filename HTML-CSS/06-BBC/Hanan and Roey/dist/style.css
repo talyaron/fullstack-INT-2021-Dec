@@ -1,0 +1,159 @@
+body {
+  background-image: black;
+  background-color: white;
+}
+body nav {
+  width: 100%;
+  margin: 0;
+}
+body nav ul {
+  background-color: black;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+body nav ul li {
+  list-style: none;
+  float: left;
+}
+body nav ul li:first-child {
+  margin-left: 80px;
+}
+body nav ul b {
+  position: relative;
+  padding: 10px;
+  vertical-align: middle;
+  border-radius: 50%;
+  float: left;
+  margin-right: -190px;
+  margin-top: 2px;
+}
+body nav ul a {
+  display: block;
+  text-decoration: none;
+  min-height: 16px;
+  text-align: center;
+  padding: 14px;
+  text-transform: uppercase;
+  color: white;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
+body nav ul .b-f {
+  display: block;
+  position: absolute;
+  padding: 0.615em 0 0.539em 8px;
+  right: 0px;
+  top: 25px;
+  color: white;
+}
+body nav ul .b-f .orb-search__button {
+  background-image: url(https://nav.files.bbci.co.uk/searchbox/2432a71c53a3b82accd4f32608cae098/img/gel-icon-search-dark.svg);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  position: relative;
+  right: 25px;
+  text-indent: -999px;
+  background-position: center center;
+  margin-top: 10px;
+  background-size: 16px 16px;
+  width: 20px;
+  height: 20px;
+}
+
+.row {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.row .column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+  position: relative;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: fit-content;
+}
+
+.soldiers {
+  width: 100%;
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 16px;
+  width: 200px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+#newss {
+  border-left: 4px solid red;
+  padding-left: 20px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.module__title__link {
+  font-size: 60px;
+  font-family: Arial;
+  color: #4a4a4a;
+  border-color: #e91802;
+  content: " ";
+  display: inline-block;
+  margin-right: 0.5rem;
+  border-left: 5px solid red;
+  height: 4rem;
+  padding: 0;
+  width: 0;
+  position: relative;
+  left: 80px;
+  bottom: 400px;
+}
+
+#us {
+  border-left: 4px solid red;
+  padding-left: 20px;
+  color: gray;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+}
