@@ -22,11 +22,11 @@ nav .links {
 nav .links div {
   margin-right: 20px;
 }
-nav .links a:active {
-  color: orange;
+nav .links a {
+  color: #ff006a;
 }
-nav .links a:hover {
-  color: green;
+nav .links a {
+  color: #23c0c0;
 }
 
 .bigRow {
