@@ -59,6 +59,11 @@ body .container .artical img {
 }
 body .container .artical h1 {
   font-family: "Open Sans", sans-serif;
-  font-size: 18px;
+  font-size: 22px;
+  color: black;
+}
+body .container .artical .h2 {
+  font-family: "open sans";
+  font-size: 17px;
   color: black;
 }
