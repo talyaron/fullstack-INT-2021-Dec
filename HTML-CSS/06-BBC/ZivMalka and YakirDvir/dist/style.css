@@ -17,7 +17,7 @@ body .nav-bar .nav-link {
   margin: auto;
   width: 1280px;
   font-size: 20px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
 }
 body .nav-bar .nav-link a {
   margin: 15px;
@@ -27,7 +27,7 @@ body .nav-bar .nav-link a {
   border-right: outset, gray;
 }
 body .subject {
-  font-family: "Open Sans", sans-serif bold;
+  font-family: "Open Sans";
   border-left: #33318a;
   border-left-style: solid;
   font-size: 24px;
@@ -62,8 +62,8 @@ body .container .artical h1 {
   font-size: 22px;
   color: black;
 }
-body .container .artical .h2 {
-  font-family: "open sans";
-  font-size: 17px;
+body .container .artical h2 {
+  font-family: "open Sans" sans-serif;
+  font-size: 15px;
   color: black;
 }
