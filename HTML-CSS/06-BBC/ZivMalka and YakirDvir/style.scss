@@ -19,7 +19,7 @@ body {
             margin: auto;
             width: 1280px;
             font-size: 20px;
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'Open Sans';
 
             a {
                 margin: 15px;
@@ -33,7 +33,7 @@ body {
     }
 
     .subject {
-        font-family: 'Open Sans', sans-serif bold;
+        font-family: 'Open Sans', ;
         border-left: rgb(51, 49, 138);
         border-left-style: solid;
         font-size: 24px;
@@ -72,10 +72,13 @@ body {
                 font-size: 22px;
                 color: black;
             }
-            .h2{
-                font-family:'open sans';
-                font-size: 17px;
+
+            h2 {
+
+                font-family: 'open Sans'sans-serif;
+                font-size: 15px;
                 color: black;
+               
             }
 
         }
