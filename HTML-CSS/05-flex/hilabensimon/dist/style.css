@@ -25,12 +25,11 @@ body {
 
 .container div {
   flex-direction: row;
-  position: static;
   background-color: white;
 }
 .container div .container_item {
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  position: relative;
+  flex-direction: column;
 }
