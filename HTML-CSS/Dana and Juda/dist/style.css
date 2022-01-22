@@ -1,3 +1,7 @@
+.button:hover {
+  border-bottom: 4px solid #b30000;
+}
+
 .hover {
   opacity: 1;
   display: block;
@@ -47,9 +51,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  font-weight: bold;
   color: white;
-  margin-left: 20px;
+  padding-left: 20px;
   height: 45px;
   width: 60px;
   border-right: #666666 solid 1px;
@@ -76,6 +79,7 @@ body {
   font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 30px;
+  padding-bottom: 5px;
 }
 .page .wrapper1 {
   height: 500px;
