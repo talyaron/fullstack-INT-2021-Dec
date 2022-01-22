@@ -17,16 +17,21 @@ nav .links {
   text-align: center;
   width: 100%;
   margin: auto;
-  color: white;
+  color: blue;
 }
 nav .links div {
   margin-right: 20px;
 }
-nav .links a {
-  color: black;
+nav .links a:link {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+nav .links a:active {
+  color: orange;
 }
 nav .links a:hover {
-  color: burlywood;
+  color: green;
 }
 
 .bigRow {
@@ -99,6 +104,11 @@ nav .links a:hover {
   background-color: black;
   height: 55px;
   width: 101px;
+}
+.bigRow .case a:-webkit-any-link {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
 }
 .bigRow .case p {
   color: white;
