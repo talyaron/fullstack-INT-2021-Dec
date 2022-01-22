@@ -1,5 +1,5 @@
 body{
-    background-color: white;
+    background-color: rgb(254, 255, 254)
 }
 .bbclogo{
     display: flex;
@@ -9,6 +9,7 @@ body{
     margin: 30px;
     font-family: 'Courier New', Courier, monospace;
     color: green; 
+    text-decoration: underline;
 }
 
     .navbar {
@@ -23,5 +24,14 @@ body{
         padding: 14px 16px;
         text-decoration: none;
         font-size: 18px;
-        right: 100px;
+      }
+      .main p{
+          font-family: 'Courier New', Courier, monospace;
+          display: inline;
+          font-size: 100px;
+          color: green;
+      }
+      .main img{
+        height: 500px;
+        width: 100%;
       }
