@@ -1,3 +1,9 @@
+.button:hover {
+  width: 100%;
+  border-bottom: 4px solid #ac0000;
+  margin-top: -4px;
+}
+
 .hover {
   opacity: 1;
   display: block;
