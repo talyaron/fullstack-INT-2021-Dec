@@ -1,6 +1,6 @@
 
 nav {
-    position:sticky;
+    position: sticky;
     width: 1500px;
     height: 40px;
     top: 0px;
@@ -18,16 +18,21 @@ nav {
         text-align: center;
         width: 100%;
         margin: auto;
-        color: white;
+        color:blue;
         div{
             margin-right: 20px;
-           
         }
-        a{
-            color: rgb(0, 0, 0);
+
+        a:link{
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+        }
+        a:active{
+            color: orange;
         }
         a:hover{
-            color: burlywood;
+            color:green;
         } 
     }
 }
@@ -97,6 +102,11 @@ nav {
         }
     }
     .case{
+        a:-webkit-any-link {
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+        }
         background-color: black;
         height: 55px;
         width: 101px;
