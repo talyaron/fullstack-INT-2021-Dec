@@ -44,7 +44,10 @@
         padding: 10px;
         margin-top: 50px;
         margin-left: 50px;
+        height: 600px;
     .story{
+        position: relative;
+
        
         img{
             height: 200px;
@@ -57,13 +60,17 @@
         .subtitle{
             p{
                 color: gray;
+                position: absolute;
+                bottom: 100px;
             }
 
         }
         .subject{
+            position: absolute;
             border-left: red solid 4px;
             padding-left: 5px;
-            height: 10px;
+            bottom: 0;
+            
             
             p{
                 color: gray;
