@@ -1,5 +1,6 @@
 body {
   background-color: white;
+  margin: 0px;
 }
 
 .bbclogo {
@@ -31,6 +32,8 @@ body {
 .header {
   display: flex;
   height: 50px;
+  width: 100%;
+  position: fixed;
 }
 .header .logobbc {
   height: 100%;
@@ -44,25 +47,24 @@ body {
   background-color: black;
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
-  width: 100%;
-  /* Change the link color to #111 (black) on hover */
 }
 .header ul li {
   float: left;
+  border-right: 1px solid white;
 }
-.header ul li a.navi {
+.header ul li a .navi {
   color: white;
   text-align: center;
   padding: 12px 6px;
   text-decoration: none;
 }
-.header ul li a.navi:hover {
+.header ul li a .navi:hover {
   background-color: #292929;
 }
 
 .container {
   position: relative;
-  top: 50px;
+  top: 200px;
   margin: auto;
   background-color: white;
   display: flex;
