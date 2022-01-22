@@ -1,0 +1,95 @@
+.hover {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.block:hover .hover {
+  opacity: 0.8;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: black;
+  width: 100%;
+  height: 45px;
+  position: relative;
+}
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+}
+.nav-bar .button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-weight: bold;
+  color: white;
+  margin-left: 20px;
+  height: 45px;
+  width: 60px;
+  border-right: #666666 solid 1px;
+  position: relative;
+  right: 500px;
+}
+.nav-bar .button img {
+  position: relative;
+  right: 40px;
+  height: 100%;
+  width: 80px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 67vw;
+  height: 100vh;
+  padding-top: 100px;
+}
+.page .header1 {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+}
+.page .wrapper1 {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.page .wrapper1 .block {
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+}
+.page .wrapper1 .block img {
+  width: 100%;
+  height: 40%;
+}

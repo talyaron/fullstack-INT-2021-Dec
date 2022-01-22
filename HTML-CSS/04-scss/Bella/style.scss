@@ -1,23 +1,21 @@
 /*body*/
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 20px;
     background-color: rgb(243, 243, 243);
     margin: 0%;
     box-sizing: border-box;
-
     /*hero*/
     .hero {
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1611771341253-dadb347165a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fG5vcmRpY3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1296&q=60");
         background-attachment: fixed;
         height: 300px;
         width: 100%;
-
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
-
         /*hero text*/
         .hero-text {
             text-align: center;
@@ -26,20 +24,18 @@ body {
             left: 50%;
             transform: translate(-50%, -50%);
             color: white;
-
             h1 {
                 line-height: 48px;
                 font-size: 48px;
             }
         }
     }
-
     /*cards*/
     .wrapper {
         display: flex;
         justify-content: center;
         margin-top: 4%;
-
+        margin-bottom: 10%;
         .card {
             border-radius: 17px;
             background-color: rgb(255, 255, 255);
@@ -47,40 +43,33 @@ body {
             width: 400px;
             height: 475px;
             box-shadow: rgba(50, 50, 93, 0.14) 0px 50px 100px -20px, rgba(0, 0, 0, 0.2) 0px 30px 60px -20px;
-
             img {
                 border-radius: 17px 17px 0px 0px;
                 width: 100%;
                 height: 264px;
             }
-
             // .card-text{
             &-text {
                 padding: 20px;
                 margin: 8px;
-
                 h3 {
                     font-style: bold;
                     font-size: 34px;
                     margin: 0 0 24px;
-
                     //h3:hover
                     &:hover {
                         color: rgb(134, 91, 91);
                     }
                 }
-
                 p {
                     color: rgb(80, 80, 80);
                     font-size: 15px;
                     font-weight: 300;
                     width: 340px;
-
                     span {
                         font-weight: bold;
                         font-style: italic;
                     }
-
                     /* link*/
                     span:nth-child(2) {
                         color: rgb(11, 114, 211);

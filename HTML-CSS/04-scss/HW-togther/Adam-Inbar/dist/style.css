@@ -1,3 +1,86 @@
 body {
   background-color: white;
 }
+
+.bbclogo {
+  display: flex;
+  height: 100px;
+}
+
+.wrapper h1 {
+  margin: 30px;
+  font-family: "Courier New", Courier, monospace;
+  color: green;
+}
+
+.navbar {
+  background-color: black;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.navbar a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  right: 100px;
+}
+
+.header {
+  display: flex;
+  height: 50px;
+}
+.header .logobbc {
+  height: 100%;
+  display: flex;
+}
+.header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 14px 16px;
+  overflow: hidden;
+  background-color: black;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  width: 100%;
+  /* Change the link color to #111 (black) on hover */
+}
+.header ul li {
+  float: left;
+}
+.header ul li a.navi {
+  color: white;
+  text-align: center;
+  padding: 12px 6px;
+  text-decoration: none;
+}
+.header ul li a.navi:hover {
+  background-color: #292929;
+}
+
+.container {
+  position: relative;
+  top: 50px;
+  margin: auto;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 1000px;
+}
+.container .article {
+  position: relative;
+  margin: 5px;
+  width: 300px;
+}
+.container .article img {
+  width: 300px;
+  height: 200px;
+}
+.container .article span {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: black;
+}
