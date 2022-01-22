@@ -26,6 +26,9 @@ body {
   height: 45px;
   position: relative;
 }
+.nav-bar a {
+  color: white;
+}
 .nav-bar .button {
   display: flex;
   flex-direction: column;
