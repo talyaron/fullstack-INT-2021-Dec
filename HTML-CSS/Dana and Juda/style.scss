@@ -1,8 +1,9 @@
 
-    .button:hover{
-        border-bottom:4px solid rgb(179, 0, 0);
-
-    }
+.button:hover{
+    width: 100%;
+    border-bottom: 4px solid rgb(172, 0, 0);
+margin-top: -4px;
+}
 
 .hover {
     opacity: 1;
@@ -51,7 +52,7 @@ body {
     a {
         color: white;
         text-decoration: none;
-        
+
     }
 
     .button {
@@ -75,7 +76,7 @@ body {
             width: 80px;
         }
 
-    
+
     }
 
 }
