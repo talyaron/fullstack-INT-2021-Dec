@@ -5,7 +5,7 @@ nav {
     height: 40px;
     top: 0px;
     padding: 0%;
-    margin-left:400px; 
+    margin-left:580px; 
     display: flex;
     flex-direction: row;
     color: black;
@@ -37,7 +37,7 @@ nav {
     background-color: white;
     display:flex;
     flex-direction: row;
-    width:90%;
+    width:93%;
     height:40px;
     align-content: center;
     justify-content: space-around;
@@ -106,12 +106,12 @@ nav {
     }
     .searchLine{
         background-color: black;
-        width: 110px;
+        width: 130px;
         height: 55px;
         .search{
             position:relative;
             left:5px;
-            width: 100px;
+            width: 90%;
             height:20px;
             background-color: white;
             p{
@@ -119,8 +119,8 @@ nav {
            } 
             img{
                 position:absolute;
-                left:78px;
-                top: 2px;
+                left:75px;
+                top: 1px;
                 width:15px;
                 height:15px;
            }
