@@ -34,10 +34,3 @@ body {
   text-align: center;
   position: relative;
 }
-.container div .container_item2 {
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: white;
-  height: 50px;
-  border: 10px solid white;
-}

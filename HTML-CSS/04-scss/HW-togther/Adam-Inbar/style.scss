@@ -1,8 +1,10 @@
 body{
+    background-color: rgb(254, 255, 254)
     background-color: white;
+    margin: 0px;
 }
 
-//adam  
+//adam// 
 .bbclogo{
     display: flex;
     height: 100px;
@@ -11,6 +13,7 @@ body{
     margin: 30px;
     font-family: 'Courier New', Courier, monospace;
     color: green; 
+    text-decoration: underline;
 }
 
     .navbar {
@@ -25,14 +28,27 @@ body{
         padding: 14px 16px;
         text-decoration: none;
         font-size: 18px;
+      }
+      .main p{
+          font-family: 'Courier New', Courier, monospace;
+          display: inline;
+          font-size: 100px;
+          color: green;
+      }
+      .main img{
+        height: 500px;
+        width: 100%;
+      }
         right: 100px;
       }
 
 
-      //inbar - navbar
+      //inbar//
     .header{
         display: flex;
         height: 50px;
+        width: 100%;
+        position: fixed;
     
         .logobbc{
             height: 100%;
@@ -47,30 +63,30 @@ body{
             background-color: rgb(0, 0, 0);
             font-family: 'Open Sans', sans-serif;
             font-size: 18px;
-            width: 100%;
             
 
-            li {
+            li{
                 float: left;
-            }
-            
-            li a.navi {
+                border-right: 1px solid rgb(255, 255, 255);
+
+                a .navi{
                 color: white;
                 text-align: center;
                 padding: 12px 6px;
                 text-decoration: none;
-            }
+                }
             
-                /* Change the link color to #111 (black) on hover */
-                li a.navi:hover {
+                //hover color grey rgb(41,41,41)//
+                a .navi:hover{
                     background-color: rgb(41, 41, 41);
                 }
+            }    
         }
     }
     .container{
         
         position: relative;
-        top: 50px;
+        top: 200px;
         margin: auto;
         background-color: white;
         display: flex;
