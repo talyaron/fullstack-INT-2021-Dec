@@ -2,11 +2,8 @@
   background-color: red;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-body {
-  margin: 10%;
+  margin-top: 80px
+  
 }
 
 .redtop div {
@@ -20,17 +17,16 @@ body {
 
 .container {
   display: flex;
-  margin: auto;
+  margin: 0 auto;
+  height: 300px;
+  width: 240px;
+  justify-content: center
+  
 }
 
-.container div {
-  flex-direction: row;
-  position: static;
-  background-color: white;
+.container div{
+  flex-direction: row
+  
 }
-.container div .container_item {
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  position: relative;
-}
+
+
