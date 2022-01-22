@@ -1,3 +1,16 @@
+.hover {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.block:hover .hover {
+  opacity: 0.8;
+}
+
 h1 {
   font-weight: bold;
   font-size: 20px;
@@ -26,6 +39,10 @@ body {
   height: 45px;
   position: relative;
 }
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+}
 .nav-bar .button {
   display: flex;
   flex-direction: column;
@@ -50,7 +67,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 67vw;
-  border: 2px solid green;
   height: 100vh;
   padding-top: 100px;
 }
@@ -64,7 +80,6 @@ body {
 .page .wrapper1 {
   height: 500px;
   width: 100%;
-  border: 1px solid red;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
