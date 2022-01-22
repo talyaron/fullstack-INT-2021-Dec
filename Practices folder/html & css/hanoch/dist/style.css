@@ -27,7 +27,7 @@
   height: 40px;
 }
 
-.main .main2 .title {
+.main .title {
   border-left: red solid 4px;
   padding-left: 5px;
   margin-top: 50px;
@@ -35,6 +35,34 @@
   font-size: 30px;
   font-weight: bold;
 }
+.main .main2 {
+  display: flex;
+  padding: 10px;
+  margin-top: 50px;
+  margin-left: 50px;
+  height: 600px;
+}
+.main .main2 .story {
+  position: relative;
+}
+.main .main2 .story img {
+  height: 200px;
+}
+.main .main2 .story .subtitle p {
+  color: gray;
+  position: absolute;
+  bottom: 100px;
+}
+.main .main2 .story .subject {
+  position: absolute;
+  border-left: red solid 4px;
+  padding-left: 5px;
+  bottom: 0;
+}
+.main .main2 .story .subject p {
+  color: gray;
+}
+
 a:-webkit-any-link {
   color: white;
   cursor: pointer;

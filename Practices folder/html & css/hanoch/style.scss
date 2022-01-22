@@ -1,3 +1,4 @@
+
 .header{
     background-color: black;
     height: 40px;
@@ -28,7 +29,7 @@
     }
 }  
 .main{
-    .main2{
+    
 
     .title{
         border-left: red solid 4px;
@@ -38,17 +39,42 @@
         font-size: 30px;
         font-weight: bold;
     }
+    .main2{
+        display: flex;
+        padding: 10px;
+        margin-top: 50px;
+        margin-left: 50px;
+        height: 600px;
     .story{
-        img{
+        position: relative;
 
+       
+        img{
+            height: 200px;
+         
         }
+
         .title{
 
         }
         .subtitle{
+            p{
+                color: gray;
+                position: absolute;
+                bottom: 100px;
+            }
 
         }
         .subject{
+            position: absolute;
+            border-left: red solid 4px;
+            padding-left: 5px;
+            bottom: 0;
+            
+            
+            p{
+                color: gray;
+            }
 
         }
     }
