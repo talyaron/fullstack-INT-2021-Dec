@@ -1,0 +1,69 @@
+body {
+  background-color: white;
+  margin: auto;
+  width: 100%;
+  position: absolute;
+}
+body .nav-bar {
+  background-color: black;
+  margin: auto;
+  position: absolute;
+  width: 100%;
+  height: 40px;
+}
+body .nav-bar .nav-link {
+  position: relative;
+  top: 5px;
+  margin: auto;
+  width: 1280px;
+  font-size: 20px;
+  font-family: "Open Sans";
+}
+body .nav-bar .nav-link a {
+  margin: 15px;
+  width: 100px;
+  color: white;
+  border-left: solid, gray;
+  border-right: outset, gray;
+}
+body .subject {
+  font-family: "Open Sans";
+  border-left: #33318a;
+  border-left-style: solid;
+  font-size: 24px;
+  position: relative;
+  top: 70px;
+  left: 5px;
+  margin: auto;
+  width: 1248px;
+  height: 28px;
+}
+body .container {
+  position: relative;
+  top: 90px;
+  margin: auto;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 1248px;
+}
+body .container .artical {
+  position: relative;
+  margin: 5px;
+  width: 381.56px;
+}
+body .container .artical img {
+  width: 381.56px;
+  height: 190px;
+}
+body .container .artical h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 22px;
+  color: black;
+}
+body .container .artical h2 {
+  font-family: "open Sans" sans-serif;
+  font-size: 15px;
+  color: black;
+}

@@ -1,0 +1,97 @@
+body {
+  background-color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .post {
+  position: relative;
+  width: 600px;
+  height: auto;
+  margin: 20px auto;
+  background-color: #fff;
+  border: ridge;
+  border-radius: 1%;
+}
+
+body .post .header {
+  position: relative;
+}
+
+body .post .header .profilLogo {
+  float: left;
+  border-radius: 50%;
+  width: 30px;
+}
+
+body .post .header .profileName {
+  position: relative;
+  left: 5px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  font-size: 20px;
+}
+
+body .post .header .location {
+  position: absolute;
+  top: 5px;
+  left: 35px;
+  font-size: 15px;
+}
+
+body .post .header .menu {
+  float: right;
+  width: 15px;
+}
+
+body .post .header .postImg {
+  width: 100%;
+}
+
+body .post .footer img {
+  width: 20px;
+}
+
+body .post .footer .footer-right {
+  position: absolute;
+  right: 0px;
+}
+
+body .post .discription {
+  font-size: 14px;
+}
+
+body .post .discription .likes_count {
+  font: bold;
+}
+
+body .post .discription .comments {
+  color: gray;
+}
+
+body .post .post_comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 200px;
+}
+
+body .post .post_comment .post_comment img {
+  width: 20px;
+}
+
+body .post .post_comment .post_comment_btn {
+  font-size: 18px;
+  color: blue;
+}
+/*# sourceMappingURL=style.css.map */

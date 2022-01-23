@@ -1,0 +1,24 @@
+body {
+  width: 400px;
+  margin: auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav_top {
+  background-color: #2e2f33;
+}
+.nav_top .user_location {
+  color: #ffffff;
+}
+.nav_top .user_instruments {
+  color: #808183;
+}
+
+.nav_bottom {
+  background-color: #2e2f33;
+  color: #5fb2b6;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

@@ -1,0 +1,58 @@
+.header {
+  background-color: red;
+  height: 30px;
+  width: 1260px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 20px;
+}
+
+.header .part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .logo {
+  width: 50px;
+  border-radius: 20%;
+  margin: 10px;
+}
+
+.continer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.continer .item {
+  width: 300px;
+  margin-top: 20px;
+  margin-left: 20px;
+  position: relative;
+}
+
+.continer .item .logo {
+  width: 50px;
+  position: absolute;
+  border-radius: 20%;
+  bottom: 60px;
+  right: 10px;
+}
+
+.continer .item img {
+  width: 300px;
+}
+
+.continer .item .title {
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */

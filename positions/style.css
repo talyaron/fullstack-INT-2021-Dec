@@ -1,40 +1,40 @@
-
-.wrapher{
-width: 200px;
-height: 200px;
-border: 1px dashed;
-margin: auto;
-margin-top: 400px;
-display: flex;
-flex-wrap: wrap;
+.wrapher {
+  width: 200px;
+  height: 200px;
+  border: 1px dashed;
+  margin: auto;
+  margin-top: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.box1{
+.wrapher .box1 {
   width: 100px;
   height: 100px;
   background-color: blue;
-  
 }
 
-.move{
+.wrapher .move {
   width: 100px;
   height: 100px;
-  background-color: rgb(255, 251, 0);
+  background-color: #fffb00;
   position: relative;
   bottom: 20px;
   left: 20px;
 }
 
-.box3{
+.wrapher .box3 {
   width: 100px;
   height: 100px;
-  background-color: rgb(31, 255, 1);
-
+  background-color: #1fff01;
 }
 
-.box2{
+.wrapher .box2 {
   width: 100px;
   height: 100px;
-  background-color: rgb(235, 17, 17);
-
+  background-color: #eb1111;
 }
+/*# sourceMappingURL=style.css.map */
