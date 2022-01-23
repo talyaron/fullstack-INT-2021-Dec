@@ -168,6 +168,14 @@ body{
         .section-media-inlineblock{
             display: flex;
             flex-direction: column;
+            h2{
+                margin-top: 25px;
+                text-align: center;
+                background-color: black;
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                padding: 15px 0 15px 0;
+            }
             .block-content{
                 display: flex;
                 justify-content: space-evenly;
