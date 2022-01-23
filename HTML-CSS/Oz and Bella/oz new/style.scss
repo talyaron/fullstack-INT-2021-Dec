@@ -1,66 +1,7 @@
 body {
     font-family: 'Lato', sans-serif;
     margin: 0;
-    /* header */
-    header {
-        display: flex;
-        width: 100%;
-        height: 40px;
-        border-bottom: 1px solid lightgray;
-        color: white;
-        img {
-            width: 5%;
-            margin-left: 84px;
-            object-fit: cover;
-            border-right: 1px solid lightgray;
-            padding-right: 20px;
-        }
-        ul {
-            display: flex;
-            align-items: center;
-            margin: 0;
-            box-sizing: border-box;
-            padding: 0;
-            a {
-                text-decoration: none;
-            }
-            li {
-                text-decoration: none;
-                list-style-type: none;
-                color: black;
-                font-weight: 600;
-                font-size: 14px;
-            }
-            .item {
-                padding: 10px 20px;
-                height: 40px;
-                border-right: 1px solid lightgray;
-                box-sizing: border-box;
-            }
-            .item:hover {
-                border-bottom: 3px solid darkblue;
-            }
-        }
-    }
-    /* sub-header */
-    .sub-header {
-        background-color: #bb1919;
-        height: 56px;
-        width: 100%;
-        box-sizing: border-box;
-        img {
-            margin-left: 84px;
-            padding-top: 10px;
-        }
-    }
-    /* article heading */
-    h4 {
-        font-size: 16px;
-        line-height: 1.4;
-        margin: 0;
-        font-weight: bold;
-=======
-
+   
 .navbar{
     width: 100vw;
     height:60px;
@@ -77,11 +18,12 @@ body {
 
 
     a{
-    font-size: 40px;
-    color: white;
-    position: absolute;
-    left: 80px;
-    text-decoration-thickness: 0px;
+     margin-top: 5px;
+     font-size: 35px;
+     color: white;
+     position: absolute;
+     left: 80px;
+     text-decoration-thickness: 0px;
     }
 
     #right-icon{
@@ -93,7 +35,7 @@ body {
 
 
 .title h1{
-width: 210px;
+width:250px;
 height: 40px;
 background-color:white;
 position: relative;
@@ -105,26 +47,7 @@ top: 40px;
 
 
 
-.wrapper {
-    width: 1344px;
-    height: 301px;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    padding: 0;
-    box-sizing: border-box;
-    margin-top: 40px;
-    h2 {
-        direction: rtl;
-        font-size: 18px;
->>>>>>> Stashed changes
-    }
-    h4:hover {
-        color: rgb(3, 122, 151);
-        text-decoration: underline;
-        transition: 0.4s;
-    }
-    /* wrapper */
+
     .wrapper {
         width: 1250px;
         display: flex;
