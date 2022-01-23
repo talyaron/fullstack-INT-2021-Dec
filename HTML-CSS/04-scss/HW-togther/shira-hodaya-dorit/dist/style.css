@@ -1,34 +1,3 @@
-nav {
-  position: sticky;
-  width: 1500px;
-  height: 40px;
-  top: 0px;
-  padding: 0%;
-  margin-left: 580px;
-  display: flex;
-  flex-direction: row;
-  color: black;
-  font-size: 16px;
-  align-items: center;
-}
-nav .links {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  width: 100%;
-  margin: auto;
-  color: white;
-}
-nav .links div {
-  margin-right: 20px;
-}
-nav .links a {
-  color: black;
-}
-nav .links a:hover {
-  color: burlywood;
-}
-
 .bigRow {
   position: sticky;
   left: 0px;
@@ -99,6 +68,11 @@ nav .links a:hover {
   background-color: black;
   height: 55px;
   width: 101px;
+}
+.bigRow .case a:-webkit-any-link {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
 }
 .bigRow .case p {
   color: white;

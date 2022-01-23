@@ -1,36 +1,4 @@
 
-nav {
-    position:sticky;
-    width: 1500px;
-    height: 40px;
-    top: 0px;
-    padding: 0%;
-    margin-left:580px; 
-    display: flex;
-    flex-direction: row;
-    color: black;
-    font-size: 16px;
-    align-items: center;
-    
-    .links {
-        display: flex;
-        flex-direction: row;
-        text-align: center;
-        width: 100%;
-        margin: auto;
-        color: white;
-        div{
-            margin-right: 20px;
-           
-        }
-        a{
-            color: rgb(0, 0, 0);
-        }
-        a:hover{
-            color: burlywood;
-        } 
-    }
-}
 .bigRow{
     position:sticky;
     left:0px;
@@ -97,6 +65,11 @@ nav {
         }
     }
     .case{
+        a:-webkit-any-link {
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+        }
         background-color: black;
         height: 55px;
         width: 101px;
