@@ -1,17 +1,106 @@
 body {
   width: 400px;
   margin: auto;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "roboto", Tahoma, Verdana, sans-serif;
 }
 
 .nav_top {
-  background-color: #2e2f33;
+  background-color: #46474b;
+  padding: 0px 20px;
+}
+.nav_top .user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.nav_top .user_right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 10px;
+}
+.nav_top .user_left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 10px;
+}
+.nav_top .user_avatar {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  background-color: #B4B4B4;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+.nav_top .user_avatar h3 {
+  margin: 0;
+}
+.nav_top .user_avatar img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.nav_top .user_name {
+  color: #ffffff;
+  font-size: 12px;
+  background-color: #46474b;
+  position: relative;
+  top: -7px;
 }
 .nav_top .user_location {
   color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 5px;
 }
 .nav_top .user_instruments {
-  color: #808183;
+  font-size: 18px;
+  color: #B4B4B4;
+}
+
+.content {
+  color: #ffffff;
+  background-color: #2e2f33;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content .user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.content .user div {
+  margin: 5px;
+}
+.content .user_avatar {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  background-color: #B4B4B4;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+.content .user_avatar h3 {
+  margin: 0;
+}
+.content .user_avatar img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.content .left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .nav_bottom {
@@ -21,4 +110,5 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  padding: 10px;
 }
