@@ -4,6 +4,7 @@ body {
 
 .wrapper {
   display: flex;
+  flex-direction: column;
 }
 .wrapper .nav_bar {
   display: flex;
@@ -38,4 +39,26 @@ body {
   width: auto;
   height: 3rem;
   left: 14%;
+}
+.wrapper .container1 {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+}
+.wrapper .container1 .item {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.062);
+  margin: 10px;
+}
+.wrapper .container2 {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+}
+.wrapper .container2 .item {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.062);
+  margin: 10px;
+}
+.wrapper #image {
+  width: 100%;
+  height: 160px;
 }
