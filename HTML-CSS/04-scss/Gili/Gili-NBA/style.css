@@ -56,4 +56,12 @@ body {
 .wrapper p {
   font-size: 100px;
 }
+
+.image_pos img {
+  position: fixed;
+  width: 150px;
+  top: 30px;
+  right: 50px;
+  border-radius: 15%;
+}
 /*# sourceMappingURL=style.css.map */

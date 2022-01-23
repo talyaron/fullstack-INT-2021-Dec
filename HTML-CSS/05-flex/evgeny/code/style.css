@@ -1,0 +1,95 @@
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+body .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 30px;
+}
+
+body .wrapper .red {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: red;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 35px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .wrapper .red p {
+  color: white;
+}
+
+body .wrapper .red h2 {
+  color: white;
+}
+
+body .wrapper .red .right-text {
+  padding: 0px 10px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+body .wrapper .red .left-text {
+  padding: 0px 10px;
+}
+
+body .wrapper .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .wrapper .items .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 1%;
+}
+
+body .wrapper .items .item .images {
+  position: relative;
+}
+
+body .wrapper .items .item #image {
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+
+body .wrapper .items .item #little {
+  position: absolute;
+  height: auto;
+  width: 19%;
+  left: 79%;
+  top: 82%;
+}
+/*# sourceMappingURL=style.css.map */
