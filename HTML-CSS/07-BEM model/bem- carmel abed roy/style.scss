@@ -1,0 +1,50 @@
+.card {
+    position: relative;
+    width: 360px;
+    height: 640px;
+    margin: auto;
+    border: 16px black solid;
+    border-top-width: 60px;
+    border-bottom-width: 60px;
+    border-radius: 36px;
+}
+
+.usermenu {
+    width: 360px;
+    height: 55px;
+    background-color: rgb(61, 65, 63);
+
+    &__profile {
+        img {
+            width: 40px;
+            border-radius: 50%;
+            margin-top: 7px;
+            margin-left: 5px;
+        }
+    }
+}
+
+.user {
+    width: 360px;
+    height: 40px;
+    background-color: rgb(153, 153, 153);
+
+    &__profile {
+        img {
+            width: 30px;
+            border-radius: 50%;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+
+        &__name {
+            color: white;
+            margin-left: 35px;
+        }
+
+        &--dark {
+            background-color: rgb(31, 31, 31);
+            height: 40px;
+        }
+    }
+}
