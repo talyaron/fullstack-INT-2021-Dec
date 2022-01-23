@@ -94,3 +94,25 @@
 .news-navigator ul li:hover {
   border-bottom: #fcfcfc solid 4px;
 }
+
+.news-grid {
+  margin: auto;
+  height: 450px;
+  width: 90%;
+  display: flex;
+}
+.news-grid .card {
+  margin-top: 15px;
+  margin-left: 12px;
+  height: 350px;
+  width: 300px;
+}
+.news-grid .card img {
+  width: 300px;
+}
+.news-grid .card p {
+  color: gray;
+}
+.news-grid .card .orgin {
+  border-left: 1px red solid;
+}
