@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  background-color: #000;
+  width: 100%;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.navbar img {
+  height: 2rem;
+  width: 100px;
+  background-color: white;
+}
+.navbar ul {
+  display: flex;
+  color: #fff;
+}
+.navbar ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  border-left: grey solid 1px;
+  border-right: grey solid 1px;
+  height: 3rem;
+  width: 5rem;
+  background: black;
+}
+.navbar ul li:hover {
+  border-bottom: red solid 4px;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+}
+.navbar ul .signin {
+  display: flex;
+  justify-content: start;
+  width: 14rem;
+  border-left: grey solid 1px;
+  border-right: grey solid 1px;
+  padding: 0 1rem;
+}
+.navbar .search {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  margin: 0 2rem;
+  height: 1.5rem;
+}
+.navbar .search input {
+  border: none;
+}
+.navbar .search input::placeholder {
+  padding-left: 0.5rem;
+}
+.navbar .search .fa-search {
+  width: 1.5rem;
+  padding-left: 0.2rem;
+}
+
+.news-navigator {
+  background-color: #d81717;
+  width: 100%;
+  height: 100px;
+}
+.news-navigator h1 {
+  color: #e7e2e2;
+  padding-top: 5px;
+  padding-left: 10px;
+  font-size: 2rem;
+}
+.news-navigator ul {
+  display: flex;
+  color: #fff;
+}
+.news-navigator ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  border-right: grey solid 1px;
+  height: 2rem;
+  width: 6.5rem;
+  background: #d81717 black;
+}
+.news-navigator ul li:hover {
+  border-bottom: #fcfcfc solid 4px;
+}
+
+.news-grid {
+  margin: auto;
+  height: 450px;
+  width: 90%;
+  display: flex;
+}
+.news-grid .card {
+  margin-top: 15px;
+  margin-left: 12px;
+  height: 350px;
+  width: 300px;
+}
+.news-grid .card img {
+  width: 300px;
+}
+.news-grid .card p {
+  color: gray;
+}
+.news-grid .card .orgin {
+  border-left: 1px red solid;
+}
