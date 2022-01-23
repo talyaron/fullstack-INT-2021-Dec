@@ -3,6 +3,7 @@
 
 .wrapper{
 display: flex;
+flex-direction: column;
     .nav_bar{
         display: flex;
         flex-direction: row;
@@ -49,6 +50,41 @@ display: flex;
 
 
     }
+
+    .container1 {
+        display: flex;
+        justify-content: space-evenly;
+        flex: 1;
+
+
+        .item{
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.062);
+            margin: 10px;
+            
+        }
+    }
+
+    .container2{
+        display: flex;
+        justify-content: space-evenly;
+        flex: 1;
+        
+        .item{
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.062);
+            margin: 10px;
+            
+        }
+
+
+    }
+
+
+    #image{
+        width: 100%;
+        height: 160px;
+    }
+
+
 
 
 
