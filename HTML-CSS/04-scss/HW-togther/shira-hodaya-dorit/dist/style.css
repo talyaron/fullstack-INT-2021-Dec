@@ -1,39 +1,3 @@
-nav {
-  position: sticky;
-  width: 1500px;
-  height: 40px;
-  top: 0px;
-  padding: 0%;
-  margin-left: 580px;
-  display: flex;
-  flex-direction: row;
-  color: black;
-  font-size: 16px;
-  align-items: center;
-}
-nav .links {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  width: 100%;
-  margin: auto;
-  color: blue;
-}
-nav .links div {
-  margin-right: 20px;
-}
-nav .links a:link {
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-}
-nav .links a:active {
-  color: orange;
-}
-nav .links a:hover {
-  color: green;
-}
-
 .bigRow {
   position: sticky;
   left: 0px;
