@@ -1,0 +1,43 @@
+.header .wrapper {
+  height: 30px;
+  width: 100%;
+  background-color: red;
+  position: relative;
+}
+
+.header .wrapper .alignright {
+  float: right;
+  margin-top: 0;
+  margin-right: 10px;
+}
+
+.header .wrapper .alightleft {
+  float: left;
+  margin-left: 10px;
+}
+
+.container {
+  margin: 50px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: row;
+      -ms-flex-align: row;
+          align-items: row;
+}
+
+.container .item {
+  height: 168px;
+  width: 298px;
+  margin: 1px;
+  position: relative;
+}
+/*# sourceMappingURL=style.css.map */

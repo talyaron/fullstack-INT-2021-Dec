@@ -100,7 +100,8 @@ body nav ul .b-f .orb-search__button {
 }
 
 /* Clear floats */
-.container::after, .row::after {
+.container::after,
+.row::after {
   content: "";
   clear: both;
   display: table;
