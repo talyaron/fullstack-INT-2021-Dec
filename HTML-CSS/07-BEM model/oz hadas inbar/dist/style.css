@@ -1,7 +1,9 @@
 .mega-wrapper {
+  border-radius: 15px;
   width: 400px;
   height: 600px;
   border: 1px solid black;
+  margin: auto;
 }
 .mega-wrapper ul {
   list-style-type: none;
@@ -32,4 +34,7 @@
   height: 35px;
   margin-top: 3px;
   margin-left: 5px;
+}
+.mega-wrapper .border-menu {
+  background-color: #272525;
 }
