@@ -19,33 +19,37 @@
     <div class="nav_top">
         <div class="user">
             <div class="user_left">
-                <div class="user_avatar">
-                    <h3>A</h3>
+                <div class="user_left">
+                    <div class="user_avatar">
+                        <h3>A</h3>
+                    </div>
+                    <div class="user_name">Adi Max</div>
                 </div>
-                <div class="user_name">Adi Max</div>
+                <div class="user_right">
+                    <div class="user_location"><i class="fas fa-map-marker-alt"></i> Tel Aviv</div>
+                    <div class="user_instruments">Guitar +3</div>
+                </div>
             </div>
             <div class="user_right">
-                <div class="user_location"><i class="fas fa-map-marker-alt"></i> Tel Aviv</div>
-                <div class="user_instruments">Guitar +3</div>
+                <div class="instrument_icon"><i class="fas fa-guitar"></i></div>
+                <div class="btn_edit"></div>
             </div>
         </div>
-        <div class="instument_icon"></div>
-        <div class="btn_edit"></div>
     </div>
 
     <div class="content">
         <div class="user">
-            <div class="user_avatar">
-                <h3>J</h3>
+            <div class="user_left">
+                <div class="user_avatar">
+                    <h3>J</h3>
+                </div>
+                <div class="user_name">Jean Claud,</div>
+                <div class="user_instruments">Guitar +3</div>
             </div>
-            <div class="user_name">Jean Claud</div>
-            <div class="comma">,</div>
-            <div class="user_instruments">Guitar +3</div>
-        </div>
-        <div class="left">
-            <div class="instument_icon"></i>
+            <div class="user_right">
+                <div class="instrument_icon"><i class="fas fa-drum"></i></div>
+                <div class="distance">2.5 KM</div>
             </div>
-            <div class="distance">2.5 KM</div>
         </div>
     </div>
 
@@ -80,13 +84,14 @@
 <!-- drum instument_icon -->
 <i class="fas fa-drum"></i>
 
-<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <rect x="0.421143" y="0.421082" width="19.1579" height="19.1579" fill="url(#pattern0)"/>
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <rect x="0.421143" y="0.421082" width="19.1579" height="19.1579" fill="url(#pattern0)" />
     <defs>
-    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-    <use xlink:href="#image0_48_66" transform="scale(0.01)"/>
-    </pattern>
-    <image id="image0_48_66" width="100" height="100" xlink:href="data:image/png;base64,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"/>
+        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_48_66" transform="scale(0.01)" />
+        </pattern>
+        <image id="image0_48_66" width="100" height="100"
+            xlink:href="data:image/png;base64,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" />
     </defs>
-    </svg>
-    
+</svg>

@@ -12,18 +12,22 @@ body {
         display: flex;
         flex-direction: row;
         align-items: center;
-        &_right{
+        justify-content: space-between;
+
+        &_right {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin: 20px 10px;
         }
-        &_left{
+
+        &_left {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
             margin: 20px 10px;
         }
+
         &_avatar {
             color: #ffffff;
             font-size: 28px;
@@ -33,9 +37,11 @@ body {
             width: 50px;
             height: 50px;
             text-align: center;
-            h3{
+
+            h3 {
                 margin: 0;
             }
+
             img {
                 border-radius: 50%;
                 width: 50px;
@@ -62,23 +68,44 @@ body {
             font-size: 18px;
             color: #B4B4B4;
         }
+
+        .instrument_icon {
+            color: #ffffff;
+            font-size: 30px;
+        }
     }
 }
-.content{   
+
+.content {
     color: #ffffff;
     background-color: #2e2f33;
     font-size: 15px;
     font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .user{
+
+    .user {
         display: flex;
         flex-direction: row;
         align-items: center;
-        div{
+        justify-content: space-between;
+
+        div {
             margin: 5px;
         }
+
+        &_left {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        &_right {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+
         &_avatar {
             color: #ffffff;
             font-size: 28px;
@@ -88,9 +115,11 @@ body {
             width: 40px;
             height: 40px;
             text-align: center;
-            h3{
+
+            h3 {
                 margin: 0;
             }
+
             img {
                 border-radius: 50%;
                 width: 40px;
@@ -98,13 +127,8 @@ body {
             }
         }
     }
-    .left{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-    }
 }
+
 .nav_bottom {
     background-color: #2e2f33;
     color: #5fb2b6;
