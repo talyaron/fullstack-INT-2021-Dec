@@ -1,16 +1,42 @@
-.headline{
-    background-color: red;
-    height: 5vh;
-    
-    border: 1px solid red;
-    margin-top: 70px;
-    position: relative
+.body {
+    background-color: white;
+    height: 500px;
+    width: 500px;
+}
 
-    .first{
-        float: left;
-    }
-    .second{
-       
+
+.redtop {
+    background-color: red;
+    display: flex;
+    height: 40px;
+    margin-top: 100px;
+    justify-content: space-between
+
+}
+
+.first {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.second {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    margin-top: 20px;
+}
+
+.container div {
+    flex-direction: row;
+    margin: auto;
+    text-align: center;
+
+    .text {
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
 }

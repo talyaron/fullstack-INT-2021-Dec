@@ -1,0 +1,122 @@
+body {
+  background-color: white;
+  margin: 0px;
+}
+
+.bbclogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+}
+
+.wrapper h1 {
+  margin: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  color: green;
+  text-decoration: underline;
+}
+
+.navbar {
+  background-color: black;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.navbar a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.main p {
+  font-family: 'Courier New', Courier, monospace;
+  display: inline;
+  font-size: 100px;
+  color: green;
+}
+
+.main img {
+  height: 500px;
+  width: 100%;
+  right: 100px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+}
+
+.header .logobbc {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 14px 16px;
+  overflow: hidden;
+  background-color: black;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+
+.header ul li {
+  float: left;
+  border-right: 1px solid white;
+}
+
+.header ul li a .navi {
+  color: white;
+  text-align: center;
+  padding: 12px 6px;
+  text-decoration: none;
+}
+
+.header ul li a .navi:hover {
+  background-color: #292929;
+}
+
+.container {
+  position: relative;
+  top: 200px;
+  margin: auto;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 1000px;
+}
+
+.container .article {
+  position: relative;
+  margin: 5px;
+  width: 300px;
+}
+
+.container .article img {
+  width: 300px;
+  height: 200px;
+}
+
+.container .article span {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  color: black;
+}
+/*# sourceMappingURL=style.css.map */

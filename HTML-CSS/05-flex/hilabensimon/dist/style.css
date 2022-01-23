@@ -1,8 +1,38 @@
-.headline {
+.body {
+  background-color: white;
+  height: 500px;
+  width: 500px;
+}
+
+.redtop {
   background-color: red;
-  height: 5vh;
-  width: 100%;
-  border: 1px solid red;
-  margin-top: 70px;
-  position: relative;
+  display: flex;
+  height: 40px;
+  margin-top: 100px;
+  justify-content: space-between;
+}
+
+.first {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.second {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.container div {
+  flex-direction: row;
+  margin: auto;
+  text-align: center;
+}
+.container div .text {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }

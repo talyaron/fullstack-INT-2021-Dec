@@ -3,5 +3,13 @@ body {
 }
 
 .wrapper {
-  border: 2px solid navy;
+  border: 1px solid navy;
 }
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: navy;
+  margin: 1px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,72 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #2c2c2c;
+}
+
+body nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1a1a25;
+  padding: 30px 10%;
+}
+
+body nav .nav-logo {
+  cursor: pointer;
+  margin-right: auto;
+}
+
+body nav .nav-links {
+  list-style: none;
+}
+
+body nav .nav-links li {
+  display: inline-block;
+  padding: 0 20px;
+  background-color: none;
+}
+
+body nav .nav-links li a {
+  -webkit-transition: all 0.3 ease 0;
+  transition: all 0.3 ease 0;
+}
+
+body nav .nav-links li a:hover {
+  color: #009ba5;
+}
+
+body button {
+  padding: 9px 25px;
+  border: none;
+  background-color: #009ba5;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-transition: all 0.3 ease 0;
+  transition: all 0.3 ease 0;
+  margin-left: 15px;
+}
+
+body button:hover {
+  background-color: rgba(0, 155, 165, 0.8);
+}
+
+li, a, button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+/*# sourceMappingURL=app.css.map */
