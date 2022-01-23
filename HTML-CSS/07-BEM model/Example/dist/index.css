@@ -1,0 +1,16 @@
+.wrapper {
+  margin: auto;
+  max-width: 75ch;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.219);
+  padding: 20px;
+}
+.card img {
+  width: 100%;
+}
+.card h3 {
+  font-size: larger;
+}
