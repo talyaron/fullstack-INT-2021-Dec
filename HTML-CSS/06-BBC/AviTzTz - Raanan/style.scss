@@ -100,13 +100,20 @@
                         margin: auto;
                         height: 450px;
                         width: 90%;
-                        background-color: yellow;
                         display: flex;
                         .card {
                             margin-top: 15px;
                             margin-left: 12px;
                             height: 350px;
                             width: 300px;
-                            background-color: red;
+                            img {
+                                width: 300px;
+                            }
+                            p {
+                                color: gray;
+                            }
+                            .orgin {
+                                border-left: 1px red solid;
+                            }
                         }
                     }

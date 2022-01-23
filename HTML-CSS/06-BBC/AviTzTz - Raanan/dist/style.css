@@ -99,7 +99,6 @@
   margin: auto;
   height: 450px;
   width: 90%;
-  background-color: yellow;
   display: flex;
 }
 .news-grid .card {
@@ -107,5 +106,13 @@
   margin-left: 12px;
   height: 350px;
   width: 300px;
-  background-color: red;
+}
+.news-grid .card img {
+  width: 300px;
+}
+.news-grid .card p {
+  color: gray;
+}
+.news-grid .card .orgin {
+  border-left: 1px red solid;
 }
