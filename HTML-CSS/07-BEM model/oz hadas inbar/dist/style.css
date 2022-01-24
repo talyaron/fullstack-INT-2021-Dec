@@ -4,6 +4,7 @@
   height: 600px;
   border: 1px solid black;
   margin: auto;
+  background-color: #2d2f33;
 }
 .mega-wrapper ul {
   list-style-type: none;
@@ -23,18 +24,124 @@
   margin-top: 5px;
   margin-left: 5px;
 }
-.mega-wrapper .studentprofile {
+.mega-wrapper .studentprofiledark .studentprofile {
   width: 100%;
   height: 40px;
   background-color: #746d6d;
 }
-.mega-wrapper .studentprofile img {
+.mega-wrapper .studentprofiledark .studentprofile img {
   border-radius: 50%;
   width: 35px;
   height: 35px;
   margin-top: 3px;
   margin-left: 5px;
 }
-.mega-wrapper .border-menu {
+.mega-wrapper .studentprofiledark .border-menu {
   background-color: #272525;
+}
+.mega-wrapper .user_profile {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 15px 15px 0 0;
+  margin-bottom: 20px;
+}
+.mega-wrapper .user_profile img {
+  width: 40px;
+  height: 40px;
+  margin-top: 3px;
+  margin-left: 3px;
+  padding-top: 5px;
+  padding-left: 12px;
+  border-radius: 50%;
+}
+.mega-wrapper .user_profile h2 {
+  margin: 0;
+  padding-top: 15px;
+  padding-left: 10px;
+  font-family: sans-serif;
+  color: #4b4bd6;
+}
+.mega-wrapper .header {
+  width: 100%;
+  background-color: #2d2f33;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  text-align: center;
+}
+.mega-wrapper .header h1 {
+  margin: 0px;
+  color: #5fb2b8;
+}
+.mega-wrapper .header h2 {
+  margin: 0px;
+  color: white;
+}
+.mega-wrapper .header h3 {
+  margin: 0px;
+  color: #bdc9ef;
+}
+.mega-wrapper .header h3 .torq {
+  color: #5fb2b8;
+}
+.mega-wrapper .container {
+  margin-top: 0px;
+  margin: auto;
+  width: 80%;
+  height: 394px;
+  padding-top: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  background-color: #2d2f33;
+  position: relative;
+  justify-content: space-around;
+}
+.mega-wrapper .container .button {
+  width: 120px;
+  height: 70px;
+  background-color: rgba(180, 180, 180, 0.37);
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+  margin: 5px 4px;
+  border-radius: 12px;
+}
+.mega-wrapper .container .button:hover {
+  background: #5FB2B8;
+}
+.mega-wrapper .container .button__wide {
+  width: 300px;
+  height: 30px;
+  border-radius: 20px;
+  padding: 7px;
+}
+.mega-wrapper .nav_bottom {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  background-color: white;
+  width: 100%;
+  height: 40px;
+  border-radius: 0px 0px 15px 15px;
+  padding: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+.mega-wrapper .nav_bottom .back {
+  margin: 5px;
+  width: 30px;
+  float: left;
+}
+.mega-wrapper .nav_bottom .next {
+  height: 30px;
+  margin-top: 5px;
+  width: fit-content;
+  background-color: #5fb2b8;
+  border-radius: 10px;
 }

@@ -9,22 +9,31 @@
 }
 .card .top_header {
   width: 370px;
-  height: 55px;
+  height: 100px;
   background-color: #3d413f;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .card .top_header__firstRow {
   display: flex;
   flex-direction: row;
 }
-.card .top_header__firstRow__firstRow__logo {
-  width: 20px;
-  height: 20px;
+.card .top_header__firstRow__logo object {
   position: absolute;
-  left: 20px;
+  left: 10px;
+  top: 10px;
+  height: 95px;
+  width: 95px;
+}
+.card .top_header__firstRow__img1 object {
+  position: absolute;
+  left: 100px;
+  top: 20px;
+  height: 40px;
+  width: 40px;
 }
 .card .top_header__secondRow {
   display: flex;

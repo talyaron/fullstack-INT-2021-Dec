@@ -1,34 +1,46 @@
 
 
-.card {
+.card{
     margin: auto;
     width: 370px;
     height: 637px;
     border: 0.5px solid rgb(214, 214, 214);
     border-radius: 20px;
     background-color: #2D2F33;
-    .top_header {
+    .top_header{
         width: 370px;
-        height: 55px;
+        height: 100px;
         background-color: rgb(61, 65, 63);
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         display:flex;
         flex-direction: column; 
+        position: relative;
             &__firstRow{
                 display: flex;
                 flex-direction: row;
-                &__firstRow__logo{
-                    width:20px;
-                    height:20px;
-                    position:absolute;
-                    left:20px;
+                &__logo{
+                    object{
+                        position:absolute;
+                        left:10px;
+                        top:10px;
+                        height: 95px;
+                        width:95px;
+                    }
+                   
                 }
-                &__firstRow__img1{   
-                }
-                &__firstRow__img2{   
+                &__img1{ 
+                    object{
+                        position:absolute;
+                        left: 100px;
+                        top:20px;
+                        height: 40px;
+                        width:40px;
+                    }
+                }    
+                &__img2{   
                 } 
-                &__firstRow__town{   
+                &__town{   
                 } 
             }
             &__secondRow{
