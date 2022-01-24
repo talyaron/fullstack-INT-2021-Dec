@@ -193,6 +193,22 @@ body {
         display: flex;
         flex-direction: row;
 
+        .button__next{           
+            background-color: #126f75;
+            width: 77px;
+            height: 5px;
+            border-radius: 35px;
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+            &:hover{
+                background: #5FB2B8;
+            }
+    
+        }
+
     }
 
 }
@@ -233,12 +249,12 @@ body {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-      
     }
 
     .button{
         width: 111px;
         height: 74px;
+
         background-color: rgba(180, 180, 180, 0.37);
         border: none;
         color: white;
@@ -248,29 +264,6 @@ body {
         margin: 5px 4px;
         border-radius: 12px;
         &:hover{
-            background: #5FB2B8;
-        }
-    
-        &__back{
-            background: none;
-        }
-
-        &__next{           
-            background-color: #5FB2B8;; 
-            width: 77px;
-            height: 35px;
-            border-radius: 20px;
-
-            border: none;
-            padding: 20px;
-            text-align: center;
-            font-size: 16px;
-            margin: 4px 2px;
-            border-radius: 20px;
-        }
-
-
-        &__selected{
             background: #5FB2B8;
         }
 
