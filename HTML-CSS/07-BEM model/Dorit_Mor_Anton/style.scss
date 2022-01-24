@@ -1,9 +1,9 @@
-.card{ 
-    position: relative;
+
+
+.card {
     margin: auto;
     width: 370px;
     height: 637px;
-    margin: auto;
     border: 0.5px solid rgb(214, 214, 214);
     border-radius: 20px;
     background-color: #2D2F33;
@@ -39,10 +39,10 @@
                 &__secondRow__instrument{
                 }
                 &__secondRow__instImg{
+
                 }
             }
-    }
-
+        }
      /* Utilities */
     .main_body{ 
         .buttons {
@@ -64,4 +64,5 @@
         }
     
     }
-}    
+    
+}
