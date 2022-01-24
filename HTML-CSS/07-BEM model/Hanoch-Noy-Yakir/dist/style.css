@@ -8,14 +8,14 @@ body {
   background-color: #46474b;
   padding: 0px 20px;
 }
+.nav_top__quiz {
+  background-color: white;
+}
 .nav_top .user {
   flex-direction: row;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.nav_top .user__quiz {
-  background-color: white;
 }
 .nav_top .user_right {
   display: flex;
@@ -217,7 +217,8 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.quiz .button {
+
+.button {
   width: 111px;
   height: 74px;
   background-color: rgba(180, 180, 180, 0.37);
@@ -229,10 +230,10 @@ body {
   margin: 5px 4px;
   border-radius: 12px;
 }
-.quiz .button:hover {
+.button:hover {
   background: #5FB2B8;
 }
-.quiz .button__more {
+.button__more {
   width: 247px;
   height: 30px;
   padding: 7px;
