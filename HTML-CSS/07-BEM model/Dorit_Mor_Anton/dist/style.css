@@ -1,14 +1,9 @@
-body {
-  background-color: #e6e6e6;
-}
-
 .card {
   margin: auto;
   width: 370px;
   height: 637px;
   border-radius: 20px;
   background-color: #2D2F33;
-  /*   top_header for big buttons card  */
   /* Utilities */
 }
 .card .top_header {
@@ -113,15 +108,15 @@ body {
 }
 .card .main_body .buttons .button_big h4 {
   text-align: center;
+  gap: opx;
 }
-.card .main_body .smaller_btn {
+.card .main_body .buttons .smaller_btn {
   width: 247px;
   height: 30px;
   background-color: rgba(180, 180, 180, 0.37);
   border-radius: 15px;
   margin: auto;
 }
-<<<<<<< HEAD
 .card .main_body .lines_wrapper__dark_row {
   position: relative;
   display: flex;
