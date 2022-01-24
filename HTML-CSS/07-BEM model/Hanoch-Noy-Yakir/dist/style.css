@@ -61,20 +61,39 @@ body {
   color: #ffffff;
 }
 .nav_top .user_results {
-  border-radius: 100%;
+  border-radius: 100px;
   background-color: #5fb2b6;
   color: #ffffff;
   right: 5px;
   text-align: center;
+  padding: 7px;
 }
 .nav_top .user .instrument_icon {
   color: #ffffff;
   font-size: 30px;
 }
 
+.contenth {
+  background-color: #2e2f33;
+  width: 100%;
+}
+.contenth_line {
+  display: flex;
+  color: #ffffff;
+  background-color: #2e2f33;
+  width: 100%;
+  justify-content: space-between;
+}
 .contenth_line img {
   border-radius: 50%;
   width: 50px;
+}
+.contenth_line:nth-child(odd) {
+  background-color: #B4B4B4;
+}
+.contenth_map img {
+  width: 100%;
+  height: 300px;
 }
 
 .content {

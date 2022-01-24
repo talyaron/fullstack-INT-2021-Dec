@@ -71,12 +71,13 @@ body {
             color: #ffffff;
         }
         &_results{
-            border-radius: 100%;
+            border-radius: 100px;
             background-color: #5fb2b6;
             color: #ffffff;
             right: 5px;
             text-align: center;
-            
+            padding: 7px;
+                                                                                                                                                 
         }
         .instrument_icon {
             color: #ffffff;
@@ -85,13 +86,33 @@ body {
     }
 }
 .contenth{
+    background-color: #2e2f33;
+    width: 100%;
+    
+
 
     &_line{
+        display: flex;
+        color: #ffffff;
+        background-color: #2e2f33;
+        width: 100%;
+        justify-content: space-between;
+
         img{
             border-radius: 50%;
             width: 50px;
         }
+       
     }
+    &_line:nth-child(odd){
+        background-color: #B4B4B4;
+    }
+    &_map{
+    img{
+        width: 100%;
+        height: 300px;
+    }
+}
 }
 .content {
     color: #ffffff;
