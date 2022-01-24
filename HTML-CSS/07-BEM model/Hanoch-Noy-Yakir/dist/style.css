@@ -14,6 +14,9 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+.nav_top .user__quiz {
+  background-color: white;
+}
 .nav_top .user_right {
   align-items: center;
   margin: 20px 10px;
@@ -113,19 +116,19 @@ body {
 .content .user div {
   margin: 5px;
 }
-.content .user_left {
+.content_left {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
-.content .user_right {
+.content_right {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
-.content .user_avatar {
+.content_avatar {
   color: #ffffff;
   font-size: 28px;
   font-weight: 700;
@@ -135,10 +138,10 @@ body {
   height: 40px;
   text-align: center;
 }
-.content .user_avatar h3 {
+.content_avatar h3 {
   margin: 0;
 }
-.content .user_avatar img {
+.content_avatar img {
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -152,4 +155,74 @@ body {
   flex-direction: row;
   justify-content: space-around;
   padding: 10px;
+}
+.nav_bottom__quiz {
+  background-color: white;
+  justify-content: space-between;
+  color: #5fb2b6;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.quiz {
+  position: relative;
+  background-color: #2e2f33;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.quiz .title {
+  text-align: center;
+  margin: auto;
+}
+.quiz .title h1 {
+  color: #5FB2B8;
+  font-size: 29px;
+  color: 5FB2B8;
+}
+.quiz .title p {
+  color: white;
+  font-size: 21px;
+}
+.quiz .title p #liketo {
+  color: #a0a0e0;
+}
+.quiz .title p #alongside {
+  color: #5FB2B8;
+}
+.quiz .quiz__options {
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.quiz .button {
+  width: 111px;
+  height: 74px;
+  background-color: rgba(180, 180, 180, 0.37);
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 12px;
+}
+.quiz .button__back {
+  background: none;
+}
+.quiz .button__next {
+  background: #5FB2B8;
+  width: 77px;
+  height: 35px;
+  border-radius: 20px;
+}
+.quiz .button__selected {
+  background: #5FB2B8;
+}
+.quiz .button__more {
+  width: 274px;
+  height: 30px;
 }
