@@ -109,13 +109,29 @@
   position: relative;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   height: 90px;
   width: 239px;
 }
-.card .main_body__lines_wrapper__dark_rowprofile img {
+.card .main_body__lines_wrapper__dark_row__profile img {
+  width: 85px;
+  height: 85px;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+.card .main_body__lines_wrapper__dark_row__name p {
+  color: white;
+  font-size: 16px;
+  font-weight: bolder;
+  position: absolute;
+  left: 45px;
+  top: 20px;
+}
+.card .main_body__lines_wrapper__dark_row__instrument img {
   width: 45px;
   height: 45px;
   position: absolute;
   top: 10px;
-  left: 15px;
+  right: 50px;
 }
