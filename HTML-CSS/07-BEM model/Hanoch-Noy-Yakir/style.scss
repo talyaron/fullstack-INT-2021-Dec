@@ -22,9 +22,11 @@ body {
         }
 
         &_left {
-            
+            display: flex;
             align-items: center;
             margin: 20px 10px;
+            gap:15px;
+            
         }
 
         &_avatar {
@@ -68,13 +70,13 @@ body {
             color: #B4B4B4;
         }
         &_pen{
-            color: #ffffff;
+            color: #5fb2b6;
         }
         &_results{
             border-radius: 100px;
             background-color: #5fb2b6;
             color: #ffffff;
-            right: 5px;
+            right: 3px;
             text-align: center;
             padding: 7px;
                                                                                                                                                  

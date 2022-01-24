@@ -19,8 +19,10 @@ body {
   margin: 20px 10px;
 }
 .nav_top .user_left {
+  display: flex;
   align-items: center;
   margin: 20px 10px;
+  gap: 15px;
 }
 .nav_top .user_avatar {
   color: #ffffff;
@@ -58,13 +60,13 @@ body {
   color: #B4B4B4;
 }
 .nav_top .user_pen {
-  color: #ffffff;
+  color: #5fb2b6;
 }
 .nav_top .user_results {
   border-radius: 100px;
   background-color: #5fb2b6;
   color: #ffffff;
-  right: 5px;
+  right: 3px;
   text-align: center;
   padding: 7px;
 }
