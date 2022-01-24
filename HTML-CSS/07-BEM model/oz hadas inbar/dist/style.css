@@ -97,6 +97,8 @@
   flex-wrap: wrap;
   text-align: center;
   background-color: #2d2f33;
+  position: relative;
+  justify-content: space-around;
 }
 .mega-wrapper .btn {
   width: 105px;
@@ -132,6 +134,7 @@
 }
 
 .nav_bottom {
+  display: flex;
   margin-top: 10px;
   margin-bottom: 0px;
   background-color: white;
@@ -142,8 +145,14 @@
   margin-bottom: 0px;
   margin-left: 0px;
 }
-.nav_bottom img {
+.nav_bottom .back {
   margin: 5px;
   width: 30px;
   float: left;
+}
+.nav_bottom .next {
+  height: 30px;
+  margin: 5px;
+  width: 30px;
+  float: right;
 }
