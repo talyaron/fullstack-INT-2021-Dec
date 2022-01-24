@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle&display=swap");
 .card {
   position: relative;
   width: 360px;
@@ -39,4 +40,162 @@
 .user__profile--dark {
   background-color: #1f1f1f;
   height: 40px;
+}
+
+.cardquiz {
+  position: relative;
+  width: 360px;
+  height: 640px;
+  margin: auto;
+  border: 16px black solid;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-radius: 36px;
+  background-color: rgba(19, 19, 22, 0.849);
+  font-family: sans-serif;
+  user-select: none;
+}
+.cardquiz .usermenuquiz {
+  width: 360px;
+  height: 55px;
+  background-color: white;
+}
+.cardquiz .usermenuquiz img {
+  width: 30px;
+  position: absolute;
+  left: 20px;
+  user-select: none;
+  cursor: pointer;
+}
+.cardquiz .usermenuquiz p {
+  position: absolute;
+  left: 55px;
+  top: 1px;
+  font-size: 15px;
+  color: #848e96;
+  user-select: none;
+}
+.cardquiz .text {
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+.cardquiz .text h1 {
+  color: #3eb3ad;
+  font-size: 28px;
+}
+.cardquiz .text p {
+  margin-top: -20px;
+  color: white;
+  font-size: 25px;
+}
+.cardquiz .text .play {
+  margin-top: -23px;
+  color: #b8c4da;
+  font-size: 21px;
+}
+.cardquiz .text .play span {
+  color: #3eb3ad;
+}
+.cardquiz .btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  color: white;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+}
+.cardquiz .btn .box1 {
+  width: 40%;
+  height: 70px;
+  background-color: #3eb3ad;
+  border-radius: 16px;
+  user-select: none;
+  cursor: pointer;
+}
+.cardquiz .btn .box1:hover {
+  background-color: rgba(62, 108, 114, 0.986);
+}
+.cardquiz .btn .box1 p {
+  margin-top: 18px;
+}
+.cardquiz .btn .box2 {
+  width: 40%;
+  height: 70px;
+  background-color: gray;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  user-select: none;
+  cursor: pointer;
+}
+.cardquiz .btn .box2:hover {
+  background-color: rgba(128, 128, 128, 0.24);
+}
+.cardquiz .btn .box2 p {
+  margin-top: 18px;
+}
+.cardquiz .btn .box3 {
+  margin-top: 10px;
+  width: 85%;
+  height: 30px;
+  background-color: gray;
+  border-radius: 16px;
+  font-size: 15px;
+  user-select: none;
+  cursor: pointer;
+}
+.cardquiz .btn .box3:hover {
+  background-color: rgba(128, 128, 128, 0.24);
+}
+.cardquiz .btn .box3 p {
+  margin-top: 7px;
+}
+.cardquiz .btn .box4 {
+  width: 40%;
+  height: 70px;
+  background-color: gray;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  user-select: none;
+  cursor: pointer;
+}
+.cardquiz .btn .box4:hover {
+  background-color: rgba(128, 128, 128, 0.24);
+}
+.cardquiz .btn .box4 p {
+  margin-top: 25px;
+}
+.cardquiz .usermenuquiz2 {
+  width: 360px;
+  height: 55px;
+  background-color: #eee8e8;
+  margin-top: 30px;
+}
+.cardquiz .usermenuquiz2 .arrow {
+  width: 20px;
+  color: #3eb3ad;
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  user-select: none;
+  cursor: pointer;
+}
+.cardquiz .usermenuquiz2 .butn {
+  width: 90px;
+  height: 45px;
+  border-radius: 10px;
+  position: absolute;
+  right: 5px;
+  bottom: -20px;
+  color: white;
+  background-color: #3eb3ad;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+.cardquiz .usermenuquiz2 .butn:hover {
+  background-color: rgba(62, 108, 114, 0.986);
 }
