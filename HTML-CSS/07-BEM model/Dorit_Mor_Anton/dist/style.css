@@ -4,4 +4,21 @@
   height: 637px;
   border: 0.5px solid #d6d6d6;
   border-radius: 20px;
+  background-color: #2D2F33;
+  /* Utilities */
+}
+.card .buttons {
+  /*  width: 239px;
+   height: 334px; */
+  border: 1px solid #ffff;
+  margin: auto;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr 1fr;
+}
+.card .buttons .button_big {
+  width: 111px;
+  height: 74px;
+  background-color: rgba(180, 180, 180, 0.37);
+  border-radius: 15px;
 }
