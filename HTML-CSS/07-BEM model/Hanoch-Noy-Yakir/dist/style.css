@@ -4,6 +4,11 @@ body {
   font-family: "roboto", Tahoma, Verdana, sans-serif;
 }
 
+a:link, a:visited, a:active {
+  text-decoration: none;
+  color: #5fb2b6;
+}
+
 .user {
   display: flex;
   flex-direction: row;
