@@ -1,12 +1,14 @@
 .card {
+    position: relative;
     margin: auto;
     width: 370px;
     height: 637px;
+    margin: auto;
     border: 0.5px solid rgb(214, 214, 214);
     border-radius: 20px;
     background-color: #2D2F33;
 
-    /* Utilities */
+     /* Utilities */
     .buttons {
        /*  width: 239px;
         height: 334px; */
@@ -22,6 +24,32 @@
                 height: 74px;
                 background-color: rgba(180, 180, 180, 0.37);
                 border-radius: 15px;
+            }
+    }
+    .top_header {
+        width: 370px;
+        height: 55px;
+        background-color: rgb(61, 65, 63);
+        display:flex;
+        flex-direction: column; 
+            &__firstRow{
+                &__firstRow__logo{
+
+                }
+                &__firstRow__img1{   
+                }
+                &__firstRow__img2{   
+                } 
+                &__firstRow__town{   
+                } 
+            }
+            &__secondRow{              
+                &__secondRow__name{
+                }
+                &__secondRow__instrument{
+                }
+                &__secondRow__instImg{
+                }
             }
     }
 }

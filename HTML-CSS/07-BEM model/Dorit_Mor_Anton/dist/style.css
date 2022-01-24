@@ -1,7 +1,9 @@
 .card {
+  position: relative;
   margin: auto;
   width: 370px;
   height: 637px;
+  margin: auto;
   border: 0.5px solid #d6d6d6;
   border-radius: 20px;
   background-color: #2D2F33;
@@ -21,4 +23,11 @@
   height: 74px;
   background-color: rgba(180, 180, 180, 0.37);
   border-radius: 15px;
+}
+.card .top_header {
+  width: 370px;
+  height: 55px;
+  background-color: #3d413f;
+  display: flex;
+  flex-direction: column;
 }
