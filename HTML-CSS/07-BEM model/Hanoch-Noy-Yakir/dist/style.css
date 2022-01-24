@@ -234,15 +234,17 @@ body {
   background: #5FB2B8;
 }
 .quiz .button__more {
-  width: 274px;
+  width: 247px;
   height: 30px;
   background-color: rgba(180, 180, 180, 0.37);
   border: none;
   color: white;
-  padding: 20px;
+  padding: 7px;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
   font-size: 16px;
-  border-radius: 12px;
+  margin: 5px 4px;
+  border-radius: 20px;
+}
+.quiz .button__more:hover {
+  background: #5FB2B8;
 }
