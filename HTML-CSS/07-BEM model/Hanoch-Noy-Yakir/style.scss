@@ -8,30 +8,27 @@ body {
     background-color: #46474b;
     padding: 0px 20px;
 
+    &__quiz {
+        background-color: white;
+    }
+
     .user {
         flex-direction: row;
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        &__quiz{
-            background-color: white;
-
-        }
-        
         &_right {
-            
-          
+            display: flex;
             align-items: center;
             margin: 20px 10px;
         }
 
         &_left {
             display: flex;
+            flex-direction: row;
             align-items: center;
-            margin: 20px 10px;
-            gap:15px;
-            
+            margin: 5px;
         }
 
         &_avatar {
@@ -67,58 +64,67 @@ body {
             color: #ffffff;
             font-size: 15px;
             font-weight: bold;
-            margin: 5px;
+            margin: 15px;
         }
 
         &_instruments {
             font-size: 18px;
             color: #B4B4B4;
+            margin: 15px;
         }
-        &_pen{
+
+        &_pen {
             color: #5fb2b6;
         }
-        &_results{
+
+        &_results {
             border-radius: 100px;
             background-color: #5fb2b6;
             color: #ffffff;
             right: 3px;
             text-align: center;
             padding: 7px;
-                                                                                                                                                 
+
         }
+
         .instrument_icon {
             color: #ffffff;
             font-size: 30px;
+            margin: 5px;
         }
     }
 }
-.contenth{
+
+.contenth {
     background-color: #2e2f33;
     width: 100%;
 
-    &_line{
+    &_line {
         display: flex;
         color: #ffffff;
         background-color: #2e2f33;
         width: 100%;
         justify-content: space-between;
 
-        img{
+        img {
             border-radius: 50%;
             width: 50px;
         }
-       
+
     }
-    &_line:nth-child(odd){
+
+    &_line:nth-child(odd) {
         background-color: #B4B4B4;
     }
-    &_map{
-    img{
-        width: 100%;
-        height: 300px;
+
+    &_map {
+        img {
+            width: 100%;
+            height: 300px;
+        }
     }
 }
-}
+
 .content {
     color: #ffffff;
     background-color: #2e2f33;
@@ -131,10 +137,11 @@ body {
         align-items: center;
         justify-content: space-between;
 
+        &:nth-child(even) {
+            background-color: #6a6b6d;
+        }
         div {
             margin: 5px;
-        }
-
         }
 
         &_left {
@@ -153,12 +160,12 @@ body {
 
         &_avatar {
             color: #ffffff;
-            font-size: 28px;
+            font-size: 22px;
             font-weight: 700;
             background-color: #B4B4B4;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
+            width: 33px;
+            height: 33px;
             text-align: center;
 
             h3 {
@@ -167,12 +174,12 @@ body {
 
             img {
                 border-radius: 50%;
-                width: 40px;
-                height: 40px;
+                width: 33px;
+                height: 33px;
             }
         }
     }
-
+}
 
 .nav_bottom {
     background-color: #2e2f33;
@@ -183,7 +190,7 @@ body {
     justify-content: space-around;
     padding: 10px;
 
-    &__quiz{
+    &__quiz {
         background-color: white;
         justify-content: space-between;
         margin-top: 30px;
@@ -193,7 +200,7 @@ body {
         display: flex;
         flex-direction: row;
 
-        .button__next{           
+        .button__next {
             background-color: #126f75;
             width: 77px;
             height: 5px;
@@ -203,55 +210,59 @@ body {
             padding: 20px;
             text-align: center;
             font-size: 20px;
-            &:hover{
+
+            &:hover {
                 background: #5FB2B8;
             }
-    
+
         }
 
     }
 
 }
 
-.quiz{
+.quiz {
     position: relative;
     background-color: #2e2f33;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
 
-    .title{
+    .title {
         text-align: center;
-        margin:auto;
-        h1{
+        margin: auto;
+
+        h1 {
             color: #5FB2B8;
             font-size: 29px;
             color: 5FB2B8;
         }
 
-        p{
+        p {
             color: white;
             font-size: 21px;
-            #liketo{
+
+            #liketo {
                 color: rgb(160, 160, 224);
             }
 
-            #alongside{
+            #alongside {
                 color: #5FB2B8;
             }
         }
     }
 
-    .quiz__options{
+    &__options {
         width: 260px;
         margin: auto;
-        position: relative;     
+        position: relative;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
+}
 
-    .button{
+    .button {
         width: 111px;
         height: 74px;
 
@@ -263,25 +274,15 @@ body {
         font-size: 16px;
         margin: 5px 4px;
         border-radius: 12px;
-        &:hover{
+
+        &:hover {
             background: #5FB2B8;
         }
 
-        &__more{
+        &__more {
             width: 247px;
             height: 30px;
-            background-color: rgba(180, 180, 180, 0.37);
-            border: none;
-            color: white;
             padding: 7px;
-            text-align: center;
-            font-size: 16px;
-            margin: 5px 4px;
             border-radius: 20px;
-            &:hover{
-                background: #5FB2B8;
-            }
-
         }
     }
-}
