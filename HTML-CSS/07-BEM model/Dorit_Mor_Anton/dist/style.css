@@ -1,48 +1,31 @@
 .card {
-  position: relative;
   margin: auto;
   width: 370px;
   height: 637px;
-  margin: auto;
   border: 0.5px solid #d6d6d6;
   border-radius: 20px;
   background-color: #2D2F33;
   /* Utilities */
 }
-.card .buttons {
-  /*  width: 239px;
-   height: 334px; */
-  border: 1px solid #ffff;
+.card .main_body .buttons {
+  width: 239px;
+  height: 334px;
   margin: auto;
+  margin-top: 129px;
   display: grid;
   gap: 12px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
 }
-.card .buttons .button_big {
+.card .main_body .buttons .button_big {
   width: 111px;
   height: 74px;
   background-color: rgba(180, 180, 180, 0.37);
   border-radius: 15px;
 }
-.card .top_header {
-  width: 370px;
-  height: 55px;
-  background-color: #3d413f;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-}
-.card .top_header__firstRow {
-  display: flex;
-  flex-direction: row;
-}
-.card .top_header__firstRow__firstRow__logo {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  left: 20px;
-}
-.card .top_header__secondRow {
-  display: flex;
-  flex-direction: row;
+.card .main_body .smaller_btn {
+  width: 247px;
+  height: 30px;
+  background-color: rgba(180, 180, 180, 0.37);
+  border-radius: 15px;
+  margin: auto;
 }
