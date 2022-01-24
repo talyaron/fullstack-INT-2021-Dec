@@ -18,14 +18,15 @@ body {
   background-color: white;
 }
 .nav_top .user_right {
+  display: flex;
   align-items: center;
   margin: 20px 10px;
 }
 .nav_top .user_left {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  margin: 20px 10px;
-  gap: 15px;
+  margin: 5px;
 }
 .nav_top .user_avatar {
   color: #ffffff;
@@ -56,11 +57,12 @@ body {
   color: #ffffff;
   font-size: 15px;
   font-weight: bold;
-  margin: 5px;
+  margin: 15px;
 }
 .nav_top .user_instruments {
   font-size: 18px;
   color: #B4B4B4;
+  margin: 15px;
 }
 .nav_top .user_pen {
   color: #5fb2b6;
@@ -76,6 +78,7 @@ body {
 .nav_top .user .instrument_icon {
   color: #ffffff;
   font-size: 30px;
+  margin: 5px;
 }
 
 .contenth {
@@ -116,19 +119,19 @@ body {
 .content .user div {
   margin: 5px;
 }
-.content_left {
+.content .user_left {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
-.content_right {
+.content .user_right {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
-.content_avatar {
+.content .user_avatar {
   color: #ffffff;
   font-size: 28px;
   font-weight: 700;
@@ -138,10 +141,10 @@ body {
   height: 40px;
   text-align: center;
 }
-.content_avatar h3 {
+.content .user_avatar h3 {
   margin: 0;
 }
-.content_avatar img {
+.content .user_avatar img {
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -206,7 +209,7 @@ body {
 .quiz .title p #alongside {
   color: #5FB2B8;
 }
-.quiz .quiz__options {
+.quiz__options {
   width: 260px;
   margin: auto;
   position: relative;
@@ -232,15 +235,6 @@ body {
 .quiz .button__more {
   width: 247px;
   height: 30px;
-  background-color: rgba(180, 180, 180, 0.37);
-  border: none;
-  color: white;
   padding: 7px;
-  text-align: center;
-  font-size: 16px;
-  margin: 5px 4px;
   border-radius: 20px;
-}
-.quiz .button__more:hover {
-  background: #5FB2B8;
 }
