@@ -130,41 +130,33 @@
     background-color: rgb(45,47,51);
     position: relative;
     justify-content: space-around;
-    }
+    
 
-    .btn{
-      width: 105px;
-      height: 75px;
-      background-color: rgb(95,96,99);
-      border: 0px;
-      border-radius: 15px;
+    .button{
+      width: 120px;
+      height: 70px;
+      background-color: rgba(180, 180, 180, 0.37);
+      border: none;
       color: white;
+      padding: 20px;
       text-align: center;
-      text-decoration: none;
-      display: relative;
       font-size: 16px;
-      margin: 7px;
-      cursor: pointer;
-    }
-    .btn_wide{
-      margin: auto;
-      margin-bottom: 10px;
-      width: 300px;
-      height: 30px;
-      background-color: rgb(95,96,99);
-      border-radius: 20px;
-      color: white;
-      text-align: center;
-      text-decoration: none;
-      display: relative;
-      font-size: 16px;
-      margin: 7px;
-      cursor: pointer;
-    }
-    .btn--selected{
-      background-color: rgb(95,178,184);
-    }
-  }
+      margin: 5px 4px;
+      border-radius: 12px;
+        &:hover {
+            background: #5FB2B8;
+        }
+    
+        &__wide{
+            width: 300px;
+            height: 30px;
+            border-radius: 20px;
+            padding: 7px;
+        
+          }
+        }
+      }
+
   .nav_bottom{
     display: flex;
     margin-top: 10px;
@@ -184,8 +176,12 @@
     }
     .next{
       height: 30px;
-      margin: 5px;
-      width: 30px;
-      float: right;
+      margin-top: 5px;
+      width: fit-content;
+      background-color: rgb(95,178,184);
+      border-radius: 10px
+      
+      
     }
   }
+}
