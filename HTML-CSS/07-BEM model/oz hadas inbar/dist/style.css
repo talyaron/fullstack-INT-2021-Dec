@@ -25,18 +25,22 @@
   left: 140px;
   top: 55px;
 }
+.mega-wrapper .blok-header .blok-list {
   list-style-type: none;
   padding-top: 0px;
   padding: 0px;
 }
+.mega-wrapper .blok-header .blok-list p {
   position: relative;
   bottom: 46px;
   left: 50px;
 }
+.mega-wrapper .blok-header .studentprofile-dark {
   width: 100%;
   height: 45px;
   background-color: #2d2f33;
 }
+.mega-wrapper .blok-header .studentprofile-dark img {
   border-radius: 50%;
   width: 35px;
   height: 35px;
@@ -48,6 +52,7 @@
   height: 45px;
   background-color: #5f6063;
 }
+.mega-wrapper .blok-header .studentprofile img {
   border-radius: 50%;
   width: 35px;
   height: 35px;
@@ -63,6 +68,7 @@
   border-radius: 15px 15px 0 0;
   margin-bottom: 20px;
 }
+.mega-wrapper .user_profile img {
   width: 40px;
   height: 40px;
   margin-top: 3px;
@@ -79,6 +85,7 @@
   color: #2c4699;
   font-size: 18px;
 }
+.mega-wrapper .header {
   width: 100%;
   background-color: #2d2f33;
   margin-top: 0px;
@@ -87,17 +94,22 @@
   text-align: center;
   font-family: sans-serif;
 }
+.mega-wrapper .header h1 {
   margin: 0px;
   color: #5fb2b8;
 }
+.mega-wrapper .header h2 {
   margin: 0px;
   color: white;
 }
+.mega-wrapper .header h3 {
   margin: 0px;
   color: #bdc9ef;
 }
+.mega-wrapper .header h3 .torq {
   color: #5fb2b8;
 }
+.mega-wrapper .container {
   margin-top: 0px;
   margin: auto;
   width: 80%;
