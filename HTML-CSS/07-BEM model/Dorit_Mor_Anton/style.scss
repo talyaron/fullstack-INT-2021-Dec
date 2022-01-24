@@ -1,3 +1,5 @@
+
+
 .card {
     margin: auto;
     width: 370px;
@@ -5,23 +7,62 @@
     border: 0.5px solid rgb(214, 214, 214);
     border-radius: 20px;
     background-color: #2D2F33;
-
-    /* Utilities */
-    .buttons {
-       /*  width: 239px;
-        height: 334px; */
-        border: 1px solid #ffff;
-        margin: auto;
-        display: grid;
-        gap: 12px;
-        grid-template-columns: 1fr 1fr;
-        
-        
-            .button_big {
-                width:  111px;
-                height: 74px;
-                background-color: rgba(180, 180, 180, 0.37);
-                border-radius: 15px;
+    .top_header {
+        width: 370px;
+        height: 55px;
+        background-color: rgb(61, 65, 63);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        display:flex;
+        flex-direction: column; 
+            &__firstRow{
+                display: flex;
+                flex-direction: row;
+                &__firstRow__logo{
+                    width:20px;
+                    height:20px;
+                    position:absolute;
+                    left:20px;
+                }
+                &__firstRow__img1{   
+                }
+                &__firstRow__img2{   
+                } 
+                &__firstRow__town{   
+                } 
             }
+            &__secondRow{
+                display: flex;
+                flex-direction: row;              
+                &__secondRow__name{
+                }
+                &__secondRow__instrument{
+                }
+                &__secondRow__instImg{
+
+                }
+            }
+        }
+     /* Utilities */
+    .main_body{ 
+        .buttons {
+            /*  width: 239px;
+            height: 334px; */
+            border: 1px solid #ffff;
+            margin: auto;
+            display: grid;
+            gap: 12px;
+            grid-template-columns: 1fr 1fr;
+            
+            
+                .button_big {
+                    width:  111px;
+                    height: 74px;
+                    background-color: rgba(180, 180, 180, 0.37);
+                    border-radius: 15px;
+                }
+        }
+    
     }
+    
 }
