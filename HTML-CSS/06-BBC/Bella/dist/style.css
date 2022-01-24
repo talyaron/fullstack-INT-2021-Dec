@@ -1,52 +1,50 @@
-<<<<<<< Updated upstream
 body {
   font-family: "Lato", sans-serif;
   margin: 0;
-  /* header 
-  header {
-      display: flex;
-      width: 100%;
-      height: 40px;
-      border-bottom: 1px solid lightgray;
-      color: white;
-      img {
-          width: 5%;
-          margin-left: 84px;
-          object-fit: cover;
-          border-right: 1px solid lightgray;
-          padding-right: 20px;
-      }
-      ul {
-          display: flex;
-          align-items: center;
-          margin: 0;
-          box-sizing: border-box;
-          padding: 0;
-          a {
-              text-decoration: none;
-          }
-          li {
-              text-decoration: none;
-              list-style-type: none;
-              color: black;
-              font-weight: 600;
-              font-size: 14px;
-          }
-          .item {
-              padding: 10px 20px;
-              height: 40px;
-              border-right: 1px solid lightgray;
-              box-sizing: border-box;
-          }
-          .item:hover {
-              border-bottom: 3px solid darkblue;
-          }
-      }
-  }
-  */
+  /* header */
   /* sub-header */
   /* article heading */
   /* wrapper */
+}
+body header {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid lightgray;
+  color: white;
+}
+body header img {
+  width: 5%;
+  margin-left: 84px;
+  object-fit: cover;
+  border-right: 1px solid lightgray;
+  padding-right: 20px;
+}
+body header ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+body header ul a {
+  text-decoration: none;
+}
+body header ul li {
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+  font-weight: 600;
+  font-size: 14px;
+}
+body header ul .item {
+  padding: 10px 20px;
+  height: 40px;
+  border-right: 1px solid lightgray;
+  box-sizing: border-box;
+}
+body header ul .item:hover {
+  border-bottom: 3px solid darkblue;
 }
 body .sub-header {
   background-color: #bb1919;
@@ -71,41 +69,6 @@ body h4:hover {
 }
 body .wrapper {
   width: 1250px;
-=======
-.navbar {
-  width: 100vw;
-  height: 60px;
-  background-color: #bb1919;
-  display: flex;
-  flex-direction: row;
-  position: relative;
-}
-.navbar img {
-  width: 60px;
-}
-.navbar a {
-  font-size: 40px;
-  color: white;
-  position: absolute;
-  left: 80px;
-  text-decoration-thickness: 0px;
-}
-.navbar #right-icon {
-  left: 180px;
-}
-
-.title h1 {
-  width: 210px;
-  height: 40px;
-  background-color: white;
-  position: relative;
-  top: 40px;
-}
-
-.wrapper {
-  width: 1344px;
-  height: 301px;
->>>>>>> Stashed changes
   display: flex;
   flex-direction: column;
   margin: auto;
