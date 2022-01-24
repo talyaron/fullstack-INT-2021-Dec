@@ -175,8 +175,6 @@ body {
   justify-content: space-between;
   background-color: white;
   color: #5fb2b6;
-  display: flex;
-  flex-direction: row;
 }
 .nav_bottom__quiz .button__next {
   background-color: #126f75;
@@ -185,7 +183,6 @@ body {
   border-radius: 35px;
   color: white;
   font-size: 20px;
-  padding-bottom: -20px;
 }
 .nav_bottom__quiz .button__next:hover {
   background: #5FB2B8;
