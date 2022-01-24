@@ -24,9 +24,13 @@
 .card .top_header__firstRow__logo object {
   position: absolute;
   left: 10px;
-  top: 10px;
+  top: 0px;
   height: 95px;
   width: 95px;
+}
+.card .top_header__firstRow__logo object h1 {
+  color: white;
+  font-size: 14px;
 }
 .card .top_header__firstRow__img1 object {
   position: absolute;
@@ -35,9 +39,33 @@
   height: 40px;
   width: 40px;
 }
+.card .top_header__firstRow__text p {
+  position: absolute;
+  left: 133px;
+  top: 18px;
+  color: white;
+  font-size: 16px;
+  font-weight: 900;
+}
 .card .top_header__secondRow {
   display: flex;
   flex-direction: row;
+}
+.card .top_header__secondRow__name p {
+  color: white;
+  font-size: 10px;
+  font-weight: bolder;
+  position: absolute;
+  top: 70px;
+  left: 38px;
+}
+.card .top_header__secondRow__instrument p {
+  color: white;
+  font-size: 20px;
+  font-weight: lighter;
+  position: absolute;
+  top: 50px;
+  left: 119px;
 }
 .card .main_body .buttons {
   /*  width: 239px;
