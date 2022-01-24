@@ -14,6 +14,11 @@ body {
         align-items: center;
         justify-content: space-between;
 
+        &__quiz{
+            background-color: white;
+
+        }
+        
         &_right {
             
           
@@ -90,8 +95,6 @@ body {
 .contenth{
     background-color: #2e2f33;
     width: 100%;
-    
-
 
     &_line{
         display: flex;
@@ -132,6 +135,8 @@ body {
             margin: 5px;
         }
 
+        }
+
         &_left {
             display: flex;
             flex-direction: row;
@@ -167,7 +172,7 @@ body {
             }
         }
     }
-}
+
 
 .nav_bottom {
     background-color: #2e2f33;
@@ -177,4 +182,89 @@ body {
     flex-direction: row;
     justify-content: space-around;
     padding: 10px;
+
+    &__quiz{
+        background-color: white;
+        justify-content: space-between;
+
+        color: #5fb2b6;
+        font-size: 2rem;
+        display: flex;
+        flex-direction: row;
+
+    }
+
+}
+
+.quiz{
+    position: relative;
+    background-color: #2e2f33;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    .title{
+        text-align: center;
+        margin:auto;
+        h1{
+            color: #5FB2B8;
+            font-size: 29px;
+            color: 5FB2B8;
+        }
+
+        p{
+            color: white;
+            font-size: 21px;
+            #liketo{
+                color: rgb(160, 160, 224);
+            }
+
+            #alongside{
+                color: #5FB2B8;
+            }
+        }
+    }
+
+    .quiz__options{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .button{
+
+
+        width: 111px;
+        height: 74px;
+        background-color: rgba(180, 180, 180, 0.37);
+        border: none;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        border-radius: 12px;
+    
+        &__back{
+            background: none;
+        
+        }
+
+        &__next{           
+            background: #5FB2B8;; 
+            width: 77px;
+            height: 35px;
+            border-radius: 20px;
+        }
+        &__selected{
+            background: #5FB2B8;
+        }
+
+        &__more{
+            width: 274px;
+            height: 30px;
+        }
+    }
 }
