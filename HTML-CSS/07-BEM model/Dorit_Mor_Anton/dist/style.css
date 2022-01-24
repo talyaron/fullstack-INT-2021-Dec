@@ -7,18 +7,25 @@
   background-color: #2D2F33;
   /* Utilities */
 }
-.card .buttons {
-  /*  width: 239px;
-   height: 334px; */
-  border: 1px solid #ffff;
+.card .main_body .buttons {
+  width: 239px;
+  height: 334px;
   margin: auto;
+  margin-top: 129px;
   display: grid;
   gap: 12px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
 }
-.card .buttons .button_big {
+.card .main_body .buttons .button_big {
   width: 111px;
   height: 74px;
   background-color: rgba(180, 180, 180, 0.37);
   border-radius: 15px;
+}
+.card .main_body .smaller_btn {
+  width: 247px;
+  height: 30px;
+  background-color: rgba(180, 180, 180, 0.37);
+  border-radius: 15px;
+  margin: auto;
 }
