@@ -4,42 +4,63 @@
   height: 600px;
   border: 1px solid black;
   margin: auto;
-  background-color: #2d2f33;
 }
-.mega-wrapper ul {
+.mega-wrapper .blok-header {
+  background-color: rgba(7, 7, 7, 0.582);
+  width: 100%;
+  height: 65px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.mega-wrapper .blok-header .a {
+  position: relative;
+  top: 30px;
+  left: 31px;
+}
+.mega-wrapper .blok-header .p {
+  margin-left: 20px;
+}
+.mega-wrapper .blok-header .name {
+  position: absolute;
+  left: 140px;
+  top: 55px;
+}
+.mega-wrapper .blok-list {
   list-style-type: none;
   padding-top: 0px;
   padding: 0px;
-  margin-top: 60px;
 }
-.mega-wrapper .studentprofiledark {
+.mega-wrapper .blok-list p {
+  position: relative;
+  bottom: 46px;
+  left: 50px;
+}
+.mega-wrapper .studentprofile-dark {
   width: 100%;
   height: 45px;
-  background-color: #272525;
+  background-color: #2d2f33;
 }
-.mega-wrapper .studentprofiledark img {
+.mega-wrapper .studentprofile-dark img {
   border-radius: 50%;
   width: 35px;
   height: 35px;
   margin-top: 5px;
   margin-left: 5px;
 }
-.mega-wrapper .studentprofiledark .studentprofile {
+.mega-wrapper .studentprofile {
   width: 100%;
-  height: 40px;
-  background-color: #746d6d;
+  height: 45px;
+  background-color: #5f6063;
 }
-.mega-wrapper .studentprofiledark .studentprofile img {
+.mega-wrapper .studentprofile img {
   border-radius: 50%;
   width: 35px;
   height: 35px;
   margin-top: 3px;
   margin-left: 5px;
 }
-.mega-wrapper .studentprofiledark .border-menu {
-  background-color: #272525;
-}
-.mega-wrapper .user_profile {
+
+.user_profile {
   height: 50px;
   width: 100%;
   display: flex;
@@ -48,7 +69,7 @@
   border-radius: 15px 15px 0 0;
   margin-bottom: 20px;
 }
-.mega-wrapper .user_profile img {
+.user_profile img {
   width: 40px;
   height: 40px;
   margin-top: 3px;
@@ -57,15 +78,22 @@
   padding-left: 12px;
   border-radius: 50%;
 }
+<<<<<<< HEAD
+.user_profile h2 {
+  margin: 0;
+  padding-top: 15px;
+=======
 .mega-wrapper .user_profile h2 {
   margin: 0px;
   padding-top: 20px;
+>>>>>>> 258db09280d64569014b7229274b81b1d9ef9edf
   padding-left: 10px;
   font-family: sans-serif;
   color: #2c4699;
   font-size: 18px;
 }
-.mega-wrapper .header {
+
+.header {
   width: 100%;
   background-color: #2d2f33;
   margin-top: 0px;
@@ -74,22 +102,23 @@
   text-align: center;
   font-family: sans-serif;
 }
-.mega-wrapper .header h1 {
+.header h1 {
   margin: 0px;
   color: #5fb2b8;
 }
-.mega-wrapper .header h2 {
+.header h2 {
   margin: 0px;
   color: white;
 }
-.mega-wrapper .header h3 {
+.header h3 {
   margin: 0px;
   color: #bdc9ef;
 }
-.mega-wrapper .header h3 .torq {
+.header h3 .torq {
   color: #5fb2b8;
 }
-.mega-wrapper .container {
+
+.container {
   margin-top: 0px;
   margin: auto;
   width: 80%;
@@ -102,11 +131,20 @@
   position: relative;
   justify-content: space-around;
 }
+<<<<<<< HEAD
+.container .btn {
+  width: 105px;
+  height: 75px;
+  background-color: #5f6063;
+  border: 0px;
+  border-radius: 15px;
+=======
 .mega-wrapper .container .button {
   width: 120px;
   height: 70px;
   background-color: rgba(180, 180, 180, 0.37);
   border: none;
+>>>>>>> 258db09280d64569014b7229274b81b1d9ef9edf
   color: white;
   padding: 20px;
   text-align: center;
@@ -114,16 +152,31 @@
   margin: 5px 4px;
   border-radius: 12px;
 }
+<<<<<<< HEAD
+.container .btn_wide {
+  margin: auto;
+  margin-bottom: 10px;
+=======
 .mega-wrapper .container .button:hover {
   background: #5FB2B8;
 }
 .mega-wrapper .container .button__wide {
+>>>>>>> 258db09280d64569014b7229274b81b1d9ef9edf
   width: 300px;
   height: 30px;
   border-radius: 20px;
   padding: 7px;
 }
+<<<<<<< HEAD
+.container .btn--selected {
+  background-color: #5fb2b8;
+}
+
+.nav_bottom {
+  display: flex;
+=======
 .mega-wrapper .nav_bottom {
+>>>>>>> 258db09280d64569014b7229274b81b1d9ef9edf
   margin-top: 10px;
   margin-bottom: 0px;
   background-color: white;

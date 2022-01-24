@@ -1,10 +1,11 @@
-
+body {
+    background-color: rgb(230, 230, 230);
+}
 
 .card{
     margin: auto;
     width: 370px;
     height: 637px;
-    border: 0.5px solid rgb(214, 214, 214);
     border-radius: 20px;
     background-color: #2D2F33;
     .top_header{
@@ -100,14 +101,27 @@
                 }
             }
         }
-     /* Utilities */
+/*   top_header for big buttons card  */ 
+    .top-header_2 {
+        width: 370px;
+        height: 51px;
+        border-top-left-radius: 18px;
+        border-top-right-radius: 18px;
+        background-color: white;
+    }
+
+    /* Utilities */
     .main_body{ 
+        
+        .top_text {
+        text-align: center;
+        }
+
         .buttons {
             width: 239px;
             height: 334px; 
-            border: 1px solid #ffff;
             margin: auto;
-            margin-top: 129px;
+            margin-top: -5px;
             display: grid;
             gap: 12px;
             grid-template-columns: repeat(2, 1fr);
@@ -118,8 +132,13 @@
                     height: 74px;
                     background-color: rgba(180, 180, 180, 0.37);
                     border-radius: 15px;
+                      
+                     h4 {
+                         text-align: center;
+                     }
                 }
             }
+<<<<<<< HEAD
                 .smaller_btn {
                     width: 247px;
                     height: 30px;
@@ -175,7 +194,20 @@
                     }
                 }        
             }
+=======
+        .smaller_btn {
+            width: 247px;
+            height: 30px;
+            background-color: rgba(180, 180, 180, 0.37);
+            border-radius: 15px;
+            margin: auto;
+>>>>>>> 47b4d6502c46505060d6204579023370b1a0476b
         }
+        
+            h4 {
+                text-align: center;
+                gap: opx;
+            }
     
     }
     

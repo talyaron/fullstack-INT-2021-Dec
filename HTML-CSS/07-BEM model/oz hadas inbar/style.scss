@@ -1,27 +1,89 @@
 //General
 .mega-wrapper{
  border-radius: 15px;
- width: 400px;
+ width: 400px; 
  height: 600px;
  border: 1px solid black;
  margin: auto;
- background-color: rgb(45,47,51);
+ 
+    
+    
+ .blok-header{
+  background-color: rgba(7, 7, 7, 0.582);
+  width: 100%;
+  height:65px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+ 
+  
+  
+ .a{
+ position: relative;
+ top: 30px;
+ left: 31px;
+ }
+ 
+  .p{
+   margin-left :20px;
+  }
+ 
+ .name{
+  position:absolute;
+  left:140px;
+  top: 55px;
+ }
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+ 
+ 
+  .blok-list{
+   list-style-type: none;
+   padding-top: 0px;
+   padding: 0px;
+   
+     p{
+      position: relative;
+      bottom: 46px;
+      left: 50px;
+     }
+    
+  }
+     
+ 
 
  //OZ
 
-    ul{
-    list-style-type: none;
-    padding-top: 0px;
-    padding: 0px;
-    margin-top: 60px;
-    }
+   
 
 
-
-    .studentprofiledark{
+    .studentprofile-dark{
       width: 100%;
       height: 45px;
-      background-color: rgb(39, 37, 37);
+      background-color:rgb(45,47,51);
       img{
         border-radius: 50%;
         width: 35px;
@@ -30,12 +92,12 @@
         margin-left: 5px;
       }
     
-    
+    }
     .studentprofile{
 
         width: 100%;
-        height: 40px;
-        background-color: rgb(116, 109, 109);
+        height: 45px;
+        background-color:rgb(95,96,99);
        
         img{
             border-radius: 50%;
@@ -47,21 +109,20 @@
         
     }
 
-    .border-menu{
-     background-color: rgb(39, 37, 37);
      
+  }      
     
      
      
-       
 
-     }
+
+     
     
     
     
     
     
-    }
+   
 
   //Inbar
   

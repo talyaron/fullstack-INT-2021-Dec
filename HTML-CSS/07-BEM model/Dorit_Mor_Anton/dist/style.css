@@ -1,10 +1,14 @@
+body {
+  background-color: #e6e6e6;
+}
+
 .card {
   margin: auto;
   width: 370px;
   height: 637px;
-  border: 0.5px solid #d6d6d6;
   border-radius: 20px;
   background-color: #2D2F33;
+  /*   top_header for big buttons card  */
   /* Utilities */
 }
 .card .top_header {
@@ -82,12 +86,21 @@
   height: 40px;
   width: 40px;
 }
+.card .top-header_2 {
+  width: 370px;
+  height: 51px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  background-color: white;
+}
+.card .main_body .top_text {
+  text-align: center;
+}
 .card .main_body .buttons {
   width: 239px;
   height: 334px;
-  border: 1px solid #ffff;
   margin: auto;
-  margin-top: 129px;
+  margin-top: -5px;
   display: grid;
   gap: 12px;
   grid-template-columns: repeat(2, 1fr);
@@ -98,6 +111,9 @@
   background-color: rgba(180, 180, 180, 0.37);
   border-radius: 15px;
 }
+.card .main_body .buttons .button_big h4 {
+  text-align: center;
+}
 .card .main_body .smaller_btn {
   width: 247px;
   height: 30px;
@@ -105,6 +121,7 @@
   border-radius: 15px;
   margin: auto;
 }
+<<<<<<< HEAD
 .card .main_body .lines_wrapper__dark_row {
   position: relative;
   display: flex;
