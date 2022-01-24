@@ -11,13 +11,15 @@ body .mega_wrapper {
   background-color: #2d2f33;
   position: relative;
 }
-body .mega_wrapper .topProfile {
+body .mega_wrapper__topProfile {
   background-color: rgba(180, 180, 180, 0.18);
   height: 75px;
   width: 100%;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-body .mega_wrapper .topProfile .profile_item {
+body .mega_wrapper__topProfile__profile_item {
   background-color: gray;
   border-radius: 50%;
   height: 40px;
@@ -25,21 +27,24 @@ body .mega_wrapper .topProfile .profile_item {
   margin-left: 15px;
   margin-top: 15px;
 }
-body .mega_wrapper .topProfile .profile_item p {
+body .mega_wrapper__topProfile__profile_item p {
   text-align: center;
   font-weight: bolder;
   font-size: 20px;
 }
-body .mega_wrapper .topProfile .location_wrapper {
-  background-color: gray;
+body .mega_wrapper__topProfile__profile_item__location_wrapper {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
 }
-body .mega_wrapper .topProfile .edit_wrapper {
-  background-color: gray;
+body .mega_wrapper__topProfile__profile_item__edit_wrapper {
+  margin-right: 30px;
+  margin-top: 30px;
 }
-body .mega_wrapper .wrapper {
+body .mega_wrapper__wrapper {
   background-color: rgba(180, 180, 180, 0.18);
 }
-body .mega_wrapper .menu {
+body .mega_wrapper__menu {
   background-color: #2d2f33;
   width: 100%;
   position: absolute;
@@ -47,4 +52,13 @@ body .mega_wrapper .menu {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  font-size: 30px;
+  color: #5fb2b8;
+}
+body .mega_wrapper__menu--white {
+  background-color: white;
+}
+
+.location_wrapper {
+  background-color: azure;
 }

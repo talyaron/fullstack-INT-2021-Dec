@@ -12,40 +12,47 @@ body {
         background-color: rgb(45, 47, 51);
         position: relative;
 
-        .topProfile {
+        &__topProfile {
             background-color: rgba(180, 180, 180, 0.18);
             height: 75px;
             width: 100%;
             display: flex;
+            flex-direction: row;
+            justify-content: space-between;
 
-            .profile_item {
+            &__profile_item {
                 background-color: gray;
                 border-radius: 50%;
                 height: 40px;
                 width: 40px;
                 margin-left: 15px;
                 margin-top: 15px;
+
                 p {
                     text-align: center;
                     font-weight: bolder;
                     font-size: 20px;
                 }
-            }
 
-            .location_wrapper {
-                background-color: gray;
-            }
 
-            .edit_wrapper {
-                background-color: gray;
-            }
+                &__location_wrapper {
+                    background-color: rgb(255, 255, 255);
+                    display: flex;
+                    flex-direction: row;
+                }
 
+                &__edit_wrapper {
+                    margin-right: 30px;
+                    margin-top: 30px;
+                }
+            }
         }
-        .wrapper {
+
+        &__wrapper {
             background-color: rgba(180, 180, 180, 0.18);
         }
 
-        .menu {
+        &__menu {
             background-color: rgb(45, 47, 51);
             width: 100%;
             position: absolute;
@@ -53,6 +60,12 @@ body {
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
+            font-size: 30px;
+            color: rgb(95,178,184);
+
+            &--white {
+                background-color: rgb(255, 255, 255);
+            }
         }
 
 
@@ -61,4 +74,7 @@ body {
 
     }
 
+}
+.location_wrapper {
+    background-color: azure;
 }
