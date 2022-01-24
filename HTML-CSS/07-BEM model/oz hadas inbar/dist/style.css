@@ -100,40 +100,28 @@
   position: relative;
   justify-content: space-around;
 }
-.mega-wrapper .btn {
-  width: 105px;
-  height: 75px;
-  background-color: #5f6063;
-  border: 0px;
-  border-radius: 15px;
+.mega-wrapper .container .button {
+  width: 120px;
+  height: 70px;
+  background-color: rgba(180, 180, 180, 0.37);
+  border: none;
   color: white;
+  padding: 20px;
   text-align: center;
-  text-decoration: none;
-  display: relative;
   font-size: 16px;
-  margin: 7px;
-  cursor: pointer;
+  margin: 5px 4px;
+  border-radius: 12px;
 }
-.mega-wrapper .btn_wide {
-  margin: auto;
-  margin-bottom: 10px;
+.mega-wrapper .container .button:hover {
+  background: #5FB2B8;
+}
+.mega-wrapper .container .button__wide {
   width: 300px;
   height: 30px;
-  background-color: #5f6063;
   border-radius: 20px;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: relative;
-  font-size: 16px;
-  margin: 7px;
-  cursor: pointer;
+  padding: 7px;
 }
-.mega-wrapper .btn--selected {
-  background-color: #5fb2b8;
-}
-
-.nav_bottom {
+.mega-wrapper .nav_bottom {
   display: flex;
   margin-top: 10px;
   margin-bottom: 0px;
@@ -145,14 +133,15 @@
   margin-bottom: 0px;
   margin-left: 0px;
 }
-.nav_bottom .back {
+.mega-wrapper .nav_bottom .back {
   margin: 5px;
   width: 30px;
   float: left;
 }
-.nav_bottom .next {
+.mega-wrapper .nav_bottom .next {
   height: 30px;
-  margin: 5px;
-  width: 30px;
-  float: right;
+  margin-top: 5px;
+  width: fit-content;
+  background-color: #5fb2b8;
+  border-radius: 10px;
 }
