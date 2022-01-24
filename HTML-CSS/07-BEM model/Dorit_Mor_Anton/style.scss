@@ -127,45 +127,51 @@
                     border-radius: 15px;
                     margin: auto;
                 }
-        &__lines_wrapper{
+        .lines_wrapper{
             &__dark_row{
                 position:relative;
                 display:flex;
-                flex-direction: row;
-                justify-content: space-between;
                 height:90px;
                 width:239px;
                 &__profile{
+                    display: inline-block;
                     img{
-                        width: 85px;
-                        height:85px;
+                        width: 65px;
+                        height:65px;
                         position:absolute;
-                        top:10px;
-                        left:20px;
+                        top:3px;
+                        left:10px;
                     }
                 }
                 &__name{
+                    display:inline-block;
                     p{
                         color:white;
                         font-size: 16px;
                         font-weight: bolder;
                         position:absolute;
-                        left:45px;
+                        left:85px;
                         top:20px;
                     }
                 }
                 &__instrument{
+                    display:inline-block;
                     img{
-                        width: 45px;
-                        height:45px;
                         position:absolute;
-                        top:10px;
-                        right:50px;
+                        right: -75px;
+                        top:28px;
+                        height: 30px;
+                        width:30px;
                     }
                 }
                 &__size{
+                    display:inline-block;
                     p{
-
+                        color:white;
+                        font-size: 14px;
+                        position:absolute;
+                        top:24px;
+                        right:-110px;
                     }
                 }        
             }
