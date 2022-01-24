@@ -50,6 +50,7 @@
 .card .top_header__secondRow {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 .card .top_header__secondRow__name p {
   color: white;
@@ -60,12 +61,26 @@
   left: 38px;
 }
 .card .top_header__secondRow__instrument p {
-  color: white;
+  color: rgba(255, 255, 255, 0.596);
   font-size: 20px;
   font-weight: lighter;
   position: absolute;
   top: 50px;
   left: 119px;
+}
+.card .top_header__secondRow__instImg object {
+  position: absolute;
+  right: 50px;
+  top: 45px;
+  height: 40px;
+  width: 40px;
+}
+.card .top_header__secondRow__editImg object {
+  position: absolute;
+  right: 20px;
+  top: 45px;
+  height: 40px;
+  width: 40px;
 }
 .card .main_body .buttons {
   width: 239px;
