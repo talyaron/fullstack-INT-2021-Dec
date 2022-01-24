@@ -148,6 +148,9 @@ body {
         align-items: center;
         justify-content: space-between;
 
+        &:nth-child(even) {
+            background-color: #6a6b6d;
+        }
         div {
             margin: 5px;
         }
@@ -168,12 +171,12 @@ body {
 
         &_avatar {
             color: #ffffff;
-            font-size: 28px;
+            font-size: 22px;
             font-weight: 700;
             background-color: #B4B4B4;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
+            width: 33px;
+            height: 33px;
             text-align: center;
 
             h3 {
@@ -182,8 +185,8 @@ body {
 
             img {
                 border-radius: 50%;
-                width: 40px;
-                height: 40px;
+                width: 33px;
+                height: 33px;
             }
         }
     }
