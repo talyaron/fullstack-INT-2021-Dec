@@ -105,3 +105,17 @@
   border-radius: 15px;
   margin: auto;
 }
+.card .main_body__lines_wrapper__dark_row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 90px;
+  width: 239px;
+}
+.card .main_body__lines_wrapper__dark_rowprofile img {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
