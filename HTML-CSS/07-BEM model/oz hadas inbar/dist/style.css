@@ -174,3 +174,42 @@
   margin-right: 15px;
   margin-top: 5px;
 }
+.mega-wrapper .block {
+  background-color: rgba(7, 7, 7, 0.582);
+  width: 100%;
+  height: 65px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "roboto", Tahoma, Verdana, sans-serif;
+  margin: auto;
+}
+.mega-wrapper .block .user_left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.mega-wrapper .block .user_left .user {
+  width: 40px;
+  height: 40px;
+  color: whitesmoke;
+  background-color: #B4B4B4;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  top: 3px;
+  left: 3px;
+}
+.mega-wrapper .block .user_left .user h3 {
+  font-size: 30px;
+  margin: 0;
+}
+.mega-wrapper .block .user_left .user_name {
+  color: whitesmoke;
+  font-size: 12px;
+  position: relative;
+  top: 5px;
+  left: 5px;
+}
