@@ -9,19 +9,16 @@ body {
   padding: 0px 20px;
 }
 .nav_top .user {
-  display: flex;
   flex-direction: row;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .nav_top .user_right {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   margin: 20px 10px;
 }
 .nav_top .user_left {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   margin: 20px 10px;
 }
@@ -60,23 +57,52 @@ body {
   font-size: 18px;
   color: #B4B4B4;
 }
+.nav_top .user_pen {
+  color: #ffffff;
+}
+.nav_top .user_results {
+  border-radius: 100%;
+  background-color: #5fb2b6;
+  color: #ffffff;
+  right: 5px;
+  text-align: center;
+}
+.nav_top .user .instrument_icon {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.contenth_line img {
+  border-radius: 50%;
+  width: 50px;
+}
 
 .content {
   color: #ffffff;
   background-color: #2e2f33;
   font-size: 15px;
   font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 .content .user {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 .content .user div {
   margin: 5px;
+}
+.content .user_left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.content .user_right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 .content .user_avatar {
   color: #ffffff;
@@ -95,12 +121,6 @@ body {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-}
-.content .left {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
 }
 
 .nav_bottom {
