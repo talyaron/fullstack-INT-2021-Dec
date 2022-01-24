@@ -28,6 +28,21 @@
   width: 370px;
   height: 55px;
   background-color: #3d413f;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
+}
+.card .top_header__firstRow {
+  display: flex;
+  flex-direction: row;
+}
+.card .top_header__firstRow__firstRow__logo {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 20px;
+}
+.card .top_header__secondRow {
+  display: flex;
+  flex-direction: row;
 }

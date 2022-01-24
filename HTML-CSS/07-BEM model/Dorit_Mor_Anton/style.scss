@@ -30,11 +30,17 @@
         width: 370px;
         height: 55px;
         background-color: rgb(61, 65, 63);
+        border-radius: 20px;
         display:flex;
         flex-direction: column; 
             &__firstRow{
+                display: flex;
+                flex-direction: row;
                 &__firstRow__logo{
-
+                    width:20px;
+                    height:20px;
+                    position:absolute;
+                    left:20px;
                 }
                 &__firstRow__img1{   
                 }
@@ -43,7 +49,9 @@
                 &__firstRow__town{   
                 } 
             }
-            &__secondRow{              
+            &__secondRow{
+                display: flex;
+                flex-direction: row;              
                 &__secondRow__name{
                 }
                 &__secondRow__instrument{
