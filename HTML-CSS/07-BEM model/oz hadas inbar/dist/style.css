@@ -110,20 +110,11 @@
   position: relative;
   justify-content: space-around;
 }
-<<<<<<< HEAD
-.container .btn {
-  width: 105px;
-  height: 75px;
-  background-color: #5f6063;
-  border: 0px;
-  border-radius: 15px;
-=======
 .mega-wrapper .container .button {
   width: 120px;
   height: 70px;
   background-color: rgba(180, 180, 180, 0.37);
   border: none;
->>>>>>> 258db09280d64569014b7229274b81b1d9ef9edf
   color: white;
   padding: 20px;
   text-align: center;
@@ -131,31 +122,16 @@
   margin: 5px 4px;
   border-radius: 12px;
 }
-<<<<<<< HEAD
-.container .btn_wide {
-  margin: auto;
-  margin-bottom: 10px;
-=======
 .mega-wrapper .container .button:hover {
   background: #5FB2B8;
 }
 .mega-wrapper .container .button__wide {
->>>>>>> 258db09280d64569014b7229274b81b1d9ef9edf
   width: 300px;
   height: 30px;
   border-radius: 20px;
   padding: 7px;
 }
-<<<<<<< HEAD
-.container .btn--selected {
-  background-color: #5fb2b8;
-}
-
-.nav_bottom {
-  display: flex;
-=======
 .mega-wrapper .nav_bottom {
->>>>>>> 258db09280d64569014b7229274b81b1d9ef9edf
   margin-top: 10px;
   margin-bottom: 0px;
   background-color: white;
