@@ -1,0 +1,215 @@
+.wrapper {
+    width: 424px;
+    height: 619px;
+    background-color: rgb(49, 51, 54);
+    margin: auto;
+    border-radius: 10%;
+
+    .top_nav {
+        border-top-left-radius: 10%;
+        border-top-right-radius: 10%;
+        width: 424px;
+        height: 74px;
+        background-color: rgba(71, 73, 76, 0.014);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 3px;
+
+        .username_pic {
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+            margin-top: 10px;
+            align-items: left;
+
+            img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-left: 2px;
+
+            }
+
+            .user__name {
+                color: white;
+                font-size: 10px;
+
+
+            }
+
+        }
+
+        .user__location {
+
+            display: flex;
+            flex-direction: row;
+            margin-left: 100px;
+            margin-top: -60px;
+            align-items: center;
+
+            i {
+                color: white;
+                padding: 3px;
+                font-size: 10px;
+
+            }
+
+            .location {
+                color: white;
+                font-size: 10px;
+
+
+            }
+
+            .level {
+                color: rgb(173, 169, 169);
+                font-size: 10px;
+                position: absolute;
+                margin-top: 40px;
+                padding: 5px;
+
+            }
+        }
+
+        .button_edit {
+            display: flex;
+            flex-direction: row-reverse;
+            position: absolute;
+            right: 0%;
+            padding: 10px;
+            margin-right: 10px;
+            margin-top: 20px;
+            gap: 8px;
+
+            .button__edit {
+                border: none;
+                color: rgb(16, 109, 104);
+                padding: 8px 8px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 18px;
+               margin-top: -19px;
+                transition-duration: 0.4s;
+                cursor: pointer;
+                background-color: rgb(49, 51, 54);
+                padding: 20px;
+
+
+            }
+            .button__edit:hover {
+                background-color: #59bcc9a9;
+                color: white;
+            }
+.guitar{
+    color: white;
+    font-size: 18px;
+}
+        }
+
+    }
+}
+
+.usernames__wrapper {
+    width: 424px;
+    height: 600px;
+    background-color: rgb(49, 51, 54);
+    border-radius: 8%;
+
+    .username__box {
+        width: 424px;
+        height: 40px;
+        background-color: rgb(41, 42, 43);
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+
+        .usernames_pic {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            gap: 8px;
+
+            img {
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                margin-left: 5px;
+                padding: 5px;
+                margin-top: -4px;
+            }
+
+        }
+    }
+
+    .users__name {
+        color: white;
+        font-size: 10px;
+    }
+
+    .scale {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        right: 0;
+        gap: 15px;
+
+
+        i {
+            color: white;
+            margin-top: 9px;
+            font-size: 18px;
+        }
+
+        p {
+            color: white;
+            font-size: 10px;
+            margin-right: 15px;
+        }
+    }
+
+    .username--box {
+        width: 424px;
+        height: 40px;
+        background-color: rgb(71, 73, 76);
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+
+    }
+}
+
+
+.button_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: relative;
+    align-items: center;
+    align-content: center;
+    margin-top: 6px;
+
+    .button__nav {
+        border: none;
+        color: rgb(16, 109, 104);
+        padding: 8px 8px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: -1px 0px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        background-color: rgb(49, 51, 54);
+        padding: 20px;
+
+    }
+
+    .button__nav:hover {
+        background-color: #59bcc9a9;
+        color: white;
+    }
+}
