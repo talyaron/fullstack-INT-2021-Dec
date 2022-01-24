@@ -1,8 +1,7 @@
-<<<<<<< Updated upstream
 body {
     font-family: 'Lato', sans-serif;
     margin: 0;
-    /* header 
+    /* header */
     header {
         display: flex;
         width: 100%;
@@ -43,7 +42,6 @@ body {
             }
         }
     }
-    */
     /* sub-header */
     .sub-header {
         background-color: #bb1919;
@@ -61,65 +59,6 @@ body {
         line-height: 1.4;
         margin: 0;
         font-weight: bold;
-=======
-
-.navbar{
-    width: 100vw;
-    height:60px;
-    background-color: #bb1919;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-
-    img{
-     width: 60px;
-    
-    
-    }
-
-
-    a{
-    font-size: 40px;
-    color: white;
-    position: absolute;
-    left: 80px;
-    text-decoration-thickness: 0px;
-    }
-
-    #right-icon{
-        left: 180px;
-
-    }
-}
-
-
-
-.title h1{
-width: 210px;
-height: 40px;
-background-color:white;
-position: relative;
-top: 40px;
-}
-
-
-
-
-
-
-.wrapper {
-    width: 1344px;
-    height: 301px;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    padding: 0;
-    box-sizing: border-box;
-    margin-top: 40px;
-    h2 {
-        direction: rtl;
-        font-size: 18px;
->>>>>>> Stashed changes
     }
     h4:hover {
         color: rgb(3, 122, 151);
