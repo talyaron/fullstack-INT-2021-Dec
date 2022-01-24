@@ -186,6 +186,7 @@ body {
     &__quiz{
         background-color: white;
         justify-content: space-between;
+        margin-top: 30px;
 
         color: #5fb2b6;
         font-size: 2rem;
@@ -226,14 +227,16 @@ body {
     }
 
     .quiz__options{
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+        width: 260px;
+        margin: auto;
+        position: relative;     
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      
     }
 
     .button{
-
-
         width: 111px;
         height: 74px;
         background-color: rgba(180, 180, 180, 0.37);
@@ -241,23 +244,34 @@ body {
         color: white;
         padding: 20px;
         text-align: center;
-        text-decoration: none;
-        display: inline-block;
+    
         font-size: 16px;
-        margin: 4px 2px;
+        margin: 5px 4px;
         border-radius: 12px;
+
+        &:hover{
+            background: #5FB2B8;
+        }
     
         &__back{
             background: none;
-        
         }
 
         &__next{           
-            background: #5FB2B8;; 
+            background-color: #5FB2B8;; 
             width: 77px;
             height: 35px;
             border-radius: 20px;
+
+            border: none;
+            padding: 20px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            border-radius: 20px;
         }
+
+
         &__selected{
             background: #5FB2B8;
         }
@@ -265,6 +279,18 @@ body {
         &__more{
             width: 274px;
             height: 30px;
+            
+            background-color: rgba(180, 180, 180, 0.37);
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+           
+            border-radius: 12px;
+
         }
     }
 }
