@@ -127,6 +127,39 @@
                     border-radius: 15px;
                     margin: auto;
                 }
+        &__lines_wrapper{
+            &__dark_row{
+                position:relative;
+                display:flex;
+                flex-direction: row;
+                height:90px;
+                width:239px;
+                &profile{
+                    img{
+                        width: 45px;
+                        height:45px;
+                        position:absolute;
+                        top:10px;
+                        left:15px;
+                    }
+                }
+                &__name{
+                    p{
+
+                    }
+                }
+                &__instrument{
+                   img{
+
+                   }
+                }
+                &__size{
+                    p{
+                        
+                    }
+                }        
+            }
+        }
     
     }
     
