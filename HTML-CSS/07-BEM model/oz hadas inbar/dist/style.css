@@ -1,0 +1,219 @@
+.mega-wrapper {
+  border-radius: 15px;
+  width: 400px;
+  height: 600px;
+  border: 1px solid black;
+  margin: auto;
+}
+.mega-wrapper .blok-header {
+  background-color: rgba(7, 7, 7, 0.582);
+  width: 100%;
+  height: 65px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.mega-wrapper .blok-header .a {
+  position: relative;
+  top: 30px;
+  left: 31px;
+}
+.mega-wrapper .blok-header .p {
+  margin-left: 20px;
+}
+.mega-wrapper .blok-header .name {
+  position: absolute;
+  left: 140px;
+  top: 55px;
+}
+.mega-wrapper .blok-header .blok-list {
+  list-style-type: none;
+  padding-top: 0px;
+  padding: 0px;
+}
+.mega-wrapper .blok-header .blok-list p {
+  position: relative;
+  bottom: 46px;
+  left: 50px;
+}
+.mega-wrapper .blok-header .studentprofile-dark {
+  width: 100%;
+  height: 45px;
+  background-color: #2d2f33;
+}
+.mega-wrapper .blok-header .studentprofile-dark img {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.mega-wrapper .blok-header .studentprofile {
+  width: 100%;
+  height: 45px;
+  background-color: #5f6063;
+}
+.mega-wrapper .blok-header .studentprofile img {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  margin-top: 3px;
+  margin-left: 5px;
+}
+.mega-wrapper .user_profile {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 15px 15px 0 0;
+  margin-bottom: 20px;
+}
+.mega-wrapper .user_profile img {
+  width: 40px;
+  height: 40px;
+  margin-top: 3px;
+  margin-left: 3px;
+  padding-top: 5px;
+  padding-left: 12px;
+  border-radius: 50%;
+}
+.mega-wrapper .user_profile h2 {
+  margin: 0px;
+  padding-top: 20px;
+  padding-left: 10px;
+  font-family: sans-serif;
+  color: #2c4699;
+  font-size: 18px;
+}
+.mega-wrapper .content {
+  background-color: #2d2f33;
+}
+.mega-wrapper .content .header {
+  width: 100%;
+  background-color: #2d2f33;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  text-align: center;
+  font-family: sans-serif;
+}
+.mega-wrapper .content h1 {
+  margin: 0px;
+  color: #5fb2b8;
+}
+.mega-wrapper .content h2 {
+  margin: 0px;
+  color: white;
+}
+.mega-wrapper .content h3 {
+  margin: 0px;
+  color: #bdc9ef;
+}
+.mega-wrapper .content h3 .torq {
+  color: #5fb2b8;
+}
+.mega-wrapper .content .container {
+  margin-top: 0px;
+  margin: auto;
+  width: 80%;
+  height: 394px;
+  padding-top: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  background-color: #2d2f33;
+  position: relative;
+  justify-content: space-around;
+}
+.mega-wrapper .content .container .btn {
+  background-color: rgba(180, 180, 180, 0.37);
+  width: 120px;
+  height: 70px;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+  margin: 5px 4px;
+  border-radius: 12px;
+  border: none;
+}
+.mega-wrapper .content .container .btn:hover {
+  background: #5FB2B8;
+}
+.mega-wrapper .content .container .btn__wide {
+  width: 300px;
+  height: 30px;
+  border-radius: 20px;
+  padding: 7px;
+}
+.mega-wrapper .nav_bottom {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  background-color: white;
+  width: 100%;
+  height: 40px;
+  border-radius: 0px 0px 15px 15px;
+  padding: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  display: inline-block;
+  align-items: stretch;
+}
+.mega-wrapper .nav_bottom .back {
+  margin: 5px;
+  width: 25px;
+  margin-left: 10px;
+  padding-top: 3px;
+}
+.mega-wrapper .nav_bottom .next {
+  font-family: sans-serif;
+  padding: 5px;
+  font-size: 16px;
+  height: 30px;
+  width: 75px;
+  background-color: #5fb2b8;
+  border-radius: 20px;
+  float: right;
+  margin-right: 15px;
+  margin-top: 5px;
+  border: none;
+}
+.mega-wrapper .block {
+  background-color: rgba(7, 7, 7, 0.582);
+  width: 100%;
+  height: 65px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "roboto", Tahoma, Verdana, sans-serif;
+  margin: auto;
+}
+.mega-wrapper .block .user_left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.mega-wrapper .block .user_left .user {
+  width: 40px;
+  height: 40px;
+  color: whitesmoke;
+  background-color: #B4B4B4;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  top: 3px;
+  left: 3px;
+}
+.mega-wrapper .block .user_left .user h3 {
+  font-size: 30px;
+  margin: 0;
+}
+.mega-wrapper .block .user_left .user_name {
+  color: whitesmoke;
+  font-size: 12px;
+  position: relative;
+  top: 5px;
+  left: 5px;
+}

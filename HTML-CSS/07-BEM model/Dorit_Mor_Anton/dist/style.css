@@ -1,0 +1,218 @@
+.card {
+  margin: auto;
+  width: 370px;
+  height: 637px;
+  border-radius: 20px;
+  background-color: #2D2F33;
+  /* Utilities */
+}
+.card .top_header {
+  width: 370px;
+  height: 100px;
+  background-color: #3d413f;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.card .top_header__firstRow {
+  display: flex;
+  flex-direction: row;
+}
+.card .top_header__firstRow__logo object {
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  height: 95px;
+  width: 95px;
+}
+.card .top_header__firstRow__logo object h1 {
+  color: white;
+  font-size: 14px;
+}
+.card .top_header__firstRow__img1 object {
+  position: absolute;
+  left: 100px;
+  top: 20px;
+  height: 40px;
+  width: 40px;
+}
+.card .top_header__firstRow__text p {
+  position: absolute;
+  left: 133px;
+  top: 18px;
+  color: white;
+  font-size: 16px;
+  font-weight: 900;
+}
+.card .top_header__secondRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card .top_header__secondRow__name p {
+  color: white;
+  font-size: 10px;
+  font-weight: bolder;
+  position: absolute;
+  top: 70px;
+  left: 38px;
+}
+.card .top_header__secondRow__instrument p {
+  color: rgba(255, 255, 255, 0.596);
+  font-size: 20px;
+  font-weight: lighter;
+  position: absolute;
+  top: 50px;
+  left: 119px;
+}
+.card .top_header__secondRow__instImg object {
+  position: absolute;
+  right: 50px;
+  top: 45px;
+  height: 40px;
+  width: 40px;
+}
+.card .top_header__secondRow__editImg object {
+  position: absolute;
+  right: 20px;
+  top: 45px;
+  height: 40px;
+  width: 40px;
+}
+.card .top-header_2 {
+  width: 370px;
+  height: 51px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  background-color: white;
+}
+.card .main_body .top_text {
+  text-align: center;
+}
+.card .main_body .buttons {
+  width: 239px;
+  height: 334px;
+  margin: auto;
+  margin-top: -5px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.card .main_body .buttons .button_big {
+  width: 111px;
+  height: 74px;
+  background-color: rgba(180, 180, 180, 0.37);
+  border-radius: 15px;
+}
+.card .main_body .buttons .button_big h4 {
+  text-align: center;
+}
+.card .main_body .buttons .smaller_btn {
+  width: 247px;
+  height: 30px;
+  background-color: rgba(180, 180, 180, 0.37);
+  border-radius: 15px;
+  margin: auto;
+}
+.card .main_body .buttons .smaller_btn h4 {
+  text-align: center;
+}
+.card .main_body .lines_wrapper__dark_row {
+  position: relative;
+  display: flex;
+  height: 90px;
+  width: 239px;
+}
+.card .main_body .lines_wrapper__dark_row__profile {
+  display: inline-block;
+}
+.card .main_body .lines_wrapper__dark_row__profile img {
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  top: 3px;
+  left: 10px;
+}
+.card .main_body .lines_wrapper__dark_row__name {
+  display: inline-block;
+}
+.card .main_body .lines_wrapper__dark_row__name p {
+  color: white;
+  font-size: 16px;
+  font-weight: bolder;
+  position: absolute;
+  left: 85px;
+  top: 20px;
+}
+.card .main_body .lines_wrapper__dark_row__instrument {
+  display: inline-block;
+}
+.card .main_body .lines_wrapper__dark_row__instrument img {
+  position: absolute;
+  right: -75px;
+  top: 28px;
+  height: 30px;
+  width: 30px;
+}
+.card .main_body .lines_wrapper__dark_rowdark__size {
+  display: inline-block;
+}
+.card .main_body .lines_wrapper__dark_rowdark__size p {
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 24px;
+  right: -110px;
+}
+.card .main_body .lines_wrapperdark_row--clear {
+  position: relative;
+  top: 400px;
+  left: 200px;
+  background-color: #e7dbdb;
+  display: flex;
+  height: 90px;
+  width: 239px;
+}
+.card .main_body .lines_wrapperdark_row--clear__profile {
+  display: inline-block;
+}
+.card .main_body .lines_wrapperdark_row--clear__profile img {
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  top: 3px;
+  left: 10px;
+}
+.card .main_body .lines_wrapperdark_row--clear__name {
+  display: inline-block;
+}
+.card .main_body .lines_wrapperdark_row--clear__name p {
+  color: white;
+  font-size: 16px;
+  font-weight: bolder;
+  position: absolute;
+  left: 85px;
+  top: 20px;
+}
+.card .main_body .lines_wrapperdark_row--clear__instrument {
+  display: inline-block;
+}
+.card .main_body .lines_wrapperdark_row--clear__instrument img {
+  position: absolute;
+  right: -75px;
+  top: 28px;
+  height: 30px;
+  width: 30px;
+}
+.card .main_body .lines_wrapperdark_row--clear__size {
+  display: inline-block;
+}
+.card .main_body .lines_wrapperdark_row--clear__size p {
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 24px;
+  right: -110px;
+}
