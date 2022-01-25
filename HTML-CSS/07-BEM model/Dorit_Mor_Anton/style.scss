@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(224, 224, 224);
+}
+
 .card{
     margin: auto;
     width: 370px;
@@ -129,18 +133,16 @@
                     border-radius: 15px;
                     h4 {
                          text-align: center;
-                         gap: opx;
-                    }
-                   
+                    } 
                 }
-                .smaller_btn {
-                    width: 247px;
-                    height: 30px;
-                    background-color: rgba(180, 180, 180, 0.37);
-                    border-radius: 15px;
-                    margin: auto;
-                }
-        }
+            }
+            .smaller_btn {
+                width: 247px;
+                height: 30px;
+                background-color: rgba(180, 180, 180, 0.37);
+                border-radius: 15px;
+                margin: auto;
+            }
         .lines_wrapper{
             &__dark_row{
                 position:relative;

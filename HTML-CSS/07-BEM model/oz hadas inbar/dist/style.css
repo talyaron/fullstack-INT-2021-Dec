@@ -60,7 +60,7 @@
   margin-left: 5px;
 }
 .mega-wrapper .user_profile {
-  height: 50px;
+  height: 40px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -85,7 +85,10 @@
   color: #2c4699;
   font-size: 18px;
 }
-.mega-wrapper .header {
+.mega-wrapper .content {
+  background-color: #2d2f33;
+}
+.mega-wrapper .content .header {
   width: 100%;
   background-color: #2d2f33;
   margin-top: 0px;
@@ -94,19 +97,19 @@
   text-align: center;
   font-family: sans-serif;
 }
-.mega-wrapper .header h1 {
+.mega-wrapper .content h1 {
   margin: 0px;
   color: #5fb2b8;
 }
-.mega-wrapper .header h2 {
+.mega-wrapper .content h2 {
   margin: 0px;
   color: white;
 }
-.mega-wrapper .header h3 {
+.mega-wrapper .content h3 {
   margin: 0px;
   color: #bdc9ef;
 }
-.mega-wrapper .header h3 .torq {
+.mega-wrapper .content h3 .torq {
   color: #5fb2b8;
 }
 .mega-wrapper .container {
