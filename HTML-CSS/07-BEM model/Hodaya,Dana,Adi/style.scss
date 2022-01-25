@@ -12,34 +12,4 @@
     margin: auto;
     overflow: hidden;
      
-     .sprit img{
-        width: 30px;
-        position: absolute;
-        left: 20px;
-        user-select: none;
-        cursor: pointer;
-    
-    }
-}
-.content{
-    margin: auto;
-    font-size: 20px;
-    h1{
-        color: yellow;
-        font-size: 20px;
-        font-family: Arial;
-    }
-    p{
-        color: yellowgreen;
-        font-size: 15px;
-       font-family: Arial;
-    }
-}
-.sprit{
-    position: relative;
-    width: 300px;
-    height: 55px;
-    background-color: rgb(224, 24, 24);
-
-    
-}
+ }
