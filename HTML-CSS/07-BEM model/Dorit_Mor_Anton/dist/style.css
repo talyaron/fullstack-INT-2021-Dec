@@ -120,6 +120,9 @@ body {
   border-radius: 15px;
   margin: auto;
 }
+.card .main_body .smaller_btn h4 {
+  text-align: center;
+}
 .card .main_body .lines_wrapper__dark_row {
   position: relative;
   display: flex;
