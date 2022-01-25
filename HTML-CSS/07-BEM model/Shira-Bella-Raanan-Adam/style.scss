@@ -18,14 +18,16 @@
                 height: 70px;
                 border-radius: 20px 20px 0 0;
                 img {
-                    width: 50px;
-                    height: 50px;
+                    width: 45px;
+                    height: 45px;
                     margin-right: 12px;
                 }
                 .avatar_1,
                 .admin_1 {
                     position: relative;
                     left: 16px;
+                    color: rgb(5, 50, 102);
+                    font-weight: 600;
                 }
             }
             //screen main content//
@@ -34,24 +36,47 @@
                 width: 80%;
                 margin: auto;
                 color: azure;
+                h1 {
+                    margin: 12px 0 8px 0;
+                    color: #00C0C3;
+                }
+                h3 {
+                    margin: 4px;
+                    span {
+                        color: #00C0C3;
+                    }
+                }
                 .buttons {
                     display: flex;
                     justify-content: center;
                     li {
                         list-style-type: none;
                         width: 130px;
-                        height: 80px;
-                        background-color: rgba(240, 255, 255, 0.37);
+                        height: 85px;
+                        background-color: #6A6B6F;
                         padding: 16px;
-                        margin: 24px 12px;
+                        margin: 16px 8px;
                         line-height: 1.4;
                         box-sizing: border-box;
                         border-radius: 20px;
                     }
+                    .selected {
+                        background-color: #00C0C3;
+                    }
                     .right,
                     .left {
                         padding: 0;
+                        margin: 0;
                     }
+                }
+                .button--down {
+                    width: 285px;
+                    height: 40px;
+                    padding: 8px 20px 0 20px;
+                    line-height: 1.4;
+                    background-color: #6A6B6F;
+                    box-sizing: border-box;
+                    border-radius: 50px;
                 }
             }
         }
