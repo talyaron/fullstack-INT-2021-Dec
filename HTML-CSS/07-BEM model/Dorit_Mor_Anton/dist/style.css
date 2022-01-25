@@ -113,14 +113,14 @@ body {
 .card .main_body .buttons .button_big h4 {
   text-align: center;
 }
-.card .main_body .smaller_btn {
+.card .main_body .buttons .smaller_btn {
   width: 247px;
   height: 30px;
   background-color: rgba(180, 180, 180, 0.37);
   border-radius: 15px;
   margin: auto;
 }
-.card .main_body .smaller_btn h4 {
+.card .main_body .buttons .smaller_btn h4 {
   text-align: center;
 }
 .card .main_body .lines_wrapper__dark_row {
@@ -160,19 +160,63 @@ body {
   height: 30px;
   width: 30px;
 }
-.card .main_body .lines_wrapper__dark_row__size {
+.card .main_body .lines_wrapper__dark_rowdark__size {
   display: inline-block;
 }
-.card .main_body .lines_wrapper__dark_row__size p {
+.card .main_body .lines_wrapper__dark_rowdark__size p {
   color: white;
   font-size: 14px;
   position: absolute;
   top: 24px;
   right: -110px;
 }
-.card .main_body .lines_wrapper--clear {
+.card .main_body .lines_wrapperdark_row--clear {
   position: relative;
+  top: 400px;
+  left: 200px;
+  background-color: #e7dbdb;
   display: flex;
   height: 90px;
   width: 239px;
+}
+.card .main_body .lines_wrapperdark_row--clear__profile {
+  display: inline-block;
+}
+.card .main_body .lines_wrapperdark_row--clear__profile img {
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  top: 3px;
+  left: 10px;
+}
+.card .main_body .lines_wrapperdark_row--clear__name {
+  display: inline-block;
+}
+.card .main_body .lines_wrapperdark_row--clear__name p {
+  color: white;
+  font-size: 16px;
+  font-weight: bolder;
+  position: absolute;
+  left: 85px;
+  top: 20px;
+}
+.card .main_body .lines_wrapperdark_row--clear__instrument {
+  display: inline-block;
+}
+.card .main_body .lines_wrapperdark_row--clear__instrument img {
+  position: absolute;
+  right: -75px;
+  top: 28px;
+  height: 30px;
+  width: 30px;
+}
+.card .main_body .lines_wrapperdark_row--clear__size {
+  display: inline-block;
+}
+.card .main_body .lines_wrapperdark_row--clear__size p {
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 24px;
+  right: -110px;
 }
