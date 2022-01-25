@@ -105,6 +105,25 @@
         border-top-left-radius: 18px;
         border-top-right-radius: 18px;
         background-color: white;
+       
+        
+        
+        h3 {
+            width: 35px;
+            height: 35px;
+            background-color: #2D2F33;
+            color: white;
+            text-align: center; 
+            border-radius: 50%;
+            display: table-cell;
+            vertical-align: middle;
+
+           }
+        
+        h4 {
+            color: white;
+        }
+
     }
 
     /* Utilities */
@@ -129,20 +148,24 @@
                     border-radius: 15px;
                     h4 {
                          text-align: center;
+                         padding-top: 5px;
+                         
                     } 
                 }
-                .smaller_btn {
-                width: 247px;
-                height: 30px;
-                background-color: rgba(180, 180, 180, 0.37);
-                border-radius: 15px;
-                margin: auto;
+            }    
+            .smaller_btn {
+            width: 247px;
+            height: 30px;
+            background-color: rgba(180, 180, 180, 0.37);
+            border-radius: 15px;
+            margin: auto;
 
-                h4 {
-                    text-align: center;
-                }
+            h4 {
+                text-align: center;
+                padding-top: 5px;
+                
             }
-        }    
+        }
         .lines_wrapper{
             width:370px;
             height:75px;
@@ -244,4 +267,14 @@
         }
     }
     
+    .footer {
+        .bottom-header {
+            width: 370px;
+            height: 51px;
+            border-bottom-left-radius: 18px;
+            border-bottom-right-radius: 18px;
+            background-color: white;
+            margin-top: 26px;
+        }
+    }
 }

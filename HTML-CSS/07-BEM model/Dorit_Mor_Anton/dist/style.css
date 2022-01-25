@@ -88,6 +88,19 @@
   border-top-right-radius: 18px;
   background-color: white;
 }
+.card .top-header_2 h3 {
+  width: 35px;
+  height: 35px;
+  background-color: #2D2F33;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
+  display: table-cell;
+  vertical-align: middle;
+}
+.card .top-header_2 h4 {
+  color: white;
+}
 .card .main_body .top_text {
   text-align: center;
 }
@@ -108,16 +121,18 @@
 }
 .card .main_body .buttons .button_big h4 {
   text-align: center;
+  padding-top: 5px;
 }
-.card .main_body .buttons .smaller_btn {
+.card .main_body .smaller_btn {
   width: 247px;
   height: 30px;
   background-color: rgba(180, 180, 180, 0.37);
   border-radius: 15px;
   margin: auto;
 }
-.card .main_body .buttons .smaller_btn h4 {
+.card .main_body .smaller_btn h4 {
   text-align: center;
+  padding-top: 5px;
 }
 .card .main_body .lines_wrapper {
   width: 370px;
@@ -216,4 +231,13 @@
   position: absolute;
   top: 24px;
   right: 20px;
+} 
+.card .footer .bottom-header {
+  width: 370px;
+  height: 51px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  background-color: white;
+  margin-top: 26px;
+
 }
