@@ -90,19 +90,22 @@
 }
 .card .top-header_2 .text-wrapper {
   position: relative;
-  display: flex;
+}
+.card .top-header_2 .text-wrapper .ellipse-shape {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background-color: #2D2F33;
+  border-radius: 50%;
+}
+.card .top-header_2 .text-wrapper .ellipse-shape h3 {
+  color: white;
+  padding-left: 8px;
+  margin-bottom: 5px;
 }
 .card .top-header_2 .text-wrapper h4 {
-  color: #bb2424;
-  padding-left: 10px;
-}
-.card .top-header_2 .text-wrapper h3 {
-  width: 35px;
-  height: 35px;
-  color: white;
-  border-radius: 50%;
-  background-color: #2D2F33;
-  text-align: center;
+  color: #24bb68;
+  position: absolute;
 }
 .card .main_body .top_text {
   text-align: center;

@@ -105,26 +105,27 @@
         border-top-left-radius: 18px;
         border-top-right-radius: 18px;
         background-color: white;
-       
-        .text-wrapper {
+
+        .text-wrapper  {
             position: relative;
-            display: flex;
-            h4 {
-                color: rgb(187, 36, 36);
-                padding-left: 10px;
-                
-            }
-            
-            h3 {
-                width: 35px;
-                height: 35px;
-                color: white;
-                border-radius: 50%;
+            .ellipse-shape {
+                position: absolute;
+                width: 32px;
+                height: 32px;
                 background-color: #2D2F33;
-                text-align: center; 
+                border-radius: 50%;
+                
+                h3 {
+                    color: rgb(255, 255, 255); 
+                    padding-left: 8px;
+                    margin-bottom: 5px;
+                }
+            }
+            h4 {
+                color: rgb(36, 187, 104);  
+                position: absolute;  
             }
         }
-
     }
 
     /* Utilities */
