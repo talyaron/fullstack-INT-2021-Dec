@@ -54,90 +54,237 @@ body {
 }
 
 .screen {
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.671);
-  margin: auto;
-  border-radius: 20px;
-  width: 360px;
+  width: 390px;
   height: 650px;
+  background-color: black;
+  position: relative;
+  margin: auto;
+  border-radius: 19%;
 }
 .screen .top_nav {
-  background-color: rgba(0, 0, 0, 0.671);
-  height: 80px;
-  border-radius: 20px 20px 0;
-}
-.screen .top_nav .results_btn {
-  background-color: #007780;
-  width: 100px;
-  height: 20px;
-  border-radius: 20px;
-}
-.screen .top_nav .results_btn .results {
-  text-align: center;
-  color: white;
+  width: 390px;
+  height: 100px;
+  background-color: #70737a;
+  border-radius: 20% 20% 0% 0%;
+  position: relative;
 }
 .screen .top_nav .avatar {
-  background-color: grey;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  margin-top: 40px;
-  position: relative;
-  top: 15px;
-  left: 20px;
+  position: absolute;
 }
-.screen .top_nav .avatar .main_avatar {
+.screen .top_nav .avatar img {
+  width: 60px;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+.screen .top_nav .avatar .user_name {
+  background-color: #70737a;
   color: white;
-  font-size: xx-large;
-  text-align: center;
-  margin-top: 10px;
+  width: 5rem;
+  position: absolute;
+  margin-top: -10px;
+  margin-left: 25px;
 }
-.screen .top_nav .avatar .admin {
-  color: white;
-  position: relative;
-  top: 315px;
-}
-.screen .first--user--row {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 18px;
-  width: 100%;
-  height: 50px;
-  background-color: rgba(128, 128, 128, 0.548);
-}
-.screen .user_row {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 50px;
-  background-color: rgba(128, 128, 128, 0.548);
-}
-.screen .user_row .icon_djembe {
-  position: relative;
-  left: 500px;
-}
-.screen .users_avatar {
+.screen .top_nav .avatar .green_dot {
+  background-color: #06cf06;
+  height: 10px;
+  width: 10px;
   border-radius: 50%;
-  height: 40px;
+  position: absolute;
+  left: 70px;
+  top: 70px;
+}
+.screen .top_nav .location {
+  margin-left: 120px;
+  margin-top: -50px;
+  color: white;
+}
+.screen .top_nav .location .icon_location {
+  height: 20px;
+  width: 20px;
+  z-index: 3;
+  margin-top: 0px;
+  margin-left: -20px;
+  position: absolute;
+}
+.screen .top_nav .lef_icons {
+  width: 70px;
+  height: 50px;
+  position: absolute;
+  margin-left: 275px;
+  margin-top: -75px;
+}
+.screen .top_nav .lef_icons img {
   width: 40px;
 }
-.screen .dark--user--row {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 50px;
-  background-color: rgba(0, 0, 0, 0.37);
+.screen .top_nav .lef_icons .edit {
+  height: 30px;
+  width: 30px;
+  background-color: #06cfb4;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 65px;
+  margin-top: -37px;
 }
-.screen .map_img {
-  width: 100px;
-  height: 300px;
+.screen .top_nav .lef_icons .edit img {
+  width: 25px;
+  margin-left: 2px;
+  margin-top: 2px;
 }
-.screen .menu {
-  width: 100%;
+.screen .user_row {
+  width: 390px;
   height: 50px;
-  border-radius: 0 0 20px 20px;
-  display: flex;
-  justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.445);
+  background-color: #474747;
+  position: relative;
+}
+.screen .user_row .row_avtar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 4px;
+  margin-left: 5px;
+}
+.screen .user_row .row_avtar img {
+  width: 40px;
+}
+.screen .user_row .row_green_dot {
+  background-color: #06cf06;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5px;
+  left: 35px;
+}
+.screen .user_row .row_name {
+  width: max-content;
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 55px;
+  color: white;
+}
+.screen .user_row .row_instrument {
+  width: 70px;
+  height: 50px;
+  position: absolute;
+  margin-left: 290px;
+  margin-top: 5px;
+}
+.screen .user_row .row_instrument img {
+  width: 38px;
+}
+.screen .user_row .row_location {
+  position: absolute;
+  margin-top: 17px;
+  margin-left: 330px;
+  color: white;
+}
+.screen .user_row_light {
+  width: 390px;
+  height: 50px;
+  background-color: darkgray;
+  position: relative;
+}
+.screen .user_row_light .row_avtar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 4px;
+  margin-left: 5px;
+}
+.screen .user_row_light .row_avtar img {
+  width: 40px;
+}
+.screen .user_row_light .row_green_dot {
+  background-color: #06cf06;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5px;
+  left: 35px;
+}
+.screen .user_row_light .row_name {
+  width: max-content;
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 55px;
+  color: white;
+}
+.screen .user_row_light .row_instrument {
+  width: 70px;
+  height: 50px;
+  position: absolute;
+  margin-left: 290px;
+  margin-top: 5px;
+}
+.screen .user_row_light .row_instrument img {
+  width: 38px;
+}
+.screen .user_row_light .row_location {
+  position: absolute;
+  margin-top: 17px;
+  margin-left: 330px;
+  color: white;
+}
+.screen .map img {
+  width: 390px;
+  height: 250px;
+}
+.screen .bottom_nav {
+  width: 390px;
+  height: 100px;
+  background-color: #70737a;
+  border-radius: 0% 0% 20% 20%;
+  position: relative;
+}
+.screen .bottom_nav .icon_back {
+  position: absolute;
+  margin-top: 17px;
+  margin-left: 40px;
+}
+.screen .bottom_nav .icon_back img {
+  width: 60px;
+}
+.screen .bottom_nav .icon_settings {
+  position: absolute;
+  margin-top: 22px;
+  margin-left: 100px;
+}
+.screen .bottom_nav .icon_settings img {
+  width: 50px;
+}
+.screen .bottom_nav .icon_chat {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 160px;
+}
+.screen .bottom_nav .icon_chat img {
+  width: 60px;
+}
+.screen .bottom_nav .icon_user_page {
+  position: absolute;
+  margin-top: 29px;
+  margin-left: 230px;
+}
+.screen .bottom_nav .icon_user_page img {
+  width: 40px;
+}
+.screen .bottom_nav .icon_home {
+  position: absolute;
+  margin-top: 23px;
+  margin-left: 280px;
+}
+.screen .bottom_nav .icon_home img {
+  width: 50px;
+}
+.screen .bottom_nav button {
+  z-index: 3;
+  width: max-content;
+  margin-top: 75px;
+  position: absolute;
+  margin-left: 170px;
+  background-color: #70737a;
+  border: none;
 }
