@@ -88,18 +88,21 @@
   border-top-right-radius: 18px;
   background-color: white;
 }
-.card .top-header_2 h3 {
+.card .top-header_2 .text-wrapper {
+  position: relative;
+  display: flex;
+}
+.card .top-header_2 .text-wrapper h4 {
+  color: #bb2424;
+  padding-left: 10px;
+}
+.card .top-header_2 .text-wrapper h3 {
   width: 35px;
   height: 35px;
-  background-color: #2D2F33;
   color: white;
-  text-align: center;
   border-radius: 50%;
-  display: table-cell;
-  vertical-align: middle;
-}
-.card .top-header_2 h4 {
-  color: white;
+  background-color: #2D2F33;
+  text-align: center;
 }
 .card .main_body .top_text {
   text-align: center;
