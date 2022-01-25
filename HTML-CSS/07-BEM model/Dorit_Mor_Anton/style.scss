@@ -1,7 +1,3 @@
-body {
-    background-color: rgb(224, 224, 224);
-}
-
 .card{
     margin: auto;
     width: 370px;
@@ -135,8 +131,7 @@ body {
                          text-align: center;
                     } 
                 }
-            }
-            .smaller_btn {
+                .smaller_btn {
                 width: 247px;
                 height: 30px;
                 background-color: rgba(180, 180, 180, 0.37);
@@ -147,6 +142,7 @@ body {
                     text-align: center;
                 }
             }
+        }    
         .lines_wrapper{
             &__dark_row{
                 position:relative;
@@ -244,8 +240,6 @@ body {
                         right:-110px;
                     }
                 }        
-            }
-
             }
 
         }
