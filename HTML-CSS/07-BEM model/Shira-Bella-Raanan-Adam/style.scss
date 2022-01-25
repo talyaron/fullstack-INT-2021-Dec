@@ -1,174 +1,372 @@
-        //all screens settings//
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+HEAD body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+//Bella//
+.screen_bella {
+    width: 360px;
+    height: 650px;
+    background-color: #32363B;
+    border-radius: 20px;
+    margin: auto;
+    //top header - image + admin's name//
+    .top_header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        background-color: rgb(235, 231, 231);
+        height: 70px;
+        border-radius: 20px 20px 0 0;
+        img {
+            width: 50px;
+            height: 50px;
+            margin-right: 12px;
         }
-        
-        //shira//
-        .screen {
+        .avatar_1,
+        .admin_1 {
             position: relative;
-            background-color: rgba(0, 0, 0, 0.671);
-            margin: auto;
-            border-radius: 20px;
-            width: 360px;
-            height: 650px;
-            .top_nav {
-                background-color: rgba(0, 0, 0, 0.671);
+            left: 16px;
+        }
+    }
+    //screen main content//
+    .content {
+        text-align: center;
+        width: 80%;
+        margin: auto;
+        color: azure;
+        .buttons {
+            display: flex;
+            justify-content: center;
+            li {
+                list-style-type: none;
+                width: 130px;
                 height: 80px;
-                border-radius: 20px 20px 0;
-                .results_btn {
-                    background-color: rgb(0, 119, 128);
-                    width: 100px;
-                    height: 20px;
-                    border-radius: 20px;
-                    .results {
-                        text-align: center;
-                        color: white;
-                    }
-                }
-                .avatar {
-                    background-color: grey;
-                    border-radius: 50%;
-                    height: 50px;
-                    width: 50px;
-                    margin-top: 40px;
-                    position: relative;
-                    top: 15px;
-                    left: 20px;
-                    .main_avatar {
-                        color: white;
-                        font-size: xx-large;
-                        text-align: center;
-                        margin-top: 10px;
-                    }
-                    .admin {
-                        color: white;
-                        position: relative;
-                        top: 315px;
-                    }
-                }
+                background-color: rgba(240, 255, 255, 0.37);
+                padding: 16px;
+                margin: 24px 12px;
+                line-height: 1.4;
+                box-sizing: border-box;
+                border-radius: 20px;
             }
-            .first--user--row {
-                display: flex;
-                justify-content: space-between;
-                margin-top: 18px;
-                width: 100%;
-                height: 50px;
-                background-color: rgba(128, 128, 128, 0.548);
+            .right,
+            .left {
+                padding: 0;
             }
-            .user_row {
-                position: relative;
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-                height: 50px;
-                background-color: rgba(128, 128, 128, 0.548);
-                .icon_djembe {
-                    position: relative;
-                    left: 500px;
-                }
+        }
+    }
+}
+
+//--Screen Raanan & Shira//
+.screen {
+    width: 390px;
+    height: 650px;
+    background-color: black;
+    position: relative;
+    margin: auto;
+    border-radius: 19%;
+    //--Top Bar--//
+    .top_nav {
+        width: 390px;
+        height: 100px;
+        background-color: rgb(112, 115, 122);
+        border-radius: 20% 20% 0% 0%;
+        position: relative;
+        .avatar {
+            position: absolute;
+            img {
+                width: 60px;
+                margin-top: 25px;
+                margin-left: 25px;
             }
-            .users_avatar {
+            .user_name {
+                background-color: rgb(112, 115, 122);
+                color: white;
+                width: 5rem;
+                position: absolute;
+                margin-top: -10px;
+                margin-left: 25px;
+            }
+            .green_dot {
+                background-color: rgb(6, 207, 6);
+                height: 10px;
+                width: 10px;
                 border-radius: 50%;
-                height: 40px;
+                position: absolute;
+                left: 70px;
+                top: 70px;
+            }
+        }
+        .location {
+            margin-left: 120px;
+            margin-top: -50px;
+            color: white;
+            .icon_location {
+                height: 20px;
+                width: 20px;
+                z-index: 3;
+                margin-top: 0px;
+                margin-left: -20px;
+                position: absolute;
+            }
+        }
+        .lef_icons {
+            width: 70px;
+            height: 50px;
+            position: absolute;
+            margin-left: 275px;
+            margin-top: -75px;
+            img {
                 width: 40px;
             }
-            .dark--user--row {
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-                height: 50px;
-                background-color: rgba(0, 0, 0, 0.37);
-            }
-            .map_img {
-                width: 100px;
-                height: 300px;
-            }
-            .menu {
-                width: 100%;
-                height: 50px;
-                border-radius: 0 0 20px 20px;
-                display: flex;
-                justify-content: space-between;
-                background-color: rgba(0, 0, 0, 0.445);
-            }
-        }
-        
-        //Bella//
-        .screen_bella {
-            width: 360px;
-            height: 650px;
-            background-color: #32363B;
-            border-radius: 20px;
-            margin: auto;
-            //top header - image + admin's name//
-            .top__header {
-                position: relative;
-                display: flex;
-                align-items: center;
-                background-color: rgb(235, 231, 231);
-                height: 70px;
-                border-radius: 20px 20px 0 0;
+            .edit {
+                height: 30px;
+                width: 30px;
+                background-color: rgb(6, 207, 180);
+                border-radius: 50%;
+                position: absolute;
+                margin-left: 65px;
+                margin-top: -37px;
                 img {
-                    width: 45px;
-                    height: 45px;
-                    margin-right: 12px;
-                }
-                .avatar__1,
-                .admin--1 {
-                    position: relative;
-                    left: 16px;
-                    color: rgb(5, 50, 102);
-                    font-weight: 600;
-                }
-            }
-            //screen main content//
-            .content {
-                text-align: center;
-                width: 80%;
-                margin: auto;
-                color: azure;
-                h1 {
-                    margin: 12px 0 8px 0;
-                    color: #00C0C3;
-                }
-                h3 {
-                    margin: 4px;
-                    span {
-                        color: #00C0C3;
-                    }
-                }
-                .buttons {
-                    display: flex;
-                    justify-content: center;
-                    li {
-                        list-style-type: none;
-                        width: 130px;
-                        height: 85px;
-                        background-color: #6A6B6F;
-                        padding: 16px;
-                        margin: 16px 8px;
-                        line-height: 1.4;
-                        box-sizing: border-box;
-                        border-radius: 20px;
-                    }
-                    .selected {
-                        background-color: #00C0C3;
-                    }
-                    .right,
-                    .left {
-                        padding: 0;
-                        margin: 0;
-                    }
-                }
-                //button in the bottom of the screen//
-                .button--down {
-                    width: 285px;
-                    height: 40px;
-                    padding: 8px 20px 0 20px;
-                    line-height: 1.4;
-                    background-color: #6A6B6F;
-                    box-sizing: border-box;
-                    border-radius: 50px;
+                    width: 25px;
+                    margin-left: 2px;
+                    margin-top: 2px;
                 }
             }
         }
+    }
+    //---User Rows Dark---//
+    .user_row {
+        width: 390px;
+        height: 50px;
+        background-color: rgb(71, 71, 71);
+        position: relative;
+        .row_avtar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            position: absolute;
+            margin-top: 4px;
+            margin-left: 5px;
+            img {
+                width: 40px;
+            }
+        }
+        .row_green_dot {
+            background-color: rgb(6, 207, 6);
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 5px;
+            left: 35px;
+        }
+        .row_name {
+            width: max-content;
+            position: absolute;
+            margin-top: 15px;
+            margin-left: 55px;
+            color: white;
+        }
+        .row_instrument {
+            width: 70px;
+            height: 50px;
+            position: absolute;
+            margin-left: 290px;
+            margin-top: 5px;
+            img {
+                width: 38px;
+            }
+            .row_location {
+                position: absolute;
+                margin-top: 17px;
+                margin-left: 330px;
+                color: white;
+            }
+        }
+    }
+    //---User Rows Light---//
+    .user_row_light {
+        width: 390px;
+        height: 50px;
+        background-color: darkgray;
+        position: relative;
+        .row_avtar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            position: absolute;
+            margin-top: 4px;
+            margin-left: 5px;
+            img {
+                width: 40px;
+            }
+        }
+        .row_green_dot {
+            background-color: rgb(6, 207, 6);
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 5px;
+            left: 35px;
+        }
+        .row_name {
+            width: max-content;
+            position: absolute;
+            margin-top: 15px;
+            margin-left: 55px;
+            color: white;
+        }
+        .row_instrument {
+            width: 70px;
+            height: 50px;
+            position: absolute;
+            margin-left: 280px;
+            margin-top: 5px;
+            img {
+                width: 38px;
+            }
+            .row_location {
+                position: absolute;
+                margin-top: 17px;
+                margin-left: 330px;
+                color: white;
+            }
+        }
+    }
+    .map {
+        img {
+            width: 390px;
+            height: 250px;
+        }
+    }
+}
+
+//---Bottom Bar---//
+.bottom_nav {
+    width: 390px;
+    height: 100px;
+    background-color: rgb(112, 115, 122);
+    border-radius: 0% 0% 20% 20%;
+    position: relative;
+    .icon_back {
+        position: absolute;
+        margin-top: 17px;
+        margin-left: 40px;
+        img {
+            width: 60px;
+        }
+    }
+    .icon_settings {
+        position: absolute;
+        margin-top: 22px;
+        margin-left: 100px;
+        img {
+            width: 50px;
+        }
+    }
+    .icon_chat {
+        position: absolute;
+        margin-top: 20px;
+        margin-left: 160px;
+        img {
+            width: 60px;
+        }
+    }
+    .icon_user_page {
+        position: absolute;
+        margin-top: 29px;
+        margin-left: 230px;
+        img {
+            width: 40px;
+        }
+    }
+    .icon_home {
+        position: absolute;
+        margin-top: 23px;
+        margin-left: 280px;
+        img {
+            width: 50px;
+        }
+    }
+}
+
+//Bella//
+.screen_bella {
+    width: 360px;
+    height: 650px;
+    background-color: #32363B;
+    border-radius: 20px;
+    margin: auto;
+    //top header - image + admin's name//
+    .top__header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        background-color: rgb(235, 231, 231);
+        height: 70px;
+        border-radius: 20px 20px 0 0;
+        img {
+            width: 45px;
+            height: 45px;
+            margin-right: 12px;
+        }
+        .avatar__1,
+        .admin--1 {
+            position: relative;
+            left: 16px;
+            color: rgb(5, 50, 102);
+            font-weight: 600;
+        }
+    }
+    //screen main content//
+    .content {
+        text-align: center;
+        width: 80%;
+        margin: auto;
+        color: azure;
+        h1 {
+            margin: 12px 0 8px 0;
+            color: #00C0C3;
+        }
+        h3 {
+            margin: 4px;
+            span {
+                color: #00C0C3;
+            }
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            li {
+                list-style-type: none;
+                width: 130px;
+                height: 85px;
+                background-color: #6A6B6F;
+                padding: 16px;
+                margin: 16px 8px;
+                line-height: 1.4;
+                box-sizing: border-box;
+                border-radius: 20px;
+            }
+            .selected {
+                background-color: #00C0C3;
+            }
+            .right,
+            .left {
+                padding: 0;
+                margin: 0;
+            }
+        }
+        //button in the bottom of the screen//
+        .button--down {
+            width: 285px;
+            height: 40px;
+            padding: 8px 20px 0 20px;
+            line-height: 1.4;
+            background-color: #6A6B6F;
+            box-sizing: border-box;
+            border-radius: 50px;
+        }
+    }
+}
