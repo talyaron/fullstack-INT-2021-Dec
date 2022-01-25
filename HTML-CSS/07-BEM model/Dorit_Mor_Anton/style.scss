@@ -106,22 +106,23 @@
         border-top-right-radius: 18px;
         background-color: white;
        
-        
-        
-        h3 {
-            width: 35px;
-            height: 35px;
-            background-color: #2D2F33;
-            color: white;
-            text-align: center; 
-            border-radius: 50%;
-            display: table-cell;
-            vertical-align: middle;
-
-           }
-        
-        h4 {
-            color: white;
+        .text-wrapper {
+            position: relative;
+            display: flex;
+            h4 {
+                color: rgb(187, 36, 36);
+                padding-left: 10px;
+                
+            }
+            
+            h3 {
+                width: 35px;
+                height: 35px;
+                color: white;
+                border-radius: 50%;
+                background-color: #2D2F33;
+                text-align: center; 
+            }
         }
 
     }
