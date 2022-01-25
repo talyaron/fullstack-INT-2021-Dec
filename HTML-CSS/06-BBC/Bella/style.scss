@@ -1,6 +1,7 @@
 body {
     font-family: 'Lato', sans-serif;
     margin: 0;
+<<<<<<< Updated upstream:HTML-CSS/06-BBC/Bella/style.scss
     /* header */
     header {
         display: flex;
@@ -66,6 +67,55 @@ body {
         transition: 0.4s;
     }
     /* wrapper */
+=======
+  
+.navbar{
+    width: 100vw;
+    height:55px;
+    background-color: #bb1919;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    img{
+     width: 60px;
+    
+    
+    }
+
+
+    a{
+    font-size:30px;
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 80px;
+    text-decoration-thickness: 0px;
+    }
+
+    #right-icon{
+        left: 180px;
+
+    }
+}
+
+
+
+.title h1{
+width: 240px;
+height: 40px;
+background-color:white;
+position: relative;
+top: 40px;
+}
+
+
+
+
+
+
+
+>>>>>>> Stashed changes:HTML-CSS/Oz and Bella/oz new/style.scss
     .wrapper {
         width: 1250px;
         display: flex;

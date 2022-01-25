@@ -11,53 +11,89 @@
   height: 65px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  position: relative;
 }
 .mega-wrapper .blok-header .a {
-  position: relative;
+  position: absolute;
   top: 30px;
   left: 31px;
 }
 .mega-wrapper .blok-header .p {
-  margin-left: 20px;
+  position: absolute;
+  top: 30px;
+  left: 31px;
 }
 .mega-wrapper .blok-header .name {
   position: absolute;
-  left: 140px;
+  left: 103px;
   top: 55px;
 }
-.mega-wrapper .blok-list {
+.mega-wrapper .blok-header .tel-aviv {
+  position: absolute;
+  left: 160px;
+  bottom: 605px;
+}
+.mega-wrapper .blok-header .guitar {
+  position: absolute;
+  left: 155px;
+  bottom: 585px;
+}
+.mega-wrapper .blok-header .pencel {
+  position: absolute;
+  left: 430px;
+  bottom: 590px;
+}
+
+.blok-list {
   list-style-type: none;
   padding-top: 0px;
   padding: 0px;
 }
-.mega-wrapper .blok-list p {
+.blok-list p {
   position: relative;
   bottom: 46px;
   left: 50px;
 }
-.mega-wrapper .studentprofile-dark {
+
+.studentprofile-dark {
   width: 100%;
   height: 45px;
   background-color: #2d2f33;
 }
-.mega-wrapper .studentprofile-dark img {
+.studentprofile-dark img {
   border-radius: 50%;
   width: 35px;
   height: 35px;
   margin-top: 5px;
   margin-left: 5px;
 }
-.mega-wrapper .studentprofile {
+.studentprofile-dark .guitar-list {
+  position: absolute;
+  left: 450px;
+  top: 82px;
+}
+.studentprofile-dark .darbuka-list {
+  position: absolute;
+  left: 450px;
+  top: 175px;
+}
+
+.studentprofile {
   width: 100%;
   height: 45px;
   background-color: #5f6063;
 }
-.mega-wrapper .studentprofile img {
+.studentprofile img {
   border-radius: 50%;
   width: 35px;
   height: 35px;
   margin-top: 3px;
   margin-left: 5px;
+}
+.studentprofile .guitar-list {
+  position: absolute;
+  left: 450px;
+  top: 130px;
 }
 
 .user_profile {
@@ -78,15 +114,9 @@
   padding-left: 12px;
   border-radius: 50%;
 }
-<<<<<<< HEAD
 .user_profile h2 {
-  margin: 0;
-  padding-top: 15px;
-=======
-.mega-wrapper .user_profile h2 {
   margin: 0px;
   padding-top: 20px;
->>>>>>> 258db09280d64569014b7229274b81b1d9ef9edf
   padding-left: 10px;
   font-family: sans-serif;
   color: #2c4699;
@@ -131,20 +161,11 @@
   position: relative;
   justify-content: space-around;
 }
-<<<<<<< HEAD
-.container .btn {
-  width: 105px;
-  height: 75px;
-  background-color: #5f6063;
-  border: 0px;
-  border-radius: 15px;
-=======
-.mega-wrapper .container .button {
+.container .button {
   width: 120px;
   height: 70px;
   background-color: rgba(180, 180, 180, 0.37);
   border: none;
->>>>>>> 258db09280d64569014b7229274b81b1d9ef9edf
   color: white;
   padding: 20px;
   text-align: center;
@@ -152,31 +173,17 @@
   margin: 5px 4px;
   border-radius: 12px;
 }
-<<<<<<< HEAD
-.container .btn_wide {
-  margin: auto;
-  margin-bottom: 10px;
-=======
-.mega-wrapper .container .button:hover {
+.container .button:hover {
   background: #5FB2B8;
 }
-.mega-wrapper .container .button__wide {
->>>>>>> 258db09280d64569014b7229274b81b1d9ef9edf
+.container .button__wide {
   width: 300px;
   height: 30px;
   border-radius: 20px;
   padding: 7px;
 }
-<<<<<<< HEAD
-.container .btn--selected {
-  background-color: #5fb2b8;
-}
 
 .nav_bottom {
-  display: flex;
-=======
-.mega-wrapper .nav_bottom {
->>>>>>> 258db09280d64569014b7229274b81b1d9ef9edf
   margin-top: 10px;
   margin-bottom: 0px;
   background-color: white;
@@ -189,13 +196,13 @@
   display: inline-block;
   align-items: stretch;
 }
-.mega-wrapper .nav_bottom .back {
+.nav_bottom .back {
   margin: 5px;
   width: 25px;
   margin-left: 10px;
   padding-top: 3px;
 }
-.mega-wrapper .nav_bottom .next {
+.nav_bottom .next {
   font-family: sans-serif;
   padding: 5px;
   font-size: 16px;
