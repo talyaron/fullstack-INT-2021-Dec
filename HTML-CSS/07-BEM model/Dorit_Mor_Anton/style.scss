@@ -142,6 +142,10 @@ body {
                 background-color: rgba(180, 180, 180, 0.37);
                 border-radius: 15px;
                 margin: auto;
+
+                h4 {
+                    text-align: center;
+                }
             }
         .lines_wrapper{
             &__dark_row{

@@ -159,7 +159,7 @@
   .content{
     background-color: rgb(45,47,51);
   
-  .header{
+   .header{
     width: 100%;
     background-color: rgb(45,47,51);
     margin-top: 0px;
@@ -185,7 +185,7 @@
     }
 
     
-  }
+  
 
   .container{
     margin-top: 0px;
@@ -201,17 +201,18 @@
     justify-content: space-around;
     
 
-    .button{
+    .btn{
+      background-color: rgba(180, 180, 180, 0.37);
       width: 120px;
       height: 70px;
-      background-color: rgba(180, 180, 180, 0.37);
-      border: none;
       color: white;
       padding: 20px;
       text-align: center;
       font-size: 16px;
       margin: 5px 4px;
       border-radius: 12px;
+      border: none;
+
         &:hover {
             background: #5FB2B8;
         }
@@ -225,7 +226,7 @@
           }
         }
       }
-
+    }
   .nav_bottom{
     margin-top: 10px;
     margin-bottom: 0px;
@@ -258,6 +259,7 @@
         float: right;
         margin-right: 15px;
         margin-top: 5px;
+        border: none;
       }
   }
 //<<<<<<< HEAD
