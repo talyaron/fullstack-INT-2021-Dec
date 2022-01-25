@@ -13,11 +13,3 @@
   margin: auto;
   overflow: hidden;
 }
-.card .item {
-  background-color: rgba(187, 181, 181, 0.781);
-  width: 301px;
-  height: 50px;
-  margin: 50px;
-  margin-left: -1px;
-  margin-top: -1px;
-}
