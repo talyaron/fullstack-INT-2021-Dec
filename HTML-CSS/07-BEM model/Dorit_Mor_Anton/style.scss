@@ -167,19 +167,18 @@
             }
         }
         .lines_wrapper{
-            width:370px;
-            height:75px;
             &__dark_row{
                 position:relative;
-                height:63px;
-                width:370px;
+                display:flex;
+                height:90px;
+                width:239px;
                 &__profile{
                     display: inline-block;
                     img{
                         width: 65px;
                         height:65px;
                         position:absolute;
-                        top:1px;
+                        top:3px;
                         left:10px;
                     }
                 }
@@ -198,37 +197,39 @@
                     display:inline-block;
                     img{
                         position:absolute;
-                        right: 50px;
-                        top:30px;
+                        right: -75px;
+                        top:28px;
                         height: 30px;
                         width:30px;
                     }
                 }
-                &__size{
+                &dark__size{
                     display:inline-block;
                     p{
                         color:white;
                         font-size: 14px;
                         position:absolute;
                         top:24px;
-                        right:20px;
+                        right:-110px;
                     }
                 }        
             }
-            &__dark_row--clear{
-                background-color: rgb(109, 106, 106);
-                position:absolute;
+            &dark_row--clear{
+                position:relative;
+                top:400px;
+                left:200px;
+                background-color: rgb(231, 219, 219);
                 display:flex;
-                height:63px;
-                width:370px;
+                height:90px;
+                width:239px;
                 &__profile{
                     display: inline-block;
                     img{
-                        width: 58px;
-                        height:58px;
+                        width: 65px;
+                        height:65px;
                         position:absolute;
-                        top: 5px;
-                        left:20px;
+                        top:3px;
+                        left:10px;
                     }
                 }
                 &__name{
@@ -244,9 +245,9 @@
                 }
                 &__instrument{
                     display:inline-block;
-                    object{
+                    img{
                         position:absolute;
-                        right: 55px;
+                        right: -75px;
                         top:28px;
                         height: 30px;
                         width:30px;
@@ -259,11 +260,11 @@
                         font-size: 14px;
                         position:absolute;
                         top:24px;
-                        right:20px;
+                        right:-110px;
                     }
                 }        
             }
-           
+
         }
     }
     

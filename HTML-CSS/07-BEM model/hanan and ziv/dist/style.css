@@ -1,0 +1,34 @@
+body {
+  position: absolute;
+}
+
+.nav-top {
+  position: relative;
+  background-color: #46474b;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 400px;
+  height: 95px;
+  left: 700px;
+  top: 100px;
+}
+
+.bottom-nav {
+  position: relative;
+  background-color: #46474b;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 400px;
+  height: 95px;
+  top: 668px;
+  left: 700px;
+}
+
+.usera {
+  position: relative;
+  background-color: #292929;
+  width: 400px;
+  height: 53px;
+  left: 700px;
+  top: 100px;
+}
