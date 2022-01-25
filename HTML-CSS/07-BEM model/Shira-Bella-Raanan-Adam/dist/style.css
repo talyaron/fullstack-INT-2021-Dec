@@ -5,7 +5,7 @@ body {
 .screen_bella {
   width: 360px;
   height: 650px;
-  background-color: aqua;
+  background-color: #32363B;
   border-radius: 20px;
   margin: auto;
 }
@@ -13,12 +13,25 @@ body {
   position: relative;
   display: flex;
   align-items: center;
+  background-color: #ebe7e7;
+  height: 70px;
+  border-radius: 20px 20px 0 0;
+}
+.screen_bella .top_header img {
+  width: 50px;
+  height: 50px;
+  margin-right: 12px;
 }
 .screen_bella .top_header .avatar_1,
 .screen_bella .top_header .admin_1 {
   position: relative;
-  top: 20px;
-  left: 20px;
+  left: 16px;
+}
+.screen_bella .content {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  color: azure;
 }
 
 .screen {
