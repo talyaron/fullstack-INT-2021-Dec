@@ -137,15 +137,15 @@
 .card .main_body .lines_wrapper__dark_row {
   position: relative;
   display: flex;
-  height: 65px;
+  height: 55px;
   width: 370px;
 }
 .card .main_body .lines_wrapper__dark_row__profile {
   display: inline-block;
 }
 .card .main_body .lines_wrapper__dark_row__profile img {
-  width: 65px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   position: absolute;
   top: 3px;
   left: 10px;
@@ -159,7 +159,7 @@
   font-weight: bolder;
   position: absolute;
   left: 85px;
-  top: 20px;
+  top: 7px;
 }
 .card .main_body .lines_wrapper__dark_row__instrument {
   display: inline-block;
@@ -167,7 +167,7 @@
 .card .main_body .lines_wrapper__dark_row__instrument img {
   position: absolute;
   right: 50px;
-  top: 28px;
+  top: 15px;
   height: 30px;
   width: 30px;
 }
@@ -178,22 +178,22 @@
   color: white;
   font-size: 14px;
   position: absolute;
-  top: 24px;
+  top: 12px;
   right: 15px;
 }
 .card .main_body .lines_wrapper__dark_row--clear {
   background-color: #727171;
   position: relative;
   display: flex;
-  height: 65px;
+  height: 55px;
   width: 370px;
 }
 .card .main_body .lines_wrapper__dark_row--clear__profile {
   display: inline-block;
 }
 .card .main_body .lines_wrapper__dark_row--clear__profile img {
-  width: 65px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   position: absolute;
   top: 3px;
   left: 10px;
@@ -207,7 +207,7 @@
   font-weight: bolder;
   position: absolute;
   left: 85px;
-  top: 20px;
+  top: 7px;
 }
 .card .main_body .lines_wrapper__dark_row--clear__instrument {
   display: inline-block;
@@ -215,7 +215,7 @@
 .card .main_body .lines_wrapper__dark_row--clear__instrument img {
   position: absolute;
   right: 50px;
-  top: 28px;
+  top: 12px;
   height: 30px;
   width: 30px;
 }
@@ -226,7 +226,7 @@
   color: white;
   font-size: 14px;
   position: absolute;
-  top: 24px;
+  top: 15px;
   right: 15px;
 }
 .card .footer .bottom-header {
