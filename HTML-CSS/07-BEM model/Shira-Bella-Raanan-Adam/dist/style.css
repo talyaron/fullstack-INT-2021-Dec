@@ -1,4 +1,4 @@
-body {
+HEAD body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
@@ -173,7 +173,7 @@ body {
 .screen .user_row .row_instrument img {
   width: 38px;
 }
-.screen .user_row .row_location {
+.screen .user_row .row_instrument .row_location {
   position: absolute;
   margin-top: 17px;
   margin-left: 330px;
@@ -216,13 +216,13 @@ body {
   width: 70px;
   height: 50px;
   position: absolute;
-  margin-left: 290px;
+  margin-left: 280px;
   margin-top: 5px;
 }
 .screen .user_row_light .row_instrument img {
   width: 38px;
 }
-.screen .user_row_light .row_location {
+.screen .user_row_light .row_instrument .row_location {
   position: absolute;
   margin-top: 17px;
   margin-left: 330px;
@@ -232,59 +232,127 @@ body {
   width: 390px;
   height: 250px;
 }
-.screen .bottom_nav {
+
+.bottom_nav {
   width: 390px;
   height: 100px;
   background-color: #70737a;
   border-radius: 0% 0% 20% 20%;
   position: relative;
 }
-.screen .bottom_nav .icon_back {
+.bottom_nav .icon_back {
   position: absolute;
   margin-top: 17px;
   margin-left: 40px;
 }
-.screen .bottom_nav .icon_back img {
+.bottom_nav .icon_back img {
   width: 60px;
 }
-.screen .bottom_nav .icon_settings {
+.bottom_nav .icon_settings {
   position: absolute;
   margin-top: 22px;
   margin-left: 100px;
 }
-.screen .bottom_nav .icon_settings img {
+.bottom_nav .icon_settings img {
   width: 50px;
 }
-.screen .bottom_nav .icon_chat {
+.bottom_nav .icon_chat {
   position: absolute;
   margin-top: 20px;
   margin-left: 160px;
 }
-.screen .bottom_nav .icon_chat img {
+.bottom_nav .icon_chat img {
   width: 60px;
 }
-.screen .bottom_nav .icon_user_page {
+.bottom_nav .icon_user_page {
   position: absolute;
   margin-top: 29px;
   margin-left: 230px;
 }
-.screen .bottom_nav .icon_user_page img {
+.bottom_nav .icon_user_page img {
   width: 40px;
 }
-.screen .bottom_nav .icon_home {
+.bottom_nav .icon_home {
   position: absolute;
   margin-top: 23px;
   margin-left: 280px;
 }
-.screen .bottom_nav .icon_home img {
+.bottom_nav .icon_home img {
   width: 50px;
 }
-.screen .bottom_nav button {
-  z-index: 3;
-  width: max-content;
-  margin-top: 75px;
-  position: absolute;
-  margin-left: 170px;
-  background-color: #70737a;
-  border: none;
+
+.screen_bella {
+  width: 360px;
+  height: 650px;
+  background-color: #32363B;
+  border-radius: 20px;
+  margin: auto;
+}
+.screen_bella .top__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #ebe7e7;
+  height: 70px;
+  border-radius: 20px 20px 0 0;
+}
+.screen_bella .top__header img {
+  width: 45px;
+  height: 45px;
+  margin-right: 12px;
+}
+.screen_bella .top__header .avatar__1,
+.screen_bella .top__header .admin--1 {
+  position: relative;
+  left: 16px;
+  color: #053266;
+  font-weight: 600;
+}
+.screen_bella .content {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  color: azure;
+}
+.screen_bella .content h1 {
+  margin: 12px 0 8px 0;
+  color: #00C0C3;
+}
+.screen_bella .content h3 {
+  margin: 4px;
+}
+.screen_bella .content h3 span {
+  color: #00C0C3;
+}
+.screen_bella .content .buttons {
+  display: flex;
+  justify-content: center;
+}
+.screen_bella .content .buttons li {
+  list-style-type: none;
+  width: 130px;
+  height: 85px;
+  background-color: #6A6B6F;
+  padding: 16px;
+  margin: 16px 8px;
+  line-height: 1.4;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+.screen_bella .content .buttons .selected {
+  background-color: #00C0C3;
+}
+.screen_bella .content .buttons .right,
+.screen_bella .content .buttons .left {
+  padding: 0;
+  margin: 0;
+}
+.screen_bella .content .button--down {
+  width: 285px;
+  height: 40px;
+  padding: 8px 20px 0 20px;
+  line-height: 1.4;
+  background-color: #6A6B6F;
+  box-sizing: border-box;
+  border-radius: 50px;
 }

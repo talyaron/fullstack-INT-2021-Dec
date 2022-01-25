@@ -1,7 +1,3 @@
-body {
-  background-color: #e0e0e0;
-}
-
 .card {
   margin: auto;
   width: 370px;
@@ -92,6 +88,22 @@ body {
   border-top-right-radius: 18px;
   background-color: white;
 }
+.card .top-header_2 .text-wrapper {
+  position: relative;
+  display: flex;
+}
+.card .top-header_2 .text-wrapper h4 {
+  color: #bb2424;
+  padding-left: 10px;
+}
+.card .top-header_2 .text-wrapper h3 {
+  width: 35px;
+  height: 35px;
+  color: white;
+  border-radius: 50%;
+  background-color: #2D2F33;
+  text-align: center;
+}
 .card .main_body .top_text {
   text-align: center;
 }
@@ -112,6 +124,7 @@ body {
 }
 .card .main_body .buttons .button_big h4 {
   text-align: center;
+  padding-top: 5px;
 }
 .card .main_body .smaller_btn {
   width: 247px;
@@ -122,19 +135,20 @@ body {
 }
 .card .main_body .smaller_btn h4 {
   text-align: center;
+  padding-top: 5px;
 }
 .card .main_body .lines_wrapper__dark_row {
   position: relative;
   display: flex;
-  height: 90px;
-  width: 239px;
+  height: 55px;
+  width: 370px;
 }
 .card .main_body .lines_wrapper__dark_row__profile {
   display: inline-block;
 }
 .card .main_body .lines_wrapper__dark_row__profile img {
-  width: 65px;
-  height: 65px;
+  width: 50px;
+  height: 50px;
   position: absolute;
   top: 3px;
   left: 10px;
@@ -148,15 +162,15 @@ body {
   font-weight: bolder;
   position: absolute;
   left: 85px;
-  top: 20px;
+  top: 7px;
 }
 .card .main_body .lines_wrapper__dark_row__instrument {
   display: inline-block;
 }
 .card .main_body .lines_wrapper__dark_row__instrument img {
   position: absolute;
-  right: -75px;
-  top: 28px;
+  right: 50px;
+  top: 15px;
   height: 30px;
   width: 30px;
 }
@@ -167,12 +181,62 @@ body {
   color: white;
   font-size: 14px;
   position: absolute;
-  top: 24px;
-  right: -110px;
+  top: 12px;
+  right: 15px;
 }
-.card .main_body .lines_wrapper--clear {
+.card .main_body .lines_wrapper__dark_row--clear {
+  background-color: #727171;
   position: relative;
   display: flex;
-  height: 90px;
-  width: 239px;
+  height: 55px;
+  width: 370px;
+}
+.card .main_body .lines_wrapper__dark_row--clear__profile {
+  display: inline-block;
+}
+.card .main_body .lines_wrapper__dark_row--clear__profile img {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 3px;
+  left: 10px;
+}
+.card .main_body .lines_wrapper__dark_row--clear__name {
+  display: inline-block;
+}
+.card .main_body .lines_wrapper__dark_row--clear__name p {
+  color: white;
+  font-size: 16px;
+  font-weight: bolder;
+  position: absolute;
+  left: 85px;
+  top: 7px;
+}
+.card .main_body .lines_wrapper__dark_row--clear__instrument {
+  display: inline-block;
+}
+.card .main_body .lines_wrapper__dark_row--clear__instrument img {
+  position: absolute;
+  right: 50px;
+  top: 12px;
+  height: 30px;
+  width: 30px;
+}
+.card .main_body .lines_wrapper__dark_row--clear__size {
+  display: inline-block;
+}
+.card .main_body .lines_wrapper__dark_row--clear__size p {
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.card .footer .bottom-header {
+  width: 370px;
+  height: 51px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  background-color: white;
+  margin-top: 26px;
 }

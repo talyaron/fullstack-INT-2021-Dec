@@ -1,0 +1,75 @@
+body {
+  position: absolute;
+}
+
+.nav-top {
+  position: relative;
+  background-color: #5c5656;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 400px;
+  height: 95px;
+  left: 700px;
+  top: 100px;
+}
+
+.bottom-nav {
+  position: relative;
+  background-color: #524b4b;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 400px;
+  height: 95px;
+  top: 100px;
+  left: 700px;
+}
+
+.usera {
+  position: relative;
+  background-color: #292929;
+  width: 400px;
+  height: 53px;
+  left: 700px;
+  top: 100px;
+}
+
+.userb {
+  position: relative;
+  background-color: gray;
+  width: 400px;
+  height: 53px;
+  left: 700px;
+  top: 100px;
+}
+
+.profile-pic {
+  position: relative;
+  border-radius: 100%;
+  width: 65px;
+  height: 65px;
+  left: 20px;
+  top: 10px;
+}
+
+#loction {
+  position: relative;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  left: 120px;
+  bottom: 70px;
+}
+
+#playtool {
+  position: relative;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  left: 120px;
+  bottom: 95px;
+}
+
+.loctionpic {
+  position: relative;
+  width: 20px;
+  bottom: 105px;
+  left: 95px;
+}
