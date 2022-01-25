@@ -50,7 +50,6 @@ body {
 }
 .header .logobbc {
   height: 100%;
-  display: flex;
 }
 .header ul {
   list-style-type: none;
@@ -64,6 +63,7 @@ body {
 .header ul li {
   float: left;
   border-right: 1px solid white;
+  padding: 6px;
 }
 .header ul li a .navi {
   color: white;
