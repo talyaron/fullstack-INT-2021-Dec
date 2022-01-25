@@ -167,3 +167,9 @@ body {
   top: 24px;
   right: -110px;
 }
+.card .main_body .lines_wrapper--clear {
+  position: relative;
+  display: flex;
+  height: 90px;
+  width: 239px;
+}
