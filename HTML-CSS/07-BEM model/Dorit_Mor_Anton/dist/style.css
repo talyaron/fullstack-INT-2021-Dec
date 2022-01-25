@@ -1,3 +1,7 @@
+body {
+  background-color: #e0e0e0;
+}
+
 .card {
   margin: auto;
   width: 370px;
@@ -108,7 +112,6 @@
 }
 .card .main_body .buttons .button_big h4 {
   text-align: center;
-  gap: opx;
 }
 .card .main_body .buttons .smaller_btn {
   width: 247px;
