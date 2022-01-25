@@ -113,7 +113,7 @@ body {
 .card .main_body .buttons .button_big h4 {
   text-align: center;
 }
-.card .main_body .buttons .smaller_btn {
+.card .main_body .smaller_btn {
   width: 247px;
   height: 30px;
   background-color: rgba(180, 180, 180, 0.37);
@@ -166,4 +166,10 @@ body {
   position: absolute;
   top: 24px;
   right: -110px;
+}
+.card .main_body .lines_wrapper--clear {
+  position: relative;
+  display: flex;
+  height: 90px;
+  width: 239px;
 }
