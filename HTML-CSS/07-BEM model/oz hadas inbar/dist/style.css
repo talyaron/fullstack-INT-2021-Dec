@@ -112,7 +112,7 @@
 .mega-wrapper .content h3 .torq {
   color: #5fb2b8;
 }
-.mega-wrapper .container {
+.mega-wrapper .content .container {
   margin-top: 0px;
   margin: auto;
   width: 80%;
@@ -125,22 +125,22 @@
   position: relative;
   justify-content: space-around;
 }
-.mega-wrapper .container .button {
+.mega-wrapper .content .container .btn {
+  background-color: rgba(180, 180, 180, 0.37);
   width: 120px;
   height: 70px;
-  background-color: rgba(180, 180, 180, 0.37);
-  border: none;
   color: white;
   padding: 20px;
   text-align: center;
   font-size: 16px;
   margin: 5px 4px;
   border-radius: 12px;
+  border: none;
 }
-.mega-wrapper .container .button:hover {
+.mega-wrapper .content .container .btn:hover {
   background: #5FB2B8;
 }
-.mega-wrapper .container .button__wide {
+.mega-wrapper .content .container .btn__wide {
   width: 300px;
   height: 30px;
   border-radius: 20px;
@@ -176,6 +176,7 @@
   float: right;
   margin-right: 15px;
   margin-top: 5px;
+  border: none;
 }
 .mega-wrapper .block {
   background-color: rgba(7, 7, 7, 0.582);
