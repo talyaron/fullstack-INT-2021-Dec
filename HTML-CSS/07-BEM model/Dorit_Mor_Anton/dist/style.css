@@ -186,7 +186,7 @@
 }
 .card .main_body .lines_wrapper__dark_row--clear {
   background-color: #6d6a6a;
-  position: absolute;
+  position: relative;
   display: flex;
   height: 63px;
   width: 370px;
@@ -231,7 +231,7 @@
   position: absolute;
   top: 24px;
   right: 20px;
-} 
+}
 .card .footer .bottom-header {
   width: 370px;
   height: 51px;
@@ -239,5 +239,4 @@
   border-bottom-right-radius: 18px;
   background-color: white;
   margin-top: 26px;
-
 }
