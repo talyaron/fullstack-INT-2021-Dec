@@ -276,5 +276,44 @@
             background-color: white;
             margin-top: 26px;
         }
+        .wrappFooter{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            position:relative;
+            align-items: center;
+            margin-top: 20px;
+            &__backPage{
+                img{
+                    width:55px;
+                    height:55px;
+                }
+            }
+            &__settings{
+                img{
+                    width:55px;
+                    height:55px;
+                } 
+            }
+            &__chat{
+                img{
+                    width:55px;
+                    height:55px;
+                } 
+            }
+            &__update{
+                img{
+                    width:55px;
+                    height:55px;
+                } 
+            }
+            &__home{
+                img{
+                    width:55px;
+                    height:55px;
+                } 
+            }
+
+        }
     }
 }

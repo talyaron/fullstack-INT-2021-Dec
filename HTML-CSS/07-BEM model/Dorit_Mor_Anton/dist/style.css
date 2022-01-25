@@ -240,3 +240,31 @@
   background-color: white;
   margin-top: 26px;
 }
+.card .footer .wrappFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  margin-top: 20px;
+}
+.card .footer .wrappFooter__backPage img {
+  width: 55px;
+  height: 55px;
+}
+.card .footer .wrappFooter__settings img {
+  width: 55px;
+  height: 55px;
+}
+.card .footer .wrappFooter__chat img {
+  width: 55px;
+  height: 55px;
+}
+.card .footer .wrappFooter__update img {
+  width: 55px;
+  height: 55px;
+}
+.card .footer .wrappFooter__home img {
+  width: 55px;
+  height: 55px;
+}
