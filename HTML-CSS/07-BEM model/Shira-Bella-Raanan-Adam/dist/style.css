@@ -280,6 +280,12 @@ HEAD body {
 .bottom_nav .icon_home img {
   width: 50px;
 }
+.bottom_nav button {
+  margin-top: 75px;
+  margin-left: 44%;
+  border: none;
+  background-color: #70737a;
+}
 
 .screen_bella {
   width: 360px;
