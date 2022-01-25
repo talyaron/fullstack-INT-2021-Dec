@@ -142,6 +142,10 @@ body {
                 background-color: rgba(180, 180, 180, 0.37);
                 border-radius: 15px;
                 margin: auto;
+
+                h4 {
+                    text-align: center;
+                }
             }
         .lines_wrapper{
             &__dark_row{
@@ -180,7 +184,7 @@ body {
                         width:30px;
                     }
                 }
-                &__size{
+                &dark__size{
                     display:inline-block;
                     p{
                         color:white;
@@ -191,7 +195,7 @@ body {
                     }
                 }        
             }
-            &--clear{
+            &dark_row--clear{
                 position:relative;
                 top:400px;
                 left:200px;
