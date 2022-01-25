@@ -137,8 +137,8 @@
 .card .main_body .lines_wrapper__dark_row {
   position: relative;
   display: flex;
-  height: 90px;
-  width: 239px;
+  height: 75px;
+  width: 370px;
 }
 .card .main_body .lines_wrapper__dark_row__profile {
   display: inline-block;
@@ -166,7 +166,7 @@
 }
 .card .main_body .lines_wrapper__dark_row__instrument img {
   position: absolute;
-  right: -75px;
+  right: 30px;
   top: 28px;
   height: 30px;
   width: 30px;
@@ -179,16 +179,16 @@
   font-size: 14px;
   position: absolute;
   top: 24px;
-  right: -110px;
+  right: 50px;
 }
 .card .main_body .lines_wrapperdark_row--clear {
   position: relative;
-  display: flex;
-  height: 90px;
-  width: 239px;
   top: 400px;
   left: 200px;
   background-color: #e7dbdb;
+  display: flex;
+  height: 90px;
+  width: 239px;
 }
 .card .main_body .lines_wrapperdark_row--clear__profile {
   display: inline-block;
