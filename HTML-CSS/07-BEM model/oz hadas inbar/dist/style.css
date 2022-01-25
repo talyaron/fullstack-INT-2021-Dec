@@ -61,7 +61,7 @@
 }
 
 .user_profile {
-  height: 50px;
+  height: 40px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -78,22 +78,19 @@
   padding-left: 12px;
   border-radius: 50%;
 }
-<<<<<<< HEAD
 .user_profile h2 {
-  margin: 0;
-  padding-top: 15px;
-=======
-.mega-wrapper .user_profile h2 {
   margin: 0px;
   padding-top: 20px;
->>>>>>> 258db09280d64569014b7229274b81b1d9ef9edf
   padding-left: 10px;
   font-family: sans-serif;
   color: #2c4699;
   font-size: 18px;
 }
 
-.header {
+.content {
+  background-color: #2d2f33;
+}
+.content .header {
   width: 100%;
   background-color: #2d2f33;
   margin-top: 0px;
@@ -102,19 +99,19 @@
   text-align: center;
   font-family: sans-serif;
 }
-.header h1 {
+.content h1 {
   margin: 0px;
   color: #5fb2b8;
 }
-.header h2 {
+.content h2 {
   margin: 0px;
   color: white;
 }
-.header h3 {
+.content h3 {
   margin: 0px;
   color: #bdc9ef;
 }
-.header h3 .torq {
+.content h3 .torq {
   color: #5fb2b8;
 }
 
@@ -131,20 +128,11 @@
   position: relative;
   justify-content: space-around;
 }
-<<<<<<< HEAD
-.container .btn {
-  width: 105px;
-  height: 75px;
-  background-color: #5f6063;
-  border: 0px;
-  border-radius: 15px;
-=======
-.mega-wrapper .container .button {
+.container .button {
   width: 120px;
   height: 70px;
   background-color: rgba(180, 180, 180, 0.37);
   border: none;
->>>>>>> 258db09280d64569014b7229274b81b1d9ef9edf
   color: white;
   padding: 20px;
   text-align: center;
@@ -152,31 +140,17 @@
   margin: 5px 4px;
   border-radius: 12px;
 }
-<<<<<<< HEAD
-.container .btn_wide {
-  margin: auto;
-  margin-bottom: 10px;
-=======
-.mega-wrapper .container .button:hover {
+.container .button:hover {
   background: #5FB2B8;
 }
-.mega-wrapper .container .button__wide {
->>>>>>> 258db09280d64569014b7229274b81b1d9ef9edf
+.container .button__wide {
   width: 300px;
   height: 30px;
   border-radius: 20px;
   padding: 7px;
 }
-<<<<<<< HEAD
-.container .btn--selected {
-  background-color: #5fb2b8;
-}
 
 .nav_bottom {
-  display: flex;
-=======
-.mega-wrapper .nav_bottom {
->>>>>>> 258db09280d64569014b7229274b81b1d9ef9edf
   margin-top: 10px;
   margin-bottom: 0px;
   background-color: white;
@@ -189,13 +163,13 @@
   display: inline-block;
   align-items: stretch;
 }
-.mega-wrapper .nav_bottom .back {
+.nav_bottom .back {
   margin: 5px;
   width: 25px;
   margin-left: 10px;
   padding-top: 3px;
 }
-.mega-wrapper .nav_bottom .next {
+.nav_bottom .next {
   font-family: sans-serif;
   padding: 5px;
   font-size: 16px;
