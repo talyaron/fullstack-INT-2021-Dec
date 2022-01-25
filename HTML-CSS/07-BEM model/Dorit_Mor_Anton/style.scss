@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(224, 224, 224);
+}
+
 .card{
     margin: auto;
     width: 370px;
@@ -129,18 +133,16 @@
                     border-radius: 15px;
                     h4 {
                          text-align: center;
-                         gap: opx;
-                    }
-                   
+                    } 
                 }
-                .smaller_btn {
-                    width: 247px;
-                    height: 30px;
-                    background-color: rgba(180, 180, 180, 0.37);
-                    border-radius: 15px;
-                    margin: auto;
-                }
-        }
+            }
+            .smaller_btn {
+                width: 247px;
+                height: 30px;
+                background-color: rgba(180, 180, 180, 0.37);
+                border-radius: 15px;
+                margin: auto;
+            }
         .lines_wrapper{
             &__dark_row{
                 position:relative;
@@ -188,6 +190,58 @@
                         right:-110px;
                     }
                 }        
+            }
+            &--clear{
+                position:relative;
+                top:400px;
+                left:200px;
+                background-color: rgb(231, 219, 219);
+                display:flex;
+                height:90px;
+                width:239px;
+                &__profile{
+                    display: inline-block;
+                    img{
+                        width: 65px;
+                        height:65px;
+                        position:absolute;
+                        top:3px;
+                        left:10px;
+                    }
+                }
+                &__name{
+                    display:inline-block;
+                    p{
+                        color:white;
+                        font-size: 16px;
+                        font-weight: bolder;
+                        position:absolute;
+                        left:85px;
+                        top:20px;
+                    }
+                }
+                &__instrument{
+                    display:inline-block;
+                    img{
+                        position:absolute;
+                        right: -75px;
+                        top:28px;
+                        height: 30px;
+                        width:30px;
+                    }
+                }
+                &__size{
+                    display:inline-block;
+                    p{
+                        color:white;
+                        font-size: 14px;
+                        position:absolute;
+                        top:24px;
+                        right:-110px;
+                    }
+                }        
+            }
+
             }
 
         }
