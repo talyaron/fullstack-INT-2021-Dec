@@ -334,31 +334,33 @@ body {
 
 //---Bottom Bar---//
 .bottom_nav {
-   
     width: 390px;
     height: 100px;
     background-color: rgb(112, 115, 122);
     border-radius: 0 0 20px 20px;
     position: relative;
+    top: -5px;
 
     
                 //  * * Shira's_animation: * *
+
                 animation-name:blue_border_to_menu ;
                 animation-duration: 1s;
                 animation-iteration-count: infinite;
 
                 @keyframes blue_border_to_menu {
                     0%{
-                        border: 3px solid white;
+                        border: 1px solid white;
                     }
                     50%{
-                        border: 3px solid aqua;
+                        border: 1px solid red;
                     }
                     100%{
-                        border: 3px solid white;
+                        border: 1px solid white;
                     }
             
                 }
+
                 // * * end_of_Shira's_animation * *
 
     .icon_back {
