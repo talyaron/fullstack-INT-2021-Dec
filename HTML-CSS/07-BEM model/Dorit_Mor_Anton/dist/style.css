@@ -17,6 +17,7 @@
   position: relative;
 }
 .card .top_header__firstRow {
+  position: relative;
   display: flex;
   flex-direction: row;
 }
@@ -27,7 +28,10 @@
   height: 95px;
   width: 95px;
 }
-.card .top_header__firstRow__logo object h1 {
+.card .top_header__firstRow__logo h1 {
+  position: absolute;
+  left: 50px;
+  top: 35px;
   color: white;
   font-size: 14px;
 }
