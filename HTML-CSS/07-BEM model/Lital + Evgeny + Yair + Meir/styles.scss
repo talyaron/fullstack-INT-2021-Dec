@@ -3,7 +3,10 @@
     height: 619px;
     background-color: rgb(49, 51, 54);
     margin: auto;
-    border-radius: 10%;
+    border-radius: 10% ;
+    
+
+    
 
     .top_nav {
         border-top-left-radius: 10%;
@@ -16,6 +19,14 @@
         flex-direction: column;
         padding: 3px;
 
+        #username_pic{
+             width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            bottom: 1px;
+            position: relative;
+        }
+        
         .username_pic {
             display: flex;
             flex-direction: column;
@@ -39,7 +50,14 @@
             }
 
         }
-
+        .big-name{
+            position: absolute;
+            top: 9%;
+            right: 76%;
+            color: blue;
+        }
+            
+        
         .user__location {
 
             display: flex;
@@ -115,8 +133,8 @@
     width: 424px;
     height: 600px;
     background-color: rgb(49, 51, 54);
-    border-radius: 8%;
-
+    border-radius: 0% 0% 8% 8% ;
+    
     .username__box {
         width: 424px;
         height: 40px;
@@ -213,3 +231,107 @@
         color: white;
     }
 }
+
+
+body{
+    background-color: grey;
+}
+
+.white{
+    background-color: white;
+}
+.boxs{
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    .inside-text{
+
+        margin-top: 11px;
+
+    
+        .big-text{
+            color: cadetblue;
+            margin: -21px;
+        }
+        .smaller-text{
+            color: white;
+            margin: -21px;
+        }
+        .smallest-text{
+            color: rgb(113, 132, 240);
+            display: flex;
+            gap: 1rem;
+            margin: 0px;
+            #reg{
+                color: cadetblue;
+            }
+      
+        }
+    }
+    .columms{
+        display: flex;
+        
+        height: 342px;
+        button{
+            background-color: rgba(128, 128, 128, 0);
+            border: none;
+        }
+        
+        justify-content: space-evenly;
+        .firstcolumm{
+            display: flex;
+            margin-left: 20%;
+        }
+        .secondcolumm{
+            display: flex;
+            
+            left: 10px;
+        }
+
+
+        .littlebox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: grey;
+            height: 78px;
+            width: 121px;
+            margin: 10px;
+            border-radius: 16%;
+            padding: 20px;
+            color: white;
+            cursor: pointer;
+        }
+        .littlebox:hover {
+           
+            background-color: #59bcc9a9;
+            color: rgba(0, 0, 0, 0.658);
+        }
+    }
+
+      .bottom-text-area{
+        display: flex;
+        position: relative;
+        height: 37px;
+        width: 275px;
+        border: 2px solid rgba(255, 0, 0, 0);
+        border-radius: 8px;
+        padding: 5px;
+        top: 30px;
+        background-color: grey;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        cursor: pointer;
+          }
+          .bottom-text-area:hover{
+            background-color: #59bcc9a9;
+            color: rgba(0, 0, 0, 0.658);
+
+          }   
+
+}
+
