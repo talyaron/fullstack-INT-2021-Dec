@@ -17,14 +17,14 @@
     top: 0;
     left: 0vw;
   }
-  10% {
+  33% {
     background-image: url(https://www.theknot.com/tk-media/images/8d7f9239-ddb5-47e7-8c81-eb39283c8262~rs_768.h);
     border-radius: 200px;
     top: 2vh;
     left: 0vw;
   }
-  30% {
-    background-image: url(https://www.theknot.com/tk-media/images/8d7f9239-ddb5-47e7-8c81-eb39283c8262~rs_768.h);
+  66% {
+    background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/spring-flowers-1613759017.jpg?crop=0.669xw:1.00xh;0.0635xw,0&resize=640:*);
     border-radius: 200px;
     top: 4vh;
     left: 10vw;
