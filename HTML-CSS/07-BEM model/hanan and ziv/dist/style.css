@@ -73,3 +73,10 @@ body {
   bottom: 105px;
   left: 95px;
 }
+
+.guitar {
+  position: relative;
+  width: 20px;
+  bottom: 130px;
+  left: 340px;
+}
