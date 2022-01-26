@@ -1,0 +1,40 @@
+.box {
+  background-color: rgb(99, 149, 192);
+  width: 400px;
+  height: 400px;
+  border-radius: 0;
+  position: relative;
+  animation-name: changColor;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+//   animation-direction: reverse;
+  background-size: cover;
+}
+
+@keyframes changColor {
+  0% {
+    // background-color: red;
+    background-image: url(https://cdn.britannica.com/q:60/88/194588-050-967E8D17/flowers.jpg);
+    border-radius: 0px;
+    top: 0;
+    left:0vw;
+  }
+  10% {
+    background-image: url(https://www.theknot.com/tk-media/images/8d7f9239-ddb5-47e7-8c81-eb39283c8262~rs_768.h);
+    border-radius: 200px;
+    top: 2vh;
+    left:0vw;
+  }
+  30% {
+    background-image: url(https://www.theknot.com/tk-media/images/8d7f9239-ddb5-47e7-8c81-eb39283c8262~rs_768.h);
+    border-radius: 200px;
+    top: 4vh;
+    left:10vw;
+  }
+  100% {
+    background-image: url(https://www.theknot.com/tk-media/images/8d7f9239-ddb5-47e7-8c81-eb39283c8262~rs_768.h);
+    border-radius: 200px;
+    top: 5vh;
+    left:20vw;
+  }
+}
