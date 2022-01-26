@@ -16,6 +16,13 @@
   flex-direction: column;
   padding: 3px;
 }
+.wrapper .top_nav #username_pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  bottom: 1px;
+  position: relative;
+}
 .wrapper .top_nav .username_pic {
   display: flex;
   flex-direction: column;
@@ -32,6 +39,12 @@
 .wrapper .top_nav .username_pic .user__name {
   color: white;
   font-size: 10px;
+}
+.wrapper .top_nav .big-name {
+  position: absolute;
+  top: 9%;
+  right: 76%;
+  color: blue;
 }
 .wrapper .top_nav .user__location {
   display: flex;
@@ -93,7 +106,7 @@
   width: 424px;
   height: 600px;
   background-color: #313336;
-  border-radius: 8%;
+  border-radius: 0% 0% 8% 8%;
 }
 .usernames__wrapper .username__box {
   width: 424px;
@@ -175,4 +188,92 @@
 .button_nav .button__nav:hover {
   background-color: #59bcc9a9;
   color: white;
+}
+
+body {
+  background-color: grey;
+}
+
+.white {
+  background-color: white;
+}
+
+.boxs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.boxs .inside-text {
+  margin-top: 11px;
+}
+.boxs .inside-text .big-text {
+  color: cadetblue;
+  margin: -21px;
+}
+.boxs .inside-text .smaller-text {
+  color: white;
+  margin: -21px;
+}
+.boxs .inside-text .smallest-text {
+  color: #7184f0;
+  display: flex;
+  gap: 1rem;
+  margin: 0px;
+}
+.boxs .inside-text .smallest-text #reg {
+  color: cadetblue;
+}
+.boxs .columms {
+  display: flex;
+  height: 342px;
+  justify-content: space-evenly;
+}
+.boxs .columms button {
+  background-color: rgba(128, 128, 128, 0);
+  border: none;
+}
+.boxs .columms .firstcolumm {
+  display: flex;
+  margin-left: 20%;
+}
+.boxs .columms .secondcolumm {
+  display: flex;
+  left: 10px;
+}
+.boxs .columms .littlebox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: grey;
+  height: 78px;
+  width: 121px;
+  margin: 10px;
+  border-radius: 16%;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+}
+.boxs .columms .littlebox:hover {
+  background-color: #59bcc9a9;
+  color: rgba(0, 0, 0, 0.658);
+}
+.boxs .bottom-text-area {
+  display: flex;
+  position: relative;
+  height: 37px;
+  width: 275px;
+  border: 2px solid rgba(255, 0, 0, 0);
+  border-radius: 8px;
+  padding: 5px;
+  top: 30px;
+  background-color: grey;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+.boxs .bottom-text-area:hover {
+  background-color: #59bcc9a9;
+  color: rgba(0, 0, 0, 0.658);
 }
