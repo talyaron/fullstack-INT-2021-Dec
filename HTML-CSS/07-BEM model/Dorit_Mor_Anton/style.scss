@@ -14,6 +14,7 @@
         flex-direction: column; 
         position: relative;
         &__firstRow{
+            position: relative;
             display: flex;
             flex-direction: row;
             &__logo{
@@ -23,10 +24,13 @@
                     top:0px;
                     height: 95px;
                     width:95px;
-                    h1{
-                        color:white;
-                        font-size:14px ;
-                    }
+                }    
+                h1{
+                    position:absolute;
+                    left: 50px;
+                    top:35px;
+                    color:white;
+                    font-size:14px ;
                 }
             }
             &__img1{ 
@@ -107,23 +111,27 @@
         background-color: white;
 
         .text-wrapper  {
-            position: relative;
+            display: flex;
+            padding-left: 13px;
+            height: 51px;
+            align-items: center;
+            
             .ellipse-shape {
-                position: absolute;
-                width: 32px;
-                height: 32px;
-                background-color: #2D2F33;
-                border-radius: 50%;
-                
                 h3 {
                     color: rgb(255, 255, 255); 
-                    padding-left: 8px;
-                    margin-bottom: 5px;
+                    width: 32px;
+                    height: 32px;
+                    background-color: #2D2F33;
+                    border-radius: 50%;
+                    text-align: center;
+                    display: table-cell;
+                    vertical-align: middle;
+                    
                 }
             }
             h4 {
                 color: rgb(36, 187, 104);  
-                position: absolute;  
+                padding-left: 6px;
             }
         }
     }
@@ -276,6 +284,27 @@
             border-bottom-right-radius: 18px;
             background-color: white;
             margin-top: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            img {
+                width: 45px;
+                height: 45px;
+            }
+
+            .next-btn {
+                padding-right: 12px;
+                h3 {
+                    width: 70px;
+                    height: 35px;
+                    background-color: yellowgreen;
+                    display: table-cell;
+                    text-align: center;
+                    vertical-align: middle;
+                    border-radius: 35%;
+                }
+            }
         }
         .wrappFooter{
             display:flex;
