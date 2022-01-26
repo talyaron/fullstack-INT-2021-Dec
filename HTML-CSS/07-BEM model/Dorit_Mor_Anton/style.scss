@@ -121,17 +121,22 @@
                     color: rgb(255, 255, 255); 
                     width: 32px;
                     height: 32px;
-                    background-color: #2D2F33;
+                    background-color: #64728d;
                     border-radius: 50%;
                     text-align: center;
                     display: table-cell;
                     vertical-align: middle;
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 500;
                     
                 }
             }
             h4 {
-                color: rgb(36, 187, 104);  
+                color: #2e5090;  
                 padding-left: 6px;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 500;
             }
         }
     }
@@ -141,6 +146,30 @@
         
         .top_text {
         text-align: center;
+        
+            h2 {
+                margin: 0px;
+                padding-top: 30px;
+                color: #42a8ac;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 500;
+            }
+
+            h3 {
+                margin: 0px;
+                padding-bottom: 20px;
+                color: white;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 500;
+
+                #play {
+                    color: #c1cff2;
+                }
+
+                #alongside {
+                    color: #42a8ac;
+                }
+            }
         }
 
         .buttons {
@@ -151,15 +180,23 @@
             display: grid;
             gap: 12px;
             grid-template-columns: repeat(2, 1fr);
-               .button_big {
-                    width:  111px;
-                    height: 74px;
-                    background-color: rgba(180, 180, 180, 0.37);
-                    border-radius: 15px;
-                    h4 {
-                         text-align: center;
-                         padding-top: 5px;
-                         
+            #green-shape {
+                background-color: #4dbdc1;
+            }
+            .button_big {
+                   background-color: rgba(180, 180, 180, 0.37);
+                   border-radius: 15px;
+                   h4 {
+                       width:  111px;
+                       height: 74px;
+                       text-align: center; 
+                       font-family: 'Roboto', sans-serif;
+                       font-size: 0.8rem;
+                       font-weight: 500;
+                       color: white;
+                       display: table-cell;
+                       vertical-align: middle;
+                       
                     } 
                 }
             }    
@@ -173,6 +210,10 @@
             h4 {
                 text-align: center;
                 padding-top: 5px;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 500;
+                font-size: 0.8rem;
+                color: white;
                 
             }
         }
@@ -283,26 +324,34 @@
             border-bottom-left-radius: 18px;
             border-bottom-right-radius: 18px;
             background-color: white;
-            margin-top: 26px;
+            margin-top: 35px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             
             img {
+                padding-left: 10px;
                 width: 45px;
                 height: 45px;
             }
 
             .next-btn {
-                padding-right: 12px;
+                padding-right: 15px;
                 h3 {
                     width: 70px;
                     height: 35px;
-                    background-color: yellowgreen;
+                    background-color: #4bb8bd;
                     display: table-cell;
                     text-align: center;
                     vertical-align: middle;
-                    border-radius: 35%;
+                    border-bottom-left-radius: 18px;
+                    border-bottom-right-radius: 18px;
+                    border-top-left-radius: 18px;
+                    border-top-right-radius: 18px;
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 500;
+                    font-size: 0.9rem;
                 }
             }
         }

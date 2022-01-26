@@ -102,18 +102,43 @@
   color: white;
   width: 32px;
   height: 32px;
-  background-color: #2D2F33;
+  background-color: #64728d;
   border-radius: 50%;
   text-align: center;
   display: table-cell;
   vertical-align: middle;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 .card .top-header_2 .text-wrapper h4 {
-  color: #24bb68;
+  color: #2e5090;
   padding-left: 6px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 .card .main_body .top_text {
   text-align: center;
+}
+.card .main_body .top_text h2 {
+  margin: 0px;
+  padding-top: 30px;
+  color: #42a8ac;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+.card .main_body .top_text h3 {
+  margin: 0px;
+  padding-bottom: 20px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+.card .main_body .top_text h3 #play {
+  color: #c1cff2;
+}
+.card .main_body .top_text h3 #alongside {
+  color: #42a8ac;
 }
 .card .main_body .buttons {
   width: 239px;
@@ -124,15 +149,23 @@
   gap: 12px;
   grid-template-columns: repeat(2, 1fr);
 }
+.card .main_body .buttons #green-shape {
+  background-color: #4dbdc1;
+}
 .card .main_body .buttons .button_big {
-  width: 111px;
-  height: 74px;
   background-color: rgba(180, 180, 180, 0.37);
   border-radius: 15px;
 }
 .card .main_body .buttons .button_big h4 {
+  width: 111px;
+  height: 74px;
   text-align: center;
-  padding-top: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: white;
+  display: table-cell;
+  vertical-align: middle;
 }
 .card .main_body .smaller_btn {
   width: 247px;
@@ -144,6 +177,10 @@
 .card .main_body .smaller_btn h4 {
   text-align: center;
   padding-top: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: white;
 }
 .card .main_body .lines_wrapper__dark_row {
   position: relative;
@@ -246,26 +283,34 @@
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
   background-color: white;
-  margin-top: 26px;
+  margin-top: 35px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .card .footer .bottom-header img {
+  padding-left: 10px;
   width: 45px;
   height: 45px;
 }
 .card .footer .bottom-header .next-btn {
-  padding-right: 12px;
+  padding-right: 15px;
 }
 .card .footer .bottom-header .next-btn h3 {
   width: 70px;
   height: 35px;
-  background-color: yellowgreen;
+  background-color: #4bb8bd;
   display: table-cell;
   text-align: center;
   vertical-align: middle;
-  border-radius: 35%;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
 }
 .card .footer .wrappFooter {
   display: flex;
