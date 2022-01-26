@@ -147,6 +147,23 @@ body {
   position: absolute;
   margin-left: 65px;
   margin-top: -37px;
+  animation-name: change_size_edit;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes change_size_edit {
+  0% {
+    height: 30px;
+    width: 30px;
+  }
+  50% {
+    height: 35px;
+    width: 35px;
+  }
+  100% {
+    height: 40px;
+    width: 40px;
+  }
 }
 .screen .top_nav .lef_icons .edit img {
   width: 24px;
