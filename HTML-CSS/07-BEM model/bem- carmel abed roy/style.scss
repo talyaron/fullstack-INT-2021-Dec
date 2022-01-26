@@ -48,3 +48,188 @@
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+//--quiz offer--//
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+.cardquiz {
+    position: relative;
+    width: 360px;
+    height: 640px;
+    margin: auto;
+    border: 16px black solid;
+    border-top-width: 60px;
+    border-bottom-width: 60px;
+    border-radius: 36px;
+    background-color: rgba(19, 19, 22, 0.849);
+    font-family:sans-serif;
+    user-select: none;
+    .usermenuquiz {
+        width: 360px;
+        height: 55px;
+        background-color: rgb(255, 255, 255);
+        img{
+            width: 30px;
+            position: absolute;
+            left: 20px;
+            user-select: none;
+            cursor: pointer;
+            
+        }
+        p{
+            position: absolute;
+            left: 55px;
+            top: 1px;
+            font-size: 15px;
+            color: rgb(132, 142, 150);
+            user-select: none;
+        }
+    }  
+    .text{
+        margin-left: 5px;
+        margin-right: 5px; 
+        text-align: center;
+        font-weight: bold;
+      h1{
+        color: rgb(62, 179, 173);
+        font-size: 28px;
+        
+        }
+       p{
+         margin-top: -20px;
+         color: white;
+         font-size: 25px;
+        }
+        .play{
+         margin-top: -23px;
+         color: rgb(184, 196, 218);
+         font-size: 21px;
+         span{
+            color: rgb(62, 179, 173);
+
+         }
+
+        }
+   }
+   .btn{
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-evenly;
+       color: white;
+       text-align: center;
+       font-size: 13px;
+       font-weight: bold;
+       
+      
+       
+       
+       .box1{
+           width: 40%;
+           height: 70px;
+           background-color:rgb(62, 179, 173);
+           border-radius: 16px;
+           user-select: none;
+           cursor: pointer;
+           &:hover{
+            background-color: rgba(62, 108, 114, 0.986);
+        }
+           p{
+               margin-top: 18px;
+           }
+           
+       }
+       .box2{
+        width: 40%;
+        height: 70px;
+        background-color:rgb(128, 128, 128);
+        border-radius: 16px;
+        margin-bottom: 20px;
+        user-select: none;
+        cursor: pointer;
+        &:hover{
+            background-color: rgba(128, 128, 128, 0.24);
+        }
+        p{
+            margin-top: 18px;
+        }
+       }
+       .box3{
+           margin-top: 10px;
+           width: 85%;
+           height: 30px;
+           background-color:rgb(128, 128, 128);
+           border-radius: 16px;
+           font-size: 15px;
+           user-select: none;
+           cursor: pointer;
+           &:hover{
+            background-color: rgba(128, 128, 128, 0.24);
+        }
+           p{
+            margin-top: 7px;
+        }
+       }
+       .box4{
+        width: 40%;
+        height: 70px;
+        background-color:rgb(128, 128, 128);
+        border-radius: 16px;
+        margin-bottom: 20px;
+        user-select: none;
+        cursor: pointer;
+        &:hover{
+            background-color: rgba(128, 128, 128, 0.24);
+        }
+        p{
+            margin-top: 25px;
+        }
+       }
+
+   }
+   .usermenuquiz2 {
+    width: 360px;
+    height: 55px;
+    background-color: rgb(238, 232, 232);
+    margin-top: 30px;
+    .arrow{
+       width: 20px;
+        color:rgb(62, 179, 173); 
+        height: 60px;
+        position: absolute;
+        left: 10px;
+        user-select: none;
+        cursor: pointer;
+       
+       
+    }
+    .butn{
+        width: 90px;
+        height: 45px;
+        border-radius: 10px;
+        position: absolute;
+        right: 5px;
+        bottom:-20px;
+        color: rgb(255, 255, 255);
+        background-color: rgb(62, 179, 173); 
+        border: none;
+        user-select: none;
+        cursor: pointer;
+        font-size: 20px;
+        &:hover{
+            background-color:  rgba(62, 108, 114, 0.986);
+        }
+
+    }
+   
+      
+   }
+}

@@ -1,64 +1,260 @@
-* {
-    box-sizing: border-box;
+body {
+    font-size: 15px;
+    margin: 0%;
 }
 
-body {
-    .mega_wrapper {
-        border-radius: 50px;
-        width: 424px;
-        height: 640px;
-        display: flex;
-        justify-content: center;
-        background-color: rgb(45, 47, 51);
-        position: relative;
+.top {
+    background-color: rgb(69, 71, 74);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .topProfile {
-            background-color: rgba(180, 180, 180, 0.18);
-            height: 75px;
-            width: 100%;
-            display: flex;
+.top--color {
+    background-color: white;
+}
 
-            .profile_item {
-                background-color: gray;
-                border-radius: 50%;
-                height: 40px;
-                width: 40px;
-                margin-left: 15px;
-                margin-top: 15px;
-                p {
-                    text-align: center;
-                    font-weight: bolder;
-                    font-size: 20px;
-                }
-            }
 
-            .location_wrapper {
-                background-color: gray;
-            }
+.left {
+    display: flex;
 
-            .edit_wrapper {
-                background-color: gray;
-            }
 
-        }
-        .wrapper {
-            background-color: rgba(180, 180, 180, 0.18);
+
+    .user {
+        &__icon {
+            background-color: gray;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            color: white;
+            font-size: 40px;
+            text-align: center;
+            margin: 10px 0px 0px 10px;
         }
 
-        .menu {
-            background-color: rgb(45, 47, 51);
-            width: 100%;
-            position: absolute;
-            bottom: 41px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
+        &__name {
+            color: white;
+            font-size: 20px;
+            margin: 0px 0px 0px 20px;
         }
 
-
-
-
+        &__name--color {
+            color: black;
+            font-weight: bolder;
+        }
 
     }
 
+    .user--inline {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+
+
+    .loc {
+        display: flex;
+        flex-direction: row;
+
+        &__icon {
+            color: white;
+            margin: 15px;
+        }
+
+        &__text {
+            color: white;
+            margin: 15px;
+        }
+
+        &__inst {
+            position: absolute;
+            top: 40px;
+            left: 115px;
+            color: gray;
+        }
+    }
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    line-height: 70px;
+
+    .guitar {
+        color: white;
+        font-size: 40px;
+        width: 70px;
+        height: 70px;
+    }
+
+    .edit {
+        color: white;
+        font-size: 40px;
+        background-color: rgb(95, 178, 184);
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        text-align: center;
+    }
+}
+
+.profile {
+    width: 100%;
+    background-color: rgb(45, 47, 51);
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__left {
+        display: flex;
+        align-items: center;
+
+        &__picture {
+            display: inline-block;
+            padding: 10px;
+
+            img {
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        &__name {
+            display: inline-block;
+            color: white;
+            font-size: 20px;
+        }
+
+        &__inst {
+            display: inline-block;
+            color: white;
+            font-size: 20px;
+        }
+    }
+
+    &__right {
+        padding: 10px;
+
+        &__inst-icon {
+            display: inline-block;
+            color: white;
+            position: relative;
+            font-size: 30px;
+            margin-right: 20px;
+        }
+
+        &__dis {
+            display: inline-block;
+            color: white;
+            font-size: 20px;
+        }
+    }
+}
+img {
+    width: 100%;
+    height: auto;
+}
+.profile--secondry {
+    background-color: rgb(128, 128, 128);
+}
+
+
+
+.menu {
+    background-color: rgb(45, 47, 51);
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 50px;
+    align-items: center;
+    color: rgb(95, 178, 184);
+}
+
+.menu--config {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+
+    i {
+        margin-left: 30px;
+    }
+
+    button {
+        margin-right: 30px;
+    }
+}
+
+.next {
+    background-color: rgb(95, 178, 184);
+    padding: 15px 45px;
+    font-size: 30px;
+    border: none;
+    border-radius: 40px;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(95, 178, 184, 0.85);
+    }
+}
+
+.app {
+    background-color: rgb(45,47,51);
+    width: 100%;
+    height: 1500px;
+    h1 {
+        color: white;
+        text-align: center;
+        padding: 100px;
+        font-size: 50px;
+        span {
+            color: rgb(156, 156, 212);
+        }
+    }
+    .container {
+        margin: auto;
+        width:700px;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-evenly;
+
+        .instrument {
+            height: 200px;
+            width: 300px;
+            background-color: rgb(94,95,98);
+            border: none;
+            border-radius: 30px;
+            margin: 20px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+        .instrument--selected {
+            background-color: rgba(95, 178, 184, 0.85);
+        }
+        .instrument:active {
+            background-color: rgba(95, 178, 184, 0.85);
+        }
+    }
+    
+    .more {
+        background-color: rgb(94,95,98);
+        width:700px;
+        height: 60px;
+        display: block;
+        margin: 40px auto auto auto;
+        border: none;
+        border-radius: 35px;
+        font-size: 30px;
+        color: white;
+    }
 }
