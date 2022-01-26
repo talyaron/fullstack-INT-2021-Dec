@@ -1,0 +1,155 @@
+body {
+  width: 400px;
+  margin: auto;
+  font-family: "roboto", Tahoma, Verdana, sans-serif;
+}
+
+.nav_top {
+  background-color: #46474b;
+  padding: 0px 20px;
+}
+.nav_top .user {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav_top .user_right {
+  align-items: center;
+  margin: 20px 10px;
+}
+.nav_top .user_left {
+  display: flex;
+  align-items: center;
+  margin: 20px 10px;
+  gap: 15px;
+}
+.nav_top .user_avatar {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  background-color: #B4B4B4;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+.nav_top .user_avatar h3 {
+  margin: 0;
+}
+.nav_top .user_avatar img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.nav_top .user_name {
+  color: #ffffff;
+  font-size: 12px;
+  background-color: #46474b;
+  position: relative;
+  top: -7px;
+}
+.nav_top .user_location {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 5px;
+}
+.nav_top .user_instruments {
+  font-size: 18px;
+  color: #B4B4B4;
+}
+.nav_top .user_pen {
+  color: #5fb2b6;
+}
+.nav_top .user_results {
+  border-radius: 100px;
+  background-color: #5fb2b6;
+  color: #ffffff;
+  right: 3px;
+  text-align: center;
+  padding: 7px;
+}
+.nav_top .user .instrument_icon {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.contenth {
+  background-color: #2e2f33;
+  width: 100%;
+}
+.contenth_line {
+  display: flex;
+  color: #ffffff;
+  background-color: #2e2f33;
+  width: 100%;
+  justify-content: space-between;
+}
+.contenth_line img {
+  border-radius: 50%;
+  width: 50px;
+}
+.contenth_line:nth-child(odd) {
+  background-color: #B4B4B4;
+}
+.contenth_map img {
+  width: 100%;
+  height: 300px;
+}
+
+.content {
+  color: #ffffff;
+  background-color: #2e2f33;
+  font-size: 15px;
+  font-weight: 500;
+}
+.content .user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.content .user div {
+  margin: 5px;
+}
+.content .user_left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.content .user_right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.content .user_avatar {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+  background-color: #B4B4B4;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+.content .user_avatar h3 {
+  margin: 0;
+}
+.content .user_avatar img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.nav_bottom {
+  background-color: #2e2f33;
+  color: #5fb2b6;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+}

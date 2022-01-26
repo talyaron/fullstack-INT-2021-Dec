@@ -1,0 +1,46 @@
+.wrapper{
+    margin: auto;
+    max-width: 75ch;
+    
+}
+
+.card{
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.219);
+    padding: 20px;
+    img{
+        width:100%;
+    }
+    h3{
+        font-size: larger;
+        color: rgba(0, 0, 0, 0.781);
+    }
+
+    &__menu{
+        border-top: 1px solid gray;
+        color: orange;
+        display: flex;
+    }
+}
+
+.btn{
+    border-radius: 100px;
+    padding: 10px 30px;
+    border:1px solid gray;
+    user-select: none;
+    cursor: pointer;
+    width: fit-content;
+    &:hover{
+        background-color: rgba(128, 128, 128, 0.24);
+    }
+
+    &--cancel{
+        background-color: orange;
+        color: black;
+       
+
+        &:hover{
+            background-color: rgb(200, 131, 3);
+        }
+    }
+}
