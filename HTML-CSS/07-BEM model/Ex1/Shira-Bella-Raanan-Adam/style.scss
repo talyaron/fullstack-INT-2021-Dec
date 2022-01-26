@@ -80,7 +80,6 @@ body {
 .screen {
     width: 390px;
     height: 650px;
-    background-color: black;
     position: relative;
     margin: auto;
     border-radius: 20px;
@@ -129,6 +128,7 @@ body {
                 margin-top: 0px;
                 margin-left: -20px;
                 position: absolute;
+                filter: invert(100%);
             }
         }
         .lef_icons {
@@ -139,6 +139,7 @@ body {
             margin-top: -75px;
             img {
                 width: 40px;
+                filter: invert(100%);
             }
             .edit {
                 height: 30px;
@@ -149,9 +150,10 @@ body {
                 margin-left: 65px;
                 margin-top: -37px;
                 img {
-                    width: 25px;
-                    margin-left: 2px;
+                    width: 24px;
+                    margin-left: 3px;
                     margin-top: 2px;
+                    filter: invert(100%);
                 }
             }
         }

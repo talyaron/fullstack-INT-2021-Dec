@@ -1,0 +1,76 @@
+html, body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0px;
+}
+
+.home {
+  .wrapper {
+    padding-top: 150px;
+    background-color: #0f344f;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  }
+}
+.topNav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  position: fixed;
+  background-color: white;
+  height: 100px;
+  top: 0px;
+  .rightBtns {
+    display: flex;
+  }
+
+  .logo {
+    height: 40px;
+  }
+}
+.bottomNav {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  justify-content: space-around;
+  background-color: white;
+  position: fixed;
+  bottom: 0px;
+  color: gray;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    figcaption {
+      margin-top: 10px;
+    }
+  }
+}
+
+.btn {
+  padding: 5px 15px;
+  border: 1px solid #39b6fa;
+  color: #39b6fa;
+  border-radius: 50px;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+
+  &--create {
+    background-color: orange;
+    color: white;
+    border: none;
+  }
+}

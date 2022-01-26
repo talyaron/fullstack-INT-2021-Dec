@@ -213,6 +213,44 @@ main section .wraper .items .homeitem p {
   margin-bottom: 2rem;
 }
 
+main section .wraper .items .homeitem .settings {
+  height: 25vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main section .wraper .items .homeitem .settings2 {
+  height: 25vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main section .wraper .items .homeitem .setting {
+  background-color: white;
+  height: 10vh;
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 25px;
+}
+
 main section .wraper .items .item:nth-child(even) {
   background-color: #2F4858;
   border-top: #2F4858 solid 1px;
@@ -252,6 +290,7 @@ main section .wraper .items .item .itemuser {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-family: 'Amaranth';
 }
 
 main section .wraper .items .item .itemuser a {
