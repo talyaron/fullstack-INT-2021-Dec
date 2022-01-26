@@ -74,7 +74,7 @@ body header nav button a:hover {
 }
 
 body .page-container {
-  padding: 5% 10%;
+  padding: 0% 10%;
 }
 
 body .page-container .module-content {
@@ -213,12 +213,105 @@ body .page-container .module-content a:hover .color-overlay {
   background-color: rgba(0, 0, 0, 0.42);
 }
 
+body .page-container .section-media-inlineblock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .page-container .section-media-inlineblock h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 35px 0 0 77px;
+  padding-left: 14px;
+  border-left: 3px solid #d61717;
+}
+
+body .page-container .section-media-inlineblock .block-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body .page-container .section-media-inlineblock .block-content .news-content li {
+  padding: 40px;
+  display: inline-block;
+}
+
+body .page-container .section-media-inlineblock .block-content .news-content li .post-content {
+  width: 400px;
+}
+
+body .page-container .section-media-inlineblock .block-content .news-content li .post-content .media-image {
+  position: relative;
+}
+
+body .page-container .section-media-inlineblock .block-content .news-content li .post-content .media-image .color-overlay {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(65, 65, 65, 0.13);
+}
+
+body .page-container .section-media-inlineblock .block-content .news-content li .post-content .media-image .color-overlay:hover {
+  cursor: pointer;
+  background-color: rgba(34, 34, 34, 0.383);
+}
+
+body .page-container .section-media-inlineblock .block-content .news-content li .post-content .media-image img {
+  width: 400px;
+}
+
+body .page-container .section-media-inlineblock .block-content .news-content li .post-content .media-content .media-title {
+  color: black;
+  padding: 10px 0;
+}
+
+body .page-container .section-media-inlineblock .block-content .news-content li .post-content .media-content .media-summary {
+  font-weight: 400;
+  color: #3b3b3b;
+  padding: 5px 0 15px 0;
+}
+
+body .page-container .section-media-inlineblock .block-content .news-content li .post-content .media-content .media-tag {
+  font-weight: 400;
+  color: #858585;
+  padding: 5px 0 0 15px;
+  border-left: 2px solid #d61717;
+}
+
+.main-title {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 35px 0 0 77px;
+  padding-bottom: 15px;
+  display: inline-block;
+}
+
+.main-time {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  color: #93908C;
+  padding-left: 790px;
+}
+
 #uK {
   border-left: 2px solid #d61717;
 }
 
 #future {
   border-left: 2px solid #ffe608;
+}
+
+#future2 {
+  border-left: 3px solid #ffe608;
 }
 
 #culture {
