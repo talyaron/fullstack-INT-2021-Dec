@@ -1,0 +1,371 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+main section {
+  width: 436px;
+  height: 896px;
+  background-color: #2F4858;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+main section::before {
+  content: '';
+  position: absolute;
+  width: 75px;
+  height: 50px;
+  background-color: #2F4858;
+  top: 0;
+  border-radius: 0% 0% 64% 61% / 0% 0% 78% 85%;
+  border-bottom: white 4px solid;
+}
+
+main section::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  top: 12.5px;
+  border-radius: 50%;
+  outline: 2px solid white;
+  opacity: 0.7;
+  border: 1px solid grey;
+}
+
+main section .wraper {
+  width: 100%;
+  height: 97%;
+  background-color: #FFFE00;
+  margin: 1rem;
+  border-radius: 50px;
+  border: white 3px solid;
+}
+
+main section .wraper .phoneicons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem 2rem;
+  width: 100%;
+  font-weight: bold;
+}
+
+main section .wraper .phoneicons .iconsright {
+  margin-right: 4rem;
+  margin-left: auto;
+}
+
+main section .wraper .items {
+  height: 86vh;
+  width: 100%;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  background-color: #FFFE00;
+  border-bottom: white 4px solid;
+}
+
+main section .wraper .items .nav {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section .wraper .items .nav .distance {
+  font-family: 'lobster';
+  font-size: 1.5rem;
+  color: #2F4858;
+}
+
+main section .wraper .items .nav .navhome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #2F4858;
+}
+
+main section .wraper .items .nav .navhome h2 {
+  font-family: 'lobster';
+}
+
+main section .wraper .items .nav .navhome p {
+  font-family: 'Amaranth';
+}
+
+main section .wraper .items .nav .navuser {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 1rem;
+  color: #2F4858;
+}
+
+main section .wraper .items .nav .navuser .far {
+  background-color: #2F4858;
+  border: solid black 2px;
+  padding: 0.7rem;
+  font-size: 1.5rem;
+  color: #FFFE00;
+  border-radius: 50%;
+}
+
+main section .wraper .items .nav .navuser h3 {
+  margin-left: 0.5rem;
+}
+
+main section .wraper .items .nav .navtoggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  margin: 0 2rem 0 auto;
+  color: #2F4858;
+}
+
+main section .wraper .items .homeitem {
+  height: 66.15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  border-top: #2F4858 solid 1px;
+  border-bottom: #2F4858 solid 1px;
+}
+
+main section .wraper .items .homeitem img {
+  width: 100%;
+}
+
+main section .wraper .items .homeitem p {
+  font-size: 1.2rem;
+  color: #2F4858;
+  margin-bottom: 2rem;
+}
+
+main section .wraper .items .homeitem .settings {
+  height: 25vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main section .wraper .items .homeitem .settings2 {
+  height: 25vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main section .wraper .items .homeitem .setting {
+  background-color: white;
+  height: 10vh;
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 25px;
+}
+
+main section .wraper .items .item:nth-child(even) {
+  background-color: #2F4858;
+  border-top: #2F4858 solid 1px;
+  border-bottom: #2F4858 solid 1px;
+  color: #FFFE00;
+}
+
+main section .wraper .items .item:nth-child(even) .itemuser .far {
+  background-color: #FFFE00;
+  color: #2F4858;
+}
+
+main section .wraper .items .item:nth-child(even) .itemuser a {
+  color: #FFFE00;
+}
+
+main section .wraper .items .item:nth-child(odd) {
+  color: #2F4858;
+}
+
+main section .wraper .items .item:nth-child(odd) .itemuser a {
+  color: #2F4858;
+}
+
+main section .wraper .items .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 7.35vh;
+  width: 100%;
+}
+
+main section .wraper .items .item .itemuser {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Amaranth';
+}
+
+main section .wraper .items .item .itemuser a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+main section .wraper .items .item .itemuser .far {
+  background-color: #2F4858;
+  border: solid black 2px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: #FFFE00;
+  border-radius: 50%;
+  margin-left: 1rem;
+}
+
+main section .wraper .items .item .itemtype {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 2rem 0 auto;
+  gap: 1rem;
+}
+
+main section .wraper .items .item .itemtype .fas {
+  font-size: 1.5rem;
+}
+
+main section .wraper .items .footer {
+  height: 10vh;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  font-size: 2rem;
+}
+
+main section .wraper .items .footer a {
+  color: #2F4858;
+}
+
+main section .wraper .items .footer .fa-chevron-left {
+  border-radius: 25%;
+  border: 1px solid white;
+  padding: 0.3rem;
+  background-color: #2F4858;
+  color: #FFFE00;
+}
+
+main section .wraper .items .footer .fa-chevron-right {
+  border-radius: 25%;
+  border: 1px solid white;
+  padding: 0.3rem;
+  background-color: #2F4858;
+  color: #FFFE00;
+}
+/*# sourceMappingURL=style.css.map */
