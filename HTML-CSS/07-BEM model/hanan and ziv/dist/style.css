@@ -80,3 +80,12 @@ body {
   bottom: 130px;
   left: 340px;
 }
+
+.cporfile-pic {
+  position: relative;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  left: 20px;
+  top: 10px;
+}
