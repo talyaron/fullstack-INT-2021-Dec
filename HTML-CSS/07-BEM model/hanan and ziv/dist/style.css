@@ -110,9 +110,30 @@ body {
 
 .naVigationScreen {
   position: relative;
-  background-color: black;
   width: 400px;
   height: 530px;
-  top: 100px;
+  top: 200px;
   left: 700px;
+}
+.naVigationScreen .img-div-navi {
+  position: relative;
+  width: 400px;
+  height: 300px;
+}
+.naVigationScreen .img-div-navi .imgnavigation {
+  position: relative;
+  width: 400px;
+  height: 280px;
+}
+.naVigationScreen .usera-navi {
+  position: relative;
+  width: 400px;
+  height: 53px;
+  background-color: #292929;
+}
+.naVigationScreen .userb-navi {
+  position: relative;
+  width: 400px;
+  height: 53px;
+  background-color: gray;
 }

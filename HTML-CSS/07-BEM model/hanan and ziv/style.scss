@@ -161,15 +161,47 @@ top: 10px;
 
 
 .naVigationScreen{
-   position: relative;
-   background-color: black ;
-   width: 400px;
-   height: 530px;
-   top: 100px;
-   left: 700px;
-  
-   
+  position: relative;
+  width: 400px;
+  height: 530px;
+  top: 200px;
+  left: 700px;
+     
 
 
+     .img-div-navi{
+              position: relative;
+              width: 400px;
+              height: 300px;
+             
+              
+                 
+              .imgnavigation{
+      
+     position: relative;
+      width: 400px;
+       height: 280px;
+         
+         
+       }
+           }
+       .usera-navi{
+         position: relative;
+         width: 400px;
+         height: 53px;
+         background-color: #292929;
+         
 
-  }
+
+       }
+       .userb-navi{
+         position: relative;
+         width: 400px;
+         height: 53px;
+         background-color: gray;
+         
+
+       }
+
+
+ }
