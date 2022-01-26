@@ -17,6 +17,7 @@ body {
   background-color: #ebe7e7;
   height: 70px;
   border-radius: 20px 20px 0 0;
+  margin-top: 40px;
 }
 .screen_bella .top_header img {
   width: 50px;
@@ -53,6 +54,24 @@ body {
 .screen_bella .content .buttons .left {
   padding: 0;
 }
+.screen_bella .content .button--down {
+  width: 280px;
+  background-color: rgba(240, 255, 255, 0.37);
+}
+.screen_bella .next {
+  width: 80px;
+  margin: auto;
+  text-decoration: none;
+  background-color: black;
+  border: none;
+  padding: 8px 4px 8px 4px;
+  margin-top: 40px;
+  margin-left: 280px;
+  border-radius: 8px;
+}
+.screen_bella .next a {
+  color: white;
+}
 
 .screen {
   width: 390px;
@@ -68,6 +87,7 @@ body {
   background-color: #70737a;
   border-radius: 20px 20px 0 0;
   position: relative;
+  margin-top: 40px;
 }
 .screen .top_nav .avatar {
   position: absolute;
