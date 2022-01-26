@@ -156,6 +156,29 @@ main {
                         color: #2F4858;
                         margin-bottom: 2rem;
                     }
+                    .settings{
+                        
+                        height: 25vh;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-evenly;
+                    }
+                    .settings2{
+                        
+                        height: 25vh;
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-evenly;
+                    }
+                    .setting{
+                        background-color: white;
+                        height: 10vh;
+                        width: 150px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 25px;
+                    }
                 }
 
                 .item:nth-child(even) {
@@ -189,6 +212,7 @@ main {
                     .itemuser{
                         display: flex;
                         align-items: center;
+                        font-family: 'Amaranth';
                         a{
                         display: flex;
                         justify-content: center;
