@@ -127,6 +127,23 @@ body {
   margin-left: -20px;
   position: absolute;
   filter: invert(100%);
+  animation-name: change_size_location;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes change_size_location {
+  0% {
+    height: 20px;
+    width: 20px;
+  }
+  50% {
+    height: 35px;
+    width: 35px;
+  }
+  100% {
+    height: 20px;
+    width: 20px;
+  }
 }
 .screen .top_nav .lef_icons {
   width: 70px;
@@ -147,23 +164,6 @@ body {
   position: absolute;
   margin-left: 65px;
   margin-top: -37px;
-  animation-name: change_size_edit;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-}
-@keyframes change_size_edit {
-  0% {
-    height: 30px;
-    width: 30px;
-  }
-  50% {
-    height: 35px;
-    width: 35px;
-  }
-  100% {
-    height: 40px;
-    width: 40px;
-  }
 }
 .screen .top_nav .lef_icons .edit img {
   width: 24px;
@@ -276,6 +276,20 @@ body {
   background-color: #70737a;
   border-radius: 0 0 20px 20px;
   position: relative;
+  animation-name: blue_border_to_menu;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes blue_border_to_menu {
+  0% {
+    border: 3px solid white;
+  }
+  50% {
+    border: 3px solid aqua;
+  }
+  100% {
+    border: 3px solid white;
+  }
 }
 .bottom_nav .icon_back {
   position: absolute;
