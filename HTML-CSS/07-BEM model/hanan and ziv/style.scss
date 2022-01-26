@@ -62,8 +62,8 @@ body{
 .profile-pic {
 position: relative;
 border-radius: 100%;
-width: 65px;
-height: 65px; 
+width: 55px;
+height: 55px; 
 left: 20px;
 top: 10px;
 
@@ -73,8 +73,8 @@ top: 10px;
     position: relative;
     color: white;
  font-family: Arial, Helvetica, sans-serif;
-  left: 120px;
-  bottom: 70px;
+  left: 125px;
+  bottom: 95px;
 }
 
 
@@ -83,8 +83,8 @@ top: 10px;
      
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    left: 120px;
-     bottom: 95px;
+    left: 125px;
+     bottom: 135px;
 }
 
 
@@ -93,7 +93,7 @@ top: 10px;
    position: relative;
     
    width: 20px;
-     bottom: 105px;
+     bottom: 130px;
      left: 95px;
 
 
@@ -104,12 +104,55 @@ top: 10px;
     
   position: relative;
   
-  width: 20px;
-  bottom: 130px;
-  left: 95px;
+  width: 55px;
+   height: 55px;
+  bottom: 195px;
+   left: 290px;
 
 
 
 
 
 }
+
+
+.cporfile-pic {
+
+  position: relative;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px; 
+  left: 20px;
+  top: 5px;
+
+
+
+}
+
+.UserName{
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  left: 10px;
+  bottom: 8px;
+  color: white;
+  
+
+
+}
+
+.addButton {
+  
+  position: relative;
+  
+  width: 55px;
+   height: 55px;
+  bottom: 195px;
+   left: 280px;
+
+
+
+
+
+}
+
