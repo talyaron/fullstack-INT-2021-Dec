@@ -89,23 +89,24 @@
   background-color: white;
 }
 .card .top-header_2 .text-wrapper {
-  position: relative;
+  display: flex;
+  padding-left: 13px;
+  height: 51px;
+  align-items: center;
 }
-.card .top-header_2 .text-wrapper .ellipse-shape {
-  position: absolute;
+.card .top-header_2 .text-wrapper .ellipse-shape h3 {
+  color: white;
   width: 32px;
   height: 32px;
   background-color: #2D2F33;
   border-radius: 50%;
-}
-.card .top-header_2 .text-wrapper .ellipse-shape h3 {
-  color: white;
-  padding-left: 8px;
-  margin-bottom: 5px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
 }
 .card .top-header_2 .text-wrapper h4 {
   color: #24bb68;
-  position: absolute;
+  padding-left: 6px;
 }
 .card .main_body .top_text {
   text-align: center;
@@ -242,6 +243,25 @@
   border-bottom-right-radius: 18px;
   background-color: white;
   margin-top: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card .footer .bottom-header img {
+  width: 45px;
+  height: 45px;
+}
+.card .footer .bottom-header .next-btn {
+  padding-right: 12px;
+}
+.card .footer .bottom-header .next-btn h3 {
+  width: 70px;
+  height: 35px;
+  background-color: yellowgreen;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 35%;
 }
 .card .footer .wrappFooter {
   display: flex;
