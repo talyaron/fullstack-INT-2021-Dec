@@ -5,6 +5,13 @@
   color: blue;
 }
 
+h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 .card {
   width: 300px;
   height: 600px;
@@ -12,13 +19,6 @@
   border-radius: 20px;
   margin: auto;
   overflow: hidden;
-}
-
-h3 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: white;
-  font-size: 14px;
-  font-weight: 500;
 }
 
 .top_menu {
@@ -59,51 +59,4 @@ h3 {
 .user__profile--dark {
   background-color: #2e2f33;
   height: 45px;
-}
-
-.top {
-  width: 300px;
-  height: 80px;
-  background-color: white;
-  overflow: hidden;
-}
-.top .fab fa-adn {
-  width: 30px;
-  border-radius: 20%;
-}
-
-.text {
-  margin-left: 30px;
-}
-.text h1 {
-  color: #1ad1d1;
-  font-size: 20px;
-}
-.text h2 {
-  color: white;
-  margin-left: 10px;
-  font-size: 17px;
-}
-.text p {
-  color: #f3d2f3;
-  margin-left: 6px;
-}
-.text h3 {
-  color: #42d4d4;
-  font-size: 17px;
-  margin-left: 120px;
-  margin-top: -35px;
-}
-
-.btn {
-  border-radius: 100px;
-  padding: 10x 30px;
-  border: 1px solid black;
-  user-select: none;
-  cursor: pointer;
-  width: fit-content;
-}
-.btn--cancel {
-  background-color: cadetblue;
-  color: black;
 }
