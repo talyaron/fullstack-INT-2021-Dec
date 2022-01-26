@@ -108,32 +108,10 @@ body {
   left: 280px;
 }
 
-.naVigationScreen {
+.nagtaive-system {
   position: relative;
   width: 400px;
-  height: 530px;
-  top: 200px;
-  left: 700px;
-}
-.naVigationScreen .img-div-navi {
-  position: relative;
-  width: 400px;
-  height: 300px;
-}
-.naVigationScreen .img-div-navi .imgnavigation {
-  position: relative;
-  width: 400px;
-  height: 280px;
-}
-.naVigationScreen .usera-navi {
-  position: relative;
-  width: 400px;
-  height: 53px;
-  background-color: #292929;
-}
-.naVigationScreen .userb-navi {
-  position: relative;
-  width: 400px;
-  height: 53px;
-  background-color: gray;
+  height: 318px;
+  left: 350px;
+  top: 50px;
 }
