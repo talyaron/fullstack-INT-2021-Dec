@@ -382,3 +382,7 @@ body {
   box-sizing: border-box;
   border-radius: 50px;
 }
+
+.button--down--adam {
+  color: #90e9e9;
+}
