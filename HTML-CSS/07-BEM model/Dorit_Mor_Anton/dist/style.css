@@ -149,9 +149,6 @@
   gap: 12px;
   grid-template-columns: repeat(2, 1fr);
 }
-.card .main_body .buttons #green-shape {
-  background-color: #4dbdc1;
-}
 .card .main_body .buttons .button_big {
   background-color: rgba(180, 180, 180, 0.37);
   border-radius: 15px;
