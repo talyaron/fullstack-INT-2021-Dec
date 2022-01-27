@@ -4,7 +4,6 @@
   border-radius: 200;
   position: relative;
   animation-name: changeprofile;
-  animation-duration: 30s;
   animation-iteration-count: infinite;
   background-size: cover;
 }
@@ -12,23 +11,19 @@
 @keyframes changeprofile {
   0% {
     border-radius: 100px;
-    background-image: url(https://media.istockphoto.com/photos/portrait-of-a-girl-picture-id938709362?k=20&m=938709362&s=612x612&w=0&h=dzgBAFc9ciOHoBAefqcczwfycLCx3fWwJNChQ1fpsqM=);
-    top: 0;
-    left: 0vw;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/5f/Alberto_conversi_profile_pic.jpg);
   }
   10% {
     border-radius: 200px;
-    background-image: url(https://media.istockphoto.com/photos/young-woman-wearing-casual-red-sweater-over-isolated-background-away-picture-id1127788799?k=20&m=1127788799&s=612x612&w=0&h=9WIDo4rWeAVslYoDpKGRwP5HcIvzDFlh2kErQr7aiGo=);
-    top: 5;
-    left: 10vw;
+    background-image: url(http://hennepinelementaryschool.org/img/1657bdde82ef403d75bf3e5eb38404af.jpg);
   }
   20% {
     border-radius: 100px;
-    background-image: url(https://media.istockphoto.com/photos/portrait-of-a-handsome-man-picture-id1131285202?k=20&m=1131285202&s=612x612&w=0&h=qBXgklTB2rJApzAOpWub7uxQg04qmq0iLFXaDaRNFzw=);
+    background-image: url(https://wdrfree.com/public/blog/Cool-Profile-Picture-16.jpg);
   }
   30% {
     border-radius: 200px;
-    background-image: url(https://media.istockphoto.com/photos/portrait-of-businessman-smiling-in-business-office-picture-id637933814?k=20&m=637933814&s=612x612&w=0&h=yMEwPZAdq1KZsiXaJYkSpg0ci3mUzEMhPIMQhbyHjG4=);
+    background-image: url(https://i0.wp.com/sguru.org/wp-content/uploads/2017/06/cool-anime-profile-pictures-50422.jpg?resize=420%2C420&ssl=1);
   }
   40% {
     border-radius: 100px;
