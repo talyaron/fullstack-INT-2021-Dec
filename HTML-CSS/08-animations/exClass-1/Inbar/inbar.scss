@@ -4,9 +4,10 @@
     border-radius: 200;
     position: relative;
     animation-name: changeprofile;
-    animation-duration: 30s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
     background-size: cover;
+    cubic-bezier(.17,.67,.86,.38);
 }
 
 @keyframes changeprofile{
