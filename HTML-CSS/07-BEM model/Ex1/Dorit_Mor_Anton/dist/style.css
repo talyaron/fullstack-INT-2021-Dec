@@ -360,6 +360,7 @@
   0% {
     background-image: url(https://cdn.pixabay.com/photo/2022/01/13/10/39/animal-6934928__480.jpg);
     border-radius: 200px;
+    transform: scale(0.5) translate(-100%, -100%);
     position: absolute;
     top: 10px;
     left: 0vw;
