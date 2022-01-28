@@ -414,3 +414,23 @@ body {
   box-sizing: border-box;
   border-radius: 50px;
 }
+
+.button--down--adam {
+  color: white;
+  background-color: #62e9e2;
+  border: 3px solid #62e9e2;
+  border-radius: 30px;
+  position: relative;
+  background-color: #62e9e2;
+  animation-name: bottomcolors;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes bottomcolors {
+  from {
+    background-color: #62e9e2;
+  }
+  to {
+    background-color: #9c0808;
+  }
+}

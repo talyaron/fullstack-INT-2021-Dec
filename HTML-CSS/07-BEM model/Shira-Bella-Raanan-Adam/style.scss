@@ -514,3 +514,25 @@ body {
             }
         }
     }
+    
+    //Adam//
+    .button--down--adam{
+        color: white;
+        background-color:rgb(98, 233, 226) ;
+        border: 3px solid rgb(98, 233, 226);
+        border-radius: 30px;
+        position: relative;
+        
+    
+    //Adam's animation//
+    @keyframes bottomcolors {
+        from {background-color: rgb(98, 233, 226);}
+        to {background-color: rgb(156, 8, 8);}
+      }
+      
+    
+        background-color: rgb(98, 233, 226);
+        animation-name: bottomcolors;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+}
