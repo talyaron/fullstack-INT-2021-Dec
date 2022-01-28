@@ -1,0 +1,20 @@
+.box {
+  width: 400px;
+  height: 400px;
+  background-color: aqua;
+  animation-name: changecolor;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+  background-size: cover;
+  margin: auto;
+}
+
+@keyframes changecolor {
+  from {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTmRRIun6tRarlD7uJxvMxbR_pIeCg3MDcNg&usqp=CAU);
+  }
+  to {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwAyS8-o_XPTm-Ljyf4_HWKCjjTfrscGM8gQ&usqp=CAU);
+  }
+}

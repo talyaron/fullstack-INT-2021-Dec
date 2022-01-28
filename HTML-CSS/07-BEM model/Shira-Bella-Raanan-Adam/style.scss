@@ -1,4 +1,5 @@
-HEAD body {
+*,
+body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -9,6 +10,7 @@ HEAD body {
     background-color: #32363B;
     border-radius: 20px;
     margin: auto;
+
     //top header - image + admin's name//
     .top_header {
         position: relative;
@@ -17,26 +19,33 @@ HEAD body {
         background-color: rgb(235, 231, 231);
         height: 70px;
         border-radius: 20px 20px 0 0;
+        margin-top: 40px;
+
         img {
             width: 50px;
             height: 50px;
             margin-right: 12px;
         }
+
         .avatar_1,
         .admin_1 {
             position: relative;
             left: 16px;
         }
     }
+
     //screen main content//
     .content {
+        
         text-align: center;
         width: 80%;
         margin: auto;
         color: azure;
+
         .buttons {
             display: flex;
             justify-content: center;
+
             li {
                 list-style-type: none;
                 width: 130px;
@@ -48,10 +57,32 @@ HEAD body {
                 box-sizing: border-box;
                 border-radius: 20px;
             }
+
             .right,
             .left {
                 padding: 0;
             }
+        }
+
+        .button--down {
+            width: 280px;
+            background-color: rgba(240, 255, 255, 0.37);
+        }
+    }
+
+    .next {
+        width: 80px;
+        margin: auto;
+        text-decoration: none;
+        background-color: black;
+        border: none;
+        padding: 8px 4px 8px 4px;
+        margin-top: 40px;
+        margin-left: 280px;
+        border-radius: 8px;
+
+        a {
+            color: white;
         }
     }
 }
@@ -60,24 +91,29 @@ HEAD body {
 .screen {
     width: 390px;
     height: 650px;
-    background-color: black;
     position: relative;
     margin: auto;
-    border-radius: 19%;
+    border-radius: 20px;
+
     //--Top Bar--//
     .top_nav {
         width: 390px;
         height: 100px;
         background-color: rgb(112, 115, 122);
-        border-radius: 20% 20% 0% 0%;
+        border-radius: 20px 20px 0 0;
         position: relative;
+        margin-top: 40px;
+
         .avatar {
             position: absolute;
+            bottom: 16px;
+
             img {
                 width: 60px;
                 margin-top: 25px;
                 margin-left: 25px;
             }
+
             .user_name {
                 background-color: rgb(112, 115, 122);
                 color: white;
@@ -86,6 +122,7 @@ HEAD body {
                 margin-top: -10px;
                 margin-left: 25px;
             }
+
             .green_dot {
                 background-color: rgb(6, 207, 6);
                 height: 10px;
@@ -96,10 +133,14 @@ HEAD body {
                 top: 70px;
             }
         }
+
         .location {
             margin-left: 120px;
             margin-top: -50px;
             color: white;
+
+
+
             .icon_location {
                 height: 20px;
                 width: 20px;
@@ -107,135 +148,184 @@ HEAD body {
                 margin-top: 0px;
                 margin-left: -20px;
                 position: absolute;
+                filter: invert(100%);
+
+                // Shira's animation
+                animation-name: change_size_location;
+                animation-duration: 2s;
+                animation-iteration-count: infinite;
+
+                @keyframes change_size_location {
+                    0% {
+                        height: 20px;
+                        width: 20px;
+
+                    }
+
+                    50% {
+                        height: 35px;
+                        width: 35px;
+
+                    }
+
+                    100% {
+                        height: 20px;
+                        width: 20px;
+                    }
+
+                    // End Shira's animation 
+                }
             }
         }
+
         .lef_icons {
             width: 70px;
             height: 50px;
             position: absolute;
             margin-left: 275px;
             margin-top: -75px;
+
             img {
                 width: 40px;
+                filter: invert(100%);
             }
+
             .edit {
                 height: 30px;
                 width: 30px;
                 background-color: rgb(6, 207, 180);
-                border-radius: 50%;
+                border-radius: 50px;
                 position: absolute;
                 margin-left: 65px;
                 margin-top: -37px;
+
+
+
                 img {
-                    width: 25px;
-                    margin-left: 2px;
+                    width: 24px;
+                    margin-left: 3px;
                     margin-top: 2px;
+                    filter: invert(100%);
                 }
             }
         }
     }
+
     //---User Rows Dark---//
     .user_row {
         width: 390px;
         height: 50px;
         background-color: rgb(71, 71, 71);
         position: relative;
+        display: inline-flex;
+        align-items: center;
+        box-sizing: border-box;
+
         .row_avtar {
             width: 40px;
             height: 40px;
-            border-radius: 50%;
-            position: absolute;
-            margin-top: 4px;
+            border-radius: 50px;
             margin-left: 5px;
+
             img {
                 width: 40px;
             }
         }
+
         .row_green_dot {
             background-color: rgb(6, 207, 6);
             height: 10px;
             width: 10px;
-            border-radius: 50%;
+            border-radius: 50px;
             position: absolute;
             bottom: 5px;
             left: 35px;
         }
+
         .row_name {
-            width: max-content;
-            position: absolute;
-            margin-top: 15px;
-            margin-left: 55px;
+            width: 180px;
+            margin-left: 16px;
             color: white;
         }
+
         .row_instrument {
             width: 70px;
             height: 50px;
             position: absolute;
-            margin-left: 290px;
+            margin-left: 270px;
             margin-top: 5px;
+
             img {
                 width: 38px;
-            }
-            .row_location {
-                position: absolute;
-                margin-top: 17px;
-                margin-left: 330px;
-                color: white;
+                filter: invert(100%);
             }
         }
+
+        .row_location {
+            color: white;
+            margin-left: 85px;
+        }
     }
+
     //---User Rows Light---//
     .user_row_light {
         width: 390px;
         height: 50px;
         background-color: darkgray;
         position: relative;
+        display: inline-flex;
+        align-items: center;
+        box-sizing: border-box;
+
         .row_avtar {
             width: 40px;
             height: 40px;
-            border-radius: 50%;
-            position: absolute;
-            margin-top: 4px;
+            border-radius: 50px;
             margin-left: 5px;
+
             img {
                 width: 40px;
             }
         }
+
         .row_green_dot {
             background-color: rgb(6, 207, 6);
             height: 10px;
             width: 10px;
-            border-radius: 50%;
+            border-radius: 50px;
             position: absolute;
             bottom: 5px;
             left: 35px;
         }
+
         .row_name {
-            width: max-content;
-            position: absolute;
-            margin-top: 15px;
-            margin-left: 55px;
+            width: 180px;
+            margin-left: 16px;
             color: white;
         }
+
         .row_instrument {
             width: 70px;
             height: 50px;
             position: absolute;
-            margin-left: 280px;
+            margin-left: 270px;
             margin-top: 5px;
+
             img {
                 width: 38px;
-            }
-            .row_location {
-                position: absolute;
-                margin-top: 17px;
-                margin-left: 330px;
-                color: white;
+                filter: invert(100%);
             }
         }
+
+        .row_location {
+            margin-left: 85px;
+            color: white;
+        }
     }
+
     .map {
         img {
+            
             width: 390px;
             height: 250px;
         }
@@ -247,132 +337,180 @@ HEAD body {
     width: 390px;
     height: 100px;
     background-color: rgb(112, 115, 122);
-    border-radius: 0% 0% 20% 20%;
+    border-radius: 0 0 20px 20px;
     position: relative;
+    top: -5px;
+
+    
+                //  * * Shira's_animation: * *
+
+                animation-name:blue_border_to_menu ;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+
+                @keyframes blue_border_to_menu {
+                    0%{
+                        border: 1px solid white;
+                    }
+                    50%{
+                        border: 1px solid red;
+                    }
+                    100%{
+                        border: 1px solid white;
+                    }
+            
+                }
+
+                // * * end_of_Shira's_animation * *
+
     .icon_back {
         position: absolute;
         margin-top: 17px;
         margin-left: 40px;
-        img {
-            width: 60px;
-        }
-    }
-    .icon_settings {
-        position: absolute;
-        margin-top: 22px;
-        margin-left: 100px;
-        img {
-            width: 50px;
-        }
-    }
-    .icon_chat {
-        position: absolute;
-        margin-top: 20px;
-        margin-left: 160px;
-        img {
-            width: 60px;
-        }
-    }
-    .icon_user_page {
-        position: absolute;
-        margin-top: 29px;
-        margin-left: 230px;
-        img {
-            width: 40px;
-        }
-    }
-    .icon_home {
-        position: absolute;
-        margin-top: 23px;
-        margin-left: 280px;
-        img {
-            width: 50px;
-        }
-    }
-    button {
-        margin-top: 75px;
-        margin-left: 44%;
-        border: none;
-        background-color: rgb(112, 115, 122);
-    }
-}
 
-//Bella//
-.screen_bella {
-    width: 360px;
-    height: 650px;
-    background-color: #32363B;
-    border-radius: 20px;
-    margin: auto;
-    //top header - image + admin's name//
-    .top__header {
-        position: relative;
-        display: flex;
-        align-items: center;
-        background-color: rgb(235, 231, 231);
-        height: 70px;
-        border-radius: 20px 20px 0 0;
-        img {
-            width: 45px;
-            height: 45px;
-            margin-right: 12px;
+
+
+            img {
+                width: 60px;
+            }
         }
-        .avatar__1,
-        .admin--1 {
-            position: relative;
-            left: 16px;
-            color: rgb(5, 50, 102);
-            font-weight: 600;
+
+        .icon_settings {
+            position: absolute;
+            margin-top: 22px;
+            margin-left: 100px;
+
+            img {
+                width: 50px;
+            }
+        }
+
+        .icon_chat {
+            position: absolute;
+            margin-top: 20px;
+            margin-left: 160px;
+
+            img {
+                width: 60px;
+            }
+        }
+
+        .icon_user_page {
+            position: absolute;
+            margin-top: 29px;
+            margin-left: 230px;
+
+            img {
+                width: 40px;
+            }
+        }
+
+        .icon_home {
+            position: absolute;
+            margin-top: 23px;
+            margin-left: 280px;
+
+            img {
+                width: 50px;
+            }
+        }
+
+        button {
+            margin-top: 75px;
+            margin-left: 44%;
+            border: none;
+            background-color: rgb(112, 115, 122);
         }
     }
-    //screen main content//
-    .content {
-        text-align: center;
-        width: 80%;
+
+    //Bella//
+    .screen_bella {
+        width: 360px;
+        height: 650px;
+        background-color: #32363B;
+        border-radius: 20px;
         margin: auto;
-        color: azure;
-        h1 {
-            margin: 12px 0 8px 0;
-            color: #00C0C3;
+
+        //top header - image + admin's name//
+        .top__header {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background-color: rgb(235, 231, 231);
+            height: 70px;
+            border-radius: 20px 20px 0 0;
+
+            img {
+                width: 45px;
+                height: 45px;
+                margin-right: 12px;
+            }
+
+            .avatar__1,
+            .admin--1 {
+                position: relative;
+                left: 16px;
+                color: rgb(5, 50, 102);
+                font-weight: 600;
+            }
         }
-        h3 {
-            margin: 4px;
-            span {
+
+        //screen main content//
+        .content {
+            text-align: center;
+            width: 80%;
+            margin: auto;
+            color: azure;
+
+            h1 {
+                margin: 12px 0 8px 0;
                 color: #00C0C3;
             }
-        }
-        .buttons {
-            display: flex;
-            justify-content: center;
-            li {
-                list-style-type: none;
-                width: 130px;
-                height: 85px;
-                background-color: #6A6B6F;
-                padding: 16px;
-                margin: 16px 8px;
+
+            h3 {
+                margin: 4px;
+
+                span {
+                    color: #00C0C3;
+                }
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: center;
+
+                li {
+                    list-style-type: none;
+                    width: 130px;
+                    height: 85px;
+                    background-color: #6A6B6F;
+                    padding: 16px;
+                    margin: 16px 8px;
+                    line-height: 1.4;
+                    box-sizing: border-box;
+                    border-radius: 20px;
+                }
+
+                .selected {
+                    background-color: #00C0C3;
+                }
+
+                .right,
+                .left {
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+
+            //button in the bottom of the screen//
+            .button--down {
+                width: 285px;
+                height: 40px;
+                padding: 8px 20px 0 20px;
                 line-height: 1.4;
+                background-color: #6A6B6F;
                 box-sizing: border-box;
-                border-radius: 20px;
+                border-radius: 50px;
             }
-            .selected {
-                background-color: #00C0C3;
-            }
-            .right,
-            .left {
-                padding: 0;
-                margin: 0;
-            }
-        }
-        //button in the bottom of the screen//
-        .button--down {
-            width: 285px;
-            height: 40px;
-            padding: 8px 20px 0 20px;
-            line-height: 1.4;
-            background-color: #6A6B6F;
-            box-sizing: border-box;
-            border-radius: 50px;
         }
     }
-}

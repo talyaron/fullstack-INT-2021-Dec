@@ -1,0 +1,20 @@
+.anima{
+
+background-color: black;
+width: 150px;
+height: 150px;
+
+#youotoddososososoosososososososo{border: 1px solid black;
+    width: 500px;
+    margin-left: 50%;
+    animation-name: sd;
+        animation: sd 4s infinite alternate; }
+        
+    @keyframes sd{ 
+        0%   {background-color: red;}
+        25%  {background-color: yellow;}
+        50%  {background-color: blue;}
+        100% {background-color: green;}}
+
+
+}
