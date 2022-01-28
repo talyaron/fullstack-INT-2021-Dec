@@ -1,0 +1,17 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.outer-c {
+  background-color: #6395c0;
+  width: 150px;
+  height: 150px;
+  left: 315px;
+  position: absolute;
+  top: 143px;
+}
