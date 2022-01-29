@@ -43,55 +43,6 @@
   left: 430px;
   bottom: 590px;
 }
-.mega-wrapper .blok-list {
-  list-style-type: none;
-  padding-top: 0px;
-  padding: 0px;
-}
-.mega-wrapper .blok-list p {
-  position: relative;
-  bottom: 46px;
-  left: 50px;
-}
-.mega-wrapper .studentprofile-dark {
-  width: 100%;
-  height: 45px;
-  background-color: #2d2f33;
-}
-.mega-wrapper .studentprofile-dark img {
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  margin-top: 5px;
-  margin-left: 5px;
-}
-.mega-wrapper .studentprofile-dark .guitar-list {
-  position: absolute;
-  left: 450px;
-  top: 82px;
-}
-.mega-wrapper .studentprofile-dark .darbuka-list {
-  position: absolute;
-  left: 450px;
-  top: 175px;
-}
-.mega-wrapper .studentprofile {
-  width: 100%;
-  height: 45px;
-  background-color: #5f6063;
-}
-.mega-wrapper .studentprofile img {
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  margin-top: 3px;
-  margin-left: 5px;
-}
-.mega-wrapper .studentprofile .guitar-list {
-  position: absolute;
-  left: 450px;
-  top: 130px;
-}
 .mega-wrapper .user_profile {
   height: 40px;
   width: 100%;
@@ -250,4 +201,165 @@
   position: relative;
   top: 5px;
   left: 5px;
+}
+
+.mega-wrapper {
+  border-radius: 15px;
+  width: 400px;
+  height: 600px;
+  border: 1px solid black;
+  margin: auto;
+}
+.mega-wrapper .top_nav {
+  background-color: rgba(7, 7, 7, 0.582);
+  width: 100%;
+  height: 65px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: relative;
+  display: flex;
+}
+.mega-wrapper .top_nav .user_name {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+.mega-wrapper .top_nav .user_name .profile_pic {
+  margin-top: 15px;
+}
+.mega-wrapper .top_nav .user_name .a {
+  position: absolute;
+  left: 27px;
+  top: 25px;
+}
+.mega-wrapper .top_nav .user_name .adi_max {
+  padding: 1px;
+}
+.mega-wrapper .top_nav .location {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 50px;
+  gap: 10px;
+}
+.mega-wrapper .top_nav .btn--edit {
+  border: none;
+  color: #bebebe;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgba(7, 7, 7, 0);
+  padding: 20px;
+  position: relative;
+  left: 150px;
+}
+.mega-wrapper .top_nav .btn--edit:hover {
+  background-color: #59bcc9a9;
+  color: white;
+}
+.mega-wrapper .blok-list {
+  list-style-type: none;
+  padding-top: 0px;
+  padding: 0px;
+}
+.mega-wrapper .blok-list p {
+  position: relative;
+  bottom: 46px;
+  left: 50px;
+}
+.mega-wrapper .studentprofile-dark {
+  width: 100%;
+  height: 45px;
+  background-color: #2d2f33;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.mega-wrapper .studentprofile-dark img {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.mega-wrapper .studentprofile-dark p {
+  position: relative;
+  right: 60px;
+}
+.mega-wrapper .studentprofile-dark i {
+  animation-name: mymove;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  position: relative;
+  right: 15px;
+  top: 15px;
+  color: white;
+}
+.mega-wrapper .studentprofile {
+  width: 100%;
+  height: 45px;
+  background-color: rgba(19, 20, 20, 0.637);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.mega-wrapper .studentprofile img {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.mega-wrapper .studentprofile p {
+  position: relative;
+  right: 60px;
+}
+.mega-wrapper .studentprofile i {
+  animation-name: mymove2;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  position: relative;
+  right: 15px;
+  top: 15px;
+  color: white;
+}
+.mega-wrapper .bottom-nav {
+  width: 100%;
+  height: 85px;
+  background-color: #2d2f33;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.mega-wrapper .bottom-nav i {
+  margin-top: 30px;
+}
+.mega-wrapper .bottom-nav .btn--edit-bottom {
+  border: none;
+  color: #bebebe;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgba(7, 7, 7, 0);
+  margin-bottom: 20px;
+}
+.mega-wrapper .bottom-nav .btn--edit-bottom:hover {
+  background-color: #59bcc9a9;
+  color: white;
+}
+@keyframes mymove {
+  from {
+    color: white;
+  }
+  to {
+    color: #59bcc9a9;
+  }
+}
+@keyframes mymove2 {
+  from {
+    color: #59bcc9a9;
+  }
+  to {
+    color: white;
+  }
 }
