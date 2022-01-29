@@ -138,6 +138,18 @@ h2 {
 .rightlogos__ins img {
   transform: rotate(320deg);
   height: 60px;
+  animation-name: changColor;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+@keyframes changColor {
+  from {
+    height: 50px;
+  }
+  to {
+    height: 55px;
+  }
 }
 .rightlogos__edit {
   background-color: #1b9b9b;
