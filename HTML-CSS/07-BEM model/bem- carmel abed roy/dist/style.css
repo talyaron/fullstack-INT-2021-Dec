@@ -106,6 +106,17 @@
   font-size: 20px;
 }
 
+.maprapper {
+  width: 360px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.map {
+  width: 550px;
+  overflow: hidden;
+}
+
 .cardquiz {
   position: relative;
   width: 360px;
