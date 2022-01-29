@@ -76,13 +76,15 @@ a:link, a:visited, a:active {
   display: flex;
   justify-content: center;
   padding: 20px;
-  animation-name: box;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
 }
 .button__next span {
   position: relative;
   top: -5px;
+}
+.button__hanoch {
+  animation-name: box;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 .nav_top {
