@@ -12,34 +12,42 @@
 
 .usermenu {
   width: 360px;
-  height: 55px;
-  background-color: #3d413f;
+  height: 75px;
+  background-color: #535353;
 }
 .usermenu__profile img {
-  width: 40px;
+  width: 50px;
   border-radius: 50%;
-  margin-top: 7px;
-  margin-left: 5px;
+  margin-top: 15px;
+  margin-left: 20px;
 }
 
 .user {
+  display: flex;
   width: 360px;
-  height: 40px;
+  height: 50px;
   background-color: #999999;
+}
+.user--dark {
+  background-color: #292828;
+  height: 50px;
+  display: flex;
+}
+.user__name {
+  color: white;
+  margin-left: 10px;
+  margin-top: 15px;
 }
 .user__profile img {
   width: 30px;
   border-radius: 50%;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-left: 5px;
 }
-.user__profile__name {
-  color: white;
-  margin-left: 35px;
-}
-.user__profile--dark {
-  background-color: #1f1f1f;
-  height: 40px;
+
+.bottemmenu {
+  background-color: #292828;
+  height: 70px;
 }
 
 .cardquiz {

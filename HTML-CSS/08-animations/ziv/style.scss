@@ -1,0 +1,46 @@
+.box {
+    background-color: rgb(225, 176, 134);
+    width: 250px;
+    height: 250px;
+    border: radius 0;
+    position: relative;
+    animation-name: changColor;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    //   animation-direction: reverse;
+    background-size: cover;
+}
+
+@keyframes changcolor {
+    0% {
+        // background-color: red;
+        background-image: url(https://cdn.britannica.com/q:60/88/194588-050-967E8D17/flowers.jpg);
+        border-radius: 0px;
+        top: 0;
+        left:0vw;
+      }
+      10% {
+        background-image:url(https://i.pinimg.com/564x/21/fc/03/21fc03b5957c80f7a4800cbe3b6b049a.jpg) 
+        border-radius: 200px;
+        top: 2vh;
+        left:0vw;
+      }
+      30% {
+        background-image: 
+        border-radius: 200px;
+        top: 4vh;
+        left:10vw;
+      }
+      100% {
+        background-image: 
+        border-radius: 200px;
+        top: 5vh;
+        left:20vw;
+      }
+    }
+
+
+}
+
+
+
