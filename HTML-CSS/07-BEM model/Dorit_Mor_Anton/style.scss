@@ -184,6 +184,7 @@
             .button_big {
                    background-color: rgba(180, 180, 180, 0.37);
                    border-radius: 15px;
+                  
                    h4 {
                        width:  111px;
                        height: 74px;
@@ -196,7 +197,11 @@
                        vertical-align: middle;
                        
                     } 
+                    &:hover {
+                        background-color: #42a8ac;
+                    }
                 }
+                
             }    
             .smaller_btn {
             width: 247px;
