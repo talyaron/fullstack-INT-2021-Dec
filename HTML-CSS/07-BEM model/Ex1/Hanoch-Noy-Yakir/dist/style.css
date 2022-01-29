@@ -2,7 +2,6 @@ body {
   width: 400px;
   margin: auto;
   font-family: "roboto", Tahoma, Verdana, sans-serif;
-  border: solid #000000 1px;
 }
 
 a:link, a:visited, a:active {
@@ -24,9 +23,6 @@ a:link, a:visited, a:active {
 .user_right {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: fit-content;
-  height: fit-content;
 }
 .user_avatar {
   color: #ffffff;
@@ -41,6 +37,19 @@ a:link, a:visited, a:active {
 .user_avatar img {
   border-radius: 50%;
 }
+.user_avatar__quiz {
+  animation-name: avatarAnimation1;
+  animation-duration: 2s;
+  position: relative;
+}
+@keyframes avatarAnimation1 {
+  from {
+    left: 400px;
+  }
+  to {
+    left: 0px;
+  }
+}
 .user_pen {
   color: #5fb2b6;
 }
@@ -50,6 +59,7 @@ a:link, a:visited, a:active {
   height: 74px;
   background-color: rgba(180, 180, 180, 0.37);
   border: none;
+  color: white;
   padding: 20px;
   text-align: center;
   font-size: 16px;
@@ -68,7 +78,6 @@ a:link, a:visited, a:active {
 }
 .button__next {
   background-color: #126f75;
-  color: #000000;
   width: 77px;
   height: 7px;
   border-radius: 35px;
