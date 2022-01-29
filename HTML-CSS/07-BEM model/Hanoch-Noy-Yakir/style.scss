@@ -39,6 +39,18 @@ a:link , a:visited , a:active {
         img {
             border-radius: 50%;
         }
+
+        &__quiz{
+            animation-name: avatarAnimation1;
+            animation-duration: 2s;
+            position: relative;
+        }
+
+        @keyframes avatarAnimation1 {
+            from {left: 400px;}
+            to {left: 0px;}
+          }
+
     }
     &_pen {
         color: #5fb2b6;
