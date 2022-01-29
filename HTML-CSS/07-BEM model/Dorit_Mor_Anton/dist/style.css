@@ -164,6 +164,9 @@
   display: table-cell;
   vertical-align: middle;
 }
+.card .main_body .buttons .button_big:hover {
+  background-color: #42a8ac;
+}
 .card .main_body .smaller_btn {
   width: 247px;
   height: 30px;
