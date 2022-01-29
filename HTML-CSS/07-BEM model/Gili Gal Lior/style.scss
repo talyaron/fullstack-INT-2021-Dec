@@ -156,10 +156,12 @@ body {
         }
     }
 }
+
 img {
     width: 100%;
     height: auto;
 }
+
 .profile--secondry {
     background-color: rgb(128, 128, 128);
 }
@@ -208,21 +210,24 @@ img {
 }
 
 .app {
-    background-color: rgb(45,47,51);
+    background-color: rgb(45, 47, 51);
     width: 100%;
     height: 1500px;
+
     h1 {
         color: white;
         text-align: center;
         padding: 100px;
         font-size: 50px;
+
         span {
             color: rgb(156, 156, 212);
         }
     }
+
     .container {
         margin: auto;
-        width:700px;
+        width: 700px;
         display: grid;
         grid-template-columns: auto auto;
         justify-content: space-evenly;
@@ -230,7 +235,7 @@ img {
         .instrument {
             height: 200px;
             width: 300px;
-            background-color: rgb(94,95,98);
+            background-color: rgb(94, 95, 98);
             border: none;
             border-radius: 30px;
             margin: 20px;
@@ -238,17 +243,19 @@ img {
             color: white;
             cursor: pointer;
         }
+
         .instrument--selected {
             background-color: rgba(95, 178, 184, 0.85);
         }
+
         .instrument:active {
             background-color: rgba(95, 178, 184, 0.85);
         }
     }
-    
+
     .more {
-        background-color: rgb(94,95,98);
-        width:700px;
+        background-color: rgb(94, 95, 98);
+        width: 700px;
         height: 60px;
         display: block;
         margin: 40px auto auto auto;
@@ -256,5 +263,31 @@ img {
         border-radius: 35px;
         font-size: 30px;
         color: white;
+    }
+}
+
+.ball {
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    border-radius: 50%;
+    position: absolute;
+    left: 200px;
+    top: 30px;
+
+    animation-name: movingball;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes movingball {
+    50% {
+        left: 1000px;
+        background-color: rgba(95, 178, 184, 0.85);
+    }
+
+    100% {
+        left: 200px;
+        background-color: gray;
     }
 }
