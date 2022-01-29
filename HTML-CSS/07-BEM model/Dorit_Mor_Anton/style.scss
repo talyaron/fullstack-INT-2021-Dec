@@ -1,7 +1,3 @@
-body {
-    background-color: rgb(230, 230, 230);
-}
-
 .card{
     margin: auto;
     width: 370px;
@@ -17,97 +13,117 @@ body {
         display:flex;
         flex-direction: column; 
         position: relative;
-            &__firstRow{
-                display: flex;
-                flex-direction: row;
-                &__logo{
-                    object{
-                        position:absolute;
-                        left:10px;
-                        top:0px;
-                        height: 95px;
-                        width:95px;
-                        h1{
-                            color:white;
-                            font-size:14px ;
-                        }
+        &__firstRow{
+            display: flex;
+            flex-direction: row;
+            &__logo{
+                object{
+                    position:absolute;
+                    left:10px;
+                    top:0px;
+                    height: 95px;
+                    width:95px;
+                    h1{
+                        color:white;
+                        font-size:14px ;
                     }
                 }
-                &__img1{ 
-                    object{
-                        position:absolute;
-                        left: 100px;
-                        top:20px;
-                        height: 40px;
-                        width:40px;
-                    }
-                }    
-                &__text{   
-                    p{
-                        position: absolute;
-                        left: 133px;
-                        top: 18px;
-                        color:white;
-                        font-size: 16px;
-                        font-weight:900;
-                    }
-                } 
             }
-            &__secondRow{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;              
-                &__name{
-                    p{
-                        color:white;
-                        font-size: 10px;
-                        font-weight: bolder;
-                        position:absolute;
-                        top:70px;
-                        left:38px;
-                    }
+            &__img1{ 
+                object{
+                    position:absolute;
+                    left: 100px;
+                    top:20px;
+                    height: 40px;
+                    width:40px;
                 }
-                &__instrument{
-                    p{
-                        color:rgba(255, 255, 255, 0.596);
-                        font-size:20px;
-                        font-weight:lighter;
-                        position:absolute;
-                        top:50px;
-                        left: 119px;
-
-                    }
-
+            }    
+            &__text{   
+                p{
+                    position: absolute;
+                    left: 133px;
+                    top: 18px;
+                    color:white;
+                    font-size: 16px;
+                    font-weight:900;
                 }
-                &__instImg{
-                    object{
-                        position:absolute;
-                        right: 50px;
-                        top:45px;
-                        height: 40px;
-                        width:40px;
-                    }
-
+            } 
+        }
+        &__secondRow{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;              
+            &__name{
+                p{
+                    color:white;
+                    font-size: 10px;
+                    font-weight: bolder;
+                    position:absolute;
+                    top:70px;
+                    left:38px;
                 }
-                &__editImg{
-                    object{
-                        position:absolute;
-                        right: 20px;
-                        top:45px;
-                        height: 40px;
-                        width:40px;
-                    }
+            }
+            &__instrument{
+                p{
+                    color:rgba(255, 255, 255, 0.596);
+                    font-size:20px;
+                    font-weight:lighter;
+                    position:absolute;
+                    top:50px;
+                    left: 119px;
 
                 }
+
+            }
+            &__instImg{
+                object{
+                    position:absolute;
+                    right: 50px;
+                    top:45px;
+                    height: 40px;
+                    width:40px;
+                }
+
+            }
+            &__editImg{
+                object{
+                    position:absolute;
+                    right: 20px;
+                    top:45px;
+                    height: 40px;
+                    width:40px;
+                }
+
             }
         }
-/*   top_header for big buttons card  */ 
+        
+    }    
+
     .top-header_2 {
         width: 370px;
         height: 51px;
         border-top-left-radius: 18px;
         border-top-right-radius: 18px;
         background-color: white;
+       
+        
+        
+        h3 {
+            width: 35px;
+            height: 35px;
+            background-color: #2D2F33;
+            color: white;
+            text-align: center; 
+            border-radius: 50%;
+            display: table-cell;
+            vertical-align: middle;
+
+           }
+        
+        h4 {
+            color: white;
+        }
+
     }
 
     /* Utilities */
@@ -125,32 +141,141 @@ body {
             display: grid;
             gap: 12px;
             grid-template-columns: repeat(2, 1fr);
-            
-            
-                .button_big {
+               .button_big {
                     width:  111px;
                     height: 74px;
                     background-color: rgba(180, 180, 180, 0.37);
                     border-radius: 15px;
-                      
-                     h4 {
+                    h4 {
                          text-align: center;
-                     }
+                         padding-top: 5px;
+                         
+                    } 
                 }
-            }
-        .smaller_btn {
+            }    
+            .smaller_btn {
             width: 247px;
             height: 30px;
             background-color: rgba(180, 180, 180, 0.37);
             border-radius: 15px;
             margin: auto;
-        }
-        
+
             h4 {
                 text-align: center;
-                gap: opx;
+                padding-top: 5px;
+                
             }
-    
+        }
+        .lines_wrapper{
+            &__dark_row{
+                position:relative;
+                display:flex;
+                height:90px;
+                width:239px;
+                &__profile{
+                    display: inline-block;
+                    img{
+                        width: 65px;
+                        height:65px;
+                        position:absolute;
+                        top:3px;
+                        left:10px;
+                    }
+                }
+                &__name{
+                    display:inline-block;
+                    p{
+                        color:white;
+                        font-size: 16px;
+                        font-weight: bolder;
+                        position:absolute;
+                        left:85px;
+                        top:20px;
+                    }
+                }
+                &__instrument{
+                    display:inline-block;
+                    img{
+                        position:absolute;
+                        right: -75px;
+                        top:28px;
+                        height: 30px;
+                        width:30px;
+                    }
+                }
+                &dark__size{
+                    display:inline-block;
+                    p{
+                        color:white;
+                        font-size: 14px;
+                        position:absolute;
+                        top:24px;
+                        right:-110px;
+                    }
+                }        
+            }
+            &dark_row--clear{
+                position:relative;
+                top:400px;
+                left:200px;
+                background-color: rgb(231, 219, 219);
+                display:flex;
+                height:90px;
+                width:239px;
+                &__profile{
+                    display: inline-block;
+                    img{
+                        width: 65px;
+                        height:65px;
+                        position:absolute;
+                        top:3px;
+                        left:10px;
+                    }
+                }
+                &__name{
+                    display:inline-block;
+                    p{
+                        color:white;
+                        font-size: 16px;
+                        font-weight: bolder;
+                        position:absolute;
+                        left:85px;
+                        top:20px;
+                    }
+                }
+                &__instrument{
+                    display:inline-block;
+                    img{
+                        position:absolute;
+                        right: -75px;
+                        top:28px;
+                        height: 30px;
+                        width:30px;
+                    }
+                }
+                &__size{
+                    display:inline-block;
+                    p{
+                        color:white;
+                        font-size: 14px;
+                        position:absolute;
+                        top:24px;
+                        right:-110px;
+                    }
+                }        
+            }
+
+        }
     }
     
+    .footer {
+        .bottom-header {
+            width: 370px;
+            height: 51px;
+            border-bottom-left-radius: 18px;
+            border-bottom-right-radius: 18px;
+            background-color: white;
+            margin-top: 26px;
+        }
+    }
 }

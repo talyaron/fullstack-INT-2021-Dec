@@ -16,6 +16,8 @@
   border-top-right-radius: 15px;
   position: relative;
   
+ 
+ 
   
   
    .a{
@@ -74,7 +76,7 @@
 
 
 
-}
+
  
  
   .blok-list{
@@ -142,6 +144,8 @@
         }
     }
 
+
+
      
        
     
@@ -150,7 +154,7 @@
 
 
      
-    
+
     
     
     
@@ -160,7 +164,7 @@
   //Inbar
   
   .user_profile{
-    height: 50px;
+    height: 40px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -186,8 +190,10 @@
       font-size: 18px;
     }
   }
-
-  .header{
+  .content{
+    background-color: rgb(45,47,51);
+  
+   .header{
     width: 100%;
     background-color: rgb(45,47,51);
     margin-top: 0px;
@@ -195,6 +201,7 @@
     padding-bottom: 0px;
     text-align: center;
     font-family: sans-serif;
+    }
     h1{
       margin: 0px;
       color: rgb(95,178,184);
@@ -212,7 +219,7 @@
     }
 
     
-  }
+  
 
   .container{
     margin-top: 0px;
@@ -228,17 +235,18 @@
     justify-content: space-around;
     
 
-    .button{
+    .btn{
+      background-color: rgba(180, 180, 180, 0.37);
       width: 120px;
       height: 70px;
-      background-color: rgba(180, 180, 180, 0.37);
-      border: none;
       color: white;
       padding: 20px;
       text-align: center;
       font-size: 16px;
       margin: 5px 4px;
       border-radius: 12px;
+      border: none;
+
         &:hover {
             background: #5FB2B8;
         }
@@ -252,7 +260,7 @@
           }
         }
       }
-
+    }
   .nav_bottom{
     margin-top: 10px;
     margin-bottom: 0px;
@@ -285,5 +293,61 @@
         float: right;
         margin-right: 15px;
         margin-top: 5px;
+        border: none;
       }
   }
+//<<<<<<< HEAD
+
+//=======
+       //hadas
+       .block{
+        background-color: rgba(7, 7, 7, 0.582);
+        width: 100%;
+        height: 65px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-family: 'roboto', Tahoma, Verdana, sans-serif;
+        margin: auto;
+
+       .user_left{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+      
+         .user{
+           width: 40px;
+           height: 40px;
+           color: whitesmoke;
+           background-color:#B4B4B4; 
+           border-radius: 50%;
+           text-align: center;
+           position: relative;
+           top: 3px;
+           left: 3px;
+           
+           h3{
+            font-size: 30px;
+            margin: 0;
+           }
+          }
+           .user_name{
+            
+            
+            color: whitesmoke;
+           
+            font-size: 12px;
+            position: relative;
+            top:5px;
+            left: 5px;
+           }
+          
+          }
+       
+      }
+
+}
+//>>>>>>> e2add5d1a47b676acf9ce67df8be87e490567b8d

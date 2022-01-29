@@ -43,61 +43,57 @@
   left: 430px;
   bottom: 590px;
 }
-
-.blok-list {
+.mega-wrapper .blok-list {
   list-style-type: none;
   padding-top: 0px;
   padding: 0px;
 }
-.blok-list p {
+.mega-wrapper .blok-list p {
   position: relative;
   bottom: 46px;
   left: 50px;
 }
-
-.studentprofile-dark {
+.mega-wrapper .studentprofile-dark {
   width: 100%;
   height: 45px;
   background-color: #2d2f33;
 }
-.studentprofile-dark img {
+.mega-wrapper .studentprofile-dark img {
   border-radius: 50%;
   width: 35px;
   height: 35px;
   margin-top: 5px;
   margin-left: 5px;
 }
-.studentprofile-dark .guitar-list {
+.mega-wrapper .studentprofile-dark .guitar-list {
   position: absolute;
   left: 450px;
   top: 82px;
 }
-.studentprofile-dark .darbuka-list {
+.mega-wrapper .studentprofile-dark .darbuka-list {
   position: absolute;
   left: 450px;
   top: 175px;
 }
-
-.studentprofile {
+.mega-wrapper .studentprofile {
   width: 100%;
   height: 45px;
   background-color: #5f6063;
 }
-.studentprofile img {
+.mega-wrapper .studentprofile img {
   border-radius: 50%;
   width: 35px;
   height: 35px;
   margin-top: 3px;
   margin-left: 5px;
 }
-.studentprofile .guitar-list {
+.mega-wrapper .studentprofile .guitar-list {
   position: absolute;
   left: 450px;
   top: 130px;
 }
-
-.user_profile {
-  height: 50px;
+.mega-wrapper .user_profile {
+  height: 40px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -105,7 +101,7 @@
   border-radius: 15px 15px 0 0;
   margin-bottom: 20px;
 }
-.user_profile img {
+.mega-wrapper .user_profile img {
   width: 40px;
   height: 40px;
   margin-top: 3px;
@@ -114,7 +110,7 @@
   padding-left: 12px;
   border-radius: 50%;
 }
-.user_profile h2 {
+.mega-wrapper .user_profile h2 {
   margin: 0px;
   padding-top: 20px;
   padding-left: 10px;
@@ -122,8 +118,10 @@
   color: #2c4699;
   font-size: 18px;
 }
-
-.header {
+.mega-wrapper .content {
+  background-color: #2d2f33;
+}
+.mega-wrapper .content .header {
   width: 100%;
   background-color: #2d2f33;
   margin-top: 0px;
@@ -132,23 +130,22 @@
   text-align: center;
   font-family: sans-serif;
 }
-.header h1 {
+.mega-wrapper .content h1 {
   margin: 0px;
   color: #5fb2b8;
 }
-.header h2 {
+.mega-wrapper .content h2 {
   margin: 0px;
   color: white;
 }
-.header h3 {
+.mega-wrapper .content h3 {
   margin: 0px;
   color: #bdc9ef;
 }
-.header h3 .torq {
+.mega-wrapper .content h3 .torq {
   color: #5fb2b8;
 }
-
-.container {
+.mega-wrapper .content .container {
   margin-top: 0px;
   margin: auto;
   width: 80%;
@@ -161,29 +158,28 @@
   position: relative;
   justify-content: space-around;
 }
-.container .button {
+.mega-wrapper .content .container .btn {
+  background-color: rgba(180, 180, 180, 0.37);
   width: 120px;
   height: 70px;
-  background-color: rgba(180, 180, 180, 0.37);
-  border: none;
   color: white;
   padding: 20px;
   text-align: center;
   font-size: 16px;
   margin: 5px 4px;
   border-radius: 12px;
+  border: none;
 }
-.container .button:hover {
+.mega-wrapper .content .container .btn:hover {
   background: #5FB2B8;
 }
-.container .button__wide {
+.mega-wrapper .content .container .btn__wide {
   width: 300px;
   height: 30px;
   border-radius: 20px;
   padding: 7px;
 }
-
-.nav_bottom {
+.mega-wrapper .nav_bottom {
   margin-top: 10px;
   margin-bottom: 0px;
   background-color: white;
@@ -196,13 +192,13 @@
   display: inline-block;
   align-items: stretch;
 }
-.nav_bottom .back {
+.mega-wrapper .nav_bottom .back {
   margin: 5px;
   width: 25px;
   margin-left: 10px;
   padding-top: 3px;
 }
-.nav_bottom .next {
+.mega-wrapper .nav_bottom .next {
   font-family: sans-serif;
   padding: 5px;
   font-size: 16px;
@@ -213,4 +209,44 @@
   float: right;
   margin-right: 15px;
   margin-top: 5px;
+  border: none;
+}
+.mega-wrapper .block {
+  background-color: rgba(7, 7, 7, 0.582);
+  width: 100%;
+  height: 65px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "roboto", Tahoma, Verdana, sans-serif;
+  margin: auto;
+}
+.mega-wrapper .block .user_left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.mega-wrapper .block .user_left .user {
+  width: 40px;
+  height: 40px;
+  color: whitesmoke;
+  background-color: #B4B4B4;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  top: 3px;
+  left: 3px;
+}
+.mega-wrapper .block .user_left .user h3 {
+  font-size: 30px;
+  margin: 0;
+}
+.mega-wrapper .block .user_left .user_name {
+  color: whitesmoke;
+  font-size: 12px;
+  position: relative;
+  top: 5px;
+  left: 5px;
 }
