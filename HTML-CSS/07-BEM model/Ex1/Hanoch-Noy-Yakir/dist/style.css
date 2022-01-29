@@ -4,7 +4,9 @@ body {
   font-family: "roboto", Tahoma, Verdana, sans-serif;
 }
 
-a:link, a:visited, a:active {
+a:link,
+a:visited,
+a:active {
   text-decoration: none;
   color: #5fb2b6;
 }
@@ -41,14 +43,6 @@ a:link, a:visited, a:active {
   animation-name: avatarAnimation1;
   animation-duration: 2s;
   position: relative;
-}
-@keyframes avatarAnimation1 {
-  from {
-    left: 400px;
-  }
-  to {
-    left: 0px;
-  }
 }
 .user_pen {
   color: #5fb2b6;
@@ -90,7 +84,7 @@ a:link, a:visited, a:active {
   position: relative;
   top: -5px;
 }
-.button__hanoch {
+.button__hanoch:hover {
   animation-name: box;
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -165,6 +159,12 @@ a:link, a:visited, a:active {
 .content .user div {
   margin: 5px;
 }
+.content .user .instrument_icon:hover, .content .user path:hover {
+  animation-name: changeColor;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
 .content .user_left {
   justify-content: space-around;
 }
@@ -229,6 +229,13 @@ a:link, a:visited, a:active {
   justify-content: space-around;
   padding: 10px;
   align-items: center;
+  height: 4rem;
+}
+.nav_bottom .btn:hover {
+  animation-name: icons;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 .nav_bottom__quiz {
   justify-content: space-between;
@@ -239,7 +246,6 @@ a:link, a:visited, a:active {
 @keyframes box {
   0% {
     background-color: red;
-    height: fit-content;
   }
   25% {
     background-color: yellow;
@@ -251,18 +257,29 @@ a:link, a:visited, a:active {
     background-color: green;
   }
 }
-@keyframes boxi {
-  0% {
-    background-color: red;
-    height: fit-content;
+@keyframes avatarAnimation1 {
+  from {
+    left: 400px;
   }
-  25% {
-    color: yellow;
+  to {
+    left: 0px;
   }
-  50% {
-    color: blue;
+}
+@keyframes icons {
+  from {
+    font-size: 2rem;
   }
-  100% {
-    color: green;
+  to {
+    font-size: 2.5rem;
+  }
+}
+@keyframes changeColor {
+  from {
+    fill: #ffffff;
+    color: #ffffff;
+  }
+  to {
+    fill: #5FB2B8;
+    color: #5FB2B8;
   }
 }
