@@ -15,6 +15,8 @@ body {
 
 .bottom-nav {
   position: relative;
+  justify-content: space-between;
+  cursor: pointer;
   background-color: #524b4b;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -22,11 +24,39 @@ body {
   height: 95px;
   top: 100px;
   left: 700px;
+  color: #106d68;
+  text-align: center;
+  overflow: visible;
+}
+.bottom-nav .back {
+  position: relative;
+  left: -160px;
+  bottom: -10px;
+}
+.bottom-nav .settings {
+  position: relative;
+  left: -100px;
+  bottom: 35px;
+}
+.bottom-nav .img {
+  position: relative;
+  left: -20px;
+  bottom: 70px;
+}
+.bottom-nav .profile {
+  position: relative;
+  left: 60px;
+  bottom: 105px;
+}
+.bottom-nav .home {
+  position: relative;
+  left: 140px;
+  bottom: 140px;
 }
 
 .usera {
   position: relative;
-  background-color: #292929;
+  background-color: #383737;
   width: 400px;
   height: 53px;
   left: 700px;
@@ -37,7 +67,88 @@ body {
   position: relative;
   background-color: gray;
   width: 400px;
-  height: 53px;
+  height: 50px;
+  left: 700px;
+  top: 100px;
+}
+
+.userc {
+  position: relative;
+  background-color: #383838;
+  width: 400px;
+  height: 50px;
+  left: 700px;
+  top: 100px;
+}
+
+.userd {
+  position: relative;
+  background-color: gray;
+  width: 400px;
+  height: 50px;
+  left: 700px;
+  top: 100px;
+}
+
+.usere {
+  position: relative;
+  background-color: gray;
+  width: 400px;
+  height: 50px;
+  left: 700px;
+  top: 100px;
+}
+
+.Userf {
+  position: relative;
+  background-color: #302f2f;
+  width: 400px;
+  height: 50px;
+  left: 700px;
+  top: 100px;
+}
+
+.userg {
+  position: relative;
+  background-color: gray;
+  width: 400px;
+  height: 50px;
+  left: 700px;
+  top: 100px;
+}
+
+.userh {
+  position: relative;
+  background-color: gray;
+  width: 400px;
+  height: 50px;
+  left: 700px;
+  top: 100px;
+}
+
+.useri {
+  position: relative;
+  background-color: gray;
+  width: 400px;
+  height: 50px;
+  left: 700px;
+  top: 100px;
+}
+
+.userj {
+  position: relative;
+  background-color: gray;
+  width: 400px;
+  height: 50px;
+  left: 700px;
+  top: 100px;
+}
+
+.userk {
+  position: relative;
+  background-color: gray;
+  width: 400px;
+  height: 50px;
   left: 700px;
   top: 100px;
 }
@@ -56,30 +167,30 @@ body {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   left: 125px;
-  bottom: 95px;
+  bottom: 80px;
 }
 
 #playtool {
   position: relative;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
-  left: 125px;
-  bottom: 135px;
+  left: 115px;
+  bottom: 125px;
 }
 
 .loctionpic {
   position: relative;
   width: 20px;
-  bottom: 130px;
-  left: 95px;
+  bottom: 115px;
+  left: 100px;
 }
 
 .guitar {
   position: relative;
-  width: 55px;
-  height: 55px;
-  bottom: 195px;
-  left: 290px;
+  width: 25px;
+  height: 25px;
+  bottom: 175px;
+  left: 320px;
 }
 
 .cporfile-pic {
@@ -96,16 +207,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   left: 10px;
-  bottom: 8px;
+  bottom: 2px;
   color: white;
 }
 
 .addButton {
   position: relative;
-  width: 55px;
-  height: 55px;
-  bottom: 195px;
-  left: 280px;
+  width: 25px;
+  height: 25px;
+  bottom: 175px;
+  left: 320px;
 }
 
 .nagtaive-system {
@@ -126,7 +237,7 @@ body {
 
 .serching-button-navi {
   position: relative;
-  background-color: cyan;
+  background-color: #5FB2B8;
   border-radius: 50px;
   width: 90px;
   height: 35px;
@@ -135,4 +246,78 @@ body {
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
+}
+
+.contentName {
+  position: relative;
+  left: 70px;
+  bottom: 45px;
+  font-size: 12px;
+  line-height: 35px;
+  color: white;
+}
+
+.kmm {
+  position: relative;
+  left: 360px;
+  bottom: 82px;
+  font-size: 12px;
+  color: white;
+}
+
+.loader {
+  position: relative;
+  left: 850px;
+  top: 400px;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.playingtoolc {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  bottom: 95px;
+  left: 320px;
+}
+
+.kmmz {
+  position: relative;
+  left: 355px;
+  bottom: 125px;
+  font-size: 12px;
+  color: white;
+}
+
+.nav-topz {
+  position: relative;
+  background-color: #5c5656;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 400px;
+  height: 95px;
+  left: 700px;
+  top: 100px;
+}
+
+.nav-topz {
+  position: relative;
+  background-color: crimson;
+}
+
+.nav-topz:hover {
+  background-color: blueviolet;
+  transition: background-color 1s;
 }

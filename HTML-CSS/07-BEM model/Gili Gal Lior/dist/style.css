@@ -227,3 +227,27 @@ img {
   font-size: 30px;
   color: white;
 }
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background-color: gray;
+  border-radius: 50%;
+  position: absolute;
+  left: 200px;
+  top: 30px;
+  animation-name: movingball;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes movingball {
+  50% {
+    left: 1000px;
+    background-color: rgba(95, 178, 184, 0.85);
+  }
+  100% {
+    left: 200px;
+    background-color: gray;
+  }
+}
