@@ -148,12 +148,13 @@ h3 {
     }
 
     @keyframes textcolor {
-        from {
+        from{
             color: white;
+            
         }
 
-        to {
-
+        to{
+            font-size: 18px;
             color: rgba(0, 255, 255, 0.685);
 
         }
