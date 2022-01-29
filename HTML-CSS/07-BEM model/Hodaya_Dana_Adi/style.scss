@@ -260,3 +260,311 @@ h3 {
 
     }
 }
+
+/*adi*/
+
+
+
+html{
+    margin: 0px;
+    padding: 0px;
+    }
+    
+    
+    body{
+        background-color: white;
+        margin: 0px;
+    padding: 0px;
+    font-family: Roboto;
+    }
+    
+    
+    
+    
+    .cardthree{
+    
+        background-color: #2e2f33;
+        max-width: 360px;
+        height: 652px;
+        margin:150px auto;
+        border-radius: 25px;
+        overflow: hidden;
+        position: relative;
+    
+    
+        &__firststrip{
+    
+            background-color: #46474b;
+            width: 100%;
+            height: 77px;
+            border: 1px solid transparent; /*סמתי בורדר בדיו האב כדי שלא ידבק לבן*/
+            position: relative;
+            display:flex;
+          justify-content: flex-start;
+          
+            
+        }
+    
+        &__imgp{
+    
+            width: 38px;
+            height: 47px;
+            white-space: nowrap;
+            margin-top: 13px;
+            margin-left: 20px;
+            
+        }
+    
+        &__imgraper{
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            overflow: hidden;
+        
+            .cardthree__imgrape__pic{
+    
+                width: 100%;
+            }
+    
+    
+    
+    
+        }
+    
+    
+        &__paragraph{
+            margin: 0px;
+            margin-top: 3px;
+            color: white;
+            font-size: 13px;
+            font-weight: 200;
+        }
+    
+        &__dot{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-image: radial-gradient(circle, rgb(0, 255, 64), rgb(53, 173, 37), green);
+            position: absolute;
+            top:40px;
+            left: 45px;
+            animation-name: example_adi;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+    
+    
+        &__location{
+            
+            
+           /* background-color: indianred;*/
+           /* border: 1px solid black;*/
+            width: fit-content;
+           margin-top: 14px;
+           margin-left: 20px;
+            .cardthree__location__iconp{
+                width: 100%;
+             /*   border: 1px solid black;*/
+                display:flex;
+                height:34px;
+                
+                
+                
+                .cardthree__location__iconp__icon{
+                   /* border: 1px solid black;*/
+                    width: fit-content;
+                    display: inline-block;
+                    margin-top: 12px;
+                    margin-left: 1px;
+                    height: fit-content;
+    
+                
+                }
+               
+                 p{
+                    font-size: 12px;
+                    color: white;
+                  /*  border: 1px solid black;*/
+                    width: fit-content;
+                    display: inline-block;
+                    
+        
+                }
+           
+            }
+            
+            .cardthree__location__paragraph{
+                margin-top: 5px;
+                color: rgba(180, 180, 180, 0.45);
+                margin-left: 7px;
+            }
+        }
+    
+    
+    
+        &__pen{
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background-color: #5FB2B8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            margin-left: 20px;
+    
+        }
+    
+    
+        &__ruslte{
+    
+            width: 68px;
+            height: 20px;
+            background-color: #5FB2B8;
+            border-radius: 37px;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 15px;
+            box-sizing: border-box;
+            margin-top: 23px;
+            margin-left: auto;
+            margin-right: 10px;
+            
+           
+    
+        }
+    
+         .cardthree__paragraph--resulte{
+    
+          margin-top: 2px;
+        
+        }
+    
+        &__contnerstrip{
+            width: 100%;
+           /* background-color: burlywood;*/
+            height: 30%;
+            margin-top: 20px;
+        }
+    
+        &__stip{
+            width: 100%;
+            height: 50px;
+            background-color:  rgba(180, 180, 180, 0.45);
+            display: flex;
+            align-items: center;
+            position: relative;
+    
+            .cardthree__stip__pragrph{
+                font-size: 12px;
+                color: white;
+                font-weight: 500;
+                margin-left: 10px;
+            }
+            span{
+                font-weight: 900;
+                font-family: Arial, Helvetica, sans-serif;
+               
+            }
+    
+            .cardthree__stip__pragrph--km{
+                margin-left: auto;
+                margin-right: 10px;
+            }
+        }
+    
+        &__picicon{
+    
+            width: 33px;
+            height: 33px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-left:20px;
+           /* position: relative;*/
+         
+            .cardthree__dot--stip{
+    
+                position: absolute;
+               top:33px;
+               
+            }
+    
+      
+          
+        }
+    
+        .cardthree__stip--gray{
+    
+            background-color: transparent;
+        }
+    
+        &__muzic{
+    
+            fill: white;
+            width: 30px;
+            margin-left: 120px;
+        }
+    
+        &__gituer{
+    
+            width: 30px;
+            margin-left: 150px;
+    
+        }
+    
+        .cardthree__muzic--tarboka{
+    
+            position: absolute;
+            left: 115px;
+        }
+    
+        .cardthree__picicon__img--prophil{
+            width: 100%;
+        }
+    
+       &__googelmap{
+    
+        width: 100%;
+        height: 301px;
+        background-color: white;
+    
+       }
+    
+        &__stipfooter{
+            background-color: #2e2f33;
+            width: 100%;
+            height: 56px;
+            position: absolute;
+        }
+    
+       &__stipfooter{
+          
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    
+       }
+    
+       &__stipfooter_icon{
+    
+        cursor: pointer;
+       }
+      
+       .cardthree__picicon--imgpro{
+    
+        width: 37px;
+        height: 37px;
+        margin-left: 18px;
+        
+       }
+    
+       @keyframes example_adi
+        {
+        from{
+            background-image: radial-gradient(circle, rgb(0, 255, 64), rgb(53, 173, 37), green);
+        }
+        to {
+            background-image: radial-gradient( circle,#00d4ff 10%, #2c2cd4 90%, );
+        }
+       }
+    }
