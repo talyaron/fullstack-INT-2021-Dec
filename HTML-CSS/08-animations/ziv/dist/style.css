@@ -1,0 +1,13 @@
+.box {
+  background-color: #e1b086;
+  width: 250px;
+  height: 250px;
+  border: radius 0;
+  position: relative;
+  animation-name: changColor;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  background-size: cover;
+}
+
+@keyframes changcolor {}
