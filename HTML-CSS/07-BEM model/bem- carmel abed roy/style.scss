@@ -11,42 +11,50 @@
 
 .usermenu {
     width: 360px;
-    height: 55px;
-    background-color: rgb(61, 65, 63);
+    height: 75px;
+    background-color: rgb(83, 83, 83);
 
     &__profile {
         img {
-            width: 40px;
+            width: 50px;
             border-radius: 50%;
-            margin-top: 7px;
-            margin-left: 5px;
+            margin-top: 15px;
+            margin-left: 20px;
         }
     }
 }
 
 .user {
+    display: flex;
     width: 360px;
-    height: 40px;
+    height: 50px;
     background-color: rgb(153, 153, 153);
-
+    &--dark {
+        background-color: rgb(41, 40, 40);
+        height: 50px;
+        display: flex;
+    }
+    &__name {
+        color: white;
+        margin-left: 10px;
+        margin-top: 15px;
+    }
     &__profile {
         img {
             width: 30px;
             border-radius: 50%;
-            margin-top: 5px;
+            margin-top: 10px;
             margin-left: 5px;
         }
 
-        &__name {
-            color: white;
-            margin-left: 35px;
-        }
+        
 
-        &--dark {
-            background-color: rgb(31, 31, 31);
-            height: 40px;
-        }
+        
     }
+}
+.bottemmenu{
+    background-color: rgb(41, 40, 40);
+    height: 70px;
 }
 
 
