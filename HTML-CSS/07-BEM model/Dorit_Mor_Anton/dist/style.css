@@ -17,6 +17,7 @@
   position: relative;
 }
 .card .top_header__firstRow {
+  position: relative;
   display: flex;
   flex-direction: row;
 }
@@ -27,7 +28,10 @@
   height: 95px;
   width: 95px;
 }
-.card .top_header__firstRow__logo object h1 {
+.card .top_header__firstRow__logo h1 {
+  position: absolute;
+  left: 50px;
+  top: 35px;
   color: white;
   font-size: 14px;
 }
@@ -88,21 +92,53 @@
   border-top-right-radius: 18px;
   background-color: white;
 }
-.card .top-header_2 h3 {
-  width: 35px;
-  height: 35px;
-  background-color: #2D2F33;
+.card .top-header_2 .text-wrapper {
+  display: flex;
+  padding-left: 13px;
+  height: 51px;
+  align-items: center;
+}
+.card .top-header_2 .text-wrapper .ellipse-shape h3 {
   color: white;
-  text-align: center;
+  width: 32px;
+  height: 32px;
+  background-color: #64728d;
   border-radius: 50%;
+  text-align: center;
   display: table-cell;
   vertical-align: middle;
-}
-.card .top-header_2 h4 {
   color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+.card .top-header_2 .text-wrapper h4 {
+  color: #2e5090;
+  padding-left: 6px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 .card .main_body .top_text {
   text-align: center;
+}
+.card .main_body .top_text h2 {
+  margin: 0px;
+  padding-top: 30px;
+  color: #42a8ac;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+.card .main_body .top_text h3 {
+  margin: 0px;
+  padding-bottom: 20px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+.card .main_body .top_text h3 #play {
+  color: #c1cff2;
+}
+.card .main_body .top_text h3 #alongside {
+  color: #42a8ac;
 }
 .card .main_body .buttons {
   width: 239px;
@@ -114,14 +150,22 @@
   grid-template-columns: repeat(2, 1fr);
 }
 .card .main_body .buttons .button_big {
-  width: 111px;
-  height: 74px;
   background-color: rgba(180, 180, 180, 0.37);
   border-radius: 15px;
 }
 .card .main_body .buttons .button_big h4 {
+  width: 111px;
+  height: 74px;
   text-align: center;
-  padding-top: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: white;
+  display: table-cell;
+  vertical-align: middle;
+}
+.card .main_body .buttons .button_big:hover {
+  background-color: #42a8ac;
 }
 .card .main_body .smaller_btn {
   width: 247px;
@@ -133,19 +177,23 @@
 .card .main_body .smaller_btn h4 {
   text-align: center;
   padding-top: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: white;
 }
 .card .main_body .lines_wrapper__dark_row {
   position: relative;
   display: flex;
-  height: 90px;
-  width: 239px;
+  height: 55px;
+  width: 370px;
 }
 .card .main_body .lines_wrapper__dark_row__profile {
   display: inline-block;
 }
 .card .main_body .lines_wrapper__dark_row__profile img {
-  width: 65px;
-  height: 65px;
+  width: 50px;
+  height: 50px;
   position: absolute;
   top: 3px;
   left: 10px;
@@ -159,77 +207,75 @@
   font-weight: bolder;
   position: absolute;
   left: 85px;
-  top: 20px;
+  top: 7px;
 }
 .card .main_body .lines_wrapper__dark_row__instrument {
   display: inline-block;
 }
 .card .main_body .lines_wrapper__dark_row__instrument img {
   position: absolute;
-  right: -75px;
-  top: 28px;
+  right: 50px;
+  top: 15px;
   height: 30px;
   width: 30px;
 }
-.card .main_body .lines_wrapper__dark_rowdark__size {
+.card .main_body .lines_wrapper__dark_row__size {
   display: inline-block;
 }
-.card .main_body .lines_wrapper__dark_rowdark__size p {
+.card .main_body .lines_wrapper__dark_row__size p {
   color: white;
   font-size: 14px;
   position: absolute;
-  top: 24px;
-  right: -110px;
+  top: 12px;
+  right: 15px;
 }
-.card .main_body .lines_wrapperdark_row--clear {
+.card .main_body .lines_wrapper__dark_row--clear {
+  background-color: #727171;
   position: relative;
-  top: 400px;
-  left: 200px;
-  background-color: #e7dbdb;
   display: flex;
-  height: 90px;
-  width: 239px;
+  height: 55px;
+  width: 370px;
 }
-.card .main_body .lines_wrapperdark_row--clear__profile {
+.card .main_body .lines_wrapper__dark_row--clear__profile {
   display: inline-block;
 }
-.card .main_body .lines_wrapperdark_row--clear__profile img {
-  width: 65px;
-  height: 65px;
+.card .main_body .lines_wrapper__dark_row--clear__profile img {
+  width: 50px;
+  height: 50px;
   position: absolute;
   top: 3px;
   left: 10px;
 }
-.card .main_body .lines_wrapperdark_row--clear__name {
+.card .main_body .lines_wrapper__dark_row--clear__name {
   display: inline-block;
 }
-.card .main_body .lines_wrapperdark_row--clear__name p {
+.card .main_body .lines_wrapper__dark_row--clear__name p {
   color: white;
   font-size: 16px;
   font-weight: bolder;
   position: absolute;
   left: 85px;
-  top: 20px;
+  top: 7px;
 }
-.card .main_body .lines_wrapperdark_row--clear__instrument {
+.card .main_body .lines_wrapper__dark_row--clear__instrument {
   display: inline-block;
 }
-.card .main_body .lines_wrapperdark_row--clear__instrument img {
+.card .main_body .lines_wrapper__dark_row--clear__instrument img {
   position: absolute;
-  right: -75px;
-  top: 28px;
+  right: 50px;
+  top: 12px;
   height: 30px;
   width: 30px;
 }
-.card .main_body .lines_wrapperdark_row--clear__size {
+.card .main_body .lines_wrapper__dark_row--clear__size {
   display: inline-block;
 }
-.card .main_body .lines_wrapperdark_row--clear__size p {
+.card .main_body .lines_wrapper__dark_row--clear__size p {
   color: white;
   font-size: 14px;
   position: absolute;
-  top: 24px;
-  right: -110px;
+  top: 15px;
+  right: 15px;
 }
 .card .footer .bottom-header {
   width: 370px;
@@ -237,5 +283,164 @@
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
   background-color: white;
-  margin-top: 26px;
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card .footer .bottom-header img {
+  padding-left: 10px;
+  width: 45px;
+  height: 45px;
+}
+.card .footer .bottom-header .next-btn {
+  padding-right: 15px;
+}
+.card .footer .bottom-header .next-btn h3 {
+  width: 70px;
+  height: 35px;
+  background-color: #4bb8bd;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.card .footer .wrappFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  margin-top: 20px;
+}
+.card .footer .wrappFooter__backPage img {
+  width: 55px;
+  height: 55px;
+}
+.card .footer .wrappFooter__settings img {
+  width: 55px;
+  height: 55px;
+}
+.card .footer .wrappFooter__chat img {
+  width: 55px;
+  height: 55px;
+}
+.card .footer .wrappFooter__update img {
+  width: 55px;
+  height: 55px;
+}
+.card .footer .wrappFooter__home img {
+  width: 55px;
+  height: 55px;
+}
+
+.box {
+  background-color: #6395c0;
+  width: 300px;
+  height: 300px;
+  border-radius: 0;
+  position: relative;
+  animation-name: bouncingAnimals;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background-size: cover;
+}
+
+@keyframes bouncingAnimals {
+  0% {
+    background-image: url(https://cdn.pixabay.com/photo/2022/01/13/10/39/animal-6934928__480.jpg);
+    border-radius: 200px;
+    transform: scale(1) translate(0%, 0%);
+    position: absolute;
+    top: 10px;
+    left: 0vw;
+  }
+  10% {
+    background-image: url(https://cdn.pixabay.com/photo/2022/01/13/10/39/animal-6934928__480.jpg);
+    border-radius: 200px;
+    transform: scale(0.9) translate(10%, 10%);
+    position: absolute;
+    top: 15px;
+    left: 10vw;
+  }
+  20% {
+    background-image: url(https://cdn.pixabay.com/photo/2021/10/19/12/30/elephant-6723451__340.jpg);
+    border-radius: 200px;
+    transform: scale(0.8) translate(20%, 20%);
+    position: absolute;
+    top: 20px;
+    left: 20vw;
+  }
+  30% {
+    background-image: url(https://cdn.pixabay.com/photo/2022/01/21/17/04/bird-6955201__340.jpg);
+    border-radius: 200px;
+    transform: scale(0.7) translate(30%, 30%);
+    position: absolute;
+    top: 25px;
+    left: 30vw;
+  }
+  40% {
+    background-image: url(https://cdn.pixabay.com/photo/2020/11/27/06/58/cat-5781057__340.jpg);
+    border-radius: 200px;
+    transform: scale(0.6) translate(40%, 40%);
+    position: absolute;
+    top: 30px;
+    left: 40vw;
+  }
+  50% {
+    background-image: url(https://cdn.pixabay.com/photo/2020/12/17/07/15/swan-5838427__480.jpg);
+    border-radius: 200px;
+    transform: scale(0.5) translate(50%, 50%);
+    position: absolute;
+    top: 35px;
+    left: 45vw;
+  }
+  60% {
+    background-image: url(https://cdn.pixabay.com/photo/2021/06/18/06/51/seagull-6345331__480.jpg);
+    border-radius: 200px;
+    transform: scale(0.6) translate(40%, 40%);
+    position: absolute;
+    top: 40px;
+    left: 50vw;
+  }
+  70% {
+    background-image: url(https://cdn.pixabay.com/photo/2022/01/20/15/37/monkey-6952641__480.jpg);
+    border-radius: 200px;
+    transform: scale(0.7) translate(30%, 30%);
+    position: absolute;
+    top: 45px;
+    left: 60vw;
+  }
+  80% {
+    background-image: url(https://cdn.pixabay.com/photo/2022/01/19/09/17/squirrel-6949263__340.jpg);
+    border-radius: 200px;
+    transform: scale(0.8) translate(20%, 20%);
+    position: absolute;
+    top: 50px;
+    left: 65vw;
+  }
+  90% {
+    background-image: url(https://cdn.pixabay.com/photo/2021/11/05/18/23/bear-6771842__480.jpg);
+    border-radius: 200px;
+    transform: scale(0.9) translate(10%, 10%);
+    position: absolute;
+    top: 55px;
+    left: 70vw;
+  }
+  100% {
+    background-image: url(https://cdn.pixabay.com/photo/2021/11/05/18/23/bear-6771842__480.jpg);
+    border-radius: 200px;
+    transform: scale(1) translate(0%, 0%);
+    position: absolute;
+    top: 60px;
+    left: 75vw;
+  }
 }

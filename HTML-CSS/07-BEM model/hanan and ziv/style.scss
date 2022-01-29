@@ -6,7 +6,7 @@ body{
 
 .nav-top{
           position: relative;
-          background-color: #46474b;
+          background-color: rgb(92, 86, 86);
                border-top-left-radius: 20px;
                border-top-right-radius: 20px;
                width: 400px;
@@ -18,26 +18,193 @@ body{
 .bottom-nav {
    
   position: relative;
-  background-color: #46474b;
+  justify-content: space-between  ;
+  cursor: pointer;
+  background-color: rgb(82, 75, 75);
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
       width: 400px;
        height: 95px;
-      top:668px;
+      top:100px;
        left:700px;
- 
-
-
-
+        color: #106d68; 
+       text-align: center;
+       overflow: visible;
+   
+       .back{
+         position: relative;
+         left: -160px;
+         bottom: -10px;
+       }
+       .settings{
+         position: relative;
+         left: -100px;
+         bottom: 35px;
+       }
+       .img{
+        position: relative;
+        left: -20px;
+        bottom: 70px;
+       }
+       .profile{
+        position: relative;
+        left: 60px;
+        bottom: 105px;
+       }
+       .home{
+        position: relative;
+        left: 140px;
+        bottom: 140px;
+       }
 }
     .usera{ 
      
       position: relative;
-      background-color: #292929;
+      background-color: #383737;
       width: 400px;
       height: 53px;
       left: 700px;
-       top:100px
+       top:100px;
+
+
+
+
+}
+
+.userb{  
+
+
+  position: relative;
+      background-color: gray;
+      width: 400px;
+      height: 50px;
+      left: 700px;
+       top: 100px;
+
+
+}
+.userc{
+  position: relative;
+  background-color: rgb(56, 56, 56);
+  width: 400px;
+  height: 50px;
+  left: 700px;
+   top: 100px;
+}
+.userd{
+  position: relative;
+  background-color: gray;
+  width: 400px;
+  height: 50px;
+  left: 700px;
+   top: 100px;
+}
+.usere{
+  position: relative;
+  background-color: gray;
+  width: 400px;
+  height: 50px;
+  left: 700px;
+   top: 100px;
+}
+.Userf {
+  position: relative;
+  background-color: rgb(48, 47, 47);
+  width: 400px;
+  height: 50px;
+  left: 700px;
+   top: 100px;
+}
+.userg{
+  position: relative;
+  background-color: gray;
+  width: 400px;
+  height: 50px;
+  left: 700px;
+   top: 100px;
+}
+.userh{
+  position: relative;
+  background-color: gray;
+  width: 400px;
+  height: 50px;
+  left: 700px;
+   top: 100px;
+}
+.useri{
+  position: relative;
+  background-color: gray;
+  width: 400px;
+  height: 50px;
+  left: 700px;
+   top: 100px;
+}
+.userj{
+  position: relative;
+  background-color: gray;
+  width: 400px;
+  height: 50px;
+  left: 700px;
+   top: 100px;
+}
+.userk{
+  position: relative;
+  background-color: gray;
+  width: 400px;
+  height: 50px;
+  left: 700px;
+   top: 100px;
+}
+.profile-pic {
+position: relative;
+border-radius: 100%;
+width: 55px;
+height: 55px; 
+left: 20px;
+top: 10px;
+
+}
+
+#loction{
+    position: relative;
+    color: white;
+ font-family: Arial, Helvetica, sans-serif;
+  left: 125px;
+  bottom: 80px;
+}
+
+
+#playtool{    
+    position: relative;
+     
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    left: 115px;
+     bottom: 125px;
+}
+
+
+.loctionpic{
+
+   position: relative;
+    
+   width: 20px;
+     bottom: 115px;
+     left: 100px;
+
+
+}
+
+
+.guitar { 
+    
+  position: relative;
+  
+  width: 25px;
+   height: 25px;
+  bottom: 175px;
+   left: 320px;
+
 
 
 
@@ -45,3 +212,172 @@ body{
 }
 
 
+.cporfile-pic {
+
+  position: relative;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px; 
+  left: 20px;
+  top: 5px;
+
+
+
+}
+
+.UserName{
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  left: 10px;
+  bottom: 2px;
+  color: white;
+  
+
+
+}
+
+.addButton {
+  
+  position: relative;
+ 
+  width: 25px;
+   height: 25px;
+  bottom: 175px;
+   left: 320px;
+
+
+
+
+
+}
+   /////////hanan-classes//////////
+
+
+
+
+
+
+   .nagtaive-system{
+   position: relative;
+   width: 400px;
+    height: 318px;
+    left: 350px;
+    top: 50px;
+     
+     
+
+
+
+  }
+  
+
+  .addButton-navi {
+  
+    position: relative;
+    
+    width: 25px;
+     height: 25px;
+    bottom: 190px;
+     left: 215px;
+  
+  } 
+
+  .serching-button-navi{
+    position: relative;
+    background-color:  #5FB2B8;
+      border-radius: 50px;
+       width: 90px;
+      height: 35px;
+     bottom: 190px;
+      left: 265px;
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+      
+
+
+
+  }
+
+
+  .contentName {
+    position: relative;
+    left: 70px;
+    bottom: 45px;
+    font-size: 12px;
+    line-height: 35px;
+    color: white;
+
+
+  }
+
+  .kmm{
+    position: relative;
+    left: 360px;
+    bottom: 82px;
+    font-size: 12px;
+    color: white;
+    
+  }
+
+
+
+  .loader {
+    position: relative;
+    left:850px;
+    top:400px;
+
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db; 
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  ///////ziv css/////////
+
+
+.playingtoolc{
+ position: relative;
+  
+ width: 25px;
+   height: 25px;
+  bottom: 95px;
+   left: 320px;
+  
+  }
+.kmmz{
+  position: relative;
+  left: 355px;
+  bottom: 125px;
+  font-size: 12px;
+  color: white; 
+  
+}
+
+  
+.nav-topz{
+  position: relative;
+  background-color: rgb(92, 86, 86);
+       border-top-left-radius: 20px;
+       border-top-right-radius: 20px;
+       width: 400px;
+        height: 95px;
+       left: 700px;
+         top: 100px;
+}
+ .nav-topz{
+  position: relative;
+ background-color: crimson;
+   }
+  .nav-topz:hover{
+  background-color: blueviolet;
+  transition: background-color 1s}
+  

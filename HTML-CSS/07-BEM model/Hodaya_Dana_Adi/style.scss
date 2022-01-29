@@ -1,34 +1,36 @@
-.links{
+.links {
     color: black;
-    a:hover{
+
+    a:hover {
         color: blue;
     }
 }
 
-h3{ 
+h3 {
 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
     font-size: 14px;
     font-weight: 500;
-  }
+}
 
-.card{
+.card {
     width: 300px;
     height: 600px;
     background-color: rgb(53, 51, 51);
     border-radius: 20px;
     margin: auto;
     overflow: hidden;
+
 }
 
 .top_menu {
     width: 300px;
     height: 80px;
-    background-color: rgb(70,71,75);
-    
- 
-    
+    background-color: rgb(70, 71, 75);
+
+
+
     &__figure {
         float: left;
         width: 30px;
@@ -38,47 +40,223 @@ h3{
         font-size: 13px;
         color: white;
         text-indent: 0;
-
         margin: 0.5em;
         padding: 0.5em;
-      }
 
-    
-        
-        
     }
 
-    .user {
-        width: 300px;
-        height: 45px;
-        background-color: rgb(106,107,109);
-        ;
+}
+
+
+
+.user {
+    width: 300px;
+    height: 45px;
+    background-color: rgb(106, 107, 109);
+
+    display: flex;
+    flex-direction: row;
+
+
+    &__profile {
+        img {
+            width: 30px;
+            border-radius: 50%;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+
+        &__name {
+            color: white;
+            margin-left: 35px;
+        }
+
+        &--dark {
+            background-color: rgb(46, 47, 51);
+            height: 45px;
+        }
+    }
+}
+
+//--hodaya--//
+.card {
+    width: 300px;
+    height: 600px;
+    background-color: rgb(53, 51, 51);
+    border-radius: 20px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.top_nav {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+
+
+    .user_name {
+        position: relative;
         display: flex;
         flex-direction: row;
 
-    
-        &__profile {
-            img {
-                width: 30px;
-                border-radius: 50%;
-                margin-top: 5px;
-                margin-left: 5px;
-            }
-    
-            &__name {
-                color: white;
-                margin-left: 35px;
-            }
-    
-            &--dark {
-                background-color: rgb(46,47,51);
-                height: 45px;
-            }
+        img {
+            margin-left: 10px;
+        }
+
+        .A {
+            font-size: 18px;
+            margin-left: -24px;
+            color: white;
+        }
+
+        .name {
+            position: absolute;
+            margin-left: 60px;
         }
     }
-    
-    
-    
-    
-    
-    
+}
+
+.info {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-color: rgba(128, 128, 128, 0.055);
+
+    .text {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.548);
+        margin-left: 90px;
+    }
+
+    .location_icon {
+        img {
+            position: absolute;
+            width: 30px;
+            margin-top: 30px;
+        }
+    }
+
+    .text2 {
+        position: absolute;
+        color: white;
+        margin-left: 30px;
+        margin-top: 40px;
+        animation-name: textcolor;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+    }
+
+    @keyframes textcolor {
+        from{
+            color: white;
+            
+        }
+
+        to{
+            font-size: 18px;
+            color: rgba(0, 255, 255, 0.685);
+
+        }
+    }
+
+    .text3 {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.562);
+        margin-top: 70px;
+        margin-left: 32px;
+    }
+
+    .btn_opt {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        cursor: pointer;
+        bottom: 10px;
+        left: 25%;
+        align-content: center;
+
+
+        .btn1 {
+            background-color: rgba(0, 255, 255, 0.685);
+            border-radius: 15px;
+            padding: 10px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn1:hover {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .btn2 {
+            background-color: rgba(0, 255, 255, 0.685);
+            border-radius: 15px;
+            padding: 10px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn2:hover {
+            background-color: rgb(255, 255, 255);
+        }
+    }
+
+    .btn3 {
+        background-color: rgba(0, 255, 255, 0.685);
+        border-radius: 15px;
+        padding: 10px 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn3:hover {
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+.map_pic {
+    img {
+        width: 100%;
+        height: 330px;
+        margin-top: 145px;
+    }
+}
+
+.btm_nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: 100%;
+    height: 70px;
+    margin-top: -4px;
+
+    .btn_go {
+
+        img {
+            width: 40px;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+
+        .btn_go {
+            position: absolute;
+            background-color: aqua;
+            border-radius: 15px;
+            padding: 6px 20px;
+            right: 8px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn_go:hover {
+            background-color: rgb(109, 110, 106);
+            border: none;
+
+        }
+
+    }
+}

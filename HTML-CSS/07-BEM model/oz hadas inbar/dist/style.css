@@ -99,6 +99,7 @@
   flex-direction: row;
   background-color: white;
   border-radius: 15px 15px 0 0;
+  border: none;
   margin-bottom: 20px;
 }
 .mega-wrapper .user_profile img {

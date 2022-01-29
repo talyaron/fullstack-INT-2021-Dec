@@ -1,20 +1,28 @@
 .wrapper {
-  width: 424px;
+  width: 390px;
   height: 619px;
   background-color: #313336;
   margin: auto;
   border-radius: 10%;
+  padding: 0;
 }
 .wrapper .top_nav {
   border-top-left-radius: 10%;
   border-top-right-radius: 10%;
-  width: 424px;
+  width: 100%;
   height: 74px;
   background-color: rgba(71, 73, 76, 0.014);
   position: relative;
   display: flex;
   flex-direction: column;
   padding: 3px;
+}
+.wrapper .top_nav #username_pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  bottom: 1px;
+  position: relative;
 }
 .wrapper .top_nav .username_pic {
   display: flex;
@@ -32,6 +40,12 @@
 .wrapper .top_nav .username_pic .user__name {
   color: white;
   font-size: 10px;
+}
+.wrapper .top_nav .big-name {
+  position: absolute;
+  top: 9%;
+  right: 76%;
+  color: blue;
 }
 .wrapper .top_nav .user__location {
   display: flex;
@@ -90,37 +104,49 @@
 }
 
 .usernames__wrapper {
-  width: 424px;
+  width: 100%;
   height: 600px;
   background-color: #313336;
-  border-radius: 8%;
+  border-radius: 0% 0% 8% 8%;
 }
 .usernames__wrapper .username__box {
-  width: 424px;
+  width: 100%;
   height: 40px;
   background-color: #292a2b;
   position: relative;
   display: flex;
   flex-direction: row;
-  padding: 5px;
+  margin: 0%;
+}
+.usernames__wrapper .username__box .username--box {
+  width: 100%;
+  height: 40px;
+  background-color: #47494c;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 0%;
 }
 .usernames__wrapper .username__box .usernames_pic {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   gap: 8px;
+  position: absolute;
+  margin-left: 10px;
 }
 .usernames__wrapper .username__box .usernames_pic img {
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  margin-left: 5px;
-  padding: 5px;
-  margin-top: -4px;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  padding: 2px;
+  margin-top: 3px;
 }
 .usernames__wrapper .users__name {
   color: white;
   font-size: 10px;
+  text-align: center;
 }
 .usernames__wrapper .scale {
   display: flex;
@@ -133,20 +159,37 @@
   color: white;
   margin-top: 9px;
   font-size: 18px;
+  animation-name: Drumspop;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+@keyframes Drumspop {
+  0% {
+    color: white;
+    font-size: 18px;
+  }
+  25% {
+    color: yellow;
+    font-size: 20px;
+  }
+  50% {
+    color: #6260ce;
+    font-size: 15px;
+  }
+  75% {
+    color: #ff00dd;
+    font-size: 20px;
+  }
+  100% {
+    color: #3cff00;
+    font-size: 18px;
+  }
 }
 .usernames__wrapper .scale p {
   color: white;
   font-size: 10px;
   margin-right: 15px;
-}
-.usernames__wrapper .username--box {
-  width: 424px;
-  height: 40px;
-  background-color: #47494c;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  padding: 5px;
 }
 
 .button_nav {
@@ -175,4 +218,92 @@
 .button_nav .button__nav:hover {
   background-color: #59bcc9a9;
   color: white;
+}
+
+body {
+  background-color: grey;
+}
+
+.white {
+  background-color: white;
+}
+
+.boxs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.boxs .inside-text {
+  margin-top: 11px;
+}
+.boxs .inside-text .big-text {
+  color: cadetblue;
+  margin: -21px;
+}
+.boxs .inside-text .smaller-text {
+  color: white;
+  margin: -21px;
+}
+.boxs .inside-text .smallest-text {
+  color: #7184f0;
+  display: flex;
+  gap: 1rem;
+  margin: 0px;
+}
+.boxs .inside-text .smallest-text #reg {
+  color: cadetblue;
+}
+.boxs .columms {
+  display: flex;
+  height: 342px;
+  justify-content: space-evenly;
+}
+.boxs .columms button {
+  background-color: rgba(128, 128, 128, 0);
+  border: none;
+}
+.boxs .columms .firstcolumm {
+  display: flex;
+  margin-left: 20%;
+}
+.boxs .columms .secondcolumm {
+  display: flex;
+  left: 10px;
+}
+.boxs .columms .littlebox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: grey;
+  height: 78px;
+  width: 121px;
+  margin: 10px;
+  border-radius: 16%;
+  padding: 20px;
+  color: white;
+  cursor: pointer;
+}
+.boxs .columms .littlebox:hover {
+  background-color: #59bcc9a9;
+  color: rgba(0, 0, 0, 0.658);
+}
+.boxs .bottom-text-area {
+  display: flex;
+  position: relative;
+  height: 37px;
+  width: 275px;
+  border: 2px solid rgba(255, 0, 0, 0);
+  border-radius: 8px;
+  padding: 5px;
+  top: 30px;
+  background-color: grey;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+.boxs .bottom-text-area:hover {
+  background-color: #59bcc9a9;
+  color: rgba(0, 0, 0, 0.658);
 }

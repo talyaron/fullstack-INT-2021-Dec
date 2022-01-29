@@ -14,6 +14,7 @@
         flex-direction: column; 
         position: relative;
         &__firstRow{
+            position: relative;
             display: flex;
             flex-direction: row;
             &__logo{
@@ -23,10 +24,13 @@
                     top:0px;
                     height: 95px;
                     width:95px;
-                    h1{
-                        color:white;
-                        font-size:14px ;
-                    }
+                }    
+                h1{
+                    position:absolute;
+                    left: 50px;
+                    top:35px;
+                    color:white;
+                    font-size:14px ;
                 }
             }
             &__img1{ 
@@ -105,25 +109,36 @@
         border-top-left-radius: 18px;
         border-top-right-radius: 18px;
         background-color: white;
-       
-        
-        
-        h3 {
-            width: 35px;
-            height: 35px;
-            background-color: #2D2F33;
-            color: white;
-            text-align: center; 
-            border-radius: 50%;
-            display: table-cell;
-            vertical-align: middle;
 
-           }
-        
-        h4 {
-            color: white;
+        .text-wrapper  {
+            display: flex;
+            padding-left: 13px;
+            height: 51px;
+            align-items: center;
+            
+            .ellipse-shape {
+                h3 {
+                    color: rgb(255, 255, 255); 
+                    width: 32px;
+                    height: 32px;
+                    background-color: #64728d;
+                    border-radius: 50%;
+                    text-align: center;
+                    display: table-cell;
+                    vertical-align: middle;
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 500;
+                    
+                }
+            }
+            h4 {
+                color: #2e5090;  
+                padding-left: 6px;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 500;
+            }
         }
-
     }
 
     /* Utilities */
@@ -131,6 +146,30 @@
         
         .top_text {
         text-align: center;
+        
+            h2 {
+                margin: 0px;
+                padding-top: 30px;
+                color: #42a8ac;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 500;
+            }
+
+            h3 {
+                margin: 0px;
+                padding-bottom: 20px;
+                color: white;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 500;
+
+                #play {
+                    color: #c1cff2;
+                }
+
+                #alongside {
+                    color: #42a8ac;
+                }
+            }
         }
 
         .buttons {
@@ -141,17 +180,28 @@
             display: grid;
             gap: 12px;
             grid-template-columns: repeat(2, 1fr);
-               .button_big {
-                    width:  111px;
-                    height: 74px;
-                    background-color: rgba(180, 180, 180, 0.37);
-                    border-radius: 15px;
-                    h4 {
-                         text-align: center;
-                         padding-top: 5px;
-                         
+           
+            .button_big {
+                   background-color: rgba(180, 180, 180, 0.37);
+                   border-radius: 15px;
+                  
+                   h4 {
+                       width:  111px;
+                       height: 74px;
+                       text-align: center; 
+                       font-family: 'Roboto', sans-serif;
+                       font-size: 0.8rem;
+                       font-weight: 500;
+                       color: white;
+                       display: table-cell;
+                       vertical-align: middle;
+                       
                     } 
+                    &:hover {
+                        background-color: #42a8ac;
+                    }
                 }
+                
             }    
             .smaller_btn {
             width: 247px;
@@ -163,6 +213,10 @@
             h4 {
                 text-align: center;
                 padding-top: 5px;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 500;
+                font-size: 0.8rem;
+                color: white;
                 
             }
         }
@@ -170,13 +224,13 @@
             &__dark_row{
                 position:relative;
                 display:flex;
-                height:90px;
-                width:239px;
+                height:55px;
+                width:370px;
                 &__profile{
                     display: inline-block;
                     img{
-                        width: 65px;
-                        height:65px;
+                        width: 50px;
+                        height:50px;
                         position:absolute;
                         top:3px;
                         left:10px;
@@ -190,65 +244,15 @@
                         font-weight: bolder;
                         position:absolute;
                         left:85px;
-                        top:20px;
+                        top:7px;
                     }
                 }
                 &__instrument{
                     display:inline-block;
                     img{
                         position:absolute;
-                        right: -75px;
-                        top:28px;
-                        height: 30px;
-                        width:30px;
-                    }
-                }
-                &dark__size{
-                    display:inline-block;
-                    p{
-                        color:white;
-                        font-size: 14px;
-                        position:absolute;
-                        top:24px;
-                        right:-110px;
-                    }
-                }        
-            }
-            &dark_row--clear{
-                position:relative;
-                top:400px;
-                left:200px;
-                background-color: rgb(231, 219, 219);
-                display:flex;
-                height:90px;
-                width:239px;
-                &__profile{
-                    display: inline-block;
-                    img{
-                        width: 65px;
-                        height:65px;
-                        position:absolute;
-                        top:3px;
-                        left:10px;
-                    }
-                }
-                &__name{
-                    display:inline-block;
-                    p{
-                        color:white;
-                        font-size: 16px;
-                        font-weight: bolder;
-                        position:absolute;
-                        left:85px;
-                        top:20px;
-                    }
-                }
-                &__instrument{
-                    display:inline-block;
-                    img{
-                        position:absolute;
-                        right: -75px;
-                        top:28px;
+                        right: 50px;
+                        top:15px;
                         height: 30px;
                         width:30px;
                     }
@@ -259,8 +263,56 @@
                         color:white;
                         font-size: 14px;
                         position:absolute;
-                        top:24px;
-                        right:-110px;
+                        top: 12px;
+                        right:15px;
+                    }
+                }        
+            }
+            &__dark_row--clear{
+                background-color: rgb(114, 113, 113);
+                position:relative;
+                display:flex;
+                height:55px;
+                width:370px;
+                &__profile{
+                    display: inline-block;
+                    img{
+                        width: 50px;
+                        height:50px;
+                        position:absolute;
+                        top:3px;
+                        left:10px;
+                    }
+                }
+                &__name{
+                    display:inline-block;
+                    p{
+                        color:white;
+                        font-size: 16px;
+                        font-weight: bolder;
+                        position:absolute;
+                        left:85px;
+                        top:7px;
+                    }
+                }
+                &__instrument{
+                    display:inline-block;
+                    img{
+                        position:absolute;
+                        right: 50px;
+                        top:12px;
+                        height: 30px;
+                        width:30px;
+                    }
+                }
+                &__size{
+                    display:inline-block;
+                    p{
+                        color:white;
+                        font-size: 14px;
+                        position:absolute;
+                        top:15px;
+                        right:15px;
                     }
                 }        
             }
@@ -275,7 +327,180 @@
             border-bottom-left-radius: 18px;
             border-bottom-right-radius: 18px;
             background-color: white;
-            margin-top: 26px;
+            margin-top: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            img {
+                padding-left: 10px;
+                width: 45px;
+                height: 45px;
+            }
+
+            .next-btn {
+                padding-right: 15px;
+                h3 {
+                    width: 70px;
+                    height: 35px;
+                    background-color: #4bb8bd;
+                    display: table-cell;
+                    text-align: center;
+                    vertical-align: middle;
+                    border-bottom-left-radius: 18px;
+                    border-bottom-right-radius: 18px;
+                    border-top-left-radius: 18px;
+                    border-top-right-radius: 18px;
+                    color: white;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 500;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+        .wrappFooter{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            position:relative;
+            align-items: center;
+            margin-top: 20px;
+            &__backPage{
+                img{
+                    width:55px;
+                    height:55px;
+                }
+            }
+            &__settings{
+                img{
+                    width:55px;
+                    height:55px;
+                } 
+            }
+            &__chat{
+                img{
+                    width:55px;
+                    height:55px;
+                } 
+            }
+            &__update{
+                img{
+                    width:55px;
+                    height:55px;
+                } 
+            }
+            &__home{
+                img{
+                    width:55px;
+                    height:55px;
+                } 
+            }
+
         }
     }
 }
+.box {
+    background-color: rgb(99, 149, 192);
+    width: 300px;
+    height: 300px;
+    border-radius: 0;
+    position: relative;
+    animation-name: bouncingAnimals;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    background-size: cover;
+  }
+@keyframes bouncingAnimals {
+    0% {
+      background-image: url(https://cdn.pixabay.com/photo/2022/01/13/10/39/animal-6934928__480.jpg);
+      border-radius: 200px;
+      transform: scale(1) translate(0%, +0%);
+      position: absolute;
+      top: 10px;
+      left:0vw;
+    }
+    10% {
+        background-image: url(https://cdn.pixabay.com/photo/2022/01/13/10/39/animal-6934928__480.jpg);
+        border-radius: 200px;
+        transform: scale(0.9) translate(10%, +10%);
+        position: absolute;
+        top: 15px;
+        left:10vw;
+      }
+    20% {
+        background-image: url(https://cdn.pixabay.com/photo/2021/10/19/12/30/elephant-6723451__340.jpg);
+        border-radius: 200px;
+        transform: scale(0.8) translate(+20%, +20%);
+        position: absolute;
+        top: 20px;
+        left:20vw;
+    }
+    30% {
+      background-image: url(https://cdn.pixabay.com/photo/2022/01/21/17/04/bird-6955201__340.jpg);
+      border-radius: 200px;
+      transform: scale(0.7) translate(+30%, +30%);
+      position: absolute;
+      top: 25px;
+      left:30vw;
+    }
+    40% {
+      background-image: url(https://cdn.pixabay.com/photo/2020/11/27/06/58/cat-5781057__340.jpg);
+      border-radius: 200px;
+      transform: scale(0.6) translate(+40%, +40%);
+      position: absolute;
+      top: 30px;
+      left:40vw;
+    }
+    50% {
+      background-image: url(https://cdn.pixabay.com/photo/2020/12/17/07/15/swan-5838427__480.jpg);
+      border-radius: 200px;
+      transform: scale(0.5) translate(+50%, +50%);
+      position: absolute;
+      top: 35px;
+      left:45vw;
+     
+    }
+    60% {
+        background-image: url(https://cdn.pixabay.com/photo/2021/06/18/06/51/seagull-6345331__480.jpg);
+        border-radius: 200px;
+        transform: scale(0.6) translate(+40%, +40%);
+        position: absolute;
+        top: 40px;
+        left:50vw;
+      }
+    70% {
+        background-image: url(https://cdn.pixabay.com/photo/2022/01/20/15/37/monkey-6952641__480.jpg);
+        border-radius: 200px;
+        transform: scale(0.7) translate(+30%, +30%);
+        position: absolute;
+        top: 45px;
+        left:60vw;
+    }
+    80% {
+        background-image: url(https://cdn.pixabay.com/photo/2022/01/19/09/17/squirrel-6949263__340.jpg);
+        border-radius: 200px;
+        transform: scale(0.8) translate(+20%, +20%);
+        position: absolute;
+        top: 50px;
+        left:65vw;
+    }
+    
+    90% {
+        background-image: url(https://cdn.pixabay.com/photo/2021/11/05/18/23/bear-6771842__480.jpg);
+        border-radius: 200px;
+        transform: scale(0.9) translate(+10%, +10%);
+        position: absolute;
+        top: 55px;
+        left:70vw;
+    }
+    100% {
+        background-image: url(https://cdn.pixabay.com/photo/2021/11/05/18/23/bear-6771842__480.jpg);
+        border-radius: 200px;
+        transform: scale(1) translate(+0%, +0%);
+        position: absolute;
+        top: 60px;
+        left:75vw;
+        
+    }
+  }
