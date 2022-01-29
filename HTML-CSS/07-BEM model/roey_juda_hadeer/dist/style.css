@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   border: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .wrapper {
@@ -9,9 +10,107 @@
   margin: 0 auto;
   margin-top: 50px;
   border: 1px solid gray;
-  border-radius: 7px;
+  border-radius: 10px;
 }
 
 .topnav {
   padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.profileIcon {
+  background-color: rgba(19, 19, 44, 0.424);
+  width: 35px;
+  height: 35px;
+  border-radius: 25px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+.profileIcon p {
+  margin: 0 auto;
+  font-size: 38px;
+  color: white;
+}
+
+.profileName {
+  margin: auto 0;
+  padding-left: 10px;
+  font-size: 25px;
+}
+
+.mainContentWrapper {
+  background-color: rgba(0, 0, 0, 0.664);
+}
+
+.topTextWrapper {
+  text-align: center;
+  padding-top: 35px;
+}
+
+.firstLine {
+  font-size: 60px;
+  color: #00c0a0;
+  padding: 10px;
+}
+
+.secondLine {
+  font-size: 50px;
+  color: white;
+}
+
+.thiredLine {
+  display: inline-block;
+  color: #8598d6;
+  font-size: 40px;
+}
+.thiredLine--small {
+  display: inline-block;
+  color: #00c0a0;
+  font-size: 40px;
+}
+
+.boxesWrapper {
+  box-sizing: border-box;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.boxesRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 25px;
+  padding: 20px;
+}
+
+.instrumentBox {
+  background-color: #858585;
+  padding: 35px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.instrumentBox:hover {
+  background-color: #00c0a0;
+}
+
+.moreOther {
+  color: white;
+  font-size: 25px;
+  background-color: #858585;
+  border-radius: 50px;
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.moreOther:hover {
+  background-color: #00c0a0;
 }
