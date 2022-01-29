@@ -121,6 +121,11 @@
   margin: 5px 4px;
   border-radius: 12px;
   border: none;
+  animation-name: mymove;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  position: relative;
+  color: white;
 }
 .mega-wrapper .content .container .btn:hover {
   background: #5FB2B8;
