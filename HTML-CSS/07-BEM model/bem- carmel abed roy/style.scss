@@ -1,4 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
 .card {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
     position: relative;
     width: 360px;
     height: 640px;
@@ -13,13 +19,45 @@
     width: 360px;
     height: 75px;
     background-color: rgb(83, 83, 83);
-
+    display: flex;
+    .place{
+        color: white;
+        margin-top: 10px;
+        margin-left: 5px;
+        font-size: 15px;
+        p{
+            color: gray;
+        }
+    }
+    .icons{
+        margin-top: 15px;
+        font-size: 30px;
+        margin-left: 150px;
+        color: white;
+    }
     &__profile {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        p{
+            margin-top: 5px;
+            margin-left: 22px;
+            color: white;
+            font-size: 10px;
+        }
+        .frame{
+            overflow: hidden;
+            width: 45px;
+            height: 45px;
+            border-radius: 55%;
+            margin-top: 10px;
+            margin-left: 10px;
+            position: relative;
+        }
         img {
-            width: 50px;
-            border-radius: 50%;
-            margin-top: 15px;
-            margin-left: 20px;
+            width: 54px;
+            margin-top: -22px;
+            margin-left: -3px;
         }
     }
 }
@@ -28,11 +66,13 @@
     display: flex;
     width: 360px;
     height: 50px;
+    justify-content: space-between;
     background-color: rgb(153, 153, 153);
     &--dark {
         background-color: rgb(41, 40, 40);
         height: 50px;
         display: flex;
+        justify-content: space-between;
     }
     &__name {
         color: white;
@@ -40,23 +80,34 @@
         margin-top: 15px;
     }
     &__profile {
+        display: flex;
         img {
             width: 30px;
+            height: 30px;
             border-radius: 50%;
             margin-top: 10px;
             margin-left: 5px;
         }
+    
+    
+}
+.user__info {
+    color: white;
+    margin-top: 15px;
+    margin-right: 10px;
+}
 
-        
 
-        
-    }
 }
 .bottemmenu{
     background-color: rgb(41, 40, 40);
     height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: aqua;
+    font-size: 20px;
 }
-
 
 
 
