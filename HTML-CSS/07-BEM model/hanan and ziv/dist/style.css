@@ -285,3 +285,39 @@ body {
     transform: rotate(360deg);
   }
 }
+.playingtoolc {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  bottom: 95px;
+  left: 320px;
+}
+
+.kmmz {
+  position: relative;
+  left: 355px;
+  bottom: 125px;
+  font-size: 12px;
+  color: white;
+}
+
+.nav-topz {
+  position: relative;
+  background-color: #5c5656;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 400px;
+  height: 95px;
+  left: 700px;
+  top: 100px;
+}
+
+.nav-topz {
+  position: relative;
+  background-color: crimson;
+}
+
+.nav-topz:hover {
+  background-color: blueviolet;
+  transition: background-color 1s;
+}
