@@ -1,17 +1,18 @@
 .wrapper {
-    width: 424px;
+    width: 390px;
     height: 619px;
     background-color: rgb(49, 51, 54);
     margin: auto;
-    border-radius: 10% ;
-    
+    border-radius: 10%;
+    padding: 0;
 
-    
+
+
 
     .top_nav {
         border-top-left-radius: 10%;
         border-top-right-radius: 10%;
-        width: 424px;
+        width: 100%;
         height: 74px;
         background-color: rgba(71, 73, 76, 0.014);
         position: relative;
@@ -19,14 +20,14 @@
         flex-direction: column;
         padding: 3px;
 
-        #username_pic{
-             width: 50px;
-                height: 50px;
-                border-radius: 50%;
+        #username_pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
             bottom: 1px;
             position: relative;
         }
-        
+
         .username_pic {
             display: flex;
             flex-direction: column;
@@ -50,14 +51,15 @@
             }
 
         }
-        .big-name{
+
+        .big-name {
             position: absolute;
             top: 9%;
             right: 76%;
             color: blue;
         }
-            
-        
+
+
         .user__location {
 
             display: flex;
@@ -108,7 +110,7 @@
                 text-decoration: none;
                 display: inline-block;
                 font-size: 18px;
-               margin-top: -19px;
+                margin-top: -19px;
                 transition-duration: 0.4s;
                 cursor: pointer;
                 background-color: rgb(49, 51, 54);
@@ -116,47 +118,63 @@
 
 
             }
+
             .button__edit:hover {
                 background-color: #59bcc9a9;
                 color: white;
             }
-.guitar{
-    color: white;
-    font-size: 18px;
-}
+
+            .guitar {
+                color: white;
+                font-size: 18px;
+            }
         }
 
     }
 }
 
 .usernames__wrapper {
-    width: 424px;
+    width: 100%;
     height: 600px;
     background-color: rgb(49, 51, 54);
-    border-radius: 0% 0% 8% 8% ;
-    
+    border-radius: 0% 0% 8% 8%;
+
     .username__box {
-        width: 424px;
+        width: 100%;
         height: 40px;
         background-color: rgb(41, 42, 43);
         position: relative;
         display: flex;
         flex-direction: row;
-        padding: 5px;
+        margin: 0%;
+
+        .username--box {
+            width: 100%;
+            height: 40px;
+            background-color: rgb(71, 73, 76);
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            margin: 0%;
+
+
+        }
 
         .usernames_pic {
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
             gap: 8px;
+            position: absolute;
+            margin-left: 10px;
 
             img {
                 border-radius: 50%;
-                width: 40px;
-                height: 40px;
-                margin-left: 5px;
-                padding: 5px;
-                margin-top: -4px;
+                width: 30px;
+                height: 30px;
+                margin-left: 10px;
+                padding: 2px;
+                margin-top: 3px;
             }
 
         }
@@ -165,6 +183,7 @@
     .users__name {
         color: white;
         font-size: 10px;
+        text-align: center;
     }
 
     .scale {
@@ -176,9 +195,39 @@
 
 
         i {
-            color: white;
+            color: rgb(255, 255, 255);
             margin-top: 9px;
             font-size: 18px;
+            animation-name: Drumspop;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+         
+        }
+
+        @keyframes Drumspop {
+           0% {
+                color: white;
+                font-size: 18px;
+            }
+
+            25% {
+                color: yellow;
+                font-size: 20px;
+            }
+            50% {
+                color: rgb(98, 96, 206);
+                font-size: 15px;
+            }
+            75% {
+                color: rgb(255, 0, 221);
+                font-size: 20px;
+            }
+            100% {
+                color: rgb(60, 255, 0);
+                font-size: 18px;
+            }
+
         }
 
         p {
@@ -188,16 +237,7 @@
         }
     }
 
-    .username--box {
-        width: 424px;
-        height: 40px;
-        background-color: rgb(71, 73, 76);
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        padding: 5px;
 
-    }
 }
 
 
@@ -233,60 +273,69 @@
 }
 
 
-body{
+body {
     background-color: grey;
 }
 
-.white{
+.white {
     background-color: white;
 }
-.boxs{
+
+.boxs {
 
     display: flex;
     flex-direction: column;
 
     align-items: center;
-    .inside-text{
+
+    .inside-text {
 
         margin-top: 11px;
 
-    
-        .big-text{
+
+        .big-text {
             color: cadetblue;
             margin: -21px;
         }
-        .smaller-text{
+
+        .smaller-text {
             color: white;
             margin: -21px;
         }
-        .smallest-text{
+
+        .smallest-text {
             color: rgb(113, 132, 240);
             display: flex;
             gap: 1rem;
             margin: 0px;
-            #reg{
+
+            #reg {
                 color: cadetblue;
             }
-      
+
         }
     }
-    .columms{
+
+    .columms {
         display: flex;
-        
+
         height: 342px;
-        button{
+
+        button {
             background-color: rgba(128, 128, 128, 0);
             border: none;
         }
-        
+
         justify-content: space-evenly;
-        .firstcolumm{
+
+        .firstcolumm {
             display: flex;
             margin-left: 20%;
         }
-        .secondcolumm{
+
+        .secondcolumm {
             display: flex;
-            
+
             left: 10px;
         }
 
@@ -305,14 +354,15 @@ body{
             color: white;
             cursor: pointer;
         }
+
         .littlebox:hover {
-           
+
             background-color: #59bcc9a9;
             color: rgba(0, 0, 0, 0.658);
         }
     }
 
-      .bottom-text-area{
+    .bottom-text-area {
         display: flex;
         position: relative;
         height: 37px;
@@ -326,12 +376,12 @@ body{
         justify-content: center;
         color: white;
         cursor: pointer;
-          }
-          .bottom-text-area:hover{
-            background-color: #59bcc9a9;
-            color: rgba(0, 0, 0, 0.658);
+    }
 
-          }   
+    .bottom-text-area:hover {
+        background-color: #59bcc9a9;
+        color: rgba(0, 0, 0, 0.658);
+
+    }
 
 }
-
