@@ -1,0 +1,43 @@
+
+.circle{
+    background-color: red;
+    border-radius: 50px;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top:50vh;
+    left:50vw;
+    transform: translate(-50%,-50%);
+    opacity: .2;
+}
+.box{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    position: absolute;
+    top:50vh;
+    left:50vw;
+    // transform: rotate(10deg);
+    transition: all 1300ms;
+    &:hover{
+        transform: rotate(360deg) scale(1.8);
+    }
+    &:active{
+        background-color: blue;
+    }
+} 
+
+.trapezoid {
+	border-bottom: 50px solid #555;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+	width: 125px;
+    transition: all 1300ms;
+    &:hover{
+        transform: rotate(360deg);
+    }
+    &:active{
+        background-color: blue;
+    }
+}
