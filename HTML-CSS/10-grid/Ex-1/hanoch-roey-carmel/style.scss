@@ -1,19 +1,21 @@
+
 .wrapper{
     display: grid;
     margin: 0% auto;
-    width: 400px;
-    height: 500px;
-    grid-template-rows: 3fr 1fr;
-    gap: 20px;
+    max-width: 1000px;
+    grid-template-columns: 3fr 1fr;
+    row-gap: 20px;
     
     .text{
         background-color: red;
         color:aliceblue;
+        padding: 20px;
+        direction: rtl;
     }
     .box{
-        img{
-            object-fit: ;
-            
-        }
+       img{
+           width: 100%;
+           height: 100%;
+       }
     }
 }
