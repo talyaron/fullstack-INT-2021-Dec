@@ -1,0 +1,16 @@
+.circle{
+    background-color: aqua;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    &:hover{
+        background-color: black;
+        
+    }
+    &:active{
+        background-color: chartreuse;
+     }
+    transform:translate( 30vh ,30vw);
+     transition: all 2s;
+    
+}
