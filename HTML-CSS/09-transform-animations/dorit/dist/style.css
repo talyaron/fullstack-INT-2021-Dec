@@ -1,0 +1,17 @@
+.circle {
+  background-color: green;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  border: 2px solid black;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transition: all 1300ms;
+}
+.circle:hover {
+  transform: rotate(360deg) scale(1.8);
+}
+.circle:active {
+  background-color: blue;
+}
