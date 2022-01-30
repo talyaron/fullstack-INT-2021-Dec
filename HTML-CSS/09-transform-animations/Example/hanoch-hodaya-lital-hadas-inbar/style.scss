@@ -1,16 +1,29 @@
-.circle{
-    background-color: aqua;
-    width: 200px;
-    height: 200px;
+.circle {
+  background-color: aqua;
+  width: 200px;
+  height: 200px;
+  border-radius: 0px;
+  transition: all 2s;
+
+  animation-name: move;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+
+  &:hover {
+    background-color: black;
+  }
+  &:active {
+    background-color: chartreuse;
+  }
+}
+
+@keyframes move {
+  from {
+    transform: translate(0vh, 0vw);
+    border-radius: 0px;
+  }
+  to {
+    transform: translate(30vh, 30vw);
     border-radius: 100px;
-    &:hover{
-        background-color: black;
-        
-    }
-    &:active{
-        background-color: chartreuse;
-     }
-    transform:translate( 30vh ,30vw);
-     transition: all 2s;
-    
+  }
 }
