@@ -12,6 +12,7 @@ body {
         &:hover {
             transform: rotate(-30deg) skew(25deg) scale(0.8);
             transition: 0.8s;
+            opacity: 0.6;
         }
     }
     .container {
