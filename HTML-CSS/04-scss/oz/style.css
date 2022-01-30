@@ -1,0 +1,35 @@
+.mega-wrapper {
+  width: 700px;
+  height: 850px;
+  margin: 20px;
+  background-color: antiquewhite;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 0 8px #0258f8;
+          box-shadow: 0 0 8px #0258f8;
+}
+
+.mega-wrapper .photo img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.mega-wrapper .card-text h1 {
+  padding-left: 60px;
+  margin-top: inherit;
+  font-style: italic;
+}
+
+.mega-wrapper .card-text h2 {
+  font-style: italic;
+  padding-left: 35px;
+}
+
+.mega-wrapper .card-text span {
+  padding-left: 200px;
+}
+
+.mega-wrapper .card-text h4 {
+  padding-left: 45px;
+  font-size: 17px;
+}
+/*# sourceMappingURL=style.css.map */
