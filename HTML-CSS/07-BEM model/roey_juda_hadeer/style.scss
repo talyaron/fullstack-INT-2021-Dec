@@ -1,84 +1,335 @@
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.wrapper{
-    max-width: 900px;
+h1 {
+    font-size: 12px;
+    color: white;
+    background-color: #535353;
+    position: relative;
+    bottom: 5px;
+
+}
+
+p {
+    margin: 0 auto;
+    font-size: 38px;
+    color: white;
+}
+
+h2 {
+    color: white;
+    font-size: 12px;
+    font-weight: normal;
+
+}
+
+
+.wrappersmall {
+    max-width: 500px;
+    margin: 0px auto;
+    border-radius: 30px;
+
+}
+
+.userImg {
+    height: 40px;
+    width: 40px;
+    margin-right: 5px;
+    position: relative;
+
+    img {
+        height: 100%;
+        border-radius: 50%;
+    }
+
+    .greenDot {
+        height: 11px;
+        width: 11px;
+        background-color: rgb(0, 221, 0);
+        border-radius: 50%;
+        position: absolute;
+        bottom: 1px;
+        right: 1px;
+
+
+    }
+
+
+
+}
+
+
+
+.wrapper {
+    max-width: 800px;
     margin: 0 auto;
     margin-top: 50px;
     border: 1px solid gray;
-    border-radius: 10px;
+    border-radius: 30px;
+
 }
 
-.topnav{
+.topnav {
+
     padding: 20px;
     box-sizing: border-box;
     display: flex;
+
+
+
+    &--nearby {
+
+        display: flex;
+
+        padding: 20px;
+        background-color: rgb(83, 83, 83);
+        border-radius: 30px 30px 0px 0px;
+        position: relative;
+        justify-content: space-between;
+
+    }
+
+
 }
 
-.profileIcon{
-    background-color: rgba(19, 19, 44, 0.424);
-    width: 35px;
-    height: 35px;
-    border-radius: 25px;
-    border: 1px solid black;
+.leftSide {
+
     display: flex;
-    align-items: center;
-    padding: 8px;
-    p{
-        margin: 0 auto;
-        font-size: 38px;
-        color: white;
+    flex-direction: row;
+
+
+    .profileIcon {
+        background-color: rgba(19, 19, 44, 0.424);
+        width: 35px;
+        height: 35px;
+        border-radius: 25px;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        padding: 8px;
+
+
+        &--nearby {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(196, 196, 196);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+
+        &__onlineDot {
+            background-color: rgb(27, 228, 0);
+            height: 11px;
+            width: 11px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 30px;
+            left: 60px;
+
+        }
+    }
+
+    .myInfo {
+        display: flex;
+        flex-direction: column;
+
+
+        &__location {
+            padding-left: 40px;
+            padding-top: 10px;
+            display: flex;
+            flex-direction: row;
+            color: white;
+            font-size: 15px;
+
+            img {
+                height: 20px;
+            }
+        }
+
+        &__instrument {
+            color: #c9c9c9;
+            padding-left: 40px;
+            padding-top: 10px;
+        }
     }
 }
 
-.profileName{
+.rightlogos {
+    display: flex;
+    align-items: center;
+
+    &__ins {
+        display: flex;
+        flex-direction: row;
+
+        img {
+            transform: rotate(320deg);
+            height: 60px;
+            animation-name: changColor;
+            animation-duration: 1s;
+            animation-iteration-count:infinite;
+        animation-direction: alternate-reverse;
+        }
+
+
+        @keyframes changColor {
+            from {
+                height: 50px;
+            }
+
+            to {
+                height: 55px;
+            }
+        }
+
+
+
+
+    }
+
+    &__edit {
+        background-color: rgb(27, 155, 155);
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+
+            height: 35px;
+        }
+    }
+}
+
+.user {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(49, 47, 47);
+
+
+
+    .userLeft {
+
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+
+    .userRight {
+        padding-right: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.user--bright {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(153, 153, 153);
+
+
+
+    .userLeft {
+
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+
+    .userRight {
+        padding-right: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+
+.navBottom {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: auto;
+    width: auto;
+    background-color: rgb(34, 34, 34);
+    border-radius: 0px 0px 30px 30px;
+
+    img {
+        padding: 20px;
+        height: 40px;
+
+    }
+}
+
+
+
+.profileName {
     margin: auto 0;
     padding-left: 10px;
     font-size: 25px;
+    color: rgb(0, 30, 112);
 }
 
-.mainContentWrapper{
+.mainContentWrapper {
     background-color: rgba(0, 0, 0, 0.664);
 }
 
-.topTextWrapper{
+.topTextWrapper {
     text-align: center;
     padding-top: 35px;
 }
 
-.firstLine{
+.firstLine {
     font-size: 60px;
     color: rgb(0, 192, 160);
     padding: 10px;
 }
 
-.secondLine{
+.secondLine {
     font-size: 50px;
     color: white;
 }
 
-.thiredLine{
+.thiredLine {
     display: inline-block;
     color: rgb(133, 152, 214);
     font-size: 40px;
-    &--small{
+
+    &--small {
         display: inline-block;
         color: rgb(0, 192, 160);
         font-size: 40px;
     }
 }
 
-.boxesWrapper{
+.boxesWrapper {
     box-sizing: border-box;
     max-width: 600px;
     margin: 0 auto;
 }
 
-.boxesRow{
+.boxesRow {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -86,7 +337,7 @@
     padding: 20px;
 }
 
-.instrumentBox{
+.instrumentBox {
     background-color: rgb(133, 133, 133);
     padding: 35px;
     border-radius: 20px;
@@ -96,11 +347,11 @@
     user-select: none;
 }
 
-.instrumentBox:hover{
+.instrumentBox:hover {
     background-color: rgb(0, 192, 160);
 }
 
-.moreOther{
+.moreOther {
     color: white;
     font-size: 25px;
     background-color: rgb(133, 133, 133);
@@ -111,7 +362,6 @@
     user-select: none;
 }
 
-.moreOther:hover{
+.moreOther:hover {
     background-color: rgb(0, 192, 160);
 }
-

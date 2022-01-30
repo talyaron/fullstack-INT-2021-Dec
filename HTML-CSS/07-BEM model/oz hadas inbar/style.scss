@@ -14,113 +14,79 @@
   height:65px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  position: relative;
+  
  
  
   
   
- .a{
- position: relative;
- top: 30px;
- left: 31px;
- }
+   .a{
+   position: absolute;
+   top: 30px;
+   left: 31px;
+   }
  
-  .p{
-   margin-left :20px;
+   .p{
+    position: absolute;
+   top: 30px;
+   left: 31px;
+   }
+ 
+   .name{
+   position:absolute;
+   left:103px;
+   top: 55px;
+   }
+
+
+   .tel-aviv{
+   position: absolute;
+   left:160px;
+   bottom: 605px;
+   }
+
+   .guitar{
+    position: absolute;
+    left:155px;
+    bottom: 585px;
+
+   }
+
+   .pencel{
+    position: absolute;
+    left:430px;
+    bottom: 590px;
+  
+   }
+
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
- .name{
-  position:absolute;
-  left:140px;
-  top: 55px;
- }
-
-
+ 
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
- 
-  .blok-list{
-   list-style-type: none;
-   padding-top: 0px;
-   padding: 0px;
-   
-     p{
-      position: relative;
-      bottom: 46px;
-      left: 50px;
-     }
-    
-  }
-     
- 
 
  //OZ
 
    
 
 
-    .studentprofile-dark{
-      width: 100%;
-      height: 45px;
-      background-color:rgb(45,47,51);
-      img{
-        border-radius: 50%;
-        width: 35px;
-        height: 35px;
-        margin-top: 5px;
-        margin-left: 5px;
-      }
-    
-    }
-    
-    .studentprofile{
-
-        width: 100%;
-        height: 45px;
-        background-color:rgb(95,96,99);
-       
-        img{
-            border-radius: 50%;
-            width: 35px;
-            height: 35px;
-            margin-top: 3px;
-            margin-left: 5px;
-          }
-        
-    }
-
-
-
-     
-  }      
-    
-     
-     
-
-
-     
+   
 
     
     
@@ -214,6 +180,12 @@
       margin: 5px 4px;
       border-radius: 12px;
       border: none;
+      animation-name:mymove;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      position: relative;
+      color: white;
+      
 
         &:hover {
             background: #5FB2B8;
@@ -314,8 +286,237 @@
            }
           
           }
+         
        
       }
 
 }
 //>>>>>>> e2add5d1a47b676acf9ce67df8be87e490567b8d
+
+// oz!!!!!!!
+.mega-wrapper {
+  border-radius: 15px;
+  width: 400px;
+  height: 600px;
+  border: 1px solid black;
+  margin: auto;
+
+
+
+  .top_nav {
+      background-color: rgba(7, 7, 7, 0.582);
+      width: 100%;
+      height: 65px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      position: relative;
+      display: flex;
+   
+
+
+
+
+      .user_name {
+          display: flex;
+          flex-direction: column;
+          margin-left: 15px;
+
+          .profile_pic {
+              margin-top: 15px;
+
+
+          }
+
+          .a {
+              position: absolute;
+              left: 27px;
+              top: 25px;
+          }
+
+          .adi_max {
+              padding: 1px;
+          }
+
+
+      }
+
+      .location{
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+      margin-left: 50px;
+      gap: 10px;
+      }
+     
+
+      
+          .btn--edit {
+              border: none;
+              color: rgb(190, 190, 190);
+              font-size: 20px;
+
+              cursor: pointer;
+              background-color: rgba(7, 7, 7, 0);
+              padding: 20px;
+              position: relative;
+              left: 150px;
+
+          }
+          .btn--edit:hover {
+              background-color: #59bcc9a9;
+              color: white;
+          }
+         
+
+  }
+
+
+  .blok-list {
+      list-style-type: none;
+      padding-top: 0px;
+      padding: 0px;
+
+      p {
+          position: relative;
+          bottom: 46px;
+          left: 50px;
+      }
+
+  }
+
+
+  .studentprofile-dark {
+      width: 100%;
+      height: 45px;
+      background-color: rgb(45, 47, 51);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+     
+      img {
+         
+          border-radius: 50%;
+          width: 35px;
+          height: 35px;
+          margin-top: 5px;
+          margin-left: 5px;
+      }
+      p{
+      position: relative;
+      right: 60px;
+
+      }
+      
+      i{
+       animation-name:mymove;
+       animation-duration: 5s;
+       animation-iteration-count: infinite;
+       position: relative;
+       right: 15px;
+       top: 15px;
+       color: white;
+      }
+    
+  }
+
+  .studentprofile {
+      width: 100%;
+      height: 45px;
+      background-color: rgba(19, 20, 20, 0.637);
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+     
+      img {
+          border-radius: 50%;
+          width: 35px;
+          height: 35px;
+          margin-top: 5px;
+          margin-left: 5px;
+      }
+      p{
+      position: relative;
+      right: 60px;
+
+      }
+      
+      i{
+       animation-name:mymove2;
+       animation-duration: 5s;
+       animation-iteration-count: infinite;
+       position: relative;
+       right: 15px;
+       top: 15px;
+       color: white;
+      }
+    
+  }
+  .bottom-nav{
+   width: 100%;
+   height: 85px;
+   background-color: rgb(45, 47, 51);
+   border-bottom-left-radius: 15px;
+   border-bottom-right-radius: 15px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+  
+   i{
+   margin-top: 30px;
+
+
+   }
+  
+   .btn--edit-bottom{
+   
+      border: none;
+      color: rgb(190, 190, 190);
+      font-size: 20px;
+      cursor: pointer;
+      background-color: rgba(7, 7, 7, 0);
+      margin-bottom: 20px;
+      
+  }
+      .btn--edit-bottom:hover {
+          background-color: #59bcc9a9;
+          color: white;
+      }
+   
+  
+  }
+  
+ 
+
+
+
+
+  @keyframes mymove {
+      from{
+      color: white;
+  
+
+      }
+      to{
+      color:#59bcc9a9 ;    
+
+      }
+
+  }
+
+
+    
+    
+  @keyframes mymove2 {
+      from{
+      color:#59bcc9a9;
+  
+
+      }
+      to{
+      color:white ;    
+
+      }
+  }
+
+
+}
