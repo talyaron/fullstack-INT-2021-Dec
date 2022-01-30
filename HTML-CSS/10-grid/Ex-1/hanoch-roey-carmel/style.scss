@@ -1,0 +1,19 @@
+.wrapper{
+    display: grid;
+    margin: 0% auto;
+    width: 400px;
+    height: 500px;
+    grid-template-rows: 3fr 1fr;
+    gap: 20px;
+    
+    .text{
+        background-color: red;
+        color:aliceblue;
+    }
+    .box{
+        img{
+            object-fit: ;
+            
+        }
+    }
+}
