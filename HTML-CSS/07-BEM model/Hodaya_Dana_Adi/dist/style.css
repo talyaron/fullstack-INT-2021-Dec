@@ -429,3 +429,13 @@ body {
     background-image: radial-gradient(circle, #00d4ff 10%, #2c2cd4 90%);
   }
 }
+.cardthree__polyrper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.cardthree__polygon {
+  position: absolute;
+  z-index: 3;
+  margin-top: -3px;
+}

@@ -290,6 +290,8 @@ html{
         border-radius: 25px;
         overflow: hidden;
         position: relative;
+        
+
     
     
         &__firststrip{
@@ -566,5 +568,19 @@ html{
         to {
             background-image: radial-gradient( circle,#00d4ff 10%, #2c2cd4 90%, );
         }
+       }
+
+       &__polyrper{
+           position: relative;
+           display: flex;
+           justify-content: center;
+       }
+       &__polygon{
+           position: absolute;
+           z-index: 3;
+           margin-top:-3px;
+         
+          
+    
        }
     }
