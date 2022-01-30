@@ -1,18 +1,26 @@
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   margin: 0;
 }
+
 body .navbar {
   width: 100vw;
   height: 60px;
   background-color: #bb1919;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   position: relative;
 }
+
 body .navbar img {
   width: 60px;
 }
+
 body .navbar a {
   margin-top: 5px;
   font-size: 35px;
@@ -21,9 +29,11 @@ body .navbar a {
   left: 80px;
   text-decoration-thickness: 0px;
 }
+
 body .navbar #right-icon {
   left: 180px;
 }
+
 body .title h1 {
   width: 250px;
   height: 40px;
@@ -31,49 +41,77 @@ body .title h1 {
   position: relative;
   top: 40px;
 }
+
 body .wrapper {
   width: 1250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: auto;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-top: 40px;
   /* articles */
 }
+
 body .wrapper .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin: 44px auto;
   position: relative;
   /* article */
 }
+
 body .wrapper .cards .card {
   margin-left: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   height: 200px;
   /* inline elements inside the article card*/
 }
+
 body .wrapper .cards .card.card:nth-of-type(1) {
   margin: 0;
 }
+
 body .wrapper .cards .card img {
   height: 135px;
   width: 240;
   margin-bottom: 8px;
 }
+
 body .wrapper .cards .card .inline {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 4px;
 }
+
 body .wrapper .cards .card .inline svg {
   fill: #494949;
   width: 13px;
   height: 13px;
   margin-right: 4px;
 }
+
 body .wrapper .cards .card .inline .datetime {
   color: #494949;
   font-size: 13px;
@@ -81,8 +119,10 @@ body .wrapper .cards .card .inline .datetime {
   border-right: 1px solid lightgray;
   padding-right: 4px;
 }
+
 body .wrapper .cards .card .inline .tag {
   font-size: 13px;
   color: #494949;
   padding-left: 4px;
 }
+/*# sourceMappingURL=style.css.map */
