@@ -259,3 +259,198 @@ h3 {
 
     }
 }
+
+
+
+
+//--Questionnaire tab--//
+
+.card-question {
+    position: relative;
+    width: 360px;
+    height: 640px;
+    margin: auto;
+    border-top-width: 60px;
+    border-bottom-width: 60px;
+    border-radius: 36px;
+    background-color: rgb(51,54,59);
+    font-family:sans-serif;
+    user-select: none;
+
+.top_menu_question {
+        width: 360px;
+        height: 55px;
+        background-color: white(248, 245, 245);
+        border-radius: 20%;
+        display: flex;
+        justify-content: start;
+        p {color: white;}
+    
+
+        &__left{
+            width: 115px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+          
+
+        
+        
+            &__icon{
+                width: 30px;
+                height: 30px;
+                color: cadetblue;
+                border-radius: 50%;
+                left: 20px;
+                user-select: none;
+                cursor: pointer;
+                img{ width: 100%;}
+            
+        
+        p{
+            position: absolute;
+            left: 55px;
+            top: 1px;
+            font-size: 15px;
+            color: white(132, 142, 150);
+            user-select: none;}
+         }
+    }  
+}
+.text{
+        margin-left: 5px;
+        margin-right: 5px; 
+        text-align: center;
+        font-weight: bold;
+      h1{
+        color: rgb(62, 179, 173);
+        font-size: 24px;
+        
+        }
+       p{
+         margin-top: -20px;
+         color: white;
+         font-size: 20px;
+        }
+        .play{
+         margin-top: -23px;
+         color: rgb(184, 196, 218);
+         font-size: 20px;
+         span{
+            color: rgb(62, 179, 173);
+
+         }
+
+        }
+   }
+   .button-box{
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-evenly;
+       color: white;
+       text-align: center;
+       font-size: 13px;
+       font-weight: bold;
+       
+      
+       
+       .button1{
+           width: 40%;
+           height: 70px;
+           background-color:rgb(62, 179, 173);
+           border-radius: 16px;
+           user-select: none;
+           cursor: pointer;
+           &:hover{
+            background-color: rgba(62, 108, 114, 0.986);
+        }
+           p{
+               margin-top: 18px;
+           }
+           
+       }
+       .button2{
+        width: 40%;
+        height: 70px;
+        background-color:rgb(128, 128, 128);
+        border-radius: 16px;
+        margin-bottom: 20px;
+        user-select: none;
+        cursor: pointer;
+        &:hover{
+            background-color: rgba(128, 128, 128, 0.24);
+        }
+        p{
+            margin-top: 18px;
+        }
+       }
+       .button3{
+           margin-top: 10px;
+           width: 85%;
+           height: 30px;
+           background-color:rgb(128, 128, 128);
+           border-radius: 16px;
+           font-size: 15px;
+           user-select: none;
+           cursor: pointer;
+           &:hover{
+            background-color: rgba(128, 128, 128, 0.24);
+        }
+           p{
+            margin-top: 7px;
+        }
+       }
+       .button4{
+        width: 40%;
+        height: 70px;
+        background-color:rgb(128, 128, 128);
+        border-radius: 16px;
+        margin-bottom: 20px;
+        user-select: none;
+        cursor: pointer;
+        &:hover{
+            background-color: rgba(128, 128, 128, 0.24);
+        }
+        p{
+            margin-top: 25px;
+        }
+       }
+
+   }
+   .bottom_menu {
+        width: 360px;
+        height: 55px;
+        background-color: rgb(238, 232, 232);
+        margin-top: 30px;
+
+        &__arrow{
+        width: 20px;
+            color:rgb(62, 179, 173); 
+            height: 60px;
+            position: absolute;
+            left: 10px;
+            user-select: none;
+            cursor: pointer; }
+
+        &__button{
+            width: 90px;
+            height: 45px;
+            border-radius: 10px;
+            position: absolute;
+            right: 5px;
+            bottom:-20px;
+            color: rgb(255, 255, 255);
+            background-color: rgb(62, 179, 173); 
+            border: none;
+            user-select: none;
+            cursor: pointer;
+            font-size: 20px;
+                &:hover{
+                 background-color:  rgba(62, 108, 114, 0.986);
+            }
+
+        }
+   
+      
+   }
+}
