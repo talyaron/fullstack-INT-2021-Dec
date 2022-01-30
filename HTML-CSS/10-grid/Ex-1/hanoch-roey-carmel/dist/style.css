@@ -1,0 +1,15 @@
+.wrapper {
+  display: grid;
+  margin: 0% auto;
+  width: 400px;
+  height: 500px;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+}
+.wrapper .text {
+  background-color: red;
+  color: aliceblue;
+}
+.wrapper .box img {
+  object-fit: fill;
+}
