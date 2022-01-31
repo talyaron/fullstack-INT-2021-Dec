@@ -168,7 +168,7 @@ main {
   display: -ms-grid;
   display: grid;
   padding-left: 1rem;
-      grid-template-areas: 'bigitem bigitem smlitem1 smlitem2' 'bigitem bigitem smlitem3 smlitem4';
+      grid-template-areas: 'bigitem bigitem smlitem1 smlitem2' 'bigitem bigitem smlitem3 smlitem4';
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
   -ms-grid-rows: 150px 150px;
