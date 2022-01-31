@@ -8,7 +8,7 @@ body{
     .container{
         width: 500px;
         display: grid;
-        grid-template-columns: 1fr 1fr 2fr;
+        grid-template-columns: repeat(3, 1fr);
         gap: 3px;
         .item{
             padding: 15px;
@@ -16,6 +16,11 @@ body{
             text-align: center;
             background-color: rgb(60, 94, 190);
             border-radius: 5px;
+        }
+        .extended{
+            background-color: rgb(214, 87, 108);
+            grid-column: 1/4;
+            grid-row: 1/2;
         }
     }
 }
