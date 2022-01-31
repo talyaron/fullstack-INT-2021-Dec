@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    .container{
+        width: 500px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+        gap: 3px;
+        .item{
+            padding: 15px;
+            color: white;
+            text-align: center;
+            background-color: rgb(60, 94, 190);
+            border-radius: 5px;
+        }
+    }
+}
