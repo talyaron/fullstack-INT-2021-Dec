@@ -1,0 +1,29 @@
+.ball{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+    border: 1px solid black;
+    transition: all 1300ms;
+    &:hover{
+        transform: rotate(360deg) scale(1.8);
+       
+    }
+    &:active{
+        background-color: blue;
+    }
+}
+.secondBall{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color:yellow;
+    border: 1px solid black;
+}
+.thirddBall{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color:green;
+    border: 1px solid black;
+}
