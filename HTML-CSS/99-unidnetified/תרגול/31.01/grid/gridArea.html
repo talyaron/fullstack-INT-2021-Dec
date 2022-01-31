@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas:
+                "header header header header"
+                "main main main side"
+                "main main main side"
+                "foot foot foot foot"
+            ;
+        }
+
+        .a {
+            background-color: yellowgreen;
+            grid-area: header;
+        }
+
+        .b {
+            background-color: tomato;
+            grid-area: main;
+        }
+
+        .c {
+            background-color: turquoise;
+            grid-area: side;
+        }
+
+        .d {
+            background-color: rgb(145, 79, 251);
+            grid-area: foot;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="a">1</div>
+        <div class="b">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus suscipit similique nulla odit
+            adipisci ea delectus, beatae dolores exercitationem. Itaque adipisci quaerat ab incidunt unde numquam dolor,
+            magni quidem praesentium?</div>
+        <div class="c">3</div>
+        <div class="d">4</div>
+    </div>
+</body>
+
+</html>

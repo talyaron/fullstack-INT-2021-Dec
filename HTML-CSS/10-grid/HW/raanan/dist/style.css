@@ -117,7 +117,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  background-image: url("https://ichef.bbci.co.uk/news/976/cpsprodpb/3E0D/production/_123058851_mediaitem123058850.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3) 60%), url("https://ichef.bbci.co.uk/news/976/cpsprodpb/3E0D/production/_123058851_mediaitem123058850.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding-left: 1rem;
@@ -146,9 +146,12 @@ main {
   text-decoration: none;
   color: white;
 }
+.sec1 .gridcontainer .bigitem:hover {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1) 60%), url("https://ichef.bbci.co.uk/news/976/cpsprodpb/3E0D/production/_123058851_mediaitem123058850.jpg");
+}
 .sec1 .gridcontainer .smlitem1 {
   grid-area: smlitem1;
-  background-image: url("https://ichef.bbci.co.uk/news/976/cpsprodpb/16FDF/production/_123057149_tv073427699.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3) 60%), url("https://ichef.bbci.co.uk/news/976/cpsprodpb/16FDF/production/_123057149_tv073427699.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   display: flex;
@@ -172,9 +175,12 @@ main {
   text-decoration: none;
   color: white;
 }
+.sec1 .gridcontainer .smlitem1:hover {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1) 60%), url("https://ichef.bbci.co.uk/news/976/cpsprodpb/16FDF/production/_123057149_tv073427699.jpg");
+}
 .sec1 .gridcontainer .smlitem2 {
   grid-area: smlitem2;
-  background-image: url("https://ichef.bbci.co.uk/news/976/cpsprodpb/D10A/production/_123041535_img_2271.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3) 60%), url("https://ichef.bbci.co.uk/news/976/cpsprodpb/D10A/production/_123041535_img_2271.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;
@@ -198,9 +204,12 @@ main {
   text-decoration: none;
   color: white;
 }
+.sec1 .gridcontainer .smlitem2:hover {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1) 60%), url("https://ichef.bbci.co.uk/news/976/cpsprodpb/D10A/production/_123041535_img_2271.jpg");
+}
 .sec1 .gridcontainer .smlitem3 {
   grid-area: smlitem3;
-  background-image: url("https://ychef.files.bbci.co.uk/1600x900/p0bkybmt.webp");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3) 60%), url("https://ychef.files.bbci.co.uk/1600x900/p0bkybmt.webp");
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;
@@ -224,9 +233,12 @@ main {
   text-decoration: none;
   color: white;
 }
+.sec1 .gridcontainer .smlitem3 :hover {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1) 60%), url("https://ychef.files.bbci.co.uk/1600x900/p0bkybmt.webp");
+}
 .sec1 .gridcontainer .smlitem4 {
   grid-area: smlitem4;
-  background-image: url("https://ychef.files.bbci.co.uk/1600x900/p0bky9wl.webp");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3) 60%), url("https://ychef.files.bbci.co.uk/1600x900/p0bky9wl.webp");
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;
@@ -249,6 +261,9 @@ main {
 .sec1 .gridcontainer .smlitem4 a {
   text-decoration: none;
   color: white;
+}
+.sec1 .gridcontainer .smlitem4:hover {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1) 60%), url("https://ychef.files.bbci.co.uk/1600x900/p0bky9wl.webp");
 }
 
 .sec2 {
