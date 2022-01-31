@@ -1,0 +1,19 @@
+.wrapper{
+    width: 1000px;
+    height: 700px;
+    border: 2px solid black;
+    margin: auto;
+ 
+    .article{
+        background-color: cornflowerblue;
+        display: grid;
+        grid-area: auto;
+        grid-template-rows: 100px 100px ;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap:3px;
+        .box img{
+            background-color: yellow;
+        }
+
+    }
+}
