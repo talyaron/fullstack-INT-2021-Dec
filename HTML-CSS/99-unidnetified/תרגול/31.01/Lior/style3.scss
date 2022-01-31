@@ -1,0 +1,37 @@
+body{
+    .container{
+        display: grid;
+        grid-template-areas:
+        'one'
+        'two three'
+        'four';
+        .item:nth-child(1){
+            height: 250px;
+            font-size: 30px;
+            font-weight: 700;
+            border: 5px solid #007451;
+            grid-area: one;
+        }
+        .item:nth-child(2){
+            height: 100px;
+            font-size: 30px;
+            font-weight: 700;
+            border: 5px solid #fb5f79;
+            grid-area: two;
+        }
+        .item:nth-child(3){
+            height: 100px;
+            font-size: 30px;
+            font-weight: 700;
+            border: 5px solid #f3a019;
+            grid-area: three;
+        }
+        .item:nth-child(4){
+            height: 200px;
+            font-size: 30px;
+            font-weight: 700;
+            border: 5px solid #5e10b8;
+            grid-area: four;
+        }
+    }
+}
