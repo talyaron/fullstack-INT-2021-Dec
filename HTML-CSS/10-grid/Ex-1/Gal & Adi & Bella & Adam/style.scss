@@ -1,0 +1,40 @@
+body {
+    .wrapper {
+        display: grid;
+        max-width: 40%;
+        grid-template-rows: 130px;
+        grid-template-columns: 2fr 1fr;
+        gap: 1px;
+        row-gap: 10px;
+        .item {
+            background-color: wheat;
+        }
+        .item:nth-of-type(odd) {
+            background: blue;
+        }
+        .item:nth-of-type(even) {
+            background: blue;
+        }
+        .item:nth-of-type(1) {
+            background: rgb(255, 0, 0);
+        }
+        .item:nth-of-type(2) {
+            background: rgb(255, 0, 0);
+        }
+        .item:nth-of-type(5) {
+            background: rgb(255, 0, 0);
+        }
+        .item:nth-of-type(6) {
+            background: rgb(255, 0, 0);
+        }
+        h3 {
+            direction: rtl;
+            padding-right: 10px;
+        }
+        p {
+            font-size: 14px;
+            padding: 10px;
+            direction: rtl;
+        }
+    }
+}
