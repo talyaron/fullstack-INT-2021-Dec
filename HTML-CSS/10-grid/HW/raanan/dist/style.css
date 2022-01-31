@@ -14,15 +14,16 @@ header {
   display: flex;
   background-color: #000;
   width: 63%;
-  height: 3rem;
+  height: 2.7rem;
   justify-content: center;
   align-items: center;
   font-weight: bold;
 }
 .navbar img {
-  height: 2rem;
+  height: 2.7rem;
   width: 100px;
-  background-color: white;
+  background-color: black;
+  padding-right: 7px;
 }
 .navbar ul {
   display: flex;
@@ -35,7 +36,7 @@ header {
   list-style: none;
   border-left: grey solid 1px;
   border-right: grey solid 1px;
-  height: 3rem;
+  height: 2.7rem;
   width: 5rem;
   background: black;
   font-size: 0.9rem;
@@ -43,11 +44,11 @@ header {
 .navbar ul li:hover {
   border-bottom: red solid 4px;
 }
-.navbar ul li a {
+.navbar ul a {
   text-decoration: none;
   color: white;
 }
-.navbar ul .signin {
+.navbar .signin {
   display: flex;
   justify-content: start;
   width: 14rem;
@@ -55,20 +56,21 @@ header {
   border-right: grey solid 1px;
   padding: 0 1rem;
 }
-.navbar .search {
+
+.search {
   display: flex;
   align-items: center;
   background-color: white;
   margin: 0 0 0 2rem;
   height: 1.5rem;
 }
-.navbar .search input {
+.search input {
   border: none;
 }
-.navbar .search input::placeholder {
+.search input::placeholder {
   padding-left: 0.5rem;
 }
-.navbar .search .fa-search {
+.search .fa-search {
   width: 1.5rem;
   padding-left: 0.2rem;
 }
@@ -83,8 +85,9 @@ main {
 
 .sec1 {
   height: 45vh;
-  width: 63%;
+  width: 90%;
   padding-top: 2rem;
+  color: #4e4e4e;
 }
 .sec1 .welcome {
   display: flex;
@@ -106,15 +109,15 @@ main {
   grid-template-areas: "bigitem bigitem smlitem1 smlitem2" "bigitem bigitem smlitem3 smlitem4";
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 150px 150px;
-  row-gap: 1rem;
-  column-gap: 1.5rem;
+  row-gap: 2rem;
+  column-gap: 2rem;
 }
 .sec1 .gridcontainer .bigitem {
   grid-area: bigitem;
   display: flex;
   flex-direction: column;
   justify-content: end;
-  background-image: url("https://ichef.bbci.co.uk/news/976/cpsprodpb/15454/production/_122942178_gettyimages-1237834830.jpg");
+  background-image: url("https://ichef.bbci.co.uk/news/976/cpsprodpb/3E0D/production/_123058851_mediaitem123058850.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding-left: 1rem;
@@ -134,10 +137,18 @@ main {
   margin: 0.5rem 0;
   color: white;
   font-weight: 400;
+  width: max-content;
+}
+.sec1 .gridcontainer .bigitem h4:hover {
+  border-bottom: white solid 1px;
+}
+.sec1 .gridcontainer .bigitem a {
+  text-decoration: none;
+  color: white;
 }
 .sec1 .gridcontainer .smlitem1 {
   grid-area: smlitem1;
-  background-image: url("https://ichef.bbci.co.uk/news/976/cpsprodpb/65F9/production/_122950162_51751687457_84e21669ed_o.jpg");
+  background-image: url("https://ichef.bbci.co.uk/news/976/cpsprodpb/16FDF/production/_123057149_tv073427699.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   display: flex;
@@ -148,14 +159,22 @@ main {
   padding-left: 0.5rem;
 }
 .sec1 .gridcontainer .smlitem1 h4 {
-  border-left: red solid 2px;
+  border-left: #2c8cfa solid 2px;
   font-weight: 100;
   margin: 0.5rem 0;
   padding-left: 0.4rem;
+  width: max-content;
+}
+.sec1 .gridcontainer .smlitem1 h4:hover {
+  border-bottom: white solid 1px;
+}
+.sec1 .gridcontainer .smlitem1 a {
+  text-decoration: none;
+  color: white;
 }
 .sec1 .gridcontainer .smlitem2 {
   grid-area: smlitem2;
-  background-image: url("https://ichef.bbci.co.uk/onesport/cps/800/cpsprodpb/A568/production/_122944324_gettyimages-1366361024.jpg");
+  background-image: url("https://ichef.bbci.co.uk/news/976/cpsprodpb/D10A/production/_123041535_img_2271.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;
@@ -166,14 +185,22 @@ main {
   padding-left: 0.5rem;
 }
 .sec1 .gridcontainer .smlitem2 h4 {
-  border-left: red solid 2px;
+  border-left: #2c8cfa solid 2px;
   font-weight: 100;
   margin: 0.5rem 0;
   padding-left: 0.4rem;
+  width: max-content;
+}
+.sec1 .gridcontainer .smlitem2 h4:hover {
+  border-bottom: white solid 1px;
+}
+.sec1 .gridcontainer .smlitem2 a {
+  text-decoration: none;
+  color: white;
 }
 .sec1 .gridcontainer .smlitem3 {
   grid-area: smlitem3;
-  background-image: url("https://ichef.bbci.co.uk/news/976/cpsprodpb/E317/production/_122953185_gettyimages-1232458355.jpg");
+  background-image: url("https://ychef.files.bbci.co.uk/1600x900/p0bkybmt.webp");
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;
@@ -184,14 +211,22 @@ main {
   padding-left: 0.5rem;
 }
 .sec1 .gridcontainer .smlitem3 h4 {
-  border-left: red solid 2px;
+  border-left: #08c002 solid 2px;
   font-weight: 100;
   margin: 0.5rem 0;
   padding-left: 0.4rem;
+  width: max-content;
+}
+.sec1 .gridcontainer .smlitem3 h4:hover {
+  border-bottom: white solid 1px;
+}
+.sec1 .gridcontainer .smlitem3 a {
+  text-decoration: none;
+  color: white;
 }
 .sec1 .gridcontainer .smlitem4 {
   grid-area: smlitem4;
-  background-image: url("https://ichef.bbci.co.uk/news/976/cpsprodpb/C3C3/production/_122951105_gettyimages-1366327207.jpg");
+  background-image: url("https://ychef.files.bbci.co.uk/1600x900/p0bky9wl.webp");
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;
@@ -202,16 +237,26 @@ main {
   padding-left: 0.5rem;
 }
 .sec1 .gridcontainer .smlitem4 h4 {
-  border-left: red solid 2px;
+  border-left: #4b00a0 solid 2px;
   font-weight: 100;
   margin: 0.5rem 0;
   padding-left: 0.4rem;
+  width: max-content;
+}
+.sec1 .gridcontainer .smlitem4 h4:hover {
+  border-bottom: white solid 1px;
+}
+.sec1 .gridcontainer .smlitem4 a {
+  text-decoration: none;
+  color: white;
 }
 
 .sec2 {
   height: 50vh;
-  width: 63%;
+  width: 90%;
   padding: 0 1rem;
+  margin-top: 10%;
+  color: #424242;
 }
 .sec2 h2 {
   width: 100%;
@@ -228,6 +273,7 @@ main {
 }
 .sec2 .wrapperflex .item1 img {
   width: 100%;
+  height: 52.5%;
 }
 .sec2 .wrapperflex .item1 h3 {
   font-size: 1.5rem;
@@ -242,6 +288,10 @@ main {
   padding-left: 0.5rem;
   color: grey;
   font-weight: 100;
+  width: max-content;
+}
+.sec2 .wrapperflex .item1 h4:hover {
+  border-bottom: gray solid 1px;
 }
 .sec2 .wrapperflex .item2 {
   width: 33%;
@@ -263,6 +313,10 @@ main {
   padding-left: 0.5rem;
   color: grey;
   font-weight: 100;
+  width: max-content;
+}
+.sec2 .wrapperflex .item2 h4:hover {
+  border-bottom: gray solid 1px;
 }
 .sec2 .wrapperflex .item3 {
   width: 33%;
@@ -283,55 +337,8 @@ main {
   padding-left: 0.5rem;
   color: grey;
   font-weight: 100;
+  width: max-content;
 }
-
-.news-navigator {
-  background-color: #d81717;
-  width: 100%;
-  height: 100px;
-}
-.news-navigator h1 {
-  color: #e7e2e2;
-  padding-top: 5px;
-  padding-left: 10px;
-  font-size: 2rem;
-}
-.news-navigator ul {
-  display: flex;
-  color: #fff;
-}
-.news-navigator ul li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  border-right: grey solid 1px;
-  height: 2rem;
-  width: 6.5rem;
-  background: #d81717 black;
-}
-.news-navigator ul li:hover {
-  border-bottom: #fcfcfc solid 4px;
-}
-
-.news-grid {
-  margin: auto;
-  height: 450px;
-  width: 90%;
-  display: flex;
-}
-.news-grid .card {
-  margin-top: 15px;
-  margin-left: 12px;
-  height: 350px;
-  width: 300px;
-}
-.news-grid .card img {
-  width: 300px;
-}
-.news-grid .card p {
-  color: gray;
-}
-.news-grid .card .orgin {
-  border-left: 1px red solid;
+.sec2 .wrapperflex .item3 h4:hover {
+  border-bottom: gray solid 1px;
 }
