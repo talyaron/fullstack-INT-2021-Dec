@@ -4,7 +4,7 @@
 
 body .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
   grid-template-areas: "one one one two" "one one one two" "one one one three" "four four four four";
   gap: 5px;
 }
