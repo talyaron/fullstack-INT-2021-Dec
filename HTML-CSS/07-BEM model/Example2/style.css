@@ -1,0 +1,121 @@
+html, body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0px;
+}
+
+.home .wrapper {
+  padding-top: 150px;
+  background-color: #0f344f;
+  color: white;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.topNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  background-color: white;
+  height: 100px;
+  top: 0px;
+}
+
+.topNav .rightBtns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.topNav .logo {
+  height: 40px;
+}
+
+.bottomNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: white;
+  position: fixed;
+  bottom: 0px;
+  color: gray;
+}
+
+.bottomNav__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.bottomNav__item figcaption {
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 5px 15px;
+  border: 1px solid #39b6fa;
+  color: #39b6fa;
+  border-radius: 50px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px;
+}
+
+.btn--create {
+  background-color: orange;
+  color: white;
+  border: none;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,49 @@
+.circle {
+  background-color: aqua;
+  width: 200px;
+  height: 200px;
+  border-radius: 0px;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  -webkit-animation-name: move;
+          animation-name: move;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.circle:hover {
+  background-color: black;
+}
+
+.circle:active {
+  background-color: chartreuse;
+}
+
+@-webkit-keyframes move {
+  from {
+    -webkit-transform: translate(0vh, 0vw);
+            transform: translate(0vh, 0vw);
+    border-radius: 0px;
+  }
+  to {
+    -webkit-transform: translate(30vh, 30vw);
+            transform: translate(30vh, 30vw);
+    border-radius: 100px;
+  }
+}
+
+@keyframes move {
+  from {
+    -webkit-transform: translate(0vh, 0vw);
+            transform: translate(0vh, 0vw);
+    border-radius: 0px;
+  }
+  to {
+    -webkit-transform: translate(30vh, 30vw);
+            transform: translate(30vh, 30vw);
+    border-radius: 100px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

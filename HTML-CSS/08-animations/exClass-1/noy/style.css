@@ -1,0 +1,54 @@
+body {
+  margin: 0px;
+}
+
+.box {
+  background-color: #d87585;
+  height: 150px;
+  width: 150px;
+  border-radius: 100px;
+  position: relative;
+  top: 300px;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  position: relative;
+  top: 50vh;
+  left: 50vw;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    top: 300px;
+    width: 157px;
+    height: 140px;
+  }
+  100% {
+    top: 30px;
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    top: 300px;
+    width: 157px;
+    height: 140px;
+  }
+  100% {
+    top: 30px;
+    width: 150px;
+    height: 150px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
