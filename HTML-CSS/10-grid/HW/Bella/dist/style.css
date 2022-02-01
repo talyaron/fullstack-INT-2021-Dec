@@ -26,28 +26,28 @@ body .grid .grid-col-2 {
 body .grid .grid-row-2 {
   grid-row: span 2;
 }
-body .grid .img-gradient {
-  position: relative;
-}
-body .grid .img-gradient .article-text {
+body .grid .grid-row-2 .article-text-xl {
   position: absolute;
   top: 11.4em;
   color: white;
   z-index: 1;
   padding: 20px;
 }
-body .grid .img-gradient .article-text .article-heading {
+body .grid .grid-row-2 .article-text-xl .article-heading {
   font-size: 32px;
   font-weight: 300;
 }
-body .grid .img-gradient .article-text .article-expo {
+body .grid .grid-row-2 .article-text-xl .article-expo {
   font-size: 17px;
   font-weight: 400;
 }
-body .grid .img-gradient .article-text .article-caption {
+body .grid .grid-row-2 .article-text-xl .article-caption {
   font-size: 17px;
   font-weight: lighter;
   text-transform: uppercase;
+}
+body .grid .img-gradient {
+  position: relative;
 }
 body .grid .img-gradient::after {
   content: "";
@@ -58,6 +58,38 @@ body .grid .img-gradient::after {
   height: 100%;
   background: black;
   background: linear-gradient(360deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+}
+body .grid .content .article-text-s-bottom {
+  position: absolute;
+  top: 17em;
+  color: white;
+  z-index: 1;
+  padding: 16px;
+}
+body .grid .content .article-text-s-bottom .article-heading {
+  font-size: 24px;
+  font-weight: 300;
+}
+body .grid .content .article-text-s-bottom .article-caption {
+  font-size: 17px;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+body .grid .content .article-text-s-top {
+  position: absolute;
+  bottom: 13em;
+  color: white;
+  z-index: 1;
+  padding: 16px;
+}
+body .grid .content .article-text-s-top .article-heading {
+  font-size: 24px;
+  font-weight: 300;
+}
+body .grid .content .article-text-s-top .article-caption {
+  font-size: 17px;
+  font-weight: lighter;
+  text-transform: uppercase;
 }
 @media screen and (max-width: 1024px) {
   body .grid {
