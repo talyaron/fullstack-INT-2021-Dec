@@ -164,22 +164,11 @@ body .showcase-grid .grid-col-span {
   grid-row: span 2;
 }
 body .titles {
-  padding: 3% 15%;
-  cursor: pointer;
-}
-body .titles .titles-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  width: 100%;
-  gap: 15px;
-}
-body .titles .titles-grid .r2 {
-  grid-row: 2/3;
+  padding: 3% 15% 0;
 }
 body .titles h2 {
   border-left: 4px solid red;
-  padding-left: 15px;
+  padding: 0 15px;
   font-size: 30px;
   cursor: pointer;
   color: #5a5a5a;
@@ -188,10 +177,47 @@ body .titles h2 {
 body .titles h2:hover {
   color: #000;
 }
+body .titles .titles-flex {
+  display: flex;
+  gap: 15px;
+  padding: 3% 0 0;
+}
+body .titles .titles-flex .item {
+  transition: all 1.5s ease-in-out;
+  cursor: pointer;
+  flex: 1;
+}
+body .titles .titles-flex .item__image {
+  padding: 0% 0 4% 0;
+}
+body .titles .titles-flex .item__image img {
+  width: 100%;
+}
+body .titles .titles-flex .item__content h3 {
+  font-size: 1.5rem;
+}
+body .titles .titles-flex .item__content p {
+  font-size: 1rem;
+  padding: 2% 0;
+}
+body .titles .titles-flex .item__content span {
+  border-left: 3px solid red;
+  padding-left: 10px;
+}
+body .titles .titles-flex .item:hover img {
+  opacity: 0.8;
+}
+body .pd-bt {
+  padding-bottom: 3%;
+}
 
 li, a, button {
   color: white;
   text-decoration: none;
   font-weight: 700;
   font-size: 16px;
+}
+
+#yellow {
+  border-left: 4px solid #ffe600;
 }

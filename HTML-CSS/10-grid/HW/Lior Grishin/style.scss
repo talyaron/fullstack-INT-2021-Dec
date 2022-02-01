@@ -179,24 +179,10 @@ body{
         }
     }
     .titles{
-        padding: 3% 15%;
-        cursor: pointer;
-        .titles-grid{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            width: 100%;
-            gap: 15px;
-            .item{
-
-            }
-            .r2{
-                grid-row: 2 / 3;
-            }
-        }
+        padding: 3% 15% 0;
         h2{
             border-left: 4px solid red;
-            padding-left: 15px;
+            padding: 0 15px;
             font-size: 30px;
             cursor: pointer;
             color: #5a5a5a;
@@ -205,6 +191,43 @@ body{
                 color: #000;
             }
         }
+        .titles-flex{
+            display: flex;
+            gap: 15px;
+            padding: 3% 0 0;
+            .item{
+                transition: all 1.5s ease-in-out;
+                cursor: pointer;
+                flex: 1;
+                &__image{
+                    padding: 0% 0 4% 0;
+                    img{
+                        width: 100%;
+                    }
+                }
+                &__content{
+                    h3{
+                        font-size: 1.5rem;
+                    }
+                    p{
+                        font-size: 1rem;
+                        padding: 2% 0;
+                    }
+                    span{
+                        border-left: 3px solid red;
+                        padding-left: 10px;
+                    }
+                }
+                &:hover{
+                    img{
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+    .pd-bt{
+        padding-bottom: 3%;
     }
 }
 
@@ -213,4 +236,8 @@ li, a, button{
     text-decoration: none;
     font-weight: 700;
     font-size: 16px;
+}
+
+#yellow{
+    border-left: 4px solid #ffe600;
 }
