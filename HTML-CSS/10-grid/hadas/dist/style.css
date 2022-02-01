@@ -39,7 +39,7 @@ h4 {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 3px;
-  grid-template-areas: "item1 item2 item3" "item1 item4 item5";
+  grid-template-areas: "item_1 item_2 item_3" "item_1 item_4 item_5";
   width: 100%;
   height: 320px;
   margin: auto;
@@ -63,65 +63,65 @@ h4 {
   position: relative;
   top: 45px;
 }
-.wrapper .article .item1 {
+.wrapper .article .item_1 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.26) 90%), url(https://ichef.bbci.co.uk/news/976/cpsprodpb/0B79/production/_123073920_mediaitem123073919.jpg);
   background-size: cover;
-  grid-area: item1;
+  grid-area: item_1;
 }
-.wrapper .article .item1:hover {
+.wrapper .article .item_1:hover {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 90%), url(https://ichef.bbci.co.uk/news/976/cpsprodpb/0B79/production/_123073920_mediaitem123073919.jpg);
 }
-.wrapper .article .item1 h1 {
+.wrapper .article .item_1 h1 {
   font-size: 30px;
   font-weight: normal;
   position: relative;
   top: 115px;
   margin-left: 10px;
 }
-.wrapper .article .item1 h3 {
+.wrapper .article .item_1 h3 {
   font-size: 17px;
   font-weight: normal;
   margin-left: 10px;
   position: relative;
   top: 115px;
 }
-.wrapper .article .item1 p {
+.wrapper .article .item_1 p {
   font-size: 15px;
   border-left: 2px solid red;
   position: relative;
   top: 110px;
   margin-left: 10px;
 }
-.wrapper .article .item2 {
+.wrapper .article .item_2 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.26) 90%), url(https://ichef.bbci.co.uk/news/976/cpsprodpb/D2CE/production/_123066935_073443576-1.jpg);
   background-size: cover;
-  grid-area: item2;
+  grid-area: item_2;
 }
-.wrapper .article .item2:hover {
+.wrapper .article .item_2:hover {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 90%), url(https://ichef.bbci.co.uk/news/976/cpsprodpb/D2CE/production/_123066935_073443576-1.jpg);
 }
-.wrapper .article .item3 {
+.wrapper .article .item_3 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.26) 90%), url(https://ichef.bbci.co.uk/news/976/cpsprodpb/15FA0/production/_123061009_e0ce0f68-d6ac-47ce-a763-e73843d82a84.jpg);
   background-size: cover;
-  grid-area: item3;
+  grid-area: item_3;
 }
-.wrapper .article .item3:hover {
+.wrapper .article .item_3:hover {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 90%), url(https://ichef.bbci.co.uk/news/976/cpsprodpb/15FA0/production/_123061009_e0ce0f68-d6ac-47ce-a763-e73843d82a84.jpg);
 }
-.wrapper .article .item4 {
+.wrapper .article .item_4 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.26) 90%), url(https://ichef.bbci.co.uk/news/976/cpsprodpb/72D8/production/_122700492_wordle.png);
   background-size: cover;
-  grid-area: item4;
+  grid-area: item_4;
 }
-.wrapper .article .item4:hover {
+.wrapper .article .item_4:hover {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 90%), url(https://ichef.bbci.co.uk/news/976/cpsprodpb/72D8/production/_122700492_wordle.png);
 }
-.wrapper .article .item5 {
+.wrapper .article .item_5 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.26) 90%), url(https://ychef.files.bbci.co.uk/1280x720/p0bkybmt.webp);
   background-size: cover;
-  grid-area: item5;
+  grid-area: item_5;
 }
-.wrapper .article .item5:hover {
+.wrapper .article .item_5:hover {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 90%), url(https://ychef.files.bbci.co.uk/1280x720/p0bkybmt.webp);
 }
 .wrapper .title {
@@ -143,75 +143,75 @@ h4 {
   font-family: Arial, Helvetica, sans-serif;
   cursor: unset;
 }
-.wrapper .conteiner .text1, .wrapper .conteiner .text2, .wrapper .conteiner .text3 {
+.wrapper .conteiner .text_1, .wrapper .conteiner .text_2, .wrapper .conteiner .text--3 {
   position: relative;
   top: 240px;
 }
-.wrapper .conteiner .text1 {
+.wrapper .conteiner .text_1 {
   font-size: 20px;
   font-weight: bold;
 }
-.wrapper .conteiner .text2 {
+.wrapper .conteiner .text_2 {
   position: relative;
   top: 250px;
 }
-.wrapper .conteiner .text3 {
+.wrapper .conteiner .text--3 {
   position: relative;
   top: 260px;
   font-size: 13px;
   border-left: 2px solid red;
 }
-.wrapper .conteiner .post1 {
+.wrapper .conteiner .post_1 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.26) 90%), url(https://ichef.bbci.co.uk/news/976/cpsprodpb/12C75/production/_123071967_gettyimages-1356331235.jpg);
   background-size: cover;
 }
-.wrapper .conteiner .post1:hover {
+.wrapper .conteiner .post_1:hover {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 90%), url(https://ichef.bbci.co.uk/news/976/cpsprodpb/12C75/production/_123071967_gettyimages-1356331235.jpg);
 }
-.wrapper .conteiner .post2 {
+.wrapper .conteiner .post_2 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.26) 90%), url(https://ichef.bbci.co.uk/news/976/cpsprodpb/2157/production/_123053580_gettyimages-1238033406.jpg);
   background-size: cover;
 }
-.wrapper .conteiner .post2:hover {
+.wrapper .conteiner .post_2:hover {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 90%), url(https://ichef.bbci.co.uk/news/976/cpsprodpb/2157/production/_123053580_gettyimages-1238033406.jpg);
 }
-.wrapper .conteiner .post3 {
+.wrapper .conteiner .post_3 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.26) 90%), url(https://ichef.bbci.co.uk/news/976/cpsprodpb/108C0/production/_123067776_mediaitem123067772.jpg);
   background-size: cover;
 }
-.wrapper .conteiner .post3:hover {
+.wrapper .conteiner .post_3:hover {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 90%), url(https://ichef.bbci.co.uk/news/976/cpsprodpb/108C0/production/_123067776_mediaitem123067772.jpg);
 }
-.wrapper .conteiner .post4 {
+.wrapper .conteiner .post_4 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.26) 90%), url(https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/vivo/live/images/2022/2/1/cc07627f-8d1a-408e-95ca-4d348665a388.png);
   background-size: cover;
 }
-.wrapper .conteiner .post4:hover {
+.wrapper .conteiner .post_4:hover {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 90%), url(https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/vivo/live/images/2022/2/1/cc07627f-8d1a-408e-95ca-4d348665a388.png);
 }
-.wrapper .conteiner .post4 .text3 {
+.wrapper .conteiner .post_4 .text--3 {
   border-left: 2px solid #ffd000;
   position: relative;
   top: 280px;
 }
-.wrapper .conteiner .post5 {
+.wrapper .conteiner .post_5 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.26) 90%), url(https://ichef.bbci.co.uk/onesport/cps/976/cpsprodpb/8044/production/_123063823_woodsy1.jpg);
   background-size: cover;
 }
-.wrapper .conteiner .post5:hover {
+.wrapper .conteiner .post_5:hover {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 90%), url(https://ichef.bbci.co.uk/onesport/cps/976/cpsprodpb/8044/production/_123063823_woodsy1.jpg);
 }
-.wrapper .conteiner .post5 .text3 {
+.wrapper .conteiner .post_5 .text--3 {
   border-left: 2px solid #ffd000;
 }
-.wrapper .conteiner .post6 {
+.wrapper .conteiner .post_6 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.26) 90%), url(https://ichef.bbci.co.uk/onesport/cps/976/cpsprodpb/159B9/production/_114750588_0.generic_done_deal-1.png);
   background-size: cover;
 }
-.wrapper .conteiner .post6:hover {
+.wrapper .conteiner .post_6:hover {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1) 90%), url(https://ichef.bbci.co.uk/onesport/cps/976/cpsprodpb/159B9/production/_114750588_0.generic_done_deal-1.png);
 }
-.wrapper .conteiner .post6 .text3 {
+.wrapper .conteiner .post_6 .text--3 {
   border-left: 2px solid #ffd000;
   position: relative;
   top: 295px;
