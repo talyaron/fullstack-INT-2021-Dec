@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.pageContainer{
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.topContainer{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-areas: 
+    "welcomeItem1 welcomeItem1 welcomeItem2 welcomeItem3"
+    "welcomeItem1 welcomeItem1 welcomeItem4 welcomeItem5"
+    ;
+}
+
+.welcomeItem1{
+    grid-area: welcomeItem1;
+}
+
+.welcomeItem2{
+    grid-area: welcomeItem2;
+}
+
+.welcomeItem3{
+    grid-area: welcomeItem3;
+}
+
+.welcomeItem4{
+    grid-area: welcomeItem4;
+}
+
+.welcomeItem5{
+    grid-area: welcomeItem5;
+}
