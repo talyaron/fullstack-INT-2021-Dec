@@ -1,0 +1,46 @@
+.anima {
+  background-color: black;
+  width: 150px;
+  height: 150px;
+}
+
+.anima #youotoddososososoosososososososo {
+  border: 1px solid black;
+  width: 500px;
+  margin-left: 50%;
+  -webkit-animation-name: sd;
+          animation-name: sd;
+  -webkit-animation: sd 4s infinite alternate;
+          animation: sd 4s infinite alternate;
+}
+
+@-webkit-keyframes sd {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: green;
+  }
+}
+
+@keyframes sd {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: green;
+  }
+}
+/*# sourceMappingURL=style.css.map */

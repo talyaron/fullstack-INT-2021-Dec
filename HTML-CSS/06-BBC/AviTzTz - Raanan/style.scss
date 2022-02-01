@@ -18,17 +18,14 @@ header {
     justify-content: center;
     align-items: center;
     font-weight: bold;
-
     img {
         height: 2rem;
         width: 100px;
         background-color: white;
     }
-
     ul {
         display: flex;
         color: #fff;
-
         li {
             display: flex;
             align-items: center;
@@ -40,17 +37,14 @@ header {
             width: 5rem;
             background: black;
             font-size: 0.9rem;
-
             &:hover {
                 border-bottom: red solid 4px;
             }
-
             a {
                 text-decoration: none;
                 color: white;
             }
         }
-
         .signin {
             display: flex;
             justify-content: start;
@@ -60,22 +54,18 @@ header {
             padding: 0 1rem;
         }
     }
-
     .search {
         display: flex;
         align-items: center;
         background-color: white;
         margin: 0 0 0 2rem;
         height: 1.5rem;
-
         input {
             border: none;
-
             &::placeholder {
                 padding-left: 0.5rem;
             }
         }
-
         .fa-search {
             width: 1.5rem;
             padding-left: 0.2rem;
@@ -95,35 +85,28 @@ main {
     height: 45vh;
     width: 63%;
     padding-top: 2rem;
-
     .welcome {
         display: flex;
         width: 100%;
         margin-bottom: 1rem;
-
         .bbc {
             margin-left: 1rem;
             font-weight: 400;
         }
-
         .date {
             margin: 0 0.5rem 0 auto;
             font-weight: 400;
             opacity: 0.6;
         }
     }
-
     .gridcontainer {
         display: grid;
         padding-left: 1rem;
-        grid-template-areas: 'bigitem bigitem smlitem1 smlitem2'
-            'bigitem bigitem smlitem3 smlitem4';
-
+        grid-template-areas: 'bigitem bigitem smlitem1 smlitem2' 'bigitem bigitem smlitem3 smlitem4';
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 150px 150px;
         row-gap: 1rem;
         column-gap: 1.5rem;
-
         .bigitem {
             grid-area: bigitem;
             display: flex;
@@ -133,19 +116,16 @@ main {
             background-repeat: no-repeat;
             background-size: cover;
             padding-left: 1rem;
-
             h2 {
                 font-size: 2.5rem;
                 color: #fff;
                 font-weight: 400;
             }
-
             p {
                 line-height: 1.5rem;
                 font-size: 1.1rem;
                 color: #fff;
             }
-
             h4 {
                 border-left: red solid 2px;
                 margin: 0.5rem 0;
@@ -153,7 +133,6 @@ main {
                 font-weight: 400;
             }
         }
-
         .smlitem1 {
             grid-area: smlitem1;
             background-image: url('https://ichef.bbci.co.uk/news/976/cpsprodpb/65F9/production/_122950162_51751687457_84e21669ed_o.jpg');
@@ -165,7 +144,6 @@ main {
             font-weight: 100;
             color: white;
             padding-left: 0.5rem;
-
             h4 {
                 border-left: red solid 2px;
                 font-weight: 100;
@@ -173,7 +151,6 @@ main {
                 padding-left: 0.4rem;
             }
         }
-
         .smlitem2 {
             grid-area: smlitem2;
             background-image: url('https://ichef.bbci.co.uk/onesport/cps/800/cpsprodpb/A568/production/_122944324_gettyimages-1366361024.jpg');
@@ -185,7 +162,6 @@ main {
             font-weight: 100;
             color: white;
             padding-left: 0.5rem;
-
             h4 {
                 border-left: red solid 2px;
                 font-weight: 100;
@@ -193,7 +169,6 @@ main {
                 padding-left: 0.4rem;
             }
         }
-
         .smlitem3 {
             grid-area: smlitem3;
             background-image: url('https://ichef.bbci.co.uk/news/976/cpsprodpb/E317/production/_122953185_gettyimages-1232458355.jpg');
@@ -205,7 +180,6 @@ main {
             font-weight: 100;
             color: white;
             padding-left: 0.5rem;
-
             h4 {
                 border-left: red solid 2px;
                 font-weight: 100;
@@ -213,7 +187,6 @@ main {
                 padding-left: 0.4rem;
             }
         }
-
         .smlitem4 {
             grid-area: smlitem4;
             background-image: url('https://ichef.bbci.co.uk/news/976/cpsprodpb/C3C3/production/_122951105_gettyimages-1366327207.jpg');
@@ -225,7 +198,6 @@ main {
             font-weight: 100;
             color: white;
             padding-left: 0.5rem;
-
             h4 {
                 border-left: red solid 2px;
                 font-weight: 100;
@@ -240,33 +212,29 @@ main {
     height: 50vh;
     width: 63%;
     padding: 0 1rem;
-
     h2 {
         width: 100%;
         border-left: red solid 4px;
         padding-left: 0.5rem;
         margin-bottom: 1.5rem;
     }
-
     .wrapperflex {
         display: flex;
-
         .item1 {
             width: 33%;
-            margin-right:1rem ;
+            margin-right: 1rem;
             img {
                 width: 100%;
             }
-            h3{
+            h3 {
                 font-size: 1.5rem;
             }
-            p{
+            p {
                 margin: 0.5rem 0 1rem 0;
                 font-size: 1.1rem;
                 color: grey;
             }
-            h4{
-                
+            h4 {
                 border-left: red solid 2px;
                 padding-left: 0.5rem;
                 color: grey;
@@ -275,20 +243,19 @@ main {
         }
         .item2 {
             width: 33%;
-            margin-right:1rem ;
+            margin-right: 1rem;
             img {
                 width: 100%;
             }
-            h3{
+            h3 {
                 font-size: 1.5rem;
             }
-            p{
+            p {
                 margin: 0.5rem 0 1rem 0;
                 font-size: 1.1rem;
                 color: grey;
             }
-            h4{
-                
+            h4 {
                 border-left: red solid 2px;
                 padding-left: 0.5rem;
                 color: grey;
@@ -300,23 +267,21 @@ main {
             img {
                 width: 100%;
             }
-            h3{
+            h3 {
                 font-size: 1.5rem;
             }
-            p{
+            p {
                 margin: 0.5rem 0 1rem 0;
                 font-size: 1.1rem;
                 color: grey;
             }
-            h4{
-                
+            h4 {
                 border-left: red solid 2px;
                 padding-left: 0.5rem;
                 color: grey;
                 font-weight: 100;
             }
         }
-
     }
 }
 
@@ -325,18 +290,15 @@ main {
     background-color: rgb(216, 23, 23);
     width: 100%;
     height: 100px;
-
     h1 {
         color: rgb(231, 226, 226);
         padding-top: 5px;
         padding-left: 10px;
         font-size: 2rem;
     }
-
     ul {
         display: flex;
         color: #fff;
-
         li {
             display: flex;
             align-items: center;
@@ -346,7 +308,6 @@ main {
             height: 2rem;
             width: 6.5rem;
             background: rgb(216, 23, 23)black;
-
             &:hover {
                 border-bottom: rgb(252, 252, 252) solid 4px;
             }
@@ -359,21 +320,17 @@ main {
     height: 450px;
     width: 90%;
     display: flex;
-
     .card {
         margin-top: 15px;
         margin-left: 12px;
         height: 350px;
         width: 300px;
-
         img {
             width: 300px;
         }
-
         p {
             color: gray;
         }
-
         .orgin {
             border-left: 1px red solid;
         }

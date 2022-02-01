@@ -71,11 +71,6 @@ body {
   padding: 0;
 }
 
-.screen_bella .content .button--down {
-  width: 280px;
-  background-color: rgba(240, 255, 255, 0.37);
-}
-
 .screen_bella .next {
   width: 80px;
   margin: auto;
@@ -95,7 +90,6 @@ body {
 .screen {
   width: 390px;
   height: 650px;
-  background-color: black;
   position: relative;
   margin: auto;
   border-radius: 20px;
@@ -153,6 +147,44 @@ body {
   margin-top: 0px;
   margin-left: -20px;
   position: absolute;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  -webkit-animation-name: change_size_location;
+          animation-name: change_size_location;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes change_size_location {
+  0% {
+    height: 20px;
+    width: 20px;
+  }
+  50% {
+    height: 35px;
+    width: 35px;
+  }
+  100% {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+@keyframes change_size_location {
+  0% {
+    height: 20px;
+    width: 20px;
+  }
+  50% {
+    height: 35px;
+    width: 35px;
+  }
+  100% {
+    height: 20px;
+    width: 20px;
+  }
 }
 
 .screen .top_nav .lef_icons {
@@ -165,6 +197,8 @@ body {
 
 .screen .top_nav .lef_icons img {
   width: 40px;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 
 .screen .top_nav .lef_icons .edit {
@@ -178,9 +212,11 @@ body {
 }
 
 .screen .top_nav .lef_icons .edit img {
-  width: 25px;
-  margin-left: 2px;
+  width: 24px;
+  margin-left: 3px;
   margin-top: 2px;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 
 .screen .user_row {
@@ -316,6 +352,37 @@ body {
   background-color: #70737a;
   border-radius: 0 0 20px 20px;
   position: relative;
+  top: -5px;
+  -webkit-animation-name: blue_border_to_menu;
+          animation-name: blue_border_to_menu;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes blue_border_to_menu {
+  0% {
+    border: 1px solid white;
+  }
+  50% {
+    border: 1px solid red;
+  }
+  100% {
+    border: 1px solid white;
+  }
+}
+
+@keyframes blue_border_to_menu {
+  0% {
+    border: 1px solid white;
+  }
+  50% {
+    border: 1px solid red;
+  }
+  100% {
+    border: 1px solid white;
+  }
 }
 
 .bottom_nav .icon_back {
@@ -463,13 +530,80 @@ body {
 }
 
 .screen_bella .content .button--down {
-  width: 285px;
-  height: 40px;
-  padding: 8px 20px 0 20px;
-  line-height: 1.4;
-  background-color: #6A6B6F;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 50px;
+  width: 230px;
+  display: inline-block;
+  padding: .80rem 1.50rem;
+  border-radius: 10rem;
+  color: #fff;
+  font-size: 1rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background-color: darkturquoise;
+}
+
+.screen_bella .content .button--down:after {
+  width: 100%;
+  height: 100%;
+  background-color: darkturquoise;
+  border-radius: 10rem;
+  z-index: -2;
+}
+
+.screen_bella .content .button--down:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #047d80;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+
+.screen_bella .content .button--down:hover {
+  color: #fff;
+}
+
+.screen_bella .content .button--down:hover:before {
+  width: 100%;
+}
+
+.button--down--adam {
+  color: white;
+  background-color: #62e9e2;
+  border: 3px solid #62e9e2;
+  border-radius: 30px;
+  position: relative;
+  background-color: #62e9e2;
+  -webkit-animation-name: bottomcolors;
+          animation-name: bottomcolors;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bottomcolors {
+  from {
+    background-color: #62e9e2;
+  }
+  to {
+    background-color: #9c0808;
+  }
+}
+
+@keyframes bottomcolors {
+  from {
+    background-color: #62e9e2;
+  }
+  to {
+    background-color: #9c0808;
+  }
 }
 /*# sourceMappingURL=style.css.map */

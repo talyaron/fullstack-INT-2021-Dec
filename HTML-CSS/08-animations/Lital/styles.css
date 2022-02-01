@@ -1,0 +1,33 @@
+.box {
+  width: 400px;
+  height: 400px;
+  background-color: none;
+  -webkit-animation-name: Changecolor;
+          animation-name: Changecolor;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-direction: reverse;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes Changecolor {
+  from {
+    background-image: url(https://cn.i.cdn.ti-platform.com/cnapac/content/2017/showpage/ben-10/sa/showicon.png);
+  }
+  to {
+    background-image: url(https://yt3.ggpht.com/ytc/AKedOLSCFaL3CZVwvWTKuPcfUmXYkf4wpQQA1eRhZYLExQ=s900-c-k-c0x00ffffff-no-rj);
+  }
+}
+
+@keyframes Changecolor {
+  from {
+    background-image: url(https://cn.i.cdn.ti-platform.com/cnapac/content/2017/showpage/ben-10/sa/showicon.png);
+  }
+  to {
+    background-image: url(https://yt3.ggpht.com/ytc/AKedOLSCFaL3CZVwvWTKuPcfUmXYkf4wpQQA1eRhZYLExQ=s900-c-k-c0x00ffffff-no-rj);
+  }
+}
+/*# sourceMappingURL=styles.css.map */
