@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+body .container {
+  width: 500px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+body .container .item {
+  padding: 15px;
+  color: white;
+  text-align: center;
+  background-color: #3c5ebe;
+  border-radius: 5px;
+}
+body .container .extended {
+  background-color: #d6576c;
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
