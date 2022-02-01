@@ -1,48 +1,52 @@
 body{
+    padding: 0px;
+   margin: 0px;
     
     h1{
         position: relative;
-        left: 200px;
+        padding-left: 110px;
+        width: 350px;
+
     }
 
 
 .top_nav{
-   padding: 0px;
-   margin: 0px;
-    display: flex;
-    justify-content: center; 
+    display: grid;
+    
+    grid-template-columns:repeat(12, 1fr) ;
+    // auto auto auto auto auto auto auto auto auto auto auto 
     background-color: black;
     color: antiquewhite;
     height: 50px;
     width: 100%;
-    gap: 10px;
-    justify-content: space-between;
+    // gap: 10px;
     
     img{
-          position: relative;
+          height: 50px;
            
            
            
      }
      
     .nav{
-        display: flex;
+       display: flex;
+    //     background-position-x: center;
+    //    background-position-y: center;
         justify-content: center;
         align-items: center;
         // width: 60px;
-       text-align: center;
-       position: relative;
+    //    text-align: center;
+    //    position: relative;
        border-left: 1px solid gray;
-       padding-left: 40px;
-
+    //    padding-left: 40px;
+       height: 50px;
+      
+       
  
  
       
        &_search{
-           display: flex;
-           justify-content: center;
-           align-items: center;
-       
+           
          width: 168px;
          height: 20px;
       
@@ -55,27 +59,34 @@ body{
     
 }
 }
+
 .wrapper{
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    gap: 2px;
+    gap: 10px;
     grid-template-areas: 
     "item1 item2 item3"
     "item1 item4 item5";
-    width: 70%;
-    height: 400px;
+    width: 85%;
+    height: 320px;
     position: relative;
-    left: 200px;
-    right: 200px;
+//    left: 50px;
+   margin: auto;
 
     .item{
         background-image: url(https://ichef.bbci.co.uk/news/976/cpsprodpb/3E0D/production/_123058851_mediaitem123058850.jpg);
        background-size: cover;
        color: white;
-       
-       h1, p{
+       padding-left: 20px;
         
-       }
+    &:hover{
+          filter: brightness(120%);
+        }
+       
+        h3{
+            border-left: 3px solid red; padding: 5px;
+          }
+      
        
     }
     .item1{
@@ -83,6 +94,7 @@ body{
         // position: relative;
         // left: 10px;
         // bottom: 10px;
+      padding-top: 200px;
       
 
     }
@@ -99,5 +111,30 @@ body{
         grid-area: item5;
     }
 
-}
+    }
+        .news1{
+            position: relative;
+            left: 200px;
+            top: 200px;
+            
+        }
+        .news{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 85%;
+            margin: auto;
+            padding: 50px;
+            &_items{
+                padding-top: 200px;
+                img{ width: 300px;
+                     height: 200px;
+                     }
+            }
+        }
+
+        
+
+
+
+
 }
