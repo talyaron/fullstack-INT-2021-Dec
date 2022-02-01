@@ -26,8 +26,11 @@ body .top_nav .nav {
   height: 50px;
 }
 body .top_nav .nav_search {
+  position: relative;
+  top: 10px;
+  align-items: center;
   width: 168px;
-  height: 20px;
+  height: 40px;
 }
 body .top_nav .nav .sign_in {
   width: 90px;
@@ -50,7 +53,7 @@ body .wrapper .item {
   padding-left: 20px;
 }
 body .wrapper .item:hover {
-  filter: brightness(120%);
+  filter: grayscale(200%);
 }
 body .wrapper .item h3 {
   border-left: 3px solid red;
@@ -74,8 +77,12 @@ body .wrapper .item5 {
 }
 body .news1 {
   position: relative;
-  left: 200px;
+  left: 110px;
   top: 200px;
+  font-size: 50px;
+  border-left: 4px solid red;
+  padding: 7px;
+  width: 350px;
 }
 body .news {
   display: grid;
@@ -90,4 +97,35 @@ body .news_items {
 body .news_items img {
   width: 300px;
   height: 200px;
+}
+body .news_items h4 {
+  border-left: 4px solid red;
+  padding: 7px;
+}
+body .sport1 {
+  position: relative;
+  left: 110px;
+  top: 100px;
+  font-size: 50px;
+  border-left: 4px solid red;
+  padding: 7px;
+  width: 350px;
+}
+body .sport {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 85%;
+  margin: auto;
+  padding: 50px;
+}
+body .sport_items {
+  padding-top: 70px;
+}
+body .sport_items img {
+  width: 300px;
+  height: 200px;
+}
+body .sport_items h4 {
+  border-left: 4px solid red;
+  padding: 7px;
 }
