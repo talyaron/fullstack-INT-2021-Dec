@@ -27,10 +27,9 @@ body .top_nav .nav {
 }
 body .top_nav .nav_search {
   position: relative;
-  top: 10px;
   align-items: center;
-  width: 168px;
-  height: 40px;
+  width: 195px;
+  height: 50px;
 }
 body .top_nav .nav .sign_in {
   width: 90px;
@@ -43,7 +42,6 @@ body .wrapper {
   grid-template-areas: "item1 item2 item3" "item1 item4 item5";
   width: 85%;
   height: 320px;
-  position: relative;
   margin: auto;
 }
 body .wrapper .item {
@@ -51,6 +49,7 @@ body .wrapper .item {
   background-size: cover;
   color: white;
   padding-left: 20px;
+  vertical-align: text-bottom;
 }
 body .wrapper .item:hover {
   filter: grayscale(200%);
@@ -81,7 +80,8 @@ body .news1 {
   top: 200px;
   font-size: 50px;
   border-left: 4px solid red;
-  padding: 7px;
+  padding: 0px;
+  padding-left: 7px;
   width: 350px;
 }
 body .news {
@@ -108,7 +108,8 @@ body .sport1 {
   top: 100px;
   font-size: 50px;
   border-left: 4px solid red;
-  padding: 7px;
+  padding: 0px;
+  padding-left: 7px;
   width: 350px;
 }
 body .sport {
