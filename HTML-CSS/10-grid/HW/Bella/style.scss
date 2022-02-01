@@ -12,6 +12,8 @@ body {
         grid-auto-rows: var(--row-height);
         gap: var(--gap);
         max-width: 1250px;
+        margin: auto;
+        margin-top: 4em;
         img {
             width: 100%;
             height: 100%;
