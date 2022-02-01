@@ -30,25 +30,22 @@ body{
      
     .nav{
        display: flex;
-    //     background-position-x: center;
-    //    background-position-y: center;
         justify-content: center;
         align-items: center;
-        // width: 60px;
-    //    text-align: center;
-    //    position: relative;
        border-left: 1px solid gray;
-    //    padding-left: 40px;
-       height: 50px;
+         height: 50px;
+       
       
        
  
  
       
        &_search{
-           
+           position: relative;
+           top: 10px;
+         align-items: center;  
          width: 168px;
-         height: 20px;
+         height: 40px;
       
      }
  
@@ -80,7 +77,7 @@ body{
        padding-left: 20px;
         
     &:hover{
-          filter: brightness(120%);
+          filter: grayscale(200%);
         }
        
         h3{
@@ -114,9 +111,12 @@ body{
     }
         .news1{
             position: relative;
-            left: 200px;
+            left: 110px;
             top: 200px;
-            
+            font-size: 50px;
+            border-left: 4px solid red;
+            padding: 7px;
+            width: 350px;
         }
         .news{
             display: grid;
@@ -129,6 +129,37 @@ body{
                 img{ width: 300px;
                      height: 200px;
                      }
+                     h4{
+                         border-left: 4px solid red;
+                         padding: 7px;
+                     }
+
+            }
+        }
+        .sport1{
+            position: relative;
+            left: 110px;
+            top: 100px;
+            font-size: 50px;
+            border-left: 4px solid red;
+            padding: 7px;
+            width: 350px;
+        }
+        .sport{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 85%;
+            margin: auto;
+            padding: 50px;
+            &_items{
+                padding-top: 70px;
+                img{ width: 300px;
+                     height: 200px;
+                     }
+                     h4{
+                         border-left: 4px solid red;
+                         padding: 7px;
+                     }
             }
         }
 
@@ -137,4 +168,4 @@ body{
 
 
 
-}
+    }
