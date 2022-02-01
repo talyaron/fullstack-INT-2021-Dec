@@ -1,15 +1,17 @@
 body {
     margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     .grid {
         --gap: 16px;
         --num-cols: 4;
-        --row-height: 250px;
+        --row-height: 200px;
         box-sizing: border-box;
         padding: var(--gap);
         display: grid;
         grid-template-columns: repeat(var(--num-cols), 1fr);
         grid-auto-rows: var(--row-height);
         gap: var(--gap);
+        max-width: 1250px;
         img {
             width: 100%;
             height: 100%;
@@ -23,6 +25,26 @@ body {
         }
         .img-gradient {
             position: relative;
+            .article-text {
+                position: absolute;
+                top: 11.4em;
+                color: white;
+                z-index: 1;
+                padding: 20px;
+                .article-heading {
+                    font-size: 32px;
+                    font-weight: 300;
+                }
+                .article-expo {
+                    font-size: 17px;
+                    font-weight: 400;
+                }
+                .article-caption {
+                    font-size: 17px;
+                    font-weight: lighter;
+                    text-transform: uppercase;
+                }
+            }
         }
         .img-gradient::after {
             content: '';
@@ -39,7 +61,7 @@ body {
     @media screen and (max-width: 1024px) {
         .grid {
             --num-cols: 2;
-            --row-height: 180px;
+            --row-height: 150px;
         }
     }
 }
