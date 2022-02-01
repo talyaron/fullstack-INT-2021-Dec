@@ -1,0 +1,281 @@
+body {
+    margin: auto;
+}
+
+.menu {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+
+    &__bbc_container {
+        width: 150px;
+        height: 50px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        column-gap: 10px;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        font-size: 25px;
+        font-weight: bolder;
+
+        &__box {
+            background-color: white;
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    &__signin {
+        border-left: 1px solid white;
+        display: flex;
+        color: white;
+        border-right: 1px solid white;
+        padding-left: 30px;
+        padding-right: 30px;
+        justify-content: center;
+        text-align: center;
+        line-height: 50px;
+
+        p {
+            margin: 0%;
+        }
+    }
+
+    &__page_container {
+        display: flex;
+        color: white;
+
+        &__page {
+            text-align: center;
+            color: white;
+            border-right: 1px solid white;
+            padding: 15px;
+        }
+    }
+
+}
+
+.page_wrapper {
+
+    width: 90vh;
+    margin: auto;
+
+    .header {
+        h1 {
+            color: rgb (74, 74, 74);
+
+        }
+    }
+
+    .wrapper {
+        width: 90vh;
+        height: 450px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "big big small1 small2"
+            "big big small3 small4";
+        gap: 10px;
+
+        &__item {
+            &-a {
+                grid-area: big;
+                background-image: url(https://picsum.photos/300/250);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position-x: center;
+                position: relative;
+                transition: 0.5s;
+
+                &:hover {
+                    filter: brightness(120%)
+                }
+
+                h2 {
+                    position: absolute;
+                    left: 20%;
+                    top: 70%;
+                    color: white;
+                }
+
+                p {
+                    position: absolute;
+                    left: 10%;
+                    top: 80%;
+                    color: white;
+                }
+            }
+
+            &-b {
+                grid-area: small1;
+                background-image: url(https://picsum.photos/300/200);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position-x: center;
+                position: relative;
+                transition: 0.5s;
+
+                &:hover {
+                    filter: brightness(110%)
+                }
+
+                h2 {
+                    position: absolute;
+                    left: 20%;
+                    top: 50%;
+                    color: white;
+                }
+
+                p {
+                    position: absolute;
+                    left: 10%;
+                    top: 70%;
+                    color: white;
+                }
+            }
+
+            &-c {
+                grid-area: small2;
+                background-image: url(https://picsum.photos/300/200);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position-x: center;
+                position: relative;
+                transition: 0.5s;
+
+                &:hover {
+                    filter: brightness(110%)
+                }
+
+                h2 {
+                    position: absolute;
+                    left: 20%;
+                    top: 50%;
+                    color: white;
+                }
+
+                p {
+                    position: absolute;
+                    left: 10%;
+                    top: 70%;
+                    color: white;
+                }
+            }
+
+            &-d {
+                grid-area: small3;
+                background-image: url(https://picsum.photos/300/200);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position-x: center;
+                position: relative;
+                transition: 0.5s;
+
+                &:hover {
+                    filter: brightness(110%)
+                }
+
+                h2 {
+                    position: absolute;
+                    left: 20%;
+                    top: 50%;
+                    color: white;
+                }
+
+                p {
+                    position: absolute;
+                    left: 10%;
+                    top: 70%;
+                    color: white;
+                }
+            }
+
+            &-e {
+                grid-area: small4;
+                background-image: url(https://picsum.photos/300/200);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position-x: center;
+                position: relative;
+                transition: 0.5s;
+
+                &:hover {
+                    filter: brightness(110%)
+                }
+
+                h2 {
+                    position: absolute;
+                    left: 20%;
+                    top: 50%;
+                    color: white;
+                }
+
+                p {
+                    position: absolute;
+                    left: 10%;
+                    top: 70%;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .news {
+        display: flex;
+        align-items: center;
+
+        .fa-grip-lines-vertical {
+            font-size: 30px;
+            color: red;
+        }
+
+        h3 {
+            font-size: 30px;
+        }
+    }
+
+    .sport {
+        display: flex;
+        align-items: center;
+
+        .fa-grip-lines-vertical {
+            font-size: 30px;
+            color: #FFD930;
+        }
+
+        h3 {
+            font-size: 30px;
+        }
+    }
+
+    .article_wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__article {
+            display: flex;
+            flex-direction: column;
+            width: 32%;
+            transition: 0.5s;
+            
+            &:hover {
+                filter: brightness(110%)
+            }
+
+            h4 {
+                font-size: 24px;
+                margin: 10px;
+            }
+            p {
+                font-size: 20px;
+                margin: 0%;
+            }
+        }
+    }
+
+}
