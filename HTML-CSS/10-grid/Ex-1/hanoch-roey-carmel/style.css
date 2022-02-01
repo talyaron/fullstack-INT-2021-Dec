@@ -1,0 +1,22 @@
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  margin: 0% auto;
+  max-width: 1000px;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+  row-gap: 20px;
+}
+
+.wrapper .text {
+  background-color: red;
+  color: aliceblue;
+  padding: 20px;
+  direction: rtl;
+}
+
+.wrapper .box img {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=style.css.map */

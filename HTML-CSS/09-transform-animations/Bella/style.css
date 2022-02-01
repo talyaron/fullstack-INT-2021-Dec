@@ -1,0 +1,72 @@
+body {
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .image {
+  width: 30%;
+  -webkit-transition: 1900ms;
+  transition: 1900ms;
+  border-radius: 50px;
+}
+
+body .image:hover {
+  -webkit-transform: rotate(-30deg) skew(25deg) scale(0.8);
+          transform: rotate(-30deg) skew(25deg) scale(0.8);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  opacity: 0.6;
+}
+
+body .container {
+  width: 360px;
+  height: 640px;
+  margin-top: 150px;
+  background: rgba(0, 0, 0, 0);
+  -webkit-transform: rotate(-30deg) skew(25deg) scale(0.8);
+          transform: rotate(-30deg) skew(25deg) scale(0.8);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .container img {
+  position: absolute;
+  width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .container:hover img:nth-child(4) {
+  -webkit-transform: translate(160px, -160px);
+          transform: translate(160px, -160px);
+  opacity: 1;
+}
+
+body .container:hover img:nth-child(3) {
+  -webkit-transform: translate(120px, -120px);
+          transform: translate(120px, -120px);
+  opacity: 0.8;
+}
+
+body .container:hover img:nth-child(2) {
+  -webkit-transform: translate(80px, -80px);
+          transform: translate(80px, -80px);
+  opacity: 0.6;
+}
+
+body .container:hover img:nth-child(1) {
+  -webkit-transform: translate(40px, -40px);
+          transform: translate(40px, -40px);
+  opacity: 0.4;
+}
+/*# sourceMappingURL=style.css.map */

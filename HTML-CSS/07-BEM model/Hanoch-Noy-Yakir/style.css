@@ -63,6 +63,32 @@ a:link, a:visited, a:active {
   border-radius: 50%;
 }
 
+.user_avatar__quiz {
+  -webkit-animation-name: avatarAnimation1;
+          animation-name: avatarAnimation1;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  position: relative;
+}
+
+@-webkit-keyframes avatarAnimation1 {
+  from {
+    left: 400px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@keyframes avatarAnimation1 {
+  from {
+    left: 400px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
 .user_pen {
   color: #5fb2b6;
 }

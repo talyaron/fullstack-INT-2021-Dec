@@ -1,0 +1,65 @@
+body .container {
+  width: 100%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+  gap: 5px;
+}
+
+body .container .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 25px;
+  background-color: blue;
+}
+
+body .container .item h1 {
+  color: white;
+}
+
+body .container .item p {
+  color: white;
+}
+
+body .container .img-1 {
+  background-image: url(https://ynet-images1.yit.co.il/picserver5/crop_images/2022/01/30/SyWsUmNCY/SyWsUmNCY_0_0_850_479_0_medium.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body .container .img-2 {
+  background-image: url(https://ynet-images1.yit.co.il/picserver5/crop_images/2022/01/29/HJZCDdVX0F/HJZCDdVX0F_0_391_2000_1126_0_medium.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body .container .img-3 {
+  background-image: url(https://ynet-images1.yit.co.il/picserver5/crop_images/2022/01/30/H1h411NE0F/H1h411NE0F_0_7_1024_577_0_medium.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body .container .img-4 {
+  background-image: url(https://ynet-images1.yit.co.il/picserver5/crop_images/2018/04/23/8485873/8485873_0_169_1619_912_0_medium.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body .container .red {
+  background-color: red;
+}
+
+body .container .dark-blue {
+  background-color: #0c1c3a;
+}
+/*# sourceMappingURL=style.css.map */
