@@ -205,10 +205,10 @@
         grid-template-columns: 1fr 1fr 1fr ;
         grid-template-rows: repeat(6, 1fr);
         position: relative;
-        .item1 .item2 .item3{
+        .item1, .item2, .item3{
             grid-row:span 4;
         }
-        .item4 .item5 .item6{
+        .item4, .item5, .item6{
             grid-row:span 2;
         }
         
@@ -292,24 +292,13 @@
         grid-template-columns: 1fr 1fr 1fr ;
         grid-template-rows: repeat(6, 1fr);
         position: relative;
-        .item1{
+        .item1, .item2, .item3{
             grid-row:span 4;
         }
-        .item2{
-            grid-row:span 4;
-        }
-        .item3{
-            grid-row:span 4;
-        }
-        .item4{
+        .item4, .item5, .item6{
             grid-row:span 2;
         }
-        .item5{
-            grid-row:span 2;
-        }
-        .item6{
-            grid-row:span 2;
-        }
+        
         .itemT{
             position: relative;
             .text{
@@ -353,7 +342,7 @@
                 background-blend-mode: lighten;
                 
             }    
-        }   
+        }
         .img22{
             background-image: url(https://ichef.bbci.co.uk/onesport/cps/976/cpsprodpb/8044/production/_123063823_woodsy1.jpg);
             background-repeat: none;
@@ -362,7 +351,6 @@
                 background-blend-mode: lighten;
                 
             }    
-
         }   
         .img23{
             background-image: url(https://ichef.bbci.co.uk/news/976/cpsprodpb/108C0/production/_123067776_mediaitem123067772.jpg);
@@ -372,6 +360,7 @@
                 background-blend-mode: lighten;
                 
             }
-        } 
-        
+
+        }   
     }
+    
