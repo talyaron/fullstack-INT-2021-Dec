@@ -34,17 +34,20 @@ body {
             }
         }
         main {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            width: 80vh;
             .card {
                 padding: 1em;
-                background-color: whitesmoke;
+                background-color: rgb(255, 255, 255);
                 width: 35ch;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
+                box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+                margin: 1em;
+                margin-bottom: 5em;
             }
         }
     }
