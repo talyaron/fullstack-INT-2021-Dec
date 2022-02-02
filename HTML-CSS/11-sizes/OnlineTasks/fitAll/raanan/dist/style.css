@@ -6,8 +6,8 @@ body {
 }
 
 .wrapper {
-  width: 650px;
-  background-color: aquamarine;
+  width: 75ch;
+  background-color: #7fecff;
   display: flex;
   flex-direction: column;
 }
@@ -17,4 +17,12 @@ body {
 }
 .wrapper .one h1 {
   color: white;
+}
+.wrapper h2 {
+  padding-left: 10px;
+  color: #585858;
+}
+.wrapper p {
+  padding-left: 12px;
+  color: #7e7e7e;
 }
