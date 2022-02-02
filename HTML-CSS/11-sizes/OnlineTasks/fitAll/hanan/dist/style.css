@@ -5,15 +5,14 @@ body html {
 
 body {
   height: 50vh;
+  font-family: "Poppins", sans-serif;
 }
 
 .warrper {
-  background-color: blue;
   height: 100%;
   width: 100%;
 }
 .warrper .blog {
-  background-color: green;
   width: 50%;
   height: 100%;
   margin: auto;
@@ -24,13 +23,13 @@ body {
 }
 .warrper .blog h1 {
   font-size: 3rem;
-  color: white;
+  color: #3b3b3b;
 }
 .warrper .blog h2 {
   font-size: 1.8rem;
-  color: white;
+  color: #5d5d5d;
 }
 .warrper .blog p {
   font-size: 1.5rem;
-  color: black;
+  color: #747474;
 }
