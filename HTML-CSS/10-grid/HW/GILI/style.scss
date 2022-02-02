@@ -8,6 +8,7 @@ body {
     height: 50px;
     background-color: black;
 
+
     &__bbc_container {
         width: 150px;
         height: 50px;
@@ -262,7 +263,7 @@ body {
             flex-direction: column;
             width: 32%;
             transition: 0.5s;
-            
+
             &:hover {
                 filter: brightness(110%)
             }
