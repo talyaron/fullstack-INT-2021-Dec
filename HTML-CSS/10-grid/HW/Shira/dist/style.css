@@ -1,7 +1,7 @@
 .wrapper {
   width: 12vw;
 }
-.wrapper .header {
+.wrapper .top {
   padding: 40px;
   margin: 0px;
   display: grid;
@@ -9,22 +9,34 @@
   gap: 10px;
   grid-auto-rows: minmax(100px, auto);
 }
-.wrapper .header .titleOf_header {
+.wrapper .top .titleTop {
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper .top .titleOf_header {
   position: absolute;
   top: 5px;
   color: rgba(0, 0, 0, 0.699);
   font-weight: 800;
 }
-.wrapper .header .police {
+.wrapper .top .date {
+  position: absolute;
+  top: 10px;
+  left: 720px;
+  color: gray;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+.wrapper .top .police {
   color: white;
   position: relative;
   top: 100px;
 }
-.wrapper .header .police span {
+.wrapper .top .police span {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
-.wrapper .header .text {
+.wrapper .top .text {
   color: white;
 }
 .wrapper .one {
