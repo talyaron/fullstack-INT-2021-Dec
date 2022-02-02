@@ -1,0 +1,25 @@
+body, html {
+  margin: 0%;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: aquamarine;
+}
+.wrapper img {
+  width: 100%;
+}
+.wrapper h1 {
+  font-size: 3rem;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+.wrapper h2 {
+  font-size: 2rem;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+.wrapper p {
+  font-size: 1.2rem;
+}
