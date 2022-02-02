@@ -454,7 +454,7 @@
   width: 370px;
   height: 637px;
   border-radius: 20px;
-  background-color: #18181a;
+  background-color: #212124;
 }
 .card .top_header {
   width: 370px;
@@ -632,30 +632,21 @@
   top: 0px;
   right: 15px;
 }
-.card .main_body .wrapper_rows__dark__instrument {
+.card .main_body .wrapper_rows__bright__profile {
   display: inline-block;
 }
-.card .main_body .wrapper_rows__dark__instrument .img {
-  position: absolute;
-  right: 90px;
-  top: 12px;
-  height: 10px;
-  width: 10px;
-}
-.card .main_body .wrapper_rows__profile {
-  display: inline-block;
-}
-.card .main_body .wrapper_rows__profile img {
+.card .main_body .wrapper_rows__bright__profile img {
   position: absolute;
   width: 30px;
   height: 30px;
   top: 10px;
   left: 10px;
 }
-.card .main_body .wrapper_rows__name {
+.card .main_body .wrapper_rows__bright__name {
   display: inline-block;
+  position: relative;
 }
-.card .main_body .wrapper_rows__name p {
+.card .main_body .wrapper_rows__bright__name .img {
   position: absolute;
   color: white;
   font-size: 14px;
@@ -663,36 +654,127 @@
   left: 57px;
   top: 0px;
 }
-.card .main_body .wrapper_rows__km {
+.card .main_body .wrapper_rows__bright__km {
   display: inline-block;
 }
-.card .main_body .wrapper_rows__km p {
+.card .main_body .wrapper_rows__bright__km p {
   position: absolute;
   color: white;
   font-size: 14px;
   top: 0px;
   right: 15px;
 }
-.card .main_body .wrapper_rows__guitar {
+.card .main_body .wrapper_rows__bright__instrument-1 {
   display: inline-block;
 }
-.card .main_body .wrapper_rows__guitar .Imguitar {
+.card .main_body .wrapper_rows__bright__instrument-1 .music {
   position: absolute;
-  right: 100px;
-  top: 12px;
-  height: 20px;
-  width: 20px;
+  right: 70px;
+  top: 7px;
+  height: 30px;
+  width: 25px;
+}
+.card .main_body .wrapper_rows__dark {
+  position: relative;
+  display: flex;
+  height: 45px;
+  width: 370px;
+}
+.card .main_body .wrapper_rows__dark__profile {
+  display: inline-block;
+}
+.card .main_body .wrapper_rows__dark__profile img {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 10px;
+  left: 10px;
+}
+.card .main_body .wrapper_rows__dark__name {
+  display: inline-block;
+}
+.card .main_body .wrapper_rows__dark__name p {
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  font-weight: bolder;
+  left: 57px;
+  top: 0px;
+}
+.card .main_body .wrapper_rows__dark__km {
+  display: inline-block;
+}
+.card .main_body .wrapper_rows__dark__km p {
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  top: 0px;
+  right: 15px;
+}
+.card .main_body .wrapper_rows__dark__sound-1 {
+  display: inline-block;
+}
+.card .main_body .wrapper_rows__dark__sound-1 .sound {
+  position: absolute;
+  right: 60px;
+  top: -5px;
+  height: 50px;
+  width: 40px;
+}
+.card .main_body .wrapper_rows__dark .triangle-down {
+  position: absolute;
+  right: 170px;
+  top: 40px;
+  width: 0%;
+  height: 0px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 25px solid;
+  animation-name: changColor;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: inherit;
+}
+@keyframes changColor {
+  from {
+    color: solid #292525;
+    border-radius: 0%;
+  }
+  to {
+    color: #e61313;
+    border-radius: 100%;
+  }
 }
 .card .main_body .map .map_triangle img {
   width: 100%;
-  height: 280px;
+  height: 270px;
   margin-top: -23px;
 }
-.card .main_body .footer .footer-a {
-  position: relative;
+.card .main_body .footer .wrappFooter {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  display: inline-block;
+  position: absolute;
+  align-items: center;
   margin-top: 20px;
+}
+.card .main_body .footer .wrappFooter__backPage img {
+  width: 55px;
+  height: 55px;
+}
+.card .main_body .footer .wrappFooter__settings img {
+  width: 55px;
+  height: 55px;
+}
+.card .main_body .footer .wrappFooter__chat img {
+  width: 55px;
+  height: 55px;
+}
+.card .main_body .footer .wrappFooter__update img {
+  width: 55px;
+  height: 55px;
+}
+.card .main_body .footer .wrappFooter__home img {
+  width: 55px;
+  height: 55px;
 }
