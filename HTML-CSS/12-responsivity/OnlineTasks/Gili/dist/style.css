@@ -47,17 +47,11 @@ html {
   }
 }
 @media only screen and (max-width: 768px) {
-  .wrapper h1 {
-    color: white;
-  }
   .wrapper .article_wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (max-width: 440px) {
-  .wrapper h1 {
-    color: white;
-  }
   .wrapper .article_wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
