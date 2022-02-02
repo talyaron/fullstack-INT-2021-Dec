@@ -26,10 +26,13 @@ body, html {
 }
 .wrapper .text h1 {
   font-size: 1.2rem;
+  margin: 0;
 }
 .wrapper .text h2 {
   font-size: 1.2rem;
+  margin: 0;
 }
 .wrapper .text p {
   font-size: 1.2rem;
+  margin: 0;
 }
