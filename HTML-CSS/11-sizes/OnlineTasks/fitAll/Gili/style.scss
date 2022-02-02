@@ -1,11 +1,13 @@
 body, html {
     margin: 0%;
+    background-color: aquamarine;
 }
 
 .wrapper {
-    width: 100%;
+    max-width: 75ch;
     height: 100vh;
     background-color: aquamarine;
+    margin:auto;
 
     img {
         width: 100%;
