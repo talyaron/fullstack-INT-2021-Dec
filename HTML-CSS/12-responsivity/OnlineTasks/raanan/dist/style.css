@@ -13,9 +13,11 @@
 }
 .wrapper .one h2 {
   padding: 10px;
+  color: #333333;
 }
 .wrapper .one p {
   padding: 10px;
+  color: #444343;
 }
 
 @media only screen and (max-width: 1440px) {
