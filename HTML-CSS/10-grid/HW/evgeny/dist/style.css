@@ -12,35 +12,80 @@ body {
   gap: 1.5rem;
   box-sizing: border-box;
 }
+.wrapper .title {
+  border-left: 5px solid red;
+  padding-left: 10px;
+}
+.wrapper .title-s {
+  position: relative;
+  top: 264%;
+  border-left: 5px solid red;
+  padding-left: 10px;
+}
+.wrapper .b-text {
+  position: absolute;
+  top: 30px;
+  padding: 5px;
+  font-family: Arial, Helvetica, freesans, sans-serif;
+}
+.wrapper .l-text {
+  position: absolute;
+  top: 120px;
+  padding-left: 9px;
+  border-left: 5px solid red;
+  color: grey;
+  border-width: 3px;
+  left: 10px;
+}
 .wrapper .upper-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1.5rem;
   row-gap: 10px;
   padding: 10px;
+  position: relative;
+  height: 340px;
+  width: 80rem;
 }
 .wrapper .item:hover {
   box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.1);
 }
 .wrapper .item {
   display: grid;
-  background-color: navy;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-}
-.wrapper .item h3 {
-  color: white;
-}
-.wrapper .item p {
-  color: white;
+  height: auto;
+  width: auto;
 }
 .wrapper .item.one {
   background-image: url(https://ichef.bbci.co.uk/news/976/cpsprodpb/0B79/production/_123073920_mediaitem123073919.jpg);
   grid-column: span 2;
   grid-row: span 2;
   padding: 30px;
-  position: relative;
+}
+.wrapper .item.one h3 {
+  color: white;
+}
+.wrapper .item.one p {
+  color: white;
+}
+.wrapper .item.one .b-text {
+  top: 123px;
+  font-size: 157%;
+}
+.wrapper .item.one .l-text {
+  top: 236px;
+  border-left: 5px solid rgba(255, 255, 255, 0);
+}
+.wrapper .item.one .real {
+  position: absolute;
+  top: 295px;
+  padding-left: 10px;
+  padding-left: 9px;
+  border-left: 5px solid red;
+  border-width: 3px;
+  left: 9px;
 }
 .wrapper .item.two {
   background-image: url(https://ichef.bbci.co.uk/news/976/cpsprodpb/7CBB/production/_123013913_39c0e140-baa1-477c-9884-205720b2a44e.jpg);
@@ -61,4 +106,40 @@ body {
 .wrapper .item.five {
   padding: 30px;
   background-image: url(https://ychef.files.bbci.co.uk/1600x900/p0bkwrhl.webp);
+}
+.wrapper .mid-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  position: relative;
+  height: 250px;
+  width: 80rem;
+}
+.wrapper .mid-grid .l-text {
+  position: absolute;
+  top: 380px;
+  left: -1px;
+}
+.wrapper img {
+  width: auto;
+  height: 235px;
+}
+
+.lower-grid {
+  display: grid;
+  top: 84%;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  position: relative;
+  height: 250px;
+  width: 80rem;
+}
+.lower-grid .l-text {
+  position: absolute;
+  top: 380px;
+  left: -1px;
+}
+.lower-grid img {
+  width: auto;
+  height: 235px;
 }
