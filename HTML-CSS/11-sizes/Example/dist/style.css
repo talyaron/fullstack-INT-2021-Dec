@@ -1,6 +1,11 @@
+html, body {
+  margin: 0px;
+}
+
 .wrapper {
   background-color: wheat;
-  height: 743px;
+  height: 100vh;
+  width: 100vw;
 }
 .wrapper .box {
   background-color: purple;
