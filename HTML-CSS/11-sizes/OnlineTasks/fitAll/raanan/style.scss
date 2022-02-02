@@ -6,8 +6,8 @@ body {
 }
 
 .wrapper {
-    width: 650px;
-    background-color: aquamarine;
+    width: 75ch;
+    background-color: rgb(127, 236, 255);
     display: flex;
     flex-direction: column;
     .one {
@@ -16,5 +16,13 @@ body {
         h1 {
             color: white;
         }
+    }
+    h2 {
+        padding-left: 10px;
+        color: rgb(88, 88, 88);
+    }
+    p {
+        padding-left: 12px;
+        color: rgb(126, 126, 126);
     }
 }
