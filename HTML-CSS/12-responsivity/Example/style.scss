@@ -1,0 +1,60 @@
+//break points
+
+
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap:3px;
+    width: 100%;
+    box-sizing: border-box;
+
+    .item{
+        background-color: rgb(50, 122, 205);
+        img{
+            width: 100%;
+            
+        }
+        h2{
+            padding: 10px;
+        }
+        p{
+            padding: 10px;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1440px) {
+    body {
+      background-color: rgb(69, 131, 27);
+    }
+    
+    .wrapper{
+        grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+@media only screen and (max-width: 768px) {
+    body {
+      background-color: rgb(160, 158, 34);
+    }
+    h1 {
+      color: white;
+    }
+    .wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media only screen and (max-width: 440px) {
+    body {
+      background-color: rgb(140, 141, 141);
+    }
+    h1 {
+      color: white;
+    }
+    .wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+  }
