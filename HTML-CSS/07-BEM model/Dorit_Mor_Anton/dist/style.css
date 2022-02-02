@@ -644,8 +644,9 @@
 }
 .card .main_body .wrapper_rows__bright__name {
   display: inline-block;
+  position: relative;
 }
-.card .main_body .wrapper_rows__bright__name p {
+.card .main_body .wrapper_rows__bright__name .img {
   position: absolute;
   color: white;
   font-size: 14px;

@@ -748,7 +748,8 @@
                 }
                 &__name{
                     display:inline-block;
-                    p{
+                    position:relative;
+                    .img{
                         position:absolute;
                         color:white;
                         font-size: 14px;
