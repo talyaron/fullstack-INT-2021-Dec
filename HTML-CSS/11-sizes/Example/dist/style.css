@@ -1,0 +1,8 @@
+.wrapper {
+  background-color: wheat;
+  height: 743px;
+}
+.wrapper .box {
+  background-color: purple;
+  height: 100px;
+}
