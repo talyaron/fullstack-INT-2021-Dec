@@ -9,6 +9,23 @@ body .wrapper {
   flex-direction: column;
   justify-content: center;
 }
+body .wrapper .top-nav-bar {
+  width: 100vw;
+  height: 5em;
+  background-color: rgba(0, 0, 0, 0.842);
+  z-index: 1;
+  color: whitesmoke;
+  position: fixed;
+  top: 0;
+}
+body .wrapper .top-nav-bar ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+body .wrapper .top-nav-bar ul li {
+  padding: 1em;
+}
 body .wrapper .hero {
   display: flex;
   justify-content: center;
@@ -20,9 +37,9 @@ body .wrapper .hero img {
 }
 body .wrapper .hero h1 {
   position: absolute;
-  top: 2.4em;
+  top: 3.2em;
   color: white;
-  font-size: 4em;
+  font-size: 3.5em;
 }
 body .wrapper .intro {
   width: 80ch;
@@ -38,9 +55,11 @@ body .wrapper .intro .bolded {
 }
 body .wrapper main {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   margin: auto;
-  width: 80vh;
+  width: 100vw;
 }
 body .wrapper main .card {
   background-color: white;
