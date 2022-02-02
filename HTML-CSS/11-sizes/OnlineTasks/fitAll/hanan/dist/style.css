@@ -8,17 +8,15 @@ body {
 }
 
 .warrper {
-  position: absolute;
   background-color: blue;
   height: 100%;
   width: 100%;
 }
 .warrper .blog {
-  position: relative;
   background-color: green;
   width: 50%;
   height: 100%;
-  left: 400px;
+  margin: auto;
 }
 .warrper .blog img {
   width: 100%;
