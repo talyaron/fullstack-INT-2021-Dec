@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  font-size: 1.5rem;
+}
+
+.wrapper {
+  width: 75ch;
+  background-color: #7fecff;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .one {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Bl%C3%BCten_1.jpg/330px-Bl%C3%BCten_1.jpg");
+  height: 400px;
+}
+.wrapper .one h1 {
+  color: white;
+}
+.wrapper h2 {
+  padding-left: 10px;
+  color: #585858;
+}
+.wrapper p {
+  padding-left: 12px;
+  color: #7e7e7e;
+}

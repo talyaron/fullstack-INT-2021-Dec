@@ -1,0 +1,35 @@
+h1 {
+  color: black;
+  font-size: 15px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+h2 {
+  color: rgba(128, 128, 128, 0.726);
+  font-size: 15px;
+}
+
+.wrapper {
+  display: grid;
+  margin: auto;
+  width: 70%;
+  height: 50vh;
+  grid-template-columns: 2fr 1fr;
+  gap: 2px;
+  grid-template-rows: 50px 50px 50px 50px 100px;
+}
+.wrapper .story {
+  background-color: hotpink;
+}
+
+.story__big {
+  display: grid;
+  width: 70vh;
+  height: 40vh;
+  background-color: green;
+}
+.story__big img {
+  background-image: url(https://www.easygo.co.il/clients/easygo/gallery/Others/Sport/sport_756_500_11.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
