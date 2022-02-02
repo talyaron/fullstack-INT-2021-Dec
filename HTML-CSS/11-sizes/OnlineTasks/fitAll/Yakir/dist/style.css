@@ -1,0 +1,33 @@
+html, body {
+  background-color: black;
+  margin: 0px;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  height: 50vh;
+  margin: auto;
+}
+
+.wrapper {
+  direction: rtl;
+  background-color: black;
+  color: white;
+  height: 100%;
+  width: 75ch;
+  height: 80%;
+}
+.wrapper .recommendatiom img {
+  height: 20rem;
+}
+.wrapper .recommendatiom h2 {
+  font-size: 2rem;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+.wrapper .recommendatiom p {
+  width: 30rem;
+  font-size: 1rem;
+  direction: rtl;
+}

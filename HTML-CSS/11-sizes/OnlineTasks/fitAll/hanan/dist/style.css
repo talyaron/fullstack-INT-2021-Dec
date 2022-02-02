@@ -1,0 +1,38 @@
+body html {
+  margin: 0;
+  font-size: 400px;
+}
+
+body {
+  height: 50vh;
+}
+
+.warrper {
+  position: absolute;
+  background-color: blue;
+  height: 100%;
+  width: 100%;
+}
+.warrper .blog {
+  position: relative;
+  background-color: green;
+  width: 50%;
+  height: 100%;
+  left: 400px;
+}
+.warrper .blog img {
+  width: 100%;
+  height: 300px;
+}
+.warrper .blog h1 {
+  font-size: 3rem;
+  color: white;
+}
+.warrper .blog h2 {
+  font-size: 1.8rem;
+  color: white;
+}
+.warrper .blog p {
+  font-size: 1.5rem;
+  color: black;
+}
