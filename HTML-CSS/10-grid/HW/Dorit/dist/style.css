@@ -1,16 +1,16 @@
 .header {
+  margin-top: 10px;
   width: 90%;
   margin: auto;
-  height: 10px;
   display: flex;
   justify-content: space-between;
 }
 .header p {
-  font-size: 5px;
+  font-size: 20px;
   color: black;
 }
 .header #date {
-  font-size: 5px;
+  font-size: 20px;
   color: black;
 }
 
@@ -184,8 +184,8 @@
   width: 90%;
   margin-top: 15px;
   margin-left: 5%;
-  height: 10px;
-  font-size: 5px;
+  height: 20px;
+  font-size: 20px;
   color: black;
 }
 
@@ -264,8 +264,8 @@
   width: 90%;
   margin-top: 25px;
   margin-left: 5%;
-  height: 10px;
-  font-size: 5px;
+  height: 20px;
+  font-size: 20px;
   color: black;
 }
 
