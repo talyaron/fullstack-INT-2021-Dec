@@ -1,0 +1,685 @@
+@font-face {
+    font-family: helvetica;
+    src: url(../fonts/helvetica/FreeSans.ttf);
+}
+@font-face {
+    font-family: pragmatica;
+    src: url(../fonts/helvetica/Pragmatica-ExtraLight.ttf);
+}
+h1 { 
+    font-family: 'helvetica';
+    margin: 0;
+}
+h2 { 
+    font-family: 'helvetica';
+    margin: 0;
+}
+h3 { 
+    font-family: 'helvetica';
+    margin: 0;
+}
+p {
+    font-family: 'helvetica';
+    margin: 0;
+}
+
+.wrapper {
+    margin: auto;
+    width: 82vw;
+    .title-row {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        h3 {
+            color: grey;
+            margin-top: 5px;
+        }
+    }
+.grid-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 170px 170px;
+    gap: 1rem;
+    position: relative;
+  
+    h1 {
+        font-family: 'helvetica';
+        color: white;
+        margin: 0;
+    }
+    h2 {
+        font-family: 'helvetica';
+        color: white;
+        margin: 0;
+    }
+    p {
+        font-family: 'pragmatica';
+        color: rgb(218, 218, 218);
+        margin: 0;
+    
+    }
+    
+    .box-span {
+        grid-row: span 2;
+    }
+
+    .box-main  {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.05),
+        rgba(0, 0, 0, 0.5)), url(https://ychef.files.bbci.co.uk/1600x900/p0b7v863.webp); 
+        background-repeat: no-repeat;
+        background-size: cover;
+         
+       
+        .text-box {
+            position: absolute;
+            bottom: 0;
+            margin-bottom: 15px;
+            margin-left: 15px;
+                p {
+                    font-size: 1.2rem;
+                }
+            .tag {
+                position: relative;
+                display: flex;
+
+                h1 {
+                    font-size: 1.1rem;
+                    color: #e91802;
+                }
+                h2 {
+                    position: absolute;
+                    font-size: 1.2rem;
+                    letter-spacing: 0.1rem;
+                    bottom: -1px;
+                    padding-left: 10px;
+                    font-family: 'pragmatica'
+                }
+            }
+        }
+        &:hover {
+            transition: 2s;
+            cursor: pointer;
+            filter: contrast(120%) brightness(150%) saturate(200%)
+        }
+    }
+    
+    .box1 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.7)), url(https://ychef.files.bbci.co.uk/1600x900/p0bljklc.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        .text_container {
+            position: absolute;
+            bottom: 0.5rem;
+            left: 0.5rem;
+            h1 {
+                font-size: 1.2rem;
+                letter-spacing: 0.1rem;
+            }
+            p {
+                font-size: 0.8rem;
+            }
+            .tag {
+                display: flex;
+                position: relative;
+                h1 {
+                    font-size: 0.7rem;
+                    color: #e91802;
+                }
+                h2 {
+                    position: absolute;
+                    bottom: -3px;
+                    margin-left: 10px;
+                    font-family: 'pragmatica';
+                    font-size: 0.8rem;
+                    color: #d8d8d8;
+                } 
+            }
+        }
+        &:hover {
+            transition: 2s;
+            cursor: pointer;
+            filter: contrast(120%) brightness(150%) saturate(200%)
+        }
+    }
+    .box2 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.7)), url(https://i.natgeofe.com/n/9a0f552b-de6c-4e6b-b982-e65a2935a03c/Asha.jpg?w=1800&h=1200);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        .text_container {
+            position: absolute;
+            bottom: 0.5rem;
+            left: 0.5rem;
+            h1 {
+                font-size: 1.2rem;
+                letter-spacing: 0.1rem;
+            }
+            p {
+                font-size: 0.8rem;
+            }
+            .tag {
+                display: flex;
+                position: relative;
+                h1 {
+                    font-size: 0.7rem;
+                    color: #e91802;
+                }
+                h2 {
+                    position: absolute;
+                    bottom: -3px;
+                    margin-left: 10px;
+                    font-family: 'pragmatica';
+                    font-size: 0.8rem;
+                    color: #d8d8d8;
+                } 
+            }
+        }
+        &:hover {
+            transition: 2s;
+            cursor: pointer;
+            filter: contrast(120%) brightness(150%) saturate(200%)
+        }
+    }
+    .box3 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.7)), url(https://images.squarespace-cdn.com/content/v1/5b57598ff79392c46532457f/1607548292752-STULGFLU47W3WZJQF0A3/What-is-RSO-1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        .text_container {
+            position: absolute;
+            bottom: 0.5rem;
+            left: 0.5rem;
+            h1 {
+                font-size: 1.2rem;
+                letter-spacing: 0.1rem;
+            }
+            p {
+                font-size: 0.8rem;
+            }
+            .tag {
+                display: flex;
+                position: relative;
+                h1 {
+                    font-size: 0.7rem;
+                    color: #e91802;
+                }
+                h2 {
+                    position: absolute;
+                    bottom: -3px;
+                    margin-left: 10px;
+                    font-family: 'pragmatica';
+                    font-size: 0.8rem;
+                    color: #d8d8d8;
+                } 
+            }
+        }
+        &:hover {
+            transition: 2s;
+            cursor: pointer;
+            filter: contrast(120%) brightness(150%) saturate(200%)
+        }
+    }
+    .box4 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.7)), url(https://cdn.mos.cms.futurecdn.net/XDf6rafLdyBcaqgnvJPnpb-1024-80.jpg.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        .text_container {
+            position: absolute;
+            bottom: 0.5rem;
+            left: 0.5rem;
+            h1 {
+                font-size: 1.2rem;
+                letter-spacing: 0.1rem;
+            }
+            p {
+                font-size: 0.8rem;
+            }
+            .tag {
+                display: flex;
+                position: relative;
+                h1 {
+                    font-size: 0.7rem;
+                    color: #e91802;
+                }
+                h2 {
+                    position: absolute;
+                    bottom: -3px;
+                    margin-left: 10px;
+                    font-family: 'pragmatica';
+                    font-size: 0.8rem;
+                    color: #d8d8d8;
+                } 
+            }
+        }
+        &:hover {
+            transition: 2s;
+            cursor: pointer;
+            filter: contrast(120%) brightness(150%) saturate(200%)
+        }
+    }
+}
+
+    .news-row {
+        display: flex;
+        flex-direction: row;
+        padding-top: 20px;
+        padding-bottom: 15px;
+        padding-top: 40px;
+        position: relative;
+        h1 {
+            font-size: 1.2rem;
+            color: #e91802;
+        }
+        h2 {
+          padding-top: 1px;
+          margin-left: 0.5rem;
+          font-size: 1.4rem;
+          color: rgb(68, 68, 68);
+          letter-spacing: 0.08rem;
+        }
+        #sport {
+            color: rgb(255, 196, 0);
+        }
+    }
+.grid_news {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+        .card_1 {
+          .img {
+            background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2Ff6065475-435e-4bca-bdb4-9b4f95a93ea3.jpg?fit=scale-down&source=next&width=700);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 228px;
+          }
+        .text_box {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            h1 {
+                font-size: 1.2rem;
+            }
+        }  
+        .tag_flex {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            display: flex;
+            padding-top: 5px;
+            
+            h2 {
+                font-size: 0.9rem;
+                color: #e91802;
+            }
+            h3 {
+            position: absolute;
+            bottom: -1px;
+            margin-left: 0.8rem;
+            letter-spacing: 0.1rem;
+            color: grey;
+            font-size: 0.9rem;
+            font-family: 'pragmatica';
+            }
+        }
+        &:hover {
+            transition: 2s;
+            cursor: pointer;
+            filter: contrast(120%) brightness(150%) saturate(200%)
+        }
+    }
+        .card_2 {
+          .img {
+            background-image: url(https://static.timesofisrael.com/www/uploads/2013/01/F090807SL07.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 228px;
+          }
+          .text_box {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            h1 {
+                font-size: 1.2rem;
+            }
+        }  
+        .tag_flex {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            display: flex;
+            padding-top: 5px;
+    
+            h2 {
+                font-size: 0.9rem;
+                color: #e91802;
+            }
+            h3 {
+            position: absolute;
+            bottom: -1px;
+            margin-left: 0.8rem;
+            letter-spacing: 0.1rem;
+            color: grey;
+            font-size: 0.9rem;
+            font-family: 'pragmatica';
+            }
+        }
+        &:hover {
+            transition: 2s;
+            cursor: pointer;
+            filter: contrast(120%) brightness(150%) saturate(200%)
+        }
+    }
+        .card_3 {
+          .img {
+            background-image: url(https://www.iberdrola.com/documents/20125/40414/vr_746x419.jpg/d3221355-c367-f6b4-07dc-d893ac61c985?t=1627362779952);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 228px;
+          }
+          .text_box {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            h1 {
+                font-size: 1.2rem;
+            }
+        }  
+        .tag_flex {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            display: flex;
+            padding-top: 5px;
+    
+            h2 {
+                font-size: 0.9rem;
+                color: #e91802;
+            }
+            h3 {
+            position: absolute;
+            bottom: -1px;
+            margin-left: 0.8rem;
+            letter-spacing: 0.1rem;
+            color: grey;
+            font-size: 0.9rem;
+            font-family: 'pragmatica';
+            }
+        }
+        &:hover {
+            transition: 2s;
+            cursor: pointer;
+            filter: contrast(120%) brightness(150%) saturate(200%)
+        }
+    }
+    
+}
+.grid_sport {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+        .card_4 {
+          .img {
+            background-image: url(https://ichef.bbci.co.uk/news/976/cpsprodpb/14A6C/production/_123088548_hi073454842.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 228px;
+          }
+          .text_box {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            h1 {
+                font-size: 1.2rem;
+            }
+        }  
+        .tag_flex {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            display: flex;
+            padding-top: 5px;
+    
+            h2 {
+                font-size: 0.9rem;
+                color: #e91802;
+            }
+            h3 {
+            position: absolute;
+            bottom: -1px;
+            margin-left: 0.8rem;
+            letter-spacing: 0.1rem;
+            color: grey;
+            font-size: 0.9rem;
+            font-family: 'pragmatica';
+            }
+        }
+        &:hover {
+            transition: 2s;
+            cursor: pointer;
+            filter: contrast(120%) brightness(150%) saturate(200%)
+        }
+      
+    }
+        .card_5 {
+          .img {
+            background-image: url(https://ichef.bbci.co.uk/news/976/cpsprodpb/14A6C/production/_123088548_hi073454842.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 228px;
+          }
+          .text_box {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            h1 {
+                font-size: 1.2rem;
+            }
+        }  
+        .tag_flex {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            display: flex;
+            padding-top: 5px;
+    
+            h2 {
+                font-size: 0.9rem;
+                color: #e91802;
+            }
+            h3 {
+            position: absolute;
+            bottom: -1px;
+            margin-left: 0.8rem;
+            letter-spacing: 0.1rem;
+            color: grey;
+            font-size: 0.9rem;
+            font-family: 'pragmatica';
+            }
+        }
+        &:hover {
+            transition: 2s;
+            cursor: pointer;
+            filter: contrast(120%) brightness(150%) saturate(200%)
+        }
+      
+    }
+        .card_6 {
+          .img {
+            background-image: url(https://ichef.bbci.co.uk/news/976/cpsprodpb/14A6C/production/_123088548_hi073454842.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 228px;
+          }
+          .text_box {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            h1 {
+                font-size: 1.2rem;
+            }
+        }  
+        .tag_flex {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            display: flex;
+            padding-top: 5px;
+    
+            h2 {
+                font-size: 0.9rem;
+                color: #e91802;
+            }
+            h3 {
+            position: absolute;
+            bottom: -1px;
+            margin-left: 0.8rem;
+            letter-spacing: 0.1rem;
+            color: grey;
+            font-size: 0.9rem;
+            font-family: 'pragmatica';
+            }
+        }
+        &:hover {
+            transition: 2s;
+            cursor: pointer;
+            filter: contrast(120%) brightness(150%) saturate(200%)
+        }
+    }
+    
+}
+}
+
+
+
+
+
+
+
+
+
+
+/* Flex Sections */
+/* .flex_section {
+    width: 82vw;
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+        .news-row {
+            display: flex;
+        } */
+
+    /* news-section */
+   /*  .flex-news   {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 82vw;
+        height: 120vh;
+
+        .card_1 {
+            width:32.5%;
+            height: 85%;
+            display: flex;
+            flex-direction: column;
+            .img {
+                width: 100%;
+                height: 65%;
+                background-image: url(https://ichef.bbci.co.uk/news/976/cpsprodpb/6DA4/production/_123086082_gettyimages-1345377235.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .text_box {
+                width: 100%;
+                height: 35%;
+                display: flex;
+                flex-direction: column;
+
+
+            }
+        }
+        .card_2 {
+            width:32.5%;
+            height: 85%;
+            display: flex;
+            flex-direction: column;
+            .img {
+                width: 100%;
+                height: 65%;
+                background-image: url(https://ichef.bbci.co.uk/news/976/cpsprodpb/6DA4/production/_123086082_gettyimages-1345377235.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .text_box {
+                width: 100%;
+                height: 35%;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        .card_3 {
+            width:32.5%;
+            height: 85%;
+            display: flex;
+            flex-direction: column;
+            .img {
+                width: 100%;
+                height: 65%;
+                background-image: url(https://ichef.bbci.co.uk/news/976/cpsprodpb/6DA4/production/_123086082_gettyimages-1345377235.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .text_box {
+                width: 100%;
+                height: 35%;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+    } */
+    /* sport-section */
+   /*  .flex_sport {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .card_4 {
+            width:32.5%;
+            height: 85%;
+            display: flex;
+            flex-direction: column;
+        }
+        .card_5 {
+            width:32.5%;
+            height: 85%;
+            display: flex;
+            flex-direction: column;
+        }
+        .card_6 {
+            width:32.5%;
+            height: 85%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+    } 
+        /* tags country flex */
+     /*    .tag_flex {
+            display: flex;
+        } 
+} */ 
