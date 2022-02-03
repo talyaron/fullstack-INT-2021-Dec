@@ -1,0 +1,63 @@
+.top {
+  display: flex;
+  height: 50px;
+}
+.top_left {
+  display: flex;
+  position: relative;
+  left: 20px;
+}
+.top_left img {
+  height: min-content;
+  align-items: center;
+  position: relative;
+  top: 13px;
+}
+.top_left h3 {
+  background-color: black;
+  border-radius: 50px;
+  height: 45px;
+  width: 70px;
+  text-align: center;
+  color: white;
+  position: relative;
+  left: 40px;
+  bottom: 10px;
+}
+.top_center {
+  margin: auto;
+  padding: 0%;
+}
+.top_center input {
+  width: 1100px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #dbd4d4;
+  padding: 0px;
+  margin: 0px;
+  font-size: 20px;
+  text-align: left(20px);
+}
+.top_right {
+  display: flex;
+  padding: 0px;
+  gap: 10px;
+  margin: 0px;
+}
+.top_right h2 {
+  background-color: purple;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  text-align: center;
+  color: aliceblue;
+  position: relative;
+  top: -13px;
+}
+
+.wrapper {
+  margin: 40px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
