@@ -1,0 +1,208 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 20;
+}
+
+.wrapper {
+  background-color: gray;
+  width: 100vw;
+  height: 100vh;
+}
+.wrapper .menubar {
+  width: 100vw;
+  height: 70px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+}
+.wrapper .menubar .menu_btns {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.wrapper .menubar .menu_btns .Btn_Business {
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 20px;
+  padding: 15px 35px;
+  border: white;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  justify-content: space-evenly;
+  cursor: pointer;
+  background-color: #fffefe;
+}
+.wrapper .menubar .menu_btns .Btn_Business:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+.wrapper .menubar .menu_btns .Btn_Business:active {
+  background-color: black;
+  color: white;
+}
+.wrapper .menubar .menu_btns .logo {
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+}
+.wrapper .menubar .menu_btns .Btn_Create {
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 20px;
+  padding: 15px 35px;
+  border: white;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 180px;
+  top: 10px;
+  justify-content: space-evenly;
+  cursor: pointer;
+  background-color: #fffefe;
+}
+.wrapper .menubar .menu_btns .Btn_Create:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+.wrapper .menubar .menu_btns .Btn_Create:active {
+  background-color: black;
+  color: white;
+}
+.wrapper .menubar .menu_btns .Btn_Analytics {
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 20px;
+  padding: 15px 35px;
+  border: white;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 350px;
+  top: 10px;
+  justify-content: space-evenly;
+  cursor: pointer;
+  background-color: #fffefe;
+}
+.wrapper .menubar .menu_btns .Btn_Analytics:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+.wrapper .menubar .menu_btns .Btn_Analytics:active {
+  background-color: black;
+  color: white;
+}
+.wrapper .menubar .menu_btns .Btn_Ads {
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 20px;
+  padding: 15px 35px;
+  border: white;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 520px;
+  top: 10px;
+  justify-content: space-evenly;
+  cursor: pointer;
+  background-color: #fffefe;
+}
+.wrapper .menubar .menu_btns .Btn_Ads:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+.wrapper .menubar .menu_btns .Btn_Ads:active {
+  background-color: black;
+  color: white;
+}
+.wrapper .menubar .menu_options {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 20%;
+  right: 0;
+  top: 10px;
+}
+.wrapper .menubar .menu_options i {
+  font-size: 1.3rem;
+  color: gray;
+  padding: 10px;
+}
+.wrapper .menubar .menu_options .btn__search {
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 8px 8px;
+  border: white;
+  background-color: white;
+  cursor: pointer;
+}
+.wrapper .menubar .menu_options .btn__search:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+.wrapper .menubar .menu_options .btn__notif {
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 8px 8px;
+  border: white;
+  background-color: white;
+  cursor: pointer;
+}
+.wrapper .menubar .menu_options .btn__notif:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+.wrapper .menubar .menu_options .btn__comment {
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 8px 8px;
+  border: white;
+  background-color: white;
+  cursor: pointer;
+}
+.wrapper .menubar .menu_options .btn__comment:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+.wrapper .menubar .menu_options .btn__more {
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 8px 8px;
+  border: white;
+  background-color: white;
+  cursor: pointer;
+}
+.wrapper .menubar .menu_options .btn__more:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+.wrapper .grid_container {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(172, 255, 47, 0.301);
+  display: grid;
+}
+.wrapper .grid_container .item1 {
+  background-color: red;
+  width: 10px;
+  height: 10px;
+}
