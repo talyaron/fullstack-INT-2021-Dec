@@ -1,0 +1,238 @@
+body,
+html {
+
+    margin: 0;
+    padding: 0;
+    gap: 0px;
+    width: 99vw;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+
+.nav-top {
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 7vh;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    box-shadow: 0px 0px 10px 0px #d1d1d1;
+
+    .img-div {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        height: 40px;
+        width: 70px;
+        border-radius: 50%;
+
+        &:hover {
+            background-color: rgb(223, 223, 223);
+            cursor: pointer;
+        }
+    }
+
+    img {
+        border-radius: 50%;
+        height: 25px;
+
+
+    }
+
+
+    .logo-div {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+        height: 40px;
+        width: 60px;
+        border-radius: 50%;
+
+        &:hover {
+            background-color: rgb(223, 223, 223);
+            cursor: pointer;
+        }
+
+        .logo {
+            fill: currentColor;
+            color: rgb(118, 118, 118);
+            width: 25px;
+
+        }
+
+        .logo--pin {
+            fill: currentColor;
+            color: rgb(233, 0, 0);
+            width: 25px;
+        }
+
+
+    }
+
+
+
+
+    &__home {
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        height: 40px;
+        width: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+
+        &:hover {
+
+            cursor: pointer;
+        }
+
+    }
+
+    &__search {
+        fill: currentColor;
+        color: rgb(118, 118, 118);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(239, 239, 239);
+        border-radius: 20px;
+        padding-left: 15px;
+
+        &:hover {
+            background-color: rgb(223, 223, 223);
+
+        }
+
+
+
+
+
+
+        input[type=text] {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            font-size: 17px;
+            background-color: rgb(239, 239, 239);
+            border-radius: 20px;
+
+            &:hover {
+                background-color: rgb(223, 223, 223);
+
+            }
+
+        }
+
+    }
+}
+
+:root {
+    --card_width: 250px;
+    --row_increment: 10px;
+    --card_border_radius: 16px;
+    --card_small: 26;
+    --card_medium: 33;
+    --card_large: 45;
+}
+
+.page {
+    padding-top: 20px;
+
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+
+    .pin_container {
+        margin: 0;
+        padding: 0;
+        width: 80vw;
+        position: absolute;
+
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, var(--card_width));
+        grid-auto-rows: var(--row_increment);
+        justify-content: center;
+
+        background-color: rgb(255, 255, 255);
+    }
+
+ .save_icon {
+            opacity: 0;
+        }
+
+
+    .card {
+        padding: 0;
+        margin: 15px 10px;
+        border-radius: var(--card_border_radius);
+        position: relative;
+
+
+       
+
+        &:hover {
+            background-color: black;
+            cursor: zoom-in;
+
+            &:hover .save_icon {
+
+                opacity: 1;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                height: 45px;
+                width: 70px;
+                background-color: red;
+                border-radius: 40px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+            position: relative;
+
+            &:hover {
+                opacity: 0.7;
+            }
+
+        }
+
+
+    }
+
+    .card_small {
+        grid-row-end: span var(--card_small);
+    }
+
+    .card_medium {
+        grid-row-end: span var(--card_medium);
+    }
+
+    .card_large {
+        grid-row-end: span var(--card_large);
+    }
+
+}
