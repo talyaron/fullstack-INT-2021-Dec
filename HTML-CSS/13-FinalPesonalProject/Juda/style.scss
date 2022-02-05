@@ -8,13 +8,15 @@ html {
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
+    position: relative;
 
 
 }
 
 
 .nav-top {
-
+    z-index: 1;
+    position: fixed;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -149,7 +151,8 @@ html {
 
 .page {
     padding-top: 20px;
-
+position: relative;
+top: 50px;
     margin: 0px;
     display: flex;
     justify-content: center;
@@ -169,9 +172,9 @@ html {
         background-color: rgb(255, 255, 255);
     }
 
- .save_icon {
-            opacity: 0;
-        }
+    .save_icon {
+        opacity: 0;
+    }
 
 
     .card {
@@ -180,8 +183,14 @@ html {
         border-radius: var(--card_border_radius);
         position: relative;
 
+        video {
+            height: 100%;
+            width: 100%;
+            border-radius: 20px;
+        }
 
-       
+
+
 
         &:hover {
             background-color: black;

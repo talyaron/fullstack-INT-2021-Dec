@@ -6,16 +6,68 @@
     
     html,
     body {
-        background: white;
-        padding: 15px;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 80px;
+            width: 100vw;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+            z-index: 1;
+            padding: 0 2em;
+            position: fixed;
+            .left-nav {
+                .logo {
+                    background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/logo.png");
+                    width: 48px;
+                    height: 48px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    border-radius: 50&;
+                }
+                .home-btn {
+                    width: 4.8em;
+                    height: 3em;
+                    padding: 1em;
+                    line-height: 1;
+                    background-color: black;
+                    color: white;
+                    border-radius: 50px;
+                }
+                .search {
+                    padding: 0.5em;
+                    height: 48px;
+                    background-color: rgb(233, 233, 233);
+                    border-radius: 50px 0 0 50px;
+                }
+                #site-search {
+                    width: 1322px;
+                    height: 48px;
+                    background-color: rgb(233, 233, 233);
+                    border: none;
+                    border-radius: 0 50px 50px 0;
+                }
+            }
+        }
+        .inline {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0.5em 0 0 0.5em;
+        }
+        /* GRID */
         .grid-wrapper {
+            padding: 2em 8em;
             display: grid;
             grid-gap: 20px;
             row-gap: 2.8em;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            grid-template-rows: 150px;
+            grid-template-rows: auto;
             grid-auto-flow: dense;
+            padding-top: 6em;
+            /* ITEM STYLE */
             .item {
                 display: flex;
                 flex-direction: column;
@@ -34,6 +86,7 @@
                     background-repeat: no-repeat;
                     background-size: cover;
                 }
+                /* GIF'S */
                 .first {
                     background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/giphy.gif");
                 }
@@ -43,33 +96,29 @@
                 .third {
                     background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/giphy 3.gif");
                 }
-                .inline {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    padding: 0.5em 0 0 0.5em;
-                    .avatar {
-                        width: 32px;
-                        height: 32px;
-                        border-radius: 50px;
-                        background-color: rgb(236, 236, 236);
-                        border: 1px solid rgb(235, 235, 235);
-                        margin-right: 0.3em;
-                    }
-                    h4 {
-                        font-size: 14px;
-                        font-weight: 400;
-                        padding: 0 0.3em 0 0.3em;
-                    }
+                /* FROFILE CAPTION (UNDER IMAGE) */
+                .avatar {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50px;
+                    background-color: rgb(236, 236, 236);
+                    border: 1px solid rgb(235, 235, 235);
+                    margin-right: 0.3em;
                 }
-                .reaction-icons {
-                    img {
-                        width: 17px;
-                        height: 17px;
-                        margin-right: 0.2em;
-                    }
+                h4 {
+                    font-size: 14px;
+                    font-weight: 400;
+                    padding: 0 0.3em 0 0.3em;
                 }
             }
+            .reaction-icons {
+                img {
+                    width: 17px;
+                    height: 17px;
+                    margin-right: 0.2em;
+                }
+            }
+            /* ITEM TYPES */
             .tall {
                 grid-row: span 2;
             }
@@ -81,124 +130,3 @@
             }
         }
     }
-    
-    // * {
-    //     margin: 0;
-    //     padding: 0;
-    //     box-sizing: border-box;
-    // }
-    // html,
-    // body {
-    //     background: linear-gradient(45deg, #190f2c, #200b30);
-    //     padding: 15px;
-    //     .grid-wrapper {
-    //         display: grid;
-    //         grid-gap: 10px;
-    //         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    //         grid-auto-rows: 200px;
-    //         grid-auto-flow: dense;
-    //         div {
-    //             display: flex;
-    //             justify-content: center;
-    //             align-items: center;
-    //             img {
-    //                 width: 100%;
-    //                 height: 100%;
-    //                 object-fit: cover;
-    //                 border-radius: 5px;
-    //             }
-    //         }
-    //         img {
-    //             max-width: 100%;
-    //             height: auto;
-    //             vertical-align: middle;
-    //             display: inline-block;
-    //         }
-    //         .wide {
-    //             grid-column: span 2;
-    //         }
-    //         .tall {
-    //             grid-row: span 2;
-    //         }
-    //         .big {
-    //             grid-column: span 2;
-    //             grid-row: span 2;
-    //         }
-    //     }
-    // }
-    // * {
-    //     margin: 0;
-    //     padding: 0;
-    //     box-sizing: border-box;
-    // }
-    // html,
-    // body {
-    //     background: linear-gradient(45deg, #190f2c, #200b30);
-    //     padding: 15px;
-    // }
-    // img {
-    //     max-width: 100%;
-    //     height: auto;
-    //     vertical-align: middle;
-    //     display: inline-block;
-    // }
-    // /* Main CSS */
-    // .grid-wrapper>div {
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    // }
-    // .grid-wrapper>div>img {
-    //     width: 100%;
-    //     height: 100%;
-    //     object-fit: cover;
-    //     border-radius: 5px;
-    // }
-    // .grid-wrapper {
-    //     display: grid;
-    //     grid-gap: 10px;
-    //     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    //     grid-auto-rows: 200px;
-    //     grid-auto-flow: dense;
-    // }
-    // .grid-wrapper .wide {
-    //     grid-column: span 2;
-    // }
-    // .grid-wrapper .tall {
-    //     grid-row: span 2;
-    // }
-    // .grid-wrapper .big {
-    //     grid-column: span 2;
-    //     grid-row: span 2;
-    // }
-    // body {
-    //     font: 1.1em Arial, Helvetica, sans-serif;
-    //     .container {
-    //         column-count: 4;
-    //         column-gap: 10px;
-    //         figure {
-    //             margin: 0;
-    //             display: grid;
-    //             grid-template-rows: 1fr auto;
-    //             margin-bottom: 10px;
-    //             break-inside: avoid;
-    //             img {
-    //                 grid-row: 1 / -1;
-    //                 grid-column: 1;
-    //                 max-width: 100%;
-    //                 display: block;
-    //             }
-    //             a {
-    //                 color: black;
-    //                 text-decoration: none;
-    //             }
-    //             figcaption {
-    //                 grid-row: 2;
-    //                 grid-column: 1;
-    //                 background-color: rgba(255, 255, 255, .5);
-    //                 padding: .2em .5em;
-    //                 justify-self: start;
-    //             }
-    //         }
-    //     }
-    // }
