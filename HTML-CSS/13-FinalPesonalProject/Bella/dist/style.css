@@ -25,35 +25,33 @@ body .grid-wrapper .item {
   flex-direction: column;
 }
 html .grid-wrapper .item img,
-html .grid-wrapper .item .gif-first,
-html .grid-wrapper .item .gif-second,
-html .grid-wrapper .item .gif-third,
-body .grid-wrapper .item img,
-body .grid-wrapper .item .gif-first,
-body .grid-wrapper .item .gif-second,
-body .grid-wrapper .item .gif-third {
+body .grid-wrapper .item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
 }
-html .grid-wrapper .item .gif-first,
-body .grid-wrapper .item .gif-first {
+html .grid-wrapper .item .gif,
+body .grid-wrapper .item .gif {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  min-height: 14em;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+html .grid-wrapper .item .first,
+body .grid-wrapper .item .first {
   background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/giphy.gif");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
-html .grid-wrapper .item .gif-second,
-body .grid-wrapper .item .gif-second {
+html .grid-wrapper .item .second,
+body .grid-wrapper .item .second {
   background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/giphy 2.gif");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
-html .grid-wrapper .item .gif-third,
-body .grid-wrapper .item .gif-third {
+html .grid-wrapper .item .third,
+body .grid-wrapper .item .third {
   background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/giphy 3.gif");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 html .grid-wrapper .item .inline,
 body .grid-wrapper .item .inline {

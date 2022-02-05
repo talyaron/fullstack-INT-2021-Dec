@@ -19,29 +19,29 @@
             .item {
                 display: flex;
                 flex-direction: column;
-                img,
-                .gif-first,
-                .gif-second,
-                .gif-third {
+                img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                     border-radius: 20px;
                 }
-                .gif-first {
+                .gif {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 20px;
+                    min-height: 14em;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .first {
                     background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/giphy.gif");
-                    background-repeat: no-repeat;
-                    background-size: cover;
                 }
-                .gif-second {
+                .second {
                     background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/giphy 2.gif");
-                    background-repeat: no-repeat;
-                    background-size: cover;
                 }
-                .gif-third {
+                .third {
                     background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/giphy 3.gif");
-                    background-repeat: no-repeat;
-                    background-size: cover;
                 }
                 .inline {
                     display: flex;
