@@ -13,7 +13,7 @@
   position: relative;
   top: 13px;
 }
-.top_left h3 {
+.top_left .home {
   background-color: black;
   border-radius: 50px;
   height: 45px;
@@ -21,7 +21,11 @@
   text-align: center;
   color: white;
   position: relative;
-  left: 40px;
+  left: 20px;
+  align-items: center;
+}
+.top_left .home h3 {
+  position: relative;
   bottom: 10px;
 }
 .top_center {
@@ -36,7 +40,6 @@
   padding: 0px;
   margin: 0px;
   font-size: 20px;
-  text-align: left(20px);
 }
 .top_right {
   display: flex;
@@ -44,7 +47,7 @@
   gap: 10px;
   margin: 0px;
 }
-.top_right h2 {
+.top_right .user {
   background-color: purple;
   height: 40px;
   width: 40px;
@@ -52,7 +55,10 @@
   text-align: center;
   color: aliceblue;
   position: relative;
-  top: -13px;
+}
+.top_right .user h2 {
+  position: relative;
+  bottom: 12px;
 }
 
 .wrapper {
@@ -60,4 +66,17 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 10px;
+}
+
+.content {
+  position: relative;
+  top: 100px;
+  margin: auto;
+  width: 800px;
+  height: 500px;
+  display: flex;
+  padding: 100px;
+}
+.content__img img {
+  height: 800px;
 }
