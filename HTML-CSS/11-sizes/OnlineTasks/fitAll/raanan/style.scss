@@ -1,28 +1,53 @@
-body {
-    display: flex;
-    justify-content: center;
-    margin-top: 10%;
-    font-size: 1.5rem;
-}
-
+//break points
 .wrapper {
-    width: 75ch;
-    background-color: rgb(127, 236, 255);
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3px;
+    width: 100%;
+    box-sizing: border-box;
     .one {
-        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Bl%C3%BCten_1.jpg/330px-Bl%C3%BCten_1.jpg');
-        height: 400px;
-        h1 {
-            color: white;
+        background-color: rgb(50, 122, 205);
+        img {
+            width: 100%;
+        }
+        h2 {
+            padding: 10px;
+        }
+        p {
+            padding: 10px;
         }
     }
-    h2 {
-        padding-left: 10px;
-        color: rgb(88, 88, 88);
+}
+
+@media only screen and (max-width: 1440px) {
+    body {
+        background-color: rgb(69, 131, 27);
     }
-    p {
-        padding-left: 12px;
-        color: rgb(126, 126, 126);
+    .wrapper {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: rgb(160, 158, 34);
+    }
+    h1 {
+        color: white;
+    }
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 440px) {
+    body {
+        background-color: rgb(140, 141, 141);
+    }
+    h1 {
+        color: white;
+    }
+    .wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+} //https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Bl%C3%BCten_1.jpg/330px-Bl%C3%BCten_1.jpg
