@@ -23,10 +23,10 @@ html {
 
         &__logo {
             width: 50px;
-            height: 50px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
-            justify-content: center;
+            
 
 
             img {
@@ -47,7 +47,7 @@ html {
             border: none;
             font-size: 1rem;
             color: white;
-            padding: 25px 18px;
+            padding: 22px 16px;
             border-radius: 30px;
             font-weight: bolder;
             text-align: center;
@@ -145,16 +145,17 @@ html {
 
             &__container {
                 margin: auto;
-                width: 30px;
-                height: 30px;
+                width: 20px;
+                height: 20px;
                 background-color: rgb(239, 239, 239);
                 border-radius: 50%;
-                color: 111111;
+                color: black;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                 font-weight: bolder;
-                font-size: 15px;
+                font-size: 10px;
                 display: flex;
                 justify-content: center;
-                line-height: 30px;
+                line-height: 20px;
             }
         }
 
@@ -196,10 +197,11 @@ html {
         width: 100%;
         border-radius: 30px;
     }
-
+    
     p {
         padding-left: 10px;
     }
+
 }
 
 .menu_buttons {
@@ -209,9 +211,8 @@ html {
     bottom: 20px;
     right: 20px;
     row-gap: 10px;
-    font-size: 30px;
     text-align: center;
-    color: rgb(71, 71, 71);
+    color: var(--g-colorGray300);
     align-items: center;
     line-height: 50px;
 
@@ -221,6 +222,9 @@ html {
         background-color: white;
         border-radius: 50%;
         border: 1px solid ghostwhite;
+        line-height: 63px;
+        font-size: 25px;
+        
     }
 
     &__question {
@@ -229,5 +233,59 @@ html {
         background-color: white;
         border-radius: 50%;
         border: 1px solid ghostwhite;
+        line-height: 63px;
+        font-size: 20px;
+        
+    }
+}
+    
+
+.user{
+    width: 100vw;
+    height: 80px;
+    border-bottom: 1px solid gray;
+    box-shadow: 2px 3px 10px -2px #8b8b8b;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: rgb(118, 118, 118);
+    font-size: 60px;
+   
+    &__left {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+
+         &__logo {
+            width: 90px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            // bottom: var(--space-0);
+            // left: var(--space-0);
+            // right: var(--space-0);
+            // top: var(--space-0);
+          
+            img {
+                width: 50%;
+                display: block;
+               margin: auto;
+            }
+
+            &:hover {
+                background-color: rgb(233, 233, 233);
+                cursor: pointer;
+            }
+                p{
+                    display: flex;
+                    flex-direction: row;
+                    font-size: 10px;
+                    margin: auto;
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                }
+            }
     }
 }
