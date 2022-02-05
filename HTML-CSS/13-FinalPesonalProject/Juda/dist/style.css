@@ -7,9 +7,12 @@ html {
   background-color: white;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .nav-top {
+  z-index: 1;
+  position: fixed;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -110,6 +113,8 @@ html {
 
 .page {
   padding-top: 20px;
+  position: relative;
+  top: 50px;
   margin: 0px;
   display: flex;
   justify-content: center;
@@ -133,6 +138,11 @@ html {
   margin: 15px 10px;
   border-radius: var(--card_border_radius);
   position: relative;
+}
+.page .card video {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
 }
 .page .card:hover {
   background-color: black;
