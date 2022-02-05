@@ -1,0 +1,31 @@
+html, body {
+  margin: 0px;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: auto;
+  height: 50vh;
+}
+
+.wrapper {
+  height: 100%;
+  max-width: 75ch;
+  margin: auto;
+}
+.wrapper .blog-page img {
+  width: 100%;
+  justify-items: center;
+}
+.wrapper .blog-page h1 {
+  font-size: 2rem;
+}
+.wrapper .blog-page h2 {
+  font-size: 1.5rem;
+  color: #353535;
+}
+.wrapper .blog-page p {
+  font-size: 1rem;
+  color: #5c5c5c;
+}

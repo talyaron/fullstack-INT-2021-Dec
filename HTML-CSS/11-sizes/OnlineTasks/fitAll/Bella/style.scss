@@ -7,6 +7,23 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        .top-nav-bar {
+            width: 100vw;
+            height: 5em;
+            background-color: rgba(0, 0, 0, 0.842);
+            z-index: 1;
+            color: whitesmoke;
+            position: fixed;
+            top: 0;
+            ul {
+                display: flex;
+                list-style-type: none;
+                align-items: center;
+                li {
+                    padding: 1em;
+                }
+            }
+        }
         .hero {
             display: flex;
             justify-content: center;
@@ -17,9 +34,9 @@ body {
             }
             h1 {
                 position: absolute;
-                top: 2.4em;
+                top: 3.2em;
                 color: white;
-                font-size: 4em;
+                font-size: 3.5em;
             }
         }
         .intro {
@@ -36,9 +53,11 @@ body {
         }
         main {
             display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
             justify-content: center;
             margin: auto;
-            width: 80vh;
+            width: 100vw;
             .card {
                 background-color: rgb(255, 255, 255);
                 width: 35ch;

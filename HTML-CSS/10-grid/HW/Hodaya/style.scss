@@ -9,28 +9,15 @@ h2{
     font-size: 15px;
 }
 .wrapper{
-    display:grid;
-    margin: auto;
-    width: 70%;
-    height: 50vh;
-    grid-template-columns: 2fr 1fr;
-    gap: 2px;
-    grid-template-rows: 50px 50px 50px 50px 100px ;
+    display: grid;
+        gap: 5px;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 2fr 2fr 2fr;
+        height: 400px;
     .story{
         background-color: hotpink;
     }
 
 
-}
-.story__big{
-    display: grid;
-    width: 70vh;
-    height: 40vh;
-    background-color: green;
-    img{
-        background-image: url(https://www.easygo.co.il/clients/easygo/gallery/Others/Sport/sport_756_500_11.jpg);
-        background-size: cover;
-      background-repeat: no-repeat;
-    }
 }
 
