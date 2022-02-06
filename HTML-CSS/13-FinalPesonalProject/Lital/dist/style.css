@@ -5,24 +5,19 @@ body {
   font-size: 20;
 }
 
-.wrapper {
-  background-color: gray;
-  width: 100vw;
-  height: 100vh;
-}
-.wrapper .menubar {
+.menubar {
   width: 100vw;
   height: 70px;
   background-color: white;
   position: fixed;
   top: 0;
 }
-.wrapper .menubar .menu_btns {
+.menubar .menu_btns {
   position: relative;
   display: flex;
   flex-direction: row;
 }
-.wrapper .menubar .menu_btns .Btn_Business {
+.menubar .menu_btns .Btn_Business {
   font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
   font-size: 1rem;
@@ -38,23 +33,23 @@ body {
   cursor: pointer;
   background-color: #fffefe;
 }
-.wrapper .menubar .menu_btns .Btn_Business:hover {
+.menubar .menu_btns .Btn_Business:hover {
   background-color: #4747472a;
   color: black;
   transition: 0.5s;
 }
-.wrapper .menubar .menu_btns .Btn_Business:active {
+.menubar .menu_btns .Btn_Business:active {
   background-color: black;
   color: white;
 }
-.wrapper .menubar .menu_btns .logo {
+.menubar .menu_btns .logo {
   width: 27px;
   height: 27px;
   position: absolute;
   left: 5px;
   top: 10px;
 }
-.wrapper .menubar .menu_btns .Btn_Create {
+.menubar .menu_btns .Btn_Create {
   font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
   font-size: 1rem;
@@ -70,16 +65,16 @@ body {
   cursor: pointer;
   background-color: #fffefe;
 }
-.wrapper .menubar .menu_btns .Btn_Create:hover {
+.menubar .menu_btns .Btn_Create:hover {
   background-color: #4747472a;
   color: black;
   transition: 0.5s;
 }
-.wrapper .menubar .menu_btns .Btn_Create:active {
+.menubar .menu_btns .Btn_Create:active {
   background-color: black;
   color: white;
 }
-.wrapper .menubar .menu_btns .Btn_Analytics {
+.menubar .menu_btns .Btn_Analytics {
   font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
   font-size: 1rem;
@@ -95,16 +90,16 @@ body {
   cursor: pointer;
   background-color: #fffefe;
 }
-.wrapper .menubar .menu_btns .Btn_Analytics:hover {
+.menubar .menu_btns .Btn_Analytics:hover {
   background-color: #4747472a;
   color: black;
   transition: 0.5s;
 }
-.wrapper .menubar .menu_btns .Btn_Analytics:active {
+.menubar .menu_btns .Btn_Analytics:active {
   background-color: black;
   color: white;
 }
-.wrapper .menubar .menu_btns .Btn_Ads {
+.menubar .menu_btns .Btn_Ads {
   font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
   font-size: 1rem;
@@ -120,16 +115,16 @@ body {
   cursor: pointer;
   background-color: #fffefe;
 }
-.wrapper .menubar .menu_btns .Btn_Ads:hover {
+.menubar .menu_btns .Btn_Ads:hover {
   background-color: #4747472a;
   color: black;
   transition: 0.5s;
 }
-.wrapper .menubar .menu_btns .Btn_Ads:active {
+.menubar .menu_btns .Btn_Ads:active {
   background-color: black;
   color: white;
 }
-.wrapper .menubar .menu_options {
+.menubar .menu_options {
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -138,12 +133,12 @@ body {
   right: 0;
   top: 10px;
 }
-.wrapper .menubar .menu_options i {
+.menubar .menu_options i {
   font-size: 1.3rem;
   color: gray;
   padding: 10px;
 }
-.wrapper .menubar .menu_options .btn__search {
+.menubar .menu_options .btn__search {
   font-size: 1rem;
   border-radius: 50%;
   padding: 8px 8px;
@@ -151,12 +146,12 @@ body {
   background-color: white;
   cursor: pointer;
 }
-.wrapper .menubar .menu_options .btn__search:hover {
+.menubar .menu_options .btn__search:hover {
   background-color: #4747472a;
   color: black;
   transition: 0.5s;
 }
-.wrapper .menubar .menu_options .btn__notif {
+.menubar .menu_options .btn__notif {
   font-size: 1rem;
   border-radius: 50%;
   padding: 8px 8px;
@@ -164,12 +159,12 @@ body {
   background-color: white;
   cursor: pointer;
 }
-.wrapper .menubar .menu_options .btn__notif:hover {
+.menubar .menu_options .btn__notif:hover {
   background-color: #4747472a;
   color: black;
   transition: 0.5s;
 }
-.wrapper .menubar .menu_options .btn__comment {
+.menubar .menu_options .btn__comment {
   font-size: 1rem;
   border-radius: 50%;
   padding: 8px 8px;
@@ -177,12 +172,12 @@ body {
   background-color: white;
   cursor: pointer;
 }
-.wrapper .menubar .menu_options .btn__comment:hover {
+.menubar .menu_options .btn__comment:hover {
   background-color: #4747472a;
   color: black;
   transition: 0.5s;
 }
-.wrapper .menubar .menu_options .btn__more {
+.menubar .menu_options .btn__more {
   font-size: 1rem;
   border-radius: 50%;
   padding: 8px 8px;
@@ -190,12 +185,18 @@ body {
   background-color: white;
   cursor: pointer;
 }
-.wrapper .menubar .menu_options .btn__more:hover {
+.menubar .menu_options .btn__more:hover {
   background-color: #4747472a;
   color: black;
   transition: 0.5s;
 }
-.wrapper .grid_container {
+
+.container {
+  background-color: #cc9797;
+  width: 100vw;
+  height: 100vh;
+}
+.container .grid_container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-template-rows: auto;
@@ -203,13 +204,13 @@ body {
   background-color: white;
   grid-gap: 10px;
 }
-.wrapper .grid_container .item {
+.container .grid_container .item {
   display: flex;
   flex-direction: column;
 }
-.wrapper .grid_container .item img {
+.container .grid_container .item img {
   border-radius: 10%;
 }
-.wrapper .grid_container .item1 {
+.container .grid_container .item1 {
   display: 0;
 }
