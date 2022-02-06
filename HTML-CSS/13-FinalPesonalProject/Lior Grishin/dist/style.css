@@ -164,6 +164,17 @@ body .showcase .showcase-grid .item .item-content svg:hover {
   }
   body .showcase .showcase-grid .item .item-content {
     font-size: 1.25rem;
+    padding: 0.25em;
+  }
+}
+@media (min-width: 1200px) {
+  body .split {
+    padding: 7em 10rem 2em;
+  }
+}
+@media (min-width: 1600px) {
+  body .split {
+    padding: 7em 30rem 2em;
   }
 }
 /********************
