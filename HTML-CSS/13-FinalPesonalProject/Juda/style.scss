@@ -147,12 +147,20 @@ html {
     --card_small: 26;
     --card_medium: 33;
     --card_large: 45;
+
+    @media only screen and (max-width: 768px) {
+        --card_width: 150px;
+        --card_small: 13;
+        --card_medium: 17;
+        --card_large: 22;
+    }
+
 }
 
 .page {
     padding-top: 20px;
-position: relative;
-top: 50px;
+    position: relative;
+    top: 50px;
     margin: 0px;
     display: flex;
     justify-content: center;
@@ -160,7 +168,7 @@ top: 50px;
     .pin_container {
         margin: 0;
         padding: 0;
-        width: 80vw;
+        width: 100vw;
         position: absolute;
 
 
@@ -170,10 +178,6 @@ top: 50px;
         justify-content: center;
 
         background-color: rgb(255, 255, 255);
-    }
-
-    .save_icon {
-        opacity: 0;
     }
 
 
@@ -214,6 +218,22 @@ top: 50px;
                 justify-content: center;
             }
         }
+
+        
+    .save_icon {
+        display: none;
+        background-color: black;
+      
+        &:hover{
+            display: flex;
+            background-color: black;
+            
+            cursor: pointer;
+
+
+        }
+
+    }
 
 
         img {
