@@ -110,6 +110,14 @@ html {
   --card_medium: 33;
   --card_large: 45;
 }
+@media only screen and (max-width: 768px) {
+  :root {
+    --card_width: 150px;
+    --card_small: 13;
+    --card_medium: 17;
+    --card_large: 22;
+  }
+}
 
 .page {
   padding-top: 20px;
@@ -122,16 +130,13 @@ html {
 .page .pin_container {
   margin: 0;
   padding: 0;
-  width: 80vw;
+  width: 100vw;
   position: absolute;
   display: grid;
   grid-template-columns: repeat(auto-fill, var(--card_width));
   grid-auto-rows: var(--row_increment);
   justify-content: center;
   background-color: white;
-}
-.page .save_icon {
-  opacity: 0;
 }
 .page .card {
   padding: 0;
@@ -163,6 +168,15 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.page .card .save_icon {
+  display: none;
+  background-color: black;
+}
+.page .card .save_icon:hover {
+  display: flex;
+  background-color: black;
+  cursor: pointer;
 }
 .page .card img {
   width: 100%;
