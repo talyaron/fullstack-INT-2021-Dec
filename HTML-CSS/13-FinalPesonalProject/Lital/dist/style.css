@@ -200,9 +200,16 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-template-rows: auto;
   grid-auto-flow: dense;
-  background-color: greenyellow;
+  background-color: white;
+  grid-gap: 10px;
 }
 .wrapper .grid_container .item {
   display: flex;
   flex-direction: column;
+}
+.wrapper .grid_container .item img {
+  border-radius: 10%;
+}
+.wrapper .grid_container .item1 {
+  display: 0;
 }
