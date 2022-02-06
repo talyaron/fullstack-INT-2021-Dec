@@ -69,7 +69,16 @@ html {
 .menu__search {
   width: 95%;
 }
-.menu__search input[type=text] {
+.menu__search .search_feild {
+  position: relative;
+}
+.menu__search .search_feild .fa-search {
+  position: absolute;
+  font-size: 15px;
+  top: 16px;
+  left: 8px;
+}
+.menu__search .search_feild input[type=text] {
   width: 95%;
   padding: 6px;
   border: none;
@@ -79,14 +88,7 @@ html {
   background-color: #efefef;
   border-radius: 20px;
 }
-.menu__search input[type=text] #input_img {
-  position: absolute;
-  bottom: 12px;
-  left: 180px;
-  width: 10px;
-  height: 10px;
-}
-.menu__search input[type=text]:hover {
+.menu__search .search_feild input[type=text]:hover {
   background-color: #dfdfdf;
 }
 .menu__icons {

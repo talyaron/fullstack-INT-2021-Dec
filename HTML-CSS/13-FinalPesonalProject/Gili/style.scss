@@ -78,28 +78,31 @@ html {
     &__search {
         width: 95%;
 
-        input[type=text] {
-            width: 95%;
-            padding: 6px;
-            border: none;
-            margin-top: 8px;
-            margin-right: 16px;
-            font-size: 17px;
-            background-color: rgb(239, 239, 239);
-            border-radius: 20px;
 
-            #input_img {
+        .search_feild {
+            position: relative;
+
+            .fa-search {
                 position: absolute;
-                bottom: 12px;
-                left: 180px;
-                width: 10px;
-                height: 10px;
+                font-size: 15px;
+                top: 16px;
+                left: 8px;
             }
 
-            &:hover {
-                background-color: rgb(223, 223, 223);
-            }
+            input[type=text] {
+                width: 95%;
+                padding: 6px;
+                border: none;
+                margin-top: 8px;
+                margin-right: 16px;
+                font-size: 17px;
+                background-color: rgb(239, 239, 239);
+                border-radius: 20px;
 
+                &:hover {
+                    background-color: rgb(223, 223, 223);
+                }
+            }
         }
     }
 
