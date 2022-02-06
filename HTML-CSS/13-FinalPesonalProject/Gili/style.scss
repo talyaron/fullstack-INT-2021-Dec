@@ -207,6 +207,7 @@ html {
     margin: auto;
     column-width: 250px;
     -webkit-column-break-inside: avoid;
+
 }
 
 .img_container {
@@ -454,4 +455,57 @@ html {
     padding-top: 40px;
     margin: auto;
 
+}
+
+.mobile_menu {
+    margin: auto;
+    width: 100%;
+    height: 50px;
+    display: none;
+
+    &__container {
+        width: 300px;
+        height: 50px;
+        background-color: white;
+        border: 1px solid grey;
+        border-radius: 40px;
+        position: fixed;
+        bottom: 30px;
+        z-index: +1;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .menu,
+    .filler {
+        display: none;
+    }
+
+    .content {
+        width: 99vw;
+        margin: auto;
+        column-width: 170px;
+        -webkit-column-break-inside: avoid;
+
+    }
+
+    .img_container {
+        width: 170px;
+        -webkit-column-break-inside: avoid;
+        position: relative;
+        transition: .5s ease;
+        backface-visibility: hidden;
+
+    }
+
+    .menu_buttons {
+        display: none;
+    }
+
+    .mobile_menu {
+        display: contents;
+    }
 }
