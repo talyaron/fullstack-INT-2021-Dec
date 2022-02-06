@@ -20,4 +20,14 @@ var x = x/a/b;
 console.log(x)
 
 
+var w;
+console.log(w)
 
+var w = w++;
+console.log(w)
+
+var t=null;
+console.log(t)
+
+var t = t*5;
+console.log(t)
