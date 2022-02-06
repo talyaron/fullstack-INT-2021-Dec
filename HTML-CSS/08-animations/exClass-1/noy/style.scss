@@ -1,0 +1,87 @@
+body{
+    margin: 0px;
+}
+
+.box{
+   
+    background-color: rgb(216, 117, 133);
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+    position: relative;
+    top: 300px;
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    position: relative;
+    top:50vh;
+    left:50vw;
+    transform: translate(-50%, 50%);
+
+
+}
+
+@keyframes bounce {
+    0%{
+            top: 300px;
+            width: 157px;
+            height: 140px;
+        }
+    // 0%{
+    //     top: 300px;
+    //     width: 157px;
+    //     height: 140px;
+    // }
+    // 10%{
+    //     top: 280px;
+    //     width: 151px;
+    //     height: 149px;
+    // }
+    // 20%{
+    //     top: 250px;
+    //     width: 151px;
+    //     height: 149px;
+    // }
+    // 30%{
+    //     top: 220px;
+    //     width: 151px;
+    //     height: 149px;
+    // }
+    // 40%{
+    //     top: 180px;
+    //     width: 151px;
+    //     height: 149px;
+    // }
+    // 50%{
+    //     top: 130px;
+    //     width: 151px;
+    //     height: 149px;
+    // }
+    // 60%{
+    //     top: 100px;
+    //     width: 150px;
+    //     height: 150px;
+    // }
+    // 70%{
+    //     top: 90px;
+    //     width: 150px;
+    //     height: 150px;
+    // }
+    // 80%{
+    //     top: 70px;
+    //     width: 150px;
+    //     height: 150px;
+    // }
+    // 90%{
+    //     top: 50px;
+    //     width: 150px;
+    //     height: 150px;
+    // }
+    100%{
+        top: 30px;
+        width: 150px;
+        height: 150px;
+    }
+}

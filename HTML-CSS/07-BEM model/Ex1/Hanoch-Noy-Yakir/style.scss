@@ -1,0 +1,341 @@
+body {
+    width: 400px;
+    margin: auto;
+    font-family: 'roboto', Tahoma, Verdana, sans-serif;
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: #5fb2b6;
+}
+
+// user profile 
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &_left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &_right {
+        display: flex;
+        align-items: center;
+    }
+
+    &_avatar {
+        color: #ffffff;
+        font-weight: 700;
+        background-color: #B4B4B4;
+        border-radius: 50%;
+        text-align: center;
+
+        h3 {
+            margin: 0;
+        }
+
+        img {
+            border-radius: 50%;
+        }
+
+        &__quiz {
+            animation-name: avatarAnimation1;
+            animation-duration: 2s;
+            position: relative;
+        }
+    }
+
+    &_pen {
+        color: #5fb2b6;
+    }
+}
+
+.button {
+    width: 111px;
+    height: 74px;
+    background-color: rgba(180, 180, 180, 0.37);
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    margin: 5px 4px;
+    border-radius: 12px;
+
+    &:hover {
+        background: #5FB2B8;
+    }
+
+    &__more {
+        width: 300px;
+        height: 30px;
+        padding: 7px;
+        border-radius: 20px;
+        margin-bottom: 8px;
+    }
+
+    &__next {
+        background-color: #126f75;
+        width: 77px;
+        height: 7px;
+        border-radius: 35px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+
+        span {
+            position: relative;
+            top: -5px;
+        }
+
+    }
+
+    &__hanoch:hover {
+        animation-name: box;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+}
+
+// top navigation bar 
+.nav_top {
+    background-color: #46474b;
+    padding: 0px 20px;
+
+    &__quiz {
+        background-color: white;
+    }
+
+    span {
+        font-size: 14px;
+    }
+
+    .user {
+
+        &_left {
+            margin: 5px;
+        }
+
+        &_right {
+            margin: 20px 10px;
+        }
+
+        &_avatar {
+            width: 50px;
+            height: 50px;
+            font-size: 28px;
+
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        &_name {
+            color: #ffffff;
+            font-size: 12px;
+            background-color: #46474b;
+            position: relative;
+            top: -7px;
+
+            &__quiz {
+                color: #2C4699;
+                background-color: transparent;
+                font-weight: 600;
+                font-size: 16px;
+                top: 0px;
+                margin-left: 5px;
+            }
+        }
+
+        &_location {
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 15px;
+        }
+
+        &_instruments {
+            font-size: 18px;
+            color: #B4B4B4;
+            margin: 15px;
+        }
+
+        .instrument_icon {
+            color: #ffffff;
+            font-size: 30px;
+            margin: 5px;
+        }
+    }
+}
+
+.content {
+    color: #ffffff;
+    background-color: #2e2f33;
+    font-size: 15px;
+    font-weight: 500;
+
+    .user {
+        &:nth-child(even) {
+            background-color: #6a6b6d;
+        }
+
+        div {
+            margin: 5px;
+        }
+        .instrument_icon:hover , path:hover{
+            animation-name: changeColor;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+
+        &_left {
+            justify-content: space-around;
+        }
+
+        &_right {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        &_avatar {
+            font-size: 22px;
+            width: 33px;
+            height: 33px;
+
+            img {
+                width: 33px;
+                height: 33px;
+            }
+        }
+    }
+
+    &_map {
+        img {
+            width: 100%;
+            height: 300px;
+        }
+    }
+}
+
+.quiz {
+    position: relative;
+    background-color: #2e2f33;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    .title {
+        text-align: center;
+        margin: auto;
+
+        h1 {
+            color: #5FB2B8;
+            font-size: 29px;
+        }
+
+        p {
+            color: white;
+            font-size: 21px;
+
+            #liketo {
+                color: rgb(160, 160, 224);
+            }
+
+            #alongside {
+                color: #5FB2B8;
+            }
+        }
+    }
+
+    &__options {
+        width: 260px;
+        margin: auto;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+
+.nav_bottom {
+    background-color: #2e2f33;
+    color: #5fb2b6;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    align-items: center;
+    height: 4rem;
+    .btn:hover {
+        animation-name: icons;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    &__quiz {
+        justify-content: space-between;
+        background-color: white;
+        color: #5fb2b6;
+    }
+
+}
+
+@keyframes box {
+    0% {
+        background-color: red;
+    }
+
+    25% {
+        background-color: yellow;
+    }
+
+    50% {
+        background-color: blue;
+    }
+
+    100% {
+        background-color: green;
+    }
+}
+
+@keyframes avatarAnimation1 {
+    from {
+        left: 400px;
+    }
+
+    to {
+        left: 0px;
+    }
+}
+
+@keyframes icons {
+    from {
+        font-size: 2rem;
+    }
+
+    to {
+        font-size: 2.5rem;
+    }
+}
+@keyframes changeColor{
+    from {
+        fill: #ffffff;
+        color: #ffffff;
+    }
+    to {
+        fill: #5FB2B8;
+        color: #5FB2B8;
+    }
+}

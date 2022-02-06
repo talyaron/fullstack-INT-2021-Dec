@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    .grid {
+        --gap: 16px;
+        --num-cols: 4;
+        --row-height: 200px;
+        box-sizing: border-box;
+        padding: var(--gap);
+        display: grid;
+        grid-template-columns: repeat(var(--num-cols), 1fr);
+        grid-auto-rows: var(--row-height);
+        gap: var(--gap);
+        max-width: 1250px;
+        margin: auto;
+        margin-top: 4em;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .grid-col-2 {
+            grid-column: span 2;
+        }
+        .grid-row-2 {
+            grid-row: span 2;
+            .article-text-xl {
+                position: absolute;
+                top: 11.4em;
+                color: white;
+                z-index: 1;
+                padding: 20px;
+                .article-heading {
+                    font-size: 32px;
+                    font-weight: 300;
+                }
+                .article-expo {
+                    font-size: 17px;
+                    font-weight: 400;
+                }
+                .article-caption {
+                    font-size: 17px;
+                    font-weight: lighter;
+                    text-transform: uppercase;
+                    border-left: 2px solid red;
+                    padding-left: 0.8rem;
+                }
+            }
+        }
+        .img-gradient {
+            position: relative;
+        }
+        .img-gradient::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgb(0, 0, 0);
+            background: linear-gradient(360deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+        }
+        .content {
+            .article-text-s-bottom {
+                position: absolute;
+                top: 17em;
+                color: white;
+                z-index: 1;
+                padding: 16px;
+                .article-heading {
+                    font-size: 24px;
+                    font-weight: 300;
+                }
+                .article-caption {
+                    font-size: 17px;
+                    font-weight: lighter;
+                    text-transform: uppercase;
+                    border-left: 2px solid red;
+                    padding-left: 0.8rem;
+                }
+            }
+            .article-text-s-top {
+                position: absolute;
+                bottom: 13em;
+                color: white;
+                z-index: 1;
+                padding: 16px;
+                .article-heading {
+                    font-size: 24px;
+                    font-weight: 300;
+                }
+                .article-caption {
+                    font-size: 17px;
+                    font-weight: lighter;
+                    text-transform: uppercase;
+                    border-left: 2px solid red;
+                    padding-left: 0.8rem;
+                }
+            }
+        }
+    }
+    /*anything under 1024px*/
+    @media screen and (max-width: 1024px) {
+        .grid {
+            --num-cols: 2;
+            --row-height: 150px;
+        }
+    }
+}

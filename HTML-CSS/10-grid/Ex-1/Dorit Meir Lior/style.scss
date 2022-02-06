@@ -1,0 +1,50 @@
+body{
+
+    .container{
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 5px;
+        .item{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 25px;
+            background-color: blue;
+            h1{
+                color: white;
+            }
+            p{
+                color:white;
+            }
+        }
+        .img-1{
+            background-image: url(https://ynet-images1.yit.co.il/picserver5/crop_images/2022/01/30/SyWsUmNCY/SyWsUmNCY_0_0_850_479_0_medium.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .img-2{
+            background-image: url(https://ynet-images1.yit.co.il/picserver5/crop_images/2022/01/29/HJZCDdVX0F/HJZCDdVX0F_0_391_2000_1126_0_medium.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .img-3{
+            background-image: url(https://ynet-images1.yit.co.il/picserver5/crop_images/2022/01/30/H1h411NE0F/H1h411NE0F_0_7_1024_577_0_medium.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }   
+        .img-4{
+            background-image: url(https://ynet-images1.yit.co.il/picserver5/crop_images/2018/04/23/8485873/8485873_0_169_1619_912_0_medium.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .red{
+            background-color: red;
+        }
+        .dark-blue
+        {
+            background-color: rgb(12,28,58);
+        }
+    }
+}

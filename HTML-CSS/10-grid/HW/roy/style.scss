@@ -1,0 +1,477 @@
+body{
+    user-select: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#navbar{
+width: 100%;
+height: 20px;
+position: relative;
+display: grid;
+grid-template-columns: 3fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr 3fr;
+grid-template-rows: 40px;
+color: white;
+text-align: center;
+align-items: stretch;
+justify-content: center;
+align-content: center;
+font-size: 15px;
+gap: 1px;
+font-weight: bold;
+font-family: Arial, Helvetica, sans-serif;
+user-select: all ;
+
+    
+
+.bar1{
+    
+
+    img{
+       
+        width: 30%;
+        margin-right: -145px;
+        margin-top: -2px;
+        cursor: pointer;
+    }
+    background-color: black;
+    
+   
+    
+   
+}
+.bar2{
+    height: 100%;
+    width: 100%;
+  background-color: black;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  &:hover {
+    border-bottom: red solid 2px;
+}
+  img{
+      background-color: white;
+      height: 20px;
+      border-radius: 15px;
+      justify-content: flex-start;
+      margin-left: 8px;
+      cursor: pointer;
+  }
+    
+    
+}
+.bar{
+    &:hover {
+        border-bottom: red solid 2px;
+    }
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    display: flex; 
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.bar3{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    display: flex; 
+    align-items: center;
+    justify-content: space-around;
+    &:hover {
+        border-bottom: red solid 2px;
+    }
+   
+    span{
+        height: 15px;
+    }
+    cursor: pointer;
+}
+.bar4 {
+   
+    align-items: center;
+    background-color: rgb(10, 10, 10);
+    
+    height: 100%;
+    input {
+        border: none;
+        margin-top: 10px;
+        &::placeholder {
+            margin-top: 10px;
+        }
+    }
+    .fa-search {
+        display: flex;
+        width: 1.5rem;
+        margin-top: -15px;
+       margin-left: 190px;
+        color: black;
+    }
+}
+
+}
+.commercial{
+    width: 100%;
+    height: 300px;
+    background-color: lightgrey;
+}
+.main{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+width: 100%;
+.header{
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    width: 100%;
+    margin-left: 160px;
+    
+    font-weight: bold;
+    .r{
+        margin-right: 270px;
+        color: grey;
+    }
+}
+
+.articles{
+    margin-left: 160px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 105%;
+   height: 650px;
+    display: grid;
+    grid-row: 2;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns:   2fr 1fr 1fr 1fr;
+    gap: 10px;
+    .bigpic{
+     background-image: url(https://bostonglobe-prod.cdn.arcpublishing.com/resizer/wQLkZhRc_VU3OIUrwtqAfiW1cHc=/960x0/cloudfront-us-east-1.images.arcpublishing.com/bostonglobe/FVJQFWIR53VPLR3X3TCQYCNW4E.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    color: white;
+   
+    cursor: pointer;
+   
+    &:hover {
+        opacity: 0.7;
+    }
+    h1{
+        font-size: 35px;
+        margin-top: 230px;
+        display: flex;
+        bottom: 0px;
+        
+        padding: 15px;
+       ;
+    }
+    h2{
+        font-size: 18px;
+        font-weight: normal;
+        padding: 15px;
+        margin-top: -50px;
+    }
+    h3{
+        padding: 15px;
+        margin-top: -30px;
+        display: flex;
+        font-weight: normal;
+        font-size: 13px;
+
+    }
+    .box1{
+    width: 5px;
+    height: 15px;
+    background-color: red;
+    display: flex;
+    margin-top: -10px;
+    margin-left: 10px;
+    }
+    
+    }
+    .litpic1{
+    background-image: url(https://www.aljazeera.com/wp-content/uploads/2022/01/AP22031564536756.jpg?resize=770%2C513);
+    background-size: cover;
+    color: white;
+    padding: 0px;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.7;
+    }
+    .lithead{
+        margin-top: 110px;
+        color: rgb(255, 255, 255);
+        
+    }
+    .box1{
+        width: 5px;
+        height: 15px;
+        background-color: red;
+        display: flex;
+        margin-top: -10px;
+        margin-left: 10px;
+        }
+        h3{
+            padding: 15px;
+            margin-top: -30px;
+            display: flex;
+            font-weight: normal;
+            font-size: 13px;
+           
+            
+        }
+    }
+    .litpic2{
+    background-image: url(https://webapi.project-syndicate.org/library/4abd0a4ed564c0661ce9244361a2dd40.2-1-large.1.jpg);
+    background-size: cover;
+    &:hover {
+        opacity: 0.7;
+    }
+    cursor: pointer;
+    .lithead{
+        margin-top: 110px;
+        color: rgb(255, 255, 255);
+        
+      
+    }
+    .box1{
+        width: 5px;
+        height: 15px;
+        background-color: red;
+        display: flex;
+        margin-top: -10px;
+        margin-left: 10px;
+        }
+        h3{
+            padding: 15px;
+            margin-top: -30px;
+            display: flex;
+            font-weight: normal;
+            font-size: 13px;
+            color: white;
+        }
+    }
+    .litpic3{
+        background-image: url(https://images.cafonline.com/image/private/t_landscape_tablet/f_auto/caf-prd/e8emtmqtnbtbvyzqf7ht.jpg);
+        background-size: cover; 
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.7;
+        }
+        .lithead{
+            margin-top: 110px;
+            color: rgb(255, 255, 255);
+            
+        }
+        .box1{
+            width: 5px;
+            height: 15px;
+            background-color: rgb(243, 240, 34);
+            display: flex;
+            margin-top: -10px;
+            margin-left: 10px;
+            }
+            h3{
+                padding: 15px;
+                margin-top: -30px;
+                display: flex;
+                font-weight: normal;
+                font-size: 13px;
+                color: white;
+            }
+    }
+    .litpic4{
+        background-image: url(https://static.dw.com/image/59333259_401.jpg);
+        background-size: cover;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.7;
+        }
+        .lithead{
+            margin-top: 110px;
+            color: rgb(255, 255, 255);
+            
+        }
+        .box1{
+            width: 5px;
+            height: 15px;
+            background-color: red;
+            display: flex;
+            margin-top: -10px;
+            margin-left: 10px;
+            }
+            h3{
+                padding: 15px;
+                margin-top: -30px;
+                display: flex;
+                font-weight: normal;
+                font-size: 13px;
+                color: white;
+            }
+    }
+}
+
+    
+        .sechead{
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            margin-top: -180px;
+            font-size: 20px;
+            width: 100%;
+            margin-left: 150px;
+            font-weight: bold;
+            .box1{
+                width: 5px;
+                height: 20px;
+                background-color: red;
+                display: flex;
+                margin-top: -5px;
+                margin-left: 10px;
+                }
+           h1{
+               color: grey;
+               margin-left: 7px;
+               font-size: 20px;
+               cursor: pointer;
+           }
+        }
+        .news{
+         width: 700px;
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+         gap: 30px;
+        margin-left: 160px;
+
+         .box2{
+            cursor: pointer;
+             width: 400px;
+             &:hover {
+                opacity: 0.7;
+            }
+             img{
+             width: 400px;
+             }
+         }
+         p{
+             font-size: 20px;
+             margin-top: -5px;
+             font-weight: bold;
+         }
+         h4{
+             font-size: 15px;
+             margin-top: -10px;
+             font-weight: normal;
+             
+         }
+         .box1{
+            width: 3px;
+            height: 13px;
+            background-color: red;
+            display: flex;
+            margin-top: -10px;
+            margin-left: 0px;
+            }
+            h3{
+
+                margin-top: -12px;
+                display: flex;
+                font-weight: normal;
+                font-size: 10px;
+                color: rgb(8, 8, 8);
+            }
+           
+
+
+        }
+        .sechead1{
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            margin-top: 0px;
+            font-size: 20px;
+            width: 100%;
+            margin-left: 150px;
+            font-weight: bold;
+            cursor: pointer;
+            .box1{
+                width: 5px;
+                height: 20px;
+                background-color: rgb(243, 240, 34);
+                display: flex;
+                margin-top: -5px;
+                margin-left: 10px;
+                }
+           h1{
+               color: grey;
+               margin-left: 7px;
+               font-size: 20px;
+           
+           }
+        }
+        .SPORT{
+            width: 700px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+           margin-left: 160px;
+   
+            .box2{
+                &:hover {
+                    opacity: 0.7;
+                }
+                cursor: pointer;
+                width: 400px;
+                img{
+                width: 400px;
+                }
+            }
+            p{
+                font-size: 20px;
+                margin-top: -5px;
+                font-weight: bold;
+            }
+            h4{
+                font-size: 15px;
+                margin-top: -10px;
+                font-weight: normal;
+                
+            }
+            .box1{
+               width: 3px;
+               height: 13px;
+               background-color: rgb(243, 240, 34);
+               display: flex;
+               margin-top: -10px;
+               margin-left: 0px;
+               }
+               h3{
+   
+                   margin-top: -12px;
+                   display: flex;
+                   font-weight: normal;
+                   font-size: 10px;
+                   color: rgb(8, 8, 8);
+               }
+              
+   
+   
+           }
+
+}

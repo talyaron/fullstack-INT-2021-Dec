@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* GRID */
+}
+html nav,
+body nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80px;
+  width: 100vw;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  z-index: 1;
+  padding: 0 2em;
+  position: fixed;
+}
+html nav .left-nav .logo,
+body nav .left-nav .logo {
+  background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/logo.png");
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50 html nav .left-nav .logo, body nav .left-nav .logo;
+}
+html nav .left-nav .home-btn,
+body nav .left-nav .home-btn {
+  width: 4.8em;
+  height: 3em;
+  padding: 1em;
+  line-height: 1;
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+}
+html nav .left-nav .search,
+body nav .left-nav .search {
+  padding: 0.5em;
+  height: 48px;
+  background-color: #e9e9e9;
+  border-radius: 50px 0 0 50px;
+}
+html nav .left-nav #site-search,
+body nav .left-nav #site-search {
+  width: 1322px;
+  height: 48px;
+  background-color: #e9e9e9;
+  border: none;
+  border-radius: 0 50px 50px 0;
+}
+html .inline,
+body .inline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5em 0 0 0.5em;
+}
+html .grid-wrapper,
+body .grid-wrapper {
+  padding: 2em 8em;
+  display: grid;
+  grid-gap: 20px;
+  row-gap: 2.8em;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-rows: auto;
+  grid-auto-flow: dense;
+  padding-top: 6em;
+  /* ITEM STYLE */
+  /* ITEM TYPES */
+}
+html .grid-wrapper .item,
+body .grid-wrapper .item {
+  display: flex;
+  flex-direction: column;
+  /* GIF'S */
+  /* FROFILE CAPTION (UNDER IMAGE) */
+}
+html .grid-wrapper .item img,
+body .grid-wrapper .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+html .grid-wrapper .item .gif,
+body .grid-wrapper .item .gif {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  min-height: 14em;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+html .grid-wrapper .item .first,
+body .grid-wrapper .item .first {
+  background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/giphy.gif");
+}
+html .grid-wrapper .item .second,
+body .grid-wrapper .item .second {
+  background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/giphy 2.gif");
+}
+html .grid-wrapper .item .third,
+body .grid-wrapper .item .third {
+  background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/giphy 3.gif");
+}
+html .grid-wrapper .item .avatar,
+body .grid-wrapper .item .avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50px;
+  background-color: #ececec;
+  border: 1px solid #ebebeb;
+  margin-right: 0.3em;
+}
+html .grid-wrapper .item h4,
+body .grid-wrapper .item h4 {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0 0.3em 0 0.3em;
+}
+html .grid-wrapper .reaction-icons img,
+body .grid-wrapper .reaction-icons img {
+  width: 17px;
+  height: 17px;
+  margin-right: 0.2em;
+}
+html .grid-wrapper .tall,
+body .grid-wrapper .tall {
+  grid-row: span 2;
+}
+html .grid-wrapper .big,
+body .grid-wrapper .big {
+  grid-column: span 1;
+}
+html .grid-wrapper .wide,
+body .grid-wrapper .wide {
+  grid-row: span 2;
+}

@@ -1,0 +1,17 @@
+.box {
+  height: 300px;
+  width: 150px;
+  border: 4px solid #30129b;
+  background-color: chartreuse;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transition: all 1000ms;
+}
+.box:hover {
+  transform: rotate(180deg) scale(1.5);
+}
+.box:active {
+  background-color: #ad1111;
+  cursor: grab;
+}

@@ -1,0 +1,38 @@
+html, body{
+    margin:0px;
+    font-size: 20px;
+}
+body{
+    height: 50vh;
+}
+
+.wrapper{
+    background-color: wheat;
+    // height: 743px;
+    // width:1594px;
+    // height: 100vh;
+    // width:100vw;
+    // height: 100%;
+    // width:100%;
+    height: 100%;
+    width:75ch;
+
+
+    .box{
+        background-color: purple;
+        height: 80%; // Present  of the parent component
+        width: 80%;
+
+        
+        color: white;
+
+        h2{
+            font-size: 2rem; //prortiona to the html font-size.
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+        }
+        p{
+            font-size: 1.2rem;
+        }
+    }
+}

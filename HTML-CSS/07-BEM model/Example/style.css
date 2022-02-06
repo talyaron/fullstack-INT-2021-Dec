@@ -1,0 +1,56 @@
+.wrapper {
+  margin: auto;
+  max-width: 75ch;
+}
+
+.card {
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.219);
+          box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.219);
+  padding: 20px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h3 {
+  font-size: larger;
+  color: rgba(0, 0, 0, 0.781);
+}
+
+.card__menu {
+  border-top: 1px solid gray;
+  color: orange;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btn {
+  border-radius: 100px;
+  padding: 10px 30px;
+  border: 1px solid gray;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.btn:hover {
+  background-color: rgba(128, 128, 128, 0.24);
+}
+
+.btn--cancel {
+  background-color: orange;
+  color: black;
+}
+
+.btn--cancel:hover {
+  background-color: #c88303;
+}
+/*# sourceMappingURL=style.css.map */

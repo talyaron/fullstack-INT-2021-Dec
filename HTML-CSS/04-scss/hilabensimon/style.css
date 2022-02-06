@@ -1,0 +1,35 @@
+body {
+  background-color: rgba(216, 112, 147, 0.685);
+}
+
+.card {
+  border-radius: 10px;
+  background-color: white;
+  margin: auto;
+  height: 500px;
+  width: 300px;
+  border: 1px solid white;
+}
+
+.card img {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+}
+
+.card .text {
+  padding: 20px;
+}
+
+.card .text h3 {
+  font-style: italic;
+}
+
+.card .text p {
+  color: black;
+  font-size: small;
+}
+
+.card .text p span {
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,161 @@
+@charset "UTF-8";
+.main {
+  max-width: 1200px;
+  height: 400px;
+  direction: ltr;
+  margin: 200px auto;
+  background-color: royalblue;
+  font-family: sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*  הפלקס לאמצע הפעם מיישר לאמצע וגם שומר על הגבולות בין המין דיו לבין הבנים שלו*/
+  position: relative;
+}
+
+.main .header {
+  width: 100%;
+  height: 30px;
+  background-color: #DE1A1A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding: 0px 10px;
+}
+
+.main .header a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.main .header a .head20 {
+  font-size: 18px;
+}
+
+.main .header a .head20 span {
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.main .header a .head10 {
+  font-size: 15px;
+}
+
+.main .header a .head10 span {
+  position: relative;
+  top: 1px;
+}
+
+.main .mainpicp {
+  width: 100%;
+  height: 250px;
+  background-color: #dada5d;
+  position: absolute;
+  top: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .mainpicp .box-1 {
+  width: 25%;
+  height: 230px;
+  background-color: gray;
+  direction: rtl;
+  padding: 0px 5px;
+  position: relative;
+}
+
+.main .mainpicp .box-1 .button {
+  width: 50px;
+  height: 18px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background-color: #DE1A1A;
+  border-top-right-radius: 20px;
+  border-end-end-radius: 20px;
+  /*  שיטה לרדיוס קצה עגול כפתור*/
+  border-end-start-radius: 20px;
+  border-top-left-radius: 20px;
+  position: absolute;
+  top: 130px;
+  right: 10px;
+}
+
+.main .mainpicp .box-1 .button .p100 {
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  margin-right: 17px;
+  position: relative;
+  top: -13px;
+  right: 0px;
+}
+
+.main .mainpicp .box-1 .button .bflex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+}
+
+.main .mainpicp .box-1 .button .bflex .pluse {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.main .mainpicp .box-1 .picdiv {
+  width: 100%;
+  height: 160px;
+  background-color: #914040;
+  overflow: hidden;
+  position: relative;
+}
+
+.main .mainpicp .box-1 .picdiv .img {
+  width: 100%;
+  margin-top: -110px;
+}
+
+.main .mainpicp .box-1 p {
+  color: black;
+  font-size: 16px;
+  letter-spacing: 0.09px;
+  font-weight: bold;
+  line-height: 20px;
+  position: absolute;
+  top: 160px;
+  right: 7px;
+  direction: rtl;
+  inline-size: 270px;
+  /*שובר טקטס*/
+  /* overflow-wrap: break-word;*/
+  /*hyphens: manual;*/
+}
+/*# sourceMappingURL=style.css.map */

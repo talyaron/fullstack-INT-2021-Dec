@@ -1,0 +1,164 @@
+body {
+  margin: 0%;
+}
+
+.start {
+  width: 50px;
+  height: 50px;
+  background-color: cadetblue;
+}
+
+.box {
+  width: 70px;
+  height: 70px;
+  background-color: black;
+  position: absolute;
+  top: 50vh;
+  left: 50vh;
+  -webkit-transition: all 1300ms;
+  transition: all 1300ms;
+}
+
+.box:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.box:active {
+  background-color: #9393c0;
+}
+
+.box--red {
+  background-color: brown;
+  position: absolute;
+  top: 70px;
+  left: 200px;
+  -webkit-animation-name: movingupdown;
+          animation-name: movingupdown;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.box--red:hover {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.box--red:active {
+  background-color: #d327ca;
+}
+
+.box--lightblue {
+  background-color: #52f6f6;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  -webkit-animation-name: movingdownup;
+          animation-name: movingdownup;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.box--lightblue:hover {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.box--lightblue:active {
+  background-color: #9e9e9e;
+}
+
+.box--green {
+  background-color: #57f652;
+  position: absolute;
+  top: 250px;
+  left: 80px;
+  -webkit-animation-name: movingupdown;
+          animation-name: movingupdown;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.box--green:hover {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.box--green:active {
+  background-color: #0a500d;
+}
+
+.box--purple {
+  background-color: #9952f6;
+  position: absolute;
+  top: 70px;
+  left: 400px;
+  -webkit-animation-name: movingdownup;
+          animation-name: movingdownup;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.box--purple:hover {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.box--purple:active {
+  background-color: #47106b;
+}
+
+@-webkit-keyframes movingupdown {
+  50% {
+    position: absolute;
+    top: 400px;
+  }
+  100% {
+    position: absolute;
+  }
+}
+
+@keyframes movingupdown {
+  50% {
+    position: absolute;
+    top: 400px;
+  }
+  100% {
+    position: absolute;
+  }
+}
+
+@-webkit-keyframes movingdownup {
+  50% {
+    position: absolute;
+    left: 200px;
+  }
+  100% {
+    position: absolute;
+  }
+}
+
+@keyframes movingdownup {
+  50% {
+    position: absolute;
+    left: 200px;
+  }
+  100% {
+    position: absolute;
+  }
+}
+
+.wrapper {
+  width: 700px;
+  height: 500px;
+  border: 2px solid black;
+}
+/*# sourceMappingURL=style.css.map */

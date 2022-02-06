@@ -1,18 +1,27 @@
-h1{
-    color: burlywood;
+.wrapper {
+  background-color: black;
+  width: 100vw;
 }
- h2{
-     color: red;
-     font-size: 50px;
- 
- }
- body{
-     background-color: black;
- }
- img{
-     width: 300px;
- }
- p{
-     color: red;
-     font-size: 30px;
- }
+
+.header {
+  color: burlywood;
+  font-size: 30px;
+  font-family: cambria;
+  font-weight: bold;
+}
+
+.about {
+  padding: 10px;
+  color: red;
+}
+
+.about img {
+  width: 200px;
+  height: 300px;
+}
+
+.about p {
+  color: #e6cb36;
+  font-size: 20px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,37 @@
+html, body{
+    margin: 0px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    margin: auto;
+    height: 50vh;
+}
+
+.wrapper{
+    height: 100%;
+    max-width: 75ch;
+    margin: auto;
+
+    .blog-page{
+        img{
+            width: 100%;
+            justify-items: center;
+        }
+        h1 {
+        font-size: 2rem;    
+        }
+    
+        h2 {
+        font-size: 1.5rem;
+        color: rgb(53, 53, 53);
+        }
+
+        p {
+        font-size: 1rem;
+        color: rgb(92, 92, 92);
+       }
+    }
+
+}

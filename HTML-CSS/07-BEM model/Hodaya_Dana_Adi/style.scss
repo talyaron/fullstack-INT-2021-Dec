@@ -1,0 +1,778 @@
+.links {
+    color: black;
+
+    a:hover {
+        color: blue;
+    }
+}
+
+h3 {
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.card {
+    width: 300px;
+    height: 600px;
+    background-color: rgb(53, 51, 51);
+    border-radius: 20px;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+.top_menu {
+    width: 300px;
+    height: 80px;
+    background-color: rgb(70, 71, 75);
+
+
+
+    &__figure {
+        float: left;
+        width: 30px;
+        border-radius: 20%;
+        text-align: center;
+        font-style: bold;
+        font-size: 13px;
+        color: white;
+        text-indent: 0;
+        margin: 0.5em;
+        padding: 0.5em;
+
+    }
+
+}
+
+
+
+.user {
+    width: 300px;
+    height: 45px;
+    background-color: rgb(106, 107, 109);
+
+    display: flex;
+    flex-direction: row;
+
+
+    &__profile {
+        img {
+            width: 30px;
+            border-radius: 50%;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+
+        &__name {
+            color: white;
+            margin-left: 35px;
+        }
+
+        &--dark {
+            background-color: rgb(46, 47, 51);
+            height: 45px;
+        }
+    }
+}
+
+//--hodaya--//
+.card {
+    width: 300px;
+    height: 600px;
+    background-color: rgb(53, 51, 51);
+    border-radius: 20px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.top_nav {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+
+
+    .user_name {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+
+        img {
+            margin-left: 10px;
+        }
+
+        .A {
+            font-size: 18px;
+            margin-left: -24px;
+            color: white;
+        }
+
+        .name {
+            position: absolute;
+            margin-left: 60px;
+        }
+    }
+}
+
+.info {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-color: rgba(128, 128, 128, 0.055);
+
+    .text {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.548);
+        margin-left: 90px;
+    }
+
+    .location_icon {
+        img {
+            position: absolute;
+            width: 30px;
+            margin-top: 30px;
+        }
+    }
+
+    .text2 {
+        position: absolute;
+        color: white;
+        margin-left: 30px;
+        margin-top: 40px;
+        animation-name: textcolor;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+    }
+
+    @keyframes textcolor {
+        from{
+            color: white;
+            
+        }
+
+        to{
+            font-size: 18px;
+            color: rgba(0, 255, 255, 0.685);
+
+        }
+    }
+
+    .text3 {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.562);
+        margin-top: 70px;
+        margin-left: 32px;
+    }
+
+    .btn_opt {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        cursor: pointer;
+        bottom: 10px;
+        left: 25%;
+        align-content: center;
+
+
+        .btn1 {
+            background-color: rgba(0, 255, 255, 0.685);
+            border-radius: 15px;
+            padding: 10px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn1:hover {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .btn2 {
+            background-color: rgba(0, 255, 255, 0.685);
+            border-radius: 15px;
+            padding: 10px 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn2:hover {
+            background-color: rgb(255, 255, 255);
+        }
+    }
+
+    .btn3 {
+        background-color: rgba(0, 255, 255, 0.685);
+        border-radius: 15px;
+        padding: 10px 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn3:hover {
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+.map_pic {
+    img {
+        width: 100%;
+        height: 330px;
+        margin-top: 145px;
+    }
+}
+
+.btm_nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: 100%;
+    height: 70px;
+    margin-top: -4px;
+
+    .btn_go {
+
+        img {
+            width: 40px;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+
+        .btn_go {
+            position: absolute;
+            background-color: aqua;
+            border-radius: 15px;
+            padding: 6px 20px;
+            right: 8px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn_go:hover {
+            background-color: rgb(109, 110, 106);
+            border: none;
+
+        }
+
+    }
+}
+
+
+
+
+//--Questionnaire tab--//
+
+.card-question {
+    position: relative;
+    width: 360px;
+    height: 640px;
+    margin: auto;
+    border-top-width: 60px;
+    border-bottom-width: 60px;
+    border-radius: 36px;
+    background-color: rgb(51,54,59);
+    font-family:sans-serif;
+    user-select: none;
+
+.top_menu_question {
+        width: 360px;
+        height: 55px;
+        background-color: white(248, 245, 245);
+        border-radius: 20%;
+        display: flex;
+        justify-content: start;
+        p {color: white;}
+    
+
+        &__left{
+            width: 115px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+          
+
+        
+        
+            &__icon{
+                width: 30px;
+                height: 30px;
+                color: cadetblue;
+                border-radius: 50%;
+                left: 20px;
+                user-select: none;
+                cursor: pointer;
+                img{ width: 100%;}
+            
+        
+        p{
+            position: absolute;
+            left: 55px;
+            top: 1px;
+            font-size: 15px;
+            color: white(132, 142, 150);
+            user-select: none;}
+         }
+    }  
+}
+.text{
+        margin-left: 5px;
+        margin-right: 5px; 
+        text-align: center;
+        font-weight: bold;
+      h1{
+        color: rgb(62, 179, 173);
+        font-size: 24px;
+        
+        }
+       p{
+         margin-top: -20px;
+         color: white;
+         font-size: 20px;
+        }
+        .play{
+         margin-top: -23px;
+         color: rgb(184, 196, 218);
+         font-size: 20px;
+         span{
+            color: rgb(62, 179, 173);
+
+         }
+
+        }
+   }
+   .button-box{
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-evenly;
+       color: white;
+       text-align: center;
+       font-size: 13px;
+       font-weight: bold;
+       
+      
+       
+       .button1{
+           width: 40%;
+           height: 70px;
+           background-color:rgb(62, 179, 173);
+           border-radius: 16px;
+           user-select: none;
+           cursor: pointer;
+           &:hover{
+            background-color: rgba(62, 108, 114, 0.986);
+        }
+           p{
+               margin-top: 18px;
+           }
+           
+       }
+       .button2{
+        width: 40%;
+        height: 70px;
+        background-color:rgb(128, 128, 128);
+        border-radius: 16px;
+        margin-bottom: 20px;
+        user-select: none;
+        cursor: pointer;
+        &:hover{
+            background-color: rgba(128, 128, 128, 0.24);
+        }
+        p{
+            margin-top: 18px;
+        }
+       }
+       .button3{
+           margin-top: 10px;
+           width: 85%;
+           height: 30px;
+           background-color:rgb(128, 128, 128);
+           border-radius: 16px;
+           font-size: 15px;
+           user-select: none;
+           cursor: pointer;
+           &:hover{
+            background-color: rgba(128, 128, 128, 0.24);
+        }
+           p{
+            margin-top: 7px;
+        }
+       }
+       .button4{
+        width: 40%;
+        height: 70px;
+        background-color:rgb(128, 128, 128);
+        border-radius: 16px;
+        margin-bottom: 20px;
+        user-select: none;
+        cursor: pointer;
+        &:hover{
+            background-color: rgba(128, 128, 128, 0.24);
+        }
+        p{
+            margin-top: 25px;
+        }
+       }
+
+   }
+   .bottom_menu {
+        width: 360px;
+        height: 55px;
+        background-color: rgb(238, 232, 232);
+        margin-top: 30px;
+
+        &__arrow{
+        width: 20px;
+            color:rgb(62, 179, 173); 
+            height: 60px;
+            position: absolute;
+            left: 10px;
+            user-select: none;
+            cursor: pointer; }
+
+        &__button{
+            width: 90px;
+            height: 45px;
+            border-radius: 10px;
+            position: absolute;
+            right: 5px;
+            bottom:-20px;
+            color: rgb(255, 255, 255);
+            background-color: rgb(62, 179, 173); 
+            border: none;
+            user-select: none;
+            cursor: pointer;
+            font-size: 20px;
+                &:hover{
+                 background-color:  rgba(62, 108, 114, 0.986);
+            }
+
+        }
+   
+      
+   }
+}
+
+/*adi*/
+
+
+html{
+    margin: 0px;
+    padding: 0px;
+    }
+    
+    
+    body{
+        background-color: white;
+        margin: 0px;
+    padding: 0px;
+    font-family: Roboto;
+    }
+    
+    
+    
+    
+    .cardthree{
+    
+        background-color: #2e2f33;
+        max-width: 360px;
+        height: 652px;
+        margin:150px auto;
+        border-radius: 25px;
+        overflow: hidden;
+        position: relative;
+    
+    
+        &__firststrip{
+    
+            background-color: #46474b;
+            width: 100%;
+            height: 77px;
+            border: 1px solid transparent; /*סמתי בורדר בדיו האב כדי שלא ידבק לבן*/
+            position: relative;
+            display:flex;
+          justify-content: flex-start;
+          
+            
+        }
+    
+        &__imgp{
+    
+            width: 38px;
+            height: 47px;
+            white-space: nowrap;
+            margin-top: 13px;
+            margin-left: 20px;
+            
+        }
+    
+        &__imgraper{
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            overflow: hidden;
+        
+            .cardthree__imgrape__pic{
+    
+                width: 100%;
+            }
+    
+    
+    
+    
+        }
+    
+    
+        &__paragraph{
+            margin: 0px;
+            margin-top: 3px;
+            color: white;
+            font-size: 13px;
+            font-weight: 200;
+        }
+    
+        &__dot{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-image: radial-gradient(circle, rgb(0, 255, 64), rgb(53, 173, 37), green);
+            position: absolute;
+            top:40px;
+            left: 45px;
+            animation-name: example_adi;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+    
+    
+        &__location{
+            
+            
+           /* background-color: indianred;*/
+           /* border: 1px solid black;*/
+            width: fit-content;
+           margin-top: 14px;
+           margin-left: 20px;
+            .cardthree__location__iconp{
+                width: 100%;
+             /*   border: 1px solid black;*/
+                display:flex;
+                height:34px;
+                
+                
+                
+                .cardthree__location__iconp__icon{
+                   /* border: 1px solid black;*/
+                    width: fit-content;
+                    display: inline-block;
+                    margin-top: 12px;
+                    margin-left: 1px;
+                    height: fit-content;
+    
+                
+                }
+               
+                 p{
+                    font-size: 12px;
+                    color: white;
+                  /*  border: 1px solid black;*/
+                    width: fit-content;
+                    display: inline-block;
+                    
+        
+                }
+           
+            }
+            
+            .cardthree__location__paragraph{
+                margin-top: 5px;
+                color: rgba(180, 180, 180, 0.45);
+                margin-left: 7px;
+            }
+        }
+    
+    
+    
+        &__pen{
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background-color: #5FB2B8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            margin-left: 20px;
+    
+        }
+    
+    
+        &__ruslte{
+    
+            width: 68px;
+            height: 20px;
+            background-color: #5FB2B8;
+            border-radius: 37px;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 15px;
+            box-sizing: border-box;
+            margin-top: 23px;
+            margin-left: auto;
+            margin-right: 10px;
+            
+           
+    
+        }
+    
+         .cardthree__paragraph--resulte{
+    
+          margin-top: 2px;
+        
+        }
+    
+        &__contnerstrip{
+            width: 100%;
+           /* background-color: burlywood;*/
+            height: 30%;
+            margin-top: 20px;
+        }
+    
+        &__stip{
+            width: 100%;
+            height: 50px;
+            background-color:  rgba(180, 180, 180, 0.45);
+            display: flex;
+            align-items: center;
+            position: relative;
+    
+            .cardthree__stip__pragrph{
+                font-size: 12px;
+                color: white;
+                font-weight: 500;
+                margin-left: 10px;
+            }
+            span{
+                font-weight: 900;
+                font-family: Arial, Helvetica, sans-serif;
+               
+            }
+    
+            .cardthree__stip__pragrph--km{
+                margin-left: auto;
+                margin-right: 10px;
+            }
+        }
+    
+        &__picicon{
+    
+            width: 33px;
+            height: 33px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-left:20px;
+           /* position: relative;*/
+         
+            .cardthree__dot--stip{
+    
+                position: absolute;
+               top:33px;
+               
+            }
+    
+      
+          
+        }
+    
+        .cardthree__stip--gray{
+    
+            background-color: transparent;
+        }
+    
+        &__muzic{
+    
+            fill: white;
+            width: 30px;
+            margin-left: 120px;
+        }
+    
+        &__gituer{
+    
+            width: 30px;
+            margin-left: 150px;
+    
+        }
+    
+        .cardthree__muzic--tarboka{
+    
+            position: absolute;
+            left: 115px;
+        }
+    
+        .cardthree__picicon__img--prophil{
+            width: 100%;
+        }
+    
+       &__googelmap{
+    
+        width: 100%;
+        height: 301px;
+        background-color: white;
+    
+       }
+    
+        &__stipfooter{
+            background-color: #2e2f33;
+            width: 100%;
+            height: 56px;
+            position: absolute;
+        }
+    
+       &__stipfooter{
+          
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    
+       }
+    
+       &__stipfooter_icon{
+    
+        cursor: pointer;
+       }
+      
+       .cardthree__picicon--imgpro{
+    
+        width: 37px;
+        height: 37px;
+        margin-left: 18px;
+        
+       }
+    
+       @keyframes example_adi
+        {
+        from{
+            background-image: radial-gradient(circle, rgb(0, 255, 64), rgb(53, 173, 37), green);
+        }
+        to {
+            background-image: radial-gradient( circle,#00d4ff 10%, #2c2cd4 90%, );
+        }
+       }
+    
+       &__polyrper{
+    
+        position: relative;
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+    
+        .cardthree__polygon{
+            position: absolute;
+            margin-top: -3px;
+        }
+    
+       }
+    }

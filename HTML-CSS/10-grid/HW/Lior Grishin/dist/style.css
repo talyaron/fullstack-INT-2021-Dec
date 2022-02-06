@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+}
+body header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 0 15%;
+}
+body header nav .nav-logo {
+  border: 5px solid white;
+  background-color: white;
+  width: 100px;
+  height: 35px;
+  cursor: pointer;
+  margin: 5px 0;
+}
+body header nav .nav-links {
+  list-style: none;
+}
+body header nav .nav-links li {
+  display: inline-block;
+  padding: 12px 15px;
+  border-right: 1px solid #5a5a5a;
+  margin-left: -5px;
+}
+body header nav .nav-links li a {
+  color: #fff;
+  padding: 10px 0;
+  transition: all 0.3 ease 0;
+}
+body header nav .nav-links li a:hover {
+  border-bottom: 3px solid #5e5e5e;
+  color: rgba(255, 255, 255, 0.9);
+}
+body header nav .nav-links li:first-child {
+  border-left: 1px solid #5a5a5a;
+}
+body header nav button {
+  border: none;
+  background-color: black;
+  padding: 12px 10px;
+  border-left: 1px solid #5a5a5a;
+  border-right: 1px solid #5a5a5a;
+  cursor: pointer;
+}
+body header nav button a {
+  padding: 10px 0;
+  color: white;
+}
+body header nav button a:hover {
+  border-bottom: 3px solid #5a5a5a;
+  color: rgba(255, 255, 255, 0.9);
+}
+body .BBC-presents {
+  padding: 1.5% 15%;
+  display: flex;
+  justify-content: space-between;
+}
+body .BBC-presents h1, body .BBC-presents h2 {
+  display: inline-block;
+}
+body .BBC-presents h1 {
+  color: #5a5a5a;
+}
+body .BBC-presents h2 {
+  color: #8c8c8c;
+  font-weight: 400;
+}
+body .showcase-grid {
+  padding: 0 15%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  transition: all 1.5s ease-in-out;
+}
+body .showcase-grid .item {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  object-fit: cover;
+  padding: 0 30px;
+  position: relative;
+  transition: all 1.5s ease-in-out;
+  cursor: pointer;
+}
+body .showcase-grid .item:nth-child(1) {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3) 60%), url(https://ichef.bbc.co.uk/wwhp/624/cpsprodpb/0B79/production/_123073920_mediaitem123073919.jpg);
+  height: 450px;
+}
+body .showcase-grid .item:nth-child(1):hover {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1) 60%), url(https://ichef.bbc.co.uk/wwhp/624/cpsprodpb/0B79/production/_123073920_mediaitem123073919.jpg);
+}
+body .showcase-grid .item:nth-child(1) h2 {
+  position: absolute;
+  bottom: 25%;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 400;
+}
+body .showcase-grid .item:nth-child(1) p {
+  position: absolute;
+  bottom: 13%;
+  color: #d3d3d3;
+  font-size: 20px;
+  padding: 0 15px 0 0;
+}
+body .showcase-grid .item:nth-child(1) span {
+  position: absolute;
+  bottom: 6%;
+  color: #d3d3d3;
+  border-left: 3px solid red;
+  padding-left: 10px;
+}
+body .showcase-grid .item:nth-child(2) {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3) 60%), url(https://ichef.bbc.co.uk/wwhp/304/cpsprodpb/43CD/production/_123075371_1200superzzzgettyimages-1237430569.jpg);
+}
+body .showcase-grid .item:nth-child(2):hover {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1) 60%), url(https://ichef.bbc.co.uk/wwhp/304/cpsprodpb/43CD/production/_123075371_1200superzzzgettyimages-1237430569.jpg);
+}
+body .showcase-grid .item:nth-child(3) {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3) 60%), url(https://ichef.bbc.co.uk/wwhp/304/cpsprodpb/4981/production/_123071881_gettyimages-1356331235.jpg);
+}
+body .showcase-grid .item:nth-child(3):hover {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1) 60%), url(https://ichef.bbc.co.uk/wwhp/304/cpsprodpb/4981/production/_123071881_gettyimages-1356331235.jpg);
+}
+body .showcase-grid .item:nth-child(4) {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3) 60%), url(https://ichef.bbc.co.uk/wwhp/304/ibroadcast/images/live/p0/bk/s3/p0bks3c3.jpg);
+}
+body .showcase-grid .item:nth-child(4):hover {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1) 60%), url(https://ichef.bbc.co.uk/wwhp/304/ibroadcast/images/live/p0/bk/s3/p0bks3c3.jpg);
+}
+body .showcase-grid .item:nth-child(5) {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3) 60%), url(https://ichef.bbc.co.uk/wwhp/304/ibroadcast/images/live/p0/bk/wr/p0bkwrhl.jpg);
+}
+body .showcase-grid .item:nth-child(5):hover {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1) 60%), url(https://ichef.bbc.co.uk/wwhp/304/ibroadcast/images/live/p0/bk/wr/p0bkwrhl.jpg);
+}
+body .showcase-grid .sub-obj h2 {
+  position: absolute;
+  bottom: 25%;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 400;
+}
+body .showcase-grid .sub-obj span {
+  position: absolute;
+  bottom: 6%;
+  color: #d3d3d3;
+  border-left: 3px solid #29c9d4;
+  padding-left: 10px;
+}
+body .showcase-grid .grid-col-span {
+  grid-column: span 2;
+}
+body .showcase-grid .grid-col-span {
+  grid-row: span 2;
+}
+body .titles {
+  padding: 3% 15% 0;
+}
+body .titles h2 {
+  border-left: 4px solid red;
+  padding: 0 15px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #5a5a5a;
+  display: inline-block;
+}
+body .titles h2:hover {
+  color: #000;
+}
+body .titles .titles-flex {
+  display: flex;
+  gap: 15px;
+  padding: 3% 0 0;
+}
+body .titles .titles-flex .item {
+  transition: all 1.5s ease-in-out;
+  cursor: pointer;
+  flex: 1;
+}
+body .titles .titles-flex .item__image {
+  padding: 0% 0 4% 0;
+}
+body .titles .titles-flex .item__image img {
+  width: 100%;
+}
+body .titles .titles-flex .item__content h3 {
+  font-size: 1.5rem;
+}
+body .titles .titles-flex .item__content p {
+  font-size: 1rem;
+  padding: 2% 0;
+}
+body .titles .titles-flex .item__content span {
+  border-left: 3px solid red;
+  padding-left: 10px;
+}
+body .titles .titles-flex .item:hover img {
+  opacity: 0.8;
+}
+body .pd-bt {
+  padding-bottom: 3%;
+}
+
+li, a, button {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+#yellow {
+  border-left: 4px solid #ffe600;
+}

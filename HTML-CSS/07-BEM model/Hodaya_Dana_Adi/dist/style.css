@@ -1,0 +1,615 @@
+@charset "UTF-8";
+.links {
+  color: black;
+}
+.links a:hover {
+  color: blue;
+}
+
+h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.card {
+  width: 300px;
+  height: 600px;
+  background-color: #353333;
+  border-radius: 20px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.top_menu {
+  width: 300px;
+  height: 80px;
+  background-color: #46474b;
+}
+.top_menu__figure {
+  float: left;
+  width: 30px;
+  border-radius: 20%;
+  text-align: center;
+  font-style: bold;
+  font-size: 13px;
+  color: white;
+  text-indent: 0;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+.user {
+  width: 300px;
+  height: 45px;
+  background-color: #6a6b6d;
+  display: flex;
+  flex-direction: row;
+}
+.user__profile img {
+  width: 30px;
+  border-radius: 50%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.user__profile__name {
+  color: white;
+  margin-left: 35px;
+}
+.user__profile--dark {
+  background-color: #2e2f33;
+  height: 45px;
+}
+
+.card {
+  width: 300px;
+  height: 600px;
+  background-color: #353333;
+  border-radius: 20px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.top_nav {
+  width: 100%;
+  height: 60px;
+  background-color: white;
+}
+.top_nav .user_name {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.top_nav .user_name img {
+  margin-left: 10px;
+}
+.top_nav .user_name .A {
+  font-size: 18px;
+  margin-left: -24px;
+  color: white;
+}
+.top_nav .user_name .name {
+  position: absolute;
+  margin-left: 60px;
+}
+
+.info {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  background-color: rgba(128, 128, 128, 0.055);
+}
+.info .text {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.548);
+  margin-left: 90px;
+}
+.info .location_icon img {
+  position: absolute;
+  width: 30px;
+  margin-top: 30px;
+}
+.info .text2 {
+  position: absolute;
+  color: white;
+  margin-left: 30px;
+  margin-top: 40px;
+  animation-name: textcolor;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+@keyframes textcolor {
+  from {
+    color: white;
+  }
+  to {
+    font-size: 18px;
+    color: rgba(0, 255, 255, 0.685);
+  }
+}
+.info .text3 {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.562);
+  margin-top: 70px;
+  margin-left: 32px;
+}
+.info .btn_opt {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  bottom: 10px;
+  left: 25%;
+  align-content: center;
+}
+.info .btn_opt .btn1 {
+  background-color: rgba(0, 255, 255, 0.685);
+  border-radius: 15px;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+}
+.info .btn_opt .btn1:hover {
+  background-color: white;
+}
+.info .btn_opt .btn2 {
+  background-color: rgba(0, 255, 255, 0.685);
+  border-radius: 15px;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+}
+.info .btn_opt .btn2:hover {
+  background-color: white;
+}
+.info .btn3 {
+  background-color: rgba(0, 255, 255, 0.685);
+  border-radius: 15px;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+}
+.info .btn3:hover {
+  background-color: white;
+}
+
+.map_pic img {
+  width: 100%;
+  height: 330px;
+  margin-top: 145px;
+}
+
+.btm_nav {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  width: 100%;
+  height: 70px;
+  margin-top: -4px;
+}
+.btm_nav .btn_go img {
+  width: 40px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.btm_nav .btn_go .btn_go {
+  position: absolute;
+  background-color: aqua;
+  border-radius: 15px;
+  padding: 6px 20px;
+  right: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+}
+.btm_nav .btn_go .btn_go:hover {
+  background-color: #6d6e6a;
+  border: none;
+}
+
+.card-question {
+  position: relative;
+  width: 360px;
+  height: 640px;
+  margin: auto;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-radius: 36px;
+  background-color: #33363b;
+  font-family: sans-serif;
+  user-select: none;
+}
+.card-question .top_menu_question {
+  width: 360px;
+  height: 55px;
+  background-color: white(248, 245, 245);
+  border-radius: 20%;
+  display: flex;
+  justify-content: start;
+}
+.card-question .top_menu_question p {
+  color: white;
+}
+.card-question .top_menu_question__left {
+  width: 115px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.card-question .top_menu_question__left__icon {
+  width: 30px;
+  height: 30px;
+  color: cadetblue;
+  border-radius: 50%;
+  left: 20px;
+  user-select: none;
+  cursor: pointer;
+}
+.card-question .top_menu_question__left__icon img {
+  width: 100%;
+}
+.card-question .top_menu_question__left__icon p {
+  position: absolute;
+  left: 55px;
+  top: 1px;
+  font-size: 15px;
+  color: white(132, 142, 150);
+  user-select: none;
+}
+.card-question .text {
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+.card-question .text h1 {
+  color: #3eb3ad;
+  font-size: 24px;
+}
+.card-question .text p {
+  margin-top: -20px;
+  color: white;
+  font-size: 20px;
+}
+.card-question .text .play {
+  margin-top: -23px;
+  color: #b8c4da;
+  font-size: 20px;
+}
+.card-question .text .play span {
+  color: #3eb3ad;
+}
+.card-question .button-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  color: white;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+}
+.card-question .button-box .button1 {
+  width: 40%;
+  height: 70px;
+  background-color: #3eb3ad;
+  border-radius: 16px;
+  user-select: none;
+  cursor: pointer;
+}
+.card-question .button-box .button1:hover {
+  background-color: rgba(62, 108, 114, 0.986);
+}
+.card-question .button-box .button1 p {
+  margin-top: 18px;
+}
+.card-question .button-box .button2 {
+  width: 40%;
+  height: 70px;
+  background-color: gray;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  user-select: none;
+  cursor: pointer;
+}
+.card-question .button-box .button2:hover {
+  background-color: rgba(128, 128, 128, 0.24);
+}
+.card-question .button-box .button2 p {
+  margin-top: 18px;
+}
+.card-question .button-box .button3 {
+  margin-top: 10px;
+  width: 85%;
+  height: 30px;
+  background-color: gray;
+  border-radius: 16px;
+  font-size: 15px;
+  user-select: none;
+  cursor: pointer;
+}
+.card-question .button-box .button3:hover {
+  background-color: rgba(128, 128, 128, 0.24);
+}
+.card-question .button-box .button3 p {
+  margin-top: 7px;
+}
+.card-question .button-box .button4 {
+  width: 40%;
+  height: 70px;
+  background-color: gray;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  user-select: none;
+  cursor: pointer;
+}
+.card-question .button-box .button4:hover {
+  background-color: rgba(128, 128, 128, 0.24);
+}
+.card-question .button-box .button4 p {
+  margin-top: 25px;
+}
+.card-question .bottom_menu {
+  width: 360px;
+  height: 55px;
+  background-color: #eee8e8;
+  margin-top: 30px;
+}
+.card-question .bottom_menu__arrow {
+  width: 20px;
+  color: #3eb3ad;
+  height: 60px;
+  position: absolute;
+  left: 10px;
+  user-select: none;
+  cursor: pointer;
+}
+.card-question .bottom_menu__button {
+  width: 90px;
+  height: 45px;
+  border-radius: 10px;
+  position: absolute;
+  right: 5px;
+  bottom: -20px;
+  color: white;
+  background-color: #3eb3ad;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+.card-question .bottom_menu__button:hover {
+  background-color: rgba(62, 108, 114, 0.986);
+}
+
+/*adi*/
+html {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: white;
+  margin: 0px;
+  padding: 0px;
+  font-family: Roboto;
+}
+
+.cardthree {
+  background-color: #2e2f33;
+  max-width: 360px;
+  height: 652px;
+  margin: 150px auto;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+}
+.cardthree__firststrip {
+  background-color: #46474b;
+  width: 100%;
+  height: 77px;
+  border: 1px solid transparent;
+  /*סמתי בורדר בדיו האב כדי שלא ידבק לבן*/
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+}
+.cardthree__imgp {
+  width: 38px;
+  height: 47px;
+  white-space: nowrap;
+  margin-top: 13px;
+  margin-left: 20px;
+}
+.cardthree__imgraper {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.cardthree__imgraper .cardthree__imgrape__pic {
+  width: 100%;
+}
+.cardthree__paragraph {
+  margin: 0px;
+  margin-top: 3px;
+  color: white;
+  font-size: 13px;
+  font-weight: 200;
+}
+.cardthree__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-image: radial-gradient(circle, #00ff40, #35ad25, green);
+  position: absolute;
+  top: 40px;
+  left: 45px;
+  animation-name: example_adi;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+.cardthree__location {
+  /* background-color: indianred;*/
+  /* border: 1px solid black;*/
+  width: fit-content;
+  margin-top: 14px;
+  margin-left: 20px;
+}
+.cardthree__location .cardthree__location__iconp {
+  width: 100%;
+  /*   border: 1px solid black;*/
+  display: flex;
+  height: 34px;
+}
+.cardthree__location .cardthree__location__iconp .cardthree__location__iconp__icon {
+  /* border: 1px solid black;*/
+  width: fit-content;
+  display: inline-block;
+  margin-top: 12px;
+  margin-left: 1px;
+  height: fit-content;
+}
+.cardthree__location .cardthree__location__iconp p {
+  font-size: 12px;
+  color: white;
+  /*  border: 1px solid black;*/
+  width: fit-content;
+  display: inline-block;
+}
+.cardthree__location .cardthree__location__paragraph {
+  margin-top: 5px;
+  color: rgba(180, 180, 180, 0.45);
+  margin-left: 7px;
+}
+.cardthree__pen {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #5FB2B8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.cardthree__ruslte {
+  width: 68px;
+  height: 20px;
+  background-color: #5FB2B8;
+  border-radius: 37px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+  box-sizing: border-box;
+  margin-top: 23px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+.cardthree .cardthree__paragraph--resulte {
+  margin-top: 2px;
+}
+.cardthree__contnerstrip {
+  width: 100%;
+  /* background-color: burlywood;*/
+  height: 30%;
+  margin-top: 20px;
+}
+.cardthree__stip {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(180, 180, 180, 0.45);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.cardthree__stip .cardthree__stip__pragrph {
+  font-size: 12px;
+  color: white;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.cardthree__stip span {
+  font-weight: 900;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.cardthree__stip .cardthree__stip__pragrph--km {
+  margin-left: auto;
+  margin-right: 10px;
+}
+.cardthree__picicon {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 20px;
+  /* position: relative;*/
+}
+.cardthree__picicon .cardthree__dot--stip {
+  position: absolute;
+  top: 33px;
+}
+.cardthree .cardthree__stip--gray {
+  background-color: transparent;
+}
+.cardthree__muzic {
+  fill: white;
+  width: 30px;
+  margin-left: 120px;
+}
+.cardthree__gituer {
+  width: 30px;
+  margin-left: 150px;
+}
+.cardthree .cardthree__muzic--tarboka {
+  position: absolute;
+  left: 115px;
+}
+.cardthree .cardthree__picicon__img--prophil {
+  width: 100%;
+}
+.cardthree__googelmap {
+  width: 100%;
+  height: 301px;
+  background-color: white;
+}
+.cardthree__stipfooter {
+  background-color: #2e2f33;
+  width: 100%;
+  height: 56px;
+  position: absolute;
+}
+.cardthree__stipfooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.cardthree__stipfooter_icon {
+  cursor: pointer;
+}
+.cardthree .cardthree__picicon--imgpro {
+  width: 37px;
+  height: 37px;
+  margin-left: 18px;
+}
+@keyframes example_adi {
+  from {
+    background-image: radial-gradient(circle, #00ff40, #35ad25, green);
+  }
+  to {
+    background-image: radial-gradient(circle, #00d4ff 10%, #2c2cd4 90%);
+  }
+}
+.cardthree__polyrper {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+}
+.cardthree__polyrper .cardthree__polygon {
+  position: absolute;
+  margin-top: -3px;
+}

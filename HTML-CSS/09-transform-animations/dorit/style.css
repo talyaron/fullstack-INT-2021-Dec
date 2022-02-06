@@ -1,0 +1,40 @@
+.circle {
+  background-color: green;
+  height: 100px;
+  width: 100px;
+  border: 2px solid black;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  -webkit-transition: all 1300ms;
+  transition: all 1300ms;
+}
+
+.circle:hover {
+  -webkit-transform: rotate(360deg) scale(1.8);
+          transform: rotate(360deg) scale(1.8);
+}
+
+.circle:active {
+  background-color: blue;
+}
+
+.trapezoid {
+  border-bottom: 50px solid #555;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  height: 0;
+  width: 125px;
+  -webkit-transition: all 1300ms;
+  transition: all 1300ms;
+}
+
+.trapezoid:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.trapezoid:active {
+  background-color: blue;
+}
+/*# sourceMappingURL=style.css.map */
