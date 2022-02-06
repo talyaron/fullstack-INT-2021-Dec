@@ -1,0 +1,28 @@
+body,
+html {
+  margin: 0px;
+}
+
+.topnav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  height: 30px;
+  margin: 20px;
+}
+
+.homebtn h1 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  padding: 10px;
+  display: flex;
+  transition: all;
+  cursor: pointer;
+}

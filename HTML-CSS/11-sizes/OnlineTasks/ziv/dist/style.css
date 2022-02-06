@@ -1,0 +1,42 @@
+html, body {
+  margin: 0px;
+  font-size: 20px;
+}
+
+body {
+  height: 50vh;
+}
+
+.wrapper {
+  background-color: #4a7ba8;
+  height: 743px;
+  width: 1594px;
+  height: 100vh;
+  width: 100vw;
+  height: 100%;
+  width: 100%;
+  height: 100%;
+  width: 75ch;
+  mask-image: linear-gradient();
+}
+.wrapper .box {
+  background-color: #476d61;
+  height: 80%;
+  width: 80%;
+  color: white;
+}
+.wrapper .box h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+.wrapper .box h2 {
+  font-size: 1rem;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  text-align: center;
+}
+.wrapper .box p {
+  font-size: 0.7 rem;
+  display: flex;
+  text-align: center;
+}

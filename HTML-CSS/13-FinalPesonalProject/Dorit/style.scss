@@ -70,29 +70,47 @@ body{
         width: 80%;
         background-color: rgb(239, 239, 239);
         border-radius: 20px;
-        font-size: 2rem;
-       
+        font-size: 1rem;
+        img{
+            width: 20px;
+            height:20px;
+
+        }
 
         &:hover {
             background-color: rgb(223, 223, 223);
         }
+
 
     }
 
     &__diff {
         padding: 0px 30px;
         width: 200px;
-        background-color: green;
+        background-color: white;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         &__bell{
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             img{
                 border-radius: 50%;
-                width: 40px;
-                height: 40px;
+                width: 30px;
+                height: 30px;
+            }
+                
+            &:hover {
+                    background-color: rgb(233, 233, 233);
+                    cursor: pointer;
+            }
+        }    
+        &__thought{    
+            img{
+   
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
             }
                 
             &:hover {
@@ -102,8 +120,8 @@ body{
         }
         &__user {
             img{
-                width: 50px;
-                height: 50px;
+                width: 20px;
+                height: 20px;
                 border-radius: 50%; 
             }
 
@@ -116,10 +134,14 @@ body{
         }
 
         &__more {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            
+            width: 30px;
+            height: 30px;
+            img{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;  
+            }
+           
             &:hover {
                 background-color: rgb(233, 233, 233);
                 cursor: pointer;
