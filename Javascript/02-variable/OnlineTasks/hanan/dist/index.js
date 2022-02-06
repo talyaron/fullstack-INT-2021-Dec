@@ -1,5 +1,3 @@
-"use strict";
-
 var a = 4;
 console.log(a);
 var b = 45;
