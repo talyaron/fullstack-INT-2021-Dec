@@ -1,21 +1,51 @@
-.html{
-font-size: 20px;
+.html {
+    font-size: 20px;
 
 }
-.body{
+
+.body {
     background-color: rgb(12, 115, 218);
     margin: 0;
 }
-.wrapper{
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     margin: 0 auto;
     background-color: slategrey;
-    width: 75vh;
-    height: 100vw;
+    width: 100%;
+   
+    gap: 3px;
+
+    .item {
+        background-color: dimgray;
+
+        img {
+            width: 100%;
+        }
+
+        h1,
+        h2,
+        p {
+            margin: 0;
+            padding: 5px 20px;
+        }
+    }
 }
-img{
-width: 100%;
+@media only screen and (max-width: 1300px) {
+    .item{
+        background-color: firebrick;}
+    }
+    
+
+@media only screen and (max-width: 850px) {
+        .item{
+         background-color: rgb(7, 123, 255);
+        }
 }
-h1, h2 ,p{
-    margin: 0;
-    padding: 5px 20px;
-}
+
+@media only screen and (max-width: 400px) {
+        .item{
+         background-color: rgb(233, 236, 16);
+        }
+    }
