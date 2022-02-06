@@ -474,6 +474,12 @@ html {
         z-index: +1;
         left: 50%;
         transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 30px;
+        align-items: center;
+        color: #6e6e6e;
     }
 }
 
@@ -507,5 +513,6 @@ html {
 
     .mobile_menu {
         display: contents;
+
     }
 }
