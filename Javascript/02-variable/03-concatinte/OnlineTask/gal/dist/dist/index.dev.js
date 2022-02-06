@@ -1,3 +1,5 @@
+"use strict";
+
 // online task: set up your: first&last name,email, phone, address, daysOfExpriensInCSS
 var firstName = 'gal';
 var lastName = 'gross';
