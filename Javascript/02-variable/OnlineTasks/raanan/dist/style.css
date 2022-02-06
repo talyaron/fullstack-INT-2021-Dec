@@ -1,0 +1,8 @@
+h1 {
+  color: #2d0080;
+  transition: all 200ms;
+}
+
+body {
+  transition: all 1s;
+}
