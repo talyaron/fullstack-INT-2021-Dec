@@ -474,6 +474,8 @@ html {
         z-index: +1;
         left: 50%;
         transform: translate(-50%, -50%);
+        flex-direction: row;
+        justify-content: space-around;
     }
 }
 
@@ -507,5 +509,6 @@ html {
 
     .mobile_menu {
         display: contents;
+
     }
 }

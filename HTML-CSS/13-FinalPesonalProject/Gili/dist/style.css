@@ -396,6 +396,8 @@ html {
   z-index: 1;
   left: 50%;
   transform: translate(-50%, -50%);
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 @media only screen and (max-width: 768px) {
