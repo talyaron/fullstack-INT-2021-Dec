@@ -1,7 +1,15 @@
 .top{
     display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    // padding-bottom: 50px;
+    background-color: white;
+    z-index: 1;
+    // box-sizing:content-box;
+
     height: 50px;
-    &_left{
+    &__left{
         display: flex;
         position: relative;
         left: 20px;
@@ -11,19 +19,25 @@
             position: relative;
             top:13px;
         }
-        h3{
+        .home{
             background-color: black;
             border-radius: 50px;
             height: 45px;
             width: 70px;
             text-align: center;
+            // align-content: center;
             color: white;
             position: relative;
-            left: 40px;
-            bottom: 10px;
+            left: 20px;
+            // bottom: 10px;
+            align-items: center;
+            h3{
+                position: relative;
+                bottom: 10px;
+            }
         }
     }
-    &_center{
+    &__center{
         margin: auto;
         padding: 0%;
         input {
@@ -34,16 +48,16 @@
             padding: 0px;
             margin: 0px;
             font-size: 20px;
-            text-align:;
+            
         }
        
     }
-    &_right{
+    &__right{
         display: flex;
         padding: 0px;
         gap: 10px;
         margin: 0px;
-        h2{
+       .user{
             background-color: purple;
             height: 40px;
             width: 40px;
@@ -51,7 +65,11 @@
             text-align: center;
             color: aliceblue;
             position: relative;
-            top: -13px;
+            // top: -13px;
+            h2{
+                position: relative;
+                bottom: 12px;
+            }
         }
     }
 }
@@ -60,6 +78,102 @@
     display: grid;
     grid-template-columns:repeat(6, 1fr);
     gap: 10px;
+    position: relative;
+    top: 100px;
     
 
+}
+.content{
+    position: relative;
+    top: 100px;
+    margin: auto;
+    width: 800px;
+    height: 1000px;
+    display: flex;
+    padding: 100px;
+    &__img{
+        padding-right: 20px;
+       img{
+            height: 800px;
+            width: 500px;
+        }
+    }
+    &__comment{
+        .icons{
+            display: flex;
+            height: 48px;
+            gap: 10px;
+            .save{
+                position: absolute;
+                right: 0px;
+                border-radius: 50px / 50px;
+                background-color: red;
+                color: white;
+            }
+        }
+        h1{
+            
+        }
+        .rihanna{
+          &__wrapper{
+              display: flex;
+              gap: 20px;
+             .wrapper0{
+                 
+                img{
+                    border-radius: 50%;
+                    height: 80px;
+                    width: 48px;
+                }
+                }
+             .wrapper1{
+                    border: 1px solid ;
+                    width: 300px;
+                    height: 80px;
+                    border-radius: 25px;
+                    margin: 0%;
+                    padding: 0%;
+                    
+                    
+                .name{
+                    display: flex;
+                    gap: 10px;
+                    position: relative;
+                    left: 20px;
+                    top: -10px;
+                    p{
+                        position: relative;
+                        top: 8px;
+                    }
+
+                }
+                .comment1{
+                    position: relative;
+                    left: 20px;
+                    top: -30px;
+
+                }
+                }
+            }
+            &__h{
+                display: flex;
+                gap: 20px;
+                .h{
+                    background-color: purple;
+                    border-radius: 50%;
+                    width: 48px;
+                    height: 60px;
+                    text-align: center;
+                    h1{
+                        position: relative;
+                        top: -10px;
+                        color: aliceblue;
+                    }
+                   
+                    
+                }
+            } 
+
+        }
+    }
 }

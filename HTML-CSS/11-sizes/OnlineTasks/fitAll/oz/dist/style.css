@@ -1,0 +1,45 @@
+.html {
+  font-size: 20px;
+}
+
+.body {
+  background-color: #0c73da;
+  margin: 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 0 auto;
+  background-color: slategrey;
+  width: 100%;
+  gap: 3px;
+}
+.wrapper .item {
+  background-color: dimgray;
+}
+.wrapper .item img {
+  width: 100%;
+}
+.wrapper .item h1,
+.wrapper .item h2,
+.wrapper .item p {
+  margin: 0;
+  padding: 5px 20px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .item {
+    background-color: firebrick;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .item {
+    background-color: #077bff;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .item {
+    background-color: #e9ec10;
+  }
+}

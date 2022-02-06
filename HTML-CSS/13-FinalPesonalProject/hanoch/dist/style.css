@@ -1,19 +1,24 @@
 .top {
   display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0%;
+  background-color: white;
+  z-index: 1;
   height: 50px;
 }
-.top_left {
+.top__left {
   display: flex;
   position: relative;
   left: 20px;
 }
-.top_left img {
+.top__left img {
   height: min-content;
   align-items: center;
   position: relative;
   top: 13px;
 }
-.top_left h3 {
+.top__left .home {
   background-color: black;
   border-radius: 50px;
   height: 45px;
@@ -21,14 +26,18 @@
   text-align: center;
   color: white;
   position: relative;
-  left: 40px;
+  left: 20px;
+  align-items: center;
+}
+.top__left .home h3 {
+  position: relative;
   bottom: 10px;
 }
-.top_center {
+.top__center {
   margin: auto;
   padding: 0%;
 }
-.top_center input {
+.top__center input {
   width: 1100px;
   height: 50px;
   border-radius: 50px;
@@ -36,15 +45,14 @@
   padding: 0px;
   margin: 0px;
   font-size: 20px;
-  text-align: left(20px);
 }
-.top_right {
+.top__right {
   display: flex;
   padding: 0px;
   gap: 10px;
   margin: 0px;
 }
-.top_right h2 {
+.top__right .user {
   background-color: purple;
   height: 40px;
   width: 40px;
@@ -52,7 +60,10 @@
   text-align: center;
   color: aliceblue;
   position: relative;
-  top: -13px;
+}
+.top__right .user h2 {
+  position: relative;
+  bottom: 12px;
 }
 
 .wrapper {
@@ -60,4 +71,84 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 10px;
+  position: relative;
+  top: 100px;
+}
+
+.content {
+  position: relative;
+  top: 100px;
+  margin: auto;
+  width: 800px;
+  height: 1000px;
+  display: flex;
+  padding: 100px;
+}
+.content__img {
+  padding-right: 20px;
+}
+.content__img img {
+  height: 800px;
+  width: 500px;
+}
+.content__comment .icons {
+  display: flex;
+  height: 48px;
+  gap: 10px;
+}
+.content__comment .icons .save {
+  position: absolute;
+  right: 0px;
+  border-radius: 50px/50px;
+  background-color: red;
+  color: white;
+}
+.content__comment .rihanna__wrapper {
+  display: flex;
+  gap: 20px;
+}
+.content__comment .rihanna__wrapper .wrapper0 img {
+  border-radius: 50%;
+  height: 80px;
+  width: 48px;
+}
+.content__comment .rihanna__wrapper .wrapper1 {
+  border: 1px solid;
+  width: 300px;
+  height: 80px;
+  border-radius: 25px;
+  margin: 0%;
+  padding: 0%;
+}
+.content__comment .rihanna__wrapper .wrapper1 .name {
+  display: flex;
+  gap: 10px;
+  position: relative;
+  left: 20px;
+  top: -10px;
+}
+.content__comment .rihanna__wrapper .wrapper1 .name p {
+  position: relative;
+  top: 8px;
+}
+.content__comment .rihanna__wrapper .wrapper1 .comment1 {
+  position: relative;
+  left: 20px;
+  top: -30px;
+}
+.content__comment .rihanna__h {
+  display: flex;
+  gap: 20px;
+}
+.content__comment .rihanna__h .h {
+  background-color: purple;
+  border-radius: 50%;
+  width: 48px;
+  height: 60px;
+  text-align: center;
+}
+.content__comment .rihanna__h .h h1 {
+  position: relative;
+  top: -10px;
+  color: aliceblue;
 }

@@ -7,19 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gili Pinterest</title>
     <link rel="stylesheet" href="dist/style.css">
-    <script src="https://kit.fontawesome.com/202bcec69b.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ef6c5070b7.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <div class="filler"></div>
+
     <nav class="menu">
         <div class="menu__left">
             <div class="menu__left__logo"><img src="https://cdn.worldvectorlogo.com/logos/pinterest-1.svg" alt=""
                     srcset="">
             </div>
-            <button class="menu__left__home">Home</button>
+            <a href="index.html"><button class="menu__left__home">Home</button></a>
         </div>
         <div class="menu__search">
-            <input id="input" type="text" placeholder="Search">
+            <div class="search_feild">
+                <i class="fa fa-search"></i>
+                <input id="input" type="text" placeholder="     Search">
+            </div>
         </div>
         <div class="menu__icons">
             <div class="menu__icons__notifications"> <i class="fas fa-bell"></i></div>
@@ -30,12 +35,22 @@
             <div class="menu__icons__more_user"><i class="fas fa-chevron-down"></i></div>
         </div>
     </nav>
+    <nav class="mobile_menu">
+        <div class="mobile_menu__container">
+            <i class="fas fa-home"></i>
+            <i class="fas fa-search"></i>
+            <i class="fas fa-comment-dots"></i>
+            <i class="fas fa-user"></i>
+        </div>
+    </nav>
     <div class="content">
 
-        <div class="img_container">
-            <img src="https://i.pinimg.com/236x/16/39/a3/1639a34da156b0fe98f3b6024edf2ba8.jpg" alt="Gili" srcset="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
+        <a href="imgcloseup.html" style="text-decoration: none; color: black;">
+            <div class="img_container">
+                <img src="https://i.pinimg.com/236x/16/39/a3/1639a34da156b0fe98f3b6024edf2ba8.jpg" alt="Gili" srcset="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </a>
         <div class="img_container">
             <img src="https://i.pinimg.com/236x/c3/5b/38/c35b38c7cd540e13cad07c881a84ed67.jpg" alt="" srcset="">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>

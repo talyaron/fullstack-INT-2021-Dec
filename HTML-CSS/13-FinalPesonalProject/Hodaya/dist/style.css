@@ -1,0 +1,29 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: gray;
+}
+.wrapper .nav_bar {
+  position: fixed;
+  width: 100vw;
+  height: 70px;
+  background-color: #fdf6f6;
+  top: 0;
+}
+
+.grid-wrapper {
+  padding: 2em 8em;
+  display: grid;
+  grid-gap: 20px;
+  row-gap: 2.8em;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-rows: auto;
+  grid-auto-flow: dense;
+  padding-top: 6em;
+}
