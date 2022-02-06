@@ -1,0 +1,44 @@
+html, body{
+    margin:0px;
+    font-size: 20px;
+}
+body{
+    height: 50vh;
+}
+
+.wrapper{
+    background-color: rgb(74, 123, 168);
+    height: 743px;
+    width:1594px;
+    height: 100vh;
+    width:100vw;
+    height: 100%;
+    width:100%;
+    height: 100%;
+    width:75ch;
+    mask-image: linear-gradient(https://www.archdaily.com/976137/brazilian-pavilion-expo-dubai-2020-ben-avid-plus-jprq-plus-mmbb-arquitetos/61f943643e4b31be19000013-brazilian-pavilion-expo-dubai-2020-ben-avid-plus-jprq-plus-mmbb-arquitetos-photo);
+
+    .box{
+        background-color: rgb(71, 109, 97);
+        height: 80%; // Present  of the parent component
+        width: 80%;
+
+        
+        color: white;
+        h1{
+            font-size:2rem ;
+            text-align: center;
+        }
+        h2{
+            font-size: 1rem; //prortiona to the html font-size.
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            text-align: center;
+        }
+        p{
+            font-size: 0.7 rem;
+            display: flex;
+            text-align: center;
+        }
+    }
+}

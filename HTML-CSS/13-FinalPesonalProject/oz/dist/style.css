@@ -1,3 +1,67 @@
+.body {
+  margin: 0px;
+  width: 100vw;
+}
+
+.nav-bar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.nav-bar .pinterest {
+  color: red;
+  font-size: 25px;
+  margin: 15px;
+  border-radius: 50px;
+  transition: all 200ms;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-bar .pinterest:hover {
+  background-color: #efefef;
+}
+.nav-bar .home {
+  background-color: black;
+  width: 80px;
+  height: 50px;
+  border-radius: 30px;
+  margin: 5px;
+}
+.nav-bar .home p {
+  color: aliceblue;
+  text-align: center;
+}
+.nav-bar .search {
+  width: 800px;
+  height: 50px;
+  background-color: #ddd;
+  display: flex;
+  margin: 5px;
+  border-radius: 30px;
+}
+.nav-bar .search i {
+  margin: 17px;
+  color: #767676;
+}
+.nav-bar .search p {
+  color: #767676;
+}
+.nav-bar .icons {
+  font-size: 25px;
+  margin: 15px;
+  color: #767676;
+}
+.nav-bar .icons :hover {
+  background-color: #efefef;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+}
+
 .wrapper img {
   border-radius: 20px;
   padding: 6px;
