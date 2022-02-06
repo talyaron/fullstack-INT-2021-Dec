@@ -1,2 +1,19 @@
-const h1 =document.getElementById('rootH1');
-h1.style.color ='red'
+
+var x = 5;
+console.log(x)
+
+var y =10;
+console.log(y)
+
+x--;
+console.log(x)
+
+y+y;
+console.log(y)
+
+y--;
+console.log(y)
+
+x++;
+console.log(x)
+ 
