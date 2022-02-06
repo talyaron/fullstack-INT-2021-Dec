@@ -1,5 +1,4 @@
 "use strict";
 
-var x = 4; //
-
-console.log(x); //4
+var x = 4;
+console.log(x);
