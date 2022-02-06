@@ -1,25 +1,31 @@
 body,
 html {
   margin: 0%;
+  font-family: "Neonderthaw", cursive;
+  font-family: "Open Sans", sans-serif;
 }
 
 .menu {
   width: 100vw;
   height: 80px;
-  border-bottom: 1px solid gray;
-  box-shadow: 2px 3px 10px -2px #8b8b8b;
   display: flex;
   flex-direction: row;
   align-items: center;
   color: #767676;
   font-size: 30px;
+  border-bottom: 1px solid #f6f6f6;
+  box-shadow: 0px 0px 6px -2px #bdbdbd;
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+  background-color: white;
 }
 .menu__left {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 5px;
+  padding: 10px;
 }
 .menu__left__logo {
   width: 50px;
@@ -52,11 +58,28 @@ html {
 .menu__left__home:hover {
   cursor: pointer;
 }
-.menu__search {
-  width: 85%;
+.menu__left__home--inpicture {
+  background-color: white;
+  color: black;
 }
-.menu__search input[type=text] {
-  width: 100%;
+.menu__left__home--inpicture:hover {
+  background-color: #e9e9e9;
+  cursor: pointer;
+}
+.menu__search {
+  width: 95%;
+}
+.menu__search .search_feild {
+  position: relative;
+}
+.menu__search .search_feild .fa-search {
+  position: absolute;
+  font-size: 15px;
+  top: 16px;
+  left: 8px;
+}
+.menu__search .search_feild input[type=text] {
+  width: 95%;
   padding: 6px;
   border: none;
   margin-top: 8px;
@@ -65,18 +88,11 @@ html {
   background-color: #efefef;
   border-radius: 20px;
 }
-.menu__search input[type=text] #input_img {
-  position: absolute;
-  bottom: 12px;
-  left: 180px;
-  width: 10px;
-  height: 10px;
-}
-.menu__search input[type=text]:hover {
+.menu__search .search_feild input[type=text]:hover {
   background-color: #dfdfdf;
 }
 .menu__icons {
-  padding: 0px 30px;
+  padding: 0px 0px;
   width: 200px;
   display: flex;
   justify-content: space-between;
@@ -152,8 +168,14 @@ html {
   margin: auto;
 }
 
+.filler {
+  width: 100vw;
+  height: 80px;
+}
+
 .content {
-  margin-top: 15px;
+  width: 90vw;
+  margin: auto;
   column-width: 250px;
   -webkit-column-break-inside: avoid;
 }
@@ -161,13 +183,20 @@ html {
 .img_container {
   width: 250px;
   -webkit-column-break-inside: avoid;
-}
-.img_container:hover {
-  filter: brightness(0.5);
+  position: relative;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
 }
 .img_container img {
   width: 100%;
   border-radius: 30px;
+}
+.img_container:hover {
+  cursor: pointer;
+  filter: brightness(0.5);
+}
+.img_container:hover .img_container__save {
+  opacity: 1;
 }
 .img_container p {
   padding-left: 10px;
@@ -178,7 +207,7 @@ html {
   display: flex;
   flex-direction: column;
   bottom: 20px;
-  right: 20px;
+  right: 50px;
   row-gap: 10px;
   font-size: 30px;
   text-align: center;
@@ -199,4 +228,153 @@ html {
   background-color: white;
   border-radius: 50%;
   border: 1px solid ghostwhite;
+}
+
+.picture_card {
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 40px;
+  box-shadow: 0px 0px 6px -2px #b9b9b9;
+  border-radius: 40px;
+  display: flex;
+}
+.picture_card img {
+  border-radius: 40px;
+  padding: 20px;
+  width: 50%;
+}
+.picture_card .text_wrapper {
+  padding: 20px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.picture_card .text_wrapper__icon_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.picture_card .text_wrapper__icon_wrapper__left {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  align-items: center;
+}
+.picture_card .text_wrapper__icon_wrapper__left__menu {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.picture_card .text_wrapper__icon_wrapper__left__menu:hover {
+  background-color: #e9e9e9;
+  cursor: pointer;
+}
+.picture_card .text_wrapper__icon_wrapper__left__send {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.picture_card .text_wrapper__icon_wrapper__left__send:hover {
+  background-color: #e9e9e9;
+  cursor: pointer;
+}
+.picture_card .text_wrapper__icon_wrapper__left__link {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.picture_card .text_wrapper__icon_wrapper__left__link:hover {
+  background-color: #e9e9e9;
+  cursor: pointer;
+}
+.picture_card .text_wrapper__icon_wrapper__right {
+  display: flex;
+  width: 180px;
+  justify-content: space-between;
+  align-items: center;
+}
+.picture_card .text_wrapper__icon_wrapper__right .save {
+  background-color: #e60023;
+  border: none;
+  padding: 12px 15px;
+  font-size: 15px;
+  border-radius: 40px;
+  color: white;
+  font-weight: bolder;
+}
+.picture_card .text_wrapper__icon_wrapper__right .save:hover {
+  background-color: #a30018;
+}
+.picture_card .text_wrapper .divider {
+  height: 60px;
+}
+.picture_card .text_wrapper__wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.picture_card .text_wrapper__wrap__post_user {
+  display: flex;
+  align-items: center;
+}
+.picture_card .text_wrapper__wrap__post_user img {
+  width: 50px;
+  border-radius: 50%;
+}
+.picture_card .text_wrapper__wrap__post_user__container {
+  display: flex;
+  flex-direction: column;
+}
+.picture_card .text_wrapper__wrap__post_user__container h6 {
+  margin: 0%;
+  padding: 0%;
+}
+.picture_card .text_wrapper__wrap__post_user__container p {
+  margin: 0%;
+  padding: 0%;
+}
+.picture_card .text_wrapper__wrap .follow {
+  border: none;
+  background-color: #efefef;
+  width: 80px;
+  height: 50px;
+  font-size: 15px;
+  border-radius: 40px;
+  font-weight: bolder;
+}
+.picture_card .text_wrapper__wrap .follow:hover {
+  background-color: #cfcfcf;
+}
+.picture_card .text_wrapper__comments__header {
+  display: flex;
+  align-items: center;
+}
+.picture_card .text_wrapper__comments__header h3 {
+  font-weight: bold;
+  padding-right: 10px;
+}
+.picture_card .text_wrapper__comments__add {
+  display: flex;
+}
+.picture_card .text_wrapper__comments__add input {
+  border: 1px solid #d8d8d8;
+  border-radius: 40px;
+  width: 70%;
+}
+
+.morelikethis {
+  width: fit-content;
+  padding-top: 40px;
+  margin: auto;
 }
