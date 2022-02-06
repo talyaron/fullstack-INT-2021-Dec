@@ -240,11 +240,16 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-template-rows: auto;
     grid-auto-flow: dense;
-    background-color: greenyellow;
+    background-color: rgb(255, 255, 255);
+    grid-gap: 10px;
 
     .item{
         display: flex;
         flex-direction: column;
+        img{
+            border-radius: 10%;
+        }
+
 
     }
 }
