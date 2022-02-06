@@ -55,11 +55,34 @@ body .split .content-holder .profile {
 body .split .content-holder .profile .profile-left {
   display: flex;
 }
+body .split .content-holder .profile .profile-left .profile__image {
+  cursor: pointer;
+}
+body .split .content-holder .profile .profile-left .profile__image img {
+  transition: opacity 0.2s ease-in-out;
+}
+body .split .content-holder .profile .profile-left .profile__image img:hover {
+  opacity: 0.8;
+}
 body .split .content-holder .profile .profile-left .profile-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0 0.75em;
+  transition: opacity 0.2s ease-in-out;
+}
+body .split .content-holder .profile .profile-left .profile-content__username {
+  font-weight: 700;
+  cursor: pointer;
+}
+body .split .content-holder .profile .profile-left .profile-content__username:hover {
+  opacity: 0.8;
+}
+body .split .content-holder .profile .profile-left .profile-content__followers {
+  cursor: pointer;
+}
+body .split .content-holder .profile .profile-left .profile-content__followers:hover {
+  opacity: 0.8;
 }
 body .split .content-holder .profile .profile__follow {
   display: flex;
