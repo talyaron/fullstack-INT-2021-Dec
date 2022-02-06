@@ -83,12 +83,63 @@ body .grid-wrapper .item {
   /* GIF'S */
   /* FROFILE CAPTION (UNDER IMAGE) */
 }
+html .grid-wrapper .item .mydivouter,
+body .grid-wrapper .item .mydivouter {
+  position: relative;
+  background: black;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+html .grid-wrapper .item .first,
+html .grid-wrapper .item .second,
+html .grid-wrapper .item .third,
 html .grid-wrapper .item img,
+body .grid-wrapper .item .first,
+body .grid-wrapper .item .second,
+body .grid-wrapper .item .third,
 body .grid-wrapper .item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
+}
+html .grid-wrapper .item .first:hover,
+html .grid-wrapper .item .second:hover,
+html .grid-wrapper .item .third:hover,
+html .grid-wrapper .item img:hover,
+body .grid-wrapper .item .first:hover,
+body .grid-wrapper .item .second:hover,
+body .grid-wrapper .item .third:hover,
+body .grid-wrapper .item img:hover {
+  opacity: 0.6;
+}
+html .grid-wrapper .item .mydivoverlap,
+body .grid-wrapper .item .mydivoverlap {
+  position: relative;
+  z-index: 1;
+}
+html .grid-wrapper .item .mybuttonoverlap,
+body .grid-wrapper .item .mybuttonoverlap {
+  position: absolute;
+  z-index: 2;
+  top: 2em;
+  display: none;
+  right: 2em;
+}
+html .grid-wrapper .item .mydivouter:hover .mybuttonoverlap,
+body .grid-wrapper .item .mydivouter:hover .mybuttonoverlap {
+  display: block;
+}
+html .grid-wrapper .item .btn,
+body .grid-wrapper .item .btn {
+  width: 5em;
+  height: 3em;
+  background-color: red;
+  color: white;
+  padding: 0.5em;
+  border: none;
+  border-radius: 50px;
 }
 html .grid-wrapper .item .gif,
 body .grid-wrapper .item .gif {

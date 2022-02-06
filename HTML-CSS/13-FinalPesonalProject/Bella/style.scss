@@ -71,11 +71,47 @@
             .item {
                 display: flex;
                 flex-direction: column;
+                .mydivouter {
+                    position: relative;
+                    background: rgb(0, 0, 0);
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 20px;
+                }
+                .first,
+                .second,
+                .third,
                 img {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                     border-radius: 20px;
+                    &:hover {
+                        opacity: 0.6;
+                    }
+                }
+                .mydivoverlap {
+                    position: relative;
+                    z-index: 1;
+                }
+                .mybuttonoverlap {
+                    position: absolute;
+                    z-index: 2;
+                    top: 2em;
+                    display: none;
+                    right: 2em;
+                }
+                .mydivouter:hover .mybuttonoverlap {
+                    display: block;
+                }
+                .btn {
+                    width: 5em;
+                    height: 3em;
+                    background-color: red;
+                    color: white;
+                    padding: 0.5em;
+                    border: none;
+                    border-radius: 50px;
                 }
                 .gif {
                     width: 100%;
