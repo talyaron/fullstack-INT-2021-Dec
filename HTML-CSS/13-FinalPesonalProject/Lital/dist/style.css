@@ -210,3 +210,6 @@ body {
 .wrapper .grid_container .item img {
   border-radius: 10%;
 }
+.wrapper .grid_container .item1 {
+  display: 0;
+}
