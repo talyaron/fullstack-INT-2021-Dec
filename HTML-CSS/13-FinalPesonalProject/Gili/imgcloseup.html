@@ -8,17 +8,22 @@
     <title>Gili Pinterest</title>
     <link rel="stylesheet" href="dist/style.css">
     <script src="https://kit.fontawesome.com/ef6c5070b7.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&family=Open+Sans:wght@300;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <div class="filler"></div>
-
     <nav class="menu">
         <div class="menu__left">
             <div class="menu__left__logo"><img src="https://cdn.worldvectorlogo.com/logos/pinterest-1.svg" alt=""
                     srcset="">
             </div>
-            <a href="index.html"><button class="menu__left__home">Home</button></a>
+            <a href="index.html"><button class="menu__left__home menu__left__home--inpicture">Home</button></a>
         </div>
         <div class="menu__search">
             <input id="input" type="text" placeholder="Search">
@@ -32,14 +37,66 @@
             <div class="menu__icons__more_user"><i class="fas fa-chevron-down"></i></div>
         </div>
     </nav>
+
+
+    <div class="picture_card">
+        <img src="https://i.pinimg.com/564x/16/39/a3/1639a34da156b0fe98f3b6024edf2ba8.jpg" alt="" srcset="">
+        <div class="text_wrapper">
+            <div class="text_wrapper__icon_wrapper">
+                <div class="text_wrapper__icon_wrapper__left">
+                    <div class="text_wrapper__icon_wrapper__left__menu">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                    <div class="text_wrapper__icon_wrapper__left__send">
+                        <i class="fas fa-upload"></i>
+                    </div>
+                    <div class="text_wrapper__icon_wrapper__left__link">
+                        <i class="fas fa-link"></i>
+                    </div>
+                </div>
+                <div class="text_wrapper__icon_wrapper__right">
+                    <h3>Board</h3>
+                    <i class="fas fa-chevron-down"></i>
+                    <button class="save">Save</button>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="text_wrapper__wrap">
+                <div class="text_wrapper__wrap__post_user">
+                    <img src="https://i.pinimg.com/564x/0b/97/60/0b9760a926461c9a1cee7f27a12bee86.jpg" alt="" srcset="">
+                    <div class="text_wrapper__wrap__post_user__container">
+                        <h6>Gili Ellen</h6>
+                        <p>895 followers</p>
+                    </div>
+                </div>
+                <button class="follow">Follow</button>
+            </div>
+            <div class="divider"></div>
+            <div class="text_wrapper__comments">
+                <div class="text_wrapper__comments__header">
+                    <h3>Comments</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <p>Share feedback, ask a question or give a high five</p>
+                <div class="text_wrapper__comments__add">
+                    <div class="menu__icons__user">
+                        <div class="menu__icons__user__container">G</div>
+                    </div>
+                    <input type="text">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="morelikethis">
+        <h4>More like this</h4>
+    </div>
     <div class="content">
 
-        <a href="imgcloseup.html" style="text-decoration: none; color: black;">
-            <div class="img_container">
-                <img src="https://i.pinimg.com/236x/16/39/a3/1639a34da156b0fe98f3b6024edf2ba8.jpg" alt="Gili" srcset="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-        </a>
+        <div class="img_container">
+            <img src="https://i.pinimg.com/236x/16/39/a3/1639a34da156b0fe98f3b6024edf2ba8.jpg" alt="Gili" srcset="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
         <div class="img_container">
             <img src="https://i.pinimg.com/236x/c3/5b/38/c35b38c7cd540e13cad07c881a84ed67.jpg" alt="" srcset="">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -137,13 +194,6 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
     </div>
-
-    <div class="menu_buttons">
-        <div class="menu_buttons__plus"><i class="fas fa-plus"></i></div>
-        <div class="menu_buttons__question"><i class="fas fa-question"></i></div>
-    </div>
-
-
 </body>
 
 </html>
