@@ -27,3 +27,4 @@ console.log(b);
 
 c = a*(b/b)+c*b
 console.log(c);
+

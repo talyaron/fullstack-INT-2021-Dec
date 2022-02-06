@@ -380,9 +380,7 @@ html {
 }
 
 .mobile_menu {
-  margin: auto;
   width: 100%;
-  height: 50px;
   display: none;
 }
 .mobile_menu__container {
@@ -431,5 +429,21 @@ html {
 
   .mobile_menu {
     display: contents;
+  }
+
+  .picture_card {
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0px;
+    display: flex;
+    margin: 0%;
+    padding: 0%;
+    flex-direction: column;
+  }
+  .picture_card img {
+    border-radius: 0px;
+    padding: none;
+    width: 100%;
+    padding: 0%;
   }
 }
