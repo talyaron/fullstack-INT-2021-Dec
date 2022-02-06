@@ -49,12 +49,36 @@ body{
                 height: 4em;
                 .profile-left{
                     display: flex;
+
+                    .profile__image{
+                        cursor: pointer;
+                        img{
+                            transition: opacity .2s ease-in-out;
+                            &:hover{
+                                opacity: .8;
+                            }
+                        }
+                    }
                     
                     .profile-content{
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
                         padding: 0 .75em;
+                        transition: opacity .2s ease-in-out;
+                        &__username{
+                            font-weight: 700;
+                            cursor: pointer;
+                            &:hover{
+                                opacity: .8;
+                            }
+                        }
+                        &__followers{
+                            cursor: pointer;
+                            &:hover{
+                                opacity: .8;
+                            }
+                        }
                     }
                 }
                 .profile__follow{
@@ -152,9 +176,26 @@ body{
                 .item{
                     .item-content{
                         font-size: 1.25rem;
+                        padding: .25em;
                     }
                 }
             }
+        }
+    }
+}
+
+@media (min-width: 1200px){
+    body{
+        .split{
+            padding: 7em 10rem 2em;
+        }
+    }
+}
+
+@media(min-width:1600px){
+    body{
+        .split{
+            padding: 7em 30rem 2em;
         }
     }
 }
