@@ -28,3 +28,17 @@ console.log(b);
 c = a*(b/b)+c*b
 console.log(c);
 
+var x: number = 4;
+x = x + 6;
+
+var y: string = 'if you want to shoot shoot dont talk';
+y = "2";
+y = '4556';
+
+var f: boolean = true;
+
+var z: any =  4;
+z = 'treet';
+
+
+
