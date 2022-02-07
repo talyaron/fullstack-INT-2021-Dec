@@ -195,9 +195,6 @@ html {
   cursor: pointer;
   filter: brightness(0.5);
 }
-.img_container:hover .img_container__save {
-  opacity: 1;
-}
 .img_container p {
   padding-left: 10px;
 }
