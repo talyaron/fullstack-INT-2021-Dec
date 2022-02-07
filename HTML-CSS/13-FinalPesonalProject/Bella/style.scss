@@ -12,6 +12,7 @@
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
+                flex-wrap: wrap;
                 height: 80px;
                 width: 100vw;
                 background-color: white;
@@ -55,7 +56,7 @@
                     margin-left: 0.5em;
                 }
                 #site-search {
-                    width: 1240px;
+                    width: 95em;
                     height: 48px;
                     background-color: rgb(233, 233, 233);
                     border: none;
@@ -82,6 +83,30 @@
                     }
                     .profile {
                         padding-left: 0.3em;
+                    }
+                }
+                .my-button {
+                    background-color: transparent;
+                    border: 10px;
+                    color: black;
+                    cursor: pointer;
+                    font-size: 30px;
+                    margin-left: 32px;
+                    float: left;
+                    line-height: 70px;
+                    display: none;
+                }
+                @media (max-width: 800px) {
+                    .left-nav {
+                        display: none;
+                        flex-direction: column;
+                    }
+                    .my-button {
+                        display: block;
+                    }
+                    #site-search,
+                    .search {
+                        display: none;
                     }
                 }
             }
