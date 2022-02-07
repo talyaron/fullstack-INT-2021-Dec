@@ -14,21 +14,40 @@
     <!--top-nav-bar-->
     <nav class="nav-bar">
         <div class="left-nav inline">
-            <div class="logo"></div>
+            <div class="logo">
+                <svg class="logo--pin" height="24" width="24" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img">
+                    <path
+                        d="M0 12c0 5.123 3.211 9.497 7.73 11.218-.11-.937-.227-2.482.025-3.566.217-.932 1.401-5.938 1.401-5.938s-.357-.715-.357-1.774c0-1.66.962-2.9 2.161-2.9 1.02 0 1.512.765 1.512 1.682 0 1.025-.653 2.557-.99 3.978-.281 1.189.597 2.159 1.769 2.159 2.123 0 3.756-2.239 3.756-5.471 0-2.861-2.056-4.86-4.991-4.86-3.398 0-5.393 2.549-5.393 5.184 0 1.027.395 2.127.889 2.726a.36.36 0 0 1 .083.343c-.091.378-.293 1.189-.332 1.355-.053.218-.173.265-.4.159-1.492-.694-2.424-2.875-2.424-4.627 0-3.769 2.737-7.229 7.892-7.229 4.144 0 7.365 2.953 7.365 6.899 0 4.117-2.595 7.431-6.199 7.431-1.211 0-2.348-.63-2.738-1.373 0 0-.599 2.282-.744 2.84-.282 1.084-1.064 2.456-1.549 3.235C9.584 23.815 10.77 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12">
+                    </path>
+                </svg>
+            </div>
             <div class="home-btn">Home</div>
             <i class="material-icons search">search</i>
-            <input type="search" id="site-search" name="search" placeholder="Search">
+            <input class="search" type="search" id="site-search" name="search" placeholder="Search">
         </div>
         <div class="right-nav inline">
-            <div class="notifications"></div>
-            <div class="inbox"></div>
-            <div class="profile"></div>
+            <div class="notifications icon">
+                <svg height="24" width="24" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img"><path d="M12 24c-1.66 0-3-1.34-3-3h6c0 1.66-1.34 3-3 3zm7-10.83c1.58 1.52 2.67 3.55 3 5.83H2c.33-2.28 1.42-4.31 3-5.83V7c0-3.87 3.13-7 7-7s7 3.13 7 7v6.17z"></path></svg>
+            </div>
+            <div class="inbox icon">
+                <svg height="24" width="24" viewBox="0 0 24 24" aria-hidden="true" aria-label="" role="img"><path d="M18 12.5a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 18 12.5m-6 0a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 12 12.5m-6 0a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 6 12.5M12 0C5.925 0 1 4.925 1 11c0 2.653.94 5.086 2.504 6.986L2 24l5.336-3.049A10.93 10.93 0 0 0 12 22c6.075 0 11-4.925 11-11S18.075 0 12 0"></path></svg>
+            </div>
+            <div class="profile icon">
+                <svg height="29" width="29" viewBox="0 0 24 24">
+                    <circle cx="7.884" cy="11.397" r="0.699"></circle>
+                    <circle  cx="12.076" cy="11.397" r="0.699"></circle>
+                    <path d="M17.685,5.808c-0.257,0-0.502,0.053-0.73,0.139C16.64,2.737,13.649,0.219,10,0.219c-3.649,0-6.64,2.518-6.955,5.728c-0.228-0.086-0.473-0.139-0.73-0.139c-1.153,0-2.096,0.943-2.096,2.096v3.493c0,1.153,0.943,2.096,2.096,2.096c0.28,0,0.547-0.058,0.792-0.158c0.113,1.088,0.304,1.795,0.585,2.254c0.539,0.834,4.139,4.192,6.288,4.192c2.149,0,5.751-3.361,6.272-4.167c0.292-0.476,0.488-1.196,0.602-2.296c0.255,0.112,0.536,0.175,0.831,0.175c1.153,0,2.096-0.943,2.096-2.096V7.904C19.781,6.751,18.838,5.808,17.685,5.808zM15.078,14.855c-0.482,0.746-3.715,3.529-5.099,3.529s-4.616-2.783-5.097-3.525c-0.319-0.521-0.444-1.919-0.489-3.297c0.004-0.055,0.017-0.108,0.017-0.164V8.603c0-0.04,0.005-0.078,0.006-0.118C4.779,8.56,5.156,8.603,5.545,8.603c1.994,0,3.706-1.037,4.455-2.519c0.749,1.482,2.461,2.519,4.455,2.519c0.389,0,0.766-0.043,1.128-0.118c0.001,0.039,0.006,0.078,0.006,0.118c0,0.077-0.008,0.152-0.012,0.229C15.598,10.276,15.641,13.938,15.078,14.855z"></path>
+                </svg>
+            </div>
         </div>
     </nav>
     <!--photo-grid-->
     <div class="grid-wrapper">
         <div class="item XL">
-            <img src="https://images.unsplash.com/photo-1541845157-a6d2d100c931?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1541845157-a6d2d100c931?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
             <div class="inline">
                 <div class="avatar"></div>
                 <h4>Alex A | UI/UX Design...
@@ -41,23 +60,31 @@
                 <h4>1.7 K</h4>
             </div>
         </div>
-        <div class="item ">
-            <div class="mydivouter">
-                <button type="button" class="mybuttonoverlap btn btn-info">Save</button>
+        <div class="item">
+            <div class="card">
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
                 <div class="gif first"></div>
             </div>
-
         </div>
         <div class="item XXL">
-            <div class="gif second"></div>
+            <div class="card">
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                <div class="gif second"></div>
+            </div>
         </div>
 
         <div class="item">
-            <img src="https://images.unsplash.com/photo-1588282322673-c31965a75c3e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1351&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1588282322673-c31965a75c3e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1351&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
         </div>
 
         <div class="item">
-            <img src="https://images.unsplash.com/photo-1587588354456-ae376af71a25?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1587588354456-ae376af71a25?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
             <div class="inline">
                 <div class="avatar"></div>
                 <h4>Alex A | UI/UX Design...
@@ -71,7 +98,10 @@
             </div>
         </div>
         <div class="item ">
-            <div class="gif third"></div>
+            <div class="card">
+                <div class="gif third"></div>
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
             <div class="inline">
                 <div class="avatar"></div>
                 <h4>Alex A | UI/UX Design...
@@ -85,10 +115,16 @@
             </div>
         </div>
         <div class="item">
-            <img src="https://images.unsplash.com/photo-1588263823647-ce3546d42bfe?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=675&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1588263823647-ce3546d42bfe?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=675&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
         </div>
         <div class="item">
-            <img src=" https://images.unsplash.com/photo-1558980663-3685c1d673c4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=60" alt="" />
+            <div class="card">
+                <img src=" https://images.unsplash.com/photo-1558980663-3685c1d673c4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=60" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
             <div class="inline">
                 <div class="avatar"></div>
                 <h4>Alex A | UI/UX Design...
@@ -102,10 +138,16 @@
             </div>
         </div>
         <div class="item">
-            <img src="https://images.unsplash.com/photo-1588499756884-d72584d84df5?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2134&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1588499756884-d72584d84df5?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2134&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
         </div>
         <div class="item">
-            <img src="https://images.unsplash.com/photo-1588492885706-b8917f06df77?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1951&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1588492885706-b8917f06df77?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1951&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
             <div class="inline">
                 <div class="avatar"></div>
                 <h4>Alex A | UI/UX Design...
@@ -119,10 +161,16 @@
             </div>
         </div>
         <div class="item">
-            <img src="https://images.unsplash.com/photo-1588247866001-68fa8c438dd7?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=564&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1588247866001-68fa8c438dd7?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=564&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
         </div>
         <div class="item">
-            <img src="https://images.unsplash.com/photo-1586521995568-39abaa0c2311?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1586521995568-39abaa0c2311?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
             <div class="inline">
                 <div class="avatar"></div>
                 <h4>Alex A | UI/UX Design...
@@ -136,10 +184,16 @@
             </div>
         </div>
         <div class="item">
-            <img src="https://images.unsplash.com/photo-1572914857229-37bf6ee8101c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1951&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1572914857229-37bf6ee8101c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1951&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
         </div>
         <div class="item">
-            <img src="https://images.unsplash.com/photo-1588453862014-cd1a9ad06a12?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1588453862014-cd1a9ad06a12?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
             <div class="inline">
                 <div class="avatar"></div>
                 <h4>Alex A | UI/UX Design...
@@ -153,10 +207,16 @@
             </div>
         </div>
         <div class="item XXL">
-            <img src="https://images.unsplash.com/photo-1588263823647-ce3546d42bfe?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=675&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1588263823647-ce3546d42bfe?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=675&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
         </div>
         <div class="item">
-            <img src="https://images.unsplash.com/photo-1588414734732-660b07304ddb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=675&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1588414734732-660b07304ddb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=675&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
             <div class="inline">
                 <div class="avatar"></div>
                 <h4>Alex A | UI/UX Design...
@@ -170,10 +230,16 @@
             </div>
         </div>
         <div class="item XL">
-            <img src="https://images.unsplash.com/photo-1588224575346-501f5880ef29?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1588224575346-501f5880ef29?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
         </div>
         <div class="item">
-            <img src="https://images.unsplash.com/photo-1574798834926-b39501d8eda2?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1574798834926-b39501d8eda2?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
             <div class="inline">
                 <div class="avatar"></div>
                 <h4>Alex A | UI/UX Design...
@@ -187,7 +253,10 @@
             </div>
         </div>
         <div class="item XXL">
-            <img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1353&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1353&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
             <div class="inline">
                 <div class="avatar"></div>
                 <h4>Alex A | UI/UX Design...
@@ -201,7 +270,10 @@
             </div>
         </div>
         <div class="item XXL">
-            <img src="https://images.unsplash.com/photo-1588263823647-ce3546d42bfe?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=675&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1588263823647-ce3546d42bfe?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=675&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
             <div class="inline">
                 <div class="avatar"></div>
                 <h4>Alex A | UI/UX Design...
@@ -215,7 +287,10 @@
             </div>
         </div>
         <div class="item XL">
-            <img src="https://images.unsplash.com/photo-1587732608058-5ccfedd3ea63?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1587732608058-5ccfedd3ea63?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
             <div class="inline">
                 <div class="avatar"></div>
                 <h4>Alex A | UI/UX Design...
@@ -229,10 +304,16 @@
             </div>
         </div>
         <div class="item">
-            <img src="https://images.unsplash.com/photo-1587897773780-fe72528d5081?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1489&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1587897773780-fe72528d5081?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1489&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
         </div>
         <div class="item XXL">
-            <img src="https://images.unsplash.com/photo-1588083949404-c4f1ed1323b3?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1489&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1588083949404-c4f1ed1323b3?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1489&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
             <div class="inline">
                 <div class="avatar"></div>
                 <h4>Alex A | UI/UX Design...
@@ -246,7 +327,10 @@
             </div>
         </div>
         <div class="item">
-            <img src="https://images.unsplash.com/photo-1553984840-b8cbc34f5215?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1553984840-b8cbc34f5215?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
             <div class="inline">
                 <div class="avatar"></div>
                 <h4>Alex A | UI/UX Design...
@@ -260,17 +344,29 @@
             </div>
         </div>
         <div class="item">
-            <img src="https://images.unsplash.com/photo-1587572236558-a3751c6d42c0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1587572236558-a3751c6d42c0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
         </div>
         <div class="item XXL">
-            <img src="https://images.unsplash.com/photo-1583542225715-473a32c9b0ef?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1583542225715-473a32c9b0ef?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
         </div>
         <div class="item XL">
-            <img src="https://images.unsplash.com/photo-1527928159272-7d012024eb74?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1527928159272-7d012024eb74?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
         </div>
 
         <div class="item XL">
-            <img src="https://images.unsplash.com/photo-1433446787703-42d5bf446876?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1351&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1433446787703-42d5bf446876?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1351&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
             <div class="inline">
                 <div class="avatar"></div>
                 <h4>Alex A | UI/UX Design...
@@ -284,10 +380,16 @@
             </div>
         </div>
         <div class="item">
-            <img src="https://images.unsplash.com/photo-1541187714594-731deadcd16a?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1541187714594-731deadcd16a?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
         </div>
         <div class="item">
-            <img src="https://images.unsplash.com/photo-1587588354456-ae376af71a25?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1587588354456-ae376af71a25?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
             <div class="inline">
                 <div class="avatar"></div>
                 <h4>Alex A | UI/UX Design...
@@ -301,7 +403,10 @@
             </div>
         </div>
         <div class="item XXL">
-            <img src="https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
             <div class="inline">
                 <div class="avatar"></div>
                 <h4>Alex A | UI/UX Design...
@@ -315,13 +420,22 @@
             </div>
         </div>
         <div class="item">
-            <img src="https://images.unsplash.com/photo-1421930866250-aa0594cea05c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1355&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1421930866250-aa0594cea05c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1355&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
         </div>
         <div class="item XL">
-            <img src="https://images.unsplash.com/photo-1493306454986-c8877a09cbeb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1381&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1493306454986-c8877a09cbeb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1381&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
         </div>
         <div class="item">
-            <img src="https://images.unsplash.com/photo-1536466528142-f752ae7bdd0c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1536466528142-f752ae7bdd0c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
             <div class="inline">
                 <div class="avatar"></div>
                 <h4>Alex A | UI/UX Design...
@@ -335,7 +449,10 @@
             </div>
         </div>
         <div class="item XXL">
-            <img src="https://images.unsplash.com/photo-1588117472013-59bb13edafec?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1588117472013-59bb13edafec?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="">
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
             <div class="inline">
                 <div class="avatar"></div>
                 <h4>Alex A | UI/UX Design...
@@ -349,7 +466,10 @@
             </div>
         </div>
         <div class="item">
-            <img src="https://images.unsplash.com/photo-1588282322673-c31965a75c3e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1351&amp;q=80" alt="" />
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1588282322673-c31965a75c3e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1351&amp;q=80" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
             <div class="inline">
                 <div class="avatar"></div>
                 <h4>Alex A | UI/UX Design...
@@ -363,6 +483,9 @@
             </div>
         </div>
         <div class="item XXL">
-            <img src=" https://images.unsplash.com/photo-1558980663-3685c1d673c4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=60" alt="" />
+            <div class="card">
+                <img src=" https://images.unsplash.com/photo-1558980663-3685c1d673c4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=60" alt="" />
+                <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+            </div>
         </div>
     </div>
