@@ -2,28 +2,52 @@ html, body {
   margin: 0;
   padding: 0;
   font-size: 20px;
+  background-color: #3d3fc7;
 }
-
-.wrapper {
-  width: 100vw;
-  height: 100vh;
-  background-color: gray;
-}
-.wrapper .nav_bar {
+html .nav_bar, body .nav_bar {
   position: fixed;
   width: 100vw;
   height: 70px;
   background-color: #fdf6f6;
   top: 0;
 }
+html .nav_bar .btn_save, body .nav_bar .btn_save {
+  border-radius: 20px;
+  padding: 15px 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+html .nav_bar i, body .nav_bar i {
+  flex-direction: row;
+  margin: 30px;
+}
 
-.grid-wrapper {
-  padding: 2em 8em;
-  display: grid;
-  grid-gap: 20px;
-  row-gap: 2.8em;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-template-rows: auto;
-  grid-auto-flow: dense;
-  padding-top: 6em;
+:root {
+  --card_width: 250px;
+  --card_border_radius: 16px;
+  --row_increment: 10px;
+  --card_small: 26px;
+  --card_medium: 33px;
+  --card_large: 45px;
+}
+
+.pin_container .card {
+  padding: 0px;
+  margin: 15px 10px;
+  border-radius: var(--card_border_radius);
+  background-color: #b81717;
+}
+
+.card_small {
+  grid-row-end: span var(--card_small);
+}
+
+.card_medium {
+  grid-row-end: span var(--card_medium);
+}
+
+.card_large {
+  grid-row-end: span var(--card_large);
 }
