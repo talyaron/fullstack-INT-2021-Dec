@@ -8,7 +8,9 @@ body {
   width: 100%;
 }
 
-a :visited, a:active, a:link {
+a :visited,
+a:active,
+a:link {
   text-decoration: none;
 }
 
@@ -22,6 +24,7 @@ a :visited, a:active, a:link {
   font-size: 2.16rem;
   align-items: center;
   background-color: #ffffff;
+  border-bottom: 0.8px solid #d3d3d3;
 }
 .header__left {
   display: flex;
@@ -82,6 +85,9 @@ a :visited, a:active, a:link {
 .header .btn__home__img:hover {
   background-color: #efefef;
 }
+.header .btn__home__img:active {
+  background-color: #cccccc;
+}
 .header .btn__avatar {
   display: flex;
 }
@@ -105,4 +111,123 @@ a :visited, a:active, a:link {
   margin: 0 auto;
   width: 100%;
   height: 1000px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+}
+.main .post .photo {
+  border-radius: 20px;
+  width: 100%;
+  height: 300px;
+  cursor: zoom-in;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 1s;
+}
+.main .post .photo:hover .photo__menu {
+  display: flex;
+}
+.main .post .photo__menu {
+  display: none;
+  background-color: #0000005d;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main .post .photo__menu .buttons_top {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+  align-items: center;
+}
+.main .post .photo__menu .buttons_bottom {
+  display: flex;
+  justify-content: end;
+  margin: 15px;
+}
+.main .post .photo__menu .btn {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 5px;
+  cursor: pointer;
+}
+.main .post .photo__menu .btn__save {
+  background-color: #e50124;
+  border-radius: 20px;
+  padding: 10px;
+}
+.main .post .photo__menu .btn__save:hover {
+  background-color: #9b0017;
+}
+.main .post .photo__menu .btn__share, .main .post .photo__menu .btn__more {
+  background-color: #efefef;
+  border-radius: 50%;
+  color: #111111;
+  padding: 15px;
+}
+.main .post .photo__menu .btn__share:hover, .main .post .photo__menu .btn__more:hover {
+  background-color: #dbdbdb;
+}
+.main .post .photo__1 {
+  background-image: url("https://i.ibb.co/rFc5BHP/img1.jpg");
+}
+.main .post .photo__2 {
+  background-image: url("https://i.ibb.co/YTpf3N5/img2.jpg");
+}
+.main .post .photo__3 {
+  background-image: url("https://i.ibb.co/rvBkRJZ/img3.jpg");
+}
+.main .post .photo__4 {
+  background-image: url("https://i.ibb.co/4stCx2R/img4.jpg");
+}
+.main .post .photo__5 {
+  background-image: url("https://i.ibb.co/9wMqf1T/img5.jpg");
+}
+.main .post .photo__6 {
+  background-image: url("https://i.ibb.co/XDKZfDm/img6.jpg");
+}
+.main .post .photo__7 {
+  background-image: url("https://i.ibb.co/zrNvhqT/img7.jpg");
+}
+.main .post .photo__8 {
+  background-image: url("https://i.ibb.co/RD13jkF/img8.jpg");
+}
+.main .post .photo__9 {
+  background-image: url("https://i.ibb.co/dPtpYyZ/Chocolate-Terrine-with-Caramelized-Hazelnuts-Les-Enfants-Rouges-Food-Paris-2014.jpg");
+}
+.main .post .photo__10 {
+  background-image: url("https://i.ibb.co/KN7m6Ph/img10.jpg");
+}
+.main .post .photo__11 {
+  background-image: url("https://i.ibb.co/t8q6zGv/img11.jpg");
+}
+.main .post .photo__12 {
+  background-image: url("https://i.ibb.co/KDrrb43/img12.jpg");
+}
+.main .post .photo__13 {
+  background-image: url("https://i.ibb.co/7zWwSrg/Gluten-Free-Dessert-BLACK-FOREST-Aerated-Chocolate-Griottine-Cherries-Chocolate-Marquise-and-Mint-Ch.jpg");
+}
+.main .post .photo__14 {
+  background-image: url("https://i.ibb.co/tXWJ771/img14.jpg");
+}
+.main .post .photo__15 {
+  background-image: url("https://i.ibb.co/JFKvnyn/img15.jpg");
+}
+.main .post .photo__16 {
+  background-image: url("https://i.ibb.co/QpYdLSs/img16.jpg");
+}
+.main .post .photo__17 {
+  background-image: url("https://i.ibb.co/St1cX3T/img17.jpg");
+}
+.main .post .photo__18 {
+  background-image: url("https://i.ibb.co/S5zqP9r/img18.jpg");
+}
+.main .post .photo__19 {
+  background-image: url("https://i.ibb.co/DWm2mC1/img19.jpg");
+}
+.main .post .photo__20 {
+  background-image: url("https://i.ibb.co/RpqzKGb/img20.jpg");
 }
