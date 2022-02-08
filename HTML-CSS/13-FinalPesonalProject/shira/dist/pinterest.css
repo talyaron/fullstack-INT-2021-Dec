@@ -270,6 +270,11 @@ header .menu__icons__more_user .fa-chevron-down {
     color: #6e6e6e;
     cursor: pointer;
   }
+  .nav_two .footer_container img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
 }
 .big_card {
   display: flex;
