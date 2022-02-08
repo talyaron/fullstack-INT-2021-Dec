@@ -328,6 +328,7 @@ a:link {
         width: 500px;
         height: 500px;
         display: flex;
+        margin: 10px;
         justify-content: space-between;
         .buttons_left{
             font-size: 2rem;
@@ -396,9 +397,15 @@ a:link {
     }
 }
 .footer_desktop{
+    opacity: 0;
     position: fixed;
     right: 20px;
     bottom: 20px;
+    animation-name: footerPopUp;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
     .btn{
         font-size: 3.5rem;
         color:#111111;
@@ -410,10 +417,25 @@ a:link {
         width: 60px;
         text-align: center;
         margin: 10px;
+        line-height: 60px;
         box-shadow: 3px -1px 10px 1px rgb(185, 185, 185)
     }
 }
 
+@keyframes footerPopUp {
+    0%{ 
+        bottom: -150px;
+        opacity: 1;
+    }
+    90%{
+        bottom: 30px;
+        opacity: 1;
+    }
+    100%{
+        bottom: 20px;
+        opacity: 1;
+    }
+}
 // red #e50124
 //home button #111111
 // search background #efefef
