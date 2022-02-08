@@ -1,0 +1,108 @@
+html {
+  font-family: "roboto", "tahoma", sans-serif;
+  font-size: 12px;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+}
+
+a :visited, a:active, a:link {
+  text-decoration: none;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  font-size: 2.16rem;
+  align-items: center;
+  background-color: #ffffff;
+}
+.header__left {
+  display: flex;
+  align-items: center;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+}
+.header .search {
+  width: 100%;
+}
+.header .search #input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 50px;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 30px;
+  background-color: #efefef;
+}
+.header .search #input:hover {
+  background-color: #d3d3d3;
+}
+.header .btn {
+  color: #767676;
+  margin: 6px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 50px;
+  height: 25px;
+  width: 25px;
+  padding: 10px;
+  text-align: center;
+}
+.header .btn:hover {
+  background-color: #efefef;
+}
+.header .btn__logo {
+  color: #e50124;
+  line-height: 20px;
+}
+.header .btn__home {
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #111111;
+  font-size: 1.5rem;
+  width: auto;
+  line-height: 25px;
+}
+.header .btn__home:hover {
+  background-color: #111111;
+}
+.header .btn__home__img {
+  color: #000000;
+  background-color: #ffffff;
+}
+.header .btn__home__img:hover {
+  background-color: #efefef;
+}
+.header .btn__avatar {
+  display: flex;
+}
+.header .btn__avatar span {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000000;
+  background-color: #efefef;
+  border-radius: 50px;
+  width: 50px;
+  text-align: center;
+  padding: 5px;
+  line-height: 16px;
+}
+.header .btn__chevron {
+  font-size: 1.5rem;
+  line-height: 28px;
+}
+
+.main {
+  margin: 0 auto;
+  width: 100%;
+  height: 1000px;
+}

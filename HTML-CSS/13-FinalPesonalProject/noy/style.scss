@@ -1,0 +1,130 @@
+html {
+    font-family: 'roboto', 'tahoma', sans-serif;
+    font-size: 12px;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+
+}
+a :visited, a:active , a:link{
+    text-decoration: none;
+}
+.header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    font-size: 2.16rem;
+    align-items: center;
+    background-color: #ffffff;
+
+    &__left {
+        display: flex;
+        align-items: center;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+
+    .search {
+        width: 100%;
+
+        #input {
+            width: 100%;
+            box-sizing: border-box;
+            height: 50px;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 30px;
+            background-color: #efefef;
+
+            &:hover {
+                background-color: #d3d3d3;
+            }
+        }
+
+    }
+
+    .btn {
+        color: #767676;
+        margin: 6px;
+        cursor: pointer;
+        user-select: none;
+        border-radius: 50px;
+        height: 25px;
+        width: 25px;
+        padding: 10px;
+        text-align: center;
+
+        &:hover {
+            background-color: #efefef;
+        }
+
+        &__logo {
+            color: #e50124;
+            line-height: 20px;
+        }
+
+        &__home {
+            font-weight: 700;
+            color: #ffffff;
+            background-color: #111111;
+            font-size: 1.5rem;
+            width: auto;
+            line-height: 25px;
+
+            &:hover {
+                background-color: #111111;
+            }
+
+            &__img {
+                color: #000000;
+                background-color: #ffffff;
+
+                &:hover {
+                    background-color: #efefef;
+                }
+            }
+        }
+
+        &__avatar {
+            display: flex;
+
+            span {
+                font-size: 1rem;
+                font-weight: 700;
+                color: #000000;
+                background-color: #efefef;
+                border-radius: 50px;
+                width: 50px;
+                text-align: center;
+                padding: 5px;
+                line-height: 16px;
+            }
+
+        }
+
+        &__chevron {
+            font-size: 1.5rem;
+            line-height: 28px;
+        }
+    }
+}
+
+.main {
+    margin: 0 auto;
+    width: 100%;
+    height: 1000px;
+
+}
+
+// red #e50124
+//home button #111111
+// search background #efefef
+//icons #767676
