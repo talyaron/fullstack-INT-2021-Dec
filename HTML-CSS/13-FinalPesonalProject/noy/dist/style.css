@@ -34,21 +34,6 @@ a:link {
   display: flex;
   align-items: center;
 }
-.header .search {
-  width: 100%;
-}
-.header .search #input {
-  width: 100%;
-  box-sizing: border-box;
-  height: 50px;
-  border: none;
-  border-radius: 50px;
-  padding: 10px 30px;
-  background-color: #efefef;
-}
-.header .search #input:hover {
-  background-color: #d3d3d3;
-}
 .header .btn {
   color: #767676;
   margin: 6px;
@@ -62,6 +47,11 @@ a:link {
 }
 .header .btn:hover {
   background-color: #efefef;
+}
+.header .btn__search {
+  display: block;
+  position: relative;
+  bottom: -52px;
 }
 .header .btn__logo {
   color: #e50124;
@@ -106,11 +96,29 @@ a:link {
   font-size: 1.5rem;
   line-height: 28px;
 }
+.header .search {
+  width: 100%;
+  position: relative;
+  top: -27px;
+}
+.header .search #input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 50px;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 50px;
+  background-color: #efefef;
+}
+.header .search #input:hover {
+  background-color: #d3d3d3;
+}
 
 .main {
   margin: 0 auto;
   width: 100%;
-  height: 1000px;
+  height: 100vh;
+  padding: 10px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 15px;
@@ -230,4 +238,45 @@ a:link {
 }
 .main .post .photo__20 {
   background-image: url("https://i.ibb.co/RpqzKGb/img20.jpg");
+}
+
+.footer_mobile {
+  position: fixed;
+  width: 200px;
+  height: 50px;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -100px;
+  border-radius: 50px;
+  background-color: #efefef;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer_mobile .btn {
+  cursor: pointer;
+  font-size: 2rem;
+  color: #767676;
+}
+.footer_mobile .btn__user {
+  color: #111111;
+}
+
+.footer_desktop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+.footer_desktop .btn {
+  font-size: 3.5rem;
+  color: #111111;
+  font-weight: 400;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: #ffffff;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  margin: 10px;
+  box-shadow: 3px -1px 10px 1px #b9b9b9;
 }

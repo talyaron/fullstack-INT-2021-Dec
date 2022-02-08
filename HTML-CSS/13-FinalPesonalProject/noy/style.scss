@@ -37,25 +37,6 @@ a:link {
         align-items: center;
     }
 
-    .search {
-        width: 100%;
-
-        #input {
-            width: 100%;
-            box-sizing: border-box;
-            height: 50px;
-            border: none;
-            border-radius: 50px;
-            padding: 10px 30px;
-            background-color: #efefef;
-
-            &:hover {
-                background-color: #d3d3d3;
-            }
-        }
-
-    }
-
     .btn {
         color: #767676;
         margin: 6px;
@@ -69,6 +50,13 @@ a:link {
 
         &:hover {
             background-color: #efefef;
+        }
+
+        &__search {
+            display: block;
+            position: relative;
+            bottom: -52px;
+
         }
 
         &__logo {
@@ -124,15 +112,39 @@ a:link {
             line-height: 28px;
         }
     }
+
+    .search {
+        width: 100%;
+        position: relative;
+        top: -27px;
+
+
+        #input {
+            width: 100%;
+            box-sizing: border-box;
+            height: 50px;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 50px;
+            background-color: #efefef;
+
+            &:hover {
+                background-color: #d3d3d3;
+            }
+        }
+
+    }
 }
 
 .main {
     margin: 0 auto;
     width: 100%;
-    height: 1000px;
+    height: 100vh;
+    padding: 10px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 15px;
+
     .post {
         .photo {
             border-radius: 20px;
@@ -142,18 +154,19 @@ a:link {
             background-repeat: no-repeat;
             background-size: cover;
             transition: all 1s;
-            &:hover{
-                .photo__menu{
+
+            &:hover {
+                .photo__menu {
                     display: flex;
                 }
             }
+
             &__menu {
                 display: none;
                 background-color: #0000005d;
                 border-radius: 20px;
                 width: 100%;
                 height: 100%;
-                // display: flex;
                 flex-direction: column;
                 justify-content: space-between;
 
@@ -176,26 +189,32 @@ a:link {
                     font-weight: 700;
                     margin: 5px;
                     cursor: pointer;
-                    &__save{
+
+                    &__save {
                         background-color: #e50124;
                         border-radius: 20px;
                         padding: 10px;
-                        &:hover{
+
+                        &:hover {
                             background-color: #9b0017;
                         }
                     }
-                    &__share , &__more{
+
+                    &__share,
+                    &__more {
                         background-color: #efefef;
                         border-radius: 50%;
                         color: #111111;
                         padding: 15px;
-                        &:hover{
+
+                        &:hover {
                             background-color: #dbdbdb;
                         }
                     }
                 }
-                
+
             }
+
             &__1 {
                 background-image: url('https://i.ibb.co/rFc5BHP/img1.jpg');
             }
@@ -276,6 +295,49 @@ a:link {
                 background-image: url('https://i.ibb.co/RpqzKGb/img20.jpg');
             }
         }
+    }
+}
+
+.footer_mobile {
+    position: fixed;
+    width: 200px;
+    height: 50px;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -100px;
+    border-radius: 50px;
+    background-color: #efefef;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .btn {
+        cursor: pointer;
+        font-size: 2rem;
+        color: #767676;
+
+        &__user {
+            color: #111111;
+        }
+
+    }
+}
+.footer_desktop{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    .btn{
+        font-size: 3.5rem;
+        color:#111111;
+        font-weight: 400;
+        border-radius: 50px;
+        cursor: pointer;
+        background-color: #ffffff;
+        height: 60px;
+        width: 60px;
+        text-align: center;
+        margin: 10px;
+        box-shadow: 3px -1px 10px 1px rgb(185, 185, 185)
     }
 }
 
