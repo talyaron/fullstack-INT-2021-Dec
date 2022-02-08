@@ -262,6 +262,9 @@ header .menu__icons__more_user .fa-chevron-down {
     bottom: 15px;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     font-size: 30px;
     align-items: center;
     color: #6e6e6e;

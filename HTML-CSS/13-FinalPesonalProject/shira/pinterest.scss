@@ -279,7 +279,6 @@
             }
         
         
-       
       
     
     @media only screen and (max-width: 950px) {
@@ -315,9 +314,9 @@
                 bottom: 15px;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                // display: flex;
-                // flex-direction: row;
-                // justify-content: space-around;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
                 font-size: 30px;
                 align-items: center;
                 color: #6e6e6e;
