@@ -1,0 +1,134 @@
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  width: 100vw;
+  height: 5rem;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  background-color: white;
+  padding-left: 5%;
+  position: fixed;
+  z-index: 1;
+}
+.navbar img {
+  width: 50px;
+}
+.navbar img:hover {
+  background-color: #b6b5b5;
+  width: 50px;
+  border-radius: 30%;
+}
+.navbar .home {
+  border: none;
+  height: 3rem;
+  width: 5rem;
+  border-radius: 45px;
+  background-color: black;
+  color: white;
+  font-size: 1.3rem;
+}
+.navbar .search {
+  display: flex;
+  align-items: center;
+  background-color: #e7e7e7;
+  height: 3rem;
+  width: 60%;
+  border-radius: 30px;
+  margin-left: 15px;
+}
+.navbar .search .fa-search {
+  width: 2rem;
+  padding-left: 15px;
+  padding-bottom: 2px;
+}
+.navbar .search #site-search {
+  background-color: #e7e7e7;
+  height: 2rem;
+  border-radius: 30px;
+  border: none;
+  align-items: center;
+  font-size: 1.3rem;
+}
+.navbar .right_icons {
+  display: flex;
+}
+.navbar .right_icons ul {
+  display: flex;
+}
+.navbar .right_icons ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  height: 2.7rem;
+  width: 6rem;
+  font-size: 1.5rem;
+}
+.navbar .right_icons ul li:hover {
+  background-color: #b6b5b5;
+  width: 1.7rem;
+  border-radius: 50%;
+}
+.navbar .right_icons .fa-angle-right {
+  transform: rotate(90deg);
+  margin-right: 25px;
+}
+
+.grid-wrapper {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  padding-top: 6em;
+}
+.grid-wrapper .item {
+  display: flex;
+  flex-direction: column;
+}
+.grid-wrapper .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.grid-wrapper .item img:hover {
+  opacity: 0.6;
+}
+.grid-wrapper .item .btn {
+  width: 5em;
+  height: 3em;
+  background-color: red;
+  color: white;
+  padding: 0.5em;
+  border: none;
+  border-radius: 50px;
+}
+
+@media only screen and (max-width: 1440px) {
+  .grid-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .grid-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 440px) {
+  .grid-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

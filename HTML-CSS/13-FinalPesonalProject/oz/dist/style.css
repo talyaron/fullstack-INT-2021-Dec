@@ -1,6 +1,7 @@
-.body {
+html,
+body {
   margin: 0px;
-  width: 100vw;
+  width: 99vw;
 }
 
 .nav-bar {
@@ -8,6 +9,10 @@
   height: 60px;
   display: flex;
   align-items: center;
+  background-color: white;
+  position: relative;
+  position: fixed;
+  box-shadow: 0px 0px 10px 0px #d1d1d1;
 }
 .nav-bar .pinterest {
   color: red;
@@ -15,7 +20,7 @@
   margin: 15px;
   border-radius: 50px;
   transition: all 200ms;
-  width: 40px;
+  width: 50px;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -26,6 +31,7 @@
 }
 .nav-bar .home {
   background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
   width: 80px;
   height: 50px;
   border-radius: 30px;
@@ -36,7 +42,7 @@
   text-align: center;
 }
 .nav-bar .search {
-  width: 800px;
+  width: 80vw;
   height: 50px;
   background-color: #ddd;
   display: flex;
@@ -54,14 +60,24 @@
   font-size: 25px;
   margin: 15px;
   color: #767676;
+  display: flex;
+  justify-content: space-between;
 }
 .nav-bar .icons :hover {
   background-color: #efefef;
   border-radius: 50px;
-  width: 40px;
-  height: 40px;
 }
 
+.nav-bar-clir {
+  width: 100%;
+  height: 70px;
+  background-color: white;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 .wrapper img {
   border-radius: 20px;
   padding: 6px;
