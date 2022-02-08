@@ -205,13 +205,13 @@ html {
 .content {
     width: 90vw;
     margin: auto;
-    column-width: 250px;
+    column-width: 200px;
     -webkit-column-break-inside: avoid;
 
 }
 
 .img_container {
-    width: 250px;
+    width: 200px;
     -webkit-column-break-inside: avoid;
     position: relative;
     transition: .5s ease;
@@ -511,6 +511,7 @@ html {
 
     .picture_card {
         width: 100%;
+        height: fit-content;
         box-shadow: none;
         border-radius: 0px;
         display: flex;
@@ -524,5 +525,31 @@ html {
             width: 100%;
             padding: 0%;
         }
+        .text_wrapper {
+            width: 90%;
+            margin: auto;
+            padding: 0%;
+            padding-top: 15px;
+        }
+
+        .text_wrapper__icon_wrapper {
+            display: none;
+        }
+
+        .divider {
+            display: none;
+        }
+        .text_wrapper__wrap {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .text_wrapper__comments {
+            display: none;
+        }
+    }
+
+    .morelikethis {
+        padding: 0%;
     }
 }

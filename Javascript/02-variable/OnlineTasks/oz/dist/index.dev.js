@@ -1,4 +1,4 @@
 "use strict";
 
-var x = 4;
+var X = 4;
 console.log(x);
