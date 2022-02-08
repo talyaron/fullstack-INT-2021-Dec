@@ -227,6 +227,11 @@ header .menu__icons__more_user .fa-chevron-down {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 1200px) {
+  .big_card {
+    width: 100%;
+  }
+}
 @media only screen and (max-width: 950px) {
   header {
     display: none;
@@ -275,6 +280,10 @@ header .menu__icons__more_user .fa-chevron-down {
     height: 40px;
     border-radius: 50%;
   }
+
+  .big_card {
+    width: 100%;
+  }
 }
 .big_card {
   display: flex;
@@ -294,8 +303,8 @@ header .menu__icons__more_user .fa-chevron-down {
   margin-left: 15px;
 }
 .big_card .about_picture .icons {
-  margin-top: 20px;
   margin-left: 30px;
+  position: fixed;
   padding: 5px;
   display: flex;
   justify-content: space-between;
@@ -309,6 +318,7 @@ header .menu__icons__more_user .fa-chevron-down {
 }
 .big_card .about_picture p {
   position: relative;
+  top: 30px;
   left: 10px;
 }
 .big_card .about_picture p span {
@@ -319,10 +329,12 @@ header .menu__icons__more_user .fa-chevron-down {
   cursor: pointer;
 }
 .big_card .about_picture .user_profil {
+  position: relative;
   display: flex;
   flex-direction: row;
 }
 .big_card .about_picture .user_profil img {
+  margin-top: 30px;
   border-radius: 50%;
   height: 55px;
   width: 55px;
@@ -350,6 +362,7 @@ header .menu__icons__more_user .fa-chevron-down {
   background-color: rgba(126, 121, 121, 0.267);
 }
 .big_card .about_picture .comments .comment_title {
+  margin-top: 35px;
   font-weight: bolder;
 }
 .big_card .about_picture .comments .the_comment {
