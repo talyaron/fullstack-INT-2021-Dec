@@ -53,6 +53,13 @@ a:link {
   position: relative;
   bottom: -52px;
 }
+.header .btn__back {
+  position: fixed;
+  top: 100px;
+  left: 15px;
+  color: #111111;
+  font-size: 1.5rem;
+}
 .header .btn__logo {
   color: #e50124;
   line-height: 20px;
@@ -241,6 +248,65 @@ a:link {
   background-image: url("https://i.ibb.co/RpqzKGb/img20.jpg");
 }
 
+.card {
+  margin: 30px auto;
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  box-shadow: 0px 0px 8px #aaaaaa;
+}
+.card_img {
+  width: 500px;
+  height: 500px;
+  background-image: url("https://i.ibb.co/RpqzKGb/img20.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.card_menu {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+.card_menu .buttons_left {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+.card_menu .buttons_right {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+.card_menu .btn {
+  color: #111111;
+  font-weight: 600;
+  margin: 5px;
+  cursor: pointer;
+}
+.card_menu .btn__save {
+  background-color: #e50124;
+  border-radius: 20px;
+  padding: 10px;
+  color: #ffffff;
+}
+.card_menu .btn__save:hover {
+  background-color: #9b0017;
+}
+.card_menu .btn__link {
+  padding: 10px;
+}
+.card_menu .btn__share, .card_menu .btn__more {
+  border-radius: 50%;
+  padding: 10px;
+}
+.card_menu .btn__share:hover, .card_menu .btn__more:hover {
+  background-color: #dbdbdb;
+}
+
 .footer_mobile {
   position: fixed;
   width: 200px;
@@ -271,7 +337,7 @@ a:link {
 .footer_desktop .btn {
   font-size: 3.5rem;
   color: #111111;
-  font-weight: 400;
+  font-weight: 500;
   border-radius: 50px;
   cursor: pointer;
   background-color: #ffffff;
