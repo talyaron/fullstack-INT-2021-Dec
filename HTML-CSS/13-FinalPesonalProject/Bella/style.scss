@@ -1,228 +1,326 @@
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html,
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        h1 {
+            font-size: 36px;
+            margin: 24px 0 0 0;
         }
-        
-        html,
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            nav {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                flex-wrap: wrap;
-                height: 80px;
-                width: 100vw;
-                background-color: white;
-                box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-                z-index: 1;
-                padding: 0 2em;
-                position: fixed;
-                .left-nav {
-                    .logo {
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
-                        height: 3em;
-                        width: 3em;
-                        border-radius: 50px;
-                        &:hover {
-                            background-color: rgb(223, 223, 223);
-                            cursor: pointer;
-                        }
-                        .logo--pin {
-                            fill: currentColor;
-                            color: rgb(233, 0, 0);
-                            width: 25px;
-                        }
-                    }
-                    .home-btn {
-                        width: 4.8em;
-                        height: 3em;
-                        padding: 1em;
-                        line-height: 1;
-                        background-color: black;
-                        color: white;
-                        border-radius: 50px;
-                    }
-                }
-                .search {
-                    padding: 0.5em;
-                    height: 48px;
-                    background-color: rgb(233, 233, 233);
-                    border-radius: 50px 0 0 50px;
-                    margin-left: 0.5em;
-                }
-                #site-search {
-                    width: 95em;
-                    height: 48px;
-                    background-color: rgb(233, 233, 233);
-                    border: none;
-                    border-radius: 0 50px 50px 0;
-                    margin-left: 0;
+        p {
+            font-size: 14px;
+        }
+        .icon {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            height: 3em;
+            width: 3em;
+            border-radius: 50px;
+            fill: gray;
+            &:hover {
+                background-color: rgb(223, 223, 223);
+                cursor: pointer;
+            }
+        }
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            width: 100vw;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+            z-index: 1;
+            padding: 0 2em;
+            position: fixed;
+            .left-nav {
+                .logo {
+                    align-items: center;
+                    display: flex;
+                    justify-content: center;
+                    height: 3em;
+                    width: 3em;
+                    border-radius: 50px;
                     &:hover {
                         background-color: rgb(223, 223, 223);
                         cursor: pointer;
                     }
-                }
-                .right-nav {
-                    .icon {
-                        align-items: center;
-                        display: flex;
-                        justify-content: center;
-                        height: 3em;
-                        width: 3em;
-                        border-radius: 50px;
-                        fill: gray;
-                        &:hover {
-                            background-color: rgb(223, 223, 223);
-                            cursor: pointer;
-                        }
-                    }
-                    .profile {
-                        padding-left: 0.3em;
+                    .logo--pin {
+                        fill: currentColor;
+                        color: rgb(233, 0, 0);
+                        width: 25px;
                     }
                 }
-                .my-button {
-                    background-color: transparent;
-                    border: 10px;
-                    color: black;
+                .home-btn {
+                    width: 4.8em;
+                    height: 3em;
+                    padding: 1em;
+                    line-height: 1;
+                    background-color: black;
+                    color: white;
+                    border-radius: 50px;
+                }
+            }
+            .material-icons {
+                position: absolute;
+                left: 8.2em;
+                padding: 0.5em;
+                border-radius: 50px 0 0 50px;
+            }
+            #site-search {
+                width: 80rem;
+                height: 48px;
+                background-color: rgb(233, 233, 233);
+                border: none;
+                border-radius: 50px;
+                margin-left: 2em;
+                &:hover {
+                    background-color: rgb(223, 223, 223);
                     cursor: pointer;
-                    font-size: 30px;
-                    margin-left: 32px;
-                    float: left;
-                    line-height: 70px;
-                    display: none;
-                }
-                @media (max-width: 800px) {
-                    .left-nav {
-                        display: none;
-                        flex-direction: column;
-                    }
-                    .my-button {
-                        display: block;
-                    }
-                    #site-search,
-                    .search {
-                        display: none;
-                    }
                 }
             }
-            .inline {
+            .right-nav {
+                .profile {
+                    padding-left: 0.3em;
+                }
+            }
+            .my-button {
+                background-color: transparent;
+                border: 10px;
+                color: black;
+                cursor: pointer;
+                font-size: 30px;
+                margin-left: 32px;
+                float: left;
+                line-height: 70px;
+                display: none;
+            }
+        }
+        .inline {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0.5em 0 0 0.5em;
+        }
+        /* GRID */
+        h2 {
+            text-align: center;
+        }
+        .grid-wrapper {
+            padding: 2em 8em;
+            display: grid;
+            grid-gap: 20px;
+            row-gap: 2.8em;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-rows: auto;
+            grid-auto-flow: dense;
+            padding-top: 6em;
+            .btn {
+                width: 5em;
+                height: 3em;
+                background-color: red;
+                color: white;
+                padding: 0.5em;
+                border: none;
+                border-radius: 50px;
+                z-index: 0;
+            }
+            /* ITEM STYLE */
+            .item {
                 display: flex;
-                flex-direction: row;
-                align-items: center;
-                padding: 0.5em 0 0 0.5em;
-            }
-            /* GRID */
-            .grid-wrapper {
-                padding: 2em 8em;
-                display: grid;
-                grid-gap: 20px;
-                row-gap: 2.8em;
-                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-                grid-template-rows: auto;
-                grid-auto-flow: dense;
-                padding-top: 6em;
-                /* ITEM STYLE */
-                .item {
-                    display: flex;
-                    flex-direction: column;
-                    .card {
-                        position: relative;
-                        background: rgb(0, 0, 0);
-                        width: 100%;
-                        height: 100%;
-                        border-radius: 20px;
+                flex-direction: column;
+                .card {
+                    position: relative;
+                    background: rgb(0, 0, 0);
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 20px;
+                }
+                .first,
+                .second,
+                .third,
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 20px;
+                    &:hover {
+                        opacity: 0.6;
                     }
-                    .first,
-                    .second,
-                    .third,
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        border-radius: 20px;
-                        &:hover {
-                            opacity: 0.6;
+                }
+                .cardverLap {
+                    position: relative;
+                    z-index: 1;
+                }
+                .mybuttonoverlap {
+                    position: absolute;
+                    z-index: 2;
+                    top: 2em;
+                    display: none;
+                    right: 2em;
+                }
+                .card:hover .mybuttonoverlap {
+                    display: block;
+                }
+                .gif {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 20px;
+                    min-height: 14em;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                /* GIF'S */
+                .first {
+                    background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/giphy.gif");
+                }
+                .second {
+                    background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/giphy 2.gif");
+                }
+                .third {
+                    background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/giphy 3.gif");
+                }
+                /* FROFILE CAPTION (UNDER IMAGE) */
+                .avatar {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50px;
+                    background-color: rgb(236, 236, 236);
+                    border: 1px solid rgb(235, 235, 235);
+                    margin-right: 0.3em;
+                }
+                h4 {
+                    font-size: 14px;
+                    font-weight: 400;
+                    padding: 0 0.3em 0 0.3em;
+                }
+            }
+            .reaction-icons {
+                img {
+                    width: 17px;
+                    height: 17px;
+                    margin-right: 0.2em;
+                }
+            }
+            /* ITEM TYPES */
+            .tall {
+                grid-row: span 2;
+            }
+            .big {
+                grid-column: span 1;
+            }
+            .wide {
+                grid-row: span 2;
+            }
+        }
+        .split-wrapper {
+            padding: 7em 0;
+            .main-card {
+                display: flex;
+                flex-wrap: wrap;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                background-color: white;
+                width: 509px*2;
+                margin: auto;
+                border-radius: 30px;
+                .main-image {
+                    width: 508px;
+                    height: 671px;
+                    border-radius: 30px 0 0 30px;
+                }
+                .main-content {
+                    width: 508px;
+                    height: 671px;
+                    padding: 2em;
+                    .top-nav-bar {
+                        display: flex;
+                        justify-content: space-between;
+                        .left {
+                            display: flex;
                         }
                     }
-                    .cardverLap {
-                        position: relative;
-                        z-index: 1;
+                    h1 {
+                        margin-bottom: 0.4em;
                     }
-                    .mybuttonoverlap {
-                        position: absolute;
-                        z-index: 2;
-                        top: 2em;
-                        display: none;
-                        right: 2em;
+                    .profile__image {
+                        width: 48px;
+                        height: 48px;
+                        .main-image {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 50px;
+                        }
                     }
-                    .card:hover .mybuttonoverlap {
-                        display: block;
+                    .user-profile-info {
+                        margin: 24px 0;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .profile-left {
+                            display: flex;
+                            align-items: center;
+                            .profile-info {
+                                display: flex;
+                                flex-direction: column;
+                                padding-left: 0.5em;
+                            }
+                        }
                     }
-                    .btn {
-                        width: 5em;
-                        height: 3em;
-                        background-color: red;
-                        color: white;
-                        padding: 0.5em;
-                        border: none;
-                        border-radius: 50px;
-                        z-index: 0;
+                    .caption {
+                        p {
+                            font-size: 12px;
+                            padding: 2em 0;
+                        }
                     }
-                    .gif {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        border-radius: 20px;
-                        min-height: 14em;
-                        background-repeat: no-repeat;
-                        background-size: cover;
+                    .comments-heading,
+                    .add-comment,
+                    .card-footer {
+                        display: flex;
+                        align-items: center;
                     }
-                    /* GIF'S */
-                    .first {
-                        background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/giphy.gif");
+                    .add-comment {
+                        input {
+                            width: 49ch;
+                            height: 48px;
+                            padding: 1.5em 2em;
+                            margin-left: 1em;
+                            border-radius: 50px;
+                            border: 1px solid rgb(192, 192, 192);
+                        }
                     }
-                    .second {
-                        background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/giphy 2.gif");
-                    }
-                    .third {
-                        background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/giphy 3.gif");
-                    }
-                    /* FROFILE CAPTION (UNDER IMAGE) */
-                    .avatar {
+                    .profile__image__s {
                         width: 32px;
                         height: 32px;
-                        border-radius: 50px;
-                        background-color: rgb(236, 236, 236);
-                        border: 1px solid rgb(235, 235, 235);
-                        margin-right: 0.3em;
+                        .main-image {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 50px;
+                        }
                     }
-                    h4 {
-                        font-size: 14px;
-                        font-weight: 400;
-                        padding: 0 0.3em 0 0.3em;
-                    }
-                }
-                .reaction-icons {
-                    img {
-                        width: 17px;
-                        height: 17px;
-                        margin-right: 0.2em;
+                    .card-footer {
+                        margin-top: 8.1em;
+                        .profile__image__s {
+                            margin-right: 1em;
+                        }
                     }
                 }
-                /* ITEM TYPES */
-                .tall {
-                    grid-row: span 2;
-                }
-                .big {
-                    grid-column: span 1;
-                }
-                .wide {
-                    grid-row: span 2;
+            }
+            @media screen and (max-width: 1440px) {
+                nav {
+                    #site-search,
+                    .search {
+                        width: 90vh;
+                    }
                 }
             }
         }
+    }
