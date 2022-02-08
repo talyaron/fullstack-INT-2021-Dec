@@ -14,7 +14,7 @@ html {
     color: rgb(118, 118, 118);
     font-size: 30px;
 
-    &__left {
+    &__leftBar {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -87,7 +87,7 @@ html {
         }
     }
 
-    &__icons {
+    &__top {
         padding: 0px 30px;
         width: 200px;
         display: flex;
@@ -96,26 +96,9 @@ html {
         text-align: center;
         font-size: 25px;
 
-        &__notifications {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-
-            .fa-bell {
-                margin: auto;
-            }
-
-            &:hover {
-                background-color: rgb(233, 233, 233);
-                cursor: pointer;
-            }
-        }
-
-        &__inbox {
-            width: 50px;
-            height: 50px;
+        &__bell {
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
@@ -124,16 +107,11 @@ html {
                 background-color: rgb(233, 233, 233);
                 cursor: pointer;
             }
-
-            .fa-comment-dots {
-                margin: auto;
-            }
         }
 
-        &__user {
-
-            width: 50px;
-            height: 50px;
+        &__dots{
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
@@ -142,26 +120,26 @@ html {
                 background-color: rgb(233, 233, 233);
                 cursor: pointer;
             }
-
-            &__container {
-                margin: auto;
-                width: 20px;
-                height: 20px;
-                background-color: rgb(239, 239, 239);
-                border-radius: 50%;
-                color: black;
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                font-weight: bolder;
-                font-size: 10px;
-                display: flex;
-                justify-content: center;
-                line-height: 20px;
-            }
         }
 
-        &__more_user {
-            width: 50px;
-            height: 50px;
+        &__name {
+
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            color: black;
+            justify-content: center;
+
+            &:hover {
+                background-color: rgb(233, 233, 233);
+                cursor: pointer;
+            }
+        }
+       
+        &__chevron {
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
@@ -171,15 +149,12 @@ html {
                 background-color: rgb(233, 233, 233);
                 cursor: pointer;
             }
-
-            .fa-chevron-down {
-                margin: auto;
             }
         }
-    }
+    
 }
 
-.content {
+.picPage {
     margin-top: 15px;
     column-width: 250px;
     -webkit-column-break-inside: avoid;
@@ -224,7 +199,11 @@ html {
         border: 1px solid ghostwhite;
         line-height: 63px;
         font-size: 25px;
-        
+       
+        &:hover{
+            background-color: rgb(233, 233, 233);
+            cursor: pointer;
+        }
     }
 
     &__question {
@@ -235,6 +214,11 @@ html {
         border: 1px solid ghostwhite;
         line-height: 63px;
         font-size: 20px;
+
+        &:hover{
+            background-color: rgb(233, 233, 233);
+            cursor: pointer;
+        }
         
     }
 }
@@ -251,14 +235,14 @@ html {
     color: rgb(118, 118, 118);
     font-size: 60px;
    
-    &__left {
+    &__lorem {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         padding: 5px;
 
-         &__logo {
+         &__ipsum {
             width: 90px;
             height: 80px;
             border-radius: 50%;
@@ -279,13 +263,24 @@ html {
                 background-color: rgb(233, 233, 233);
                 cursor: pointer;
             }
-                p{
-                    // display: flex;
-                    // flex-direction: row;
-                    font-size: 13px;
-                    margin: auto;
-                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                }
+            p{
+                // display: flex;
+                // flex-direction: row;
+                font-size: 13px;
+                margin: auto;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
             }
     }
+
+}
+.plus{
+width: 20px;
+color: black;
+}
+
+.question
+{
+width: 20px;
+color: black;
 }
