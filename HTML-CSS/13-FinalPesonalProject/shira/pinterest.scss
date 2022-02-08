@@ -1,4 +1,4 @@
-body{
+
   
     header{
         width:100%;
@@ -277,7 +277,8 @@ body{
                     cursor: pointer;
                 }
             }
-        }
+        
+        
        
       
     
@@ -296,12 +297,10 @@ body{
         margin: auto;
         column-width: 170px;
         -webkit-column-break-inside:avoid-column;
-            position: relative;
-            transition: .5s ease;
-            backface-visibility: hidden;
-    
-        }
-        
+        position: relative;
+        transition: .5s ease;
+        backface-visibility: hidden;   
+         }
     
         .nav_two{
             .footer_container{
@@ -329,9 +328,9 @@ body{
         }
     
     
+    }
     
-    
-    // style to open image page::after
+    // style to open image page:
     .big_card{
         display: flex;
         flex-direction: row;
@@ -479,6 +478,7 @@ body{
         }
         
     }
+
     .save_btn_seen{
         color: white;
         display: flex;
@@ -522,7 +522,8 @@ body{
         border: 8px solid #0074e8;
         
     }
-      }
+}
+
     
       .under_card{
           p{
@@ -531,5 +532,5 @@ body{
               font-size: x-large;
             }
     
+        }
     
-        }}
