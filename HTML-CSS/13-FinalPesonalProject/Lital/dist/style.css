@@ -386,50 +386,85 @@ body {
   font-size: 0.8rem;
 }
 
-@media only screen and (max-width: 1440px) {
-  body {
-    background-color: white;
-  }
-
-  .menubar_mobile {
-    display: none;
-  }
-
-  .pin_container {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
-@media only screen and (max-width: 440px) {
-  body {
-    background-color: black;
-  }
-
-  .menubar_mobile {
-    display: inline-block;
-  }
-
-  .menubar {
-    display: none;
-  }
-
-  .btn_foryou {
-    display: none;
-  }
-
-  p {
-    color: white;
-  }
-
-  .pin_container {
-    grid-template-columns: repeat(2, 1fr);
-    background-color: black;
-  }
-}
 .wrapper {
   width: 100vw;
   height: 100vh;
   position: relative;
   background-color: white;
+}
+.wrapper .menubar_mobile {
+  width: 100vw;
+  height: 70px;
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+.wrapper .menubar_mobile .menu_options_mobile {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 20%;
+  right: 160px;
+  top: 10px;
+}
+.wrapper .menubar_mobile .menu_options_mobile i {
+  font-size: 1.3rem;
+  color: gray;
+  padding: 10px;
+}
+.wrapper .menubar_mobile .menu_options_mobile .btn__search {
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 8px 8px;
+  border: rgba(255, 255, 255, 0);
+  background-color: black;
+  cursor: pointer;
+}
+.wrapper .menubar_mobile .menu_options_mobile .btn__search:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+.wrapper .menubar_mobile .menu_options_mobile .btn__notif {
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 8px 8px;
+  border: black;
+  background-color: black;
+  cursor: pointer;
+}
+.wrapper .menubar_mobile .menu_options_mobile .btn__notif:hover {
+  background-color: #0000002a;
+  color: white;
+  transition: 0.5s;
+}
+.wrapper .menubar_mobile .menu_options_mobile .btn__comment {
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 8px 8px;
+  border: #161616;
+  background-color: #020202;
+  cursor: pointer;
+}
+.wrapper .menubar_mobile .menu_options_mobile .btn__comment:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+.wrapper .menubar_mobile .menu_options_mobile .btn__more {
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 8px 8px;
+  border: black;
+  background-color: black;
+  cursor: pointer;
+}
+.wrapper .menubar_mobile .menu_options_mobile .btn__more:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
 }
 .wrapper .post_container {
   width: 80%;
@@ -439,7 +474,7 @@ body {
   display: flex;
   border-radius: 10%;
   position: relative;
-  top: 130px;
+  top: 300px;
   box-shadow: 12px 12px 2px 1px rgba(34, 33, 33, 0.034);
 }
 .wrapper .post_container .photo {
@@ -591,4 +626,57 @@ body {
   position: absolute;
   bottom: 22px;
   left: 15px;
+}
+
+@media only screen and (max-width: 1440px) {
+  body {
+    background-color: white;
+  }
+
+  .menubar_mobile {
+    display: none;
+  }
+
+  .pin_container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media only screen and (max-width: 440px) {
+  body {
+    background-color: black;
+  }
+
+  .wrapper {
+    background-color: black;
+  }
+
+  .post_container {
+    background-color: black;
+    top: 200px;
+  }
+
+  .comments p {
+    color: black;
+  }
+
+  .menubar_mobile {
+    display: inline-flex;
+  }
+
+  .menubar {
+    display: none;
+  }
+
+  .btn_foryou {
+    display: none;
+  }
+
+  p {
+    color: #6d6b6b;
+  }
+
+  .pin_container {
+    grid-template-columns: repeat(2, 1fr);
+    background-color: black;
+  }
 }
