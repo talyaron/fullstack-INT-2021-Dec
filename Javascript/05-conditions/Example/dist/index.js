@@ -31,8 +31,21 @@ if (true || true) {
 var temperature = 99;
 var persure = 0.4; //if smaller than 0.5 it will boil
 if (temperature >= 100 || persure <= 0.5) {
-    console.log('the water will boil');
+    console.log("the water will boil");
 }
 else {
-    console.log('the water will not boil');
+    console.log("the water will not boil");
+}
+var salary = 24;
+if (salary < 5500) {
+    console.log("You earn less than the minimum legal salary");
+}
+else if (salary >= 5500 && salary < 11800) {
+    console.log("You earn below avarage ");
+}
+else if (salary >= 11800 && salary < 35000) {
+    console.log("You earn more than the avarge salary");
+}
+else {
+    console.log('you earn more than 90% of the population');
 }
