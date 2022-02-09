@@ -297,6 +297,7 @@ a:link {
   margin: 30px auto;
   width: 1000px;
   min-height: 500px;
+  height: 800px;
   display: flex;
   justify-content: center;
   border-radius: 50px;
@@ -304,7 +305,7 @@ a:link {
 }
 .card_img {
   width: 500px;
-  background-image: url("https://i.ibb.co/RpqzKGb/img20.jpg");
+  background-image: url("https://i.ibb.co/t8q6zGv/img11.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-top-left-radius: 50px;
