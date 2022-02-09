@@ -291,6 +291,7 @@ header .menu__icons__more_user .fa-chevron-down {
   }
 }
 .big_card {
+  position: relative;
   display: flex;
   flex-direction: row;
   border-radius: 20px;
@@ -433,7 +434,8 @@ header .menu__icons__more_user .fa-chevron-down {
 }
 
 .save_btn_seen {
-  position: relative;
+  position: absolute;
+  z-index: 3;
   right: 60px;
   top: 35px;
   color: white;
