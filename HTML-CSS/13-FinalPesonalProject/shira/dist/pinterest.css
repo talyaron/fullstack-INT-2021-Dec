@@ -290,6 +290,13 @@ header .menu__icons__more_user .fa-chevron-down {
     width: 100%;
   }
 }
+.link_to_home {
+  position: relative;
+  top: 200px;
+  left: 35px;
+  cursor: pointer;
+}
+
 .big_card {
   position: relative;
   display: flex;
