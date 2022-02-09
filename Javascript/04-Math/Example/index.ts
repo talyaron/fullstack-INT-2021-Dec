@@ -26,3 +26,4 @@ console.log(c)
 //between 10 - 20
 var d = (Math.random())*10+10;
 console.log(d)
+
