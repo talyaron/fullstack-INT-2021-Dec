@@ -284,20 +284,14 @@
         }
     }
     
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 780px) {
         .grid-wrapper {
             grid-template-columns: repeat(3, 1fr);
         }
     }
     
-    @media only screen and (max-width: 440px) {
+    @media only screen and (max-width: 450px) {
         .grid-wrapper {
             grid-template-columns: repeat(1, 1fr);
         }
     }
-    
-    // &:hover {
-    //     .fa-arrow-up {
-    //         transform: rotate(45deg);
-    //     }
-    // }
