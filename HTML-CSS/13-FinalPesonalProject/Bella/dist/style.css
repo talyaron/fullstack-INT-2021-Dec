@@ -248,10 +248,6 @@ body .grid-wrapper .item .gif {
   background-size: cover;
   margin-bottom: 0.4em;
 }
-html .grid-wrapper .item .first,
-body .grid-wrapper .item .first {
-  background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/giphy.gif");
-}
 html .grid-wrapper .item .second,
 body .grid-wrapper .item .second {
   background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/giphy 2.gif");
