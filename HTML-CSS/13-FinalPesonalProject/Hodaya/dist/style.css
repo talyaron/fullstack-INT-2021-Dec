@@ -9,7 +9,7 @@ body {
   position: fixed;
   width: 100vw;
   height: 70px;
-  background-color: #fcfafa;
+  background-color: #fcfcfc;
   top: 0;
   display: flex;
   flex-direction: row;
@@ -262,58 +262,123 @@ body {
   color: white;
   transition: 2s;
 }
-
-.link {
+.wrapper .link {
   position: relative;
   width: 10em;
   font-size: 13px;
   top: 20px;
   left: 3px;
 }
-.link p {
+.wrapper .link p {
   text-decoration: underline;
 }
-
-.big_titel {
+.wrapper .big_titel {
   position: relative;
   top: 40px;
   margin: 3px;
   font-weight: bold;
 }
-
-.big_text {
+.wrapper .big_text {
   position: relative;
   top: 20px;
   font-size: 15px;
   margin: 3px;
 }
-
-.small_text {
+.wrapper .small_text {
   position: relative;
   font-size: 15px;
   font-weight: bold;
   top: 30px;
 }
-.small_text i {
+.wrapper .small_text i {
   position: absolute;
   left: 100px;
   top: 31px;
   cursor: pointer;
 }
-.small_text i:hover {
+.wrapper .small_text i:hover {
   background-color: #cfcfcf;
 }
-
-.pro p {
+.wrapper .pro p {
   position: absolute;
   bottom: 3%;
   left: 75px;
 }
-.pro img {
+.wrapper .pro img {
   position: absolute;
   width: 10%;
   height: 30px;
   border-radius: 90%;
   bottom: 5%;
   left: 15px;
+}
+.wrapper .btn1 {
+  position: fixed;
+  padding: 15px 20px;
+  color: black;
+  background-color: #faf5f5;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  bottom: 3%;
+  right: 0;
+  margin-right: 15px;
+  font-size: 18px;
+}
+.wrapper .btn2 {
+  position: fixed;
+  padding: 15px 20px;
+  color: black;
+  background-color: #faf5f5;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  bottom: 12%;
+  right: 0;
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 440px) {
+  body {
+    background-color: black;
+  }
+
+  .wrapper {
+    background-color: #f1f1f1;
+  }
+
+  .container {
+    background-color: black;
+    top: 200px;
+  }
+
+  h1 {
+    color: white;
+  }
+
+  .nav_bar {
+    width: 100vw;
+  }
+
+  .icons {
+    display: inline-flex;
+  }
+
+  .btn1 {
+    display: none;
+  }
+
+  .btn2 {
+    display: none;
+  }
+
+  p {
+    color: black;
+  }
+
+  .pin_container {
+    grid-template-columns: repeat(2, 1fr);
+    background-color: black;
+  }
 }
