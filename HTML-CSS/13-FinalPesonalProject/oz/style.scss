@@ -2,11 +2,11 @@ html,
 body {
     margin: 0px;
     width: 99vw;
-    
+
 }
 
 .nav-bar {
-   
+
     width: 100%;
     height: 60px;
     display: flex;
@@ -14,7 +14,7 @@ body {
     background-color: rgb(255, 255, 255);
     position: relative;
     position: fixed;
-   
+
 
     box-shadow: 0px 0px 10px 0px #d1d1d1;
 
@@ -91,7 +91,7 @@ body {
 
 }
 
-.nav-bar-clir{
+.nav-bar-clir {
     width: 100%;
     height: 70px;
     background-color: rgb(255, 255, 255);
@@ -99,18 +99,149 @@ body {
 
 
 
-.wrapper {
-    
-    
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    
-    
+.grid-container {
 
 
-    img {
+
+    .card-small{
+
+        background-image: url(https://i.pinimg.com/236x/71/1f/b6/711fb6d70abd84b119690312906a952b.jpg);
+        width: 237px;
+        height: 236px;
         border-radius: 20px;
-        padding: 6px;
+
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.7;
+            transition: 2s;
+
+        }
+
+        .btn_save {
+            position: relative;
+            left: 180px;
+            top: 10px;
+            font-size: 0.75rem;
+            border-radius: 40%;
+            padding: 10px 8px;
+            border: rgb(255, 0, 0);
+            background-color: rgb(255, 0, 0);
+            cursor: pointer;
+            color: white;
+            opacity: 0.1;
+
+
+            &:hover {
+                opacity: 10;
+                transition: 2s;
+
+            }
+        }
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+    .card-medium{
+
+        background-image: url(https://i.pinimg.com/236x/c7/4f/73/c74f73677c5a4a9579f68634fe36a189.jpg);
+        width: 237px;
+        height: 348px;
+        border-radius: 20px;
+
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.7;
+            transition: 2s;
+
+        }
+
+        .btn_save {
+            position: relative;
+            left: 180px;
+            top: 10px;
+            font-size: 0.75rem;
+            border-radius: 40%;
+            padding: 10px 8px;
+            border: rgb(255, 0, 0);
+            background-color: rgb(255, 0, 0);
+            cursor: pointer;
+            color: white;
+            opacity: 0.1;
+
+
+            &:hover {
+                opacity: 10;
+                transition: 2s;
+
+            }
+        }
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+    .card-large{
+
+        background-image: url(https://i.pinimg.com/236x/ef/b3/1b/efb31b1c3d6d8292b4a44d44e09bb527.jpg);
+        width: 237px;
+        height: 419px;
+        border-radius: 20px;
+
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.7;
+            transition: 2s;
+
+        }
+
+        .btn_save {
+            position: relative;
+            left: 180px;
+            top: 10px;
+            font-size: 0.75rem;
+            border-radius: 40%;
+            padding: 10px 8px;
+            border: rgb(255, 0, 0);
+            background-color: rgb(255, 0, 0);
+            cursor: pointer;
+            color: white;
+            opacity: 0.1;
+
+
+            &:hover {
+                opacity: 10;
+                transition: 2s;
+
+            }
+        }
+
+
+
+
 
     }
 }

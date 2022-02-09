@@ -74,11 +74,87 @@ body {
   background-color: white;
 }
 
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-.wrapper img {
+.grid-container .card-small {
+  background-image: url(https://i.pinimg.com/236x/71/1f/b6/711fb6d70abd84b119690312906a952b.jpg);
+  width: 237px;
+  height: 236px;
   border-radius: 20px;
-  padding: 6px;
+  cursor: pointer;
+}
+.grid-container .card-small:hover {
+  opacity: 0.7;
+  transition: 2s;
+}
+.grid-container .card-small .btn_save {
+  position: relative;
+  left: 180px;
+  top: 10px;
+  font-size: 0.75rem;
+  border-radius: 40%;
+  padding: 10px 8px;
+  border: red;
+  background-color: red;
+  cursor: pointer;
+  color: white;
+  opacity: 0.1;
+}
+.grid-container .card-small .btn_save:hover {
+  opacity: 10;
+  transition: 2s;
+}
+.grid-container .card-medium {
+  background-image: url(https://i.pinimg.com/236x/c7/4f/73/c74f73677c5a4a9579f68634fe36a189.jpg);
+  width: 237px;
+  height: 348px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.grid-container .card-medium:hover {
+  opacity: 0.7;
+  transition: 2s;
+}
+.grid-container .card-medium .btn_save {
+  position: relative;
+  left: 180px;
+  top: 10px;
+  font-size: 0.75rem;
+  border-radius: 40%;
+  padding: 10px 8px;
+  border: red;
+  background-color: red;
+  cursor: pointer;
+  color: white;
+  opacity: 0.1;
+}
+.grid-container .card-medium .btn_save:hover {
+  opacity: 10;
+  transition: 2s;
+}
+.grid-container .card-large {
+  background-image: url(https://i.pinimg.com/236x/ef/b3/1b/efb31b1c3d6d8292b4a44d44e09bb527.jpg);
+  width: 237px;
+  height: 419px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.grid-container .card-large:hover {
+  opacity: 0.7;
+  transition: 2s;
+}
+.grid-container .card-large .btn_save {
+  position: relative;
+  left: 180px;
+  top: 10px;
+  font-size: 0.75rem;
+  border-radius: 40%;
+  padding: 10px 8px;
+  border: red;
+  background-color: red;
+  cursor: pointer;
+  color: white;
+  opacity: 0.1;
+}
+.grid-container .card-large .btn_save:hover {
+  opacity: 10;
+  transition: 2s;
 }
