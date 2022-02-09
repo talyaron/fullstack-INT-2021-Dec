@@ -79,6 +79,10 @@ body nav .left-nav .home-btn {
   font-weight: 600;
   font-size: 15px;
 }
+html nav .left-nav .home-btn:hover,
+body nav .left-nav .home-btn:hover {
+  cursor: pointer;
+}
 html nav .left-nav a,
 body nav .left-nav a {
   text-decoration: none;
@@ -157,6 +161,10 @@ body .btn {
   font-weight: 600;
   font-size: 15px;
 }
+html .btn:hover,
+body .btn:hover {
+  cursor: pointer;
+}
 html .grid-wrapper,
 body .grid-wrapper {
   padding: 6.3em 4em;
@@ -183,6 +191,10 @@ body .grid-wrapper .item .card {
   width: 100%;
   height: 100%;
   border-radius: 20px;
+}
+html .grid-wrapper .item .card a:hover,
+body .grid-wrapper .item .card a:hover {
+  cursor: pointer;
 }
 html .grid-wrapper .item .first,
 html .grid-wrapper .item .second,
