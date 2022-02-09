@@ -11,12 +11,14 @@ nav {
     padding: 30px 18px;
     display: flex;
     flex-direction: row;
-    box-shadow: 0px 0px 6px grey
+    box-shadow: 0px 0px 6px grey;
+    background-color: white;
+    z-index: 1;
 }
 
 .navIcon {
     width: 60px;
-    padding: 10px;
+    padding: 8px;
     border-radius: 50px;
     display: inline-block;
 
@@ -37,19 +39,173 @@ nav {
         cursor: pointer;
         user-select: none;
     }
-    img{
+
+    img {
         width: 15px;
     }
 }
 
-.searchIcon{
+.searchIcon {
     width: 60px;
     padding: 10px;
     margin-left: auto;
     border-radius: 50px;
-    &:hover{
+
+    &:hover {
         background-color: lightgray;
         cursor: pointer;
         user-select: none;
+    }
+}
+
+.main__content {
+    margin-top: 25px;
+    column-count: auto;
+    column-width: 300px;
+    column-gap: 15px;
+    padding: 10px;
+
+    .item {
+        border-radius: 10px;
+        margin-bottom: 20px;
+        z-index: 0;
+
+        img {
+            width: 100%;
+            border-radius: 40px;
+        }
+    }
+}
+
+.item a:hover,
+.item:hover {
+    cursor: zoom-in;
+    filter: brightness(50%);
+}
+
+.picture__content {
+    margin: 0 auto;
+    max-width: 1100px;
+    border: 1px solid black;
+    overflow: hidden;
+    border-radius: 40px;
+    margin-top: 60px;
+}
+
+.leftside {
+    float: left;
+    width: 45%;
+    position: relative;
+    padding: 10px;
+}
+
+.leftside__img {
+    display: block;
+    width: 100%;
+    border-radius: 40px;
+}
+
+.maglass {
+    width: 50px;
+    background-color: white;
+}
+
+.topsvg {
+    display: flex;
+    flex-direction: row;
+}
+
+.topsvg__svg{
+    width: 50px;
+    padding: 10px;
+    border-radius: 50px;
+    margin: 5px;
+    &:hover {
+        background-color: lightgray;
+        cursor: pointer;
+        user-select: none;
+    }
+}
+
+.topsvg__save {
+    display: flex;
+    align-items: center;
+    background-color: red;
+    border-radius: 50px;
+    font-size: 22px;
+    color: white;
+    padding: 1px 20px;
+    margin-left: auto;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.rightside {
+    float: right;
+    width: 53%;
+    padding: 18px 30px;
+}
+
+.uploaded__by{
+    font-size: 23px;
+    margin-top: 20px;
+    & .bold{
+        font-weight: 900;
+        &:hover{
+            cursor: pointer;
+            user-select: none;
+            text-decoration: underline;
+        }
+    }
+}
+
+.rightside__profile{
+    padding: 20px 0px;
+    display: inline-block;
+    img{
+        width: 50px;
+        border-radius: 50px;
+    }
+}
+
+.rightside__profile__container{
+    position: relative;
+}
+
+.rightside__profile__username{
+    font-weight: 900;
+    top: 5px;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.rightside__profile__followers{
+    top: 25px;
+}
+
+.rightside__profile__username, .rightside__profile__followers{
+    position: absolute;
+    left: 60px;
+}
+
+.comments__text{
+    font-size: 23px;
+    font-weight: 900;
+    padding: 25px;
+    img{
+        width: 19px;
+    }
+}
+
+.comments__wrapper{
+    margin: 30px 0px;
+    display: flex;
+    align-items: center;
+    input{
+        padding: 10px;
+        margin: 20px;
+        border-radius: 50px;
     }
 }

@@ -1,0 +1,286 @@
+.header {
+    margin-top: 10px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .header p {
+    font-size: 18px;
+    color: black;
+  }
+  
+  .wrapper {
+    width: 90%;
+    margin: auto;
+    height: 50vh;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "main main second1 second2" "main main second3 second4";
+    position: relative;
+  }
+  .wrapper .box1 {
+    grid-area: main;
+    position: relative;
+  }
+  .wrapper .box1 .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    color: white;
+    top: 35px;
+    left: 3px;
+  }
+  .wrapper .box1 .text .h2 {
+    font-size: 12px;
+    color: rgb(252, 252, 252);
+    font-weight: bolder;
+    height: 12px;
+  }
+  .wrapper .box1 .text .p {
+    font-size: 12px;
+    margin-top: -10px;
+    color: white;
+    height: 12px;
+  }
+  .wrapper .box1 .text .line {
+    font-size: 12px;
+    margin-top: 3px;
+    color: white;
+    height: 8px;
+  }
+  .wrapper .box2 {
+    grid-area: second1;
+    position: relative;
+  }
+  .wrapper .box2 .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    color: white;
+    top: 65px;
+    left: 3px;
+  }
+  .wrapper .box2 .text .h2 {
+    font-size: 7px;
+    color: white;
+    font-weight: bolder;
+    height: 7px;
+    margin-top: 2px;
+  }
+  .wrapper .box2 .text .line {
+    font-size: 12px;
+    margin-top: -3px;
+    color: white;
+    font-weight: bold;
+  }
+  .wrapper .box3 {
+    grid-area: second2;
+    position: relative;
+  }
+  .wrapper .box3 .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    color: white;
+    top: 65px;
+    left: 3px;
+  }
+  .wrapper .box3 .text .h2 {
+    font-size: 7px;
+    color: white;
+    font-weight: bolder;
+    height: 7px;
+    margin-top: 2px;
+  }
+  .wrapper .box3 .text .line {
+    font-size: 12px;
+    margin-top: -3px;
+    color: white;
+    font-weight: bold;
+  }
+  .wrapper .box4 {
+    position: relative;
+    grid-area: second3;
+  }
+  .wrapper .box4 .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    color: white;
+    top: 45px;
+    left: 3px;
+  }
+  .wrapper .box4 .text .h2 {
+    font-size: 7px;
+    color: white;
+    font-weight: bolder;
+    height: 7px;
+    margin-top: 2px;
+  }
+  .wrapper .box4 .text .line {
+    font-size: 12px;
+    margin-top: -3px;
+    color: white;
+    font-weight: bold;
+  }
+  .wrapper .box5 {
+    grid-area: second4;
+    position: relative;
+  }
+  .wrapper .box5 .text {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    position: absolute;
+    color: white;
+    top: 45px;
+    left: 3px;
+  }
+  .wrapper .box5 .text .h2 {
+    font-size: 7px;
+    color: white;
+    font-weight: bolder;
+    height: 7px;
+    margin-top: 2px;
+  }
+  .wrapper .box5 .text .line {
+    font-size: 12px;
+    margin-top: -3px;
+    color: white;
+    font-weight: bold;
+  }
+  .wrapper .box-1 {
+    background-image: url(https://lh3.googleusercontent.com/iwmakXGZMi4djAlrpyIxYHXvwTWVoBCSOj_fiJh_a16GkKG2L_R3i0EQsD5npJGAlS8WNSFyw132Ig4cq3b0hirY96dsyoQlFqv0JxGd);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .wrapper .box-1:hover {
+    background-blend-mode: lighten;
+    border: 3px solid rgb(12, 12, 12);;
+  }
+  .wrapper .box-2 {
+    background-image: url(https://ichef.bbci.co.uk/news/976/cpsprodpb/7841/production/_123158703_gettyimages-1363484784.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+  }
+  .wrapper .box-2:hover {
+    background-blend-mode: lighten;
+    border: 3px solid rgb(12, 12, 12);;
+  }
+  .wrapper .box-3 {
+    background-image: url(https://ychef.files.bbci.co.uk/1600x900/p0bm7bnd.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .wrapper .box-3:hover {
+    background-blend-mode: lighten;
+    border: 3px solid rgb(12, 12, 12);;
+  }
+  .wrapper .box-4 {
+    background-image: url(https://ichef.bbci.co.uk/news/976/cpsprodpb/9777/production/_123157783_mediaitem123155550.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .wrapper .box-4:hover {
+    background-blend-mode: lighten;
+    border: 3px solid rgb(12, 12, 12);;
+  }
+  .wrapper .box-5 {
+    background-image: url(https://ychef.files.bbci.co.uk/1600x900/p0bm7kqr.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .wrapper .box-5:hover {
+    background-blend-mode: lighten;
+    border: 3px solid rgb(12, 12, 12);;
+  }
+  
+  .text2 {
+    width: 90%;
+    margin-top: 15px;
+    margin-left: 5%;
+    height: 20px;
+    font-size: 20px;
+    color: black;
+  }
+  
+  .wrapper2 {
+    width: 90%;
+    height: 70vh;
+    margin: auto;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    position: relative;
+  }
+  .wrapper2 .box1, .wrapper2 .box2, .wrapper2 .box3 {
+    grid-row: span 4;
+  }
+  .wrapper2 .box4, .wrapper2 .box5, .wrapper2 .box6 {
+    grid-row: span 2;
+  }
+  .wrapper2 .item {
+    position: relative;
+  }
+  .wrapper2 .item .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    margin: 0px;
+  }
+  .wrapper2 .item .text .h1 {
+    font-size: 8px;
+    color: black;
+    font-weight: bolder;
+    height: 8px;
+    margin-top: 0px;
+  }
+  .wrapper2 .item .text .p {
+    font-size: 6px;
+    margin-top: 1px;
+    color: black;
+    height: 6px;
+  }
+  .wrapper2 .item .text .line {
+    font-size: 6px;
+    margin-top: 1px;
+    color: black;
+    height: 6px;
+  }
+  .wrapper2 .box1 {
+    background-image: url(https://ichef.bbci.co.uk/news/976/cpsprodpb/30CA/production/_123109421_gettyimages-1237814163.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .wrapper2 .box1:hover {
+    border: 3px solid rgb(12, 12, 12);;
+    background-blend-mode: lighten;
+  }
+  .wrapper2 .box2 {
+    background-image: url(https://ichef.bbci.co.uk/news/976/cpsprodpb/DD09/production/_123158565_mediaitem123158562.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .wrapper2 .box2:hover {
+    background-blend-mode: lighten;
+    border: 3px solid rgb(12, 12, 12);;
+  }
+  .wrapper2 .box3 {
+    background-image: url(https://ichef.bbci.co.uk/news/976/cpsprodpb/12AB2/production/_123166467_nsogettyimages-596871430.jpg);
+    background-size: cover;
+  }
+  .wrapper2 .box3:hover {
+    background-blend-mode: lighten;
+    border: 3px solid rgb(12, 12, 12);;
+  }
