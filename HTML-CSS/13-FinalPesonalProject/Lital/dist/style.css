@@ -1,0 +1,682 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 20;
+}
+
+.menubar_mobile {
+  width: 100vw;
+  height: 70px;
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+.menubar_mobile .menu_options_mobile {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 20%;
+  right: 160px;
+  top: 10px;
+}
+.menubar_mobile .menu_options_mobile i {
+  font-size: 1.3rem;
+  color: gray;
+  padding: 10px;
+}
+.menubar_mobile .menu_options_mobile .btn__search {
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 8px 8px;
+  border: rgba(255, 255, 255, 0);
+  background-color: black;
+  cursor: pointer;
+}
+.menubar_mobile .menu_options_mobile .btn__search:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+.menubar_mobile .menu_options_mobile .btn__notif {
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 8px 8px;
+  border: black;
+  background-color: black;
+  cursor: pointer;
+}
+.menubar_mobile .menu_options_mobile .btn__notif:hover {
+  background-color: #0000002a;
+  color: white;
+  transition: 0.5s;
+}
+.menubar_mobile .menu_options_mobile .btn__comment {
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 8px 8px;
+  border: #161616;
+  background-color: #020202;
+  cursor: pointer;
+}
+.menubar_mobile .menu_options_mobile .btn__comment:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+.menubar_mobile .menu_options_mobile .btn__more {
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 8px 8px;
+  border: black;
+  background-color: black;
+  cursor: pointer;
+}
+.menubar_mobile .menu_options_mobile .btn__more:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+
+.menubar {
+  width: 100vw;
+  height: 70px;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+.menubar .menu_btns {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.menubar .menu_btns .Btn_Business {
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 20px;
+  padding: 15px 35px;
+  border: white;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  justify-content: space-evenly;
+  cursor: pointer;
+  background-color: #fffefe;
+}
+.menubar .menu_btns .Btn_Business:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+.menubar .menu_btns .Btn_Business:active {
+  background-color: black;
+  color: white;
+}
+.menubar .menu_btns .logo {
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+}
+.menubar .menu_btns .Btn_Create {
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 20px;
+  padding: 15px 35px;
+  border: white;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 180px;
+  top: 10px;
+  justify-content: space-evenly;
+  cursor: pointer;
+  background-color: #fffefe;
+}
+.menubar .menu_btns .Btn_Create:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+.menubar .menu_btns .Btn_Create:active {
+  background-color: black;
+  color: white;
+}
+.menubar .menu_btns .Btn_Analytics {
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 20px;
+  padding: 15px 35px;
+  border: white;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 350px;
+  top: 10px;
+  justify-content: space-evenly;
+  cursor: pointer;
+  background-color: #fffefe;
+}
+.menubar .menu_btns .Btn_Analytics:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+.menubar .menu_btns .Btn_Analytics:active {
+  background-color: black;
+  color: white;
+}
+.menubar .menu_btns .Btn_Ads {
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 20px;
+  padding: 15px 35px;
+  border: white;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 520px;
+  top: 10px;
+  justify-content: space-evenly;
+  cursor: pointer;
+  background-color: #fffefe;
+}
+.menubar .menu_btns .Btn_Ads:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+.menubar .menu_btns .Btn_Ads:active {
+  background-color: black;
+  color: white;
+}
+.menubar .menu_options {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 20%;
+  right: 0;
+  top: 10px;
+}
+.menubar .menu_options i {
+  font-size: 1.3rem;
+  color: gray;
+  padding: 10px;
+}
+.menubar .menu_options .btn__search {
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 8px 8px;
+  border: white;
+  background-color: white;
+  cursor: pointer;
+}
+.menubar .menu_options .btn__search:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+.menubar .menu_options .btn__notif {
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 8px 8px;
+  border: white;
+  background-color: white;
+  cursor: pointer;
+}
+.menubar .menu_options .btn__notif:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+.menubar .menu_options .btn__comment {
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 8px 8px;
+  border: white;
+  background-color: white;
+  cursor: pointer;
+}
+.menubar .menu_options .btn__comment:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+.menubar .menu_options .btn__more {
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 8px 8px;
+  border: white;
+  background-color: white;
+  cursor: pointer;
+}
+.menubar .menu_options .btn__more:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+
+.btn_foryou {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+  z-index: 0;
+  background-color: white;
+}
+.btn_foryou .btn__foryou {
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 15px;
+  padding: 15px 35px;
+  border: white;
+  position: absolute;
+  text-align: center;
+  top: 50px;
+  cursor: pointer;
+  background-color: #fffefe;
+  text-decoration: underline;
+}
+
+:root {
+  --card_width: 200px;
+  --card_border_radius: 16px;
+  --row_increment: 10px;
+  --card_small: 26;
+  --card_medium: 33;
+  --card_large: 45;
+}
+
+.pin_container {
+  top: 110px;
+  margin: 0;
+  padding: 0;
+  width: 80vw;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--card_width));
+  grid-auto-rows: var(--row_increment);
+  justify-content: center;
+}
+
+.card {
+  padding: o;
+  margin: 15px 10px;
+  border-radius: var(--card_border_radius);
+  background-color: red;
+  cursor: pointer;
+}
+.card:hover {
+  opacity: 0.7;
+  transition: 2s;
+}
+.card .btn_save {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 0.75rem;
+  border-radius: 40%;
+  padding: 10px 8px;
+  border: red;
+  background-color: red;
+  cursor: pointer;
+  color: white;
+  opacity: 0.1;
+}
+.card .btn_save:hover {
+  opacity: 10;
+  transition: 2s;
+}
+
+.card_small {
+  grid-row-end: span var(--card_small);
+  background-image: url(https://i.pinimg.com/474x/a5/05/bc/a505bc1eb52dd588f13d92f1b02122a2.jpg);
+  background-size: cover;
+  position: relative;
+}
+.card_small .card_text {
+  position: absolute;
+  bottom: -36px;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.card_medium {
+  grid-row-end: span var(--card_medium);
+  background-image: url(https://i.pinimg.com/474x/67/1a/67/671a671bfbbd47bf02d45b19f6fa121e.jpg);
+  background-size: cover;
+  position: relative;
+}
+.card_medium .card_text {
+  position: absolute;
+  bottom: -36px;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.card_large {
+  grid-row-end: span var(--card_large);
+  background-image: url(https://i.pinimg.com/736x/08/cf/29/08cf294bf5aa1f23df8bb734f55a9181.jpg);
+  background-size: cover;
+  position: relative;
+}
+.card_large .card_text {
+  position: absolute;
+  bottom: -36px;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: white;
+}
+.wrapper .menubar_mobile {
+  width: 100vw;
+  height: 70px;
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+.wrapper .menubar_mobile .menu_options_mobile {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 20%;
+  right: 160px;
+  top: 10px;
+}
+.wrapper .menubar_mobile .menu_options_mobile i {
+  font-size: 1.3rem;
+  color: gray;
+  padding: 10px;
+}
+.wrapper .menubar_mobile .menu_options_mobile .btn__search {
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 8px 8px;
+  border: rgba(255, 255, 255, 0);
+  background-color: black;
+  cursor: pointer;
+}
+.wrapper .menubar_mobile .menu_options_mobile .btn__search:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+.wrapper .menubar_mobile .menu_options_mobile .btn__notif {
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 8px 8px;
+  border: black;
+  background-color: black;
+  cursor: pointer;
+}
+.wrapper .menubar_mobile .menu_options_mobile .btn__notif:hover {
+  background-color: #0000002a;
+  color: white;
+  transition: 0.5s;
+}
+.wrapper .menubar_mobile .menu_options_mobile .btn__comment {
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 8px 8px;
+  border: #161616;
+  background-color: #020202;
+  cursor: pointer;
+}
+.wrapper .menubar_mobile .menu_options_mobile .btn__comment:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+.wrapper .menubar_mobile .menu_options_mobile .btn__more {
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 8px 8px;
+  border: black;
+  background-color: black;
+  cursor: pointer;
+}
+.wrapper .menubar_mobile .menu_options_mobile .btn__more:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+.wrapper .post_container {
+  width: 80%;
+  height: 80%;
+  background-color: black;
+  margin: auto;
+  display: flex;
+  border-radius: 10%;
+  position: relative;
+  top: 300px;
+  box-shadow: 12px 12px 2px 1px rgba(34, 33, 33, 0.034);
+}
+.wrapper .post_container .photo {
+  width: 50%;
+  height: 100%;
+  background-color: blanchedalmond;
+  border-radius: 10%;
+  background-image: url(https://i.pinimg.com/474x/6e/b6/8c/6eb68c7f90912c4e641d26561eab6ed7.jpg);
+  background-size: cover;
+}
+.wrapper .post_container .text {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  border-radius: 10%;
+  position: relative;
+}
+.wrapper .post_container .text .post_opt {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  right: 160px;
+  top: 10px;
+}
+.wrapper .post_container .text .post_opt .post_icons {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+.wrapper .post_container .text .post_opt .post_icons i {
+  font-size: 1rem;
+  color: black;
+  margin: 10px;
+  cursor: pointer;
+}
+.wrapper .post_container .text .post_opt .post_icons i:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+  border-radius: 50%;
+}
+.wrapper .post_container .text .post_opt .btn_save {
+  position: absolute;
+  right: -120px;
+  top: 10px;
+  font-size: 0.9rem;
+  border-radius: 40%;
+  padding: 10px 8px;
+  border: red;
+  background-color: red;
+  cursor: pointer;
+  color: white;
+}
+.wrapper .post_container .text .post_opt .btn_save:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+}
+.wrapper .post_container .link {
+  width: 5em;
+  height: 2em;
+  background-color: rgba(255, 255, 255, 0);
+  position: relative;
+  top: 50px;
+  left: 10px;
+}
+.wrapper .post_container .link p {
+  position: absolute;
+  top: 10px;
+  text-decoration: underline;
+}
+.wrapper .post_container .headlines {
+  position: absolute;
+  width: 20em;
+  height: 10em;
+  background-color: rgba(255, 255, 255, 0);
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .post_container .headlines .big_headline {
+  font-size: 1.8rem;
+  display: inline-block;
+  font-weight: bold;
+  position: absolute;
+  left: 10px;
+}
+.wrapper .post_container .headlines .small_headline {
+  position: absolute;
+  top: 90px;
+  left: 10px;
+  font-size: 0.8rem;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+.wrapper .post_container .comments {
+  position: absolute;
+  width: 20em;
+  height: 5em;
+  background-color: rgba(224, 190, 190, 0);
+  top: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.wrapper .post_container .comments p {
+  position: absolute;
+  left: -50px;
+  font-size: 0.8rem;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+.wrapper .post_container .comments i {
+  font-size: 1.5rem;
+  color: black;
+  padding: 10px;
+  top: 200px;
+  position: absolute;
+  right: 150px;
+  cursor: pointer;
+}
+.wrapper .post_container .comments i:hover {
+  background-color: #4747472a;
+  color: black;
+  transition: 0.5s;
+  border-radius: 50%;
+}
+.wrapper .post_container .user {
+  width: 25em;
+  height: 2em;
+  background-color: rgba(241, 205, 205, 0);
+  position: absolute;
+  bottom: 5px;
+  display: flex;
+  flex-direction: row;
+}
+.wrapper .post_container .user p {
+  position: absolute;
+  left: 60px;
+  font-size: 0.9rem;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+.wrapper .post_container .user img {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 22px;
+  left: 15px;
+}
+
+@media only screen and (max-width: 1440px) {
+  body {
+    background-color: white;
+  }
+
+  .menubar_mobile {
+    display: none;
+  }
+
+  .pin_container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media only screen and (max-width: 440px) {
+  body {
+    background-color: black;
+  }
+
+  .wrapper {
+    background-color: black;
+  }
+
+  .post_container {
+    background-color: black;
+    top: 200px;
+  }
+
+  .comments p {
+    color: black;
+  }
+
+  .menubar_mobile {
+    display: inline-flex;
+  }
+
+  .menubar {
+    display: none;
+  }
+
+  .btn_foryou {
+    display: none;
+  }
+
+  p {
+    color: #6d6b6b;
+  }
+
+  .pin_container {
+    grid-template-columns: repeat(2, 1fr);
+    background-color: black;
+  }
+}

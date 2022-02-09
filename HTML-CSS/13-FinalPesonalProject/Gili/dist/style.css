@@ -176,12 +176,12 @@ html {
 .content {
   width: 90vw;
   margin: auto;
-  column-width: 250px;
+  column-width: 200px;
   -webkit-column-break-inside: avoid;
 }
 
 .img_container {
-  width: 250px;
+  width: 200px;
   -webkit-column-break-inside: avoid;
   position: relative;
   transition: 0.5s ease;
@@ -430,6 +430,7 @@ html {
 
   .picture_card {
     width: 100%;
+    height: fit-content;
     box-shadow: none;
     border-radius: 0px;
     display: flex;
@@ -441,6 +442,29 @@ html {
     border-radius: 0px;
     padding: none;
     width: 100%;
+    padding: 0%;
+  }
+  .picture_card .text_wrapper {
+    width: 90%;
+    margin: auto;
+    padding: 0%;
+    padding-top: 15px;
+  }
+  .picture_card .text_wrapper__icon_wrapper {
+    display: none;
+  }
+  .picture_card .divider {
+    display: none;
+  }
+  .picture_card .text_wrapper__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  .picture_card .text_wrapper__comments {
+    display: none;
+  }
+
+  .morelikethis {
     padding: 0%;
   }
 }

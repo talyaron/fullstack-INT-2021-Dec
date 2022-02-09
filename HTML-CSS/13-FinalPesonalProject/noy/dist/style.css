@@ -1,0 +1,372 @@
+html {
+  font-family: "roboto", "tahoma", sans-serif;
+  font-size: 12px;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+}
+
+a :visited,
+a:active,
+a:link {
+  text-decoration: none;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  font-size: 2.16rem;
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 0.8px solid #d3d3d3;
+}
+.header__left {
+  display: flex;
+  align-items: center;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+}
+.header .btn {
+  color: #767676;
+  margin: 6px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 50px;
+  height: 25px;
+  width: 25px;
+  padding: 10px;
+  text-align: center;
+}
+.header .btn:hover {
+  background-color: #efefef;
+}
+.header .btn__search {
+  display: block;
+  position: relative;
+  bottom: -52px;
+}
+.header .btn__back {
+  position: fixed;
+  top: 100px;
+  left: 15px;
+  color: #111111;
+  font-size: 1.5rem;
+}
+.header .btn__logo {
+  color: #e50124;
+  line-height: 20px;
+}
+.header .btn__home {
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #111111;
+  font-size: 1.5rem;
+  width: auto;
+  line-height: 25px;
+}
+.header .btn__home:hover {
+  background-color: #111111;
+}
+.header .btn__home__img {
+  color: #000000;
+  background-color: #ffffff;
+}
+.header .btn__home__img:hover {
+  background-color: #efefef;
+}
+.header .btn__home__img:active {
+  background-color: #cccccc;
+}
+.header .btn__avatar {
+  display: flex;
+}
+.header .btn__avatar span {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000000;
+  background-color: #efefef;
+  border-radius: 50px;
+  width: 50px;
+  text-align: center;
+  padding: 5px;
+  line-height: 16px;
+}
+.header .btn__chevron {
+  font-size: 1.5rem;
+  line-height: 28px;
+}
+.header .search {
+  width: 100%;
+  position: relative;
+  top: -27px;
+}
+.header .search #input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 50px;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 50px;
+  background-color: #efefef;
+}
+.header .search #input:hover {
+  background-color: #d3d3d3;
+}
+
+.main {
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+}
+.main .post .photo {
+  border-radius: 20px;
+  width: 100%;
+  height: 300px;
+  cursor: zoom-in;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 1s;
+}
+.main .post .photo:hover .photo__menu {
+  display: flex;
+}
+.main .post .photo__menu {
+  display: none;
+  background-color: #0000005d;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main .post .photo__menu .buttons_top {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+  align-items: center;
+}
+.main .post .photo__menu .buttons_bottom {
+  display: flex;
+  justify-content: end;
+  margin: 15px;
+}
+.main .post .photo__menu .btn {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 5px;
+  cursor: pointer;
+}
+.main .post .photo__menu .btn__save {
+  background-color: #e50124;
+  border-radius: 20px;
+  padding: 10px;
+}
+.main .post .photo__menu .btn__save:hover {
+  background-color: #9b0017;
+}
+.main .post .photo__menu .btn__share, .main .post .photo__menu .btn__more {
+  background-color: #efefef;
+  border-radius: 50%;
+  color: #111111;
+  padding: 15px;
+}
+.main .post .photo__menu .btn__share:hover, .main .post .photo__menu .btn__more:hover {
+  background-color: #dbdbdb;
+}
+.main .post .photo__1 {
+  background-image: url("https://i.ibb.co/rFc5BHP/img1.jpg");
+}
+.main .post .photo__2 {
+  background-image: url("https://i.ibb.co/YTpf3N5/img2.jpg");
+}
+.main .post .photo__3 {
+  background-image: url("https://i.ibb.co/rvBkRJZ/img3.jpg");
+}
+.main .post .photo__4 {
+  background-image: url("https://i.ibb.co/4stCx2R/img4.jpg");
+}
+.main .post .photo__5 {
+  background-image: url("https://i.ibb.co/9wMqf1T/img5.jpg");
+}
+.main .post .photo__6 {
+  background-image: url("https://i.ibb.co/XDKZfDm/img6.jpg");
+}
+.main .post .photo__7 {
+  background-image: url("https://i.ibb.co/zrNvhqT/img7.jpg");
+}
+.main .post .photo__8 {
+  background-image: url("https://i.ibb.co/RD13jkF/img8.jpg");
+}
+.main .post .photo__9 {
+  background-image: url("https://i.ibb.co/dPtpYyZ/Chocolate-Terrine-with-Caramelized-Hazelnuts-Les-Enfants-Rouges-Food-Paris-2014.jpg");
+}
+.main .post .photo__10 {
+  background-image: url("https://i.ibb.co/KN7m6Ph/img10.jpg");
+}
+.main .post .photo__11 {
+  background-image: url("https://i.ibb.co/t8q6zGv/img11.jpg");
+}
+.main .post .photo__12 {
+  background-image: url("https://i.ibb.co/KDrrb43/img12.jpg");
+}
+.main .post .photo__13 {
+  background-image: url("https://i.ibb.co/7zWwSrg/Gluten-Free-Dessert-BLACK-FOREST-Aerated-Chocolate-Griottine-Cherries-Chocolate-Marquise-and-Mint-Ch.jpg");
+}
+.main .post .photo__14 {
+  background-image: url("https://i.ibb.co/tXWJ771/img14.jpg");
+}
+.main .post .photo__15 {
+  background-image: url("https://i.ibb.co/JFKvnyn/img15.jpg");
+}
+.main .post .photo__16 {
+  background-image: url("https://i.ibb.co/QpYdLSs/img16.jpg");
+}
+.main .post .photo__17 {
+  background-image: url("https://i.ibb.co/St1cX3T/img17.jpg");
+}
+.main .post .photo__18 {
+  background-image: url("https://i.ibb.co/S5zqP9r/img18.jpg");
+}
+.main .post .photo__19 {
+  background-image: url("https://i.ibb.co/DWm2mC1/img19.jpg");
+}
+.main .post .photo__20 {
+  background-image: url("https://i.ibb.co/RpqzKGb/img20.jpg");
+}
+
+.card {
+  margin: 30px auto;
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  box-shadow: 0px 0px 8px #aaaaaa;
+}
+.card_img {
+  width: 500px;
+  height: 500px;
+  background-image: url("https://i.ibb.co/RpqzKGb/img20.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.card_menu {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  margin: 10px;
+  justify-content: space-between;
+}
+.card_menu .buttons_left {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+.card_menu .buttons_right {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+.card_menu .btn {
+  color: #111111;
+  font-weight: 600;
+  margin: 5px;
+  cursor: pointer;
+}
+.card_menu .btn__save {
+  background-color: #e50124;
+  border-radius: 20px;
+  padding: 10px;
+  color: #ffffff;
+}
+.card_menu .btn__save:hover {
+  background-color: #9b0017;
+}
+.card_menu .btn__link {
+  padding: 10px;
+}
+.card_menu .btn__share, .card_menu .btn__more {
+  border-radius: 50%;
+  padding: 10px;
+}
+.card_menu .btn__share:hover, .card_menu .btn__more:hover {
+  background-color: #dbdbdb;
+}
+
+.footer_mobile {
+  position: fixed;
+  width: 200px;
+  height: 50px;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -100px;
+  border-radius: 50px;
+  background-color: #efefef;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer_mobile .btn {
+  cursor: pointer;
+  font-size: 2rem;
+  color: #767676;
+}
+.footer_mobile .btn__user {
+  color: #111111;
+}
+
+.footer_desktop {
+  opacity: 0;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  animation-name: footerPopUp;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+.footer_desktop .btn {
+  font-size: 3.5rem;
+  color: #111111;
+  font-weight: 500;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: #ffffff;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  margin: 10px;
+  line-height: 60px;
+  box-shadow: 3px -1px 10px 1px #b9b9b9;
+}
+
+@keyframes footerPopUp {
+  0% {
+    bottom: -150px;
+    opacity: 1;
+  }
+  90% {
+    bottom: 30px;
+    opacity: 1;
+  }
+  100% {
+    bottom: 20px;
+    opacity: 1;
+  }
+}
