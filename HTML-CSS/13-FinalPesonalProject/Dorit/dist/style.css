@@ -143,10 +143,22 @@ body {
   display: flex;
   justify-content: space-around;
   gap: 115px;
-  background-color: aliceblue;
+  background-color: white;
   border-radius: 50px;
   border: 1px solid;
   margin: auto;
+}
+.bottom_nav .home_icon {
+  height: 25px;
+}
+.bottom_nav .search_icon {
+  height: 25px;
+}
+.bottom_nav .message_icon {
+  height: 25px;
+}
+.bottom_nav .man_icon {
+  height: 25px;
 }
 .bottom_nav img {
   position: relative;
@@ -269,7 +281,7 @@ body {
 }
 
 a {
-  font-size: 1em;
+  font-size: 2em;
 }
 
 .addition {
@@ -403,6 +415,10 @@ a {
     width: 200px;
     left: 80px;
     gap: 7px;
+  }
+
+  .menu {
+    visibility: hidden;
   }
 
   .wrapper {
