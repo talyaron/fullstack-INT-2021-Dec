@@ -4,7 +4,7 @@ var str3:string = str+str2;
 var firstName:string = 'Inbar';
 var lastName:string = 'Refael';
 // email, phone, address, daysOfExpriensInCSS
-var fullName:string = `${firstName} ${lastName}`;
+var fullName:string = `${firstName} ${lastName}`; //'Inbar Refael'
 
 console.log(str+str2);
 
