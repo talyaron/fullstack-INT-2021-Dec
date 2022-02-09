@@ -167,10 +167,22 @@ body{
     display: flex;
     justify-content: space-around;
     gap: 115px;
-    background-color: aliceblue;
+    background-color: white;
     border-radius: 50px;
     border: 1px solid;
     margin:auto;
+    .home_icon{
+        height: 25px;
+    }
+    .search_icon{
+        height:25px;
+    }
+    .message_icon{
+        height: 25px;
+    }
+    .man_icon{
+        height:25px;
+    }
 
 
     img{
@@ -304,7 +316,7 @@ body{
 }
 
 a{
-    font-size: 1em;
+    font-size: 2em;
 }
 .addition{
     position: relative;
@@ -465,6 +477,9 @@ a{
         // justify-content: none;
         gap: 7px;
     
+    }
+    .menu{
+        visibility:hidden;
     }
     .wrapper{
         column-width: 125px;

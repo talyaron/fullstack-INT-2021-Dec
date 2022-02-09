@@ -65,6 +65,24 @@
                     background-color: black;
                     color: white;
                     border-radius: 50px;
+                    font-weight: 600;
+                    font-size: 15px;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                a {
+                    text-decoration: none;
+                    .inner-page-btn {
+                        background-color: white;
+                        color: black;
+                        font-weight: 700;
+                        font-size: 15px;
+                        &:hover {
+                            background-color: rgb(223, 223, 223);
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
             .material-icons {
@@ -109,28 +127,33 @@
             padding: 0.5em 0 0 0.5em;
         }
         /* GRID */
-        h2 {
+        .related-items {
             text-align: center;
+            padding-top: 3em;
+        }
+        .btn {
+            width: 5.5em;
+            height: 3.5em;
+            background-color: red;
+            color: white;
+            padding: 0.5em;
+            border: none;
+            border-radius: 50px;
+            z-index: 0;
+            font-weight: 600;
+            font-size: 15px;
+            &:hover {
+                cursor: pointer;
+            }
         }
         .grid-wrapper {
-            padding: 2em 8em;
+            padding: 6.3em 4em;
             display: grid;
             grid-gap: 20px;
             row-gap: 2.8em;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             grid-template-rows: auto;
             grid-auto-flow: dense;
-            padding-top: 6em;
-            .btn {
-                width: 5em;
-                height: 3em;
-                background-color: red;
-                color: white;
-                padding: 0.5em;
-                border: none;
-                border-radius: 50px;
-                z-index: 0;
-            }
             /* ITEM STYLE */
             .item {
                 display: flex;
@@ -141,6 +164,9 @@
                     width: 100%;
                     height: 100%;
                     border-radius: 20px;
+                    a:hover {
+                        cursor: pointer;
+                    }
                 }
                 .first,
                 .second,
@@ -150,6 +176,7 @@
                     height: 100%;
                     object-fit: cover;
                     border-radius: 20px;
+                    margin-bottom: 0.4em;
                     &:hover {
                         opacity: 0.6;
                     }
@@ -160,7 +187,7 @@
                 }
                 .mybuttonoverlap {
                     position: absolute;
-                    z-index: 2;
+                    z-index: 0;
                     top: 2em;
                     display: none;
                     right: 2em;
@@ -176,10 +203,11 @@
                     min-height: 14em;
                     background-repeat: no-repeat;
                     background-size: cover;
+                    margin-bottom: 0.4em;
                 }
                 /* GIF'S */
                 .first {
-                    background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/giphy.gif");
+                    // background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/giphy.gif");
                 }
                 .second {
                     background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/giphy 2.gif");
@@ -220,6 +248,9 @@
                 grid-row: span 2;
             }
         }
+        .wrapper {
+            padding: 2em 4em;
+        }
         .split-wrapper {
             padding: 7em 0;
             .main-card {
@@ -238,16 +269,26 @@
                 .main-content {
                     width: 508px;
                     height: 671px;
-                    padding: 2em;
+                    padding: 2.3em;
                     .top-nav-bar {
                         display: flex;
                         justify-content: space-between;
                         .left {
+                            margin-bottom: 1em;
                             display: flex;
+                            .icon {
+                                margin-left: 0.4em;
+                            }
                         }
+                    }
+                    .web-link {
+                        color: rgb(68, 68, 68);
                     }
                     h1 {
                         margin-bottom: 0.4em;
+                    }
+                    p {
+                        color: rgb(107, 107, 107);
                     }
                     .profile__image {
                         width: 48px;
@@ -273,6 +314,10 @@
                                 padding-left: 0.5em;
                             }
                         }
+                        .btn-follow {
+                            background-color: rgb(233, 233, 233);
+                            color: black;
+                        }
                     }
                     .caption {
                         p {
@@ -286,14 +331,20 @@
                         display: flex;
                         align-items: center;
                     }
-                    .add-comment {
-                        input {
-                            width: 49ch;
-                            height: 48px;
-                            padding: 1.5em 2em;
-                            margin-left: 1em;
-                            border-radius: 50px;
-                            border: 1px solid rgb(192, 192, 192);
+                    .comments {
+                        padding: 1em 0;
+                        .comment-svg-icon {
+                            transform: rotate(90deg)
+                        }
+                        .add-comment {
+                            input {
+                                width: 49ch;
+                                height: 48px;
+                                padding: 1.5em 2em;
+                                margin-left: 1em;
+                                border-radius: 50px;
+                                border: 1px solid rgb(192, 192, 192);
+                            }
                         }
                     }
                     .profile__image__s {
@@ -307,9 +358,12 @@
                         }
                     }
                     .card-footer {
-                        margin-top: 8.1em;
+                        margin-top: 2.5em;
+                        .footer {
+                            font-weight: 400;
+                        }
                         .profile__image__s {
-                            margin-right: 1em;
+                            margin-right: 0.5em;
                         }
                     }
                 }

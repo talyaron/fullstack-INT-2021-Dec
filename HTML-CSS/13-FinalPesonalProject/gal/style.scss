@@ -139,6 +139,22 @@ html {
             }
         }
        
+        &__name1 {
+
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            color: black;
+            justify-content: center;
+            overflow: hidden;
+
+            &:hover {
+                background-color: rgb(233, 233, 233);
+                cursor: pointer;
+            
+            }
+        }
         &__chevron {
             width: 48px;
             height: 48px;
@@ -151,8 +167,8 @@ html {
                 background-color: rgb(233, 233, 233);
                 cursor: pointer;
             }
-            }
         }
+    }
     
 }
 

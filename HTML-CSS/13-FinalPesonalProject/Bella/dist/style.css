@@ -76,6 +76,28 @@ body nav .left-nav .home-btn {
   background-color: black;
   color: white;
   border-radius: 50px;
+  font-weight: 600;
+  font-size: 15px;
+}
+html nav .left-nav .home-btn:hover,
+body nav .left-nav .home-btn:hover {
+  cursor: pointer;
+}
+html nav .left-nav a,
+body nav .left-nav a {
+  text-decoration: none;
+}
+html nav .left-nav a .inner-page-btn,
+body nav .left-nav a .inner-page-btn {
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  font-size: 15px;
+}
+html nav .left-nav a .inner-page-btn:hover,
+body nav .left-nav a .inner-page-btn:hover {
+  background-color: #dfdfdf;
+  cursor: pointer;
 }
 html nav .material-icons,
 body nav .material-icons {
@@ -121,33 +143,39 @@ body .inline {
   align-items: center;
   padding: 0.5em 0 0 0.5em;
 }
-html h2,
-body h2 {
+html .related-items,
+body .related-items {
   text-align: center;
+  padding-top: 3em;
 }
-html .grid-wrapper,
-body .grid-wrapper {
-  padding: 2em 8em;
-  display: grid;
-  grid-gap: 20px;
-  row-gap: 2.8em;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-template-rows: auto;
-  grid-auto-flow: dense;
-  padding-top: 6em;
-  /* ITEM STYLE */
-  /* ITEM TYPES */
-}
-html .grid-wrapper .btn,
-body .grid-wrapper .btn {
-  width: 5em;
-  height: 3em;
+html .btn,
+body .btn {
+  width: 5.5em;
+  height: 3.5em;
   background-color: red;
   color: white;
   padding: 0.5em;
   border: none;
   border-radius: 50px;
   z-index: 0;
+  font-weight: 600;
+  font-size: 15px;
+}
+html .btn:hover,
+body .btn:hover {
+  cursor: pointer;
+}
+html .grid-wrapper,
+body .grid-wrapper {
+  padding: 6.3em 4em;
+  display: grid;
+  grid-gap: 20px;
+  row-gap: 2.8em;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-rows: auto;
+  grid-auto-flow: dense;
+  /* ITEM STYLE */
+  /* ITEM TYPES */
 }
 html .grid-wrapper .item,
 body .grid-wrapper .item {
@@ -164,6 +192,10 @@ body .grid-wrapper .item .card {
   height: 100%;
   border-radius: 20px;
 }
+html .grid-wrapper .item .card a:hover,
+body .grid-wrapper .item .card a:hover {
+  cursor: pointer;
+}
 html .grid-wrapper .item .first,
 html .grid-wrapper .item .second,
 html .grid-wrapper .item .third,
@@ -176,6 +208,7 @@ body .grid-wrapper .item img {
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
+  margin-bottom: 0.4em;
 }
 html .grid-wrapper .item .first:hover,
 html .grid-wrapper .item .second:hover,
@@ -195,7 +228,7 @@ body .grid-wrapper .item .cardverLap {
 html .grid-wrapper .item .mybuttonoverlap,
 body .grid-wrapper .item .mybuttonoverlap {
   position: absolute;
-  z-index: 2;
+  z-index: 0;
   top: 2em;
   display: none;
   right: 2em;
@@ -213,10 +246,7 @@ body .grid-wrapper .item .gif {
   min-height: 14em;
   background-repeat: no-repeat;
   background-size: cover;
-}
-html .grid-wrapper .item .first,
-body .grid-wrapper .item .first {
-  background-image: url("/HTML-CSS/13-FinalPesonalProject/Bella/giphy.gif");
+  margin-bottom: 0.4em;
 }
 html .grid-wrapper .item .second,
 body .grid-wrapper .item .second {
@@ -259,6 +289,10 @@ html .grid-wrapper .wide,
 body .grid-wrapper .wide {
   grid-row: span 2;
 }
+html .wrapper,
+body .wrapper {
+  padding: 2em 4em;
+}
 html .split-wrapper,
 body .split-wrapper {
   padding: 7em 0;
@@ -283,7 +317,7 @@ html .split-wrapper .main-card .main-content,
 body .split-wrapper .main-card .main-content {
   width: 508px;
   height: 671px;
-  padding: 2em;
+  padding: 2.3em;
 }
 html .split-wrapper .main-card .main-content .top-nav-bar,
 body .split-wrapper .main-card .main-content .top-nav-bar {
@@ -292,11 +326,24 @@ body .split-wrapper .main-card .main-content .top-nav-bar {
 }
 html .split-wrapper .main-card .main-content .top-nav-bar .left,
 body .split-wrapper .main-card .main-content .top-nav-bar .left {
+  margin-bottom: 1em;
   display: flex;
+}
+html .split-wrapper .main-card .main-content .top-nav-bar .left .icon,
+body .split-wrapper .main-card .main-content .top-nav-bar .left .icon {
+  margin-left: 0.4em;
+}
+html .split-wrapper .main-card .main-content .web-link,
+body .split-wrapper .main-card .main-content .web-link {
+  color: #444444;
 }
 html .split-wrapper .main-card .main-content h1,
 body .split-wrapper .main-card .main-content h1 {
   margin-bottom: 0.4em;
+}
+html .split-wrapper .main-card .main-content p,
+body .split-wrapper .main-card .main-content p {
+  color: #6b6b6b;
 }
 html .split-wrapper .main-card .main-content .profile__image,
 body .split-wrapper .main-card .main-content .profile__image {
@@ -328,6 +375,11 @@ body .split-wrapper .main-card .main-content .user-profile-info .profile-left .p
   flex-direction: column;
   padding-left: 0.5em;
 }
+html .split-wrapper .main-card .main-content .user-profile-info .btn-follow,
+body .split-wrapper .main-card .main-content .user-profile-info .btn-follow {
+  background-color: #e9e9e9;
+  color: black;
+}
 html .split-wrapper .main-card .main-content .caption p,
 body .split-wrapper .main-card .main-content .caption p {
   font-size: 12px;
@@ -342,8 +394,16 @@ body .split-wrapper .main-card .main-content .card-footer {
   display: flex;
   align-items: center;
 }
-html .split-wrapper .main-card .main-content .add-comment input,
-body .split-wrapper .main-card .main-content .add-comment input {
+html .split-wrapper .main-card .main-content .comments,
+body .split-wrapper .main-card .main-content .comments {
+  padding: 1em 0;
+}
+html .split-wrapper .main-card .main-content .comments .comment-svg-icon,
+body .split-wrapper .main-card .main-content .comments .comment-svg-icon {
+  transform: rotate(90deg);
+}
+html .split-wrapper .main-card .main-content .comments .add-comment input,
+body .split-wrapper .main-card .main-content .comments .add-comment input {
   width: 49ch;
   height: 48px;
   padding: 1.5em 2em;
@@ -365,11 +425,15 @@ body .split-wrapper .main-card .main-content .profile__image__s .main-image {
 }
 html .split-wrapper .main-card .main-content .card-footer,
 body .split-wrapper .main-card .main-content .card-footer {
-  margin-top: 8.1em;
+  margin-top: 2.5em;
+}
+html .split-wrapper .main-card .main-content .card-footer .footer,
+body .split-wrapper .main-card .main-content .card-footer .footer {
+  font-weight: 400;
 }
 html .split-wrapper .main-card .main-content .card-footer .profile__image__s,
 body .split-wrapper .main-card .main-content .card-footer .profile__image__s {
-  margin-right: 1em;
+  margin-right: 0.5em;
 }
 @media screen and (max-width: 1440px) {
   html .split-wrapper nav #site-search,
