@@ -355,6 +355,7 @@
     
     // style to open image page:
     .big_card{
+        position: relative;
         display: flex;
         flex-direction: row;
         border-radius: 20px;
@@ -532,7 +533,9 @@
     }
 
     .save_btn_seen{
-        position: relative;
+
+        position: absolute;
+        z-index: 3;
         right: 60px;
         top:35px;
         color: white;
