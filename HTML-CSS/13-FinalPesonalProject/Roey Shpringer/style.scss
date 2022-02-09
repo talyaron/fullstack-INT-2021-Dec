@@ -11,12 +11,14 @@ nav {
     padding: 30px 18px;
     display: flex;
     flex-direction: row;
-    box-shadow: 0px 0px 6px grey
+    box-shadow: 0px 0px 6px grey;
+    background-color: white;
+    z-index: 1;
 }
 
 .navIcon {
     width: 60px;
-    padding: 10px;
+    padding: 8px;
     border-radius: 50px;
     display: inline-block;
 
@@ -52,4 +54,59 @@ nav {
         cursor: pointer;
         user-select: none;
     }
+}
+
+.main__content{
+    margin-top: 40px;
+    column-count: auto;
+    column-width: 300px;
+    column-gap: 15px;
+    .item{
+        border-radius: 40px;
+        margin-bottom: 20px;
+        z-index: 0;
+        img{
+            width: 100%;
+            border-radius: 40px;
+        }
+    }
+}
+
+.item a:hover, .item:hover{
+    cursor: zoom-in;
+    filter: brightness(50%);
+}
+
+.picture__content{
+    margin: 0 auto;
+    max-width: 1100px;
+    border: 2px solid black;
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+.leftside{
+    display: inline-block;
+    width: 45%;
+    position: relative;
+}
+
+.leftside__img{
+        display: block;
+        width: 100%;
+}
+
+.maglass{
+    width: 50px;
+    background-color: white;
+}
+
+.topsvg{
+    display: inline-block;
+}
+
+.rightside{
+    display: inline-block;
+    width: 53%;
+    
 }

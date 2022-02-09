@@ -22,7 +22,8 @@ body{
     align-items: center;
     color: rgb(118, 118, 118);
     font-size: 30px;
-    position: fixed;
+    position: sticky;
+    z-index: 9;
     top:0%;
     left:5px;
 
@@ -153,6 +154,32 @@ body{
     }
   
 }
+.bottom_nav{
+    visibility: hidden;
+    margin: auto;
+    width: 700px;
+    height: 50px;
+    z-index: 1;
+    position: fixed;
+    bottom: 40px;
+    left: 750px;
+    // padding-left: 800px;
+    display: flex;
+    justify-content: space-around;
+    gap: 115px;
+    background-color: aliceblue;
+    border-radius: 50px;
+    border: 1px solid;
+    margin:auto;
+
+
+    img{
+        position: relative;
+        top: 13px;
+        height: 30px;
+        color: gray;
+    }
+}
 
 .wrapper {
    
@@ -165,6 +192,8 @@ body{
 .item {
     width: 200px;
     -webkit-column-break-inside: avoid;
+    position:relative;
+    cursor: pointer;
  
     img {
         width: 100%;
@@ -175,8 +204,237 @@ body{
     p {
         padding-left: 2px;
     }
+    &:hover{
+        
+        filter:brightness(0.4);
+    }
+    .save_icon{
+        visibility: hidden;
+        opacity: 1;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        height: 40px;
+        width: 65px;
+        background-color: red;
+        border-radius: 40px;
+        font-weight: bold;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+            visibility: visible;
+            filter: brightness(0.5);
+        }
+    }    
+
+    &:hover .save_icon {
+        visibility:visible;
+        cursor: pointer;
+        background-color: red;
+
+    }
+    &:hover .upload {
+        visibility:visible;
+        cursor: pointer;
+        background-color: rgb(233, 233, 233);
+        filter:brightness(1);
+        z-index: 9;
+    }   
+    &:hover .threeDot {
+        visibility:visible;
+        cursor: pointer;
+        background-color: rgb(233, 233, 233);
+        filter:brightness(1);
+        z-index: 9;
+    }   
+    .upload{
+        visibility: hidden;
+        opacity:1;
+        border-radius: 50%;
+        background-color: white;
+        height:35px;
+        width:35px;
+        position:absolute;
+        bottom:80px;
+        right: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 70%;
+            display: block;
+            margin: auto;
+            background-color: rgb(233, 233, 233);
+        }
+        &:hover{
+            visibility: visible;
+            background-color: rgb(233, 233, 233);
+            filter:brightness(1)
+        }
+    }    
+    .threeDot{
+        visibility: hidden;
+        background-color: white;
+        opacity:1;
+        border-radius: 50%;
+        height:35px;
+        width:35px;
+        position:absolute;
+        bottom:80px;
+        right: 20px; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 70%;
+            display: block;
+            margin: auto;
+            background-color: rgb(233, 233, 233);
+        }
+        &:hover{
+            visibility: visible;
+            background-color: rgb(252, 249, 249);
+            filter:brightness(1);
+        }
+       
+    }
 
 }
+
+a{
+    font-size: 1em;
+}
+.addition{
+    position: relative;
+    top: 100px;
+    margin: auto;
+    width: 1200px;
+    height: 1000px;
+    display: flex;
+    padding: 100px;
+    &__img{
+        padding-right: 20px;
+       img{
+            height: 1000px;
+            width: 600px;
+        }
+    }
+    &__comment{
+        .icons{
+            display: flex;
+            height: 48px;
+            gap: 10px;
+            .save{
+                position: absolute;
+                right: 0px;
+                border-radius: 50px;
+                width: 90px;
+                background-color: red;
+                color: white;
+                // align-content: center;
+                display:flex;
+                justify-content: center;
+            }
+        }
+        
+        .Dorit{
+          &__wrapper{
+              display: flex;
+              gap: 20px;
+              padding: 20px;
+             .wrapper0{
+                 
+                img{
+                    border-radius: 50%;
+                    height: 80px;
+                    width: 70px;
+                }
+                }
+             .wrapper1{
+                    border: 1px solid ;
+                    width: 550px;
+                    height: 80px;
+                    border-radius: 25px;
+                    margin: 0%;
+                    padding: 0%;
+                    
+                    
+                .name{
+                    display: flex;
+                    gap: 10px;
+                    position: relative;
+                    left: 20px;
+                    top: -10px;
+                    p{
+                        position: relative;
+                        top: 8px;
+                    }
+
+                }
+                .comment1{
+                    position: relative;
+                    left: 20px;
+                    top: -30px;
+
+                }
+                }
+            }
+            .D-letter{
+                position: relative;
+                left: 25px;
+                display: flex;
+                flex-direction: row;
+                align-content: center;
+                gap:15px;
+               
+                .d{
+                    
+                    background-color: blue;
+                    border-radius: 50%;
+                    width: 50px;
+                    height: 50px;
+                    text-align: center;
+                        h1{
+                            position: relative;
+                            top: -10px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: white;
+                        }
+                 
+                }
+                input{
+                    width: 400px;
+                    height:50px;
+                    border-radius: 40px;
+                    font-size: 1em;
+                }
+            } 
+
+        }
+        .end{
+            display: flex;
+            position:absolute;
+            bottom: 100px;
+            p{
+                font-size: 1em;
+            }
+            
+            img{
+                border-radius: 50%;
+                width: 48px;
+                
+            }
+        }
+    }
+}
+
+
+
+
 @media only screen and (max-width: 1440px) {
    
     .wrapper{
@@ -200,12 +458,20 @@ body{
   }
   
   @media only screen and (max-width: 440px) {
-   
+    .bottom_nav{
+        visibility:visible;
+        width: 200px;
+        left: 80px;
+        // justify-content: none;
+        gap: 7px;
+    
+    }
     .wrapper{
         column-width: 125px;
     }
     .item{
         width:125px;
     }
+    
    
   }

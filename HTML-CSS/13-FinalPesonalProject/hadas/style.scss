@@ -195,6 +195,7 @@ body,html{
         width: 250px;
     -webkit-column-break-inside:avoid-column;
     position: relative;
+  
     transition: .5s ease;
     margin-bottom: 20px;
 
@@ -261,17 +262,319 @@ body,html{
     &--plus {
         width: 60px;
         height: 60px;
-        background-color: rgb(240, 230, 230);
+        background-color: white;
         border-radius: 50%;
         border: 1px solid ghostwhite;
-        
+        box-shadow: 0px 0px 7px -1px #bdbdbd;
+        cursor: pointer;
     }
 
     &--question {
         width: 60px;
         height: 60px;
-        background-color:rgb(240, 230, 230);
+        background-color:white;
         border-radius: 50%;
         border: 1px solid ghostwhite;
+        box-shadow: 0px 0px 7px -1px #bdbdbd;
+        cursor: pointer;
     }
 } 
+  //page2//
+    .card{
+        max-width: 1000px;
+    margin: auto;
+    margin-top: 120px;
+    box-shadow: 0px 0px 6px -2px #b9b9b9;
+    border-radius: 40px;
+    display: flex;
+    
+    
+    img {
+        border-radius: 40px;
+        padding: 20px;
+        width: 50%;
+        height: 700px;
+    }
+
+    .card__wrapper{
+        padding: 20px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+       
+        
+        .cardtop{
+            display: flex;
+            justify-content: space-between;
+            
+            &__left{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 150px;
+                font-size: 20px;
+
+                &--menu{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &:hover{
+                        background-color: rgb(233, 233, 233);
+                        cursor: pointer;
+                    }
+                }
+                &--send{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &:hover{
+                        background-color: rgb(233, 233, 233);
+                        cursor: pointer;
+                    } 
+                }
+                &--link{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &:hover{
+                        background-color: rgb(233, 233, 233);
+                        cursor: pointer;
+                    }
+                }
+                
+            }
+            .cardtop__right{
+                width: 180px;
+                display: flex;
+                justify-content: right;
+                align-items: center;
+
+                &--save{
+                    background-color: rgb(218, 10, 10);
+                    border: none;
+                    color: white;
+                    border-radius: 40px;
+                    padding: 12px 15px;
+                    font-size: 15px;
+                    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-weight: bold;
+                    align-items: center;
+                    
+                    
+                    &:hover{
+                        background-color: rgb(182, 16, 16);
+                        cursor:pointer;
+                    }
+                    
+                }
+            }
+        }
+
+        .card__sendby{
+            font-size: 20px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: normal;
+            h3{
+                font-weight: normal;
+                span{
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .card__profile{
+           display: flex;
+           flex-direction: row;
+           align-items: center;
+           justify-content: space-between;
+       
+
+           &--img{
+               display: flex;
+               align-items: center;
+            
+               img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+             }
+           }
+
+           &--text{
+               display: flex;
+               flex-direction: column;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            
+            h6{ 
+                font-size: 10px;
+                margin: 0;
+                padding: 0; 
+                position: relative;
+                right: 100px;
+            }
+
+            p{
+                margin: 0;
+                padding: 0;
+                position: relative;
+                right: 100px;
+            }
+           }
+        }
+
+        .cart__follow{
+            width: 80px;
+            height: 50px;
+            border-radius: 40px;
+            border: none;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+
+            &:hover{
+                background-color: rgb(224, 218, 218);
+                cursor: pointer;
+            }   
+        }
+
+          .profit{
+            height: 60px;
+          }
+
+        .card__comments{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          
+            &--icon{
+                display: flex;
+                align-items: center;
+                
+                h3{
+                    font-size: 20px;
+                    padding-right: 10px;
+                }
+            }
+                &--add{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: left;
+
+                    .nav__icons--profile{
+                        font-size: 30px;
+                        width: 50px;
+                        height: 50px;
+                        text-align: center;
+                        align-items: center;
+                    }
+                   
+
+                    input{
+                        display: flex;
+                        width: 80%;
+                        border: 1px solid rgb(224, 218, 218);
+                        border-radius: 40px;
+                        height: 40px;
+                        padding-right: 10px;
+
+                        &:active{
+                            border: 1px solid rgb(224, 218, 218);
+                        }
+                    }
+                }
+        }
+    }
+
+} 
+
+.morelikethis{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+   text-align: center;
+   padding-top: 50px;
+}
+
+.mobile_nav {
+    width: 100%;
+    display: none;
+    
+
+    &__container {
+        width: 200px;
+        height: 50px;
+        background-color: white;
+        border: 1px solid grey;
+        border-radius: 40px;
+        position: fixed;
+        bottom: 5px;
+        left: 50%;
+        transform: translate(-65%, -50%);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 25px;
+        align-items: center;
+        color: #6e6e6e;
+    }
+}
+
+    
+
+
+
+@media only screen and (max-width:914px){
+
+    .nav,
+    .filler {
+        display: none;
+    }
+
+    .Design{
+        width: 75vw;
+        margin: auto;
+        column-width:170px;
+        -webkit-column-break-inside:avoid-column;
+    }
+
+  
+
+    .mobile_nav {
+        display: contents;
+    }
+
+    .card{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        box-shadow: none;
+        border-radius: none;
+        padding: 0%;
+        margin: 0%;
+
+        img{
+            width: 100%;
+            border-radius: 0px;
+            padding: 0px;
+        }
+
+        .card__wrapper{
+            width: 90vw;
+        }
+        h6,p{
+            position: relative;
+            left: 2px;
+            
+        }
+    }
+
+}

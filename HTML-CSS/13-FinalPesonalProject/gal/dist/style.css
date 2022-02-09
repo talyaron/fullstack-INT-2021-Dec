@@ -1,6 +1,8 @@
 body,
 html {
   margin: 0%;
+  width: 100vw;
+  height: 100vh;
 }
 
 .menu {
@@ -14,29 +16,29 @@ html {
   color: #767676;
   font-size: 30px;
 }
-.menu__left {
+.menu__leftBar {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 5px;
 }
-.menu__left__logo {
+.menu__leftBar__logo {
   width: 50px;
   height: 40px;
   border-radius: 50%;
   display: flex;
 }
-.menu__left__logo img {
+.menu__leftBar__logo img {
   width: 50%;
   display: block;
   margin: auto;
 }
-.menu__left__logo:hover {
+.menu__leftBar__logo:hover {
   background-color: #e9e9e9;
   cursor: pointer;
 }
-.menu__left__home {
+.menu__leftBar__home {
   height: 30px;
   background-color: black;
   border: none;
@@ -48,7 +50,7 @@ html {
   text-align: center;
   line-height: 1px;
 }
-.menu__left__home:hover {
+.menu__leftBar__home:hover {
   cursor: pointer;
 }
 .menu__search {
@@ -74,7 +76,7 @@ html {
 .menu__search input[type=text]:hover {
   background-color: #dfdfdf;
 }
-.menu__icons {
+.menu__top {
   padding: 0px 30px;
   width: 200px;
   display: flex;
@@ -83,76 +85,54 @@ html {
   text-align: center;
   font-size: 25px;
 }
-.menu__icons__notifications {
-  width: 50px;
-  height: 50px;
+.menu__top__bell {
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
 }
-.menu__icons__notifications .fa-bell {
-  margin: auto;
-}
-.menu__icons__notifications:hover {
+.menu__top__bell:hover {
   background-color: #e9e9e9;
   cursor: pointer;
 }
-.menu__icons__inbox {
-  width: 50px;
-  height: 50px;
+.menu__top__dots {
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
 }
-.menu__icons__inbox:hover {
+.menu__top__dots:hover {
   background-color: #e9e9e9;
   cursor: pointer;
 }
-.menu__icons__inbox .fa-comment-dots {
-  margin: auto;
-}
-.menu__icons__user {
-  width: 50px;
-  height: 50px;
+.menu__top__name {
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   display: flex;
-  justify-content: center;
-}
-.menu__icons__user:hover {
-  background-color: #e9e9e9;
-  cursor: pointer;
-}
-.menu__icons__user__container {
-  margin: auto;
-  width: 20px;
-  height: 20px;
-  background-color: #efefef;
-  border-radius: 50%;
   color: black;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: bolder;
-  font-size: 10px;
-  display: flex;
   justify-content: center;
-  line-height: 20px;
 }
-.menu__icons__more_user {
-  width: 50px;
-  height: 50px;
+.menu__top__name:hover {
+  background-color: #e9e9e9;
+  cursor: pointer;
+}
+.menu__top__chevron {
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   font-size: 1.5rem;
 }
-.menu__icons__more_user:hover {
+.menu__top__chevron:hover {
   background-color: #e9e9e9;
   cursor: pointer;
 }
-.menu__icons__more_user .fa-chevron-down {
-  margin: auto;
-}
 
-.content {
+.picPage {
   margin-top: 15px;
   column-width: 250px;
   -webkit-column-break-inside: avoid;
@@ -194,6 +174,10 @@ html {
   line-height: 63px;
   font-size: 25px;
 }
+.menu_buttons__plus:hover {
+  background-color: #e9e9e9;
+  cursor: pointer;
+}
 .menu_buttons__question {
   width: 60px;
   height: 60px;
@@ -202,6 +186,10 @@ html {
   border: 1px solid ghostwhite;
   line-height: 63px;
   font-size: 20px;
+}
+.menu_buttons__question:hover {
+  background-color: #e9e9e9;
+  cursor: pointer;
 }
 
 .user {
@@ -215,31 +203,41 @@ html {
   color: #767676;
   font-size: 60px;
 }
-.user__left {
+.user__lorem {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 5px;
 }
-.user__left__logo {
+.user__lorem__ipsum {
   width: 90px;
   height: 80px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
 }
-.user__left__logo img {
+.user__lorem__ipsum img {
   width: 50%;
   display: block;
   margin: auto;
 }
-.user__left__logo:hover {
+.user__lorem__ipsum:hover {
   background-color: #e9e9e9;
   cursor: pointer;
 }
-.user__left__logo p {
+.user__lorem__ipsum p {
   font-size: 13px;
   margin: auto;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.plus {
+  width: 20px;
+  color: black;
+}
+
+.question {
+  width: 20px;
+  color: black;
 }
