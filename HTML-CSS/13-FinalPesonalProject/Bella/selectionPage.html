@@ -22,7 +22,9 @@
                     </path>
                 </svg>
             </div>
-            <div class="home-btn">Home</div>
+            <a href="homePage.html">
+                <div class="home-btn inner-page-btn">Home</div>
+            </a>
             <i class="material-icons search">search</i>
             <input class="search" type="search" id="site-search" name="search">
         </div>
@@ -65,42 +67,32 @@
                 <div class="top-nav-bar">
                     <div class="left">
                         <div class="menu icon">
-                            <svg class="icon" height="8" width="8" viewBox="0 0 48 48" aria-hidden="true" role="img">
+                            <svg class="icon-menu" fill="#111111" height="24" width="24" viewBox="0 0 24 24" aria-hidden="true" role="img">
                                 <path
                                     d="M12 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3M3 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm18 0c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z">
                                 </path>
                             </svg>
                         </div>
                         <div class="send icon">
-                            <svg class="icon" height="24" width="24" viewBox="20" aria-label="Send" role="img">
+                            <svg class="icon-send" fill="#111111" height="24" width="24" viewBox="0 0 24 24" aria-label="Send" role="img">
                                 <path
                                     d="M21 14c1.1 0 2 .9 2 2v6c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2s2 .9 2 2v4h14v-4c0-1.1.9-2 2-2zM8.82 8.84c-.78.78-2.05.79-2.83 0-.78-.78-.79-2.04-.01-2.82L11.99 0l6.02 6.01c.78.78.79 2.05.01 2.83-.78.78-2.05.79-2.83 0l-1.2-1.19v6.18a2 2 0 1 1-4 0V7.66L8.82 8.84z">
                                 </path>
                             </svg>
                         </div>
                         <div class="link icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 36 36" version="1.1">
-                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <circle fill="#FFFFFF" cx="18" cy="18" r="18"></circle>
-                                    <g id="Icons/link" transform="translate(9.000000, 9.000000)" fill="#111111"
-                                        fill-rule="nonzero">
-                                        <path
-                                            d="M15.75075,5.43075 L12.711,8.46975 L11.916,7.67475 L12.42,7.17075 C12.8595,6.732 12.8595,6.0195 12.42,5.58 C11.9805,5.14125 11.268,5.14125 10.82925,5.58 L10.326,6.084 L9.53025,5.289 L12.56925,2.25 L15.75075,5.43075 Z M8.46975,12.71175 L5.43075,15.75075 L2.24925,12.57 L5.289,9.53025 L6.08325,10.32525 L5.58,10.82925 C5.14125,11.26875 5.14125,11.9805 5.58,12.42 C6.01875,12.8595 6.732,12.85875 7.17075,12.42 L7.674,11.916 L8.46975,12.71175 Z M10.97925,0.65925 L7.9395,3.69825 C7.06125,4.5765 7.06125,6.00075 7.9395,6.87975 L8.73525,7.67475 L7.674,8.73525 L6.879,7.9395 C6.00075,7.06125 4.5765,7.06125 3.69825,7.9395 L0.65925,10.9785 C-0.21975,11.8575 -0.21975,13.28175 0.65925,14.16 L3.84,17.3415 C4.71825,18.21975 6.1425,18.21975 7.02075,17.3415 L10.0605,14.3025 C10.93875,13.4235 10.93875,11.99925 10.0605,11.121 L9.2655,10.32525 L10.326,9.2655 L11.121,10.0605 C11.99925,10.93875 13.4235,10.93875 14.30175,10.0605 L17.34075,7.0215 C18.21975,6.14325 18.21975,4.719 17.34075,3.84 L14.16,0.65925 C13.28175,-0.21975 11.8575,-0.21975 10.97925,0.65925 Z"
-                                            id="path-1"></path>
-                                    </g>
-                                </g>
-                            </svg>
-                        </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 36 36" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><circle fill="#FFFFFF" cx="18" cy="18" r="18"></circle><g id="Icons/link" transform="translate(9.000000, 9.000000)" fill="#111111" fill-rule="nonzero"><path d="M15.75075,5.43075 L12.711,8.46975 L11.916,7.67475 L12.42,7.17075 C12.8595,6.732 12.8595,6.0195 12.42,5.58 C11.9805,5.14125 11.268,5.14125 10.82925,5.58 L10.326,6.084 L9.53025,5.289 L12.56925,2.25 L15.75075,5.43075 Z M8.46975,12.71175 L5.43075,15.75075 L2.24925,12.57 L5.289,9.53025 L6.08325,10.32525 L5.58,10.82925 C5.14125,11.26875 5.14125,11.9805 5.58,12.42 C6.01875,12.8595 6.732,12.85875 7.17075,12.42 L7.674,11.916 L8.46975,12.71175 Z M10.97925,0.65925 L7.9395,3.69825 C7.06125,4.5765 7.06125,6.00075 7.9395,6.87975 L8.73525,7.67475 L7.674,8.73525 L6.879,7.9395 C6.00075,7.06125 4.5765,7.06125 3.69825,7.9395 L0.65925,10.9785 C-0.21975,11.8575 -0.21975,13.28175 0.65925,14.16 L3.84,17.3415 C4.71825,18.21975 6.1425,18.21975 7.02075,17.3415 L10.0605,14.3025 C10.93875,13.4235 10.93875,11.99925 10.0605,11.121 L9.2655,10.32525 L10.326,9.2655 L11.121,10.0605 C11.99925,10.93875 13.4235,10.93875 14.30175,10.0605 L17.34075,7.0215 C18.21975,6.14325 18.21975,4.719 17.34075,3.84 L14.16,0.65925 C13.28175,-0.21975 11.8575,-0.21975 10.97925,0.65925 Z" id="path-1"></path></g></g></svg></div>
                     </div>
                     <div class="right">
                         <button type="button" class="btn">Save</button>
                     </div>
                 </div>
-                <a href="#">a link to somewhere</a>
+                <!--link-->
+                <a class="web-link" href="#">Website-Domain.com</a>
                 <!--The heading of the post and the explanation-->
                 <div class="Heading-and-expo">
                     <h1>this is a heading - title, subject, etc...</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. ipsum dolor sit amet consectetur adipisicing elit, sit amet consectetur adipisicing elit.</p>
                 </div>
                 <!--user content-->
                 <div class="user-profile-info">
@@ -124,7 +116,7 @@
                 <div class="comments">
                     <div class="comments-heading">
                         <h2>comments</h2>
-                        <svg class="svg-icon" height="24" width="24" viewBox="0 0 20 20">
+                        <svg class="comment-svg-icon" height="32" width="32" viewBox="0 0 20 20">
                             <path
                                 d="M11.611,10.049l-4.76-4.873c-0.303-0.31-0.297-0.804,0.012-1.105c0.309-0.304,0.803-0.293,1.105,0.012l5.306,5.433c0.304,0.31,0.296,0.805-0.012,1.105L7.83,15.928c-0.152,0.148-0.35,0.223-0.547,0.223c-0.203,0-0.406-0.08-0.559-0.236c-0.303-0.309-0.295-0.803,0.012-1.104L11.611,10.049z">
                             </path>
@@ -148,22 +140,26 @@
                     <div class="profile__image__s">
                         <img class="main-image" src="https://images.unsplash.com/photo-1637913754840-3c8755479fdd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80 alt=">
                     </div>
-                    <h4>card's footer</h4>
+                    <h4 class="footer"><strong>zhen zhan Wang</strong> saved to <strong>Z住宅、样板间</strong></h4>
                 </div>
             </div>
         </div>
+        <!--related items heading-->
+        <h3 class="related-items">More like this</h3>
         <!--photo-grid-->
-        <h2>More like this</h2>
         <div class="grid-wrapper wrapper">
             <div class="item XL">
+
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1541845157-a6d2d100c931?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1644247988716-e5b98d435f22?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
                 </div>
+
                 <div class="inline">
                     <div class="avatar"></div>
-                    <h4>Alex A | UI/UX Design...
-                    </h4>
+                    <h4>Alex A | UI/UX Design...</h4>
                 </div>
                 <div class="reaction-icons inline">
                     <img src="heart-icon.svg" alt="heart-icon">
@@ -174,28 +170,39 @@
             </div>
             <div class="item">
                 <div class="card">
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
-                    <div class="gif first"></div>
+                    <a href="selectionPage.html">
+                        <div class="gif first"></div>
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
+                    <h5 class="post-heading">Arnold Gin | Design & Art collector...</h5>
                 </div>
             </div>
             <div class="item XXL">
                 <div class="card">
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
-                    <div class="gif second"></div>
+                    <a href="selectionPage.html">
+                        <div class="gif second"></div>
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
+                    <h5 class="post-heading">Arnold Gin | Design & Art collector...</h5>
                 </div>
             </div>
 
             <div class="item">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1588282322673-c31965a75c3e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1351&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1588282322673-c31965a75c3e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1351&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
+                    <h5 class="post-heading">Arnold Gin | Design & Art collector...</h5>
                 </div>
             </div>
 
             <div class="item">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1587588354456-ae376af71a25?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1587588354456-ae376af71a25?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
                 </div>
                 <div class="inline">
                     <div class="avatar"></div>
@@ -211,8 +218,10 @@
             </div>
             <div class="item ">
                 <div class="card">
-                    <div class="gif third"></div>
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <div class="gif third"></div>
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
                 </div>
                 <div class="inline">
                     <div class="avatar"></div>
@@ -228,14 +237,19 @@
             </div>
             <div class="item">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1588263823647-ce3546d42bfe?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=675&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1588263823647-ce3546d42bfe?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=675&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
+                    <h5 class="post-heading">Arnold Gin | Design & Art collector...</h5>
                 </div>
             </div>
             <div class="item">
                 <div class="card">
-                    <img src=" https://images.unsplash.com/photo-1558980663-3685c1d673c4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=60" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src=" https://images.unsplash.com/photo-1558980663-3685c1d673c4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=60" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
                 </div>
                 <div class="inline">
                     <div class="avatar"></div>
@@ -251,14 +265,19 @@
             </div>
             <div class="item">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1588499756884-d72584d84df5?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2134&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1588499756884-d72584d84df5?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2134&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
+                    <h5 class="post-heading">Arnold Gin | Design & Art collector...</h5>
                 </div>
             </div>
             <div class="item">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1588492885706-b8917f06df77?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1951&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1588492885706-b8917f06df77?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1951&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
                 </div>
                 <div class="inline">
                     <div class="avatar"></div>
@@ -274,14 +293,19 @@
             </div>
             <div class="item">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1588247866001-68fa8c438dd7?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=564&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1588247866001-68fa8c438dd7?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=564&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
+                    <h5 class="post-heading">Arnold Gin | Design & Art collector...</h5>
                 </div>
             </div>
             <div class="item">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1586521995568-39abaa0c2311?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1586521995568-39abaa0c2311?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
                 </div>
                 <div class="inline">
                     <div class="avatar"></div>
@@ -297,14 +321,19 @@
             </div>
             <div class="item">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1572914857229-37bf6ee8101c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1951&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1572914857229-37bf6ee8101c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1951&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
+                    <h5 class="post-heading">Arnold Gin | Design & Art collector...</h5>
                 </div>
             </div>
             <div class="item">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1588453862014-cd1a9ad06a12?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1588453862014-cd1a9ad06a12?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
                 </div>
                 <div class="inline">
                     <div class="avatar"></div>
@@ -320,14 +349,19 @@
             </div>
             <div class="item XXL">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1588263823647-ce3546d42bfe?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=675&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1588263823647-ce3546d42bfe?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=675&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
+                    <h5 class="post-heading">Arnold Gin | Design & Art collector...</h5>
                 </div>
             </div>
             <div class="item">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1588414734732-660b07304ddb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=675&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1588414734732-660b07304ddb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=675&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
                 </div>
                 <div class="inline">
                     <div class="avatar"></div>
@@ -343,14 +377,19 @@
             </div>
             <div class="item XL">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1588224575346-501f5880ef29?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1588224575346-501f5880ef29?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
+                    <h5 class="post-heading">Arnold Gin | Design & Art collector...</h5>
                 </div>
             </div>
             <div class="item">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1574798834926-b39501d8eda2?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1574798834926-b39501d8eda2?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
                 </div>
                 <div class="inline">
                     <div class="avatar"></div>
@@ -366,8 +405,10 @@
             </div>
             <div class="item XXL">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1353&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1353&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
                 </div>
                 <div class="inline">
                     <div class="avatar"></div>
@@ -383,8 +424,10 @@
             </div>
             <div class="item XXL">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1588263823647-ce3546d42bfe?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=675&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1588263823647-ce3546d42bfe?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=675&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
                 </div>
                 <div class="inline">
                     <div class="avatar"></div>
@@ -400,8 +443,10 @@
             </div>
             <div class="item XL">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1587732608058-5ccfedd3ea63?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1587732608058-5ccfedd3ea63?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
                 </div>
                 <div class="inline">
                     <div class="avatar"></div>
@@ -417,14 +462,19 @@
             </div>
             <div class="item">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1587897773780-fe72528d5081?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1489&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1587897773780-fe72528d5081?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1489&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
+                    <h5 class="post-heading">Arnold Gin | Design & Art collector...</h5>
                 </div>
             </div>
             <div class="item XXL">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1588083949404-c4f1ed1323b3?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1489&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1588083949404-c4f1ed1323b3?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1489&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
                 </div>
                 <div class="inline">
                     <div class="avatar"></div>
@@ -440,8 +490,11 @@
             </div>
             <div class="item">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1553984840-b8cbc34f5215?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1553984840-b8cbc34f5215?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
+                    <h5 class="post-heading">Arnold Gin | Design & Art collector...</h5>
                 </div>
                 <div class="inline">
                     <div class="avatar"></div>
@@ -457,27 +510,38 @@
             </div>
             <div class="item">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1587572236558-a3751c6d42c0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1587572236558-a3751c6d42c0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
+                    <h5 class="post-heading">Arnold Gin | Design & Art collector...</h5>
                 </div>
             </div>
             <div class="item XXL">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1583542225715-473a32c9b0ef?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1583542225715-473a32c9b0ef?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
+                    <h5 class="post-heading">Arnold Gin | Design & Art collector...</h5>
                 </div>
             </div>
             <div class="item XL">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1527928159272-7d012024eb74?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1527928159272-7d012024eb74?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
+                    <h5 class="post-heading">Arnold Gin | Design & Art collector...</h5>
                 </div>
             </div>
 
             <div class="item XL">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1433446787703-42d5bf446876?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1351&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1433446787703-42d5bf446876?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1351&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
                 </div>
                 <div class="inline">
                     <div class="avatar"></div>
@@ -493,14 +557,19 @@
             </div>
             <div class="item">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1541187714594-731deadcd16a?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1541187714594-731deadcd16a?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
+                    <h5 class="post-heading">Arnold Gin | Design & Art collector...</h5>
                 </div>
             </div>
             <div class="item">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1587588354456-ae376af71a25?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1587588354456-ae376af71a25?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
                 </div>
                 <div class="inline">
                     <div class="avatar"></div>
@@ -516,8 +585,10 @@
             </div>
             <div class="item XXL">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
                 </div>
                 <div class="inline">
                     <div class="avatar"></div>
@@ -533,20 +604,28 @@
             </div>
             <div class="item">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1421930866250-aa0594cea05c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1355&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1421930866250-aa0594cea05c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1355&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
+                    <h5 class="post-heading">Arnold Gin | Design & Art collector...</h5>
                 </div>
             </div>
             <div class="item XL">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1493306454986-c8877a09cbeb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1381&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1493306454986-c8877a09cbeb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1381&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
+                    <h5 class="post-heading">Arnold Gin | Design & Art collector...</h5>
                 </div>
             </div>
             <div class="item">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1536466528142-f752ae7bdd0c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1536466528142-f752ae7bdd0c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
                 </div>
                 <div class="inline">
                     <div class="avatar"></div>
@@ -562,8 +641,10 @@
             </div>
             <div class="item XXL">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1588117472013-59bb13edafec?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="">
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1588117472013-59bb13edafec?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="">
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
                 </div>
                 <div class="inline">
                     <div class="avatar"></div>
@@ -579,8 +660,10 @@
             </div>
             <div class="item">
                 <div class="card">
-                    <img src="https://images.unsplash.com/photo-1588282322673-c31965a75c3e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1351&amp;q=80" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src="https://images.unsplash.com/photo-1588282322673-c31965a75c3e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1351&amp;q=80" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
                 </div>
                 <div class="inline">
                     <div class="avatar"></div>
@@ -596,8 +679,11 @@
             </div>
             <div class="item XXL">
                 <div class="card">
-                    <img src=" https://images.unsplash.com/photo-1558980663-3685c1d673c4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=60" alt="" />
-                    <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    <a href="selectionPage.html">
+                        <img src=" https://images.unsplash.com/photo-1558980663-3685c1d673c4?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=60" alt="" />
+                        <button type="button" class="mybuttonoverlap btn btn-save">Save</button>
+                    </a>
+                    <h5 class="post-heading">Arnold Gin | Design & Art collector...</h5>
                 </div>
             </div>
         </div>
