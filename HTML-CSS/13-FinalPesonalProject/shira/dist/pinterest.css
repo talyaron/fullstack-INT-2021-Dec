@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 80vh;
+}
+
 header {
   width: 100%;
   background-color: white;
