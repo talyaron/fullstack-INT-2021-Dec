@@ -18,21 +18,21 @@
     <!--Nav Bar-->
     <header>
         <nav class="navbar">
-            <div class="left_icons">
-                <img class="logo" src="https://snipstock.com/assets/cdn/png/01fb944b467b866a1ece4ea635747747.png" alt="Pintrest">
-                <button class="home">Home</button>
+            <div class="navbar__left">
+                <div class="navbar__left__logo"><img src="https://cdn.worldvectorlogo.com/logos/pinterest-1.svg" alt="Pintrest"></div>
+                <a href=""><button class="navbar__left__home navbar__left__home--over">Home</button></a>
             </div>
-            <div class="search">
-                <i class="fas fa-search"></i>
-                <input id="site-search" type="text" placeholder="Search">
+            <div class="navbar__search">
+                <div class="search_area">
+                    <i class="fas fa-search"></i>
+                    <input id="site-search" type="text" placeholder="      Search">
+                </div>
             </div>
-            <div class="right_icons">
-                <ul>
-                    <li><i class="fas fa-bell"></i></li>
-                    <li><i class="fas fa-comment-dots"></i></li>
-                    <li><i class="fas fa-user-circle"></i></li>
-                    <li><i class="fas fa-angle-right"></i></li>
-                </ul>
+            <div class="navbar__icons">
+                <div class="menu__icons__bell"> <i class="fas fa-bell"></i></div>
+                <div class="menu__icons__dots"> <i class="fas fa-comment-dots"></i></div>
+                <div class="menu__icons__user"> <i class="fas fa-user-circle"></i></div>
+                <div class="menu__icons__more"> <i class="fas fa-chevron-down"></i></div>
             </div>
         </nav>
     </header>
@@ -49,29 +49,39 @@
                     </div>
                     <!--Post Left Side-->
                     <div class="left-side">
-                        <div class="top-left_icons">
-                            <i class="fas fa-ellipsis-h fa-2x"></i>
-                            <i class="fas fa-external-link-alt fa-2x"></i>
-                            <i class="fas fa-link fa-2x"></i>
-                            <button class="btn">Save</button>
-                        </div>
-                        <div class="pic-link">
-                            <a href="https://pin.it/rX3HG8s">pin.it</a>
-                        </div><br><br>
-                        <h1>Faith 😜 en Instagram: “For more follow @faithypoo2005 #aries #taurus #gemini #cancer #leo #virgo #libra #scorpio … | Zodiac tattoo, Dark art tattoo, Creepy tattoos</h1> <br>
-                        <span>Dec 17, 2021 - 9,352 Likes, 39 Comments - Faith 😜 (@faithypoo2005) on Instagram: “For more follow @faithypoo2005 #aries #taurus #gemini #cancer #leo #virgo #libra #scorpio…”
+                        <div class="left-side_wrapper">
+                            <div class="left-side_wrapper__left">
+                                <div class="left-side_wrapper__left__dots">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </div>
+                                <div class="left-side_wrapper__left__upload">
+                                    <i class="fas fa-upload"></i>
+                                </div>
+                                <div class="left-side_wrapper__left__link">
+                                    <i class="fas fa-link"></i>
+                                </div>
+                            </div>
+                            <div class="left-side_wrapper__right">
+                                <i class="fas fa-chevron-down"></i>
+                                <button class="btn">Save</button>
+                            </div>
+                            <div class="pic-link">
+                                <a href="https://pin.it/rX3HG8s">pin.it</a>
+                            </div><br><br>
+                            <h1>Faith 😜 en Instagram: “For more follow @faithypoo2005 #aries #taurus #gemini #cancer #leo #virgo #libra #scorpio … | Zodiac tattoo, Dark art tattoo, Creepy tattoos</h1> <br>
+                            <span>Dec 17, 2021 - 9,352 Likes, 39 Comments - Faith 😜 (@faithypoo2005) on Instagram: “For more follow @faithypoo2005 #aries #taurus #gemini #cancer #leo #virgo #libra #scorpio…”
                         Comments</span> <br> <br> <br>
-                        <span><b>Comments</b>
+                            <span><b>Comments</b>
                         <i class="fas fa-angle-right"></i> <br><br>
                         <p>Share feedback, ask a question or give a high five</p>
                     </span>
-                        <div class="bootom-left_bar">
-                            <i class="fas fa-user-circle fa-3x"> </i>
-                            <input id="post-comment" type="text" placeholder="Comment">
+                            <div class="bootom-left_bar">
+                                <i class="fas fa-user-circle fa-3x"> </i>
+                                <input id="post-comment" type="text" placeholder="Comment">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
         <!--More-->
         <div class="more">
