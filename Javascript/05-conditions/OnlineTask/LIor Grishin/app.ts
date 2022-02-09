@@ -1,4 +1,4 @@
-const salary = 1e9;
+const salary:number = 1e9;
 
 if (salary >= 5500 && salary <= 1e9) {
     console.log(`I earn ${salary}, so I have to pay MAS.`);
