@@ -17,6 +17,13 @@ nav{
         margin: 0;
         padding: 0; 
         
+        .logo--pin{
+            position:relative;
+            width: 35px;
+            height: 35px;
+            top:-15px
+        }
+        
         li{
             list-style: none;
             float: left;

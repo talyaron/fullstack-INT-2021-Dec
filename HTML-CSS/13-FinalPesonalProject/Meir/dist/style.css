@@ -15,6 +15,12 @@ nav ul {
   margin: 0;
   padding: 0;
 }
+nav ul .logo--pin {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  top: -15px;
+}
 nav ul li {
   list-style: none;
   float: left;
