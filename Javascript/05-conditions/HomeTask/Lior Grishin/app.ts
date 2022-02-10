@@ -63,3 +63,4 @@ form.addEventListener('submit', function (event){
     tax.innerText = (`סה"כ מס שנלקח ממך: ${taxTook} ש"ח`);
     //inputSalary.value = "";
 })
+
