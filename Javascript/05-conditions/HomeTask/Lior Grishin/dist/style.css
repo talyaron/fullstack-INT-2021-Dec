@@ -18,7 +18,16 @@ body div {
 body div form {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1em;
+}
+body div form button {
+  cursor: pointer;
+  border: none;
+  padding: 0.5em 2em;
+  border-radius: 0.25em;
+  background-color: #d1d1d1;
+  font-size: 1rem;
 }
 
 .box--style {
