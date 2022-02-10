@@ -290,7 +290,15 @@ header .menu__icons__more_user .fa-chevron-down {
     width: 100%;
   }
 }
+.link_to_home {
+  position: relative;
+  top: 200px;
+  left: 35px;
+  cursor: pointer;
+}
+
 .big_card {
+  position: relative;
   display: flex;
   flex-direction: row;
   border-radius: 20px;
@@ -311,20 +319,18 @@ header .menu__icons__more_user .fa-chevron-down {
 .big_card .about_picture .icons {
   position: relative;
   left: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 .big_card .about_picture .icons .menu_icon {
   left: 5px;
 }
 .big_card .about_picture .icons .share_icon {
   position: relative;
-  left: 10px;
+  left: 18px;
 }
 .big_card .about_picture .icons .copy_link_Icon {
   position: relative;
-  right: 1px;
+  top: 12px;
+  left: 20px;
 }
 .big_card .about_picture .about_pic {
   position: relative;
@@ -366,7 +372,7 @@ header .menu__icons__more_user .fa-chevron-down {
 }
 .big_card .about_picture .user_profil .follow_btn {
   position: relative;
-  left: 500px;
+  left: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -375,6 +381,29 @@ header .menu__icons__more_user .fa-chevron-down {
   width: 65px;
   border-radius: 20px;
   background-color: rgba(126, 121, 121, 0.267);
+}
+.big_card .about_picture .user_profil .save_btn_seen {
+  position: relative;
+  left: 500px;
+  top: -85px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: red;
+  border-radius: 20px;
+  height: 40px;
+  width: 60px;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-name: saveColor;
+  opacity: 1;
+}
+@keyframes saveColor {
+  to {
+    background-color: grey;
+  }
 }
 .big_card .about_picture .comments .comment_title {
   position: relative;
@@ -394,9 +423,9 @@ header .menu__icons__more_user .fa-chevron-down {
   height: 55px;
   width: 55px;
 }
-.big_card .about_picture .comments .the_comment p {
+.big_card .about_picture .comments .the_comment .user_comm_text {
   position: relative;
-  left: 10px;
+  left: -7px;
   top: 10px;
   text-align: left;
   padding: 10px;
@@ -406,15 +435,17 @@ header .menu__icons__more_user .fa-chevron-down {
   align-items: flex-start;
   border: rgba(126, 121, 121, 0.267) 1px solid;
   border-radius: 20px;
+  animation: saveColor 1 2s;
 }
 .big_card .about_picture .comments .comment_icons {
   position: relative;
+  left: 70px;
   display: flex;
   justify-content: space-between;
 }
-.big_card .about_picture .comments .comment_icons .right_comm_icons {
+.big_card .about_picture .comments .comment_icons .like_Icon {
   position: relative;
-  left: 100px;
+  right: 100px;
 }
 .big_card .about_picture .comments .four_comm {
   padding: 20px;
@@ -429,65 +460,57 @@ header .menu__icons__more_user .fa-chevron-down {
 .big_card .about_picture .comments .four_comm .emojy {
   position: relative;
   left: 520px;
-  top: -35px;
+  top: -37px;
 }
 
-.save_btn_seen {
-  position: relative;
-  right: 60px;
-  top: 35px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  background-color: red;
-  border-radius: 20px;
-  height: 40px;
-  width: 100px;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-name: circle;
-  opacity: 1;
-}
-
-@keyframes circle {
-  from {
-    position: relative;
-    right: 60px;
-    top: 35px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    background-color: red;
-    border-radius: 20px;
-    height: 40px;
-    width: 100px;
-    border: none;
-    border-radius: none;
-  }
-  to {
-    position: relative;
-    right: 60px;
-    top: 35px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    background-color: red;
-    border-radius: 20px;
-    height: 40px;
-    width: 100px;
-    border: none;
-    border-radius: none;
-    border: 8px solid #0074e8;
-  }
-}
 .under_card p {
   font-weight: bolder;
   text-align: center;
   font-size: x-large;
+}
+
+@media only screen and (max-width: 412px) {
+  .big_card {
+    width: 100%;
+  }
+  .big_card p {
+    position: relative;
+    top: 20px;
+  }
+
+  .comments {
+    display: none;
+  }
+
+  .under_card p {
+    position: relative;
+    top: 5px;
+    font-weight: bolder;
+    text-align: center;
+    font-size: x-large;
+  }
+
+  .nav_two .footer_container {
+    width: 50%;
+    height: 50px;
+    left: 205px;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 200px;
+    bottom: 2px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 20px;
+    align-items: center;
+    color: #6e6e6e;
+    cursor: pointer;
+    position: fixed;
+  }
+  .nav_two .footer_container img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
 }

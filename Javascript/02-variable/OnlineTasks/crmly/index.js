@@ -1,0 +1,11 @@
+var a = 10;
+var b = 4;
+var x;
+x = a*b;
+console.log(x);
+x = a/b;
+console.log(x);
+x = a+b;
+console.log(x);
+x = a-b;
+console.log(x);
