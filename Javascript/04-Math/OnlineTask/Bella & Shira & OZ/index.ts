@@ -9,10 +9,10 @@ console.log(L)
 
 //from 5500 up to 1000000000 - you will pay taxes
 var minIncome: number = 5500;
-var maxIncome: number = 1000000001; //if bigger than 1000000000 you will not pay taxes
+var maxIncome: number = 1000000008; //if bigger than 1000000000 you will not pay taxes
 
-if (minIncome <= 5500 || maxIncome >= 1000000000) {
-    console.log('You will pay taxes')
+if (minIncome > 5500 || maxIncome > 1000000000) {
+    console.log('You will pay taxes');
 } else {
     console.log('You will not pay taxes');
 }
