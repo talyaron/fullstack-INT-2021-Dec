@@ -33,17 +33,17 @@ if (salary <= stairs[0]){
     stair_no = 6;
 }
 
-console.log('stair_no:',stair_no)
+//console.log('stair_no:',stair_no)
 
 if (stair_no == 0){
     neto = salary * percents[0];
-    console.log('percents0',percents[0]);
-    console.log('neto0:',neto);
+    //console.log('percents0',percents[0]);
+    //console.log('neto0:',neto);
 }else{
     ind = stair_no - 1;
-    console.log('ind:',ind);
-    console.log('fullRate:',fullRate[ind]);
-    console.log('percents of stair_no',percents[stair_no])
+    //console.log('ind:',ind);
+    //console.log('fullRate:',fullRate[ind]);
+    //console.log('percents of stair_no',percents[stair_no])
     
     neto = fullRate[ind] +(salary - stairs[ind]) * percents[stair_no] ; 
 }  
