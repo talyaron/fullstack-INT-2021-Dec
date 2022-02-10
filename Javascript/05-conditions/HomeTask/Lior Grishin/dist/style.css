@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap");
+body {
+  font-family: "Arimo", sans-serif;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+body div {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+body div form {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.box--style {
+  text-align: center;
+  margin: 0;
+  padding: 2em;
+  border: 1px solid #9fecfd;
+  background-color: #d8f6fd;
+  border-radius: 0.25em;
+  box-shadow: 0.15rem 0.15rem 0.25rem 0.1rem #afafaf;
+}
