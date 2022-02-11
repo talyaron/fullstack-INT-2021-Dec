@@ -1,0 +1,50 @@
+.input_number {
+  margin: auto;
+  margin-top: 5rem;
+  width: 60rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+}
+.input_number .box_container label {
+  display: flex;
+  align-self: flex-end;
+}
+.input_number .box_container .text_box .salary_input {
+  width: 30rem;
+  height: 2rem;
+  text-align: end;
+  font-size: large;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.input_number .box_container .text_box ::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+.input_number .box_container .btn_box {
+  display: flex;
+  justify-content: end;
+}
+.input_number .box_container .btn_box .btn_count {
+  width: 2.2rem;
+  height: 1.5rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: #eb0a0a;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.4);
+}
+.input_number .box_container .btn_box .btn_count:hover {
+  transform: scale(1.2);
+  box-shadow: none;
+}
