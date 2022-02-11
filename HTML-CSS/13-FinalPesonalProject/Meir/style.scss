@@ -163,26 +163,39 @@ nav{
     display: grid;
     grid-template-columns: repeat(5, 320px);
     grid-template-rows: repeat(3, 490px);
-    
+    gap: 15px 15px;
+    padding-left: 4px;
+    width: 80%;
+
     //columns: 5 320%;
     //column-gap:  0.5%;
-    column-width: 500px;
-    -webkit-column-break-inside: avoid;
+    //@at-root: 500px;
+    //-webkit-column-break-inside: avoid;
+
+
+    img{
+        max-width: 100%;
+        margin-bottom: 0.5%;
+        display: block;
+        outline: 2px solid #fff;
+        outline-offset: -10px;
+        border-radius: 30px;
+    }
+    
+   
+    
+
+
+
+
+    
+
+
     
     
 }
 
-img{
-    max-width: 100%;
-    margin-bottom: 0.5%;
-    display: block;
-    outline: 2px solid #fff;
-    outline-offset: -10px;
-    border-radius: 30px;
 
-       
-
-}
 
 
 
