@@ -176,12 +176,12 @@ html {
 .content {
   width: 90vw;
   margin: auto;
-  column-width: 250px;
+  column-width: 200px;
   -webkit-column-break-inside: avoid;
 }
 
 .img_container {
-  width: 250px;
+  width: 200px;
   -webkit-column-break-inside: avoid;
   position: relative;
   transition: 0.5s ease;
@@ -194,9 +194,6 @@ html {
 .img_container:hover {
   cursor: pointer;
   filter: brightness(0.5);
-}
-.img_container:hover .img_container__save {
-  opacity: 1;
 }
 .img_container p {
   padding-left: 10px;
@@ -377,4 +374,97 @@ html {
   width: fit-content;
   padding-top: 40px;
   margin: auto;
+}
+
+.mobile_menu {
+  width: 100%;
+  display: none;
+}
+.mobile_menu__container {
+  width: 300px;
+  height: 50px;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 40px;
+  position: fixed;
+  bottom: 30px;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 30px;
+  align-items: center;
+  color: #6e6e6e;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu,
+.filler {
+    display: none;
+  }
+
+  .content {
+    width: 99vw;
+    margin: auto;
+    column-width: 170px;
+    -webkit-column-break-inside: avoid;
+  }
+
+  .img_container {
+    width: 170px;
+    -webkit-column-break-inside: avoid;
+    position: relative;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+  }
+
+  .menu_buttons {
+    display: none;
+  }
+
+  .mobile_menu {
+    display: contents;
+  }
+
+  .picture_card {
+    width: 100%;
+    height: fit-content;
+    box-shadow: none;
+    border-radius: 0px;
+    display: flex;
+    margin: 0%;
+    padding: 0%;
+    flex-direction: column;
+  }
+  .picture_card img {
+    border-radius: 0px;
+    padding: none;
+    width: 100%;
+    padding: 0%;
+  }
+  .picture_card .text_wrapper {
+    width: 90%;
+    margin: auto;
+    padding: 0%;
+    padding-top: 15px;
+  }
+  .picture_card .text_wrapper__icon_wrapper {
+    display: none;
+  }
+  .picture_card .divider {
+    display: none;
+  }
+  .picture_card .text_wrapper__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  .picture_card .text_wrapper__comments {
+    display: none;
+  }
+
+  .morelikethis {
+    padding: 0%;
+  }
 }

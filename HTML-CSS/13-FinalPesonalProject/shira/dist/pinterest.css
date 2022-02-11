@@ -1,0 +1,521 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 80vh;
+}
+
+header {
+  width: 100%;
+  background-color: white;
+}
+header .menu {
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #767676;
+  border-bottom: 1px solid #f6f6f6;
+  box-shadow: 0px 0px 5px 1px #bdbdbd;
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+  background-color: white;
+}
+header .menu__left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+header .menu__left__logo {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+header .menu__left__logo img {
+  width: 50%;
+  display: block;
+  margin: auto;
+}
+header .menu__left__logo:hover {
+  background-color: #e9e9e9;
+  border-radius: 50%;
+  cursor: pointer;
+}
+header .menu__left__home {
+  height: 30px;
+  background-color: black;
+  border: none;
+  font-size: 1pc;
+  color: white;
+  padding: 25px 18px;
+  border-radius: 30px;
+  font-weight: bolder;
+  text-align: center;
+  line-height: 1px;
+}
+header .menu__left__home:hover {
+  cursor: pointer;
+}
+header .menu__search {
+  width: 90%;
+}
+header .menu__search .search_field {
+  position: relative;
+}
+header .menu__search .search_field .fa-search {
+  position: absolute;
+  font-size: 15px;
+  top: 16px;
+  left: 8px;
+}
+header .menu__search .search_field input {
+  width: 95%;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 15px;
+  background-color: #efefef;
+  border-radius: 20px;
+}
+header .menu__search .search_field input:hover {
+  background-color: #dfdfdf;
+}
+header .menu__icons {
+  padding: 0px 0px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-size: 25px;
+}
+header .menu__icons .account_picture {
+  height: 30px;
+  height: 25px;
+  border-radius: 100%;
+  margin-left: 8px;
+}
+header .menu__icons__notifications {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+}
+header .menu__icons__notifications .fa-bell {
+  margin: auto;
+}
+header .menu__icons__notifications:hover {
+  background-color: #e9e9e9;
+  cursor: pointer;
+}
+header .menu__icons__more_user {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+header .menu__icons__more_user:hover {
+  background-color: #e9e9e9;
+  cursor: pointer;
+}
+header .menu__icons__more_user .fa-chevron-down {
+  margin: auto;
+}
+
+.space {
+  height: 100px;
+}
+
+.items {
+  position: relative;
+  left: 5vw;
+}
+
+.items {
+  width: 90vw;
+  column-width: 250px;
+  -webkit-column-break-inside: avoid;
+}
+
+.img_container {
+  width: 250px;
+  -webkit-column-break-inside: avoid;
+  position: relative;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+.img_container img {
+  width: 100%;
+  border-radius: 30px;
+}
+.img_container:hover {
+  cursor: pointer;
+  filter: brightness(0.5);
+}
+.img_container:hover .save_btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 45px;
+  width: 70px;
+  background-color: red;
+  border-radius: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img_container:hover .save_btn {
+  opacity: 1;
+}
+.img_container .save_btn {
+  display: none;
+}
+
+.nav_two .footer_container {
+  display: none;
+  width: 100%;
+  width: 80%;
+  height: 50px;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 40px;
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  align-items: center;
+  color: #6e6e6e;
+  cursor: pointer;
+}
+
+.menu_buttons {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  text-align: center;
+  row-gap: 15px;
+}
+.menu_buttons__plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  width: 48px;
+  height: 48px;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  border: 1px solid ghostwhite;
+  cursor: pointer;
+}
+.menu_buttons__question {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  width: 48px;
+  height: 48px;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  border: 1px solid ghostwhite;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .big_card {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 950px) {
+  header {
+    display: none;
+  }
+
+  .space {
+    display: none;
+  }
+
+  .menu_buttons {
+    display: none;
+  }
+
+  .items {
+    width: 100vw;
+    margin: auto;
+    column-width: 170px;
+    -webkit-column-break-inside: avoid-column;
+    position: relative;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+  }
+
+  .nav_two .footer_container {
+    display: block;
+    width: 100%;
+    width: 80%;
+    height: 50px;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 40px;
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 30px;
+    align-items: center;
+    color: #6e6e6e;
+    cursor: pointer;
+  }
+  .nav_two .footer_container img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .big_card {
+    width: 100%;
+  }
+}
+.link_to_home {
+  position: relative;
+  top: 200px;
+  left: 35px;
+  cursor: pointer;
+}
+
+.big_card {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  border-radius: 20px;
+  background-color: whitesmoke;
+  width: 80vw;
+  height: 60vw;
+  margin: auto;
+  margin-top: 10vw;
+}
+.big_card .big_picture img {
+  top: 15px;
+  left: 15px;
+  position: relative;
+  height: 55vw;
+  width: 30vw;
+  border-radius: 20px;
+}
+.big_card .about_picture .icons {
+  position: relative;
+  left: 30px;
+}
+.big_card .about_picture .icons .menu_icon {
+  left: 5px;
+}
+.big_card .about_picture .icons .share_icon {
+  position: relative;
+  left: 18px;
+}
+.big_card .about_picture .icons .copy_link_Icon {
+  position: relative;
+  top: 12px;
+  left: 20px;
+}
+.big_card .about_picture .about_pic {
+  position: relative;
+  top: 30px;
+  left: 20px;
+}
+.big_card .about_picture .about_pic span {
+  font-weight: bolder;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.big_card .about_picture .about_pic .more_text {
+  cursor: pointer;
+}
+.big_card .about_picture .user_profil {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.big_card .about_picture .user_profil img {
+  position: relative;
+  top: 30px;
+  left: 15px;
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+}
+.big_card .about_picture .user_profil .about_user {
+  position: relative;
+  left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.big_card .about_picture .user_profil .about_user .name {
+  position: relative;
+  top: 20px;
+}
+.big_card .about_picture .user_profil .about_user .followers {
+  top: -8px;
+}
+.big_card .about_picture .user_profil .follow_btn {
+  position: relative;
+  left: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  height: 40px;
+  width: 65px;
+  border-radius: 20px;
+  background-color: rgba(126, 121, 121, 0.267);
+}
+.big_card .about_picture .user_profil .save_btn_seen {
+  position: relative;
+  left: 500px;
+  top: -85px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: red;
+  border-radius: 20px;
+  height: 40px;
+  width: 60px;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-name: saveColor;
+  opacity: 1;
+}
+@keyframes saveColor {
+  to {
+    background-color: grey;
+  }
+}
+.big_card .about_picture .comments .comment_title {
+  position: relative;
+  left: 20px;
+  font-weight: bolder;
+}
+.big_card .about_picture .comments .the_comment {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+.big_card .about_picture .comments .the_comment img {
+  position: relative;
+  left: 70px;
+  right: -35px;
+  padding: 20px;
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+}
+.big_card .about_picture .comments .the_comment .user_comm_text {
+  position: relative;
+  left: -7px;
+  top: 10px;
+  text-align: left;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  border: rgba(126, 121, 121, 0.267) 1px solid;
+  border-radius: 20px;
+  animation: saveColor 1 2s;
+}
+.big_card .about_picture .comments .comment_icons {
+  position: relative;
+  left: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+.big_card .about_picture .comments .comment_icons .like_Icon {
+  position: relative;
+  right: 100px;
+}
+.big_card .about_picture .comments .four_comm {
+  padding: 20px;
+}
+.big_card .about_picture .comments .four_comm img {
+  height: 40px;
+  width: 40px;
+}
+.big_card .about_picture .comments .four_comm p {
+  color: rgba(31, 27, 27, 0.411);
+}
+.big_card .about_picture .comments .four_comm .emojy {
+  position: relative;
+  left: 520px;
+  top: -37px;
+}
+
+.under_card p {
+  font-weight: bolder;
+  text-align: center;
+  font-size: x-large;
+}
+
+@media only screen and (max-width: 412px) {
+  .big_card {
+    width: 100%;
+  }
+  .big_card p {
+    position: relative;
+    top: 20px;
+  }
+
+  .comments {
+    display: none;
+  }
+
+  .under_card p {
+    position: relative;
+    top: 5px;
+    font-weight: bolder;
+    text-align: center;
+    font-size: x-large;
+  }
+
+  .nav_two .footer_container {
+    width: 50%;
+    height: 50px;
+    left: 205px;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 200px;
+    bottom: 2px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 20px;
+    align-items: center;
+    color: #6e6e6e;
+    cursor: pointer;
+    position: fixed;
+  }
+  .nav_two .footer_container img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+}

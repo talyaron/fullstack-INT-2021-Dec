@@ -1,0 +1,297 @@
+body{
+    background-color: rgba(255, 255, 255, 0.877);
+
+}
+
+nav{
+    position: relative;
+    width: 100%;;
+    margin: 0;
+    top: 0px;
+    position: sticky;
+    justify-content: space-between;
+    
+
+
+    .ul{
+        background-color: white; 
+        overflow: hidden; 
+        margin: 0;
+        padding: 0; 
+        
+        b{
+            position: relative;
+            padding: 10px;
+            vertical-align: middle;
+            border-radius: 50%;
+            float:left;
+            margin-right: -190px;
+            margin-top: 2px;
+        
+             
+
+            .logo--pin{
+                position:relative;
+                width: 35px;
+                height: 35px;
+                top:-5px
+            }
+            .logo--pin:hover{
+                background-color: gray;
+                border-radius: 50px;
+                opacity: 0.7;
+            }
+            .bell{
+                position: relative;
+                width: 20px;
+                height: 24px;
+                bottom: 25px;
+                left: 1500px;
+            }
+            .bell:hover{
+                background-color: gray;
+                border-radius: 50px;
+                opacity: 0.7;
+            }
+            .message{
+                position: relative;
+                width: 22px;
+                height: 24px;
+                bottom: 25px;
+                left: 1550px;
+            }
+            .profile--picture{
+                position: relative;
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                bottom: 25px;
+                left: 1600px;
+            }
+            .profile--picture:hover{
+                background-color: gray;
+                border-radius: 50px;
+                opacity: 0.7;
+            }
+            .chevron{
+                position: relative;
+                width: 20px;
+                height: 20px;
+                bottom: 25px;
+                left: 1635px;
+            }
+            .chevron:hover{
+                background-color: gray;
+                border-radius: 50px;
+                opacity: 0.7;
+            }
+        
+        
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            min-height: 16px;
+            text-align: center;
+            text-transform: uppercase;
+            color: rgba(0, 0, 0, 0.856);
+            position: relative;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+        }
+
+    }
+    
+    .home--button{
+        position: relative;
+        background-color: black;
+        width: 77.38px;
+        height: 48px;
+        align-items: center;
+        border-radius: 50px;
+        left: 50px;
+        bottom:15px;
+
+        .home-wr{
+            position:relative;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            top: 0px;
+            font-weight: bold;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+    
+    }
+
+    .search-Bar{
+        position: relative;
+        width: 80%;
+        height: 45px;
+        bottom: 65px;
+        left: 145px;
+        border-radius: 50px;
+        background-color: transparent;
+
+    }
+
+    
+         
+
+
+
+}
+
+
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(6, 239px);
+    grid-template-rows: repeat(3, 420px);
+    gap: 15px 15px;
+    padding-left:95px;
+    width: 80%;
+
+    //columns: 5 320%;
+    //column-gap:  0.5%;
+    //@at-root: 500px;
+    //-webkit-column-break-inside: avoid;
+
+
+    img{
+        max-width: 100%;
+        margin-bottom: 0.5%;
+        display: block;
+        outline: 2px solid #fff;
+        outline-offset: -10px;
+        border-radius: 30px;
+    }
+    
+   
+    .image-1{
+        background-image: url(images/image1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-row: span 2;
+    }
+    
+    .image-2{
+        background-image: url(images/image2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .image-3{
+        background-image: url(images/image3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-row: span 2;
+    }
+    
+    .image-4{
+        background-image: url(images/image3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .image-5{
+        background-image: url(images/image4.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-row: span 2;
+    }
+    
+    .image-6{
+        background-image:url(images/image5.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .image-7{
+        background-image: url(images/image6.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-row: span 2;
+    }
+    
+    .image-8{
+        background-image: url(images/image7.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;    
+    }
+    
+    .image-9{
+        background-image: url(images/image8.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-row: span 2;
+    }
+    
+    .image-10{
+        background-image: url(images/image10.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .image-11{
+        background-image: url(images/image11.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-row: span 2;
+    }
+    
+    .image-12{
+        background-image: url(images/image11.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;    
+    }
+    
+    .image-13{
+        background-image: url(images/image12.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-row: span 2;
+    }
+    
+    .image-14{
+        background-image: url(images/image13.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    
+    .image-15{
+        background-image: url(images/image14.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; 
+        grid-row: span 2;   
+    }
+    
+    .image-16{
+        background-image: url(images/image15.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    
+    .image-17{
+        background-image: url(images/image16.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-row: span 2;
+    }
+
+
+
+
+    
+
+
+    
+    
+}
+
+
+
+
+
