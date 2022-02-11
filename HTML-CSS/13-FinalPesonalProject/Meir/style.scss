@@ -5,7 +5,7 @@ body{
 
 nav{
     position: relative;
-    width: 100%;
+    width: 100%;;
     margin: 0;
     top: 0px;
     position: sticky;
@@ -13,24 +13,11 @@ nav{
     
 
 
-    ul{
+    .ul{
         background-color: white; 
         overflow: hidden; 
         margin: 0;
         padding: 0; 
-        
-       
-        
-        li{
-            list-style: none;
-            float: left;
-        } 
-
-        li:firt-child{
-            margin-left: 80px;
-
-            
-        }
         
         b{
             position: relative;
@@ -47,7 +34,7 @@ nav{
                 position:relative;
                 width: 35px;
                 height: 35px;
-                top:-15px
+                top:-5px
             }
             .logo--pin:hover{
                 background-color: gray;
@@ -59,19 +46,19 @@ nav{
                 width: 20px;
                 height: 24px;
                 bottom: 25px;
-                left: 1570px;
+                left: 1500px;
             }
             .bell:hover{
                 background-color: gray;
                 border-radius: 50px;
                 opacity: 0.7;
             }
-            .messege{
+            .message{
                 position: relative;
                 width: 22px;
                 height: 24px;
                 bottom: 25px;
-                left: 1600px;
+                left: 1550px;
             }
             .profile--picture{
                 position: relative;
@@ -79,7 +66,7 @@ nav{
                 width: 24px;
                 height: 24px;
                 bottom: 25px;
-                left: 1640px;
+                left: 1600px;
             }
             .profile--picture:hover{
                 background-color: gray;
@@ -91,7 +78,7 @@ nav{
                 width: 20px;
                 height: 20px;
                 bottom: 25px;
-                left: 1680px;
+                left: 1635px;
             }
             .chevron:hover{
                 background-color: gray;
@@ -106,7 +93,6 @@ nav{
             text-decoration: none;
             min-height: 16px;
             text-align: center;
-            padding: 14px;
             text-transform: uppercase;
             color: rgba(0, 0, 0, 0.856);
             position: relative;
@@ -123,8 +109,8 @@ nav{
         height: 48px;
         align-items: center;
         border-radius: 50px;
-        left: 25px;
-        bottom: 4px;
+        left: 50px;
+        bottom:15px;
 
         .home-wr{
             position:relative;
@@ -142,9 +128,8 @@ nav{
         position: relative;
         width: 80%;
         height: 45px;
-        bottom: 14px;
-        left: 30px;
-        top: -5px;
+        bottom: 65px;
+        left: 145px;
         border-radius: 50px;
         background-color: transparent;
 
