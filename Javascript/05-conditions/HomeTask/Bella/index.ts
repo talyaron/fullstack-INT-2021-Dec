@@ -34,6 +34,7 @@ var lvl6per:number = 0.47; // 6 - level percentage 47% - tax cut
 var lvl7per:number = 0.5; // 7 - level percentage 50% - tax cut
 
 
+
 // 1 - level salary
 if (salary<=lvl1max){
     tax=tax+(salary*lvl1per) 
