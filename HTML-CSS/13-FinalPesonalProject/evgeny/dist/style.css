@@ -1,0 +1,107 @@
+body {
+  box-sizing: border-box;
+}
+body nav {
+  margin: 5px;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+body nav .logo {
+  background-image: url(https://coollogo.net/wp-content/uploads//2021/03/Pinterest-3-logo.svg);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+body nav .home-btn button {
+  padding: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: black;
+  border-radius: 24px;
+  margin-left: 3mm;
+  font-weight: bolder;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body nav .search-bar {
+  width: 100%;
+  margin-left: 2mm;
+  position: relative;
+}
+body nav .search-bar input {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(170, 162, 162, 0.219);
+  border-radius: 25px;
+  height: 50px;
+  border: none;
+  padding-left: 2rem;
+}
+body nav .search-bar input:focus {
+  outline: none !important;
+  border-color: #89bcf3e7;
+  border-style: solid;
+  border-width: 5px;
+}
+body nav .icons {
+  display: flex;
+  font-size: 25px;
+  color: grey;
+}
+body nav .fa-solid {
+  padding: 9px;
+}
+body nav .fa-solid:hover {
+  background-color: rgba(163, 152, 152, 0.281);
+  border-radius: 50%;
+}
+body .wrapper {
+  display: flex;
+  height: 73rem;
+  flex-flow: column wrap;
+  gap: 5px;
+  align-items: center;
+  margin: auto;
+}
+body .wrapper .save-btn {
+  opacity: 0;
+}
+body .wrapper .save-btn:hover {
+  opacity: 1;
+}
+body .wrapper .item {
+  background-color: grey;
+  height: 355.75px;
+  width: 236px;
+  padding: 0;
+  border-radius: 5%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body .wrapper .item:hover {
+  box-shadow: inset 0 0 100px 100px rgba(15, 15, 15, 0.1);
+}
+body .wrapper .item:hover.save-btn {
+  display: inline-block;
+}
+body .wrapper .item-small {
+  height: 132.717px;
+  background-image: url(https://i.pinimg.com/474x/f6/52/28/f652288bbeacc1645f37489b08126cd2.jpg);
+}
+body .wrapper .item-medium {
+  height: 236px;
+  background-image: url(https://i.pinimg.com/474x/8e/ab/1e/8eab1e572f8265469a51515f598035cd.jpg);
+}
+body .wrapper .item-large {
+  height: 333.583px;
+  background-image: url(https://i.pinimg.com/474x/24/ce/28/24ce286ed3b339bb5e144b4aecc49794.jpg);
+}
+body .wrapper .item-larger {
+  height: 440.133px;
+  background-image: url(https://i.pinimg.com/474x/58/b8/e6/58b8e63069d4e6ba9473b9f363e0807f.jpg);
+}

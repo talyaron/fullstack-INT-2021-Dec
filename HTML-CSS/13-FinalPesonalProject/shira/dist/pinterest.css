@@ -135,6 +135,11 @@ header .menu__icons__more_user .fa-chevron-down {
 }
 
 .items {
+  position: relative;
+  left: 5vw;
+}
+
+.items {
   width: 90vw;
   column-width: 250px;
   -webkit-column-break-inside: avoid;
