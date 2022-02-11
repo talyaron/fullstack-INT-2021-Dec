@@ -51,6 +51,23 @@ html {
   line-height: 1px;
 }
 .menu__leftBar__home:hover {
+  background-color: #e9e9e9;
+  cursor: pointer;
+}
+.menu__leftBar__home1 {
+  height: 30px;
+  background-color: white;
+  border: none;
+  font-size: 1rem;
+  color: black;
+  padding: 22px 16px;
+  border-radius: 30px;
+  font-weight: bolder;
+  text-align: center;
+  line-height: 1px;
+}
+.menu__leftBar__home1:hover {
+  background-color: #e9e9e9;
   cursor: pointer;
 }
 .menu__search {
@@ -58,9 +75,9 @@ html {
 }
 .menu__search input[type=text] {
   width: 100%;
-  padding: 6px;
+  padding: 12px;
   border: none;
-  margin-top: 8px;
+  margin-top: 0;
   margin-right: 16px;
   font-size: 17px;
   background-color: #efefef;
@@ -91,6 +108,7 @@ html {
   border-radius: 50%;
   display: flex;
   justify-content: center;
+  line-height: 60px;
 }
 .menu__top__bell:hover {
   background-color: #e9e9e9;
@@ -102,33 +120,22 @@ html {
   border-radius: 50%;
   display: flex;
   justify-content: center;
+  line-height: 60px;
 }
 .menu__top__dots:hover {
   background-color: #e9e9e9;
   cursor: pointer;
 }
 .menu__top__name {
-  width: 24px;
-  height: 24px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   display: flex;
-  color: black;
+  border: wheat;
   justify-content: center;
+  line-height: 30px;
 }
 .menu__top__name:hover {
-  background-color: #e9e9e9;
-  cursor: pointer;
-}
-.menu__top__name1 {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  display: flex;
-  color: black;
-  justify-content: center;
-  overflow: hidden;
-}
-.menu__top__name1:hover {
   background-color: #e9e9e9;
   cursor: pointer;
 }
@@ -139,6 +146,7 @@ html {
   display: flex;
   justify-content: center;
   font-size: 1.5rem;
+  line-height: 60px;
 }
 .menu__top__chevron:hover {
   background-color: #e9e9e9;
@@ -198,7 +206,7 @@ html {
   border-radius: 50%;
   border: 1px solid ghostwhite;
   line-height: 63px;
-  font-size: 20px;
+  font-size: 25px;
 }
 .menu_buttons__question:hover {
   background-color: #e9e9e9;
@@ -246,11 +254,40 @@ html {
 }
 
 .plus {
-  width: 20px;
+  width: 30px;
   color: black;
 }
 
 .question {
-  width: 20px;
+  width: 30px;
   color: black;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+  height: 40vh;
+}
+.wrapper .G {
+  font-size: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #efefef;
+  border-radius: 50%;
+  border: 20px solid #efefef;
+  line-height: 60px;
+  overflow: hidden;
+}
+.wrapper .G:hover {
+  background-color: #8b8b8b;
+  cursor: pointer;
+}
+
+.h1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
