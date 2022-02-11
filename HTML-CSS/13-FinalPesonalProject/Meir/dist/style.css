@@ -133,11 +133,11 @@ nav .search-Bar {
   display: grid;
   grid-template-columns: repeat(5, 320px);
   grid-template-rows: repeat(3, 490px);
-  column-width: 500px;
-  -webkit-column-break-inside: avoid;
+  gap: 15px 15px;
+  padding-left: 4px;
+  width: 80%;
 }
-
-img {
+.gallery img {
   max-width: 100%;
   margin-bottom: 0.5%;
   display: block;

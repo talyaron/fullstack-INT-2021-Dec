@@ -5,12 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAS</title>
+    <link rel="stylesheet" href="dist/style.css">
 </head>
 <body>
-    <h1>מדרגות מס</h1>
-    <form action="">
-        
-    </form>
+    <div>
+        <h1 class="box--style">מחשבון לחישוב ניכוי מיסים</h1>
+        <form action="/nowhere">
+            <label for="salary">רשום/י מהו סכום הברוטו:</label>
+            <input type="number" name="salaryAmountInput" id="salaryAmount">
+            <button>חשב</button>
+        </form>
+        <div class="box--style">
+            <h2>סכום הנטו שלך:</h2>
+            <p>סה"כ מס שנלקח ממך:</p>
+        </div>
+    </div>  
     <script src="dist/app.js"></script>
 </body>
 </html>
