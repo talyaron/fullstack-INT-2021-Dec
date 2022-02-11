@@ -74,7 +74,7 @@ nav {
 .item a:hover,
 .item:hover {
   cursor: zoom-in;
-  filter: brightness(50%);
+  filter: brightness(65%);
 }
 
 .picture__content {
