@@ -60,3 +60,48 @@ body nav .fa-solid:hover {
   background-color: rgba(163, 152, 152, 0.281);
   border-radius: 50%;
 }
+body .wrapper {
+  display: flex;
+  height: 73rem;
+  flex-flow: column wrap;
+  gap: 5px;
+  align-items: center;
+  margin: auto;
+}
+body .wrapper .save-btn {
+  opacity: 0;
+}
+body .wrapper .save-btn:hover {
+  opacity: 1;
+}
+body .wrapper .item {
+  background-color: grey;
+  height: 355.75px;
+  width: 236px;
+  padding: 0;
+  border-radius: 5%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body .wrapper .item:hover {
+  box-shadow: inset 0 0 100px 100px rgba(15, 15, 15, 0.1);
+}
+body .wrapper .item:hover.save-btn {
+  display: inline-block;
+}
+body .wrapper .item-small {
+  height: 132.717px;
+  background-image: url(https://i.pinimg.com/474x/f6/52/28/f652288bbeacc1645f37489b08126cd2.jpg);
+}
+body .wrapper .item-medium {
+  height: 236px;
+  background-image: url(https://i.pinimg.com/474x/8e/ab/1e/8eab1e572f8265469a51515f598035cd.jpg);
+}
+body .wrapper .item-large {
+  height: 333.583px;
+  background-image: url(https://i.pinimg.com/474x/24/ce/28/24ce286ed3b339bb5e144b4aecc49794.jpg);
+}
+body .wrapper .item-larger {
+  height: 440.133px;
+  background-image: url(https://i.pinimg.com/474x/58/b8/e6/58b8e63069d4e6ba9473b9f363e0807f.jpg);
+}
