@@ -20,11 +20,11 @@ function fn1() {
   } else if (14841 < inputNumber && inputNumber <= 20620) {
     /*alert("המשכורת שלך: " + (inputNumber - (((inputNumber - 14841) * 0.31) + 2457.86))); */
     userSalary.innerHTML = (inputNumber - 14841) * 0.31 + 2457.86;
-    userTax.innerHTML = inputNumber * 0.1;
+    userTax.innerHTML = (inputNumber - 14841) * 0.31 + 2457.86;
   } else if (20621 < inputNumber && inputNumber <= 42910) {
     /* alert("המשכורת שלך: " + (inputNumber - (((inputNumber - 20621) * 0.35) + 3613.66))); */
     userSalary.innerHTML = inputNumber - ((inputNumber - 20621) * 0.35 + 3613.66);
-    userTax.innerHTML = inputNumber * 0.1;
+    userTax.innerHTML = (inputNumber - 20621) * 0.35 + 3613.66;
   } else if (42911 < inputNumber && inputNumber <= 55270) {
     /* alert("המשכורת שלך: " + (inputNumber - (((inputNumber - 42911) * 0.47) + 10523.25))); */
     userSalary.innerHTML = inputNumber - ((inputNumber - 42911) * 0.47 + 10523.25);
