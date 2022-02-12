@@ -1,9 +1,8 @@
 body,
 html {
-    margin: 0%;
     width: 100vw;
     height: 100vh;
-    padding-top: 0px;
+    position: absolute;
 }
 
 .menu {
@@ -18,7 +17,11 @@ html {
     font-size: 30px;
     position: fixed;
     background-color: white;
-    
+    padding-bottom: 6px;
+    padding-top: 6px;
+    z-index: 9;
+    top:0%;
+    left:5px;
 
     &__leftBar {
         display: flex;
@@ -61,7 +64,6 @@ html {
             line-height: 1px;
     
             &:hover {
-                background-color: rgb(233, 233, 233);
                 cursor: pointer;
             }
         }
@@ -197,6 +199,7 @@ html {
 .img_container {
     width: 250px;
     -webkit-column-break-inside: avoid;
+  
 
     &:hover {
         filter: brightness(0.5);
@@ -268,6 +271,7 @@ html {
     align-items: center;
     color: rgb(118, 118, 118);
     font-size: 60px;
+    
    
     &__lorem {
         display: flex;
@@ -479,6 +483,5 @@ color: black;
             border-radius: 20%;
           }
         }
-    }
-
+}
 

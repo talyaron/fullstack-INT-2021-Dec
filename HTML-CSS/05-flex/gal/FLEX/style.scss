@@ -1,0 +1,85 @@
+
+.warrper{
+    border: solid rgb(253, 253, 253) 5px;
+    position: absolute;
+    width: 1200px;
+  
+
+.longred{background-color: red;
+    align-items: center;
+     height:30px;
+      width: 100%;
+     display: flex;
+    justify-content: space-between;
+     
+    .right{
+     color: white;
+     font-size: 30px;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     
+    
+    }
+
+    .left{
+    
+        color: white;
+        font-size: 30px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     
+         
+       
+        
+        
+        p{
+             
+            bottom: 17px;
+            
+           
+
+
+        }
+    }
+    
+}
+   
+.boxes{
+    display: flex;
+    justify-content: space-around ;
+    
+
+    .box{
+        border: solid white 1px;
+        position: relative;
+
+        img{
+            width: 300px;
+            height: 150px;    
+        }
+        #logoy{
+            position: absolute;
+            width: 75px;
+            height: 25px;
+            top: 120px;
+            left: 350px;
+        }
+
+        .pimg{
+            direction: rtl;
+            font-size: 30px;
+            
+            span{
+                font-weight: bold;
+            }
+        }
+   }
+  
+}
+}
+
+  
+
+
+   
+
+
+
