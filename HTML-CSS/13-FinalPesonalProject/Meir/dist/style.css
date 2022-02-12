@@ -255,7 +255,7 @@ nav .search-Bar {
   grid-row: span 2;
 }
 
-@media only screen and (max-width: 870px) {
+@media only screen and (max-width: 770px) {
   .pinte {
     display: none;
     width: 80%;
