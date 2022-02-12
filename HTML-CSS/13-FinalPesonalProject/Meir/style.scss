@@ -147,10 +147,14 @@ nav{
 .gallery{
     display: grid;
     grid-template-columns: repeat(6, 239px);
-    grid-template-rows: repeat(3, 420px);
-    gap: 15px 15px;
+    grid-template-rows: repeat(5, 420px);
+    gap: -9px 15px;
     padding-left:95px;
     width: 80%;
+    margin: auto;
+    height: fit-content;
+    
+    
 
     //columns: 5 320%;
     //column-gap:  0.5%;
@@ -281,13 +285,47 @@ nav{
         grid-row: span 2;
     }
 
+    .image-18{
+        background-image: url(images/image13.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
+    .image-19{
+        background-image: url(images/image15.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-row: span 2;
+    }
 
+    .image-20{
+        background-image: url(images/image14.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
+    .image-21{
+        background-image: url(images/image11.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-row: span 2;
+    }
     
+}
 
+@media screen and (max-width: 870px){
+    .pinte{
+        display:none;
+    }
 
-    
+    .mobile {
+        display: flex;
+        justify-content: space-between;
+      }
+
+    .gallery{
+        grid-template-columns: auto auto;
+    }
     
 }
 
