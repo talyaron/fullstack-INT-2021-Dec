@@ -1,41 +1,41 @@
 // tax calculator
 
-var tax:number = 0;
-var salary:number = 60000;
+let tax:number = 0;
+let salary:number = 60000;
 
-var lvl1max:number = 6450; // 1 - level salary - maximum 
-var lvl1per:number = 0.1;  // 1 - level percentage 10% - tax cut
+const lvl1max:number = 6450; // 1 - level salary - maximum 
+const lvl1per:number = 0.1;  // 1 - level percentage 10% - tax cut
 
-var lvl2min:number = 6451; // 2 - level salary - minimum 
-var lvl2max:number = 9240; // 2 - level salary - maximum 
-var lvl2dif:number = lvl2max-lvl2min; // 2 - level differences 
-var lvl2per:number = 0.14; // 2 level percentage 14% - tax cut
+const lvl2min:number = 6451; // 2 - level salary - minimum 
+const lvl2max:number = 9240; // 2 - level salary - maximum 
+const lvl2dif:number = lvl2max-lvl2min; // 2 - level differences 
+const lvl2per:number = 0.14; // 2 level percentage 14% - tax cut
 
-var lvl3min:number = 9241;  // 3 - level salary - minimum 
-var lvl3max:number = 14840; // 3 - level salary - maximum 
-var lvl3dif:number = lvl3max-lvl3min; // 3 - level differences 
-var lvl3per:number = 0.2; // 3 - level percentage 20% - tax cut
+const lvl3min:number = 9241;  // 3 - level salary - minimum 
+const lvl3max:number = 14840; // 3 - level salary - maximum 
+const lvl3dif:number = lvl3max-lvl3min; // 3 - level differences 
+const lvl3per:number = 0.2; // 3 - level percentage 20% - tax cut
 
-var lvl4min:number = 14841; // 4 - level salary - minimum 
-var lvl4max:number = 20620; // 4 - level salary - maximum 
-var lvl4dif:number = lvl4max-lvl4min; // 4 - level differences 
-var lvl4per:number = 0.31; // 4 - level percentage 31% - tax cut
+const lvl4min:number = 14841; // 4 - level salary - minimum 
+const lvl4max:number = 20620; // 4 - level salary - maximum 
+const lvl4dif:number = lvl4max-lvl4min; // 4 - level differences 
+const lvl4per:number = 0.31; // 4 - level percentage 31% - tax cut
 
-var lvl5min:number = 20621; // 5 - level salary - minimum 
-var lvl5max:number = 42910; // 5 - level salary - maximum 
-var lvl5dif:number = lvl5max-lvl5min; // 5 - level differences 
-var lvl5per:number = 0.35; // 5 - level percentage 35% - tax cut
+const lvl5min:number = 20621; // 5 - level salary - minimum 
+const lvl5max:number = 42910; // 5 - level salary - maximum 
+const lvl5dif:number = lvl5max-lvl5min; // 5 - level differences 
+const lvl5per:number = 0.35; // 5 - level percentage 35% - tax cut
 
-var lvl6min:number = 42911; // 6 - level salary - minimum 
-var lvl6max:number = 55270; // 6 - level salary - maximum 
-var lvl6dif:number = lvl6max-lvl6min; // 6 - level differences 
-var lvl6per:number = 0.47; // 6 - level percentage 47% - tax cut
+const lvl6min:number = 42911; // 6 - level salary - minimum 
+const lvl6max:number = 55270; // 6 - level salary - maximum 
+const lvl6dif:number = lvl6max-lvl6min; // 6 - level differences 
+const lvl6per:number = 0.47; // 6 - level percentage 47% - tax cut
 
-var lvl7per:number = 0.5; // 7 - level percentage 50% - tax cut
+const lvl7per:number = 0.5; // 7 - level percentage 50% - tax cut
 
 
 
-// 1 - level salary
+// // 1 - level salary
 if (salary<=lvl1max){
     tax=tax+(salary*lvl1per) 
     console.log("You pay 10% tax. your total tax amount is: ₪" + Math.round(tax)+" from ₪"+salary.toFixed()+" salary.")
@@ -71,6 +71,7 @@ else {
     tax=tax+(lvl1max*lvl1per + (lvl2dif)*lvl2per + (lvl3dif)*lvl3per + (lvl4dif)*lvl4per + (lvl5dif)*lvl5per + (lvl6dif)*lvl6per + (salary-lvl6max)*lvl7per)
     console.log("You pay 50% tax. your total tax amount is: ₪" + Math.round(tax)+" from ₪"+salary.toFixed()+" salary.")
 }
+
 
 
 
