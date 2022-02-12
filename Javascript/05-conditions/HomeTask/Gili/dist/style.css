@@ -1,0 +1,39 @@
+body {
+  margin: 0%;
+  background-color: white;
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  background-color: aquamarine;
+  margin: 0%;
+  position: fixed;
+  top: 0px;
+}
+
+.filler {
+  width: 100%;
+  height: 80px;
+}
+
+.box {
+  width: 50vw;
+  height: 500px;
+  background-color: aquamarine;
+  margin: auto;
+  border: 3px dashed #0b4634;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.box__inputarea {
+  width: 25vw;
+  height: 250px;
+  background-color: white;
+}
+.box__inputarea p span {
+  color: red;
+}
