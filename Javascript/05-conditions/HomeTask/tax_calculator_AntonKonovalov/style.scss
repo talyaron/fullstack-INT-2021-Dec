@@ -1,0 +1,61 @@
+.input_number {
+    margin: auto;
+    margin-top: 5rem;
+    width: 60rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid black;
+    .box_container {
+        
+        label {
+            display: flex;
+            align-self: flex-end;
+        }
+        
+        .text_box {
+            .salary_input {
+                width: 30rem;
+                height: 2rem;
+                text-align: end;
+                font-size: large;
+                border: 1px solid rgba(0, 0, 0, 0.3);
+            }
+            ::placeholder {
+                color: rgba(0, 0, 0, 0.3);
+            }
+
+        }
+        .btn_box {
+            display: flex;
+            justify-content: end;
+            .btn_count {
+                    width: 2.2rem;
+                    height: 1.5rem;
+                    margin-top: 1rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-bottom-left-radius: 0.4rem;
+                    border-bottom-right-radius: 0.4rem;
+                    border-top-left-radius: 0.4rem;
+                    border-top-right-radius: 0.4rem;
+                    color: white;
+                    transition: 0.3s;
+
+                    cursor: pointer;
+                    background-color: rgb(235, 10, 10);
+                    box-shadow: 0 3px 7px rgb(0 0 0 / 0.4);
+
+                    &:hover {
+                        transform: scale(1.2);
+                        box-shadow: none;
+                    }
+            }
+        }
+
+    }   
+}
