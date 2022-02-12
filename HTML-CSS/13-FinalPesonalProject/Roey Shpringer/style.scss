@@ -211,6 +211,28 @@ nav {
 }
 
 @media all and (max-width: 500px){
+
+    nav{
+        bottom: 0px;
+        position: fixed;
+        top: auto;
+        justify-content: space-between;
+        .pinterest__nav__logo{
+            display: none;
+        }
+        .searchIcon{
+            margin: 0;
+        }
+    }
+
+    .navHomeDiv{
+        display: none;
+    }
+
+    .navIcon{
+        width: 56px;
+    }
+
     .leftside{
         float: none;
         width: 100%;

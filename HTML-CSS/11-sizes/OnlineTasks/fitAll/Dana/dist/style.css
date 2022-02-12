@@ -1,0 +1,32 @@
+body {
+  width: 80vw;
+  height: 80vh;
+  font-family: "Nunito Sans", sans-serif;
+  color: #040443;
+}
+body h1 {
+  font-size: 3em;
+}
+body h2 {
+  font-size: 2em;
+}
+body p {
+  font-size: 1.5em;
+}
+body .wrapper {
+  background-color: #f3f6fb;
+  width: 60vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding-left: 2cm;
+  padding-right: 2cm;
+  align-items: left;
+  border-style: solid;
+  border-color: #040443;
+  border-width: 0.2rem;
+}
+body .wrapper img {
+  width: 100%;
+}
