@@ -32,7 +32,7 @@
   .pinterest {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     gap: 0.5rem;
     flex-grow: 1;
     // flex-wrap: wrap;
@@ -51,9 +51,10 @@
 //   }
   .left {
     display: flex;
-    align-items: center;
+    align-items:center;
+    justify-content: space-evenly;
     width: 20%;
-    gap: 1em;
+    gap: 1rem;
     padding-left: 6rem;
   }
   .left .logo {
@@ -62,7 +63,7 @@
     height: 3rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     img{width: 100%;}
   }
   .left .logo:hover {
@@ -80,7 +81,7 @@
     background-color: #151515;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     border-radius: 1.563rem;
 }
 
@@ -92,7 +93,8 @@
     background-color: #f8f5f5;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    margin-right: 1rem;
     border-radius: 1.563rem;
     }
 
@@ -128,6 +130,7 @@
     border-radius: 25px;
     overflow: hidden;
     background: #e3e3e3;
+    margin-left: 1rem;
     
   }
   .search:hover {
