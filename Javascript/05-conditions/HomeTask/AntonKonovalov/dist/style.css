@@ -1,24 +1,28 @@
 .input_number {
   margin: auto;
   margin-top: 5rem;
-  width: 60rem;
+  width: 40em;
   height: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px solid black;
+  background-color: #d6d6d6;
+  border: 0.1em solid #c7c7c7;
 }
 .input_number .box_container label {
   display: flex;
   align-self: flex-end;
 }
 .input_number .box_container .text_box .salary_input {
+  display: flex;
   width: 30rem;
   height: 2rem;
   text-align: end;
+  padding-right: 0.3rem;
   font-size: large;
   border: 1px solid rgba(0, 0, 0, 0.3);
+  padding-top: 0.2rem;
 }
 .input_number .box_container .text_box ::placeholder {
   color: rgba(0, 0, 0, 0.3);
@@ -28,8 +32,8 @@
   justify-content: end;
 }
 .input_number .box_container .btn_box .btn_count {
-  width: 2.2rem;
-  height: 1.5rem;
+  width: 3.2rem;
+  height: 2.5rem;
   margin-top: 1rem;
   display: flex;
   justify-content: center;
@@ -47,4 +51,31 @@
 .input_number .box_container .btn_box .btn_count:hover {
   transform: scale(1.2);
   box-shadow: none;
+}
+.input_number .box_container2 {
+  width: 40em;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.input_number .box_container2 .text_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.input_number .box_container2 .text_box label {
+  align-self: flex-end;
+  margin-right: 5rem;
+}
+.input_number .box_container2 .text_box .salary_input {
+  width: 30rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: 0.3rem;
+  font-size: large;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: white;
 }
