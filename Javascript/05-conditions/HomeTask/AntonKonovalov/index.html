@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/style.css">
+    <title>מחשבון מס הכנסה</title>
+</head>
+<body>
+    <div class="input_number" id="input">
+         <div class="box_container">
+            <label dir="rtl" for="name">משכורת:</label>
+            <div class="text_box">
+                <input id="user_salary_input" placeholder = "תכניס/י משכורת ברוטו" type="text" class="salary_input" >
+            </div>
+            <div class="btn_box" >
+                <div onclick="fn1()" class="btn_count" id="#btn_red">
+                    חשב
+                </div>
+           </div>
+         </div>
+    </div>
+
+    <div class="input_number" id="input">
+         <div class="box_container2">
+             <div class="text_box">
+                <label dir="rtl" for="name">לקחנו:</label>
+                <!-- <input id="user_salary_tax"  type="text" class="salary_input" > -->
+                <div class="salary_input">
+                <p id="user_salary_tax"></p>
+             </div>
+            </div>
+             <div class="text_box">
+                <label dir="rtl" for="name">נשאר:</label>
+                <!-- <input id="user_salary_output"  type="text" class="salary_input" > -->
+                <div class="salary_input">
+                  <p id="user_salary_output"></p>
+                </div>
+                </div>
+            </div>
+         </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

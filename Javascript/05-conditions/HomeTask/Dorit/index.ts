@@ -1,9 +1,10 @@
 var stairs=[6450, 9240, 14840, 20620, 42910, 55270];
 var percents=[0.90, 0.86, 0.80, 0.69, 0.65, 0.53, 0.50];
-console.log('stairs', stairs);
-console.log('percents', percents);
-console.log(percents[0]);
 var salary:number = 60000;
+//console.log('stairs', stairs);
+//console.log('percents', percents);
+//console.log(percents[0]);
+
 var neto:number = 0;
 var stair_no:number = 0;
 var fullRate0:number = stairs[0] * percents[0]; 

@@ -1,0 +1,98 @@
+.input_number {
+    margin: auto;
+    margin-top: 5rem;
+    width: 40em;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(214, 214, 214);
+
+    border: 0.1em solid rgb(199, 199, 199);
+    .box_container {
+        
+        label {
+            display: flex;
+            align-self: flex-end;
+            
+        }
+        
+        .text_box {
+            .salary_input {
+                display: flex;
+                width: 30rem;
+                height: 2rem;
+                text-align: end;
+                padding-right: 0.3rem;
+                font-size: large;
+                border: 1px solid rgba(0, 0, 0, 0.3);
+                padding-top: 0.2rem;
+            }
+            ::placeholder {
+                color: rgba(0, 0, 0, 0.3);
+            }
+
+        }
+        .btn_box {
+            display: flex;
+            justify-content: end;
+            
+            .btn_count {
+                    width: 3.2rem;
+                    height: 2.5rem;
+                    margin-top: 1rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-bottom-left-radius: 0.4rem;
+                    border-bottom-right-radius: 0.4rem;
+                    border-top-left-radius: 0.4rem;
+                    border-top-right-radius: 0.4rem;
+                    color: white;
+                    transition: 0.3s;
+
+                    cursor: pointer;
+                    background-color: rgb(235, 10, 10);
+                    box-shadow: 0 3px 7px rgb(0 0 0 / 0.4);
+
+                    &:hover {
+                        transform: scale(1.2);
+                        box-shadow: none;
+                    }
+            }
+        }
+
+    }   
+
+    .box_container2 {
+        width: 40em;
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .text_box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            label {
+              align-self: flex-end;
+              margin-right: 5rem;
+            }
+            .salary_input {
+                width: 30rem;
+                height: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                padding-right: 0.3rem;
+                font-size: large;
+                border: 1px solid rgba(0, 0, 0, 0.3);
+                background-color: white;
+             
+            }
+     
+
+        }
+    }
+}
