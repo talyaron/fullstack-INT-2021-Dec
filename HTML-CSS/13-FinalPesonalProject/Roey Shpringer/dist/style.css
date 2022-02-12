@@ -203,3 +203,16 @@ nav {
   margin: 20px;
   border-radius: 50px;
 }
+
+@media all and (max-width: 500px) {
+  .leftside {
+    float: none;
+    width: 100%;
+  }
+
+  .rightside {
+    float: none;
+    width: 100%;
+    padding: none;
+  }
+}
