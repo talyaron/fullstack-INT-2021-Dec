@@ -313,9 +313,10 @@ nav{
     
 }
 
-@media screen and (max-width: 870px){
+@media only screen and (max-width: 870px){
     .pinte{
         display:none;
+        width: 80%;
     }
 
     .mobile {
