@@ -3,7 +3,7 @@
  
  var tax:number = salary * 0.1;
  
-
+debugger;
  var paar:number = salary - 6450;
  var less:number = paar * 0.1;
  var tax1:number = paar * 0.14 - less;
