@@ -5,6 +5,7 @@ var tempBalance; // to calculate how much left for next tax stage
 var taxStageCount = 0;
 var max_Stage;
 var tax_Percentage;
+var previousStage = 0;
 //-----------------HELP FUNCTION TO CALC AND CLEAN CODE פונקציית עזר לקריאה רקרוסיבית וקוד נקי וברור
 function calcTax(balance, maxStage, taxPrecentage) {
     if (balance > 0 && balance <= maxStage) {
@@ -15,13 +16,15 @@ function calcTax(balance, maxStage, taxPrecentage) {
     }
     else if (balance > 0 && balance > maxStage) {
         // in case more tax to take for next stage ..
-        TAX = TAX + maxStage * taxPrecentage;
+        TAX = TAX + (maxStage - previousStage) * taxPrecentage;
         tempBalance = tempBalance - maxStage;
         taxStageCount++; // Documant what stage of TAX is
     }
+    previousStage = maxStage;
 }
 //----------------------------------------------------
-Bruto = 10000;
+Bruto = 60000;
+debugger;
 tempBalance = Bruto; // using temp Balance
 //-------------------------- stage 1
 max_Stage = 6450;

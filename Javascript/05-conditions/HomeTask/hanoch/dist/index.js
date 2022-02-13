@@ -1,5 +1,6 @@
 var salary = 60000;
 var tax = salary * 0.1;
+debugger;
 var paar = salary - 6450;
 var less = paar * 0.1;
 var tax1 = paar * 0.14 - less;

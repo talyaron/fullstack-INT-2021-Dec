@@ -53,9 +53,9 @@ function calcMasSteps (salary){
 
 
 const form = document.querySelector('form');
-const inputSalary = document.querySelector('#salaryAmount');
+const inputSalary:any = document.querySelector('#salaryAmount');
 const newSalary = document.querySelector('h2');
-const tax = document.querySelector('p');
+const tax:any = document.querySelector('p');
 form.addEventListener('submit', function (event){
     event.preventDefault();
     const taxTook = calcMasSteps(inputSalary.valueAsNumber);
