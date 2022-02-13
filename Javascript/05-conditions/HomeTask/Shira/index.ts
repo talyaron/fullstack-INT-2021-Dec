@@ -1,6 +1,6 @@
 
 var tax:number = 0;
-var salary:number=5000;
+var salary:number=60000;
 
  var level1Max:number = 6450;
  var level1Per:number = 0.1;

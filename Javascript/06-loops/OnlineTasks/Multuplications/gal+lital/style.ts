@@ -1,4 +1,4 @@
-var number: number=17;
+var number: number=5;
 var MaxNumber: number=1000;
  
 
