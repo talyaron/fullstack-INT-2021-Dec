@@ -1,4 +1,4 @@
-var salary = 20620; //define salary for calculation <-- INPUT HERE
+var salary = 60000; //define salary for calculation <-- INPUT HERE
 var afterTax = 0; // after tax
 var taxTaken = 0; // tax taken
 var taxedSalary1 = 0; // var for calculation

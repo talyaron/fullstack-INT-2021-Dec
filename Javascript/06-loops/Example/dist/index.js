@@ -5,5 +5,5 @@ for (var i = 2; i < 10000; i = Math.pow(i, 2)) {
 var dividedNumber = 5;
 var maxNumber = 100;
 for (var i = 0; i < 10; i++) {
-    //write down michaplot
+    console.log(i);
 }
