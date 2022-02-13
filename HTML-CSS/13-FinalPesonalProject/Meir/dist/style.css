@@ -10,20 +10,13 @@ nav {
   position: sticky;
   justify-content: space-between;
 }
-nav ul {
+nav .ul {
   background-color: white;
   overflow: hidden;
   margin: 0;
   padding: 0;
 }
-nav ul li {
-  list-style: none;
-  float: left;
-}
-nav ul li:firt-child {
-  margin-left: 80px;
-}
-nav ul b {
+nav .ul b {
   position: relative;
   padding: 10px;
   vertical-align: middle;
@@ -32,67 +25,66 @@ nav ul b {
   margin-right: -190px;
   margin-top: 2px;
 }
-nav ul b .logo--pin {
+nav .ul b .logo--pin {
   position: relative;
   width: 35px;
   height: 35px;
-  top: -15px;
+  top: -5px;
 }
-nav ul b .logo--pin:hover {
+nav .ul b .logo--pin:hover {
   background-color: gray;
   border-radius: 50px;
   opacity: 0.7;
 }
-nav ul b .bell {
+nav .ul b .bell {
   position: relative;
   width: 20px;
   height: 24px;
   bottom: 25px;
-  left: 1570px;
+  left: 1500px;
 }
-nav ul b .bell:hover {
+nav .ul b .bell:hover {
   background-color: gray;
   border-radius: 50px;
   opacity: 0.7;
 }
-nav ul b .messege {
+nav .ul b .message {
   position: relative;
   width: 22px;
   height: 24px;
   bottom: 25px;
-  left: 1600px;
+  left: 1550px;
 }
-nav ul b .profile--picture {
+nav .ul b .profile--picture {
   position: relative;
   border-radius: 50%;
   width: 24px;
   height: 24px;
   bottom: 25px;
-  left: 1640px;
+  left: 1600px;
 }
-nav ul b .profile--picture:hover {
+nav .ul b .profile--picture:hover {
   background-color: gray;
   border-radius: 50px;
   opacity: 0.7;
 }
-nav ul b .chevron {
+nav .ul b .chevron {
   position: relative;
   width: 20px;
   height: 20px;
   bottom: 25px;
-  left: 1680px;
+  left: 1635px;
 }
-nav ul b .chevron:hover {
+nav .ul b .chevron:hover {
   background-color: gray;
   border-radius: 50px;
   opacity: 0.7;
 }
-nav ul a {
+nav .ul a {
   display: block;
   text-decoration: none;
   min-height: 16px;
   text-align: center;
-  padding: 14px;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.856);
   position: relative;
@@ -106,8 +98,8 @@ nav .home--button {
   height: 48px;
   align-items: center;
   border-radius: 50px;
-  left: 25px;
-  bottom: 4px;
+  left: 50px;
+  bottom: 15px;
 }
 nav .home--button .home-wr {
   position: relative;
@@ -122,20 +114,21 @@ nav .search-Bar {
   position: relative;
   width: 80%;
   height: 45px;
-  bottom: 14px;
-  left: 30px;
-  top: -5px;
+  bottom: 65px;
+  left: 145px;
   border-radius: 50px;
   background-color: transparent;
 }
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(5, 320px);
-  grid-template-rows: repeat(3, 490px);
-  gap: 15px 15px;
-  padding-left: 4px;
+  grid-template-columns: repeat(6, 239px);
+  grid-template-rows: repeat(5, 420px);
+  gap: -9px 15px;
+  padding-left: 95px;
   width: 80%;
+  margin: auto;
+  height: fit-content;
 }
 .gallery img {
   max-width: 100%;
@@ -144,4 +137,136 @@ nav .search-Bar {
   outline: 2px solid #fff;
   outline-offset: -10px;
   border-radius: 30px;
+}
+.gallery .image-1 {
+  background-image: url(images/image1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-row: span 2;
+}
+.gallery .image-2 {
+  background-image: url(images/image2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.gallery .image-3 {
+  background-image: url(images/image3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-row: span 2;
+}
+.gallery .image-4 {
+  background-image: url(images/image3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.gallery .image-5 {
+  background-image: url(images/image4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-row: span 2;
+}
+.gallery .image-6 {
+  background-image: url(images/image5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.gallery .image-7 {
+  background-image: url(images/image6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-row: span 2;
+}
+.gallery .image-8 {
+  background-image: url(images/image7.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.gallery .image-9 {
+  background-image: url(images/image8.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-row: span 2;
+}
+.gallery .image-10 {
+  background-image: url(images/image10.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.gallery .image-11 {
+  background-image: url(images/image11.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-row: span 2;
+}
+.gallery .image-12 {
+  background-image: url(images/image11.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.gallery .image-13 {
+  background-image: url(images/image12.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-row: span 2;
+}
+.gallery .image-14 {
+  background-image: url(images/image13.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.gallery .image-15 {
+  background-image: url(images/image14.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-row: span 2;
+}
+.gallery .image-16 {
+  background-image: url(images/image15.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.gallery .image-17 {
+  background-image: url(images/image16.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-row: span 2;
+}
+.gallery .image-18 {
+  background-image: url(images/image13.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.gallery .image-19 {
+  background-image: url(images/image15.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-row: span 2;
+}
+.gallery .image-20 {
+  background-image: url(images/image14.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.gallery .image-21 {
+  background-image: url(images/image11.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-row: span 2;
+}
+
+@media only screen and (max-width: 770px) {
+  .pinte {
+    display: none;
+    width: 80%;
+  }
+
+  .mobile {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .gallery {
+    grid-template-columns: auto auto;
+  }
 }

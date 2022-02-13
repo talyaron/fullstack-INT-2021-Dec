@@ -203,3 +203,37 @@ nav {
   margin: 20px;
   border-radius: 50px;
 }
+
+@media all and (max-width: 500px) {
+  nav {
+    bottom: 0px;
+    position: fixed;
+    top: auto;
+    justify-content: space-between;
+  }
+  nav .pinterest__nav__logo {
+    display: none;
+  }
+  nav .searchIcon {
+    margin: 0;
+  }
+
+  .navHomeDiv {
+    display: none;
+  }
+
+  .navIcon {
+    width: 56px;
+  }
+
+  .leftside {
+    float: none;
+    width: 100%;
+  }
+
+  .rightside {
+    float: none;
+    width: 100%;
+    padding: none;
+  }
+}

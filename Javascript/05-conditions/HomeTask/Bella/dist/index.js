@@ -24,7 +24,7 @@ var lvl6max = 55270; // 6 - level salary - maximum
 var lvl6dif = lvl6max - lvl6min; // 6 - level differences 
 var lvl6per = 0.47; // 6 - level percentage 47% - tax cut
 var lvl7per = 0.5; // 7 - level percentage 50% - tax cut
-// 1 - level salary
+// // 1 - level salary
 if (salary <= lvl1max) {
     tax = tax + (salary * lvl1per);
     console.log("You pay 10% tax. your total tax amount is: ₪" + Math.round(tax) + " from ₪" + salary.toFixed() + " salary.");
