@@ -4,7 +4,7 @@ function averageAge(age:number){
     return ((100*age)/maxCap);
 }
 
-const userAge = averageAge(60)
+const userAge = averageAge(27)
 console.log(`You spent ${userAge}% of your life` );
 
 
