@@ -3,12 +3,14 @@ var maxNumber:number= 100;
 
 var boom:string = "boom"
 
+var num 
 
-for(var i = dividedNumber; i<=maxNumber; i++){
-    console.log(i % maxNumber)
- 
-}
- 
+num = prompt('Enter the number')
 
+
+if (num % 3 == 0)
+	document.write('Multiple of 3')
+else 
+  document.write('Not a multiple of 3')
 
 
