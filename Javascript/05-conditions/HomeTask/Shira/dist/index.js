@@ -1,5 +1,5 @@
 var tax = 0;
-var salary = 5000;
+var salary = 60000;
 var level1Max = 6450;
 var level1Per = 0.1;
 var level2Min = 6451;
