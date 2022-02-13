@@ -1,12 +1,11 @@
 .top {
   display: flex;
   position: fixed;
-  width: 100%;
   top: 0%;
   background-color: white;
   z-index: 1;
   box-sizing: content-box;
-  height: 50px;
+  height: 65px;
 }
 .top__left {
   display: flex;
@@ -37,14 +36,16 @@
 }
 .top__center {
   margin: auto;
-  padding: 0%;
+  padding: 0px;
+  padding-left: 50px;
 }
 .top__center input {
-  width: 80vw;
+  width: 100%;
   height: 50px;
   border-radius: 50px;
   background-color: #dbd4d4;
   padding: 0px;
+  padding-left: 0px;
   margin: 0px;
   font-size: 20px;
 }
@@ -56,8 +57,8 @@
 }
 .top__right .user {
   background-color: purple;
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
   text-align: center;
   color: aliceblue;
@@ -65,7 +66,9 @@
 }
 .top__right .user h2 {
   position: relative;
-  bottom: 12px;
+  bottom: 25px;
+  font-size: 40px;
+  text-align: center;
 }
 
 .wrapper {
@@ -105,10 +108,16 @@
   right: 0px;
   border-radius: 50px;
   width: 90px;
+  height: 60px;
   background-color: red;
   color: white;
   display: flex;
   justify-content: center;
+}
+.content__comment .icons .save h1 {
+  text-align: center;
+  position: relative;
+  bottom: 11px;
 }
 .content__comment .rihanna__wrapper {
   display: flex;
@@ -180,20 +189,17 @@
 }
 
 .bottom_nav {
-  margin: auto;
   width: 700px;
   height: 50px;
   z-index: 1;
   position: fixed;
   bottom: 40px;
-  left: 750px;
   display: flex;
   justify-content: space-around;
-  gap: 115px;
   background-color: aliceblue;
   border-radius: 50px;
   border: 1px solid;
-  margin: auto;
+  margin: 0 auto;
 }
 .bottom_nav img {
   position: relative;
