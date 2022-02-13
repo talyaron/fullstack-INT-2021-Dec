@@ -9,5 +9,4 @@ var dividedNumber:number = 5;
 var maxNumber:number= 100;
 
 for(var i = 0; i<10; i++){
-//write down michaplot
-}
+console.log(i)}
