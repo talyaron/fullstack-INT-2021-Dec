@@ -19,16 +19,15 @@ function calcTax(balance: number, maxStage: number, taxPrecentage: number) {
 
   } else if (balance > 0 && balance > maxStage) {
     // in case more tax to take for next stage ..
-    TAX = TAX + (maxStage-previousStage) * taxPrecentage;
+    TAX = TAX + maxStage * taxPrecentage;
     tempBalance = tempBalance - maxStage;
     taxStageCount++; // Documant what stage of TAX is
   }
-  previousStage = maxStage;
 }
 //----------------------------------------------------
 
 Bruto = 60000;
-debugger;
+
 
 
 tempBalance = Bruto; // using temp Balance
