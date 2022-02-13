@@ -1,5 +1,5 @@
 
-var salary: any = 20620; //define salary for calculation <-- INPUT HERE
+var salary: any = 60000; //define salary for calculation <-- INPUT HERE
 var afterTax: number = 0; // after tax
 var taxTaken: number = 0; // tax taken
 var taxedSalary1: number = 0; // var for calculation
