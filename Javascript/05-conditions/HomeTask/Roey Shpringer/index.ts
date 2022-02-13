@@ -1,7 +1,4 @@
 
-var salary:number = 7000;
-
-
 var taxlvl1:number = 6450;
 
 var taxlvl2:number = 9240;
@@ -14,7 +11,36 @@ var taxlvl5:number = 42910;
 
 var taxlvl6:number = 55270;
 
-if(salary <= taxlvl1){
-    salary = salary * 0.9;
-    console.log(salary);
-} else if(salary  )
+
+function returnValue(){
+    var salary = parseInt((<HTMLInputElement>document.getElementById("userInput")).value)
+    if(salary <= taxlvl1){
+        salary = salary * 0.9;
+        var persent:string = "10%";
+        console.log(Math.round(salary));
+    } 
+    else if(salary <=taxlvl2){
+        salary = salary * 0.86;
+        persent = "14%";
+    }
+    else if(salary <=taxlvl3){
+        salary = salary * 0.80
+        persent = "20%";
+    }
+    else if(salary <=taxlvl4){
+        salary = salary * 0.69
+        persent = "31%";
+    }
+    else if(salary <= taxlvl5){
+        salary = salary * 0.65
+        persent = "35%";
+    }
+    else if(salary <= taxlvl6){
+        salary = salary * 0.53
+        persent = "47%";
+    }
+    else{
+        persent = "50%";
+    }
+    document.getElementById("answer").innerHTML = " Your salary is " + Math.round(salary) + " Mas took " + persent;
+}
