@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper__box {
+  width: 20vw;
+  height: 10vh;
+  margin: 0;
+  border-radius: 0.25em;
+  text-align: center;
+  border: 1px solid coral;
+  background-color: coral;
+}

@@ -1,0 +1,221 @@
+body {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+    nav {
+        
+        display: flex;
+      position: fixed;
+        align-items: center;
+        width: 100vw;
+        justify-content: flex-end;
+        z-index: 1;
+        background-color: white;
+        top: -1px;
+        
+        .logo {
+            background-image: url(https://coollogo.net/wp-content/uploads//2021/03/Pinterest-3-logo.svg);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            flex-shrink: 0;
+            margin: 5px;
+            &:hover{
+                background-color: grey;
+                cursor: pointer;
+            }
+        }
+
+        .home-btn {
+            button {
+                padding: 17px;
+                border: none;
+                outline: none;
+                color: white;
+                background-color: black;
+                border-radius: 24px;
+                margin-left: 3mm;
+                font-weight: bolder;
+                font-size: 1em;
+                font-family: Arial, Helvetica, sans-serif;
+                cursor: pointer
+            }
+        }
+
+        .search-bar {
+            width: 100%;
+            margin-left: 2mm;
+            position: relative;
+           
+            input {
+                width: 100%;
+                box-sizing: border-box;
+                background-color: rgba(170, 162, 162, 0.219);
+                border-radius: 25px;
+                height: 50px;
+                border: none;
+                padding-left: 2rem;
+                &:focus { 
+                    outline: none !important;
+                    border-color: #89bcf3e7;
+                    border-style: solid ;
+                    border-width: 5px;
+                }
+            }
+            
+        }
+
+        .icons {
+            display: flex;
+            font-size: 25px;
+            color: grey;
+
+        }
+
+        .fa-solid {
+            padding: 9px;
+            cursor: pointer;
+            &.fa-magnifying-glass{
+                top: 9px;
+                position: absolute;
+                left: 0%;
+                color: grey ;
+                &:hover{
+                    background-color: rgba(250, 235, 215, 0);
+                }
+            }
+        }
+
+        .fa-solid:hover {
+            background-color: rgba(163, 152, 152, 0.281);
+            border-radius: 50%;
+
+        }
+    }
+    .wrapper{
+        display: flex;
+        height: 962px;
+        position: relative;
+        flex-flow: column wrap;
+        gap: 10px;
+        width: 100%;
+        top: 60px;
+        
+        .avatar{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            
+            .profile-pic{
+                border-radius: 50%;
+                width: auto;
+                height: 30px;
+            }
+            &:hover{text-decoration: underline;}
+        }
+        .item{         
+            background-color: grey;
+            height: 355.75px;
+            width: 236px;
+            padding: 0;
+            border-radius: 5%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: inline-block;
+            position: relative;
+            cursor: zoom-in;
+            .save-btn{
+               display: none;
+                position: absolute;
+                color: white;
+                background-color: red;
+                left: 67%;
+                top: 5%;
+                padding: 17px;
+                border-radius: 30px;
+                border: none;
+                font-weight: bold;
+                cursor: pointer;
+                &:hover{
+                    background-color: rgb(80, 5, 5) ;
+                }
+                
+            }
+            &:hover .save-btn{
+                display: inline-block;}
+           &:hover {
+               box-shadow: inset 0 0 100px 100px rgba(15, 15, 15, 0.404);
+               
+            }
+            .fa-arrow-up-from-bracket{
+                padding: 8px;
+                background-color: rgb(197, 193, 193);
+                border-radius: 50%;
+                position: absolute;
+                display: none;
+                top: 85%;
+                right: 22%;
+                cursor: pointer;
+                &:hover{
+                    background-color: white ;
+                }
+            }
+            &:hover .fa-arrow-up-from-bracket{
+                display: inline-block;
+            }
+            .fa-ellipsis{
+                background-color:rgb(197, 193, 193);
+                padding: 8px;
+                border-radius: 50%;
+                position: absolute;
+                top: 85%;
+                right: 5%;
+                display: none;
+                cursor: pointer;
+                &:hover{
+                    background-color: white ;
+                }
+            }
+            &:hover .fa-ellipsis{
+                display: inline-block;
+            }
+
+        }
+        
+        .item-small{
+            height: 132.717px;
+            & .fa-ellipsis,.fa-arrow-up-from-bracket{
+                top: 70%;
+            }
+            background-image: url(https://i.pinimg.com/474x/f6/52/28/f652288bbeacc1645f37489b08126cd2.jpg);
+        }
+        .item-medium{
+            height: 236px;
+            & .fa-ellipsis,.fa-arrow-up-from-bracket{
+                top: 80%;
+            }
+            background-image: url(https://i.pinimg.com/474x/8e/ab/1e/8eab1e572f8265469a51515f598035cd.jpg);
+        }
+        .item-large{
+            height: 333.583px;
+            background-image: url(https://i.pinimg.com/474x/24/ce/28/24ce286ed3b339bb5e144b4aecc49794.jpg);
+        }
+        .item-larger{
+            height: 440.133px;
+            background-image: url(https://i.pinimg.com/474x/58/b8/e6/58b8e63069d4e6ba9473b9f363e0807f.jpg);
+        }
+        @media only screen and (max-width: 481px) {height: 5000px; flex-wrap: nowrap;  align-items: center; width: 100vw;} 
+        @media only screen and (min-width: 482px){height: 182em;}
+        @media only screen and (min-width: 720px) {height: 150em;}
+        @media only screen and (min-width: 1012px) { height: 117em;}
+        @media only screen and (min-width: 1201px) {height: 107em;}
+        @media only screen and (min-width: 1442px) { height: 87em;}
+        @media only screen and (min-width: 1678px) {height: 87em ;}
+        @media only screen and (min-width: 1914px) {height: 77em;}
+        @media only screen and (min-width: 2150px) {height: 71em;}
+    }
+}
