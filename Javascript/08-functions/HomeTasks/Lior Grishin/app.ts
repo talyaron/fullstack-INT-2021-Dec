@@ -5,9 +5,6 @@ function tellFortune (numChilds:number, partnersName:string, geoLoc:string, job:
 const fun1 = tellFortune(5, 'Shilat', 'Israel', 'fullstack');
 console.log(fun1);
 
-
-
-
 //-------------EX2----------//
 function calculateDogAge(puppyAge:number){
     return puppyAge*7;
@@ -23,7 +20,8 @@ console.log(`Your dog is ${fun2three} years old in human years!`);
 
 //-------------EX3----------//
 function calculateSupply(age:number){
-// Excuse me they can't expalin them self, so I won't build  a function for them, Sorry <3!
+// Excuse me they can't explain them self, so I won't build  a function for them, Sorry <3!
+// I saw the solution so I don't see a point to write the function here
 }
 
 

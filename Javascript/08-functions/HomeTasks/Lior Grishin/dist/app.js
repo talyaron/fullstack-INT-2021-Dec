@@ -16,7 +16,8 @@ console.log("Your dog is " + fun2two + " years old in human years!");
 console.log("Your dog is " + fun2three + " years old in human years!");
 //-------------EX3----------//
 function calculateSupply(age) {
-    // Excuse me they can't expalin them self, so I won't build  a function for them, Sorry <3!
+    // Excuse me they can't explain them self, so I won't build  a function for them, Sorry <3!
+    // I saw the solution so I don't see a point to write the function here
 }
 //-------------EX4----------//
 function calcCircumfrence(radius) {
