@@ -1,12 +1,13 @@
-var salary: number = 10000
+var salary: number = 23000
 //salary times 0.9 for basic tax calculations
 var basictax: number = lvl1max * 0.9
-var maxtaxLevel2 :number = basictax + ((salary-lvl1max) * 0.86)
-var maxtaxLevel3 :number = maxtaxLevel2 + ((salary-lvl2max) * 0.8)
-var maxtaxLevel4 :number = maxtaxLevel3 + ((salary-lvl3max) * 0.69)
-var maxtaxLevel5 :number = maxtaxLevel4 + ((salary-lvl4max) * 0.65)
-var maxtaxLevel6 :number = maxtaxLevel5 + ((salary-lvl5max) * 0.53)
-var maxtaxLevel7 :number = maxtaxLevel6 + ((salary-lvl6max) * 0.5)
+
+var maxtaxLevel2 :number = ((lvl2max-lvl2min) * 0.86)
+var maxtaxLevel3 :number = ((lvl3max-lvl3min) * 0.8)
+var maxtaxLevel4 :number = ((lvl4max-lvl4min) * 0.69)
+var maxtaxLevel5 :number = ((lvl5max-lvl5min) * 0.65)
+var maxtaxLevel6 :number = ((lvl6max-lvl6min) * 0.53)
+var maxtaxlevel7 :number = ((lvl7min-lvl6max) * 0.5)
 
 
 //level 1 tax range
@@ -37,21 +38,21 @@ var lvl2MaxTax: number = basictax + (lvl2max-lvl1max)* 0.86
 if (salary <= 6450) {console.log(salary * 0.9)
   }
 
-if (salary >= lvl2min && salary <= lvl2max) {console.log(basictax + (salary-lvl1max * 0.86))
+if (salary >= lvl2min && salary <= lvl2max) {console.log(basictax + ((salary-lvl1max) * 0.86))
 }
 
-if (salary >= lvl3min && salary <= lvl3max) {console.log(basictax + (salary-lvl1max)* 0.86)
+if (salary >= lvl3min && salary <= lvl3max) {console.log(maxtaxLevel2 + (salary-lvl2max)* 0.8)
 }
 
-if (salary >= lvl4min && salary <= lvl4max) {console.log(basictax + (salary-lvl1max)* 0.86)
+if (salary >= lvl4min && salary <= lvl4max) {console.log(maxtaxLevel3 + (salary-lvl3max)* 0.69)
 }
 
-if (salary >= lvl5min && salary <= lvl5max) {console.log(basictax + (salary-lvl1max)* 0.86)
+if (salary >= lvl5min && salary <= lvl5max) {console.log(maxtaxLevel4 + (salary-lvl4max)* 0.65)
 }
 
-if (salary >= lvl6min && salary <= lvl6max) {console.log(basictax + (salary-lvl1max)* 0.86)
+if (salary >= lvl6min && salary <= lvl6max) {console.log(maxtaxLevel5 + (salary-lvl5max)* 0.53)
 }
 
-if (salary >= lvl7min) {console.log(basictax + (salary-lvl1max)* 0.86)
+if (salary >= lvl7min) {console.log(maxtaxLevel6 + (salary-lvl6max)* 0.5)
 }
 

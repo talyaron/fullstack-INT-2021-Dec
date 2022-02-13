@@ -313,11 +313,13 @@ nav{
     
 }
 
-@media screen and (max-width: 870px){
+@media only screen and (max-width: 770px){
     .pinte{
-        display:none;
-    }
+        display: none;
+        width: 80%;
+        
 
+    }
     .mobile {
         display: flex;
         justify-content: space-between;
