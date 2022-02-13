@@ -1,0 +1,52 @@
+.warrper {
+  border: solid #fdfdfd 5px;
+  position: absolute;
+  width: 1200px;
+}
+.warrper .longred {
+  background-color: red;
+  align-items: center;
+  height: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.warrper .longred .right {
+  color: white;
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.warrper .longred .left {
+  color: white;
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.warrper .longred .left p {
+  bottom: 17px;
+}
+.warrper .boxes {
+  display: flex;
+  justify-content: space-around;
+}
+.warrper .boxes .box {
+  border: solid white 1px;
+  position: relative;
+}
+.warrper .boxes .box img {
+  width: 300px;
+  height: 150px;
+}
+.warrper .boxes .box #logoy {
+  position: absolute;
+  width: 75px;
+  height: 25px;
+  top: 120px;
+  left: 350px;
+}
+.warrper .boxes .box .pimg {
+  direction: rtl;
+  font-size: 30px;
+}
+.warrper .boxes .box .pimg span {
+  font-weight: bold;
+}

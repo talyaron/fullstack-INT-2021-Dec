@@ -1,5 +1,5 @@
 var tax = 0;
-var salary = 5000;
+var salary = 60000;
 var level1Max = 6450;
 var level1Per = 0.1;
 var level2Min = 6451;
@@ -33,7 +33,7 @@ else if (salary <= level3Max) {
     tax = tax + (level1Max * level1Per + (level2dif) * level2Per + (salary - level2Max) * level3Per);
 }
 else if (salary <= level4Max) {
-    tax = tax + (level1Max * level1Per + (level2dif) * level2Per + (level3dif) * level3Per + (salary - lvl3max) * level4Per);
+    tax = tax + (level1Max * level1Per + (level2dif) * level2Per + (level3dif) * level3Per + (salary - level3Max) * level4Per);
 }
 else if (salary <= level5Max) {
     tax = tax + (level1Max * level1Per + (level2dif) * level2Per + (level3dif) * level3Per + (level4dif) * level4dif + (salary - level4Max) * level5Per);

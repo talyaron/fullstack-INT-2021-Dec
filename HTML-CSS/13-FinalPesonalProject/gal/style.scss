@@ -1,8 +1,8 @@
 body,
 html {
-    margin: 0%;
     width: 100vw;
     height: 100vh;
+    position: absolute;
 }
 
 .menu {
@@ -15,6 +15,13 @@ html {
     align-items: center;
     color: rgb(118, 118, 118);
     font-size: 30px;
+    position: fixed;
+    background-color: white;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    z-index: 9;
+    top:0%;
+    left:5px;
 
     &__leftBar {
         display: flex;
@@ -23,6 +30,7 @@ html {
         align-items: center;
         padding: 5px;
 
+   
         &__logo {
             width: 50px;
             height: 40px;
@@ -42,7 +50,7 @@ html {
                 cursor: pointer;
             }
         }
-
+    
         &__home {
             height: 30px;
             background-color: black;
@@ -54,21 +62,40 @@ html {
             font-weight: bolder;
             text-align: center;
             line-height: 1px;
-
+    
             &:hover {
                 cursor: pointer;
             }
         }
+      &__home1 {
+        height: 30px;
+        background-color: white;
+        border: none;
+        font-size: 1rem;
+        color: black;
+        padding: 22px 16px;
+        border-radius: 30px;
+        font-weight: bolder;
+        text-align: center;
+        line-height: 1px;
+    
+              &:hover {
+                   background-color: rgb(233, 233, 233);
+                   cursor: pointer;
+        
+            }
+         }
     }
+            
 
     &__search {
         width: 85%;
 
         input[type=text] {
             width: 100%;
-            padding: 6px;
+            padding: 12px;
             border: none;
-            margin-top: 8px;
+            margin-top: 0;
             margin-right: 16px;
             font-size: 17px;
             background-color: rgb(239, 239, 239);
@@ -104,6 +131,7 @@ html {
             border-radius: 50%;
             display: flex;
             justify-content: center;
+            line-height: 60px;
 
             &:hover {
                 background-color: rgb(233, 233, 233);
@@ -117,6 +145,7 @@ html {
             border-radius: 50%;
             display: flex;
             justify-content: center;
+            line-height: 60px;
 
             &:hover {
                 background-color: rgb(233, 233, 233);
@@ -126,12 +155,14 @@ html {
 
         &__name {
 
-            width: 24px;
-            height: 24px;
+            width: 34px;
+            height: 34px;
             border-radius: 50%;
             display: flex;
-            color: black;
+            border: wheat;
             justify-content: center;
+            line-height: 30px;
+            
 
             &:hover {
                 background-color: rgb(233, 233, 233);
@@ -139,22 +170,7 @@ html {
             }
         }
        
-        &__name1 {
-
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            display: flex;
-            color: black;
-            justify-content: center;
-            overflow: hidden;
-
-            &:hover {
-                background-color: rgb(233, 233, 233);
-                cursor: pointer;
-            
-            }
-        }
+     
         &__chevron {
             width: 48px;
             height: 48px;
@@ -162,6 +178,7 @@ html {
             display: flex;
             justify-content: center;
             font-size: 1.5rem;
+            line-height: 60px;
 
             &:hover {
                 background-color: rgb(233, 233, 233);
@@ -176,11 +193,13 @@ html {
     margin-top: 15px;
     column-width: 250px;
     -webkit-column-break-inside: avoid;
+    
 }
 
 .img_container {
     width: 250px;
     -webkit-column-break-inside: avoid;
+  
 
     &:hover {
         filter: brightness(0.5);
@@ -231,13 +250,13 @@ html {
         border-radius: 50%;
         border: 1px solid ghostwhite;
         line-height: 63px;
-        font-size: 20px;
+        font-size: 25px;
 
         &:hover{
             background-color: rgb(233, 233, 233);
             cursor: pointer;
         }
-        
+      
     }
 }
     
@@ -252,6 +271,7 @@ html {
     align-items: center;
     color: rgb(118, 118, 118);
     font-size: 60px;
+    
    
     &__lorem {
         display: flex;
@@ -266,11 +286,7 @@ html {
             border-radius: 50%;
             display: flex;
             justify-content: center;
-            // bottom: var(--space-0);
-            // left: var(--space-0);
-            // right: var(--space-0);
-            // top: var(--space-0);
-          
+            
             img {
                 width: 50%;
                 display: block;
@@ -278,27 +294,194 @@ html {
             }
 
             &:hover {
-                background-color: rgb(233, 233, 233);
+                // background-color: rgb(233, 233, 233);
                 cursor: pointer;
             }
             p{
-                // display: flex;
-                // flex-direction: row;
                 font-size: 13px;
                 margin: auto;
                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             }
             }
     }
-
 }
+
 .plus{
-width: 20px;
+width: 30px;
 color: black;
 }
 
 .question
 {
-width: 20px;
+width: 30px;
 color: black;
 }
+.megawrapper{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+   
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 30vh;
+    align-items: center;
+
+&__G{
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(239,239,239);
+    border-radius: 50%;
+    border: 30px solid rgb(239,239,239);
+    line-height: 60px;
+   
+        &:hover{
+            cursor: pointer;
+           
+        }
+    }
+}
+
+.userdetails{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__h1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 40px;
+    
+    }
+
+
+    &__p1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 15px;
+    
+    }
+
+    
+    &__p2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+         }
+    }
+}
+.SavedContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    row-gap: 10px;
+    // width: -166.94px;
+    // height: 61px;
+   
+    &__h3{
+    display: flex;
+    flex-direction: row;
+
+    &:hover{
+       background-color: rgb(233, 233, 233);
+        cursor: pointer;
+        border-radius: 20%;
+      }
+     }
+ } 
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: large;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}  
+
+.oneplus{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    
+    &__rightplus{
+    border-radius: 50%;
+    margin-right: 30px;
+    
+    &:hover{
+        background-color: rgb(233, 233, 233);
+         cursor: pointer;
+         border-radius: 20%;
+       }
+    }
+
+    &__leftitem{
+            border-radius: 50%;
+            margin-left: 30px;
+        
+        
+    &:hover{
+       background-color: rgb(233, 233, 233);
+       cursor: pointer;
+        border-radius: 30%;
+               }
+    }
+}
+
+.usersavedpic{
+    margin-left: 40px;
+}
+
+.usericonpage{
+    margin-left: 20px;
+}
+
+.shareedit{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin: auto;
+    
+    
+    &__share{
+    display: flex;
+    flex-direction: row;
+    
+
+    &:hover{
+       background-color: rgb(233, 233, 233);
+        cursor: pointer;
+        border-radius: 20%;
+      }
+     }
+
+     &__edit{
+        display: flex;
+        flex-direction: row;
+        
+    
+        &:hover{
+           background-color: rgb(233, 233, 233);
+            cursor: pointer;
+            border-radius: 20%;
+          }
+        }
+}
+

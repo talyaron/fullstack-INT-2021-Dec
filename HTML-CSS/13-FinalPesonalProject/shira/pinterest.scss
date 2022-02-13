@@ -156,6 +156,10 @@
     .space{
         height: 100px;
     }
+    .items{
+        position: relative;
+        left: 5vw;
+    }
     
     .items {
         
@@ -349,6 +353,16 @@
 
     
     // style to open image page:
+
+
+    .link_to_home{
+        position: relative;
+        top:200px;
+        left: 35px;
+        cursor: pointer;
+    }
+
+
     .big_card{
         position: relative;
         display: flex;
@@ -581,7 +595,8 @@
             }
     
         }
-        @media only screen and (max-width: 412px){
+        @media only screen and (max-width: 412px){ //Sumsung Galaxy S21 Ultra
+            
          .big_card{
              width: 100%;
              p{
@@ -635,8 +650,6 @@
         
         }
          
-
-         
-        }
+    }
 
     

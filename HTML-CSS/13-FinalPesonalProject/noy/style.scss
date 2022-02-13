@@ -232,7 +232,7 @@ a:link {
 
             &__2 {
                 background-image: url('https://i.ibb.co/YTpf3N5/img2.jpg');
-                height: 350px;
+                height: 400px;
             }
 
             &__3 {
@@ -361,16 +361,17 @@ a:link {
 
 .card {
     margin: 30px auto;
-    width: 1000px;
-    min-height: 500px;
+    width: 80%;
+    height: fit-content;
     display: flex;
     justify-content: center;
     border-radius: 50px;
     box-shadow: 0px 0px 8px #aaaaaa;
 
     &_img {
-        width: 500px;
-        background-image: url('https://i.ibb.co/RpqzKGb/img20.jpg');
+        width: 50%;
+        height: 100vh;
+        background-image: url('https://i.ibb.co/t8q6zGv/img11.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         border-top-left-radius: 50px;
@@ -379,7 +380,7 @@ a:link {
     }
 
     &_menu {
-        width: 500px;
+        width: 50%;
         display: flex;
         margin: 10px;
         padding: 15px;
@@ -389,6 +390,7 @@ a:link {
         .top_buttons {
             display: flex;
             justify-content: space-between;
+
             .buttons_left {
                 font-size: 2rem;
                 display: flex;
@@ -438,7 +440,8 @@ a:link {
                 font-size: 1.5rem;
                 border-radius: 20px;
                 padding: 10px;
-                &:hover{
+
+                &:hover {
                     background-color: #cccccc;
                 }
             }
@@ -472,15 +475,18 @@ a:link {
                 font-size: 1.5rem;
                 font-weight: 700;
             }
-            .buttons_left{
+
+            .buttons_left {
                 display: flex;
                 align-items: center;
             }
         }
-        .comments{
-            .add_comment{
+
+        .comments {
+            .add_comment {
                 display: flex;
             }
+
             #input {
                 width: 100%;
                 box-sizing: border-box;
@@ -489,7 +495,7 @@ a:link {
                 border-radius: 50px;
                 padding: 10px 20px;
                 background-color: #efefef;
-    
+
                 &:hover {
                     background-color: #d3d3d3;
                 }
@@ -497,19 +503,21 @@ a:link {
         }
     }
 }
-.more_like_this{
+
+.more_like_this {
     text-align: center;
 }
+
 .footer_mobile {
     position: fixed;
-    width: 200px;
+    width: 180px;
     height: 50px;
     bottom: 20px;
     left: 50%;
-    margin-left: -100px;
+    margin-left: -90px;
     border-radius: 50px;
     background-color: #efefef;
-    display: flex;
+    display: none;
     justify-content: space-around;
     align-items: center;
 
@@ -568,7 +576,122 @@ a:link {
     }
 }
 
-// red #e50124
-//home button #111111
-// search background #efefef
-//icons #767676
+
+
+//small screen competabilty
+
+@media only screen and (max-width: 1024px) {
+    .main {
+        column-count: 4;
+    }
+
+    .card {
+        flex-direction: column;
+        box-shadow: none;
+        height: fit-content;
+        width: 100%;
+
+        &_img {
+            width: 100%;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+
+        }
+
+        &_menu {
+            height: fit-content;
+            width: 100%;
+            // margin: 10px;
+            // padding: 15px;
+        }
+
+        .footer_mobile {
+            display: none;
+        }
+    }
+}
+
+//ipad competability
+
+@media only screen and (max-width: 768px) {
+    .main {
+        column-count: 3;
+    }
+
+    .card {
+        flex-direction: column;
+        box-shadow: none;
+    }
+
+    .footer_mobile {
+        display: none;
+    }
+}
+
+//mobile competability
+
+@media only screen and (max-width: 440px) {
+    .header {
+        display: none;
+    }
+
+    .card {
+        margin: 0;
+        flex-direction: column-reverse;
+        box-shadow: none;
+        height: fit-content;
+        width: 100%;
+        border-radius: none;
+
+
+        &_img {
+            width: 100%;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+
+        }
+
+        &_menu {
+            height: fit-content;
+            width: 100%;
+            box-sizing: border-box;
+            .btn {
+                font-size: 0.9rem;
+            }
+            .user{
+                &__name{
+                    font-size: 1rem;
+                }
+                &__avatar{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+            .buttons_left {
+                flex-direction: row-reverse;
+
+            }
+
+            .btn__link,
+            .btn__category,
+            .comments {
+                display: none;
+            }
+
+            margin: 0px;
+            // padding: 15px;
+        }
+    }
+
+    .main {
+        column-count: 2;
+    }
+
+    .footer_desktop {
+        display: none;
+    }
+
+    .footer_mobile {
+        display: flex;
+    }
+}
