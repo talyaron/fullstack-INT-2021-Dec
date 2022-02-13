@@ -15,10 +15,15 @@ console.log("Your dog is " + fun2one + " years old in human years!");
 console.log("Your dog is " + fun2two + " years old in human years!");
 console.log("Your dog is " + fun2three + " years old in human years!");
 //-------------EX3----------//
-function calculateSupply(age) {
-    // Excuse me they can't explain them self, so I won't build  a function for them, Sorry <3!
-    // I saw the solution so I don't see a point to write the function here
+function calculateSupply(age, numPerDay) {
+    var maxAge = 100;
+    var totalNeeded = (numPerDay * 365) * (maxAge - age);
+    var message = ('You will need ' + totalNeeded + ' cups of tea to last you until the ripe old age of ' + maxAge);
+    console.log(message);
 }
+calculateSupply(28, 36);
+calculateSupply(28, 2.5);
+calculateSupply(28, 400);
 //-------------EX4----------//
 function calcCircumfrence(radius) {
     console.log("The circumference is " + Math.floor(2 * Math.PI * radius));

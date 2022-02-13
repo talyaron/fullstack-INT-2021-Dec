@@ -19,10 +19,15 @@ console.log(`Your dog is ${fun2three} years old in human years!`);
 
 
 //-------------EX3----------//
-function calculateSupply(age:number){
-// Excuse me they can't explain them self, so I won't build  a function for them, Sorry <3!
-// I saw the solution so I don't see a point to write the function here
-}
+function calculateSupply(age:number, numPerDay:number){
+    var maxAge = 100;
+    var totalNeeded = (numPerDay * 365) * (maxAge - age);
+    var message = ('You will need ' + totalNeeded + ' cups of tea to last you until the ripe old age of ' + maxAge);
+    console.log(message);
+} 
+calculateSupply(28, 36);
+calculateSupply(28, 2.5);
+calculateSupply(28, 400);
 
 
 //-------------EX4----------//
