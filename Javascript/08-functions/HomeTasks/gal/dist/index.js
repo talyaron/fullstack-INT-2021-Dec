@@ -17,3 +17,9 @@ var function2C = calculateDA(12);
 console.log("Your doggie is " + function2C + " years old in dog years!");
 // --------------------------------------------------------
 // function 3
+function calculateSupply(age, ammountPD) {
+    //    let client = (`You will need ${MaxAge} to last you until the ripe old age of ${ammountPD}`);
+    var MaxAge = 120;
+    var total = (ammountPD * 365) * (MaxAge - age);
+    var clientResult = '';
+}

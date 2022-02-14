@@ -8,7 +8,6 @@ console.log(function1);
 
 // ----------------------------------------------------
 // function 2
-
 function calculateDA (dogage:number){
     return dogage*7;
 }
@@ -24,4 +23,11 @@ console.log(`Your doggie is ${function2C} years old in dog years!`);
     
 // --------------------------------------------------------
 // function 3
+
+function calculateSupply (age:number, ammountPD:number){
+//    let client = (`You will need ${MaxAge} to last you until the ripe old age of ${ammountPD}`);
+    let MaxAge=120;
+    let total =(ammountPD*365)*(MaxAge-age);
+    let clientResult= ''
+}
 
