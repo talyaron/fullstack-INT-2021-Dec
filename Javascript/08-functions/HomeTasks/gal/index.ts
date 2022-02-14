@@ -1,4 +1,6 @@
+// --------------------------------------------------
 // function 1
+
 function tellFortune (numKids:number, partnersName: string, location: string, job: string){
     return (`you will be a ${job} in ${location}, and married to ${partnersName} with ${numKids} kids`);
 }
@@ -8,6 +10,7 @@ console.log(function1);
 
 // ----------------------------------------------------
 // function 2
+
 function calculateDA (dogage:number){
     return dogage*7;
 }
@@ -25,9 +28,17 @@ console.log(`Your doggie is ${function2C} years old in dog years!`);
 // function 3
 
 function calculateSupply (age:number, ammountPD:number){
-//    let client = (`You will need ${MaxAge} to last you until the ripe old age of ${ammountPD}`);
-    let MaxAge=120;
-    let total =(ammountPD*365)*(MaxAge-age);
-    let clientResult= ''
+    const MaxAge=120;
+    let sumAge =(MaxAge-age);
+    let total =(ammountPD*365)*(sumAge);
+    let client = (`You will need ${total} breads to last you until the ripe old age of ${sumAge}`);
+    console.log(client);
 }
+
+calculateSupply(24,100);
+calculateSupply(24,200);
+calculateSupply(24,300);
+
+// ----------------------------------------------------------
+// function 4
 
