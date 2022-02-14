@@ -7,5 +7,5 @@ function percentAge(age:number, manOrWoman:string){
         return `your age in percent is ${age/averageWoman*100}`
     }
 }
-    const y = percentAge( 71, 'woman') 
+    const y = percentAge( 24, 'woman') 
     console.log(y);
