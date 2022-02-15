@@ -1,4 +1,5 @@
-var salary: number = 23000
+
+
 //salary times 0.9 for basic tax calculations
 var basictax: number = lvl1max * 0.9
 
@@ -34,8 +35,11 @@ var lvl7min: number = 55270
 //difference between Lvl1 & Lvl2 income
 var lvl2MaxTax: number = basictax + (lvl2max-lvl1max)* 0.86
 
+var salary: number = 10000
 
-if (salary <= 6450) {console.log(salary * 0.9)
+
+
+if (salary <= lvl1max) {console.log(salary * 0.9)
   }
 
 if (salary >= lvl2min && salary <= lvl2max) {console.log(basictax + ((salary-lvl1max) * 0.86))
@@ -56,3 +60,4 @@ if (salary >= lvl6min && salary <= lvl6max) {console.log(maxtaxLevel5 + (salary-
 if (salary >= lvl7min) {console.log(maxtaxLevel6 + (salary-lvl6max)* 0.5)
 }
 
+console.log(salary)
