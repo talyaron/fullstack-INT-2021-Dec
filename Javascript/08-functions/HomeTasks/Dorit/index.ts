@@ -36,12 +36,19 @@ function calcCircle(areaOrCircum:string, radius:number){
 
 function celsiusAndFarenheit(degreeSort:string, amount:number){
     if (degreeSort =='celsius'){
-        return `the ${amount} degrees of celsius is in farenheit ${Math.round(amount*3.577)} degrees`
-    } else if (degreeSort = 'farenheit'){
+        return `the ${amount} degrees of celsius is in farenheit ${Math.round(amount*5/9+32)}` 
+    } else if (degreeSort == 'farenheit'){
         return `the ${amount} degrees of farenheit is in celsius ${Math.round((amount - 32)/1.8)} degrees`
     }
 }
 
+function findTime(distance:number, velocity:number){
+    return distance/velocity
+}
+let dist:number = +prompt("what is your distance")
+let vel:number = +prompt("what is your velocity")
+let time:number = findTime(dist,vel)
+console.log(`time is ${time}`)
 
 //const a = tellFortune(1, 'Guy', 'hod hasharon', 'system analyst');
 //const a = tellFortune(6, 'Arnon', 'Tel Aviv', 'story teller');
