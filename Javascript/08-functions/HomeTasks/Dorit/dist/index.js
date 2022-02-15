@@ -15,11 +15,12 @@ function calculateDogAge(name, age, factor) {
 function calculateSupply(age, amount, nameOfSuply, gender) {
     var expectMan = 81;
     var expectWoman = 84.5;
+    var restOfLife = 0;
     if (gender == 'man') {
-        var restOfLife = expectMan - age;
+        restOfLife = expectMan - age;
     }
     else if (gender == 'woman') {
-        var restOfLife = expectWoman - age;
+        restOfLife = expectWoman - age;
     }
     return "for the next " + restOfLife + " years you will need " + amount * 360 * restOfLife + " of " + nameOfSuply;
 }
@@ -52,7 +53,7 @@ console.log("time is " + time);
 //const a = calculateDogAge('chupchik', 10, 7)
 //const a = calculateDogAge('farid', 3, 7)
 //const a = calculateDogAge('dogie', 13, 8)
-const a = calculateSupply(71, 5, 'choclate plates', 'woman')
+//const a = calculateSupply(71, 5, 'choclate plates', 'woman')
 //const a = calculateSupply(14, 5, 'bamba bags', 'man');
 //const a = calculateSupply(71, 5, 'choclate plates', 'woman');
 //const a = calcCircle('circumfrence', 5)
