@@ -18,7 +18,7 @@ function  calculateDogAge(name:string, age:number, factor:number){
 function calculateSupply(age:number, amount:number, nameOfSuply:string, gender:string){
     const expectMan = 81;
     const expectWoman = 84.5;
-    if (gender='man'){
+    if (gender=='man'){
         let restOfLife:number = expectMan - age;
     } else if (gender == 'woman'){
         let restOfLife:number = expectWoman - age;
