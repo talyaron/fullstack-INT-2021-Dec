@@ -70,3 +70,10 @@ function fahrenheitToCelsius(fahrenheit: number) {
 }
 const p = fahrenheitToCelsius(68);
 console.log(p)
+
+function randomNumber(min:number, max:number) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+  const min=randomNumber(1, 10);
+  const max=10;
+  console.log(min)
