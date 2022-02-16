@@ -23,3 +23,10 @@ var lvl6dif = lvl6max - lvl6min;
 var lvl6per = 0.47;
 var lvl17 = 55270;
 var lvl7per = 0.5;
+var salary = undefined;
+if (salary = lvl1max) {
+    console.log(6450 * lvl1per);
+}
+if (salary >= 6451 && salary <= 9240) {
+    console.log(lvl2max * lvl2per + (salary - lvl2max) * lvl2per);
+}
