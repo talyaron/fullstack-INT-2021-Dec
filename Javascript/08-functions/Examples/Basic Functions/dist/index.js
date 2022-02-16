@@ -2,7 +2,7 @@
 function multi(a, b) {
     return a * b;
 }
-var x = multi(5, 8);
+var x = multi(5, 8); //invoke
 console.log(x); //40
 var y = multi(10, 8);
 console.log(y);

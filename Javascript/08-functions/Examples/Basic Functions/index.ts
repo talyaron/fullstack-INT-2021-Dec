@@ -4,7 +4,7 @@ function multi(a:number, b:number):number{
     return a*b;
 }
 
-const x = multi(5,8);
+const x = multi(5,8); //invoke
 console.log(x); //40
 const y = multi(10,8);
 console.log(y);
