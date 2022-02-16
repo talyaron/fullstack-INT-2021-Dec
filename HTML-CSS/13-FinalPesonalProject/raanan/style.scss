@@ -215,54 +215,17 @@ main {
     background-color: whitesmoke;
 }
 
-// Post Box
 .sec-one {
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 40px;
+    box-shadow: 0px 0px 6px -2px #b9b9b9;
+    border-radius: 40px;
     display: flex;
-    justify-content: center;
-}
-
-.psot-box {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10%;
-    background-color: white;
-    height: 90ch;
-    width: 105ch;
-    border-radius: 30px;
-    box-shadow: rgba(5, 5, 5, 0.04) 0px 3px 5px 7px;
-    position: relative;
-    .flex-box {
-        display: flex;
-        flex-direction: row;
-        .box-img {
-            display: flex;
-            position: relative;
-            background-image: url('https://i.pinimg.com/564x/97/2d/60/972d6094434f15c6cbd380408fcd7d2c.jpg');
-            width: 400px;
-            height: 600px;
-            border-radius: 20px;
-            margin: 25px;
-            box-shadow: rgba(5, 5, 5, 0.04) 0px 3px 5px 7px;
-            .bottom_img_icon {
-                .btn-brd {
-                    border: none;
-                    height: 20px;
-                    margin: auto;
-                }
-                display: flex;
-                justify-content: center;
-                position: absolute;
-                background-color: whitesmoke;
-                width: 45px;
-                height: 45px;
-                bottom: 20px;
-                right: 25px;
-                border-radius: 50%;
-                .fa-expand {
-                    margin: auto;
-                }
-            }
-        }
+    img {
+        border-radius: 40px;
+        padding: 20px;
+        width: 50%;
     }
     .left-side {
         padding: 20px;
