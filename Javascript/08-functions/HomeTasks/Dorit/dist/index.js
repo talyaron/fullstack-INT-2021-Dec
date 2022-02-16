@@ -15,11 +15,12 @@ function calculateDogAge(name, age, factor) {
 function calculateSupply(age, amount, nameOfSuply, gender) {
     var expectMan = 81;
     var expectWoman = 84.5;
-    if (gender = 'man') {
-        var restOfLife = expectMan - age;
+    var restOfLife = 0;
+    if (gender == 'man') {
+        restOfLife = expectMan - age;
     }
     else if (gender == 'woman') {
-        var restOfLife = expectWoman - age;
+        restOfLife = expectWoman - age;
     }
     return "for the next " + restOfLife + " years you will need " + amount * 360 * restOfLife + " of " + nameOfSuply;
 }
@@ -33,12 +34,19 @@ function calcCircle(areaOrCircum, radius) {
 }
 function celsiusAndFarenheit(degreeSort, amount) {
     if (degreeSort == 'celsius') {
-        return "the " + amount + " degrees of celsius is in farenheit " + Math.round(amount * 3.577) + " degrees";
+        return "the " + amount + " degrees of celsius is in farenheit " + Math.round(amount * 5 / 9 + 32);
     }
-    else if (degreeSort = 'farenheit') {
+    else if (degreeSort == 'farenheit') {
         return "the " + amount + " degrees of farenheit is in celsius " + Math.round((amount - 32) / 1.8) + " degrees";
     }
 }
+function findTime(distance, velocity) {
+    return distance / velocity;
+}
+var dist = +prompt("what is your distance");
+var vel = +prompt("what is your velocity");
+var time = findTime(dist, vel);
+console.log("time is " + time);
 //const a = tellFortune(1, 'Guy', 'hod hasharon', 'system analyst');
 //const a = tellFortune(6, 'Arnon', 'Tel Aviv', 'story teller');
 //const a = tellFortune(1, 'aharon', 'Tel Aviv', 'developer');

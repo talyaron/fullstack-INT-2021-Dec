@@ -18,10 +18,11 @@ function  calculateDogAge(name:string, age:number, factor:number){
 function calculateSupply(age:number, amount:number, nameOfSuply:string, gender:string){
     const expectMan = 81;
     const expectWoman = 84.5;
-    if (gender='man'){
-        let restOfLife:number = expectMan - age;
+    let restOfLife:number = 0;
+    if (gender=='man'){
+        restOfLife = expectMan - age;
     } else if (gender == 'woman'){
-        let restOfLife:number = expectWoman - age;
+        restOfLife = expectWoman - age;
     }    
         return `for the next ${restOfLife} years you will need ${amount*360*restOfLife} of ${nameOfSuply}` 
 }
@@ -36,12 +37,20 @@ function calcCircle(areaOrCircum:string, radius:number){
 
 function celsiusAndFarenheit(degreeSort:string, amount:number){
     if (degreeSort =='celsius'){
-        return `the ${amount} degrees of celsius is in farenheit ${Math.round(amount*3.577)} degrees`
-    } else if (degreeSort = 'farenheit'){
+        return `the ${amount} degrees of celsius is in farenheit ${Math.round(amount*5/9+32)}` 
+    } else if (degreeSort == 'farenheit'){
         return `the ${amount} degrees of farenheit is in celsius ${Math.round((amount - 32)/1.8)} degrees`
     }
 }
 
+function findTime(distance:number, velocity:number){
+    return distance/velocity
+}
+
+let dist:number = +prompt("what is your distance")
+let vel:number = +prompt("what is your velocity")
+let time:number = findTime(dist,vel)
+console.log(`time is ${time}`)
 
 //const a = tellFortune(1, 'Guy', 'hod hasharon', 'system analyst');
 //const a = tellFortune(6, 'Arnon', 'Tel Aviv', 'story teller');
