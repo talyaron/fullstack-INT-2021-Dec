@@ -1,0 +1,40 @@
+@font-face {
+    font-family: magic;
+    src: url(../fonts/QuiteMagicalRegular-8VA2.ttf);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    h1 {
+        font-family: magic;
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-family: magic;
+        font-size: 3rem;
+    }
+    .spin {
+        width: 5rem;
+        height: 5rem;
+        transform: rotate(45deg);
+
+        background-color: red;
+        cursor: pointer;
+        transition: transform 2s;
+    }
+}
+////////////////////////////////////////////////////
+.line {
+    width: 80vw;
+    height: 0.5rem;
+    margin: auto;
+    background-color: grey;
+}
+///////////////////////////////////////////////////
+
+/* The Puppy Age Calculator */
+

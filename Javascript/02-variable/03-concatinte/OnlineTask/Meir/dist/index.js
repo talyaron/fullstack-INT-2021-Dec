@@ -1,0 +1,17 @@
+var str = "email";
+var str2 = "Rebmeir770@gmail.com";
+var str3 = "str+str2";
+console.log(str, str2);
+var str = "phone";
+var num = " 0543046081";
+var str3 = "str+num";
+console.log(str, num);
+var str = "adress: ";
+var str2 = "Waitzman";
+var num = 20;
+var str3 = "str+str2+num";
+console.log(str, str2, num);
+var num = 30;
+var str = "daysOfExpriensInCSS";
+var str3 = "str+num+str2";
+console.log("Hi I've " + num + " " + str);
