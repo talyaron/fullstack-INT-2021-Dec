@@ -24,7 +24,7 @@ function Game(userGuess:number){
             userInput = +prompt(`select a number between 1 and 100`);
         }
     }
-    if(userInput !== compRandNumber ){
+    if(userInput !== compRandNumber){
         console.log('Out of guess :(');
     }
 }
