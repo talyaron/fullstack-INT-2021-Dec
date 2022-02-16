@@ -41,4 +41,41 @@ calculateSupply(24,300);
 
 // ----------------------------------------------------------
 // function 4
+// -------part1---------------
 
+function calcCircumfrence (radius:number){
+    let P=Math.round (radius*2*3.14);
+    let circle = (`The circumference is ${P}`);
+    console.log (circle)
+}
+
+calcCircumfrence (10);
+calcCircumfrence (20)
+
+// ------------------------------------------------------------
+//---------part2---------------
+
+function calcArea (radius:number){
+    let r=Math.pow(radius,2);
+    let A=Math.round (r*3.14);
+    let area= (`The area is ${A}`);
+    console.log (area)
+}
+
+calcArea (12);
+calcArea (17);
+
+// --------------------------------------------------------------
+// function 5
+function celsiusToFahrenheit (c:number,_fer:number){
+    let fer =c*9/5+32;
+    let temp= (`${fer}F is ${c}C`);
+    console.log (temp)
+}
+
+celsiusToFahrenheit (10,0)
+celsiusToFahrenheit (20,0)
+celsiusToFahrenheit (25,0)
+celsiusToFahrenheit (30,0)
+
+// ==============================THATS IT============================

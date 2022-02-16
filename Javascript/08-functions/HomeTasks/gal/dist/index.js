@@ -30,3 +30,33 @@ calculateSupply(24, 200);
 calculateSupply(24, 300);
 // ----------------------------------------------------------
 // function 4
+// -------part1---------------
+function calcCircumfrence(radius) {
+    var P = Math.round(radius * 2 * 3.14);
+    var circle = ("The circumference is " + P);
+    console.log(circle);
+}
+calcCircumfrence(10);
+calcCircumfrence(20);
+// ------------------------------------------------------------
+//---------part2---------------
+function calcArea(radius) {
+    var r = Math.pow(radius, 2);
+    var A = Math.round(r * 3.14);
+    var area = ("The area is " + A);
+    console.log(area);
+}
+calcArea(12);
+calcArea(17);
+// --------------------------------------------------------------
+// function 5
+function celsiusToFahrenheit(c, _fer) {
+    var fer = c * 9 / 5 + 32;
+    var temp = (fer + "F is " + c + "C");
+    console.log(temp);
+}
+celsiusToFahrenheit(10, 0);
+celsiusToFahrenheit(20, 0);
+celsiusToFahrenheit(25, 0);
+celsiusToFahrenheit(30, 0);
+// ==============================THATS IT============================
