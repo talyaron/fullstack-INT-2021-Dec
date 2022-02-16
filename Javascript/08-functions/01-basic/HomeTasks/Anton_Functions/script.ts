@@ -12,20 +12,20 @@ const wife =  document.getElementById("wife");
 const job =  document.getElementById("job");
 
 
-function getRandomChildren(max) {
+function getRandomChildren(max):number {
     return Math.floor(Math.random() * max); /* The Math.floor() function returns the largest integer less than or equal to a given number. */
 }
-function getRandomLocation() {
+function getRandomLocation():string {
     var randomLocation = ['Siberia', 'Afghanistan', 'Belarus', 'Pakistan', 'Norway', 'USA', 'Israel'];
     var random = Math.floor(Math.random() * randomLocation.length);
     return randomLocation[random];
 }
-function getRandomWife() {
+function getRandomWife():string {
     var randomWife = ['Boris', 'Alisa', 'Mahmud', 'Fatima', 'Marina', 'Schneider', 'Yael'];
     var random = Math.floor(Math.random() * randomWife.length);
     return randomWife[random];
 }
-function getRandomJob() {
+function getRandomJob():string{
     var randomJob = ['Electrician', 'Web-Developer', 'Fisher men', 'Gold Digger', 'Miner', 'Beggar', 'Veteran'];
     var random = Math.floor(Math.random() * randomJob.length);
     return randomJob[random];
@@ -42,13 +42,13 @@ box.style.transform = `rotate(${rotateS}deg)`
 
 /* Main Function */
 function tellFortune() { 
-   var children:any = getRandomChildren(10);
+   const children:number = getRandomChildren(10);
    kids.innerHTML =  'You will have: ' + children + ' children';
-   var location:any = getRandomLocation();
+   const location:string = getRandomLocation();
    someLocation.innerHTML = "You'll live in " + location;
-   var women:any = getRandomWife();
+   const women:string = getRandomWife();
    wife.innerHTML = "Your wife name is: " + women;
-   var occupation:any = getRandomJob();
+   const occupation:string = getRandomJob();
    job.innerHTML = "You'll work as: " + occupation;
 }
 
