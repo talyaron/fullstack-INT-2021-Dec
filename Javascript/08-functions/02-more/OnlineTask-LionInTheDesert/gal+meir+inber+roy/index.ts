@@ -2,7 +2,6 @@ function getRandomNum(max: number): number {
     return Math.floor(Math.random() * max);
 }
 
-
 function guessNum(tri: number) {
     const number = getRandomNum(100)
     for (let i = 0; i < tri; i++) {
