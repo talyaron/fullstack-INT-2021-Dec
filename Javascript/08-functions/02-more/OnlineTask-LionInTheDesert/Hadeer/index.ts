@@ -12,7 +12,7 @@ console.log(answer);
    
 if (answer==x){
     console.log(`YOU WON`)
-    i=7
+    i==7
     alert(`YOU WON`)
 }
 else if (answer<x){
@@ -21,8 +21,9 @@ else if (answer<x){
 else if (answer>x){
     console.log(`GO DOWN`)
 }
-else if(i==6){
+else if(i==5){
     alert(`YOU LOST`)
+    i++;
 }
 
 }
