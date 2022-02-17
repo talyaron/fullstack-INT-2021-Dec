@@ -11,5 +11,5 @@ console.log(a[3](5, 5)); // invoke the function in the 4th place
 console.log(a.length);
 
 for (let i = 0; i < a.length; i++) {
-  x§g(a[i]);
+  (a[i]);
 }
