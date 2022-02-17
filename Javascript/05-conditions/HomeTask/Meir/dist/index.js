@@ -1,4 +1,3 @@
-var basictax = 0;
 var lvl1max = 6450;
 var lvl1per = 0.1;
 var lvl2min = 6451;
@@ -24,9 +23,9 @@ var lvl6per = 0.47;
 var lvl17 = 55270;
 var lvl7per = 0.5;
 var salary = undefined;
-if (salary = lvl1max) {
-    console.log(6450 * lvl1per);
+if (salary <= lvl1max) {
+    console.log(lvl1max * lvl1per);
 }
-if (salary >= 6451 && salary <= 9240) {
-    console.log(lvl2max * lvl2per + (salary - lvl2max) * lvl2per);
+else if (salary >= 6451 && salary <= 9240) {
+    console.log();
 }
