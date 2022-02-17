@@ -1,5 +1,3 @@
-var basictax:number = 0;
-    
 var lvl1max:number = 6450; 
 var lvl1per:number = 0.1; 
     
@@ -28,15 +26,30 @@ var lvl6max:number = 55270;
 var lvl6dif:number = lvl6max-lvl6min;
 var lvl6per:number = 0.47; 
  
-var lvl17:number = 55270;
+var lvl7:number = 55270; 
 var lvl7per:number = 0.5;
 
 var salary:number = undefined;
 
 
-if (salary = lvl1max) {
-    console.log(6450*lvl1per)
+if (salary <= lvl1max) {
+    console.log(lvl1max*lvl1per)
 }    
-if (salary >= 6451 && salary <= 9240) {
-   console.log(lvl2max*lvl2per + (salary-lvl2max)*lvl2per) 
+else if (salary >= 6451 && salary <= 9240) {
+   console.log(lvl2max*lvl2per)
 } 
+else if (salary >= 9241 && salary <= 14840) {
+   console.log(lvl3max*lvl3per) 
+}
+else if (salary >= 14840 && salary <=20620) {
+    console.log(lvl4max*lvl4per) 
+}
+else if (salary >= 20621 && salary <=42910) {
+    console.log(lvl5max*lvl5per)
+}
+else if (salary >= 42911 && salary <=55270) {
+    console.log(lvl6max*lvl6per)
+}
+else if (salary >=55271) {
+    console.log(lvl7*lvl7per)
+}
