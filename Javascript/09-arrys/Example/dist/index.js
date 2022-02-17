@@ -7,6 +7,5 @@ console.log(a[4]); //return the element in the n-th (4th, 5th) place (starting f
 console.log(a[3](5, 5)); // invoke the function in the 4th place
 console.log(a.length);
 for (var i = 0; i < a.length; i++) {
-    x;
-    g(a[i]);
+    (a[i]);
 }
