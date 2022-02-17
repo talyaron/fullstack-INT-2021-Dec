@@ -56,3 +56,9 @@ function fahrenheitToCelsius(fahrenheit) {
 }
 var p = fahrenheitToCelsius(68);
 console.log(p);
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+var min = randomNumber(1, 10);
+var max = 10;
+console.log(min);
