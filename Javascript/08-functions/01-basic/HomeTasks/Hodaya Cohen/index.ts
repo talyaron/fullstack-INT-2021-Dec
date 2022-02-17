@@ -39,3 +39,16 @@ const q=calcCircumfrence(3)
 console.log(q)
 
 //--5--//
+function celsiusToFahrenheit(celsius: number) {
+    return `${celsius}°C is ${((celsius / 5) * 9) + 32}°F`
+
+}
+const k = celsiusToFahrenheit(32);
+console.log(k)
+
+function fahrenheitToCelsius(fahrenheit: number) {
+    return `${fahrenheit}°F is ${((fahrenheit - 30) * 5) / 9}°C`
+
+}
+const b = fahrenheitToCelsius(68);
+console.log(b)
