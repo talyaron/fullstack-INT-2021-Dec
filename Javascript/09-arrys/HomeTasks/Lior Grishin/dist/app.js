@@ -20,7 +20,7 @@ var printFriends = function (arr) {
 //*************************************BEHIND-THE-SCENES****************************************//
 // We have array with names                                                                     //
 // f - greetFriends loop all over the array and printing 'Hello' with each an organ in an array //
-//*******************************************************************************************//
+//**********************************************************************************************//
 //*******************************************EX-2***********************************************//
 var greetFriends = function (arr) {
     for (var i = 0; i < arr.length; i++) {
@@ -112,12 +112,13 @@ var runEx4 = function (maxNumber) {
 //*************************************INSTRUCTIONS******************************************//
 // 1. Run runEx5(maxNumberInArray, arrayLengh). Ex: runEx5(100 , 10)                         //
 //*******************************************************************************************//
-// f - arrAverage returns an avrage of the array numbers by user input:                       //
+// f - arrAverage returns an avrage of the array numbers by user input:                      //
 //  1. Array of numbers                                                                      //
 // f - createRandomNumberArray returns an array by user input:                               //
 //  1. Max Number of an organ (number)                                                       //
 //  2. Lengh of an array (number)                                                            //
-//*******************************************EX-4********************************************//
+//*******************************************************************************************//
+//*******************************************EX-5********************************************//
 var arrAverage = function (arr) {
     var sum = 0;
     for (var i = 0; i < arr.length; i++) {
