@@ -28,6 +28,9 @@ function num(a, b, c) {
 }
 // ----`average array`-----
 var d = [2, 4, 8, 16, 32, 64, 128];
+function roundDigits(number, numberOfDigits) {
+    return Math.round(number * Math.pow(10, numberOfDigits)) / Math.pow(10, numberOfDigits);
+}
 function average(d) {
     var sum = 0;
     for (var i = 0; i < d.length; i++) {
@@ -35,4 +38,4 @@ function average(d) {
     }
     return sum / d.length;
 }
-console.log("the average number of the \"average array\" is " + average(d));
+console.log("the average number of the \"average array\" is " + (roundDigits(average(d), 4)));

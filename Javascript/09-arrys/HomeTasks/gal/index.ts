@@ -38,6 +38,13 @@ function num(a:number,b:number, c:number){
 
 const d:Array<number>=[2,4,8,16,32,64,128];
 
+
+function roundDigits(number: number, numberOfDigits: number) {  
+  
+    return Math.round(number * Math.pow(10, numberOfDigits))/ Math.pow(10, numberOfDigits);
+  
+}
+
 function average (d:Array<number>):number{
     let sum:number= 0;
         for(let i=0; i<d.length ;i++){
@@ -46,4 +53,5 @@ function average (d:Array<number>):number{
         return sum/d.length;
 }
 
-console.log(`the average number of the "average array" is ${average(d)}`)
+
+console.log(`the average number of the "average array" is ${(roundDigits(average (d), 4))}`)
