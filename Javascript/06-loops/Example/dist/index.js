@@ -1,4 +1,4 @@
-//loops
+loops;
 for (var i = 2; i = 10000; Math.pow(i, 2)) {
     --; //code-block
 }
