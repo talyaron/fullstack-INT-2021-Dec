@@ -21,7 +21,7 @@ for (var i=0; i< numbers; i++) {
 
 
 /* third task */
-function num (var num1, var num2) {
+function num (num1:number, num2:number) {
     var sum= num1+num2;
     return sum;
 }
@@ -34,5 +34,21 @@ for (var i=0; i<arr2.length; i++) {
         console.log(typeof arr2[i]);
     }
 }
-
 /* third task */
+
+/* fourth task */
+const numbers2 = 10;
+const arr3:Array<number> = []
+for (var i=0; i < numbers2; i++) {
+     arr3.push(i);
+}
+
+let sum2 = 0;
+function avg() {
+    for(let i=0; i<arr3.length; i++) {
+         sum2 = (sum2 + arr3[i]);
+        }
+        return sum2 / arr3.length; 
+}
+console.log(avg());
+/* fourth task */
