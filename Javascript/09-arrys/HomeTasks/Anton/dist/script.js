@@ -15,10 +15,10 @@ for (var i = 0; i < numbers; i++) {
 }
 /* second task */
 /* third task */
-function num() { }
-var num1;
-var num2, _a = (void 0)["var"], sum = _a === void 0 ? num1 + num2 : _a;
-return sum;
+function num(num1, num2) {
+    var sum = num1 + num2;
+    return sum;
+}
 var arr2 = ['Peter Pan', 3, 'Max Payne', 'Solidity', 5, num];
 for (var i = 0; i < arr2.length; i++) {
     if (typeof arr2[i] === 'function') {
@@ -29,3 +29,18 @@ for (var i = 0; i < arr2.length; i++) {
     }
 }
 /* third task */
+/* fourth task */
+var numbers2 = 10;
+var arr3 = [];
+for (var i = 0; i < numbers2; i++) {
+    arr3.push(i);
+}
+var sum2 = 0;
+function avg() {
+    for (var i_1 = 0; i_1 < arr3.length; i_1++) {
+        sum2 = (sum2 + arr3[i_1]);
+    }
+    return sum2 / arr3.length;
+}
+console.log(avg());
+/* fourth task */ 
