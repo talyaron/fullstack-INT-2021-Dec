@@ -17,7 +17,22 @@ for (var i = 0; i < b.length; i++) {
     }
 }
 // ----3th array----
-var c = [];
-function num(a, b) {
+var c = ["fullstack", 78, "barca", "eilat", "%$%$", num];
+for (var i = 0; i < c.length; i++) {
+    console.log("the element " + c[i] + " is " + typeof c[i]);
+    if (typeof c[i] == "function")
+        console.log("function is " + c[i](4, 6));
+}
+function num(a, b, c) {
     return a + b;
 }
+// ----`average array`-----
+var d = [2, 4, 8, 16, 32, 64, 128];
+function average(d) {
+    var sum = 0;
+    for (var i = 0; i < d.length; i++) {
+        sum += d[i];
+    }
+    return sum / d.length;
+}
+console.log("the average number of the \"average array\" is " + average(d));

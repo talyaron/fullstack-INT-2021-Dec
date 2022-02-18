@@ -1,4 +1,5 @@
 // ----'friend's array'------
+
 const a: Array<string> = [`shahar`, `yam`, `gal`, `rotem`, `kobe`, `hanan`]
 
 for (let i = 0; i < a.length; i++) {
@@ -6,6 +7,7 @@ for (let i = 0; i < a.length; i++) {
 }
 
 // ----'numbers array'-----
+
 let b: Array<number> = [0, 1, 2, 3, 4, 6, 7, 8, 9, 5]
 
 for (let i = 0; i < b.length; i++) {
@@ -21,8 +23,27 @@ for (let i = 0; i < b.length; i++) {
 }
 
 // ----3th array----
-const c:Array<any>=[]
 
-function num(a:number,b:number):number{
+const c:Array<any>=[`fullstack`, 78, `barca`, `eilat`, `%$%$`, num]
+    for (let i=0; i< c.length; i++){
+        console.log(`the element ${c[i]} is ${typeof c[i]}`)
+        if(typeof c[i] == `function`)
+            console.log (`function is ${c[i](4,6)}`)
+    }
+function num(a:number,b:number, c:number){
     return a+b;
 }
+
+// ----`average array`-----
+
+const d:Array<number>=[2,4,8,16,32,64,128];
+
+function average (d:Array<number>):number{
+    let sum:number= 0;
+        for(let i=0; i<d.length ;i++){
+            sum+=d[i];
+        }
+        return sum/d.length;
+}
+
+console.log(`the average number of the "average array" is ${average(d)}`)
