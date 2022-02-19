@@ -15,5 +15,32 @@ for (let K = 0; K < numArray.length; K++) {
     }
 }
 
+//Task N.3
+
+const typeofArray: Array<any> =[`messi`, 10, 30, `kadima` ];
+for(let v = 0; v < typeofArray.length; v++){
+    console.log(` ${typeofArray[v]} typeof is ${typeof typeofArray[v]}`)
+}
+
+//Task N.4
+
+const AvgArray: Array<number>=[2,5,6,8,12,20]
+
+function AllDig(number: number, NumOfDig: number) {  
+  
+    return Math.round(number * Math.pow(10, NumOfDig))/ Math.pow(10, NumOfDig);
+  
+}
+
+function Avg (AvgArray:Array<number>):number{
+    var num:number= 0;
+        for(let i=0; i<AvgArray.length ;i++){
+            num+=AvgArray[i];
+        }
+        return num/AvgArray.length;
+}
+
+
+console.log(`the average number between (2,5,6,8,12,20) is ${(AllDig(Avg (AvgArray),1 ))}`)
 
 
