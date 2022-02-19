@@ -20,16 +20,16 @@ function weirdFunction(a, b) {
         return (b - a);
     }
 }
-// let b =weirdFunction(6, 8)
-// let myArray = [34, "this is funn!!!!", "lie", 4206969, '3', weirdFunction]
-// for(let i=0; i<myArray.length; i++){
-//     let objecType = typeof(myArray[i])
-//     console.log("this object is a "+objecType)
-//     if(objecType==='function'){
-//         let f= myArray[i]
-//         f(6, 8)
-//     }
-// }
+var b = weirdFunction(6, 8);
+var myArray = [34, "this is funn!!!!", "lie", 4206969, '3', weirdFunction];
+for (var i = 0; i < myArray.length; i++) {
+    var objecType = typeof (myArray[i]);
+    console.log("this object is a " + objecType);
+    if (objecType === 'function') {
+        var f = myArray[i];
+        console.log(f(4, 7));
+    }
+}
 function avgOfArray(a) {
     var sum = 0;
     for (var i = 0; i < a.length; i++) {

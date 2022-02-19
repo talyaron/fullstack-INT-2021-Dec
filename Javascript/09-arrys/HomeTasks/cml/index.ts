@@ -22,17 +22,18 @@ function weirdFunction(a:number, b:number){
         return (b-a)
     }
 }
-// let b =weirdFunction(6, 8)
-// let myArray = [34, "this is funn!!!!", "lie", 4206969, '3', weirdFunction]
+let b =weirdFunction(6, 8)
+let myArray = [34, "this is funn!!!!", "lie", 4206969, '3', weirdFunction]
 
-// for(let i=0; i<myArray.length; i++){
-//     let objecType = typeof(myArray[i])
-//     console.log("this object is a "+objecType)
-//     if(objecType==='function'){
-//         let f= myArray[i]
-//         f(6, 8)
-//     }
-// }
+for(let i=0; i<myArray.length; i++){
+    let objecType = typeof(myArray[i])
+    console.log("this object is a "+objecType)
+    if(objecType==='function'){
+        let f= myArray[i]
+        console.log(f(4, 7))
+    }
+}
+
 
 function avgOfArray(a){
     let sum=0;
