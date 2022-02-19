@@ -24,11 +24,19 @@ const d:Array<any>=['hanoch',33,multy]
 for(let j = 0; j < d.length; j++){
     console.log(typeof d[j])
     
-    if ( d[j].typeof=='function') {
-        
+    if ( typeof(d[j])=='function') {
+
         console.log(d[j](5, 5));
     }
     
 }
+
+let l:number = 0;
+ const f:array<number> = [8,4,6,10]
+ for (let y = 0; y< f.length; y++){
+     l += f[y]
+     let h = l / f.length
+     console.log(h)
+ }
 
 
