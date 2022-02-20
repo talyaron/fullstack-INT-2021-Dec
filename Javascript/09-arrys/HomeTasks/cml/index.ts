@@ -7,7 +7,7 @@ for(let i=0; i<myFriends.length; i++){
 }
 
 
-let myNums = [3,6,2,3,1,2,8,5,9]
+let myNums:Array<number> = [3,6,2,3,1,2,8,5,9]
 for(let i=0; i<myNums.length; i++){
     console.log(myNums[i])
     if(myNums[i]>5){
