@@ -27,7 +27,7 @@ for (let i = 0; i < b.length; i++) {
 const c:Array<any>=[`fullstack`, 78, `barca`, `eilat`, `%$%$`, num]
     for (let i=0; i< c.length; i++){
         console.log(`the element ${c[i]} is ${typeof c[i]}`)
-        if(typeof c[i] == `function`)
+        if(typeof c[i] === `function`)
             console.log (`function is ${c[i](4,6)}`)
     }
 function num(a:number,b:number, c:number){
