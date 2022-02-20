@@ -11,6 +11,8 @@ const sum3 = (a:number, b:number):number =>{
     return a+b;
 }
 
-console.log(sum(2,1));
-console.log(sum2(2,1));
-console.log(sum3(2,1));
+let num1:number = +prompt('please enter a number');
+let num2:number = +prompt('please enter a number');
+console.log(sum(num1,num2));
+console.log(sum2(num1,num2));
+console.log(sum3(num1,num2));
