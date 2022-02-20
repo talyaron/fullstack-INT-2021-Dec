@@ -23,15 +23,20 @@ for (let i = 0; i < numbers.length; i++) {
 // Whats My Type----//
 const diff: Array<any> = ["all", 7, "my", 10, add];
 
-function add(diff: Array<any>[]) {
-    return `this is function 7 10`
+function add(a:number, b:number) {
+    return a+b;
 }
 for (let i = 0; i < diff.length; i++) {
     console.log((typeof diff[i]) + (diff[i]))
 
-    function getNumber(diff: Array<any>[]) {
-        return typeof (diff[i])
+    if( typeof diff[i]== 'function'){
+    let d:Number=add(5, 6);
+     console.log(d)
     }
+
+    // function getNumber(diff: Array<any>[]) {
+    //     return typeof (diff[i])
+    // }
 
 }
 
