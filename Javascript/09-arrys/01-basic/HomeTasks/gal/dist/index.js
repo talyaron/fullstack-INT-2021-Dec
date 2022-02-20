@@ -1,5 +1,5 @@
 // ----'friend's array'------
-var a = ["shahar", "yam", "gal", "rotem", "kobe", "hanan"];
+var a = ["shahar", "yam", "gal", "rotem", "hanan"];
 for (var i = 0; i < a.length; i++) {
     console.log("welcome " + a[i]);
 }

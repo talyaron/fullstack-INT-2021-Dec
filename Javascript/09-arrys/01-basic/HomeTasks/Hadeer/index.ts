@@ -43,7 +43,6 @@ function diverst(x,y,z) {
 
 const Mean: Array<number> = [1,5,60,506,99,405,-300,8004,45,231,54,123,45]
 
-
 let sum = 0;
 
 for (let i = 0; i < Mean.length; i++) {

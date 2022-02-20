@@ -35,6 +35,7 @@ if (true || true) {
 
 // would water will boil?
 
+
 //in sea level tempreture of boiling is about 100c
 var temperature: number = 99;
 var persure: number = 0.4; //if smaller than 0.5 it will boil
