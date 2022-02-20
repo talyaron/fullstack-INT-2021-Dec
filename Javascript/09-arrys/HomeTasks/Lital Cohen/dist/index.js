@@ -20,17 +20,18 @@ for (var i = 0; i < numbers.length; i++) {
 }
 // Whats My Type----//
 var diff = ["all", 7, "my", 10, add];
-function add(diff) {
-    return "this is function 7 10";
+function add(a, b) {
+    return a + b;
 }
-var _loop_2 = function (i) {
-    console.log((typeof diff[i]) + (diff[i]));
-    function getNumber(diff) {
-        return typeof (diff[i]);
-    }
-};
 for (var i = 0; i < diff.length; i++) {
-    _loop_2(i);
+    console.log((typeof diff[i]) + (diff[i]));
+    if (typeof diff[i] == 'function') {
+        var d = add(5, 6);
+        console.log(d);
+    }
+    // function getNumber(diff: Array<any>[]) {
+    //     return typeof (diff[i])
+    // }
 }
 // Estimate a Number----//
 var estimateNum = [100, 90, 70, 50, 40];

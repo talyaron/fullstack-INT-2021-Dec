@@ -1,28 +1,28 @@
-//let a:Array<any> = ["Dorit","irit","eilon","Esther","Ronit","Rivka","Alon","Luisa","Anna"];
-//for(let i=0;i<a.length;i++){
-//    console.log(a[i]);
-//}
-//for(let i:number=0;i<a.length;i++){
-//    console.log(`Welcom ${a[i]}`);
-//}
-//var b:Array<number> = [50,150,2,15,25,3,1,1.5,3.5,7.5,17,18]
-//for(let i:number=0;i<b.length;i++){
-//    if (b[i]>5){
-//        alert(`this number is bigger than 5 ${b[i]}`)
-//    }
-//}
-//var c:Array<any> = ['abc',550,5.75,'$',add,false ]
-//function add(a:number, b:number):number{
-//    return a+b
-//}
+var a = ["Dorit", "irit", "eilon", "Esther", "Ronit", "Rivka", "Alon", "Luisa", "Anna"];
+for (var i = 0; i < a.length; i++) {
+    console.log(a[i]);
+}
+for (var i = 0; i < a.length; i++) {
+    console.log("Welcom " + a[i]);
+}
+var b = [50, 150, 2, 15, 25, 3, 1, 1.5, 3.5, 7.5, 17, 18];
+for (var i = 0; i < b.length; i++) {
+    if (b[i] > 5) {
+        alert("this number is bigger than 5 " + b[i]);
+    }
+}
+var c = ['abc', 550, 5.75, '$', add, false];
+function add(a, b) {
+    return a + b;
+}
 //debugger
-//for(let i:number=0; i<c.length; i++){
-//   console.log(typeof(c[i]))
-//    if (typeof(c[i]) == "function"){
-//        var result:number = c[i](5,8)
-//        console.log(`the result is ${result}`)
-//   }
-//}
+for (var i = 0; i < c.length; i++) {
+    console.log(typeof (c[i]));
+    if (typeof (c[i]) == "function") {
+        var result = c[i](5, 8);
+        console.log("the result is " + result);
+    }
+}
 var d = [];
 //Populating the array
 for (var i = 0; i < 15; i++) {
