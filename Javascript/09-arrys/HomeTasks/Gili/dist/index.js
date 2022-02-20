@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 //--1--//
 var a = ["Shiran", "Margalit", "Tiferet", "Lital",];
 console.log(a);
@@ -13,6 +14,8 @@ function multy(a, b) {
 >>>>>>> b250038a22130bc19d32f91437f96e7240e94cb3
 =======
 >>>>>>> b250038a22130bc19d32f91437f96e7240e94cb3
+=======
+>>>>>>> 9a56da96cddbc152d27dcc94a23df82cc453a41b
 // First Task - Friends Arry
 var friends = ["Almog", "Sayfan", "Roni", "Benji", "Daniel", "Evgeny"];
 for (var i = 0; i < friends.length; i++) {
@@ -49,8 +52,11 @@ var avg = sum / numArray2.length;
 console.log("rge averege of the array is " + avg);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b250038a22130bc19d32f91437f96e7240e94cb3
 =======
 >>>>>>> b250038a22130bc19d32f91437f96e7240e94cb3
 =======
 >>>>>>> b250038a22130bc19d32f91437f96e7240e94cb3
+=======
+>>>>>>> 9a56da96cddbc152d27dcc94a23df82cc453a41b
