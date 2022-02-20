@@ -20,10 +20,10 @@ for (var j = 0; j < d.length; j++) {
         console.log(d[j](5, 5));
     }
 }
-var l = 0;
-var f = [8, 4, 6, 10];
-for (var y = 0; y < f.length; y++) {
-    l += f[y];
-    var h = l / f.length;
-    console.log(h);
+var sum = 0;
+var arrayOfNumbers = [8, 4, 6, 10];
+for (var y = 0; y < arrayOfNumbers.length; y++) {
+    sum += arrayOfNumbers[y];
 }
+var h = sum / arrayOfNumbers.length;
+console.log(h);
