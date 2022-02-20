@@ -31,12 +31,12 @@ for(let j = 0; j < d.length; j++){
     
 }
 
-let l:number = 0;
- const f:array<number> = [8,4,6,10]
- for (let y = 0; y< f.length; y++){
-     l += f[y]
-     let h = l / f.length
-     console.log(h)
+let sum:number = 0;
+ const arrayOfNumbers:Array<number> = [8,4,6,10]
+ for (let y = 0; y< arrayOfNumbers.length; y++){
+     sum += arrayOfNumbers[y]
+     
  }
-
+ let h = sum / arrayOfNumbers.length
+ console.log(h)
 
