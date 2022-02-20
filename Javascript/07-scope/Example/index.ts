@@ -9,8 +9,8 @@ for (var i = 0; i < 5; i++) {
   z=3000;
 
   for(let j = 0;j<3;j++){
-      console.log(z);
-      let u = 400;
+    console.log(z);
+    let u = 400;
   }
 
  
