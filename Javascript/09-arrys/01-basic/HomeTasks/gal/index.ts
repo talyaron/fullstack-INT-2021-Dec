@@ -1,6 +1,6 @@
 // ----'friend's array'------
 
-const a: Array<string> = [`shahar`, `yam`, `gal`, `rotem`, `kobe`, `hanan`]
+const a: Array<string> = [`shahar`, `yam`, `gal`, `rotem`, `hanan`]
 
 for (let i = 0; i < a.length; i++) {
     console.log(`welcome ${a[i]}`)

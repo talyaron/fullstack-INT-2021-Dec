@@ -1,6 +1,3 @@
-// create a function that add 2 arguments with three forms of the function (regular, anonymous, arrow)
-// 2 try to use them before the defintion and after the defition
-
 // ----regular func---
 
 function multy (a:number, b:number):number{
@@ -24,3 +21,4 @@ const arrow = (a:number, b:number):number=>{
 }
 
 console.log (arrow (6,8))
+
