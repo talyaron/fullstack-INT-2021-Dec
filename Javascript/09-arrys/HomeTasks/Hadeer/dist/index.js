@@ -4,7 +4,7 @@ for (var i = 0; i < Myfriends.length; i++) {
     console.log(Myfriends[i]);
 }
 for (var i = 0; i < Myfriends.length; i++) {
-    console.log("Hello dear" + Myfriends[i]);
+    console.log("Hello dear " + Myfriends[i]);
 }
 //Number bigger than five
 var morethan5 = [0, 4, 5, 11, -2, 9, 3, 15, -10, 10, 2, 7, 20];

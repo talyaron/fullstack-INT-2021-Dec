@@ -6,7 +6,7 @@ for ( let i=0; i<Myfriends.length; i++){
 }
 
 for ( let i=0; i<Myfriends.length; i++){
-    console.log(`Hello dear`+Myfriends[i])
+    console.log(`Hello dear ${Myfriends[i]}`)
 }
 
 
@@ -51,7 +51,7 @@ for (let i = 0; i < Mean.length; i++) {
 }
 console.log(sum);
 
-const average= sum/Mean.length;
+let average= sum/Mean.length;
 
 console.log(average);
 
