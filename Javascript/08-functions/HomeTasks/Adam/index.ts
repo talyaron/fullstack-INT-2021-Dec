@@ -1,37 +1,31 @@
 const Quest= +prompt(`is it a number or string?`)
 console.log(Quest)
 
-const ArrAny:Array<any> =[ 10,30,40,50,`Adam`,`Hapoel`]
-console.log(ArrAny)
+let ArrNum:Array<number> =[ 10,30,40,50,5,6,20,35,45,]
+let ArrStr:Array<string>=[`Adam`,`Hapoel`,`Red hot`,`Messi`]
+console.log(ArrNum,ArrStr)
 
-const NumOrStr:(Elm:string)
+try{
+    for(let ArrNum = Number; length++;){
+        if(ArrNum=Number){
+            console.log(`this is a number`);
+            alert(`this is number`);
+            break
+        }
 
-ArrAny.forEach((elm)=>{
-    try{
-        // if (typeof arrAlltyps!== "number") throw "number is not of type number";
-        console.log(elm)
-    }catch(error){
-        console.error(error);
     }
+    
+    for(let ArrStr = String; length++;){
+        if(ArrStr=String){
+            console.log(`this is a string`);
+            alert(`this is a string`);
+            break
+        
+        }
 
-});
-const arrString= arrAlltyps.map(elm =>{
-    if(typeof elm === `string`) return elm
-
-
-}).filter(elm=>typeof elm === `string`);
-console.log(arrString);
-
-const arrNumber= arrAlltyps.map(elm =>{
-    if(typeof elm === `number`) return elm
-
-
-}).filter(elm=>typeof elm === `number`);
-console.log(arrNumber);
-
-
-
-
-
-
-
+    }
+    
+    }
+catch(erorr){
+    console.error(`this is not a number or a string`);}
+    alert((`this is not a number or a string`);)
