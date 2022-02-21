@@ -34,3 +34,13 @@ function calcCircumfrence(radius) {
 var q = calcCircumfrence(3);
 console.log(q);
 //--5--//
+function celsiusToFahrenheit(celsius) {
+    return celsius + "\u00B0C is " + (((celsius / 5) * 9) + 32) + "\u00B0F";
+}
+var k = celsiusToFahrenheit(32);
+console.log(k);
+function fahrenheitToCelsius(fahrenheit) {
+    return fahrenheit + "\u00B0F is " + ((fahrenheit - 30) * 5) / 9 + "\u00B0C";
+}
+var b = fahrenheitToCelsius(68);
+console.log(b);
