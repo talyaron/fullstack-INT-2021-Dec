@@ -1,26 +1,26 @@
-var babi = [5, 10, 'baba', 'hanoch'];
-console.log(babi);
-var babu = [];
+var firstArray = [5, 10, 'baba', 'hanoch'];
+console.log(firstArray);
 function strOrNumber(action) {
     try {
-        if (action = "strings") {
-            babu = babi.map(function (e) { if (typeof e === "string")
-                return e; }).filter(function (e) { typeof e === "string"; });
-            console.log('in case of string', babu);
+        var outcomeArray = [];
+        if (action === "strings") {
+            outcomeArray = firstArray.map(function (elm) { if (typeof elm === "string")
+                return elm; }).filter(function (elm) { return typeof elm === "string"; });
+            console.log('in case of strings', outcomeArray);
         }
-        else if (action === "number") {
-            babu = babi.map(function (e) { if (typeof e === "number")
-                return e; }).filter(function (e) { typeof e === "number"; });
-            console.log('in case of number', babu);
+        else if (action === "numbers") {
+            outcomeArray = firstArray.map(function (elm) { if (typeof elm === "number")
+                return elm; }).filter(function (elm) { return typeof elm === "number"; });
+            console.log('in case of number', outcomeArray);
         }
         else {
             console.error("you gave a wrong action");
         }
-        return babu;
+        return outcomeArray;
     }
     catch (error) {
         console.error(error);
         return undefined;
     }
 }
-console.log(strOrNumber("string"));
+console.log(strOrNumber("kuku"));
