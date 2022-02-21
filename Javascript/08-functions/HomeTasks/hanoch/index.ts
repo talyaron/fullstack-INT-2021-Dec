@@ -1,9 +1,41 @@
-const chois = prompt<any>("give me number or string")
-console.log(chois)
+var try1 = +prompt("give me number or string")
+console.log(try1)
 const babi:Array<any> = [5, 10, 'baba', 'hanoch']
-const number = babi.map(elm =>{
-    if (typeof chois === 'number' ){
-        return (elm)
-    }
+const chek = babi.map(e =>{
+    if(isNaN(try1)) 
+    return  e
+
 })
-console.log(babi)
+console.log(chek)
+
+// const chek1 = babi.map(g =>{
+//     if(typeof +try1 === 'number') 
+//     return g
+
+// }).filter(g => typeof g === 'number')
+// console.log(chek1)
+
+// const chek2 = babi.map(f =>{
+//     if(typeof try1 === null) 
+//     return f
+
+// }).filter(f => typeof f === 'number')
+// console.log(chek2)
+
+
+
+
+
+
+
+
+
+
+
+// var number1 = babi.map(Number);
+// var string1 = babi.forEach(String);
+// if (typeof(try1) === 'number'){
+//     console.log (number1)
+// }
+
+
