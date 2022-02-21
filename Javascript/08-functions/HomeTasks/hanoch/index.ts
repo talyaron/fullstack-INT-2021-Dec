@@ -1,8 +1,11 @@
-var try1 = +prompt("give me number or string")
+var try1 = prompt("give me number or string")
 console.log(try1)
 const babi:Array<any> = [5, 10, 'baba', 'hanoch']
-const chek = babi.map(e =>{
-    if(isNaN(try1)) 
+var x = 0;
+const chek = babi.map(e => 
+{
+    if(typeof try1 === "string") 
+    // x = babi.map(y => typeof y === 'string')
     return  e
 
 })

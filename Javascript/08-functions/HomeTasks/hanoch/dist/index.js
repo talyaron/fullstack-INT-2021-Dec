@@ -1,8 +1,10 @@
-var try1 = +prompt("give me number or string");
+var try1 = prompt("give me number or string");
 console.log(try1);
 var babi = [5, 10, 'baba', 'hanoch'];
+var x = 0;
 var chek = babi.map(function (e) {
-    if (isNaN(try1))
+    if (typeof try1 === "string")
+        // x = babi.map(y => typeof y === 'string')
         return e;
 });
 console.log(chek);
