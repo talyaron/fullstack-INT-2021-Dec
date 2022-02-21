@@ -8,6 +8,7 @@ const chek = babi.map(e =>{
 })
 console.log(chek)
 
+
 // const chek1 = babi.map(g =>{
 //     if(typeof +try1 === 'number') 
 //     return g
