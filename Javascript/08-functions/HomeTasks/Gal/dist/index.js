@@ -1,18 +1,37 @@
 var array = [1, "a", 2, "b", 3, "c", 4, "d"];
-// const ans1:any=prompt(`pls type number or something else`);
 var answer = prompt("pls type \"number\" or \"string\"");
 var number = array.filter(function (elm) { return typeof elm === "number"; });
 var string = array.filter(function (elm) { return typeof elm === "string"; });
-array.forEach(function (elm) {
+var newarray = homework(answer); //ליצור מערך חדשה
+console.log(newarray);
+function homework(answer) {
     try {
-        if (typeof elm === "number") {
-            console.log(num1);
-        }
-        else if (typeof elm === "string") {
-            console.log(stri1);
+        if (answer !== number && answer !== string) { //מגדירים מה זו בעצם שגיאה
+            throw new Error("Function not implemented");
         }
     }
-    catch (error) {
-        console.log(error);
+    catch (erorr) {
+        console.log(erorr);
     }
-});
+    if (answer === number) { //קופצים למים ומתחילים להגדיר לחלק את המערך הישן וליצור חדש
+        console.log("there are numbers");
+        var newNumbersArry = array.map(function (elm) {
+            if (typeof elm === "number")
+                return elm;
+        })
+            .filter(function (elm) { return typeof elm === 'number'; }); //מפלטרים
+        return newNumbersArry;
+    }
+    else if (answer === string) {
+        console.log("These are strings:");
+        var newStringArry = array.map(function (elm) {
+            if (typeof elm === "string")
+                return elm;
+        })
+            .filter(function (elm) { return typeof elm === 'string'; });
+        return newStringArry;
+    }
+}
+// function err(err: any) {
+//     throw new Error("Function not implemented.");
+// }
