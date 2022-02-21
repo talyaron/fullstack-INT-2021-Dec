@@ -1,15 +1,39 @@
 var try1 = prompt("give me number or string")
 console.log(try1)
 const babi:Array<any> = [5, 10, 'baba', 'hanoch']
-var x = 0;
-const chek = babi.map(e => 
-{
-    if(typeof try1 === "string") 
-    // x = babi.map(y => typeof y === 'string')
-    return  e
+const a = babi.filter(e => typeof e === 'number')
+const b = babi.filter(e => typeof e === 'string')
+try{ if ( try1 === 'string' ){
+    console.log(b)
+}
+else if( try1 === 'number'){
+    console.log(a)
+}
+else{
+    console.log(`you enter a wrong content!!`)
+}
+}catch(error){
+    console.error(error);
+    
+}
+)
 
-})
-console.log(chek)
+
+
+
+
+
+
+
+// var x = 0;
+// const chek = babi.map(e => 
+// {
+//     if(typeof try1 === "string") 
+//     // x = babi.map(y => typeof y === 'string')
+//     return  e
+
+// })
+// console.log(chek)
 
 
 // const chek1 = babi.map(g =>{
