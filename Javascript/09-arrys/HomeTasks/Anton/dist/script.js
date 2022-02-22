@@ -1,15 +1,19 @@
 /* Method One ===> For Loop */
-var arr = [5, 'Hello World', null, NaN, Math.pow, 18, "Hey"];
-var define = function (list, value) {
+var arr = [5, 'Hello World', null, NaN, Math.pow, 18, "Hey", 555, 'mmm'];
+//Function Start
+var filterArray = function (usersArray, type) {
+    //internal Function Variables//
+    var temp_arr = [];
+    //internal Function Variables//
     try {
-        if (typeof value !== "string" && typeof value !== "number")
+        //checks if the passed to the function "filterArray"  parameters are valid //
+        if (typeof type !== "string" && typeof type !== "number")
             throw "This is not a number or a string";
-        for (var i = 0; i < list.length; i++) {
-            if (typeof list[i] == "number" && value == "number") {
-                console.log(list[i]);
+        for (var i = 0; i < usersArray.length; i++) {
+            if (typeof usersArray[i] == "number" && type == "number") {
             }
-            if (typeof list[i] == "string" && value == "string") {
-                console.log(list[i]);
+            if (typeof usersArray[i] == "string" && type == "string") {
+                console.log(usersArray[i]);
             }
         }
     }
@@ -18,9 +22,10 @@ var define = function (list, value) {
         return undefined;
     }
 };
-console.log(define(arr, "string"));
-console.log(define(arr, "number"));
-console.log(define(arr, Math.pow));
+//Function End
+console.log(filterArray(arr, "string"));
+console.log(filterArray(arr, "number"));
+console.log(filterArray(arr, Math.pow));
 /* Method One ===> For Loop */
 /* Method Two ===> .Map Function */
 var define2 = function (list, value) {
