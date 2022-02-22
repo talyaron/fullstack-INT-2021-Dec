@@ -3,7 +3,7 @@ console.log(arrAlltyps);
 
 arrAlltyps.forEach((elm)=>{
     try{
-        // if (typeof arrAlltyps!== "number") throw "number is not of type number";
+        // if (typeof arrAlltyps!== "string") throw "number is not of type number";
         console.log(elm)
     }catch(error){
         console.error(error);

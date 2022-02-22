@@ -2,7 +2,7 @@ var arrAlltyps = ["dog", "mom", "card", 35, "n", 70, 19, 80, "am", 6, "hello"];
 console.log(arrAlltyps);
 arrAlltyps.forEach(function (elm) {
     try {
-        // if (typeof arrAlltyps!== "number") throw "number is not of type number";
+        // if (typeof arrAlltyps!== "string") throw "number is not of type number";
         console.log(elm);
     }
     catch (error) {
