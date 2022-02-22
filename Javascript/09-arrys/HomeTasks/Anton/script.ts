@@ -1,14 +1,13 @@
 
 /* Method One ===> For Loop */
-const arr:Array<any> = [5, 'Hello World',null, NaN, Math.pow, 18, "Hey",555,'mmm'];
+const arr:Array<any> = [5, 'Hello World', Math.pow(2,2), 18, "Hey",555,'mmm'];
 
 
 //Function Start
 
-const filterArray = (usersArray:Array<any>, type:string) => {
+const filterArray = (usersArray:Array<any>, type:any) => {
   //internal Function Variables//
   let temp_arr = [];
-
 
   //internal Function Variables//
 
@@ -18,14 +17,18 @@ const filterArray = (usersArray:Array<any>, type:string) => {
 
   if (typeof type !== "string" && typeof type !== "number") throw "This is not a number or a string"
   
+  //looping through the passed to function, array
+
+
   for (let i=0; i < usersArray.length; i++) {
-    if (typeof usersArray[i] == "number" && type == "number") {
-      
+ 
+  
+    if (typeof usersArray[i] ==  typeof type ) {
+      temp_arr.push(usersArray[i]);
     }  
-    if (typeof usersArray[i] == "string" && type == "string") {
-      console.log(usersArray[i]);
-      }
+  
     }
+    return temp_arr;
   } catch (err) {
     console.error(err);
     return undefined;
@@ -35,29 +38,23 @@ const filterArray = (usersArray:Array<any>, type:string) => {
 //Function End
 
 
-
-
-
-
-
-
-console.log(filterArray(arr, "string"));
-console.log(filterArray(arr, "number"));
-console.log(filterArray(arr, Math.pow));
+console.log(filterArray(arr, 4));
+// console.log(filterArray(arr, 4));
+// console.log(filterArray(arr, Math.pow));
 
 /* Method One ===> For Loop */
 
 
 /* Method Two ===> .Map Function */
 
-const define2 = (list:Array<any>, value) => {
+/* const define2 = (list:Array<any>, value) => {
   const new_list =  list.map(elm=> {
     if (typeof elm === "number" && typeof value === "number") return elm 
 }).filter(elm => typeof elm === "number");
 return new_list;
 }
 console.log(define2(arr, "number"));
-
+ */
 
 
 
