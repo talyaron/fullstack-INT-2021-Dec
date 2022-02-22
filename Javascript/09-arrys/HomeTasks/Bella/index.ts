@@ -1,48 +1,32 @@
-// const arr: Array<number> = [10, 2, 34, 6, 120, 130, 99, 10000000, 200];
 
-// const newArr = arr.map(elm=>{
-//   if(elm >= 100) return elm
-//   else return "This number is smaller than 100!";
-// }).filter(elm=>elm >= 100);
-
-// console.log (newArr);
-// console.log(arr.indexOf[1]); 
+// pt 1: -------------------------------------------------------------------------------------------------------
+//info: Define array with different types of variables.
+const arr: Array<any> = [88, "Wacom Cintiq", 8, 120, 144, "Photoshop", null, true];
+// back log ----------------------------------------------------------------------------------------------------
+// const userInput:any = prompt("Enter string or number below")
+// arr.push(`${userInput}`);
 
 
-const arr: Array < any > = [10, "Wacom Cintiq", "4", 8, 120, 130, "HUION Kamvas Pro", true];
+// pt 2: -------------------------------------------------------------------------------------------------------
+//info: New "string" array out of arr
+const arrStr = arr.map(elm => {
+    if (typeof elm === "string") return elm
 
-let str1 = "Wacom Cintiq";
-let str2 = "HUION Kamvas Pro";
+}).filter(elm => typeof elm === "string");
+console.log(arrStr)
 
+// pt 3: -------------------------------------------------------------------------------------------------------
+//info: New "numbers" array out of arr
+const arrNum = arr.map(elm => {
+    if (typeof elm === "number") return elm
+  
+}).filter(elm => typeof elm === "number");
+console.log(arrNum)
 
+// pt 4: -------------------------------------------------------------------------------------------------------
+//info: New "syntaxError" array out of arr
+const arrError = arr.map(elm => {
+    if (typeof elm !== "number" && elm !== "string") 
+    throw "syntaxError";
+})
 
-function typeOfvar(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    if (typeof arr[i] === "string") {
-      return i;
-
-    } else if (typeof arr[i] === "string") {
-      return i;
-
-
-    }
-  }
-}
-
-
-// 3st assignment ----------------------------------------------------------------------------------------------------
-
-// Info: The app identifies the type of each variable inside an array.
-// if the type of the variable is a "function" - then the app runs it's function,
-// else the app just identifies the type of the variable.
-
-
-
-// const items: Array < any > = [random, "Tel aviv", 4, "Tomer 1", 1 + 1, true, 3.6, false, undefined, null];
-// for (var i = 0; i < items.length; i++) {
-//   if (typeof items[i] === "function") {
-//       console.log(random(1, 9));
-//   } else {
-//       console.log(typeof items[i]);
-//   }
-// }
