@@ -27,3 +27,9 @@ for (var i = 0; i < arrayTypes.length; i++) {
     }
 }
 //צרו מערך של מספרים. צרו פונקציה שמקבלת את המערך ומחזירה מה ממוצע כל המספרים.
+var c = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+var total = 0;
+for (var i = 0; i < c.length; i++) {
+    total += c[i];
+}
+console.log(total / c.length);
