@@ -18,8 +18,8 @@ var arrNum = arr.map(function (elm) {
 }).filter(function (elm) { return typeof elm === "number"; });
 console.log(arrNum);
 // pt 4: -------------------------------------------------------------------------------------------------------
-//info: New "error/invalid" array out of arr
+//info: New "syntaxError" array out of arr
 var arrError = arr.map(function (elm) {
     if (typeof elm !== "number" && elm !== "string")
-        throw "Not valid";
+        throw "syntaxError";
 });

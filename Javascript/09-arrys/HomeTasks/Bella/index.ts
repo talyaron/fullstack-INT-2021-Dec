@@ -23,9 +23,9 @@ const arrNum = arr.map(elm => {
 console.log(arrNum)
 
 // pt 4: -------------------------------------------------------------------------------------------------------
-//info: New "error/invalid" array out of arr
+//info: New "syntaxError" array out of arr
 const arrError = arr.map(elm => {
     if (typeof elm !== "number" && elm !== "string") 
-    throw "Not valid";
+    throw "syntaxError";
 })
 
