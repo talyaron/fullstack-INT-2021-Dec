@@ -4,7 +4,7 @@
 const arr: Array<any> = ['gili', 1, 'is', 2, 'awasome', 3, 'gils', 4, 'giltch'];
 
 // Ask for strings or numbers
-const answer: any = prompt('Please enter strings or numbers')
+const answer: any = prompt('Please enter either strings or numbers, please remmber that the answer is case sensitive, so be precise.')
 const num: string = "numbers"
 const stri: string = "strings"
 

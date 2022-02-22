@@ -2,7 +2,7 @@
 // Define array
 var arr = ['gili', 1, 'is', 2, 'awasome', 3, 'gils', 4, 'giltch'];
 // Ask for strings or numbers
-var answer = prompt('Please enter strings or numbers');
+var answer = prompt('Please enter either strings or numbers, please remmber that the answer is case sensitive, so be precise.');
 var num = "numbers";
 var stri = "strings";
 // Run and log function
