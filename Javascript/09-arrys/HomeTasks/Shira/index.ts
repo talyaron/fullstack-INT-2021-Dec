@@ -1,53 +1,37 @@
-// Exercise 1:
-const myArray:Array <any> = ['Shira','Hadar','Adi','Hila','Mika','Hadas','Noa']
-for(let i=0; i<myArray.length; i++){
-console.log(myArray[i]);
+const myArr: Array<any> = [1, 2, 3, 'Shira', 'Hello', '12121212', 5, 6, 7];
+const emptyArr:Array<any> = [];
 
 
-// Exercise 2:
-console.log(` Welcome ${myArray[i]}`)
+const answer: any = prompt(`Please enter which kind of array you want: numbers or string.`)
+const str: string = "string"
+const num: string = "numbers"
 
-}
+const userAnswer = newArray(answer)
+console.log(userAnswer)
 
 
-// Exercise 3:
-const numberArr:Array <any> = [1,2,35,50,6,80,4,3,8,11,2]
-for(let i=0; i<numberArr.length; i++){
-    if(numberArr[i]>5)
-    console.log(`The number : ${numberArr[i]} , is greater than 5`)
+function newArray(answer: string) {
+    try {
+        if (answer !== num && answer !== str)
+            throw new Error ('Not a correct command!! you need ask number or string ')
+    }
+    catch (err) {
+        console.log(err)
     }
 
 
-
-// Exercise 4:
-const typesArray:Array <any> = [2,'Shira','aa55@gmail.com',88,'Hadar',calcBigAge,200];
-for (let i=0; i<typesArray.length; i++) {
-    console.log(`The value type of ${typesArray[i]} is : ${typeof typesArray[i]}`);
-
-    if(typeof typesArray[i] == 'function'){
-       console.log(`The function result: ${typesArray[i](50,20)}`)
-    }
-   
+     if (answer === num) {
+    const numbersArr = myArr.map(elm => {
+        if (typeof elm === "number") return elm
+    }).filter(elm => typeof elm === 'number');
+    return numbersArr
 }
-
-// The function get 2 ages and return the big age.
-function calcBigAge(a:number,b:number){
-    if(a>b)
-    return a;
-    else return b;
+else if (answer === str) {
+    const stringsArr = myArr.map(elm => {
+        if (typeof elm === "string") return elm
+    }).filter(elm => typeof elm === 'string');
+    return stringsArr
 }
-
-
-// Exercise 5:
-const scoreAvarage:Array <number> = [100,85,90,95,80,100,75];
-const sameLength:number = scoreAvarage.length;
-let sum = 0;
-
-function avg(sum,sameLength){
-    for(let i=0; i<scoreAvarage.length; i++){
-        sum+= scoreAvarage[i]
-    }
-
-    return (sum/scoreAvarage.length)
+else 
+return emptyArr
 }
-console.log(avg(sum,scoreAvarage.length))

@@ -1,54 +1,32 @@
-// 1st assignment ----------------------------------------------------------------------------------------------------
-// Info: All variables inside "friends" array, will be printed in the console with a greeting.
-const friends: Array < string > = ["Tomer", "Anna", "Noa", "Daniel", "Maor", "Adi", "Alex", "Bina"];
-for (let i = 0; i < friends.length; i++) {
-    console.log(`Hello ${friends[i]}`)
-}
+
+// pt 1: -------------------------------------------------------------------------------------------------------
+//info: Define array with different types of variables.
+const arr: Array<any> = [88, "Wacom Cintiq", 8, 120, 144, "Photoshop", null, true];
+// back log ----------------------------------------------------------------------------------------------------
+// const userInput:any = prompt("Enter string or number below")
+// arr.push(`${userInput}`);
 
 
+// pt 2: -------------------------------------------------------------------------------------------------------
+//info: New "string" array out of arr
+const arrStr = arr.map(elm => {
+    if (typeof elm === "string") return elm
 
-// 2st assignment ----------------------------------------------------------------------------------------------------
-// Info: every number that's bigger than 5, will be printed in the console.
-const numbers = 10;
-const nums: Array < number > = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-for (var i = 0; i < numbers; i++) {
-    if (i > 5) {
-        console.log(`The number ${nums[i]} is bigger then 5`);
-    }
-}
+}).filter(elm => typeof elm === "string");
+console.log(arrStr)
 
+// pt 3: -------------------------------------------------------------------------------------------------------
+//info: New "numbers" array out of arr
+const arrNum = arr.map(elm => {
+    if (typeof elm === "number") return elm
+  
+}).filter(elm => typeof elm === "number");
+console.log(arrNum)
 
+// pt 4: -------------------------------------------------------------------------------------------------------
+//info: New "syntaxError" array out of arr
+const arrError = arr.map(elm => {
+    if (typeof elm !== "number" && elm !== "string") 
+    throw "syntaxError";
+})
 
-// 3st assignment ----------------------------------------------------------------------------------------------------
-
-// Info: The app identifies the type of each variable inside an array.
-// if the type of the variable is a "function" - then the app runs it's function,
-// else the app just identifies the type of the variable.
-
-function random(min: number, max: number) {
-    const num = Math.floor(Math.random() * (max - min + 1)) + min;
-    console.log(num);
-}
-
-const items: Array < any > = [random, "Tel aviv", 4, "Tomer 1", 1 + 1, true, 3.6, false, undefined, null];
-for (var i = 0; i < items.length; i++) {
-    if (typeof items[i] === "function") {
-        console.log(random(1, 9));
-    } else {
-        console.log(typeof items[i]);
-    }
-}
-
-
-
-// 4st assignment ----------------------------------------------------------------------------------------------------
-// Info: a function that calculates what's the average of all numbers inside an array
-
-const array: Array < number > = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-let total = 0;
-
-for (let i = 0; i < array.length; i++) {
-    total += array[i];
-}
-
-console.log(total / array.length);

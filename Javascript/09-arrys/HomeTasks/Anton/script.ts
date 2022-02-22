@@ -1,54 +1,85 @@
-/* first task */
 
-const my_besties:Array<string> = ['Johnny Knoxville', 'Elon Musk', 'Vladimir Putin', 'Fridrich'];
-
-for (var i = 0; i < my_besties.length; i++) {
-    console.log(`Welcome: ${my_besties[i]}`)
-}
-/* first task */
+/* Method One ===> For Loop */
+const arr:Array<any> = [5, 'Hello World',null, NaN, Math.pow, 18, "Hey",555,'mmm'];
 
 
-/* second task */
-const numbers = 10;
-const arr:Array<number> = []
-for (var i=0; i< numbers; i++) {
-     arr.push(i);
-     if (i > 5) {
-         console.log("The number is bigger then 5");
-     }
-}
-/* second task */
+//Function Start
+
+const filterArray = (usersArray:Array<any>, type:string) => {
+  //internal Function Variables//
+  let temp_arr = [];
 
 
-/* third task */
-function num (num1:number, num2:number) {
-    var sum= num1+num2;
-    return sum;
-}
+  //internal Function Variables//
 
-const arr2:Array<any> = ['Peter Pan', 3, 'Max Payne', 'Solidity', 5, num]
-for (var i=0; i<arr2.length; i++) {
-    if (typeof arr2[i] === 'function' ) {
-        console.log(num(7,2));
-    } else {
-        console.log(typeof arr2[i]);
+  try {
+
+    //checks if the passed to the function "filterArray"  parameters are valid //
+
+  if (typeof type !== "string" && typeof type !== "number") throw "This is not a number or a string"
+  
+  for (let i=0; i < usersArray.length; i++) {
+    if (typeof usersArray[i] == "number" && type == "number") {
+      
+    }  
+    if (typeof usersArray[i] == "string" && type == "string") {
+      console.log(usersArray[i]);
+      }
     }
-}
-/* third task */
-
-/* fourth task */
-const numbers2 = 10;
-const arr3:Array<number> = []
-for (var i=0; i < numbers2; i++) {
-     arr3.push(i);
+  } catch (err) {
+    console.error(err);
+    return undefined;
+  }
 }
 
-let sum2 = 0;
-function avg() {
-    for(let i=0; i<arr3.length; i++) {
-         sum2 = (sum2 + arr3[i]);
-        }
-        return sum2 / arr3.length; 
+//Function End
+
+
+
+
+
+
+
+
+console.log(filterArray(arr, "string"));
+console.log(filterArray(arr, "number"));
+console.log(filterArray(arr, Math.pow));
+
+/* Method One ===> For Loop */
+
+
+/* Method Two ===> .Map Function */
+
+const define2 = (list:Array<any>, value) => {
+  const new_list =  list.map(elm=> {
+    if (typeof elm === "number" && typeof value === "number") return elm 
+}).filter(elm => typeof elm === "number");
+return new_list;
 }
-console.log(avg());
-/* fourth task */
+console.log(define2(arr, "number"));
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
