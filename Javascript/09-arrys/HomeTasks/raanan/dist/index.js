@@ -6,7 +6,7 @@
 // Opening Array
 var values = ['Apple', 2, 'Orange', 3, 4, 'Banana', 7, 5];
 // String or Number Prompt 
-var inPut = prompt('Enter String or Number Here');
+var inPut = prompt('Enter valString or valNumber Here');
 var valNumber = "Number";
 var valString = "String";
 // Log function
