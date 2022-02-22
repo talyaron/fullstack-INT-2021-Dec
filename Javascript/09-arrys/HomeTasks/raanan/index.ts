@@ -5,38 +5,46 @@
 // strings״ היא מחזירה מערך רק עם המחרוזות. אם נותנים לה משתנה ״numbers״ היא מחזירה רק את ה-numbers.
 // אם לא נותנים לה numbers  או strings, היא מחזירה מערך ריק ומשאירה הודעת שגיאה ״לא קיבלתי פקודה מתאימה״.
 
+// Opening Array
 const values: Array<any> = ['Apple', 2, 'Orange', 3, 4, 'Banana',7,5]; 
-console.log(values);
 
-values.forEach((elm) =>{
+// String or Number Prompt 
+const inPut: any = prompt('Enter String or Number Here')
+const valNumber: string = "Number"
+const valString: string = "String"
+
+// Log function
+const arrAns = stringOrNumber(inPut)
+console.log(arrAns)
+
+// Function
+
+function stringOrNumber(answer: string): void | number[] | string[] {
+
   try{
 
-    if(typeof elm === "function") throw "Thought you could fool me? Error!";
+    if(answer !== valNumber && answer !== valString) 
+      throw SyntaxError('Thought you could fool me? Error!');
 
-  } catch (error){
-    console.error(error)
-    return "Try again";
+  } catch (e){
+    return console.log("Try again");
   }
-});
 
-const valString = values.map(elm => {
+  if(answer === valNumber) {
+    console.log('You Chose Numbers')
+  
+  const newValNumber = values.map(elm => {
+    if(typeof elm === 'number') return elm
+  }).filter(elm => typeof elm === 'number');
+  return newValNumber
+  }
 
-  if (typeof elm === 'string') return elm
+  else if(answer === valString) {
+    console.log('You Chose String')
 
-}).filter(elm => typeof elm === 'string');
-console.log(valString)
-
-const valNumber = values.map(elm => {
-
-  if(typeof elm === 'number') return elm
-
-}).filter(elm => typeof elm === 'number');
-console.log(valNumber)
-
-const unKnown = values.map(elm => {
-
-  if(typeof elm === 'function') return console.log('Nope!')
-
-}).filter(elm => typeof elm === 'function');
-console.log(unKnown)
-
+    const newValString = values.map(elm => {
+      if(typeof elm === 'string') return elm
+    }).filter(elm => typeof elm === 'string')
+    return newValString
+  }
+};
