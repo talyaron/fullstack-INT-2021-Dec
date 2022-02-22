@@ -16,24 +16,14 @@ for (var i = 0; i < newArray.length; i++) {
     }
 }
 //Mix array + is the typeof a function ? 
-var mixArray = ['54', 'Danushka', true, Math.PI, 109, '^', 'blah blah', null, 80, Math.random];
+var mixArray = ['54', 'Danushka', true, function () { }, 109, '^', 'blah blah', null, 80, Math.random];
 for (var i = 0; i < mixArray.length; i++) {
     mixArray.forEach(function (mixArray) {
         console.log("the typeof " + mixArray + " is " + typeof mixArray);
+        function whatNumber(a, b) {
+            if (a !== String && b !== string) {
+                return a + b;
+            }
+        }
     });
 }
-// The function receives two inputs and returns the bigger score
-//  var fun: number = mixArray
-//  function calcScore(a:number,b:number){
-//      if(a>b)
-//      return a;
-//      else return b;
-// //  }
-// if(typeof mixArray[i] == 'function'){
-//     console.log(`The function's calculation is: ${mixArray[i]}`)
-// //Array mean num calculation 
-// let randomArray= [109, 1003, 354, 1366, 25, 14, 90, 24, 73]
-// randomArray Math
-// function arrayMean (randomArray., randomArray.length)
-//     let arrayMean =  randomArray.concat/ randomArray.length
-// }
