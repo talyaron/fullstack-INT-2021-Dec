@@ -1,4 +1,5 @@
 // pt 1: -------------------------------------------------------------------------------------------------------
+//info: Define array with different types of variables.
 var arr = [88, "Wacom Cintiq", 8, 120, 144, "Photoshop", null, true];
 // back log ----------------------------------------------------------------------------------------------------
 // const userInput:any = prompt("Enter string or number below")
