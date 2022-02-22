@@ -9,7 +9,7 @@
 const values: Array<any> = ['Apple', 2, 'Orange', 3, 4, 'Banana',7,5]; 
 
 // String or Number Prompt 
-const inPut: any = prompt('Enter String or Number Here')
+const inPut: any = prompt('Enter valString or valNumber Here')
 const valNumber: string = "Number"
 const valString: string = "String"
 
