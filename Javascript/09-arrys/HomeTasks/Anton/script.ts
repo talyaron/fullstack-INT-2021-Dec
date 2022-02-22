@@ -29,7 +29,13 @@ console.log(define(arr, Math.pow));
 
 /* Method Two ===> .Map Function */
 
-
+const define2 = (list:Array<any>, value) => {
+  const new_list =  list.map(elm=> {
+    if (typeof elm === "number" && typeof value === "number") return elm 
+}).filter(elm => typeof elm === "number");
+return new_list;
+}
+console.log(define2(arr, "number"));
 
 
 

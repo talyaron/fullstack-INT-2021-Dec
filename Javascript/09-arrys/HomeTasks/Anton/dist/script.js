@@ -23,3 +23,11 @@ console.log(define(arr, "number"));
 console.log(define(arr, Math.pow));
 /* Method One ===> For Loop */
 /* Method Two ===> .Map Function */
+var define2 = function (list, value) {
+    var new_list = list.map(function (elm) {
+        if (typeof elm === "number" && typeof value === "number")
+            return elm;
+    }).filter(function (elm) { return typeof elm === "number"; });
+    return new_list;
+};
+console.log(define2(arr, "number"));
