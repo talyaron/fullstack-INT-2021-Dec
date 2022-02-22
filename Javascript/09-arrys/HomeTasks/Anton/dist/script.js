@@ -1,46 +1,33 @@
-/* first task */
-var my_besties = ['Johnny Knoxville', 'Elon Musk', 'Vladimir Putin', 'Fridrich'];
-for (var i = 0; i < my_besties.length; i++) {
-    console.log("Welcome: " + my_besties[i]);
-}
-/* first task */
-/* second task */
-var numbers = 10;
-var arr = [];
-for (var i = 0; i < numbers; i++) {
-    arr.push(i);
-    if (i > 5) {
-        console.log("The number is bigger then 5");
+/* Method One ===> For Loop */
+var arr = [5, 'Hello World', null, NaN, Math.pow, 18, "Hey"];
+var define = function (list, value) {
+    try {
+        if (typeof value !== "string" && typeof value !== "number")
+            throw "This is not a number or a string";
+        for (var i = 0; i < list.length; i++) {
+            if (typeof list[i] == "number" && value == "number") {
+                console.log(list[i]);
+            }
+            if (typeof list[i] == "string" && value == "string") {
+                console.log(list[i]);
+            }
+        }
     }
-}
-/* second task */
-/* third task */
-function num(num1, num2) {
-    var sum = num1 + num2;
-    return sum;
-}
-var arr2 = ['Peter Pan', 3, 'Max Payne', 'Solidity', 5, num];
-for (var i = 0; i < arr2.length; i++) {
-    if (typeof arr2[i] === 'function') {
-        console.log(num(7, 2));
+    catch (err) {
+        console.error(err);
+        return undefined;
     }
-    else {
-        console.log(typeof arr2[i]);
-    }
-}
-/* third task */
-/* fourth task */
-var numbers2 = 10;
-var arr3 = [];
-for (var i = 0; i < numbers2; i++) {
-    arr3.push(i);
-}
-var sum2 = 0;
-function avg() {
-    for (var i_1 = 0; i_1 < arr3.length; i_1++) {
-        sum2 = (sum2 + arr3[i_1]);
-    }
-    return sum2 / arr3.length;
-}
-console.log(avg());
-/* fourth task */ 
+};
+console.log(define(arr, "string"));
+console.log(define(arr, "number"));
+console.log(define(arr, Math.pow));
+/* Method One ===> For Loop */
+/* Method Two ===> .Map Function */
+var define2 = function (list, value) {
+    var new_list = list.map(function (elm) {
+        if (typeof elm === "number" && typeof value === "number")
+            return elm;
+    }).filter(function (elm) { return typeof elm === "number"; });
+    return new_list;
+};
+console.log(define2(arr, "number"));

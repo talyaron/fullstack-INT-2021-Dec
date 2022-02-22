@@ -1,54 +1,64 @@
-/* first task */
 
-const my_besties:Array<string> = ['Johnny Knoxville', 'Elon Musk', 'Vladimir Putin', 'Fridrich'];
+/* Method One ===> For Loop */
+const arr:Array<any> = [5, 'Hello World',null, NaN, Math.pow, 18, "Hey"];
 
-for (var i = 0; i < my_besties.length; i++) {
-    console.log(`Welcome: ${my_besties[i]}`)
-}
-/* first task */
-
-
-/* second task */
-const numbers = 10;
-const arr:Array<number> = []
-for (var i=0; i< numbers; i++) {
-     arr.push(i);
-     if (i > 5) {
-         console.log("The number is bigger then 5");
-     }
-}
-/* second task */
-
-
-/* third task */
-function num (num1:number, num2:number) {
-    var sum= num1+num2;
-    return sum;
-}
-
-const arr2:Array<any> = ['Peter Pan', 3, 'Max Payne', 'Solidity', 5, num]
-for (var i=0; i<arr2.length; i++) {
-    if (typeof arr2[i] === 'function' ) {
-        console.log(num(7,2));
-    } else {
-        console.log(typeof arr2[i]);
+const define = (list:Array<any>, value:any) => {
+  try {
+  if (typeof value !== "string" && typeof value !== "number") throw "This is not a number or a string"
+  
+  for (let i=0; i < list.length; i++) {
+    if (typeof list[i] == "number" && value == "number") {
+      console.log(list[i]);
+    }  
+    if (typeof list[i] == "string" && value == "string") {
+      console.log(list[i]);
+      }
     }
-}
-/* third task */
-
-/* fourth task */
-const numbers2 = 10;
-const arr3:Array<number> = []
-for (var i=0; i < numbers2; i++) {
-     arr3.push(i);
+  } catch (err) {
+    console.error(err);
+    return undefined;
+  }
 }
 
-let sum2 = 0;
-function avg() {
-    for(let i=0; i<arr3.length; i++) {
-         sum2 = (sum2 + arr3[i]);
-        }
-        return sum2 / arr3.length; 
+console.log(define(arr, "string"));
+console.log(define(arr, "number"));
+console.log(define(arr, Math.pow));
+
+/* Method One ===> For Loop */
+
+
+/* Method Two ===> .Map Function */
+
+const define2 = (list:Array<any>, value) => {
+  const new_list =  list.map(elm=> {
+    if (typeof elm === "number" && typeof value === "number") return elm 
+}).filter(elm => typeof elm === "number");
+return new_list;
 }
-console.log(avg());
-/* fourth task */
+console.log(define2(arr, "number"));
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

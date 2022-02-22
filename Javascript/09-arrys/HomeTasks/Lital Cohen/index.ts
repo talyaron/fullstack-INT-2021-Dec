@@ -1,75 +1,50 @@
+const last = (a: any, b: any): any => {
+    return a * b;
+}
 
-// Say Hello----//
-const nameFriends: Array<string> = ["Maya", "Saphir", "Levi", "Ran", "Meital", "Ron"];
-console.log(nameFriends)
 
-for (let i = 0; i < nameFriends.length; i++) {
-    console.log("Welcome " + nameFriends[i])
-    function sayWelcome(nameFriends: Array<any>[]) {
-        return `welcome +${nameFriends[i]}`
+const arrAllTypes: Array<any> = [last, 10, 40, 'this', 'is', 'a', 70, 30, 60, 15, 25, 'string'];
+console.log(arrAllTypes)
 
+
+arrAllTypes.forEach((elm) => {
+    try {
+
+        if (typeof elm === "function") throw "Error! function is not of type number or string";
+
+    } catch (error) {
+        console.error(error);
+        return 'sorry couldnt get that';
     }
-}
-// Bigger than Five----//
-const numbers: Array<number> = [1, 2, 8, 9, 4, 6];
+});
+const arrString = arrAllTypes.map(elm => {
+    if (typeof elm === 'string') return elm
 
-for (let i = 0; i < numbers.length; i++) {
-    // console.log(numbers[i])
 
-    if (numbers[i] > 5) {
-        console.log(`this is ${numbers[i]}  and it's bigger than 5`)
-    }
-}
-// Whats My Type----//
-const diff: Array<any> = ["all", 7, "my", 10, add];
+}).filter(elm => typeof elm === 'string');
 
-function add(a:number, b:number) {
-    return a+b;
-}
-for (let i = 0; i < diff.length; i++) {
-    console.log((typeof diff[i]) + (diff[i]))
+console.log(arrString)
 
-    if( typeof diff[i]== 'function'){
-    let d:Number=add(5, 6);
-     console.log(d)
-    }
-
-    // function getNumber(diff: Array<any>[]) {
-    //     return typeof (diff[i])
-    // }
-
-}
-
-// Estimate a Number----//
-const estimateNum: Array<Number> = [100, 90, 70, 50, 40];
-
-for (let i = 0; i < estimateNum.length; i++) {
-    console.log(estimateNum[i])
-
-function estimateAll(estimateNum:Array<Number>[]){
-    return [100, 90, 70, 50, 40].reduce((a, b) => a + b, 0);
+const arrNumber = arrAllTypes.map(elm => {
+    if (typeof elm === 'number') return elm
   
-}
-
-}
-let sum=estimateAll([]);
-let finalsum=sum/estimateNum.length;
-console.log(finalsum)
-
-// Reverse a Number----//
-
-function reverseNum(n){
-    let x=n+"";
-    return x.split("").reverse().join("");
-}
-console.log(Number(reverseNum(5678)))
+   
 
 
-// Test Data----//
-function isArray(input){
-    if (toString.call(input)==="[object Array]")
-    return true;
-    return false; 
-}
-console.log(isArray('Lital'))
-console.log(isArray([1, 3, 5, 7]))
+}).filter(elm => typeof elm === 'number');
+console.log(arrNumber)
+
+const unKnown = arrAllTypes.map(elm=>{
+
+  
+     if(typeof elm === 'function') return console.log('I do not have any command for that statement')
+
+
+} ).filter(elm => typeof elm === 'function');
+
+console.log(unKnown)
+
+
+
+
+
