@@ -24,8 +24,7 @@ function returnArray(arr, arrTypeReturn) {
 //*** Array Numbers  ***/
 var inputNewArr = [1, 2, 3, "gdfgdf", 4, 5, 6, "hjghj", 7, 8, "gfgfg"]; // will use for the testing
 var outputNewArr;
-console.log("Test:");
-console.log("--------------:");
+console.log("-------Tests-------:");
 console.log("test 1: numbers and string ==> to Numbers Only");
 console.log("input:");
 outputNewArr = returnArray(inputNewArr, "numbers");
@@ -43,5 +42,4 @@ console.log("input:");
 outputNewArr = returnArray(inputNewArr, "test error jkhjk");
 console.log("output:");
 console.log(outputNewArr);
-console.log("--------------:");
 //*************************************************** */
