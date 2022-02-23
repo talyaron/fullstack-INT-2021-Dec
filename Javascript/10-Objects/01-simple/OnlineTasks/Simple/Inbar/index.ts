@@ -22,6 +22,7 @@ function printmovie(pesonObj){
 
 const movie = printmovie(Movie1);
 console.log(movie)
+            
 
 //create 3 object of  movies
 //each should hold "title", "director", "yearOfPublication"
