@@ -49,6 +49,6 @@ function avg(sum,sameLength){
         sum+= scoreAverage[i]
     }
 return (`The averege is: ${sum/scoreAverage.length}`)
-    // return ( sum/scoreAverage.length )
+  
 }
 console.log(avg(sum,scoreAverage.length))
