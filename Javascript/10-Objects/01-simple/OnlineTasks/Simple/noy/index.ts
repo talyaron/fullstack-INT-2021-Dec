@@ -14,3 +14,10 @@ const movie3 = {
     year: '2006'
 };
 
+function print (movie){
+    return `Movie title ${movie.name} directed by ${movie.director} in ${movie.year}`;
+}
+
+console.log(print(movie1));
+console.log(print(movie2));
+console.log(print(movie3));
