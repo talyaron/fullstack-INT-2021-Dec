@@ -14,3 +14,12 @@ var movie3 = {
     director: "Chris Buck",
     yearOfPublication: "2013"
 };
+function movieInfo(movie) {
+    return "the movie \"" + movie.name + "\" was directed by " + movie.director + " at the year " + movie.yearOfPublication;
+}
+var info1 = movieInfo(movie1);
+var info2 = movieInfo(movie2);
+var info3 = movieInfo(movie3);
+console.log(info1);
+console.log(info2);
+console.log(info3);
