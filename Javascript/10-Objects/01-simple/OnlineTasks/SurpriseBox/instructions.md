@@ -4,7 +4,7 @@ each surprise should have the following properties
 - penalty: number
 
 create a function which gets the array.
-the function will chose a random surprise.
+the function will choose a random surprise.
 and the function will retrun the prize or the penalty in random order
 
 
@@ -12,3 +12,4 @@ and the function will retrun the prize or the penalty in random order
 {baloon / -5 NIS}
 {toy / -10 NIS}
 ]
+
