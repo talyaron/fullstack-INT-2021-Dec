@@ -16,12 +16,16 @@ const Movie3 = {
     yearOfPublication:"2022",
 }
 
-function printmovie(pesonObj){
-    return `Hi, the movie ${pesonObj.title} was directed by ${pesonObj.director} and released in ${pesonObj.yearOfPublication}`
+function printmovie(movieobj){
+    return `Hi, the movie ${movieobj.title} was directed by ${movieobj.director} and released in ${movieobj.yearOfPublication}`
 }
 
 const movie = printmovie(Movie1);
-console.log(movie)
+
+console.log(Movie1)
+console.log(Movie2)
+console.log(Movie3)
+            
 
 //create 3 object of  movies
 //each should hold "title", "director", "yearOfPublication"
