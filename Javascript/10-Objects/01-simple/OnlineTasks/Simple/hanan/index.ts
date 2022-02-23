@@ -1,21 +1,24 @@
 const thematrix = {
-    //key:value, (//property)
-    movieName:"The Matrix",
-    name:"lena and lily",
-    lastName:"Wachowskis",
+    nameOfmovie:"the matrix",
+    name:"lena and lily Wachowskis",
     bornState:"Chicago,Illinois",
 };
-
-const mrNobody = {
-    movieName:"Mr No-body",
-    name:"Jaco",
-    lastName:"Van Dormael",
+const RubenBrandtCollector = {
+ nameOfmovie:"ruben brandt, collector",
+ name:"Milorad Krstić",
+ bornState:"Hungarian",
+}
+const mrNobdy ={
+    nameOfmovie:"Mr. Nobody",
+    name:"Jaco Van Dormael",
     bornState:"Belgium",
+
 }
 
 
-function movie(movie){
-    return `${movie.movieName} was created by ${movie.name} ${movie.lastName}. was born in ${movie.bornState}`
+
+function movie(thematrix){
+    return `this movie was created by ${thematrix.nameOfmovie} ${thematrix.lastName}. was born in ${thematrix.bornState}`
 }
 
 console.log(movie(thematrix));
