@@ -1,2 +1,2 @@
-create 3 object of  movies
+create 3 objects of  movies
 each should hold "title", "director", "yearOfPublication"
