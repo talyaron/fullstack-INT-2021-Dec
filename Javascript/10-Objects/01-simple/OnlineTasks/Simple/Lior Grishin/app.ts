@@ -8,6 +8,8 @@ const myFriends = {
         age: 23,
         hobbie: 'Programing',
         description: function (){
+            console.log(this)
+            console.log('----')
             descFriend(this.name, this.age, this.hobbie)
         }
     },
@@ -37,9 +39,9 @@ const myFriends = {
     },
 }
 // `for...of` loop
-for (const [key, value] of Object.entries(myFriends)) {
+for (let key in myFriends) {
     console.log(key)
-    console.log(`${value.description()}`);
+    console.log(myFriends[key].description());
 }
 
 
