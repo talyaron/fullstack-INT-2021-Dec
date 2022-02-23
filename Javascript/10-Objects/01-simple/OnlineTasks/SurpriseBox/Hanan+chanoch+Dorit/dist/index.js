@@ -16,14 +16,14 @@ var prize4 = {
 };
 var prizes = [prize1, prize2, prize3, prize4];
 function getSurprise(prizes) {
-    var sur = Math.round(Math.random() * 3);
+    var sur = Math.round(Math.random() * prizes.length);
     //console.log(sur)
-    var rand = Math.round(Math.random() * 1);
+    var rand = Math.round(Math.random());
     if (rand === 0) {
-        return prizes[sur].prize;
+        return prizes[sur]['prize'];
     }
     else {
-        return prizes[sur].penalty;
+        return prizes[sur]['penalty'];
     }
 }
 console.log(getSurprise(prizes));

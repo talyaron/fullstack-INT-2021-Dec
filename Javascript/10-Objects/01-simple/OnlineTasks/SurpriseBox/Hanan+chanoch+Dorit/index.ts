@@ -30,14 +30,14 @@ const prize4:surprise = {
 let prizes:Array<surprise> = [prize1,prize2,prize3,prize4]
 
 function getSurprise(prizes:Array<surprise> ){
-    const sur = Math.round(Math.random()*3)
+    const sur = Math.round(Math.random()*prizes.length)
     //console.log(sur)
-    const rand=Math.round(Math.random()*1)
+    const rand=Math.round(Math.random())
     if (rand ===0){
-        return  prizes[sur].prize
+        return  prizes[sur]['prize']
     }
     else {
-        return  prizes[sur].penalty
+        return  prizes[sur]['penalty']
     }
     
 }
