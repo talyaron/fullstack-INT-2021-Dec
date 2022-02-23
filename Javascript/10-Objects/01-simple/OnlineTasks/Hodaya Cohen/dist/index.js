@@ -17,7 +17,7 @@ function theater(pesonObj) {
     return " The movie " + pesonObj.name + "Name of the director " + pesonObj.stagName + " You made a premiere " + pesonObj.releaseDate;
 }
 var movie1 = theater(movie1);
-console.log(movie1);
+console.log((movie1));
 var movie2 = theater(movie2);
 console.log(movie2);
 var movie3 = theater(movie3);
