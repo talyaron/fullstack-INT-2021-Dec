@@ -35,6 +35,6 @@ function avg(sum, sameLength) {
     for (var i = 0; i < scoreAverage.length; i++) {
         sum += scoreAverage[i];
     }
-    return ("The averege is: " + sum / scoreAverage.length);
+    return ("The average is: " + sum / scoreAverage.length);
 }
 console.log(avg(sum, scoreAverage.length));
