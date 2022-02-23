@@ -1,17 +1,17 @@
 var skateboard = {
-    name: 'skateboard',
+    prize: 'skateboard',
     penalty: 250
 };
 var computer = {
-    name: 'computer',
+    prize: 'computer',
     penalty: 5000
 };
 var iphone = {
-    name: 'iphone',
+    prize: 'iphone',
     penalty: 3500
 };
 var ipad = {
-    name: 'ipad',
+    prize: 'ipad',
     penalty: 2000
 };
 var prizes = [iphone, computer, ipad, skateboard];
@@ -40,10 +40,10 @@ function returnRandomPresent(arrayOfPresent) {
     // console.log(randNumber)
     // console.log(arrayOfPresent[randNumber])
     if (prizeWonORPenalty()) {
-        console.log("You won " + arrayOfPresent[randNumber].name + "!");
+        console.log("You won " + arrayOfPresent[randNumber].prize + "!");
     }
     else {
-        console.log("You could won " + arrayOfPresent[randNumber].name + ", but the chances was against you");
+        console.log("You could won " + arrayOfPresent[randNumber].prize + ", but the chances was against you");
         console.log("You're penalty is " + arrayOfPresent[randNumber].penalty + " NIS.");
     }
 }
