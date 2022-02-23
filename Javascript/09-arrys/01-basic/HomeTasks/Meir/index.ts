@@ -38,3 +38,13 @@ for (let i = 0; i < arrayTypes.length; i++) {
 }
 
 //צרו מערך של מספרים. צרו פונקציה שמקבלת את המערך ומחזירה מה ממוצע כל המספרים.
+
+const arrayOfNumbers: Array<any> =[21,34,12,18]
+
+let sum:number = 0;
+
+for (let i = 0; i < arrayOfNumbers.length; i++) {
+    sum += arrayOfNumbers[i];
+}
+
+console.log(sum / arrayOfNumbers.length);
