@@ -16,8 +16,8 @@ for(let i:number=0;i<b.length;i++){
 
 
 var c:Array<any> = ['abc',550,5.75,'$',add,false ]
-function add(a:number, b:number):number{
-    return a+b
+function add (a:number, b:number):number {
+    return a+b;
 }
 //debugger
 for(let i:number=0; i<c.length; i++){

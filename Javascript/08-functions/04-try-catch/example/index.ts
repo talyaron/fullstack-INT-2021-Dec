@@ -4,7 +4,7 @@ console.log(number);
 function biggerThanFive(number: number): boolean {
   try {
     //assertion
-    if (typeof number !== "number") throw "number is not of type number";
+    if (typeof number === "number") throw "number is not of type number";
     if (isNaN(number)) throw "number is NaN";
 
     if (number >= 5) {

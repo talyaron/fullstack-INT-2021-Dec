@@ -27,7 +27,7 @@ console.log(sortedArray);
 // else console.log('2 != "2"')
 
 //map build a new array from previous array
-const newArr = arr.map(elm=>{
+const newArr = arr.map(elm=> {
     if(typeof elm === 'number') return elm*100
     else return "This wasnt a number!";
 }).filter(elm=>typeof elm === 'number');

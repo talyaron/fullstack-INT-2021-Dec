@@ -29,4 +29,23 @@ var snacks = calculateSupply(37, 48.5);
 console.log("You will need " + snacks + "  to last you until the ripe old age of 120 years old");
 var snacks = calculateSupply(12, 18);
 console.log("You will need " + snacks + "  to last you until the ripe old age of 120 years old");
-//The Geometrizer
+//The Geometrize
+function calcCircumfrence(radius) {
+    return Math.round(Math.PI * 2 * radius);
+    return Math.round(Math.PI * Math.pow(radius, 2));
+}
+var circumference = calcCircumfrence(4);
+console.log("The circumference is " + circumference + " ");
+var areaCircumf = calcCircumfrence(2);
+console.log("The area is  " + areaCircumf + "");
+//Temperature Converter
+function celsiusToFahrenheit(celcius, fahrenheit) {
+    return fahrenheit = (celcius * 1.8) + 32;
+}
+var celcius = celsiusToFahrenheit(15);
+console.log(" 15\u00B0C is " + celcius + "\u00B0F ");
+function fahrenheitToCelsius(celcius, fahrenheit) {
+    return celcius = (fahrenheit * 0.55) - 32;
+}
+var fahrenheit = celsiusToFahrenheit(77);
+console.log(" 77\u00B0F is " + fahrenheit + "\u00B0C ");
