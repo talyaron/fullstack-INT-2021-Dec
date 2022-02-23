@@ -20,9 +20,8 @@ function Movies (moviesobj){
     return `${moviesobj.name} Directed by ${moviesobj.inmay} in the year ${moviesobj.year}`
 }
 
-const movie = Movies(thelionking);
-console.log(movie);
-const movie2 = Movies(sing);
-console.log(movie2);
-const movie3 = Movies(tomandgeri);
-console.log(movie3);
+console.log(Movies(thelionking)) ;
+
+console.log(Movies(sing)) ;
+
+console.log(Movies(tomandgeri)) ;
