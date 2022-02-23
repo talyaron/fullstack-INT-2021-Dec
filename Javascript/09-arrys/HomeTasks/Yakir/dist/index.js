@@ -1,13 +1,16 @@
 function returnArray(arr, arrTypeReturn) {
     console.log(arr); // for console check and debuging
+    // difine the filter from the user for type-of...
     var filterArrType;
     if (arrTypeReturn === "numbers") {
         filterArrType = "number";
     }
     else if (arrTypeReturn === "strings") {
-        filterArrType = "String";
+        filterArrType = "string";
     }
+    // filter the array base on the user select
     var ArrNew = arr.map(function (elm) { return elm; }).filter(function (elm) { return typeof elm === filterArrType; });
+    // check if the new array is with data or not
     if (ArrNew.length >= 1) {
         return ArrNew;
     }
@@ -19,19 +22,26 @@ function returnArray(arr, arrTypeReturn) {
 }
 // ****** Tester ****
 //*** Array Numbers  ***/
-var inputNewArr = [1, 2, 3, "gdfgdf", 4, 5, 6, 7, 8, "gfgfg"]; // will use for the testing
+var inputNewArr = [1, 2, 3, "gdfgdf", 4, 5, 6, "hjghj", 7, 8, "gfgfg"]; // will use for the testing
 var outputNewArr;
 console.log("Test:");
 console.log("--------------:");
 console.log("test 1: numbers and string ==> to Numbers Only");
+console.log("input:");
 outputNewArr = returnArray(inputNewArr, "numbers");
+console.log("output:");
 console.log(outputNewArr);
 console.log("--------------:");
 console.log("test 2: numbers and string ==> to Strings Only");
+console.log("input:");
 outputNewArr = returnArray(inputNewArr, "strings");
+console.log("output:");
 console.log(outputNewArr);
 console.log("--------------:");
 console.log("test 2: numbers and string ==> to Error Check");
+console.log("input:");
 outputNewArr = returnArray(inputNewArr, "test error jkhjk");
+console.log("output:");
 console.log(outputNewArr);
 console.log("--------------:");
+//*************************************************** */
