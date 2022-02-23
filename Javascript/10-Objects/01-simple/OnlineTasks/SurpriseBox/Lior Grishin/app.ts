@@ -1,25 +1,25 @@
 interface Present{
-    name:string
+    prize:string
     penalty:number
 }
 
 const skateboard:Present = {
-    name: 'skateboard',
+    prize: 'skateboard',
     penalty: 250,
 }
 
 const computer:Present = {
-    name: 'computer',
+    prize: 'computer',
     penalty: 5000,
 }
 
 const iphone:Present = {
-    name: 'iphone',
+    prize: 'iphone',
     penalty: 3500,
 }
 
 const ipad:Present = {
-    name: 'ipad',
+    prize: 'ipad',
     penalty: 2000,
 }
 
@@ -52,10 +52,10 @@ function returnRandomPresent(arrayOfPresent:Array<Present>){
     // console.log(randNumber)
     // console.log(arrayOfPresent[randNumber])
     if(prizeWonORPenalty()){
-        console.log(`You won ${arrayOfPresent[randNumber].name}!`)
+        console.log(`You won ${arrayOfPresent[randNumber].prize}!`)
     }
     else{
-        console.log(`You could won ${arrayOfPresent[randNumber].name}, but the chances was against you`)
+        console.log(`You could won ${arrayOfPresent[randNumber].prize}, but the chances was against you`)
         console.log(`You're penalty is ${arrayOfPresent[randNumber].penalty} NIS.`)
     }
 
