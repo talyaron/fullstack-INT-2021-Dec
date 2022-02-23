@@ -28,11 +28,12 @@ const movie2 ={
         }
 
 function moviespecs(moviespec){
-    return 'movie title' ${moviespec.name} 'by director' ${moviespec.director} 'from the year' ${moviespec.yearOfPublication}
+    return `movie title' ${moviespec.name} 'by director' ${moviespec.director} 'from the year' ${moviespec.yearOfPublication}`
 }
 
 const movie= moviespecs(movie1)
-const movie2= moviespecs(movie2)
-const movie3= moviespecs(movie3)
+const movie22= moviespecs(movie2)
+const movie33= moviespecs(movie3)
 
-console.log(movie, movie2, movie3)
+console.log(movie, movie22, movie33)
+
