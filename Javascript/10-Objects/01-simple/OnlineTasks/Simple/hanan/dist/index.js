@@ -1,10 +1,18 @@
 var thematrix = {
     //key:value, (//property)
+    movieName: "The Matrix",
     name: "lena and lily",
     lastName: "Wachowskis",
     bornState: "Chicago,Illinois"
 };
-function movie(thematrix) {
-    return "this movie was created by " + thematrix.name + " " + thematrix.lastName + ". was born in " + thematrix.bornState;
+var mrNobody = {
+    movieName: "Mr No-body",
+    name: "Jaco",
+    lastName: "Van Dormael",
+    bornState: "Belgium"
+};
+function movie(movie) {
+    return movie.movieName + " was created by " + movie.name + " " + movie.lastName + ". was born in " + movie.bornState;
 }
-console.log(thematrix);
+console.log(movie(thematrix));
+console.log(movie(mrNobody));
