@@ -27,13 +27,15 @@ function calcBigAge(a, b) {
         return b;
 }
 // Exercise 5:
-var scoreAvarage = [100, 85, 90, 95, 80, 100, 75];
-var sameLength = scoreAvarage.length;
+//the function get scores of tests and return the score average.
+var scoreAverage = [100, 85, 90, 95, 80, 100, 75];
+var sameLength = scoreAverage.length;
 var sum = 0;
 function avg(sum, sameLength) {
-    for (var i = 0; i < scoreAvarage.length; i++) {
-        sum += scoreAvarage[i];
+    for (var i = 0; i < scoreAverage.length; i++) {
+        sum += scoreAverage[i];
     }
-    return (sum / scoreAvarage.length);
+    return ("The averege is: " + sum / scoreAverage.length);
+    // return ( sum/scoreAverage.length )
 }
-console.log(avg(sum, scoreAvarage.length));
+console.log(avg(sum, scoreAverage.length));
