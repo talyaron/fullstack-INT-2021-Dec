@@ -1,6 +1,6 @@
 const movies ={
-    title:"wanderer land",
-    director: "cloei zao",
+    title:"Wanderer Land",
+    director: "Cloei zao",
     yearOfPublication: "2020",
 
 };
