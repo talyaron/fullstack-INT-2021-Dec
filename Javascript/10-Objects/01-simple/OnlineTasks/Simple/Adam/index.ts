@@ -24,11 +24,11 @@ function Movie(Movieintro){
     return ` ${Movieintro.MoviesName} ${Movieintro. Director} ${Movieintro. yearOfPublication}`
 }
 
-const movie1=(Queen)
+const movie1=Movie(Queen)
 console.log(movie1)
-const movie2=(Forrest)
+const movie2= Movie(Forrest)
 console.log(movie2)
-const movie3=(truman)
+const movie3= Movie(truman)
 console.log(movie3)
 
 

@@ -16,9 +16,9 @@ var movie3 = {
 function print(movie) {
     return "Movie title " + movie.name + " directed by " + movie.director + " in " + movie.year;
 }
-console.log(print(movie1));
-console.log(print(movie2));
-console.log(print(movie3));
+// console.log(print(movie1));
+// console.log(print(movie2));
+// console.log(print(movie3));
 var movie = [
     {
         name: '300',
@@ -36,7 +36,9 @@ var movie = [
         year: '2001'
     }
 ];
-for (var i = 0; i < movie.length; i++) {
-    var temp = movie[i];
-    console.log(print(temp));
-}
+// for (let i=0;i<movie.length;i++){
+//     console.log(print(movie[i]));
+// }
+movie.forEach(function (movie) {
+    console.log(print(movie));
+});
