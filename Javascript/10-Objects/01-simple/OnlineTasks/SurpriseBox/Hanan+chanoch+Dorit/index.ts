@@ -30,7 +30,7 @@ const prize4:surprise = {
 let prizes:Array<surprise> = [prize1,prize2,prize3,prize4]
 
 function getSurprise(prizes:Array<surprise> ){
-    const sur = Math.round(Math.random()*prizes.length)
+    const sur = Math.floor(Math.random()*prizes.length)
     //console.log(sur)
     const rand=Math.round(Math.random())
     if (rand ===0){
