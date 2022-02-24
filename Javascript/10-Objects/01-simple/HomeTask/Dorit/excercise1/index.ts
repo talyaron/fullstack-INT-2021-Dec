@@ -57,8 +57,8 @@ function findFriends(myFriend:Friend):Array<string>{
     } )   
     return arrayFr;
 }
-let noFriends:number = findFriends(doritGuy).length//number of friends = length of the array in return
-console.log(`you have ${noFriends} friends at ${findFriends(doritGuy)}`)
+let noFriends:number = findFriends(galit).length//number of friends = length of the array in return
+console.log(`you have ${noFriends} friends at ${findFriends(galit)}`)
 
 
 

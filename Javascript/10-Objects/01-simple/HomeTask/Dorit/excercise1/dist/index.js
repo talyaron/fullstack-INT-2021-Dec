@@ -44,5 +44,5 @@ function findFriends(myFriend) {
     });
     return arrayFr;
 }
-var noFriends = findFriends(doritGuy).length; //number of friends = length of the array in return
-console.log("you have " + noFriends + " friends at " + findFriends(doritGuy));
+var noFriends = findFriends(galit).length; //number of friends = length of the array in return
+console.log("you have " + noFriends + " friends at " + findFriends(galit));

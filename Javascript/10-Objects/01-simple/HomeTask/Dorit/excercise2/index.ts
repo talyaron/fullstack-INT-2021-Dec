@@ -5,24 +5,21 @@ class Friend {
       this.address = address;
       this.friends = friends
     }
-    printName(){
-      return this.firstName;
-    }
-    //printFriends() {
-      //let frArray = []
-      //this.friends.forEach(element => {
-      //  frArray.push(element["this.address"])
-      //  console.log(frArray)
-     // });
-      //return frArray;
-  }
+    printFriends(){
+      let array:Array<string> = []
+      this.friends.forEach(element => {
+       array.push(element.address) 
+      });
+      return array
       
+    }
+   
 }
 
 let sara = new Friend("Sara","Yogev","Tel Aviv",[doritGuy,adi])
 let adi = new Friend("Adi","Manor","Jerisalem",[doritGuy,sara]) 
 let doritGuy = new Friend("Dorit","Guy","Hod hasharon",[sara,adi])
-console.log(doritGuy)
+console.log(sara.printFriends())
 
-//let array = doritGuy.printFriends()
+
 
