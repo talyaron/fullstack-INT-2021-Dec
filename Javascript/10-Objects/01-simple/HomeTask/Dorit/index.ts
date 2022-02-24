@@ -38,8 +38,6 @@ const sara:Friend = {
     address:"Kfar Saba",
     friends:[adir, galit]
     }
-     
-
 
 const doritGuy:Friend = {
     firstName:"Dorit",
@@ -49,13 +47,15 @@ const doritGuy:Friend = {
     }
 
 
-
+//the function gets a Friend and returns the addresses of his friends as an array
 function findFriends(myFriend:Friend):Array<string>{
     let arrayFr:Array<string> = []
+    //the Friend we got as element has an array of friends and every friend in the array has an address
+    //we push to the array named arrayFr only the address of every friend
     myFriend["friends"].forEach(element=>{
         arrayFr.push(element["address"])
     } )   
     return arrayFr;
 }
-let noFriends:number = findFriends(doritGuy).length
+let noFriends:number = findFriends(doritGuy).length//number of friends = length of the array in return
 console.log(`you have ${noFriends} friends at ${findFriends(doritGuy)}`)
