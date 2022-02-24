@@ -59,3 +59,6 @@ function findFriends(myFriend:Friend):Array<string>{
 }
 let noFriends:number = findFriends(doritGuy).length//number of friends = length of the array in return
 console.log(`you have ${noFriends} friends at ${findFriends(doritGuy)}`)
+
+
+
