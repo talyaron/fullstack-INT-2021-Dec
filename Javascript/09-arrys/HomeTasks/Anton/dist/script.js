@@ -23,16 +23,24 @@ var filterArray = function (usersArray, type) {
     }
 };
 //Function End
+/* console.log(filterArray(arr, 4));
 console.log(filterArray(arr, 4));
-// console.log(filterArray(arr, 4));
-// console.log(filterArray(arr, Math.pow));
-/* Method One ===> For Loop */
-/* Method Two ===> .Map Function */
-/* const define2 = (list:Array<any>, value) => {
-  const new_list =  list.map(elm=> {
-    if (typeof elm === "number" && typeof value === "number") return elm
-}).filter(elm => typeof elm === "number");
-return new_list;
+console.log(filterArray(arr, Math.pow)); */
+function filterString(someArr, type) {
+    if (typeof type === "string") {
+        var newArrStr = someArr.map(function (elm) {
+            if (typeof elm === "string") {
+                return elm;
+            }
+        }).filter(function (elm) { return typeof elm === "number"; });
+        return newArrStr;
+    }
+    if (typeof type === "number") {
+        var newArrNum = someArr.map(function (elm) {
+            if (typeof elm === "number") {
+                return elm;
+            }
+        });
+    }
 }
-console.log(define2(arr, "number"));
- */
+console.log(filterString(arr, "string"));
