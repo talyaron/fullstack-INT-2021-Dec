@@ -4,7 +4,7 @@ class Friend {
       this.lastName = lastName;
       this.address = address;
       this.friends = friends
-    }
+   }
     printFriends(){
       let array:Array<string> = []
       this.friends.forEach(element => {
@@ -13,13 +13,15 @@ class Friend {
       return array
       
     }
-   
 }
 
-let sara = new Friend("Sara","Yogev","Tel Aviv",[doritGuy,adi])
-let adi = new Friend("Adi","Manor","Jerisalem",[doritGuy,sara]) 
-let doritGuy = new Friend("Dorit","Guy","Hod hasharon",[sara,adi])
-console.log(sara.printFriends())
+let sarit = new Friend("Sara","Yogev","Tel Aviv",[])
+let adi = new Friend("Adi","Manor","Jerisalem",[sarit]) 
+let dorit = new Friend("Dorit","Guy","Hod hasharon",[sarit,adi])
+let yaffa = new Friend("Yaffa", "gafu", "Ramat Hasharon",[sarit,adi,dorit])
+let juda = new Friend("Juda","Yaakobi","Herzlia",[sarit,adi,dorit,yaffa])
+sarit['friends'].push(adi,dorit)
+console.log(sarit.printFriends())
 
 
 
