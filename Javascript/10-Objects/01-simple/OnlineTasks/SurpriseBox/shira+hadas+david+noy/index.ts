@@ -44,6 +44,7 @@ function rand(surprise: Array<Surprise>):string {
     let randomSurprise: number = Math.floor(Math.random() * surprise.length);
     let randomPP: number = Math.ceil(Math.random() * 2);
     let temp = surprise[randomSurprise];
+    
     if (randomPP===1){
     return `You won a ${temp.prize}`;
     } else {
