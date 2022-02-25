@@ -2,15 +2,15 @@ function makeFriends() {
     try {
         var randomized_1 = 0;
         arrayOfPersons.forEach(function (element) {
-            randomized_1 = Math.floor(Math.random() * arrayOfPersons.length);
+            randomized_1 = Math.round(Math.random() * arrayOfPersons.length);
             //console.log(`randomize ${randomized}`)
             element.friends.pop;
             element['friends'].push(arrayOfPersons[randomized_1]);
-            randomized_1 = Math.floor(Math.random() * arrayOfPersons.length);
+            randomized_1 = Math.round(Math.random() * arrayOfPersons.length);
             //console.log(`randomize ${randomized}`)
             element.friends.pop;
             element['friends'].push(arrayOfPersons[randomized_1]);
-            randomized_1 = Math.floor(Math.random() * arrayOfPersons.length);
+            randomized_1 = Math.round(Math.random() * arrayOfPersons.length);
             //console.log(`randomize ${randomized}`)
             element.friends.pop;
             element['friends'].push(arrayOfPersons[randomized_1]);

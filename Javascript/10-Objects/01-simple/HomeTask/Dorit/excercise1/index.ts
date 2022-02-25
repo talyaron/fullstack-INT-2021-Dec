@@ -10,15 +10,15 @@ function makeFriends(){
         let randomized:number = 0
         
         arrayOfPersons.forEach(element=>{
-            randomized = Math.floor(Math.random()*arrayOfPersons.length)
+            randomized = Math.round(Math.random()*arrayOfPersons.length)
             //console.log(`randomize ${randomized}`)
             element.friends.pop
             element['friends'].push(arrayOfPersons[randomized])
-            randomized = Math.floor(Math.random()*arrayOfPersons.length)
+            randomized = Math.round(Math.random()*arrayOfPersons.length)
             //console.log(`randomize ${randomized}`)
             element.friends.pop
             element['friends'].push(arrayOfPersons[randomized])
-            randomized = Math.floor(Math.random()*arrayOfPersons.length)
+            randomized = Math.round(Math.random()*arrayOfPersons.length)
             //console.log(`randomize ${randomized}`)
             element.friends.pop
             element['friends'].push(arrayOfPersons[randomized])
