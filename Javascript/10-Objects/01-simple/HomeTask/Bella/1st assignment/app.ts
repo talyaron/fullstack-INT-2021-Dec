@@ -1,37 +1,54 @@
-// interface Person{
-//     name:string,
-//     lastName:string,
-//     address:string,
-// }
 
-// const hanuch:Person = {
-//     //key:value, (//property)
-//     name:"Hanuch",
-//     lastName:"Shachar",
-//     address:"Rechuvot",
-// };
+// אוביקטים
+// בנו אוביקט המתאר אתכם (שם, משפחה, מקום מגורים וכיוב׳)
+// בתוך האוביקט, בנו מערך של חברים (רמז 1). כל אוביקט של חבר, צריך להיות מאותו סוג שלכם. השתמשו ב-interface כדי להבטיח זאת.
+// בנו פונקציה שמקבלת אוביקט כזה, וכותבת ״you have X frinds and they live in address1, address2, address3 etc..
+// אתגר: בנו פונקציה שמייצרת אוביקט כזה. לאחר מכן, נסו לכתוב את אותו הדבר באמצעות class (דורש קריאה באינטרנט).
 
-// const dorit:Person = {
-//     name:"Dorit", //property
-//     lastName:"Guy",
-//     address:"Rishon",
-// }
+interface person {
+    name: string,
+    lastName: string,
+    age: number,
+    catLover: boolean,
+    hobbies: string
+}
 
-// const tal:Person = {name:"Tal",lastName:"Yaron", address:"Kfar-saba"}
+const me:person = {
+    name: "Bella",
+    lastName: "Brail",
+    age: 27,
+    catLover: true,
+    hobbies: "draw, listen to music, travel" 
+};
 
-// // console.log(hanuch.lastName);
-// // console.log(hanuch['lastName']);
+const Tomer:person = {
+    name: "Tomer",
+    lastName: "Ben Jonathan",
+    age: 32,
+    catLover: true,
+    hobbies: "train, travel" 
+};
 
-// function saySomePropery(arrayOfPeople:Array<Person>, key1:string, key2:string){
-//     arrayOfPeople.forEach(person=>{
-//     //    console.log(person)
-//         console.log(person[key1]);
-//         console.log(person[key2]);
-//     })
-// }
-// const ppl:Array<Person> = [hanuch,dorit,tal ];
-// console.log(ppl)
-// saySomePropery(ppl,"name","lastName");
+const Ofrit:person = {
+    name: "Ofrit",
+    lastName: "Assaf",
+    age: 27,
+    catLover: true,
+    hobbies: "read books, listen to music, drink wine" 
+};
 
+const Gur:person = {
+    name: "Gur",
+    lastName: "Yehuda",
+    age: 28,
+    catLover: false,
+    hobbies: "travel, listen to music, cook" 
+};
 
+const friends:Array<person> = [Tomer,Ofrit,Gur];
+console.log(friends)
+
+const myFriends = friends.map (elm=> {
+    return `${me} have ${friends.indexOf} frinds and they live in address1, address2, address3 etc`
+});
 
