@@ -42,12 +42,12 @@ console.log(filterArray(arr, Math.pow)); */
 
 
 function filterString(someArr, type) {
-  if (typeof type === "string") {
+  if ( typeof type === "string") {
     const newArrStr = someArr.map(elm => {
       if (typeof elm === "string") {
         return elm;
       } 
-    }).filter(elm => typeof elm === "number");
+    }).filter(elm => typeof elm === "string");
     return newArrStr;
   }
   if (typeof type === "number") {
@@ -55,7 +55,7 @@ function filterString(someArr, type) {
       if (typeof elm === "number") {
         return elm;
       }
-    })
+    }).filter(elm => typeof elm === "number")
   }
 }
 
