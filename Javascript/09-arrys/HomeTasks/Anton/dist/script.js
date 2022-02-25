@@ -32,7 +32,7 @@ function filterString(someArr, type) {
             if (typeof elm === "string") {
                 return elm;
             }
-        }).filter(function (elm) { return typeof elm === "number"; });
+        }).filter(function (elm) { return typeof elm === "string"; });
         return newArrStr;
     }
     if (typeof type === "number") {
@@ -40,7 +40,7 @@ function filterString(someArr, type) {
             if (typeof elm === "number") {
                 return elm;
             }
-        });
+        }).filter(function (elm) { return typeof elm === "number"; });
     }
 }
 console.log(filterString(arr, "string"));
