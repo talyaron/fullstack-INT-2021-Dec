@@ -10,17 +10,16 @@ function makeFriends(){
         let randomized:number = 0
         
         arrayOfPersons.forEach(element=>{
-            randomized = Math.round(Math.random()*arrayOfPersons.length)
-            //console.log(`randomize ${randomized}`)
-            element.friends.pop
+            randomized = Math.floor(Math.random()*arrayOfPersons.length)
+            //console.log(`befor pop ${element.friends[0]['firstName']}`)
+            element['friends'].pop()
+            console.log(element['friends'])
             element['friends'].push(arrayOfPersons[randomized])
-            randomized = Math.round(Math.random()*arrayOfPersons.length)
+            randomized = Math.floor(Math.random()*arrayOfPersons.length)
             //console.log(`randomize ${randomized}`)
-            element.friends.pop
             element['friends'].push(arrayOfPersons[randomized])
-            randomized = Math.round(Math.random()*arrayOfPersons.length)
+            randomized = Math.floor(Math.random()*arrayOfPersons.length)
             //console.log(`randomize ${randomized}`)
-            element.friends.pop
             element['friends'].push(arrayOfPersons[randomized])
         })
     return true
@@ -97,6 +96,6 @@ if (!success){
     //the function gets a Friend and returns the addresses of his friends as an array
 
     let noFriends:number = findFriends(galit).length//number of friends = length of the array in return
-    console.log(`you have ${noFriends} friends at ${findFriends(doritGuy)}`)
+    console.log(`you have ${noFriends} friends at ${findFriends(mordechai)}`)
 
 }

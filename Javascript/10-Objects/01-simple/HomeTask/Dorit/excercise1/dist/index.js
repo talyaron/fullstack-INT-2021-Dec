@@ -2,17 +2,16 @@ function makeFriends() {
     try {
         var randomized_1 = 0;
         arrayOfPersons.forEach(function (element) {
-            randomized_1 = Math.round(Math.random() * arrayOfPersons.length);
-            //console.log(`randomize ${randomized}`)
-            element.friends.pop;
+            randomized_1 = Math.floor(Math.random() * arrayOfPersons.length);
+            //console.log(`befor pop ${element.friends[0]['firstName']}`)
+            element['friends'].pop();
+            console.log(element['friends']);
             element['friends'].push(arrayOfPersons[randomized_1]);
-            randomized_1 = Math.round(Math.random() * arrayOfPersons.length);
+            randomized_1 = Math.floor(Math.random() * arrayOfPersons.length);
             //console.log(`randomize ${randomized}`)
-            element.friends.pop;
             element['friends'].push(arrayOfPersons[randomized_1]);
-            randomized_1 = Math.round(Math.random() * arrayOfPersons.length);
+            randomized_1 = Math.floor(Math.random() * arrayOfPersons.length);
             //console.log(`randomize ${randomized}`)
-            element.friends.pop;
             element['friends'].push(arrayOfPersons[randomized_1]);
         });
         return true;
@@ -77,5 +76,5 @@ else {
     console.log("everything ok");
     //the function gets a Friend and returns the addresses of his friends as an array
     var noFriends = findFriends(galit).length; //number of friends = length of the array in return
-    console.log("you have " + noFriends + " friends at " + findFriends(doritGuy));
+    console.log("you have " + noFriends + " friends at " + findFriends(mordechai));
 }
