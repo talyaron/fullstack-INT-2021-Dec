@@ -2,50 +2,54 @@ interface Friend  {
     firstName:string,
     lastName:string,
     address:string,
-    friends:Array<Friend>
+    friends:Array<Friend>,
+    
 }
 
 let adir:Friend = {
     firstName:"Mordechai",
     lastName:"Gilat",
     address:"Jerusalem",
-    friends:[sara, aviv]   
+    friends:[]   
 }
 
 const mordechai:Friend = {
     firstName:"Mordechai",
     lastName:"Gilat",
     address:"Givataim",
-    friends:[adir, galit]
+    friends:[]
 } 
 
 const aviv:Friend = {
     firstName:"Aviv",
     lastName:"Gordon",
     address:"Ramat Gan",
-    friends:[adir, galit]
+    friends:[]
     }
 const galit:Friend = {
     firstName:"Mordechai",
     lastName:"Gilat",
     address:"Tel Aviv",
-    friends:[sara, adir]
+    friends:[]
 }
 
 const sara:Friend = {
     firstName:"Sara",
     lastName:"Yogev",
     address:"Kfar Saba",
-    friends:[adir, galit]
+    friends:[]
     }
 
 const doritGuy:Friend = {
     firstName:"Dorit",
     lastName:"Guy",
     address:"Hod Hasharon",
-    friends:[sara, aviv, mordechai]
+    friends:[]
     }
 
+    function makeFriends(name:string,friends:Array<string>){
+
+    }
 
 //the function gets a Friend and returns the addresses of his friends as an array
 function findFriends(myFriend:Friend):Array<string>{

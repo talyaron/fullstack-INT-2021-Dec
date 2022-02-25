@@ -2,38 +2,40 @@ var adir = {
     firstName: "Mordechai",
     lastName: "Gilat",
     address: "Jerusalem",
-    friends: [sara, aviv]
+    friends: []
 };
 var mordechai = {
     firstName: "Mordechai",
     lastName: "Gilat",
     address: "Givataim",
-    friends: [adir, galit]
+    friends: []
 };
 var aviv = {
     firstName: "Aviv",
     lastName: "Gordon",
     address: "Ramat Gan",
-    friends: [adir, galit]
+    friends: []
 };
 var galit = {
     firstName: "Mordechai",
     lastName: "Gilat",
     address: "Tel Aviv",
-    friends: [sara, adir]
+    friends: []
 };
 var sara = {
     firstName: "Sara",
     lastName: "Yogev",
     address: "Kfar Saba",
-    friends: [adir, galit]
+    friends: []
 };
 var doritGuy = {
     firstName: "Dorit",
     lastName: "Guy",
     address: "Hod Hasharon",
-    friends: [sara, aviv, mordechai]
+    friends: []
 };
+function makeFriends(name, friends) {
+}
 //the function gets a Friend and returns the addresses of his friends as an array
 function findFriends(myFriend) {
     var arrayFr = [];
