@@ -50,3 +50,4 @@ function randomFriend(arr:Array<myFriends>):string{
 }
 
 console.log (randomFriend(friendsArr))
+
