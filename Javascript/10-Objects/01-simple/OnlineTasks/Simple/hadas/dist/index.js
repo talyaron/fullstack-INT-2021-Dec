@@ -16,9 +16,6 @@ var tomandgeri = {
 function Movies(moviesobj) {
     return moviesobj.name + " Directed by " + moviesobj.inmay + " in the year " + moviesobj.year;
 }
-var movie = Movies(thelionking);
-console.log(movie);
-var movie2 = Movies(sing);
-console.log(movie2);
-var movie3 = Movies(tomandgeri);
-console.log(movie3);
+console.log(Movies(thelionking));
+console.log(Movies(sing));
+console.log(Movies(tomandgeri));

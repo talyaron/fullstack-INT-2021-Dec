@@ -21,4 +21,5 @@ function movie(thematrix){
     return `this movie was created by ${thematrix.nameOfmovie} ${thematrix.lastName}. was born in ${thematrix.bornState}`
 }
 
-console.log(thematrix);
+console.log(movie(thematrix));
+console.log(movie(mrNobody));

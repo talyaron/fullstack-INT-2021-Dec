@@ -8,6 +8,8 @@ var myFriends = {
         age: 23,
         hobbie: 'Programing',
         description: function () {
+            console.log(this);
+            console.log('----');
             descFriend(this.name, this.age, this.hobbie);
         }
     },
@@ -37,8 +39,7 @@ var myFriends = {
     }
 };
 // `for...of` loop
-for (var _i = 0, _a = Object.entries(myFriends); _i < _a.length; _i++) {
-    var _b = _a[_i], key = _b[0], value = _b[1];
+for (var key in myFriends) {
     console.log(key);
-    console.log("" + value.description());
+    console.log(myFriends[key].description());
 }
