@@ -8,6 +8,7 @@ var myFriends = /** @class */ (function () {
     }
     myFriends.prototype.MyArr = function () {
         var arr = [];
+        var add = "";
         this.friends.forEach(function (elm) {
             arr.push(elm.address);
         });
@@ -22,4 +23,10 @@ var Rotem = new myFriends("Rotem", "Fishler", "Tel-Aviv", 23, [Shahar, Yam, Ofek
 var Kobe = new myFriends("Kobe", "Font", "Eilat", 24, [Shahar, Yam, Ofek, Rotem]);
 Shahar['friends'].push(Shahar, Yam, Ofek, Rotem, Kobe);
 console.log(Shahar.MyArr());
-// console.log (`You have ${} friends and they live in ${}`)
+var MyArr = [Shahar, Yam, Ofek, Rotem, Kobe]; //scope in action
+function print(arr) {
+    var add = "";
+    arr.forEach(function (elm) { return add += elm.address + ","; });
+    return ("You have " + myFriends.length + " friends and they live in " + add);
+}
+console.log(print(MyArr));
