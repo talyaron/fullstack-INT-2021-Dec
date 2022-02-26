@@ -14,7 +14,7 @@ var movie3 = {
     yearOfPublication: '2077'
 };
 function moviespecs(moviespec) {
-    return "movie title' " + moviespec.title + " 'by director' " + moviespec.director + " 'from the year' " + moviespec.yearOfPublication;
+    return "movie title " + moviespec.title + " by director " + moviespec.director + " from the year " + moviespec.yearOfPublication;
 }
 var movie = moviespecs(movie1);
 var movie22 = moviespecs(movie2);
