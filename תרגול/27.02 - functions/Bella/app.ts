@@ -4,7 +4,7 @@ let b:number = +prompt("Please enter another positive number");
 const dif = (a-b);
 
 
-function calculator(dif) {
+function calculator() {
     if (typeof`${a} && ${b}`=== "number") {
       return dif; 
     }  
