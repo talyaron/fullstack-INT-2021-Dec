@@ -1,29 +1,12 @@
-// interface Person{
-//     name:string,
-//     lastName:string,
-//     address:string,
-// }
-// const hanuch:Person = {
-//     //key:value, (//property)
-//     name:"Hanuch",
-//     lastName:"Shachar",
-//     address:"Rechuvot",
-// };
-// const dorit:Person = {
-//     name:"Dorit", //property
-//     lastName:"Guy",
-//     address:"Rishon",
-// }
-// const tal:Person = {name:"Tal",lastName:"Yaron", address:"Kfar-saba"}
-// // console.log(hanuch.lastName);
-// // console.log(hanuch['lastName']);
-// function saySomePropery(arrayOfPeople:Array<Person>, key1:string, key2:string){
-//     arrayOfPeople.forEach(person=>{
-//     //    console.log(person)
-//         console.log(person[key1]);
-//         console.log(person[key2]);
-//     })
-// }
-// const ppl:Array<Person> = [hanuch,dorit,tal ];
-// console.log(ppl)
-// saySomePropery(ppl,"name","lastName");
+var userInput = prompt("Please enter a number");
+if (userInput != null) {
+}
+var usernumber = prompt('enter number');
+var numbers = ['1', '2', '3'];
+if (usernumber == 'numbers') //If the user number matches one of preset numbers
+ {
+    alert('Match');
+}
+else {
+    alert('No match found.');
+}
