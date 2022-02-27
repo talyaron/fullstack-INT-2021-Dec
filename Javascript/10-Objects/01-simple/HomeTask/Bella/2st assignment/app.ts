@@ -1,14 +1,13 @@
-let userInput = prompt("Please enter a number");
 
-if (userInput != null) {
+let a:number = +prompt("Please enter a positive number");
+let b:number = +prompt("Please enter another positive number");
+const dif = (a-b);
 
+
+function calculator(dif) {
+    if (typeof`${a} && ${b}`=== "number") {
+      return dif; 
+    }  
 }
+console.log(dif);
 
-const usernumber = prompt('enter number');
-let numbers = ['1', '2', '3'];
-if (usernumber == 'numbers') //If the user number matches one of preset numbers
-{
-    alert('Match');
-} else {
-    alert('No match found.');
-}

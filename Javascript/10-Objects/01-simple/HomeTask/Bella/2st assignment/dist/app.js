@@ -1,12 +1,9 @@
-var userInput = prompt("Please enter a number");
-if (userInput != null) {
+var a = +prompt("Please enter a positive number");
+var b = +prompt("Please enter another positive number");
+var dif = (a - b);
+function calculator(dif) {
+    if (typeof (a + " && " + b) === "number") {
+        return dif;
+    }
 }
-var usernumber = prompt('enter number');
-var numbers = ['1', '2', '3'];
-if (usernumber == 'numbers') //If the user number matches one of preset numbers
- {
-    alert('Match');
-}
-else {
-    alert('No match found.');
-}
+console.log(dif);
