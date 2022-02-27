@@ -20,8 +20,8 @@
 // If the difference is smaller than both input values,
 // print to the console that those numbers are relatively close.
 //Something like this – num1 = 5, num2 = 9, diff = 4 => numbers are relatively close!
-var num1 = prompt("enter 1st number:"); //string
-var num2 = prompt("enter 1st number:"); //string
+var num1 = +prompt("enter 1st number:"); //string
+var num2 = +prompt("enter 1st number:"); //string
 //const num1= +prompt(`eneter blabla); //number
 typeof num1;
 if (typeof num1 == "number" && typeof num2 == "number") {
