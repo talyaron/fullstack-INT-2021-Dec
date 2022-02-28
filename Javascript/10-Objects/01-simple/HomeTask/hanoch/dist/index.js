@@ -4,21 +4,23 @@ var hanoch = {
     friends: ["eli", "moshe", "chaim"]
 };
 var eli = {
-    fname: "eli",
+    name: "eli",
     address: "charish"
 };
 var moshe = {
-    fname: "moshe",
+    name: "moshe",
     address: "jerusalem"
 };
 var chaim = {
-    fname: "chaim",
+    name: "chaim",
     address: "heifa"
 };
 function lOfriends(count, adreses, key3) {
+    var b = "";
     adreses.map(function (k) {
-        console.log("i have " + count + " friends and they leave in " + k[key3]);
+        b = b + " " + k[key3];
     });
+    console.log("i have " + count + " friends and they leave in " + b);
 }
 var c = hanoch.friends.length;
 console.log(c);

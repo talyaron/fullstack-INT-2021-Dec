@@ -10,32 +10,31 @@ const hanoch:list = {
     friends:["eli", "moshe", "chaim"]
 
 }
-interface lfriends {
-    fname:string,
-    address:string,
-}
-const eli:lfriends ={
-    fname:"eli",
+
+const eli:list ={
+    name:"eli",
     address:"charish",
 }
-const moshe:lfriends ={
-    fname:"moshe",
+const moshe:list ={
+    name:"moshe",
     address:"jerusalem",
 }
-const chaim:lfriends ={
-    fname:"chaim",
+const chaim:list ={
+    name:"chaim",
     address:"heifa",
 }
-function lOfriends(count:number, adreses:Array<lfriends>, key3:string ){
+
+function lOfriends(count:number, adreses:Array<list>, key3:string ){
+    let b:string = "" ;
     adreses.map(k=>{
-        
-        console.log (`i have ${count} friends and they leave in ${k[key3]}`)
+        b = b + " " + k[key3]
+       
     })
     
-    
+    console.log (`i have ${count} friends and they leave in ${b}`)
 }
 const c = hanoch.friends.length;
 console.log(c)
-const f:Array<lfriends> = [eli, moshe, chaim]
+const f:Array<list> = [eli, moshe, chaim]
 console.log(f)
 lOfriends(c,f,'address');
