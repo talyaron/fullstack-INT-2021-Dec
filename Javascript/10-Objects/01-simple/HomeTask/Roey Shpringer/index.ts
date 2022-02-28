@@ -28,8 +28,14 @@ let friendThree:friends = {
     age : 23
 }
 
+
 let friendsArray = [friendOne, friendTwo, friendThree];
 
-function friendsAdresses(array){
-    
+function friendsAdress(array:Array<friends>, name:string, adress:string){
+    let friendsAmount = array.length;
+    console.log(`you have ${friendsAmount} friends`)
+    array.forEach(object =>
+        console.log(`${object[name]} lives in ${object[adress]}`))
 }
+
+friendsAdress(friendsArray, 'firstName', 'adress')
