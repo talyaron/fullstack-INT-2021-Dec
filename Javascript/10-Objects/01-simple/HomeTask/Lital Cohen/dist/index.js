@@ -59,6 +59,6 @@ function createNewFriend(firstName, lastName, address, age, status) {
     var newFriend = new NewFriendPersonal(firstName, lastName, address, age, status);
     return newFriend;
 }
-console.log(NewFriendPersonal);
+// console.log(NewFriendPersonal)
 var myNewFriend = createNewFriend("Ron", "Levi", "Jerusalem", "24", []);
 console.log(myNewFriend);
