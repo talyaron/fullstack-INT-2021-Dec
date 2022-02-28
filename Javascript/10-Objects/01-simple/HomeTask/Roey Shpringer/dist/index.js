@@ -17,5 +17,11 @@ var friendThree = {
     age: 23
 };
 var friendsArray = [friendOne, friendTwo, friendThree];
-function friendsAdresses(array) {
+function friendsAdress(array, name, adress) {
+    var friendsAmount = array.length;
+    console.log("you have " + friendsAmount + " friends");
+    array.forEach(function (object) {
+        return console.log(object[name] + " lives in " + object[adress]);
+    });
 }
+friendsAdress(friendsArray, 'firstName', 'adress');
