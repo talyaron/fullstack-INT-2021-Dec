@@ -1,0 +1,5 @@
+const 
+
+
+= new type(argume
+    
