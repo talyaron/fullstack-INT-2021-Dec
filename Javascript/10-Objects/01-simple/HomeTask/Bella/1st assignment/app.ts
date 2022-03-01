@@ -26,7 +26,7 @@ const Tomer:person = {
     lastName: "Ben Jonathan",
     age: 32,
     catLover: true,
-    hobbies: "train, travel" 
+    hobbies: "sports, travel" 
 };
 
 const Ofrit:person = {
@@ -46,9 +46,9 @@ const Gur:person = {
 };
 
 const friends:Array<person> = [Tomer,Ofrit,Gur];
-console.log(friends)
+console.log(friends);
 
 const myFriends = friends.map (elm=> {
-    return `${me} have ${friends.indexOf} frinds and they live in address1, address2, address3 etc`
+    return `${me} have ${friends} frinds and they live in address1, address2, address3 etc`
 });
 
