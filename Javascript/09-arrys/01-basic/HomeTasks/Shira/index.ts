@@ -39,15 +39,16 @@ function calcBigAge(a:number,b:number){
 
 
 // Exercise 5:
-const scoreAvarage:Array <number> = [100,85,90,95,80,100,75];
-const sameLength:number = scoreAvarage.length;
+//the function get scores of tests and return the score average.
+const scoreAverage:Array <number> = [100,85,90,95,80,100,75];
+const sameLength:number = scoreAverage.length;
 let sum = 0;
 
 function avg(sum,sameLength){
-    for(let i=0; i<scoreAvarage.length; i++){
-        sum+= scoreAvarage[i]
+    for(let i=0; i<scoreAverage.length; i++){
+        sum+= scoreAverage[i]
     }
-
-    return (sum/scoreAvarage.length)
+return (`The average is: ${sum/scoreAverage.length}`)
+  
 }
-console.log(avg(sum,scoreAvarage.length))
+console.log(avg(sum,scoreAverage.length))
