@@ -70,8 +70,10 @@ function createPerson(name:string, lastName:string, age:number, address:string, 
     return newPerson
 }
 
-let shira_challenge = createPerson("Noy","Levi", 21.5, "Tel-Aviv", "Music",[hodaya, shilat])
-myFriends(shira_challenge)
+//Challenge:
+let newFriendObj = createPerson("Noy","Levi", 21.5, "Tel-Aviv", "Ski",[hodaya, shilat])
+myFriends(newFriendObj)
+
 
 // Create using class
 class PersonClass implements Person{
@@ -93,6 +95,6 @@ class PersonClass implements Person{
     
 }
 
-let personIns = new PersonClass("Noy","Levi", 21.5, "Tel-Aviv", "Music",[hodaya, shilat])
+let personIns = new PersonClass("Noy","Levi", 21.5, "Tel-Aviv", "Ski",[hodaya, shilat])
 personIns.friends.push(shira)
 myFriends(personIns)
