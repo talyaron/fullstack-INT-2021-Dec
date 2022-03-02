@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+}
+
+.topWrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-image: url(https://static3.cbrimages.com/wordpress/wp-content/uploads/2020/11/Danny-Phantom-3-Cropped.jpg?q=50&fit=crop&w=963&h=481&dpr=1.5);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 20px;
+}
+
+.topWrapper h1 {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+}
+
+@media all and (max-width: 400px) {
+  .topWrapper h1 {
+    font-size: 1.3rem;
+  }
+  p {
+    text-align: center;
+    font-size: .8rem;
+  }
+}
+
+.contentWrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=style.css.map */
