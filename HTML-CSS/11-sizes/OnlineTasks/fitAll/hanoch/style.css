@@ -1,0 +1,14 @@
+.wrapper {
+  width: 100vw;
+}
+
+.wrapper img {
+  display: block;
+  width: 100vw;
+  height: 20vh;
+}
+
+.wrapper h1, .wrapper h2, .wrapper p {
+  width: 30em;
+}
+/*# sourceMappingURL=style.css.map */
