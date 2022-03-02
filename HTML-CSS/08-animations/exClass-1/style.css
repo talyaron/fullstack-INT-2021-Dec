@@ -1,0 +1,28 @@
+.box {
+  width: 500px;
+  height: 500px;
+  fill: aqua;
+  -webkit-animation-name: mickeymouse;
+          animation-name: mickeymouse;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes mickeymouse {
+  from {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPOwGGmMpSuQH2DkLTkHdgIqRC2GwT3_ywAA&usqp=CAU);
+  }
+  to {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7G9CVao0PiC-ZIgRpXBGzecO-iQsU1mb2RQ&usqp=CAU);
+  }
+}
+
+@keyframes mickeymouse {
+  from {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPOwGGmMpSuQH2DkLTkHdgIqRC2GwT3_ywAA&usqp=CAU);
+  }
+  to {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7G9CVao0PiC-ZIgRpXBGzecO-iQsU1mb2RQ&usqp=CAU);
+  }
+}
+/*# sourceMappingURL=style.css.map */
