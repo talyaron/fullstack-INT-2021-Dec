@@ -17,31 +17,35 @@ const player ={
         return (sum/(this.gameScores.length));
     },
     threePointers: [3,5,7],
-    averageScorethreePointers: function():number {
+    twoPointers: [2,8,6],
+    freeThrows: [1,8,4],
+    averageScoreThrows: function() {
         let sum:number = 0;
+        let averages = {
+            threePointers: 0,
+            twoPointers: 0,
+            freeThrows: 0,
+        }
+        
         this.threePointers.forEach(element => {
             sum+=element;
-        });
-        return (sum/(this.threePointers.length));
-    },
-    twoPointers: [2,8,6],
-    averageScoretwoPointers: function():number {
-        let sum:number = 0;
+        })
+        averages.threePointers = sum/this.threePointers.length;
+
         this.twoPointers.forEach(element => {
             sum+=element;
-        });
-        return (sum/(this.twoPointers.length));
-    },
-    freeThrows: [1,8,4],
-    averageScorefreeThrows: function():number {
-        let sum:number = 0;
+        })
+        averages.twoPointers = sum/this.twoPointers.length;
+
         this.freeThrows.forEach(element => {
             sum+=element;
-        });
-        return (sum/(this.freeThrows.length));
+        })
+        averages.freeThrows = sum/this.freeThrows.length;
+        
+        return (averages);
     },
 
 };
-
-console.log(`player's aerage is ${player.averageScore()}, three-pointers average is ${player.averageScorethreePointers()}
- two-pointers average is ${player.averageScoretwoPointers()} free-throws average is ${player.averageScorefreeThrows()}`);
+console.log(player.averageScoreThrows())
+console.log(`player's aerage is ${player.averageScore()}, three-pointers average is ${player.averageScoreThrows().threePointers}
+two-pointers average is ${player.averageScoreThrows().twoPointers} free-throws average is ${player.averageScoreThrows().freeThrows}`);
