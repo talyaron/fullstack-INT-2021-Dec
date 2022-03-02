@@ -31,8 +31,6 @@ const playerTwo = {
     }
 }
 
-const threePointerAverage = playerTwo.threePointers
-
 console.log(playerTwo.averageCalculator(playerTwo.threePointers))
 console.log(playerTwo.averageCalculator(playerTwo.freeThrows))
 console.log(playerTwo.averageCalculator(playerTwo.towPointers))
