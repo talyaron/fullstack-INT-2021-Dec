@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+}
+
+body .wrapper {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .wrapper .top-nav-bar {
+  width: 100vw;
+  height: 5em;
+  background-color: rgba(0, 0, 0, 0.842);
+  z-index: 1;
+  color: whitesmoke;
+  position: fixed;
+  top: 0;
+}
+
+body .wrapper .top-nav-bar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .wrapper .top-nav-bar ul li {
+  padding: 1em;
+}
+
+body .wrapper .hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+
+body .wrapper .hero img {
+  width: 100vw;
+  height: 60vh;
+}
+
+body .wrapper .hero h1 {
+  position: absolute;
+  top: 3.2em;
+  color: white;
+  font-size: 3.5em;
+}
+
+body .wrapper .intro {
+  width: 80ch;
+  margin: auto;
+}
+
+body .wrapper .intro h2 {
+  font-size: 1.8em;
+  text-align: center;
+}
+
+body .wrapper .intro .bolded {
+  text-align: center;
+  font-weight: 500;
+}
+
+body .wrapper main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  width: 100vw;
+}
+
+body .wrapper main .card {
+  background-color: white;
+  width: 35ch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+  margin: 1em;
+  margin-bottom: 5em;
+  border-radius: 1em;
+}
+
+body .wrapper main .card .text {
+  padding: 1em;
+}
+
+body .wrapper main .card .text p {
+  color: #818181;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+body .wrapper main .card .text h3 {
+  margin-top: 0.3em;
+}
+
+body .wrapper main .card img {
+  border-radius: 1em 1em 0 0;
+}
+/*# sourceMappingURL=style.css.map */

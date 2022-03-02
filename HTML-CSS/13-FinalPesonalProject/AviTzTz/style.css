@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 9vh;
+  width: 100vw;
+  top: 0;
+  background-color: #fff;
+}
+
+nav .icon {
+  font-size: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 0.5rem;
+  color: #c8232b;
+}
+
+nav h3 {
+  background-color: black;
+  padding: 1rem;
+  border-radius: 100px;
+  font-weight: 700;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
+nav input {
+  border-radius: 100px;
+  padding: 1.1rem;
+  margin-right: 1rem;
+  margin-left: 0.4rem;
+  width: 80%;
+  border: none;
+  background-color: rgba(133, 133, 133, 0.205);
+}
+
+nav .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+  padding: 1;
+  width: 10%;
+  cursor: pointer;
+}
+
+nav .bellcon {
+  font-size: 1.5rem;
+  opacity: 0.6;
+}
+
+nav .messsagecon {
+  font-size: 1.5rem;
+  opacity: 0.6;
+}
+
+nav .profile {
+  background-color: #e73636;
+  width: 1.3rem;
+  padding: 0.3rem 0.7rem;
+  font-size: 1rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 100;
+  color: white;
+}
+
+nav .downarrow {
+  padding-right: 1.5rem;
+  padding: 0.3rem 2rem 0 0;
+  opacity: 0.6;
+  font-size: 0.9rem;
+}
+
+main section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 6rem;
+}
+
+main section .wrapper {
+  height: 100%;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main section .wrapper h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  color: white;
+  background-color: black;
+  margin: 0 1rem 0 auto;
+  cursor: pointer;
+}
+
+main section .wrapper .item1 {
+  background-image: url("https://i.pinimg.com/564x/35/65/ff/3565ff479685fb12a11dc98584cbcd66.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 14rem;
+  height: 20rem;
+  border-radius: 5%;
+}
+/*# sourceMappingURL=style.css.map */
