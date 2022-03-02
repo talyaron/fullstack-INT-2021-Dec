@@ -8,7 +8,7 @@ var player = {
     //get average function -----------------------------------------------------------------
     getAvg: function () {
         var total = this.numOfScores.reduce(function (a, b) { return a + b; }, 0);
-        return "The total score average is: " + total / this.numOfScores.length;
+        return player.name + "'s total score average is: " + total / this.numOfScores.length;
     }
 };
 console.log(player);

@@ -21,7 +21,7 @@ const player = {
   //get average function -----------------------------------------------------------------
   getAvg: function (): string {
     const total = this.numOfScores.reduce((a, b) => a + b, 0);
-    return `The total score average is: ${total / this.numOfScores.length}`;
+    return `${player.name}'s total score average is: ${total / this.numOfScores.length}`;
   }
 };
 
