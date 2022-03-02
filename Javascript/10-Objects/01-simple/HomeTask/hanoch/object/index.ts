@@ -1,40 +1,42 @@
 
-interface list {
+interface Person {
     name:string,
     address:string,
-    friends:Array<string>,
+    friends?:Array<string>,
 }
-const hanoch:list = {
+const hanoch:Person = {
     name:"hanoch",
     address:"jerusalem",
     friends:["eli", "moshe", "chaim"]
 
 }
 
-const eli:list ={
+const eli:Person ={
     name:"eli",
     address:"charish",
 }
-const moshe:list ={
+const moshe:Person ={
     name:"moshe",
     address:"jerusalem",
 }
-const chaim:list ={
+const chaim:Person ={
     name:"chaim",
     address:"heifa",
 }
 
-function lOfriends(count:number, adreses:Array<list>, key3:string ){
+function lOfriends(count:number, friends:Array<Person>, key3:string ){
     let b:string = "" ;
-    adreses.map(k=>{
+
+    friends.map(k=>{
         b = b + " " + k[key3]
        
     })
     
-    console.log (`i have ${count} friends and they leave in ${b}`)
+    return(`i have ${count} friends and they leave in ${b}`)
 }
-const c = hanoch.friends.length;
-console.log(c)
-const f:Array<list> = [eli, moshe, chaim]
-console.log(f)
-lOfriends(c,f,'address');
+const countOfFriends = hanoch.friends.length;
+console.log(countOfFriends)
+const arrayOfFriends:Array<Person> = [eli, moshe, chaim]
+console.log(arrayOfFriends)
+const friendsAddresses = lOfriends(countOfFriends,arrayOfFriends,'address');
+console.log(friendsAddresses)
