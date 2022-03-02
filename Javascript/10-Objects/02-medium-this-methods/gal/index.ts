@@ -10,9 +10,9 @@ const tzavi = {
     }, 
   };
   
-  let fev:string = tzavi.fevFood();
+  let fev= tzavi.fevFood();
   
-  let hate:string = tzavi.hatedFood();
+  let hate= tzavi.hatedFood();
   
   console.log(fev);
   console.log(hate);
