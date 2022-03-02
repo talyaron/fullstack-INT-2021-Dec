@@ -51,8 +51,9 @@ function createPerson(name, lastName, age, address, hobby, friends) {
     };
     return newPerson;
 }
-var shira_challenge = createPerson("Noy", "Levi", 21.5, "Tel-Aviv", "Music", [hodaya, shilat]);
-myFriends(shira_challenge);
+//Challenge:
+var newFriendObj = createPerson("Noy", "Levi", 21.5, "Tel-Aviv", "Ski", [hodaya, shilat]);
+myFriends(newFriendObj);
 // Create using class
 var PersonClass = /** @class */ (function () {
     function PersonClass(name, lastName, age, address, hobby, friends) {
@@ -65,6 +66,6 @@ var PersonClass = /** @class */ (function () {
     }
     return PersonClass;
 }());
-var personIns = new PersonClass("Noy", "Levi", 21.5, "Tel-Aviv", "Music", [hodaya, shilat]);
+var personIns = new PersonClass("Noy", "Levi", 21.5, "Tel-Aviv", "Ski", [hodaya, shilat]);
 personIns.friends.push(shira);
 myFriends(personIns);

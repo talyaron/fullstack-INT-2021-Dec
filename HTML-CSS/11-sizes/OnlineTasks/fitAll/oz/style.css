@@ -1,0 +1,25 @@
+.html {
+  font-size: 20px;
+}
+
+.body {
+  background-color: #0c73da;
+  margin: 0;
+}
+
+.wrapper {
+  margin: 0 auto;
+  background-color: slategrey;
+  width: 75vh;
+  height: 100vw;
+}
+
+img {
+  width: 100%;
+}
+
+h1, h2, p {
+  margin: 0;
+  padding: 5px 20px;
+}
+/*# sourceMappingURL=style.css.map */

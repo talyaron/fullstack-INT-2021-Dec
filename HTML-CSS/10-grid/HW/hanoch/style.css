@@ -1,0 +1,188 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+body h1 {
+  position: relative;
+  padding-left: 110px;
+  width: 350px;
+}
+
+body .top_nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  background-color: black;
+  color: antiquewhite;
+  height: 50px;
+  width: 100%;
+}
+
+body .top_nav img {
+  height: 50px;
+}
+
+body .top_nav .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-left: 1px solid gray;
+  height: 50px;
+}
+
+body .top_nav .nav_search {
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 195px;
+  height: 50px;
+}
+
+body .top_nav .nav .sign_in {
+  width: 90px;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+body .wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr;
+  gap: 10px;
+      grid-template-areas: "item1 item2 item3" "item1 item4 item5";
+  width: 85%;
+  height: 320px;
+  margin: auto;
+}
+
+body .wrapper .item {
+  background-image: url(https://ichef.bbci.co.uk/news/976/cpsprodpb/3E0D/production/_123058851_mediaitem123058850.jpg);
+  background-size: cover;
+  color: white;
+  padding-left: 20px;
+  vertical-align: text-bottom;
+}
+
+body .wrapper .item:hover {
+  -webkit-filter: grayscale(200%);
+          filter: grayscale(200%);
+}
+
+body .wrapper .item h3 {
+  border-left: 3px solid red;
+  padding: 5px;
+}
+
+body .wrapper .item1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: item1;
+  padding-top: 200px;
+}
+
+body .wrapper .item2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: item2;
+}
+
+body .wrapper .item3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: item3;
+}
+
+body .wrapper .item4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: item4;
+}
+
+body .wrapper .item5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: item5;
+}
+
+body .news1 {
+  position: relative;
+  left: 110px;
+  top: 200px;
+  font-size: 50px;
+  border-left: 4px solid red;
+  padding: 0px;
+  padding-left: 7px;
+  width: 350px;
+}
+
+body .news {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  width: 85%;
+  margin: auto;
+  padding: 50px;
+}
+
+body .news_items {
+  padding-top: 200px;
+}
+
+body .news_items img {
+  width: 300px;
+  height: 200px;
+}
+
+body .news_items h4 {
+  border-left: 4px solid red;
+  padding: 7px;
+}
+
+body .sport1 {
+  position: relative;
+  left: 110px;
+  top: 100px;
+  font-size: 50px;
+  border-left: 4px solid red;
+  padding: 0px;
+  padding-left: 7px;
+  width: 350px;
+}
+
+body .sport {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  width: 85%;
+  margin: auto;
+  padding: 50px;
+}
+
+body .sport_items {
+  padding-top: 70px;
+}
+
+body .sport_items img {
+  width: 300px;
+  height: 200px;
+}
+
+body .sport_items h4 {
+  border-left: 4px solid red;
+  padding: 7px;
+}
+/*# sourceMappingURL=style.css.map */

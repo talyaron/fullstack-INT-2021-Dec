@@ -6,45 +6,58 @@ interface IsPerson{
     firstName: string,
     lastName: string,
     address:string,
-    friends: Array<string>
+    friends: Array<object>
     
-};
+}
 
-const Ronny:IsPerson = {
+// function friendsAddress (myFriends)(let i=0; i<friends.length; i++ ) {console.log(`I have `)}     
+        
+//     };
+
+let myFriends = {
+
+    const Ronny:IsPerson = {
     firstName: 'Ronny',
     lastName: 'Abramovsky',
     address:'Habima 13 Tel Aviv',
-    friends: ['shabi', 'Jessica', 'Dror']
+    friends: [Jasmin, Michal, Danika],
+ 
    
 
-}
+},
 
 const Jasmin:IsPerson = {
     firstName: 'Jasmin',
     lastName: 'Secheny',
     address:'Peretz Hayut 14 Tel Aviv',
-    friends: ['shabi', 'Jessica', 'Dror']
+    friends: [Michal, Danika, Ronny]
   
 
-}
+},
 
 const Michal:IsPerson = {
     firstName: 'Michal', 
     lastName: 'sadan', 
     address: ' Bnei Batira 4 Jerusalem',
-    friends: ['shabi', 'Jessica', 'Dror']
+    friends: [Danika, Jasmin, Ronny]
    
 
-}
+},
 const Danika= { 
     firstName: 'Dana',
     lastName: 'Kemper',
     address:'Sidon 4 Tel Aviv',
     friends:  [Ronny, Jasmin, Michal]
 
+
 }
 
-
-const introduceFriend = (firstName:IsPerson) => {
-    console.log (`you have ${firstName.friends} friends who lives in ${firstName.address}`);
 }
+
+function nameFriends(Danika){ console.log(`I have ${this.friends.length} who live in ${this.friends.address}`); }
+
+// }
+
+// const introduceFriend = (frinendsOf c) => {
+//     console.log (`you have ${firstName.friends} friends who lives in ${firstName.address}`);
+// }

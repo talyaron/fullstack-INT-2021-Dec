@@ -1,0 +1,36 @@
+body {
+  margin: 0px;
+  width: 100vh;
+  height: 100vh;
+  background-color: burlywood;
+}
+
+.page {
+  margin: 0px;
+  height: 90vh;
+  width: 70%;
+  background-color: chartreuse;
+  font-size: 5px;
+}
+
+.page .header {
+  height: 70%;
+  width: 70%;
+  font-size: 2em;
+  background-color: coral;
+}
+
+.page .header .window {
+  height: 70%;
+  width: 70%;
+  background-color: cyan;
+  font-size: 1.2em;
+}
+
+.page .header .window .box {
+  height: 70%;
+  width: 70%;
+  background-color: darkgreen;
+  font-size: 0.8em;
+}
+/*# sourceMappingURL=style.css.map */

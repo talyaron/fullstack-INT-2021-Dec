@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav {
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  padding: 30px 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-shadow: 0px 0px 6px grey;
+          box-shadow: 0px 0px 6px grey;
+}
+
+.navIcon {
+  width: 60px;
+  padding: 10px;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+.navIcon:hover {
+  background-color: lightgray;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.navHomeDiv {
+  font-size: 25px;
+  padding: 16px;
+  border-radius: 50px;
+}
+
+.navHomeDiv:hover {
+  background-color: lightgray;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.navHomeDiv img {
+  width: 15px;
+}
+
+.searchIcon {
+  width: 60px;
+  padding: 10px;
+  margin-left: auto;
+  border-radius: 50px;
+}
+
+.searchIcon:hover {
+  background-color: lightgray;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+/*# sourceMappingURL=style.css.map */

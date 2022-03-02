@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.pageContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.topContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+      grid-template-areas: "welcomeItem1 welcomeItem1 welcomeItem2 welcomeItem3" "welcomeItem1 welcomeItem1 welcomeItem4 welcomeItem5";
+}
+
+.welcomeItem1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: welcomeItem1;
+}
+
+.welcomeItem2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: welcomeItem2;
+}
+
+.welcomeItem3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: welcomeItem3;
+}
+
+.welcomeItem4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: welcomeItem4;
+}
+
+.welcomeItem5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: welcomeItem5;
+}
+/*# sourceMappingURL=style.css.map */

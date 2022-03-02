@@ -1,0 +1,137 @@
+html body {
+  background-color: white;
+  margin: auto;
+  font-family: 'Open Sans';
+  width: 1248px;
+  text-decoration: none;
+}
+
+html body .nav-bar {
+  background-color: black;
+  margin: auto;
+  top: 0px;
+  width: 100%;
+  height: 40px;
+}
+
+html body .nav-bar .nav-link {
+  position: relative;
+  top: 5px;
+  margin: auto;
+  font-size: 20px;
+}
+
+html body .topWelcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+}
+
+html body .topWelcome h2 {
+  color: gray;
+}
+
+html body .artical {
+  margin: 5px;
+  width: 381.56px;
+}
+
+html body .artical img {
+  width: 381.56px;
+  height: 190px;
+}
+
+html body .artical h1,
+html body .artical h2, html body .artical:visited {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
+  color: black;
+  text-decoration: none;
+}
+
+html body .artical h2 {
+  font-size: 15px;
+}
+
+html body .artical--gridLeft {
+  width: 624px;
+}
+
+html body .artical--gridLeft img {
+  width: 624px;
+}
+
+html body .artical--gridLeft h1 {
+  color: white;
+  font-size: 24px;
+  position: relative;
+  top: -100px;
+}
+
+html body .artical--gridLeft h1:visited {
+  text-decoration: none;
+}
+
+html body .artical--gridLeft h2 {
+  font-size: 10px;
+}
+
+html body .artical--gridRight {
+  width: 285px;
+}
+
+html body .artical--gridRight img {
+  width: 285px;
+}
+
+html body .artical--gridRight h1 {
+  color: white;
+  font-size: 14px;
+  position: relative;
+  top: -85px;
+}
+
+html body .artical--gridRight h2 {
+  font-size: 5px;
+}
+
+html body .topNews {
+  width: 1248px;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+}
+
+html body .topNews__Right {
+  width: 624px;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 0px;
+}
+
+html body .subject {
+  margin-top: 1em;
+  border-left: #33318a;
+  border-left-style: solid;
+  font-size: 24px;
+  height: 28px;
+}
+
+html body .container {
+  margin-top: 1em;
+  background-color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+/*# sourceMappingURL=style.css.map */
