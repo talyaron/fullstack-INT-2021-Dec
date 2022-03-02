@@ -3,15 +3,11 @@
 // - an array that conatain number of scores per each game
 // - a method which return the average score per game (sum of all score / number of games)
 
-
-// - * create data for "three pointers", free-throws, tow-pointers, and the method showd 
-// return the average scores for each type (with object that contain the results)
-
-
-//player obj ----------------------------------------------------------------------------
+// 1st part:
+// player obj ----------------------------------------------------------------------------
 interface player {
   name: string,
-    numOfScores: Array < number > ,
+  numOfScores: Array < number > ,
 }
 
 const player = {
@@ -21,11 +17,17 @@ const player = {
   //get average function -----------------------------------------------------------------
   getAvg: function (): string {
     const total = this.numOfScores.reduce((a, b) => a + b, 0);
-    return `${player.name}'s total score average is: ${total / this.numOfScores.length}`;
+    return `${this.name}'s total score average is: ${total / this.numOfScores.length}`;
   }
 };
 
 console.log(player)
 let average = player.getAvg()
 console.log(average)
-//reffered to the obj itself
+//refered to the obj itself
+
+// 2st part:
+// Bonus - 
+// create data for "three pointers", free-throws, tow-pointers, and the method showd 
+// return the average scores for each type (with object that contain the results)
+

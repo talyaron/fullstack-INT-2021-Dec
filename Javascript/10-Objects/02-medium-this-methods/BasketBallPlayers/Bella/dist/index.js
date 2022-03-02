@@ -8,10 +8,14 @@ var player = {
     //get average function -----------------------------------------------------------------
     getAvg: function () {
         var total = this.numOfScores.reduce(function (a, b) { return a + b; }, 0);
-        return player.name + "'s total score average is: " + total / this.numOfScores.length;
+        return this.name + "'s total score average is: " + total / this.numOfScores.length;
     }
 };
 console.log(player);
 var average = player.getAvg();
 console.log(average);
-//reffered to the obj itself
+//refered to the obj itself
+// 2st part:
+// Bonus - 
+// create data for "three pointers", free-throws, tow-pointers, and the method showd 
+// return the average scores for each type (with object that contain the results)
