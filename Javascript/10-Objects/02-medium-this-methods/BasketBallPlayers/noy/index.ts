@@ -26,17 +26,17 @@ const player ={
             twoPointers: 0,
             freeThrows: 0,
         }
-        
+
         this.threePointers.forEach(element => {
             sum+=element;
         })
         averages.threePointers = sum/this.threePointers.length;
-
+        sum = 0;
         this.twoPointers.forEach(element => {
             sum+=element;
         })
         averages.twoPointers = sum/this.twoPointers.length;
-
+        sum=0;
         this.freeThrows.forEach(element => {
             sum+=element;
         })
