@@ -36,7 +36,7 @@ function friendsAddresses(friends) {
     return friends.map(function (friend) { return friend.address; });
 }
 function myFriends(person) {
-    console.log("You have " + person.friends.length + " friends , and they live in: " + friendsAddresses(person.friends));
+    console.log("I have " + person.friends.length + " friends , and they live in: " + friendsAddresses(person.friends));
 }
 myFriends(shira);
 // Challenge:
