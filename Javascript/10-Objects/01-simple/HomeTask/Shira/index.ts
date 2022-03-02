@@ -51,7 +51,7 @@ function friendsAddresses(friends:Person[]){
 }
 
 function myFriends(person: Person){
-    console.log(`You have ${person.friends.length} friends , and they live in: ${friendsAddresses(person.friends)}`)
+    console.log(`I have ${person.friends.length} friends , and they live in: ${friendsAddresses(person.friends)}`)
 }
 
 myFriends(shira)
