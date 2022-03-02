@@ -15,15 +15,16 @@ var chaim = {
     name: "chaim",
     address: "heifa"
 };
-function lOfriends(count, adreses, key3) {
+function lOfriends(count, friends, key3) {
     var b = "";
-    adreses.map(function (k) {
+    friends.map(function (k) {
         b = b + " " + k[key3];
     });
-    console.log("i have " + count + " friends and they leave in " + b);
+    return ("i have " + count + " friends and they leave in " + b);
 }
-var c = hanoch.friends.length;
-console.log(c);
-var f = [eli, moshe, chaim];
-console.log(f);
-lOfriends(c, f, 'address');
+var countOfFriends = hanoch.friends.length;
+console.log(countOfFriends);
+var arrayOfFriends = [eli, moshe, chaim];
+console.log(arrayOfFriends);
+var friendsAddresses = lOfriends(countOfFriends, arrayOfFriends, 'address');
+console.log(friendsAddresses);
