@@ -35,8 +35,8 @@ var friend4 = {
 };
 var friendsArr = [friend1, friend2, friend3, friend4];
 function myFriends(friendsArr) {
-    var add = "";
-    friendsArr.forEach(function (elm) { return add += " " + elm.address + " "; });
-    return ("You have " + friendsArr.length + " friends and they live at " + add);
+    var add = " ";
+    friendsArr.forEach(function (elm) { return add += elm.address + " "; });
+    return ("You have " + friendsArr.length + " friends and they live at" + add + " !!!");
 }
 console.log(myFriends(friendsArr));

@@ -54,10 +54,10 @@ const friend4:friends = {
 
 const friendsArr:Array<bestFriends> = [friend1,friend2,friend3,friend4]
 
-function myFriends(friendsArr:Array<bestFriends>):string{
-    let add:string=``;
-    friendsArr.forEach ((elm)=> add +=` ${elm.address} `);
-    return (`You have ${friendsArr.length} friends and they live at ${add}`);
+function myFriends(friendsArr:Array<myFriends>):string{
+    let add:string=` `;
+    friendsArr.forEach ((elm)=> add +=`${elm.address} `);
+    return (`You have ${friendsArr.length} friends and they live at${add} !!!`) ;
 }
 
 console.log (myFriends(friendsArr))
