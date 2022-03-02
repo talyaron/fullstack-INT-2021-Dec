@@ -657,4 +657,441 @@
     left: 82vw;
   }
 }
+
+/* Utilities */
+.body {
+  background-color: #e6e6e6;
+}
+
+.card {
+  margin: auto;
+  width: 370px;
+  height: 637px;
+  border-radius: 20px;
+  background-color: #212124;
+}
+
+.card .top_header {
+  width: 370px;
+  height: 90px;
+  background-color: #2c2c2e;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.card .top_header__row-a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.card .top_header__row-a__logo img {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  left: 10px;
+  top: 10px;
+}
+
+.card .top_header__row-a__logo h2 {
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  left: 30px;
+  top: 10px;
+  color: aliceblue;
+}
+
+.card .top_header__row-a__img-2 .location {
+  position: absolute;
+  height: 30px;
+  width: 40px;
+  left: 80px;
+  top: 20px;
+}
+
+.card .top_header__row-a__text-1 p {
+  position: absolute;
+  height: 40px;
+  width: 80px;
+  left: 110px;
+  top: 10px;
+  color: aliceblue;
+}
+
+.card .top_header__row-b {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card .top_header__row-b__name p {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  color: white;
+  font-size: 10px;
+  font-weight: bolder;
+}
+
+.card .top_header__row-b__instrument p {
+  position: absolute;
+  height: 40px;
+  width: 80px;
+  left: 95px;
+  top: 35px;
+  color: rgba(244, 246, 248, 0.582);
+}
+
+.card .top_header__row-b__editImg .edit {
+  position: absolute;
+  right: 140px;
+  top: 30px;
+  height: 30px;
+  width: 40px;
+}
+
+.card .top_header__row-b__button {
+  position: absolute;
+  right: 40px;
+  top: 35px;
+  height: 20px;
+  width: 40px;
+  background-color: rgba(0, 255, 255, 0.685);
+  border-radius: 25px;
+  padding: 0px 10px 0px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.card .top_header__row-b__button p {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  color: white;
+  font-size: 10px;
+  font-weight: bolder;
+  top: -4px;
+  left: 6px;
+}
+
+.card .main_body .wrapper_rows__empty {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 25px;
+  width: 370px;
+}
+
+.card .main_body .wrapper_rows__bright {
+  background-color: #383535;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 45px;
+  width: 370px;
+}
+
+.card .main_body .wrapper_rows__bright__profile {
+  display: inline-block;
+}
+
+.card .main_body .wrapper_rows__bright__profile img {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 10px;
+  left: 10px;
+}
+
+.card .main_body .wrapper_rows__bright__name {
+  display: inline-block;
+}
+
+.card .main_body .wrapper_rows__bright__name p {
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  font-weight: bolder;
+  left: 57px;
+  top: 0px;
+}
+
+.card .main_body .wrapper_rows__bright__km {
+  display: inline-block;
+}
+
+.card .main_body .wrapper_rows__bright__km p {
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  top: 0px;
+  right: 15px;
+}
+
+.card .main_body .wrapper_rows__dark {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 45px;
+  width: 370px;
+}
+
+.card .main_body .wrapper_rows__dark__profile {
+  display: inline-block;
+}
+
+.card .main_body .wrapper_rows__dark__profile img {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 10px;
+  left: 10px;
+}
+
+.card .main_body .wrapper_rows__dark__name {
+  display: inline-block;
+}
+
+.card .main_body .wrapper_rows__dark__name p {
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  font-weight: bolder;
+  left: 57px;
+  top: 0px;
+}
+
+.card .main_body .wrapper_rows__dark__km {
+  display: inline-block;
+}
+
+.card .main_body .wrapper_rows__dark__km p {
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  top: 0px;
+  right: 15px;
+}
+
+.card .main_body .wrapper_rows__bright__profile {
+  display: inline-block;
+}
+
+.card .main_body .wrapper_rows__bright__profile img {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 10px;
+  left: 10px;
+}
+
+.card .main_body .wrapper_rows__bright__name {
+  display: inline-block;
+  position: relative;
+}
+
+.card .main_body .wrapper_rows__bright__name .img {
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  font-weight: bolder;
+  left: 57px;
+  top: 0px;
+}
+
+.card .main_body .wrapper_rows__bright__km {
+  display: inline-block;
+}
+
+.card .main_body .wrapper_rows__bright__km p {
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  top: 0px;
+  right: 15px;
+}
+
+.card .main_body .wrapper_rows__bright__instrument-1 {
+  display: inline-block;
+}
+
+.card .main_body .wrapper_rows__bright__instrument-1 .music {
+  position: absolute;
+  right: 70px;
+  top: 7px;
+  height: 30px;
+  width: 25px;
+}
+
+.card .main_body .wrapper_rows__dark {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 45px;
+  width: 370px;
+}
+
+.card .main_body .wrapper_rows__dark__profile {
+  display: inline-block;
+}
+
+.card .main_body .wrapper_rows__dark__profile img {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 10px;
+  left: 10px;
+}
+
+.card .main_body .wrapper_rows__dark__name {
+  display: inline-block;
+}
+
+.card .main_body .wrapper_rows__dark__name p {
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  font-weight: bolder;
+  left: 57px;
+  top: 0px;
+}
+
+.card .main_body .wrapper_rows__dark__km {
+  display: inline-block;
+}
+
+.card .main_body .wrapper_rows__dark__km p {
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  top: 0px;
+  right: 15px;
+}
+
+.card .main_body .wrapper_rows__dark__sound-1 {
+  display: inline-block;
+}
+
+.card .main_body .wrapper_rows__dark__sound-1 .sound {
+  position: absolute;
+  right: 60px;
+  top: -5px;
+  height: 50px;
+  width: 40px;
+}
+
+.card .main_body .wrapper_rows__dark .triangle-down {
+  position: absolute;
+  right: 170px;
+  top: 40px;
+  width: 0%;
+  height: 0px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 25px solid;
+  -webkit-animation-name: changColor;
+          animation-name: changColor;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: inherit;
+          animation-direction: inherit;
+}
+
+@-webkit-keyframes changColor {
+  from {
+    color: solid #292525;
+    border-radius: 0%;
+  }
+  to {
+    color: #e61313;
+    border-radius: 100%;
+  }
+}
+
+@keyframes changColor {
+  from {
+    color: solid #292525;
+    border-radius: 0%;
+  }
+  to {
+    color: #e61313;
+    border-radius: 100%;
+  }
+}
+
+.card .main_body .map .map_triangle img {
+  width: 100%;
+  height: 270px;
+  margin-top: -23px;
+}
+
+.card .main_body .footer .wrappFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+}
+
+.card .main_body .footer .wrappFooter__backPage img {
+  width: 55px;
+  height: 55px;
+}
+
+.card .main_body .footer .wrappFooter__settings img {
+  width: 55px;
+  height: 55px;
+}
+
+.card .main_body .footer .wrappFooter__chat img {
+  width: 55px;
+  height: 55px;
+}
+
+.card .main_body .footer .wrappFooter__update img {
+  width: 55px;
+  height: 55px;
+}
+
+.card .main_body .footer .wrappFooter__home img {
+  width: 55px;
+  height: 55px;
+}
 /*# sourceMappingURL=style.css.map */
