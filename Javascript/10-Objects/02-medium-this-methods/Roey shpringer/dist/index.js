@@ -10,4 +10,13 @@ var tsavi = {
         return favouriteFoodStr;
     }
 };
+var tzaviTwo = {
+    name: 'tzaviTwo',
+    favouriteFoods: ['chocolate', 'seaweed', 'sushi'],
+    disLikedFood: ['strawberry', 'pasta', 'pizza'],
+    printDisLikedFood: function () {
+        return "my least favourite foods are " + this.disLikedFood;
+    }
+};
 console.log(tsavi.funcFavouriteFood());
+console.log(tzaviTwo.printDisLikedFood());
