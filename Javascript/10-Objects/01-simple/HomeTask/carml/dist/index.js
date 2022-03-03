@@ -76,4 +76,7 @@ var newage = window.prompt("and how old are they?");
 var newaddress = window.prompt("what?? that old??? where do they live???");
 var newfriends = [];
 var newestfriend = buildAFriend(newname, newlastname, newage, newaddress, newfriends);
+me.friends.push(newestfriend);
 console.log(newestfriend);
+var hereTheyAreAgain = whereAreMyFriends(me);
+console.log(hereTheyAreAgain);

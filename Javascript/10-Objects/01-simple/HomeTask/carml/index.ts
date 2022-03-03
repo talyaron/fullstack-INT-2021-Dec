@@ -91,4 +91,7 @@ const newaddress:string= window.prompt("what?? that old??? where do they live???
 const newfriends:Array<any>=[]
 
 const newestfriend =buildAFriend(newname, newlastname, newage, newaddress, newfriends)
+me.friends.push(newestfriend)
 console.log(newestfriend)
+const hereTheyAreAgain= whereAreMyFriends(me)
+console.log(hereTheyAreAgain)
