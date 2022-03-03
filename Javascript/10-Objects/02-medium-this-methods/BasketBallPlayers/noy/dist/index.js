@@ -28,10 +28,12 @@ var player = {
             sum += element;
         });
         averages.threePointers = sum / this.threePointers.length;
+        sum = 0;
         this.twoPointers.forEach(function (element) {
             sum += element;
         });
         averages.twoPointers = sum / this.twoPointers.length;
+        sum = 0;
         this.freeThrows.forEach(function (element) {
             sum += element;
         });
