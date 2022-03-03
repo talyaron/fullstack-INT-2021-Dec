@@ -1,42 +1,69 @@
-function tellfuture(JobTitle:string, GeoLocation:string, Partner:string, NumKids:number){
-    return (`I will be ${JobTitle} in ${GeoLocation} marrid to ${Partner} with ${NumKids} kids`)
+var try1 = prompt("give me number or string")
+console.log(try1)
+const babi:Array<any> = [5, 10, 'baba', 'hanoch']
+const a = babi.filter(e => typeof e === 'number')
+const b = babi.filter(e => typeof e === 'string')
+try{ if ( try1 === 'string' ){
+    console.log(b)
 }
-console.log(tellfuture("analyst", 'new york', 'stav',3))
-console.log(tellfuture("singer", 'jerusalem', 'nitzan',4))
-console.log(tellfuture("developer", 'rome', 'ruth',5))
-
-function dogage(Humanyears:number){
-    return Humanyears*7;
+else if( try1 === 'number'){
+    console.log(a)
 }
-console.log(dogage(3))
-console.log(dogage(5))
-console.log(dogage(7))
-
-function supply(age:number, amount:number){
-   const bamba:number= age * amount * 365;
-   return (`you will need ${bamba} bamba until ${age} age, ${amount} times for a day`)
+else{
+    console.log(`you enter a wrong content!!`)
 }
-console.log(supply(3,3))
-console.log(supply(84,2))
-console.log(supply(90,1))
-
-
-
-function circumference(radius:number){
-    const circle = radius * Math.PI
-    const area = Math.pow(radius,2) * Math.PI
-    return (`the size of the circle is ${circle} and the area is ${area}`)
+}catch(error){
+    console.error(error);
+    
 }
-console.log(circumference(5))
 
-function tmperature(celsius:number){
-    const convert1 = celsius / 5 * 9 + 32;
-    return (`the temp in ferenhiet is ${convert1}`) 
-}
-console.log(tmperature(10))
 
-function temperature1(ferenhiet:number){
-    const convert2 = ((ferenhiet - 32) * 5) /9;
-    return (`the temp in celsius is ${convert2}`)   
-}
-console.log(temperature1(50))
+
+
+
+
+
+
+
+// var x = 0;
+// const chek = babi.map(e => 
+// {
+//     if(typeof try1 === "string") 
+//     // x = babi.map(y => typeof y === 'string')
+//     return  e
+
+// })
+// console.log(chek)
+
+
+// const chek1 = babi.map(g =>{
+//     if(typeof +try1 === 'number') 
+//     return g
+
+// }).filter(g => typeof g === 'number')
+// console.log(chek1)
+
+// const chek2 = babi.map(f =>{
+//     if(typeof try1 === null) 
+//     return f
+
+// }).filter(f => typeof f === 'number')
+// console.log(chek2)
+
+
+
+
+
+
+
+
+
+
+
+// var number1 = babi.map(Number);
+// var string1 = babi.forEach(String);
+// if (typeof(try1) === 'number'){
+//     console.log (number1)
+// }
+
+

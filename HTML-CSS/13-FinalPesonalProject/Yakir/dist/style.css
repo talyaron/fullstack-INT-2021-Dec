@@ -72,7 +72,6 @@ html {
 .content__post img {
   border-radius: 8px;
   box-shadow: 2px 2px 2px 2px #aaaaaa;
-  margin: auto;
   width: 100%;
 }
 .content__post img:hover {
@@ -149,4 +148,11 @@ html {
   .postPage {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+.save__hoverPost {
+  display: none;
+}
+
+.content__post:hover .save__hoverPost {
+  display: block;
 }
