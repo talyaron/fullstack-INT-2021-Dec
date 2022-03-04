@@ -1,25 +1,32 @@
 body{
     margin:auto;
     h1 {
+        position: relative;
         color:blue;
         font-style: intalic;
-        margin: auto;
+        text-align: center;
+        font-size: 10ch;
+
     }
 
     h2{
         color:magenta;
-        margin:auto
+        font-size: 7ch;
+        text-align: center;
     }
     .someElement {
         p {
             color:black;
-            font-size:larger;
+            font-size:5ch;
             font-weight: 900;
-            margin:auto
+            text-align: center;
+
         }
         img {
-            width: 10rem;
-            margin: 1.5rem;
+            width: 15rem;
+            height: 20rem;
+            position: absolute;
+            margin-left:46%
         }
     }
 }
