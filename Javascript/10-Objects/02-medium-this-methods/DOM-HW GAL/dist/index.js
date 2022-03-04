@@ -7,4 +7,3 @@ firhead.style.background = 'red';
 //     }
 // }
 // copyPast (firhead)
-var firhead = userList.querySelectorAll(".highlighted");

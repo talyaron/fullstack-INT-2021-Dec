@@ -11,5 +11,5 @@ firhead.style.background='red'
 
 // copyPast (firhead)
 
-const firhead = userList.querySelectorAll(".highlighted");
+
 
