@@ -1,0 +1,22 @@
+body {
+  margin: auto;
+}
+body h1 {
+  color: blue;
+  font-style: intalic;
+  margin: auto;
+}
+body h2 {
+  color: magenta;
+  margin: auto;
+}
+body .someElement p {
+  color: black;
+  font-size: larger;
+  font-weight: 900;
+  margin: auto;
+}
+body .someElement img {
+  width: 10rem;
+  margin: 1.5rem;
+}
