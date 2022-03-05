@@ -1,7 +1,7 @@
 //object
 const tzavi = {
   name: "TzaviTsav",
-  preferdFoods: ["lettuce", "carrot", 'Cabedge'],
+  preferdFoods: ["lettuce", "carrot", "Cabedge"],
   HatedFoods:['tuna'],
 
 tasteInFood: function ():string {

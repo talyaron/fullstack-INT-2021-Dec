@@ -30,13 +30,13 @@ for (var i = 0; i < c.length; i++) {
     }
 }
 //task 5
-var d = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-var e = d.length;
+var gamesData = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var gamesNumber = gamesData.length;
 var sum = 0;
-function average(sum, e) {
-    for (var i = 0; i < d.length; i++) {
-        sum += d[i];
+function average(sum, gamesNumber) {
+    for (var i = 0; i < gamesData.length; i++) {
+        sum += gamesData[i];
     }
-    return (sum / e);
+    return (sum / gamesNumber);
 }
-console.log(average(sum, e));
+console.log(average(sum, gamesNumber));
