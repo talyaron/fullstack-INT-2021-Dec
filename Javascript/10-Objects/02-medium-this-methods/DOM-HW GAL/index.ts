@@ -1,15 +1,18 @@
 const firhead:HTMLElement=document.querySelector("#firhead"); //any is also fine (in place of `htmlElement`)
 const thehead:HTMLElement=document.querySelector("#thehead");
 
+// console.log(firhead)
+// console.log(thehead)
+
 firhead.style.background='red'
 
-// function copyPast (element:HTMLElement):void{ //Tal video's example
-//     for (let i=0; i<10; i++){
-//         element.innerText +=i;
-//     }
-// }
+function copyPast (element:HTMLElement){ 
+    firhead.innerText=thehead.innerText
+    return thehead
+}
 
-// copyPast (firhead)
+copyPast (firhead)
 
-const firhead = userList.querySelectorAll(".highlighted");
+// firhead.innerText="100 pls" //the change (turn the comment off)
 
+// thehead.innerText="turn the comment off"
