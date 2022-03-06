@@ -1,0 +1,13 @@
+body {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.box {
+  border-width: 2px;
+  border-style: solid;
+  border-color: magenta;
+  text-align: center;
+  align-items: center;
+}
