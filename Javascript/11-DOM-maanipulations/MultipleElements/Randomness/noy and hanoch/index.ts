@@ -1,5 +1,6 @@
 const boxes: any = document.querySelectorAll('.box')
 
+
 console.dir(boxes);
 function animation() {
     boxes.forEach(element => {
