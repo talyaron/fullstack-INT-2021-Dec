@@ -4,7 +4,10 @@ console.dir(boxs)
 boxs[0].style.postions = 'yellow';
 boxs.forEach(element=>{
     element.style.backgroundColor = getRandomColor()
-    element.style.top = getRandomPostion()
+    element.style.top = getRandomPostion() + "px"
+    element.style.left = getRandomPostion() + "px"
+    element.style.width = getRandomPostion()/5 + "px"
+    element.style.height = getRandomPostion()/5 + "px"
 
 })
 
@@ -24,9 +27,14 @@ function getRandomColor() {
 
 
 
-  function getRandomPostion() {
-    let postion;
-    postion = Math.random()*100
+  function getRandomPostion():number {
+    let postion:number;
+    postion = Math.random()*800
     return postion;
 }
+
+// refresh the page every 2 sec automatic
+window.setTimeout( function() {
+  window.location.reload();
+}, 2000);
 

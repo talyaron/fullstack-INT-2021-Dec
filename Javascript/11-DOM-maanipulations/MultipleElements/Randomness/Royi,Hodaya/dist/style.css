@@ -1,8 +1,6 @@
-.box{
-  position: relative;
+.box {
   width: 100px;
   height: 100px;
   background-color: teal;
   margin: 2px;
-
 }

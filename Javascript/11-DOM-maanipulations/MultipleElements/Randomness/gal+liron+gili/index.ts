@@ -4,9 +4,12 @@ console.dir(boxs)
 boxs[0].style.backgroundColor = 'yellow';
 boxs.forEach(element=>{
     element.style.backgroundColor = getRandomColor()
+    element.style.left = listRandomboxs() + "px"
+    element.style.width = listRandomboxs()/10 + "px"
+    element.style.height = listRandomboxs()/10 + "px"
 })
 
-function getRandomColor() {
+function getRandomColor(){
     const letters = '0123456789ABCDEF';
     let color = '#';
     for (let i = 0; i < 6; i++) {
@@ -16,18 +19,20 @@ function getRandomColor() {
     return color;
   }
 
-  boxs.forEach(element=>{
-    element.style.backgroundColor = getRandomColor()
-})
 
-function listRandomboxs(boxs){
-    let radomLength = Math.floor(Math.random()*boxs.length)
-    let randomArray = []
-    for(var i=0; i<=radomLength; i++ ){
-        var randomIndex = Math.floor(Math.random()*boxs.length)
-        randomArray.push(boxs[randomIndex])
-        boxs.splice(randomIndex, 1)
-    }
-    console.log(randomArray)
-}
+  function listRandomboxs(){
+    let getRandomPostion:number;
+    getRandomPostion= Math.random()*500
+    return getRandomPostion  
+  }
+
+  window.setTimeout( function() 
+  {
+    window.location.reload();
+  }, 1000);
+  
+  
+//create random postions on the screen
+//create random sizes
+//* change it every 1 second (and use transfer )css
 
