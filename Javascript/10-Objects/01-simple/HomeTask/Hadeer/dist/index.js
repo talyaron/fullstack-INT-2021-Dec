@@ -28,13 +28,13 @@ var Rana = {
     address: "Ako",
     job: "Enviroment"
 };
-function FriendsDetails(arrayOfFriends, adress, key2) {
-    arrayOfFriends.forEach(function (person) {
-        //    console.log(person)
-        console.log(person[adress]);
-        console.log(person[key2]);
-    });
+function FriendsDetails(arrayOfFriends) {
+    for (var i = 0; i++; i < arrayOfFriends.length) {
+        arrayOfFriends.forEach(function (PersonDetails) {
+            return "Your name " + MyDetails.name + " you have " + arrayOfFriends.length + " friends and they live in " + PersonDetails.address;
+        });
+    }
 }
-//const ppl:Array<Person> = [hanuch,dorit,tal ];
-//console.log(ppl)
-//saySomePropery(ppl,"name","lastName");
+var Myfriends = [Mustafa, Rula, Abeer, Rana];
+var FriendLocation = FriendsDetails(Myfriends);
+console.log(FriendLocation);
