@@ -4,6 +4,7 @@ console.dir(boxs)
 boxs[0].style.backgroundColor = 'yellow';
 boxs.forEach(element=>{
     element.style.backgroundColor = getRandomColor()
+    element.style.top = randomNumber()
 })
 
 
@@ -16,7 +17,13 @@ function getRandomColor() {
     for (var i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * 16)];
     }
-    console.log(color)
+    
     return color;
   }
-  
+
+  var divsize = ((Math.random()*100) + 50).toFixed();
+  var color = '#'+ Math.round(0xffffff * Math.random()).toString(16);
+function randomNumber(){ 
+
+    Math.floor(((Math.random() * 100)));
+}
