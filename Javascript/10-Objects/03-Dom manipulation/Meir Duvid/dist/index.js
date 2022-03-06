@@ -1,9 +1,9 @@
-var root1 = document.querySelector("#root1");
-var root2 = document.querySelector("#root2");
-console.dir(root1);
-console.dir(root2);
-function copy(copy) {
-    root1.innerText = root2.innerText;
-    return root1;
+var copy = document.querySelector("#copy");
+var paste = document.querySelector("#paste");
+console.dir(copy);
+console.dir(paste);
+function copyText(copy, paste) {
+    paste.innerText = copy.innerText;
+    return paste;
 }
-copy(root2);
+copyText(copy, paste);
