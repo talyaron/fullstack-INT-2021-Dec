@@ -1,0 +1,17 @@
+#root1{
+    color: crimson; 
+    background-color: aqua;
+    padding: 5%;
+    border-radius: 30px;
+
+    
+}
+
+
+
+
+#root2{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
