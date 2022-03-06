@@ -1,0 +1,19 @@
+
+body{
+    display: flex;
+
+}
+
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    color: white;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    transition: all 2000ms ease-in-out;
+}
