@@ -11,8 +11,7 @@ function getRandomPotion() {
 }
 box.forEach(function (element) {
     // element.style.top ="Math.floor( Math.random() * 100 )px"
-    element.style.left = "100px";
-    // Math.floor( Math.random() * 100)
+    element.style.left = Math.floor(Math.random() * 100);
 });
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
