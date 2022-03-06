@@ -41,7 +41,6 @@ const Gur:person = {
 };
 
 const friends = [Tomer,Ofrit,Gur];
-console.log(friends);
 
 function countFriends (friends){
     const allFriends = friends.length

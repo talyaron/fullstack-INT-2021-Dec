@@ -27,7 +27,6 @@ var Gur = {
     hobbies: "travel, listen to music, cook"
 };
 var friends = [Tomer, Ofrit, Gur];
-console.log(friends);
 function countFriends(friends) {
     var allFriends = friends.length;
     return allFriends;
