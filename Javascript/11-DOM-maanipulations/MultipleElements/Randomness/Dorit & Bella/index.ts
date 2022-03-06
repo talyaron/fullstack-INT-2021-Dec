@@ -4,8 +4,8 @@ console.dir(boxs)
 boxs[0].style.backgroundColor = 'yellow';
 boxs.forEach(element=>{
     element.style.backgroundColor = getRandomColor(),
-    element.style.clientHeight = getRandomPosition(element),
-    element.style.offsetWidth = getRandomPosition(element)
+    element.style.offsetHeight = getRandomPosition(),
+    element.style.offsetWidth = getRandomPosition()
 })
 
 
@@ -23,8 +23,8 @@ function getRandomColor() {
   }
 
   function getRandomPosition(element) {
-    let x = document.body.offsetHeight-element.clientHeight;
-    let y = document.body.offsetWidth-element.clientWidth;
+    let x = document.body.offsetHeight;
+    let y = document.body.offsetWidth;
     let randomX = Math.floor(Math.random()*x);
     let randomY = Math.floor(Math.random()*y);
     return [randomX,randomY];
