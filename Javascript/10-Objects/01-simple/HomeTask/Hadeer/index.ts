@@ -1,61 +1,62 @@
-interface PersonDetails{
-    name:string,
-    lastName:string,
-    address:string,
-    job:string,
+interface PersonDetails {
+    name: string,
+    lastName: string,
+    address: string,
+    job: string,
 }
 
 
-const MyDetails:PersonDetails = {
-    name:"Hadeer",
-    lastName:"HAbiballah",
-    address:"Tira",
-    job:"Tissue Typing LAB",
+const MyDetails: PersonDetails = {
+    name: "Hadeer",
+    lastName: "HAbiballah",
+    address: "Tira",
+    job: "Tissue Typing LAB",
 }
 
 
-const Mustafa:PersonDetails = {
-    name:"Mustafa",
-    lastName:"Qassim",
-    address:"Tira",
-    job:"Blood Bank Lab",
+const Mustafa: PersonDetails = {
+    name: "Mustafa",
+    lastName: "Qassim",
+    address: "Tira",
+    job: "Blood Bank Lab",
 }
 
-const Rula:PersonDetails = {
-    name:"Rula",
-    lastName:"Mansour",
-    address:"Haifa",
-    job:"Teacher",
-}
-
-
-const Abeer:PersonDetails = {
-    name:"Abeer",
-    lastName:"Dabbah",
-    address:"Maker",
-    job:"Nurse",
+const Rula: PersonDetails = {
+    name: "Rula",
+    lastName: "Mansour",
+    address: "Haifa",
+    job: "Teacher",
 }
 
 
-
-const Rana:PersonDetails = {
-    name:"Rana",
-    lastName:"Khamisey",
-    address:"Ako",
-    job:"Enviroment",
+const Abeer: PersonDetails = {
+    name: "Abeer",
+    lastName: "Dabbah",
+    address: "Maker",
+    job: "Nurse",
 }
 
-function FriendsDetails(arrayOfFriends:Array<PersonDetails>, adress:string, key2:string){
-    arrayOfFriends.forEach(person=>{
-    //    console.log(person)
-        console.log(person[adress]);
-        console.log(person[key2]);
-    })
-}
-//const ppl:Array<Person> = [hanuch,dorit,tal ];
-//console.log(ppl)
-//saySomePropery(ppl,"name","lastName");
 
+
+const Rana: PersonDetails = {
+    name: "Rana",
+    lastName: "Khamisey",
+    address: "Ako",
+    job: "Enviroment",
+}
+
+function FriendsDetails(arrayOfFriends: Array<PersonDetails>) {
+    for (let i = 0; i++; i < arrayOfFriends.length) {
+        arrayOfFriends.forEach(PersonDetails => {
+            return `Your name ${MyDetails.name} you have ${arrayOfFriends.length} friends and they live in ${PersonDetails.address}`;
+        })
+
+    }
+}
+
+const Myfriends: Array<PersonDetails> = [Mustafa, Rula, Abeer, Rana];
+const FriendLocation = FriendsDetails(Myfriends);
+console.log(FriendLocation);
 
 
 

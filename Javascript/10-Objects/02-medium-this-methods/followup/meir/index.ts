@@ -8,14 +8,7 @@ const tzavi = {
     hatedFoods:['tuna'],
      tzaviFoods:function(turtleFood:string){
 
-     let foods:string = " ";
-     for (let i = 0; i < turtleFood.length; i++) {
-        foods += `I like ${this.preferdFoods} and I hate ${this.hatedFoods}`
-
-         
-     }
-       return foods;
-    },
+     
     
 }
   
