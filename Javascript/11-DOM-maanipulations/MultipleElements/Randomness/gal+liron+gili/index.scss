@@ -1,6 +1,16 @@
-.box{
-    width: 100px;
+.box {
     height: 100px;
-    background-color: aqua;
+    width: 100px;
+    border: 2px solid black;
     position: relative;
+    top: 50vh;
+    left: 50vw;
+    // transform: rotate(10deg);
+    transition: all 1300ms;
+
+    &:hover {
+        transform: rotate(360deg) scale(1.8);
+
+    }
+
 }
