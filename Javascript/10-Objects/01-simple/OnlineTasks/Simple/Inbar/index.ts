@@ -17,14 +17,14 @@ const Movie3 = {
 }
 
 function printmovie(movieobj){
-    return `Hi, the movie ${movieobj.title} was directed by ${movieobj.director} and released in ${movieobj.yearOfPublication}`
+    return `The movie ${movieobj.title} was directed by ${movieobj.director} and released in ${movieobj.yearOfPublication}`
 }
 
 const movie = printmovie(Movie1);
 
-console.log(Movie1)
-console.log(Movie2)
-console.log(Movie3)
+console.log(printmovie(Movie1))
+console.log(printmovie(Movie2))
+console.log(printmovie(Movie3))
             
 
 //create 3 object of  movies

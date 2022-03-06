@@ -1,3 +1,3 @@
-function copytext(text1, text2) {
-    text2.innerText = text2.innerText;
+function copytext() {
+    document.querySelector('#text2').textContent = document.querySelector('#text1').textContent;
 }
