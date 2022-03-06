@@ -14,9 +14,6 @@ boxs.forEach(element=>{
     element.style.width = width + "px"
 })
 
-
-//create random postions on the screen
-//create random sizes
 //* change it every 1 second (and use transfer )css
 function getRandomColor() {
     const letters = '0123456789ABCDEF';
