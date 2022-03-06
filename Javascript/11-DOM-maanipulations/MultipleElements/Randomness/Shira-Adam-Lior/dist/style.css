@@ -1,0 +1,9 @@
+.box {
+  position: absolute;
+  margin: 1.2em;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  transition: all 1000ms ease-in-out;
+  border: 1px solid black;
+}
