@@ -1,0 +1,17 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  border: 2px solid black;
+  position: relative;
+  top: 50vh;
+  left: 50vw;
+  transition: all 1300ms;
+}
+.box:hover {
+  transform: rotate(360deg) scale(1.8);
+}
