@@ -22,6 +22,6 @@ function getRandomColor() {
     return color;
 }
 function getRandomSize() {
-    var randonsize = Math.floor(Math.random() * 1000);
+    var randonsize = Math.floor(Math.random() * 500);
     return randonsize + "px";
 }
