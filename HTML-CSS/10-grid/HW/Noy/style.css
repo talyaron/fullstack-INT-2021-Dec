@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 80vw;
+  height: 100vh;
+}
+
+.grid_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #4a4a4a;
+}
+
+.grid_header .date {
+  color: #8c8c8c;
+  font-weight: lighter;
+}
+
+span {
+  font-weight: 900;
+  position: relative;
+  top: -2px;
+}
+
+.red {
+  color: #cb2411;
+}
+
+.blue {
+  color: #436f88;
+}
+
+.black {
+  color: #000000;
+}
+
+.yellow {
+  color: #fbd939;
+}
+
+.top_grid {
+  display: -ms-grid;
+  display: grid;
+  gap: 5px;
+  -ms-grid-columns: 2fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr;
+  height: 400px;
+  color: #ffffff;
+}
+
+.top_grid .article {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: relative;
+  background-size: cover;
+  padding: 20px;
+}
+
+.top_grid .article:hover {
+  opacity: 0.9;
+}
+
+.top_grid .article .content {
+  position: absolute;
+  bottom: 0;
+}
+
+.top_grid .article1 {
+  grid-row: span 2;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#0000009d)), url("https://i.ibb.co/hXZPyz8/UKpolitics.jpg");
+  background-image: linear-gradient(transparent, #0000009d), url("https://i.ibb.co/hXZPyz8/UKpolitics.jpg");
+}
+
+.top_grid .article2 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#0000009d)), url("https://i.ibb.co/whRskyc/us.jpg");
+  background-image: linear-gradient(transparent, #0000009d), url("https://i.ibb.co/whRskyc/us.jpg");
+}
+
+.top_grid .article3 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#0000009d)), url("https://i.ibb.co/cDhZwY7/canada.jpg");
+  background-image: linear-gradient(transparent, #0000009d), url("https://i.ibb.co/cDhZwY7/canada.jpg");
+}
+
+.top_grid .article4 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#0000009d)), url("https://i.ibb.co/jhJBqCB/europe.jpg");
+  background-image: linear-gradient(transparent, #0000009d), url("https://i.ibb.co/jhJBqCB/europe.jpg");
+}
+
+.top_grid .article5 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#0000009d)), url("https://i.ibb.co/sP3DyR9/future.jpg");
+  background-image: linear-gradient(transparent, #0000009d), url("https://i.ibb.co/sP3DyR9/future.jpg");
+}
+
+.top_grid .tag,
+.top_grid .summery {
+  color: #d3d3d3;
+  font-weight: lighter;
+  font-size: 0.9rem;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  gap: 5px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.grid .article {
+  padding: 5px;
+}
+
+.grid .article .img {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-size: cover;
+  height: 250px;
+}
+
+.grid .article .img:hover {
+  opacity: 0.9;
+}
+
+.grid .article .img1 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#0000009d)), url("https://i.ibb.co/8zqsxQF/ukraine.jpg");
+  background-image: linear-gradient(transparent, #0000009d), url("https://i.ibb.co/8zqsxQF/ukraine.jpg");
+}
+
+.grid .article .img2 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#0000009d)), url("https://i.ibb.co/kxVh1tV/europe2.jpg");
+  background-image: linear-gradient(transparent, #0000009d), url("https://i.ibb.co/kxVh1tV/europe2.jpg");
+}
+
+.grid .article .img3 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#0000009d)), url("https://i.ibb.co/3BKgp1K/asia.jpg");
+  background-image: linear-gradient(transparent, #0000009d), url("https://i.ibb.co/3BKgp1K/asia.jpg");
+}
+
+.grid .article .img4 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#0000009d)), url("https://i.ibb.co/PNVvtFJ/sport1.jpg");
+  background-image: linear-gradient(transparent, #0000009d), url("https://i.ibb.co/PNVvtFJ/sport1.jpg");
+}
+
+.grid .article .img5 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#0000009d)), url("https://i.ibb.co/b7mVdt7/sport2.jpg");
+  background-image: linear-gradient(transparent, #0000009d), url("https://i.ibb.co/b7mVdt7/sport2.jpg");
+}
+
+.grid .article .img6 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#0000009d)), url("https://i.ibb.co/5G0w726/sport3.jpg");
+  background-image: linear-gradient(transparent, #0000009d), url("https://i.ibb.co/5G0w726/sport3.jpg");
+}
+
+.grid .summery {
+  color: #212121;
+  font-size: 1rem;
+}
+
+.grid .tag {
+  font-size: 0.9rem;
+  color: #767676;
+  font-weight: lighter;
+}
+/*# sourceMappingURL=style.css.map */

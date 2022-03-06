@@ -1,0 +1,26 @@
+html {
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: pink;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 75%;
+  height: 100vh;
+  background-color: #ad4d5d;
+}
+
+.wrapper img {
+  width: 100%;
+}
+
+.wrapper h1, .wrapper h2, .wrapper p {
+  margin: 0;
+  padding: 5px 15px;
+}
+/*# sourceMappingURL=style.css.map */

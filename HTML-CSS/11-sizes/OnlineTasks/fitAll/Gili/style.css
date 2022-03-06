@@ -1,0 +1,36 @@
+body, html {
+  margin: 0%;
+  background-color: aquamarine;
+}
+
+.wrapper {
+  max-width: 75ch;
+  height: 100vh;
+  background-color: aquamarine;
+  margin: auto;
+}
+
+.wrapper img {
+  width: 100%;
+}
+
+.wrapper h1 {
+  font-size: 3rem;
+  -webkit-margin-before: 0em;
+          margin-block-start: 0em;
+  -webkit-margin-after: 0em;
+          margin-block-end: 0em;
+}
+
+.wrapper h2 {
+  font-size: 2rem;
+  -webkit-margin-before: 0em;
+          margin-block-start: 0em;
+  -webkit-margin-after: 0em;
+          margin-block-end: 0em;
+}
+
+.wrapper p {
+  font-size: 1.2rem;
+}
+/*# sourceMappingURL=style.css.map */

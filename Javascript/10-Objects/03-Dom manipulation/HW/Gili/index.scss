@@ -1,0 +1,35 @@
+body {
+    margin: 0%
+}
+
+.wrapper {
+
+    width: 50vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 200px;
+
+    &__card-A {
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+        border: 1px solid black;
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+    &__card-B {
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+        border: 1px solid black;
+
+        h2 {
+            text-align: center;
+        }
+    }
+}

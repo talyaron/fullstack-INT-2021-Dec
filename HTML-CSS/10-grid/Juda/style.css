@@ -1,0 +1,153 @@
+body {
+  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+}
+
+h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+  color: #525252;
+  font-weight: normal;
+}
+
+.top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.welcome {
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #505050;
+}
+
+.date {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: normal;
+  color: #969696;
+}
+
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 65vw;
+  height: auto;
+  border: 1px solid black;
+  margin: auto;
+}
+
+.page .header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  -ms-grid-rows: 160px 160px;
+      grid-template-rows: 160px 160px;
+  gap: 5px 10px;
+}
+
+.page .header h1 {
+  font-size: 16px;
+  color: white;
+}
+
+.item1 {
+  background-image: url(https://www.si.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_620/MTg3MDI4NDQzMjAyODU2NDMx/rafael-nadal-.jpg);
+  background-size: cover;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 1 / 1 / span 2 / span 2;
+}
+
+.item2 {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRioV1xeAHdSpQArQbD1D10tDTYj1PohzRxLA&usqp=CAU);
+  background-size: cover;
+}
+
+.item3 {
+  background-image: url(https://wallpaperaccess.com/full/1871775.jpg);
+  background-size: cover;
+}
+
+.item4 {
+  background-image: url(https://www.gannett-cdn.com/media/2019/06/07/USATODAY/usatsports/america-fought-two-wars.jpg);
+  background-size: cover;
+}
+
+.item5 {
+  background-image: url(https://www.israeltravelcentre.com.au/wp-content/uploads/2019/10/Ashkelon-1024x576.jpg);
+  background-size: cover;
+}
+
+.news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.news .news1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.news .news2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.news .news3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.news img {
+  width: 300px;
+  height: 200px;
+}
+/*# sourceMappingURL=style.css.map */

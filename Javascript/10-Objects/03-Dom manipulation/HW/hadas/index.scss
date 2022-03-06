@@ -1,0 +1,28 @@
+.card{
+    width: 70vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+    &__A{
+        width: 150px;
+        height: 150px;
+        border: 1px solid black;
+        background-color: rgb(204, 19, 19);
+
+        &--copytext{
+            text-align: center;
+        }
+    }
+
+    &__B{
+        width: 150px;
+        height: 150px;
+        border: 1px solid black;
+        background-color: rgb(204, 19, 19);
+
+        &--pastetext{
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+body {
+  margin: auto;
+}
+body h1 {
+  position: relative;
+  color: blue;
+  font-style: intalic;
+  text-align: center;
+  font-size: 10ch;
+}
+body h2 {
+  color: magenta;
+  font-size: 7ch;
+  text-align: center;
+}
+body .someElement p {
+  color: black;
+  font-size: 5ch;
+  font-weight: 900;
+  text-align: center;
+}
+body .someElement img {
+  width: 15rem;
+  height: 20rem;
+  position: absolute;
+  margin-left: 46%;
+}
