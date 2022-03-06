@@ -9,6 +9,8 @@ boxs.forEach(element=>{
     element.style.height = listRandomboxs()/10 + "px"
 })
 
+setInterval (repeat, 3000)
+
 function getRandomColor(){
     const letters = '0123456789ABCDEF';
     let color = '#';
@@ -29,9 +31,13 @@ function getRandomColor(){
   window.setTimeout( function() 
   {
     window.location.reload();
-  }, 1000);
+  }, 3000);
   
   
+
+function repeat(repeat: any, arg1: number) {
+  throw new Error("Function not implemented.");
+}
 //create random postions on the screen
 //create random sizes
 //* change it every 1 second (and use transfer )css
