@@ -2,9 +2,15 @@ var boxs = document.querySelectorAll('.box');
 console.dir(boxs);
 boxs[0].style.backgroundColor = 'yellow';
 boxs.forEach(function (element) {
-    element.style.backgroundColor = getRandomColor(),
-        element.style.offsetHeight = getRandomPosition(),
-        element.style.offsetWidth = getRandomPosition();
+    element.style.backgroundColor = getRandomColor();
+    var x = getRandomPosition();
+    var y = getRandomPosition();
+    var height = getRandomPosition();
+    var width = getRandomPosition();
+    element.style.marginTop = y + "px";
+    element.style.marginLeft = x + "px";
+    element.style.height = height + "px";
+    element.style.width = width + "px";
 });
 //create random postions on the screen
 //create random sizes
@@ -18,10 +24,7 @@ function getRandomColor() {
     console.log(color);
     return color;
 }
-function getRandomPosition(element) {
-    var x = document.body.offsetHeight;
-    var y = document.body.offsetWidth;
-    var randomX = Math.floor(Math.random() * x);
-    var randomY = Math.floor(Math.random() * y);
-    return [randomX, randomY];
+function getRandomPosition() {
+    var x = Math.round(Math.random() * 200);
+    return x;
 }

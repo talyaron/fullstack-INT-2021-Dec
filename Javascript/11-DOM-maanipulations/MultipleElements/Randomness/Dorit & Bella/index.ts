@@ -3,9 +3,15 @@ const boxs:any = document.querySelectorAll('.box');
 console.dir(boxs)
 boxs[0].style.backgroundColor = 'yellow';
 boxs.forEach(element=>{
-    element.style.backgroundColor = getRandomColor(),
-    element.style.offsetHeight = getRandomPosition(),
-    element.style.offsetWidth = getRandomPosition()
+    element.style.backgroundColor = getRandomColor()
+    let x = getRandomPosition()
+    let y = getRandomPosition()
+    let height = getRandomPosition()
+    let width = getRandomPosition()
+    element.style.marginTop = y + "px"
+    element.style.marginLeft = x + "px"
+    element.style.height = height + "px"
+    element.style.width = width + "px"
 })
 
 
@@ -22,11 +28,12 @@ function getRandomColor() {
     return color;
   }
 
-  function getRandomPosition(element) {
-    let x = document.body.offsetHeight;
-    let y = document.body.offsetWidth;
-    let randomX = Math.floor(Math.random()*x);
-    let randomY = Math.floor(Math.random()*y);
-    return [randomX,randomY];
+  function getRandomPosition() {
+    let x = Math.round(Math.random()*200)
+    return x;
   }
+  
+
+
+
   
