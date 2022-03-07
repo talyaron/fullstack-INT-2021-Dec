@@ -1,15 +1,19 @@
-const Populationsample:Array<any>= [10,20,30,40,50]
+const Populationsample:Array<any>= [468809, 252164, 213118, 196691, 169696, 125753, 61244, 41801, 28261]
+const Bars:any= document.querySelectorAll[".bars"]
+const barswrapper:HTMLElement= document.querySelectorAll[".barswrapper"]
+console.dir(Populationsample)
 
-Populationsample.forEach(element => {
-    let addedDiv = document.createElement("Bars");
-    addedDiv.classList.add ("bars")
+for (let i=0; i<Populationsample.length;i++){
+   
+}
 
-    addedDiv.style.height = (element*2)+"px" 
-    let text = document.createTextNode(`${element}`);
-    addedDiv.appendChild(text);
-
-    let bars = document.getElementById("bars");
-    bars.appendChild(addedDiv);
-});
-
-
+// Population Sample Key:
+// Tlv: 468,809
+// Petah bli tiqva: 252,164
+// Bnei-brek: 213,118
+// Holon: 196,691
+// Ramat-gan: 169,696
+// Bat yam: 125,753
+// Givatiym: 61,244
+// Qiryat-ono: 41,801
+// Givat-shmuel: 28,261

@@ -1,5 +1,6 @@
 body {
   margin: 0%;
+  background-color: #b3afaf;
 }
 
 header {
@@ -15,4 +16,15 @@ header h1, header span {
   text-align: center;
   margin: 0%;
   background-color: #67a146;
+}
+
+.key {
+  font-weight: bolder;
+  margin-left: 10px;
+}
+
+.bars {
+  display: flex;
+  margin: auto;
+  width: fit-content;
 }

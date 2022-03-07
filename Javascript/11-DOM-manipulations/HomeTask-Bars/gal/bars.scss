@@ -1,5 +1,6 @@
 body{
     margin: 0%;
+    background-color: rgb(179, 175, 175);
 }
 
 header{
@@ -17,3 +18,18 @@ header{
         background-color: rgb(103, 161, 70);
     }
 }
+
+.key{
+    font-weight: bolder;
+    margin-left: 10px;
+}
+
+.bars{
+    display: flex;
+    margin: auto;
+    width: fit-content;
+
+    
+}
+
+
