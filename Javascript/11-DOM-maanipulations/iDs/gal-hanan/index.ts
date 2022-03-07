@@ -9,4 +9,4 @@ boxesId.forEach(element => {
 
 
 
- 
+ console.dir(boxesId)
