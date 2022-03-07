@@ -1,14 +1,14 @@
-const root1:HTMLElement = document.querySelector("#root1");
-const root2:HTMLElement = document.querySelector("#root2");
 
-console.dir(root1);
-console.dir(root2);
+const copy:HTMLElement = document.querySelector("#copy");
+const paste:HTMLElement = document.querySelector("#paste");
 
+console.dir(copy);
+console.dir(paste);
 
-function copy(copy:HTMLElement) {
-    root1.innerText= root2.innerText
-    return root1
-
+function copyText (copy,paste):HTMLElement{
+    paste.innerText = copy.innerText
+    return paste;
 }
 
-copy(root2);
+
+copyText(copy, paste);
