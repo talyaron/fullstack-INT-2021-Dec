@@ -1,0 +1,29 @@
+body {
+    margin: 0%;
+
+    h1, h2{
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+    }
+}
+
+.wrapper {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    height: 30vh;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    font-family: 'Open Sans', sans-serif;
+
+    &__bar {
+        background-color: black;
+        width: 100px;
+        border: 1px solid gray;
+        //why is this not being read??
+    }
+}
