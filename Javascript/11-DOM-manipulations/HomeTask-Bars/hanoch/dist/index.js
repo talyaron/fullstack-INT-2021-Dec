@@ -1,17 +1,27 @@
 var box = document.querySelector('.box');
 var graf = [50, 20, 30];
-var schema;
-var box1;
-// let dup:
-function duplicate(box, graf) {
-    graf.forEach(function (elm) {
-        schema = elm * 10;
-        // console.log(schema)
-        box.style.height = schema + 'px';
-        var dup = box + box * elm.innerHTML;
-    });
-    return "" + dup;
-    // let dup = box * graf.length
-    // return dup
+function createDiv(text) {
+    box = document.createElement("box");
+    box.appendChild(document.createTextNode(text));
+    return box;
 }
-box.style.width = duplicate();
+//  let schema ;
+//  for(let i = 0; i<graf,length;i++){
+//      if (box < graf.length){
+//          box += box;
+//      }
+//  }
+//  document.querySelector.
+// let dup:
+// function duplicate(box1, graf1){
+//     graf1.forEach(elm=>{
+//         schema =elm * 10;
+//         console.log(schema)
+//         box1.style.height = schema + 'px';
+//         var dup =  elm.innerHTML * box1
+//         console.dir(dup)
+//     })
+//     // let dup = box * graf.length
+//     // return dup
+// }
+// box = duplicate(box,graf)
