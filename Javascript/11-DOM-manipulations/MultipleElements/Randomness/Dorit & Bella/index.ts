@@ -15,7 +15,7 @@ boxs.forEach(element=>{
 })
 
 //* change it every 1 second (and use transfer )css
-function getRandomColor() {
+function getRandomColor():string {
     const letters = '0123456789ABCDEF';
     let color = '#';
     for (var i = 0; i < 6; i++) {

@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  position: relative;
+  height: 90vh;
+  width: 80vw;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+
+.bar {
+  background-color: #70e289;
+  color: white;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -10vh;
+}
+.bar p {
+  color: black;
+  position: relative;
+  top: -7vh;
+}
