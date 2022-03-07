@@ -1,17 +1,30 @@
 body {
   margin: 0%;
 }
-body h1, body h2 {
+
+header {
+  height: 150px;
+  margin: 0%;
+  background: #1effea;
+  background: radial-gradient(circle, #1effea 0%, #3997d6 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+header h1,
+header h2 {
   text-align: center;
   font-family: "Open Sans", sans-serif;
+  margin: 0%;
 }
 
 .wrapper {
+  padding-top: 100px;
   width: 90vw;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  height: 30vh;
+  height: fit-content;
   justify-content: space-evenly;
   align-items: flex-end;
   text-align: center;
@@ -20,7 +33,9 @@ body h1, body h2 {
   font-family: "Open Sans", sans-serif;
 }
 .wrapper__bar {
-  background-color: black;
+  background-color: #3997d6;
   width: 100px;
   border: 1px solid gray;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
