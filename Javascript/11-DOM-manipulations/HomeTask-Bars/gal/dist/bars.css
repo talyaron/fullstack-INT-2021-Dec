@@ -1,0 +1,18 @@
+body {
+  margin: 0%;
+}
+
+header {
+  width: auto;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0%;
+  background-color: yellowgreen;
+}
+header h1, header span {
+  text-align: center;
+  margin: 0%;
+  background-color: #67a146;
+}

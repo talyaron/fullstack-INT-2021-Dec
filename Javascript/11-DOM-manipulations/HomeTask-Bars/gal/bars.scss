@@ -1,0 +1,19 @@
+body{
+    margin: 0%;
+}
+
+header{
+    width: auto;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0%;
+    background-color: yellowgreen;
+
+    h1,span{
+        text-align: center; 
+        margin: 0%;
+        background-color: rgb(103, 161, 70);
+    }
+}
