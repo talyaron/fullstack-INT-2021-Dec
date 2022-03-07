@@ -1,12 +1,14 @@
-const copy:HTMLElement = document.querySelector("#copy")
-const paste:HTMLElement = document.querySelector("#paste")
+// alert("connect")
+
+const copy:HTMLElement = document.querySelector("#copy");
+const paste:HTMLElement = document.querySelector("#paste");
 
 console.dir(copy);
 console.dir(paste);
 
-function copytext(copy,paste):HTMLElement{
+function copyText (copy,paste):any{
     paste.innerHTML = copy.innerHTML
     return paste;
 }
 
-copytext(copy,paste)
+copyText(copy,paste);

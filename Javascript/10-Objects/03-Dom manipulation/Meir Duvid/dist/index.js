@@ -1,9 +1,10 @@
+// alert("connect")
 var copy = document.querySelector("#copy");
 var paste = document.querySelector("#paste");
 console.dir(copy);
 console.dir(paste);
-function copytext(copy, paste) {
+function copyText(copy, paste) {
     paste.innerHTML = copy.innerHTML;
     return paste;
 }
-copytext(copy, paste);
+copyText(copy, paste);
