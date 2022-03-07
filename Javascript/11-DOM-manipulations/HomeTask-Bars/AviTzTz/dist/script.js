@@ -1,5 +1,5 @@
 var section = document.querySelector('section');
-var arr = [22, 1, 70, 51, 75, 42];
+var arr = [22, 100, 70, 51, 75, 42, 31, 60];
 function creatBars(insertArr) {
     // ------- For every number in the array create bar -------
     for (var i = 0; i < insertArr.length; i++) {

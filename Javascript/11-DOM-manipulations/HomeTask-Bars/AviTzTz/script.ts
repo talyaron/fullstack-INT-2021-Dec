@@ -1,6 +1,6 @@
 const section = document.querySelector('section') as HTMLElement;
 
-const arr : number[] = [22,1,70,51,75,42]
+const arr : number[] = [22,100,70,51,75,42,31,60]
 
 function creatBars (insertArr : Array<number>){
 // ------- For every number in the array create bar -------

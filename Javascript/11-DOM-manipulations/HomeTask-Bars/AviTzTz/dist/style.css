@@ -41,9 +41,10 @@ main section .cssColumns {
 }
 main section .cssColumns .pre {
   position: absolute;
-  top: -25px;
+  top: -35px;
   color: black;
   font-weight: bold;
+  font-size: 1.5rem;
 }
 main section .cssColumns::after {
   content: "";

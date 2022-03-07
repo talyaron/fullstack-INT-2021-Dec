@@ -39,9 +39,10 @@ main{
             outline-offset: -5px;
             .pre{
                 position: absolute;
-                top: -25px;
+                top: -35px;
                 color: black;
                 font-weight: bold;
+                font-size: 1.5rem;
             }
         }
         .cssColumns::after{
