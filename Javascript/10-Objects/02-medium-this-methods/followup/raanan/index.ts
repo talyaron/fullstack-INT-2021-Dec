@@ -31,4 +31,6 @@ const tzavi = {
   console.log(hello3);
 
   //this refer to the object itself
+
+
   
