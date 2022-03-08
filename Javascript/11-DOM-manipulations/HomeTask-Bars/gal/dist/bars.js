@@ -1,4 +1,4 @@
-var Populationsample = [468.809, 252.164, 213.118, 196.691, 169.696, 125.753, 61.244, 41.801, 28.261];
+var Populationsample = [468.809, 252.164, 213.118, 196.691, 169.696, 125.753, 61.244, 41.801];
 console.dir(Populationsample);
 Populationsample.forEach(function (Element) {
     var addObj = document.createElement("bars__bar");
@@ -18,4 +18,3 @@ Populationsample.forEach(function (Element) {
 // Bat yam: 125,753
 // Givatiym: 61,244
 // Qiryat-ono: 41,801
-// Givat-shmuel: 28,261
