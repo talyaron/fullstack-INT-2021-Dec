@@ -1,26 +1,19 @@
-// let elem = document. createElement('div');
-// elem.className='box'
-// elem. style. cssText = 'position:absolute;top:100px;left:500px;width:10%;height:20%;background:blue';
-// document. body. appendChild(elem);
-// let boxes:any = document.querySelectorAll('.box') 
-// console.log("here comes boxex before manipulation")
 var boxes = document.querySelectorAll('.box');
 var histoArray = [];
 var newNum = 0;
+//getting the input from user
 while (newNum < 999) {
-    newNum = +prompt("Please type a number to histogram in rounded to hundreds, to end type 999");
+    newNum = +prompt("Please type a number to histogram rounded to hundreds, to end type 999");
     histoArray.push(newNum);
 }
 histoArray.pop();
-//console.log(histoArray)
-// let left:number=0
-// let lefts:string=''
 var topStr = "500";
 var leftNum = 15;
 var leftStr = "100";
 var heightNum = 1000;
 var heightStr = "1000";
 for (var i = 0; i < histoArray.length; i++) {
+    //I used window['p'+i] to use names of variables dynamicaly, so that I don't use "let" again and again for the same variable  
     window['p' + i] = document.createElement('div');
     window['p' + i].className = 'box';
     document.body.appendChild(window['p' + i]);
@@ -45,13 +38,5 @@ for (var i = 0; i < histoArray.length; i++) {
     console.dir(window['p' + i].style.height);
     console.dir(window['p' + i].style.left);
 }
-var elementos = document.querySelectorAll(".box");
-//elementos[0]. style. cssText = 'position:absolute;top:500px;left:50px;width:100px;background:blue';
-console.dir(elementos);
-// for (let j:number=0;j<histoArray.length;j++){
-//     elementos[j].style.height=histoArray[j]
-//     elementos[j].position="absolute"
-//     elementos[j].style.width = "100px";
-//     elementos[j].style.marginleft = 150*j
-//     elementos[j].style.backgroundColor="blue"
-// }
+//let elementos:any = document.querySelectorAll(".box")
+//console.dir(elementos)
