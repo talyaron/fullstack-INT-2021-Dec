@@ -1,9 +1,14 @@
-var Populationsample = [468809, 252164, 213118, 196691, 169696, 125753, 61244, 41801, 28261];
-var Bars = document.querySelectorAll[".bars"];
-var barswrapper = document.querySelectorAll[".barswrapper"];
+var Populationsample = [468.809, 252.164, 213.118, 196.691, 169.696, 125.753, 61.244, 41.801, 28.261];
 console.dir(Populationsample);
-for (var i = 0; i < Populationsample.length; i++) {
-}
+Populationsample.forEach(function (Element) {
+    var addObj = document.createElement("bars__bar");
+    addObj.classList.add("bars__bar");
+    addObj.style.height = (Element * 2) + "px";
+    var text = document.createTextNode("" + Element);
+    addObj.appendChild(text);
+    var bars = document.getElementById("bars");
+    bars.appendChild(addObj);
+});
 // Population Sample Key:
 // Tlv: 468,809
 // Petah bli tiqva: 252,164
