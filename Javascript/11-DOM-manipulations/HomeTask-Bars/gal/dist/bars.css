@@ -44,5 +44,5 @@ header h1, header span {
   background-color: red;
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
-  margin-bottom: auto;
+  margin: auto;
 }
