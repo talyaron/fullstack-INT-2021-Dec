@@ -1,0 +1,30 @@
+body{
+    background-color: gray;
+}
+
+.barsWrapper{
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.bar{
+    width: 50px;
+    background-color: black;
+    margin-top: auto;
+}
+
+.barOne{
+   height: 0;
+}
+
+.barTwo{
+    height: 0;
+}
+
+.barThree{
+    height: 0;
+}
