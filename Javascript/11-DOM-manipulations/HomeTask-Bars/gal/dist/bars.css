@@ -41,4 +41,6 @@ header h1, header span {
   width: 100px;
   border: 1px solid greenyellow;
   background-color: red;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
 }
