@@ -4,6 +4,7 @@ var wrapperDiv = document.querySelector('#wrapper');
 // console.log(firstDivElm.innerText)
 // console.log(secondDivElm.innerText);
 console.dir(firstDivElm);
+console.dir(wrapperDiv);
 console.dir(firstDivElm.style);
 firstDivElm.style.color = 'pink';
 firstDivElm.style.backgroundColor = 'black';
