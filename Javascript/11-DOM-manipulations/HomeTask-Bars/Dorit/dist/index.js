@@ -4,16 +4,17 @@
 // document. body. appendChild(elem);
 // let boxes:any = document.querySelectorAll('.box') 
 // console.log("here comes boxex before manipulation")
+var boxes = document.querySelectorAll('.box');
 var histoArray = [];
 var newNum = 0;
 while (newNum < 999) {
-    newNum = +prompt("Please type a number to histogram, to end type 999");
+    newNum = +prompt("Please type a number to histogram in rounded to hundreds, to end type 999");
     histoArray.push(newNum);
 }
 histoArray.pop();
 //console.log(histoArray)
-var left = 0;
-var lefts = '';
+// let left:number=0
+// let lefts:string=''
 var topStr = "500";
 var leftNum = 15;
 var leftStr = "100";
@@ -23,7 +24,7 @@ for (var i = 0; i < histoArray.length; i++) {
     window['p' + i] = document.createElement('div');
     window['p' + i].className = 'box';
     document.body.appendChild(window['p' + i]);
-    heightNum = histoArray[i] / 10;
+    heightNum = Math.round(histoArray[i] / 5);
     heightStr = heightNum + "px";
     topStr = 600 - heightNum + "px";
     leftNum += 100;
@@ -38,11 +39,11 @@ for (var i = 0; i < histoArray.length; i++) {
     window['p' + i].style.width = "60px";
     window['p' + i].style.position = 'absolute';
     window['p' + i].innerText = histoArray[i];
-    window['p' + i].innerText.color = "white";
-    window['p' + i].innerText.fontsize = "10px";
+    window['p' + i].innerHTML =
+        '' + "<span style=\"color:white\">" + histoArray[i] + "</span>";
     //window['p'+i]. style. cssText = 'position:absolute;top:topStr;width:500;backgroundColor:blue;height:heightStr';
     console.dir(window['p' + i].style.height);
-    console.dir(window['p' + i].style.marginleft);
+    console.dir(window['p' + i].style.left);
 }
 var elementos = document.querySelectorAll(".box");
 //elementos[0]. style. cssText = 'position:absolute;top:500px;left:50px;width:100px;background:blue';
