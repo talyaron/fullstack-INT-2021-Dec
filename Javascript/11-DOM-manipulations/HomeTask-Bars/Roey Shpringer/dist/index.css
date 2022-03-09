@@ -1,30 +1,30 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
   background-color: gray;
 }
 
-.barsWrapper {
+#barsWrapper {
   max-width: 900px;
   margin: 0 auto;
   background-color: cornflowerblue;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  padding: 50px 10px 0px 10px;
 }
 
 .bar {
   width: 50px;
   background-color: black;
   margin-top: auto;
+  display: flex;
+  justify-content: center;
 }
-
-.barOne {
-  height: 0;
-}
-
-.barTwo {
-  height: 0;
-}
-
-.barThree {
-  height: 0;
+.bar p {
+  display: flex;
+  color: white;
 }
