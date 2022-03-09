@@ -1,0 +1,17 @@
+.bar {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  position: relative;
+  align-items: flex-end;
+  top: 75vh;
+}
+.bar__multiple {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  color: aliceblue;
+  margin-left: 5px;
+}
