@@ -14,7 +14,6 @@ function moveMetor() {
         element.style.top = getRandomNumber(85)+`vh`
         element.style.left = getRandomNumber(85)+`vh`
     });
-
 }
 
 function setRandomRotation() {
@@ -23,7 +22,12 @@ function setRandomRotation() {
     });
 }
 
+function getRandomTime(min:number, max:number):number {
+    return Math.random() * (max - min) + min;
+}
+
+moveMetor()
 setRandomRotation()
-
-setInterval(moveMetor, 5000)
-
+metor.forEach(element  => {
+    (setInterval(moveMetor,getRandomTime(2500, 5000)))
+})
