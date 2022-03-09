@@ -1,0 +1,15 @@
+.box {
+  width: 20vw;
+  min-height: 100px;
+  background-color: teal;
+  margin: 2px;
+  color: white;
+  padding: 10px;
+}
+.box img {
+  width: 100%;
+}
+
+#root {
+  background-color: #a84959;
+}

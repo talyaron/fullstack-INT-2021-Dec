@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  transition: all 10000ms;
+}
+.wrapperhover {
+  transform: rotate(360deg) scale(1.8);
+}
+.wrapper img {
+  width: 50vh;
+  transition: all 1000ms;
+}
+.wrapper imghover {
+  transform: rotate(360deg) scale(1.8);
+}

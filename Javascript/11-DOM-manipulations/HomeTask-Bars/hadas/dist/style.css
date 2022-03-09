@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  margin: auto;
+  width: fit-content;
+}
+.wrapper .bar {
+  background-color: #d31818;
+  color: whitesmoke;
+  position: relative;
+  text-align: center;
+  margin: 2px;
+}
