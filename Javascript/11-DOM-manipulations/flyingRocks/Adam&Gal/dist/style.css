@@ -1,22 +1,19 @@
 body {
   margin: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
 .wrapper {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
   transition: all 4000ms ease-in-out;
   animation-name: rotate360;
-}
-.wrapperhover {
-  transform: rotate(360deg) scale(1.8);
+  height: 10vh;
 }
 .wrapper img {
-  width: 30vw;
-  height: 30vh;
+  height: 100%;
   animation: 10s rotate360 infinite linear;
 }
+
 @keyframes rotate360 {
   to {
     transform: rotate(360deg);
