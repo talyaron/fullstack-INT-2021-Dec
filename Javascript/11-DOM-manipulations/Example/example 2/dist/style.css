@@ -9,3 +9,7 @@
 .box img {
   width: 100%;
 }
+
+#root {
+  background-color: #a84959;
+}
