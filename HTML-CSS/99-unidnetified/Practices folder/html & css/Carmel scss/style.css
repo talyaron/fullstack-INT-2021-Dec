@@ -1,0 +1,40 @@
+body {
+  background-color: aquamarine;
+}
+
+body .card {
+  border: brown solid 2px;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: tan;
+}
+
+body .card img {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+}
+
+body .card_text {
+  border: steelblue solid 3px;
+  padding: 20px;
+  border-radius: 0px 0px 10px 10px;
+  background-color: teal;
+}
+
+body .card_text h1 {
+  font-style: italic;
+}
+
+body .card_text h1:hover {
+  color: tomato;
+}
+
+body .card_text p {
+  font-size: small;
+  color: tomato;
+}
+
+body .card_text p span {
+  font-weight: bold;
+}
+/*# sourceMappingURL=style.css.map */
