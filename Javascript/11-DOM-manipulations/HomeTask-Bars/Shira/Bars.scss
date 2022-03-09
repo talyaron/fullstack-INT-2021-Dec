@@ -18,6 +18,15 @@
         text-align: center;
         // border: 1px solid black;
         border-radius: 15px;
+
+        .text{
+            color:black;
+            position: absolute;
+            font-weight: bolder;
+            top:-3rem;
+            
+            
+        }
         
     }
     
@@ -29,12 +38,6 @@
     //     text-align: center;
      
     // }
-    .text{
-        color:black;
-        position: absolute;
-        bottom:50px;
-        font-weight: bolder;
-        
-    }
+ 
     
 }
