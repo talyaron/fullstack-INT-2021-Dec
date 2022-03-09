@@ -9,7 +9,7 @@ myArray.forEach(function (Element) {
     col.style.borderStyle = "groove";
     col.innerText = Element + '';
     console.dir(col);
-    col.style.position = 'relative';
+    col.style.backgroundColor = 'lightblue';
     // let newcolor=getSomeColor()
     // col.style.backgroundColor=newcolor+''
 });
