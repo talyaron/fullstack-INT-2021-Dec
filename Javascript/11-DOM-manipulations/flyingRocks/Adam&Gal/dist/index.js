@@ -12,7 +12,7 @@ function meteor() {
 }
 function RandomRotation() {
     wrapper.forEach(function (element) {
-        element.style.transform = "rotate(" + getRandomNumber(360) + "deg)";
+        element.style.transform = "rotate(" + listRandomNumber(360) + "deg)";
     });
 }
 RandomRotation();

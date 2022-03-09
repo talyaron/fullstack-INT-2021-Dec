@@ -16,7 +16,7 @@ function meteor (){
 
 function RandomRotation() {
     wrapper.forEach(element => {
-        element.style.transform = `rotate(${getRandomNumber(360)}deg)`
+        element.style.transform = `rotate(${listRandomNumber(360)}deg)`
     });
 }
 
