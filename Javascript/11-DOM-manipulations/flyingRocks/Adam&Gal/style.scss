@@ -6,7 +6,8 @@ body {
     width: 100vw;
     height: 100vh;
     position: absolute;
-    transition: all 10000ms;
+    transition: all 4000ms ease-in-out;
+    animation-name: rotate360;
 
     &hover {
         transform: rotate(360deg) scale(1.8);
@@ -16,13 +17,14 @@ body {
 
     img {
         width: 50vh;
-        transition: all 1000ms;
-
-        &hover {
-            transform: rotate(360deg) scale(1.8);
-    
+      animation: 10s rotate360 infinite linear;
         
 
+    }
+    
+@keyframes rotate360 {
+    to {
+        transform: rotate(360deg);
     }
 }
 }

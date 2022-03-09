@@ -1,27 +1,28 @@
-const root2=  document.querySelectorAll('#root2');
-console.dir(root2);
-
-root2[0].style.backgroundColor = 'black';
-root2.forEach(element=>{
-    element.style.backgroundColor = getRandomColor()
-    element.style.left = listRandomroot2() + "px"
-    element.style.width = listRandomroot2()/10 + "px"
-    element.style.height = listRandomroot2()/10 + "px"
-})
-
-setInterval (repeat, 3000)
+const wrapper:any= document.querySelectorAll('.wrapper');
+console.dir(wrapper);
 
 
-function listRandomroot2(){
-    const meteor ='123';
-    let getRandomPostion:any='#';
-    for (let i=0;i<1;i++){
-        getRandomPostion+=
-    getRandomPostion=meteor[(Math.random()*1000)];
-    }
-    console.dir(getRandomPostion)
-    return getRandomPostion
+function listRandomNumber(number):any{
+    const num=Math.floor(Math.random()* number)
+    return num
 }
+
+function meteor (){
+    wrapper.forEach(element => {
+        element.style.top=listRandomNumber(100)+`vh`
+        element.style.right=listRandomNumber(100)+`vh`
+    });
+}
+
+function RandomRotation() {
+    wrapper.forEach(element => {
+        element.style.transform = `rotate(${getRandomNumber(360)}deg)`
+    });
+}
+
+RandomRotation()
+setInterval (wrapper, 3000)
+
 
 
 
