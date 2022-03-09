@@ -1,0 +1,8 @@
+.corona {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+}
+.corona img {
+  width: 100%;
+}
