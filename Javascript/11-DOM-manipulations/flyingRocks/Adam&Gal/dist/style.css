@@ -13,7 +13,8 @@ body {
   transform: rotate(360deg) scale(1.8);
 }
 .wrapper img {
-  width: 50vh;
+  width: 30vw;
+  height: 30vh;
   animation: 10s rotate360 infinite linear;
 }
 @keyframes rotate360 {

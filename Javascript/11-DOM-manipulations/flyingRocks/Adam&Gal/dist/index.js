@@ -6,8 +6,8 @@ function listRandomNumber(number) {
 }
 function meteor() {
     wrapper.forEach(function (element) {
-        element.style.top = listRandomNumber(100) + "vh";
-        element.style.right = listRandomNumber(100) + "vh";
+        element.style.top = listRandomNumber(80) + "vh";
+        element.style.right = listRandomNumber(80) + "vh";
     });
 }
 function RandomRotation() {

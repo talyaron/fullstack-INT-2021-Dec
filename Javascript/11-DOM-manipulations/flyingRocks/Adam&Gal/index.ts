@@ -9,8 +9,8 @@ function listRandomNumber(number):any{
 
 function meteor (){
     wrapper.forEach(element => {
-        element.style.top=listRandomNumber(100)+`vh`
-        element.style.right=listRandomNumber(100)+`vh`
+        element.style.top=listRandomNumber(80)+`vh`
+        element.style.right=listRandomNumber(80)+`vh`
     });
 }
 
