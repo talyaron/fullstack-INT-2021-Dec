@@ -8,14 +8,14 @@ body {
     transition: all 4000ms ease-in-out;
     animation-name: rotate360;
     height: 10vh;
-
+    
     img {
         height: 100%;
-      animation: 10s rotate360 infinite linear;
+      animation: 5s rotate360 infinite linear;
     }
 }
 @keyframes rotate360 {
     to {
-        transform: rotate(360deg);
+        transform: rotate(360deg) scale(1.8);
     }
 }
