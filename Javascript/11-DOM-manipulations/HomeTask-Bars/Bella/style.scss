@@ -1,0 +1,11 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    .countValue {
+        height: 300px;
+        width: 80px;
+        background-color: aqua;
+        margin: 12px;
+    }
+}
