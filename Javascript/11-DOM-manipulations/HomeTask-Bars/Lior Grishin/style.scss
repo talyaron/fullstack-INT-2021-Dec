@@ -2,12 +2,31 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-body{
     font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    padding: 1em;
+    nav{
+        ul{
+            list-style: none;
+            li{
+                color: white;
+                display: inline;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.graph-section{
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     .wrapper{
