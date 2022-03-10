@@ -16,6 +16,6 @@ body {
 
 @keyframes rotate360 {
   to {
-    transform: rotate(360deg) scale(1.8);
+    transform: rotate(360deg);
   }
 }
