@@ -1,11 +1,7 @@
-console.log(`hi`)
-
 const metor: any = document.querySelectorAll('.metor')
-console.dir(metor)
 
 function getRandomNumber(num): number {
     const num1 = Math.floor(Math.random() * num)
-    console.log(num1)
     return num1
 }
 
@@ -22,12 +18,12 @@ function setRandomRotation() {
     });
 }
 
-function getRandomTime(min:number, max:number):number {
-    return Math.random() * (max - min) + min;
+function metorPostion(){
+    metor.forEach(element => {
+        console.log(element.getBoundingClientRect())
+    })
 }
 
 moveMetor()
 setRandomRotation()
-metor.forEach(element  => {
-    (setInterval(moveMetor,getRandomTime(2500, 5000)))
-})
+setInterval(moveMetor, 5000)

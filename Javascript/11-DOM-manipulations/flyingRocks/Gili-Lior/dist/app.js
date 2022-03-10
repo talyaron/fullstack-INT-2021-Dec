@@ -1,9 +1,6 @@
-console.log("hi");
 var metor = document.querySelectorAll('.metor');
-console.dir(metor);
 function getRandomNumber(num) {
     var num1 = Math.floor(Math.random() * num);
-    console.log(num1);
     return num1;
 }
 function moveMetor() {
@@ -17,11 +14,11 @@ function setRandomRotation() {
         element.style.transform = "rotate(" + getRandomNumber(360) + "deg)";
     });
 }
-function getRandomTime(min, max) {
-    return Math.random() * (max - min) + min;
+function metorPostion() {
+    metor.forEach(function (element) {
+        console.log(element.getBoundingClientRect());
+    });
 }
 moveMetor();
 setRandomRotation();
-metor.forEach(function (element) {
-    (setInterval(moveMetor, getRandomTime(2500, 5000)));
-});
+setInterval(moveMetor, 5000);
