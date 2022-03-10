@@ -1,0 +1,25 @@
+body {
+  margin: 0%;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+}
+
+.wrapper1, .wrapper2 {
+  transition: all 4000ms ease-in-out;
+  animation-name: rotate360;
+  height: 10vh;
+  position: relative;
+  display: inline-block;
+}
+.wrapper1 img, .wrapper2 img {
+  height: 100%;
+  animation: 5s rotate360 infinite linear;
+}
+
+@keyframes rotate360 {
+  to {
+    transform: rotate(360deg);
+  }
+}

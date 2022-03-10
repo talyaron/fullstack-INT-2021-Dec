@@ -1,0 +1,138 @@
+body {
+  background-color: #fafafa;
+}
+
+body #topmenu {
+  height: 60px;
+  width: 1100px;
+  background-color: white;
+  border: 0.5px #c2c1c1 solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 146px;
+  padding-right: 146px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+}
+
+body #topmenu #searchbar {
+  width: 268px;
+  background-color: #acacac;
+}
+
+body #topmenu #icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 278px;
+}
+
+body .feed {
+  width: 614px;
+  padding-left: 146px;
+}
+
+body .feed img {
+  width: 614px;
+}
+
+body .feed #stories {
+  height: 100px;
+  margin-top: 80px;
+  border: 0.5px #c2c1c1 solid;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .feed #stories img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: hotpink 2px solid;
+  margin: 10px;
+}
+
+body .feed .post {
+  border: 0.5px #c2c1c1 solid;
+  margin-top: 20px;
+}
+
+body .feed .post .header {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .feed .post .header img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  padding: 18px;
+}
+
+body .feed .post .header .username {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+}
+
+body .feed .post .header .more {
+  padding: 18px;
+}
+
+body .feed .post .lowerpost {
+  padding: 18px;
+}
+
+body .feed .post .lowerpost .lowerheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .feed .post .lowerpost .likes {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+body .feed .post .lowerpost .comments {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: grey;
+}
+
+body .feed .post .lowerpost .addcomment {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: #9c9c9c;
+}
+/*# sourceMappingURL=style.css.map */
