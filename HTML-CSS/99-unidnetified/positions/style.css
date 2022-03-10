@@ -1,0 +1,40 @@
+.wrapher {
+  width: 200px;
+  height: 200px;
+  border: 1px dashed;
+  margin: auto;
+  margin-top: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.wrapher .box1 {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+
+.wrapher .move {
+  width: 100px;
+  height: 100px;
+  background-color: #fffb00;
+  position: relative;
+  bottom: 20px;
+  left: 20px;
+}
+
+.wrapher .box3 {
+  width: 100px;
+  height: 100px;
+  background-color: #1fff01;
+}
+
+.wrapher .box2 {
+  width: 100px;
+  height: 100px;
+  background-color: #eb1111;
+}
+/*# sourceMappingURL=style.css.map */
