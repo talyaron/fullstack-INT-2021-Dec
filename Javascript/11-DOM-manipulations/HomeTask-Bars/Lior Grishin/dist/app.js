@@ -7,20 +7,30 @@ var solarButton = document.getElementById('solar');
 var body = document.body;
 // Button Event Handlers
 darkButton.onclick = function () {
+    // replace classes -> light to dark
     body.classList.replace('light', 'dark');
 };
 lightButton.onclick = function () {
+    // replace classes -> dark to light
     body.classList.replace('dark', 'light');
 };
 solarButton.onclick = function () {
+    // if class has solar
     if (body.classList.contains('solar')) {
+        // remove solar class
         body.classList.remove('solar');
+        // change css bg-solar varibale cirle to yellow
         solarButton.style.cssText = "\n            --bg-solar: var(--yellow);\n        ";
+        // change text to solarize instead of normalize
         solarButton.innerText = "solarize";
     }
     else {
+        // if class dont have solar class
+        // change css bg-solar varible circle to white
         solarButton.style.cssText = "\n            --bg-solar: white;\n        ";
+        // add solor class 
         body.classList.add('solar');
+        // change text to normalize instead of solarize
         solarButton.innerText = "normalize";
     }
 };
