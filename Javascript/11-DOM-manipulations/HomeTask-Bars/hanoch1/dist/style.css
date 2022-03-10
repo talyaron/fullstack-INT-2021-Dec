@@ -1,0 +1,9 @@
+.container .bar {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  padding: 5px;
+}
+.container .bar__number {
+  color: black;
+}
