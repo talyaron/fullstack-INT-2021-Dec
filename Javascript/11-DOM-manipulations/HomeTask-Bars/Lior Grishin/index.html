@@ -9,33 +9,61 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <script defer src="dist/app.js"></script>
 </head>
-<body>
+<body class="light">
+
+    <nav class="navbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">Home</li>
+        <li class="nav-item">About</li>
+
+        <!--Dropdown-->
+        <li class="nav-item has-dropdown">
+          <a href="#">Theme</a>
+          <ul class="dropdown">
+            <li class="dropdown-item">
+              <a id="light" href="#">light</a>
+            </li>
+            <li class="dropdown-item">
+              <a id="dark" href="#">dark</a>
+            </li>
+            <li class="dropdown-item">
+              <a id="solar" href="#">solarize</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">Login</li>
+      </ul>
+    </nav>
+
     <header>
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="100px" height="100px" viewBox="0 0 793.70081 1122.5197" version="1.1" id="svg5">
-            <defs id="defs2"/>
-            <g id="layer1">
-              <path style="display:inline;fill:#ffffff;stroke:none;stroke-width:1.70978px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="M 5.3189895,21.195713 100.74743,101.62744 V 576.13645 L 287.89812,721.55624 V 618.10706 l 95.75547,72.03128 0.0308,247.51176 L 5.9033365,638.41375 Z" id="path54"/>
-            </g>
-            <g id="layer3" style="display:inline">
-              <path style="display:inline;fill:#ffffff;stroke:none;stroke-width:1.70978px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="M 5.31899,667.33466 395.73766,970.7363 788.46765,667.30079 V 809.26524 L 395.73883,1113.7844 5.31899,811.43264 Z" id="path1631-9"/>
-            </g>
-            <g id="layer2" style="display:inline">
-              <path style="display:inline;fill:#ffffff;stroke:none;stroke-width:1.70978px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="M 788.46768,21.19571 V 642.62836 L 407.69694,937.6501 407.68326,549.06539 647.36766,366.76386 V 509.29384 L 502.64222,618.10706 503.40854,720.78995 694.21475,574.42852 V 239.55969 L 407.68248,464.38499 V 319.25386 Z" id="path1050-0-3"/>
-            </g>
-          </svg>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
-        </nav>
+      <img src="Images/LG_Logo_v2.png" alt="" class="logo">
+      <h1>FullStack Web Development</h1>
+      <p>Javacript, SCSS, Node.js</p>
     </header>
+
+    <section class="sub">
+      <div class="information">
+        <h2>Bar Charts</h2>
+        <p>A bar chart or bar graph is a chart or graph that presents categorical data with rectangular bars with heights or lengths proportional to the values that they represent. The bars can be plotted vertically or horizontally. A vertical bar chart is sometimes called a column chart.</p>
+      </div>
+      <div class="instructions">
+        <h2>How to use?</h2>
+        <p>Right click anywhere and select Inspect<br>
+          In the console tab call function "createGraphBars(barArray)" - default value<br>
+          To remove existed bars call function "removeBars( )"<br>
+          Play yourself with the "Bar Chart" by calling the function and inserting your type array<br>
+          Example: createGraphBars([25, 10, 65, 80, 45, 20, 71])<br>
+          Array must be with numbers between 0 to 100.
+        </p>
+      </div>
+    </section>
+
     <section class="graph-section">
         <div class="wrapper">
         </div>
     </section>
-    <script src="dist/app.js"></script>
 </body>
 </html>

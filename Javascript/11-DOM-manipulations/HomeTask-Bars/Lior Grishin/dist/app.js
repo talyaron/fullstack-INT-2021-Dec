@@ -1,10 +1,33 @@
 var barsWrapper = document.querySelector('.wrapper');
 var barArray = [80, 40, 30, 65, 45, 72, 12.5, 90.5];
 var barsAppered = false;
+var darkButton = document.getElementById('dark');
+var lightButton = document.getElementById('light');
+var solarButton = document.getElementById('solar');
+var body = document.body;
+// Button Event Handlers
+darkButton.onclick = function () {
+    body.classList.replace('light', 'dark');
+};
+lightButton.onclick = function () {
+    body.classList.replace('dark', 'light');
+};
+solarButton.onclick = function () {
+    if (body.classList.contains('solar')) {
+        body.classList.remove('solar');
+        solarButton.style.cssText = "\n            --bg-solar: var(--yellow);\n        ";
+        solarButton.innerText = "solarize";
+    }
+    else {
+        solarButton.style.cssText = "\n            --bg-solar: white;\n        ";
+        body.classList.add('solar');
+        solarButton.innerText = "normalize";
+    }
+};
 function createGraphBars(barArray) {
     // Checkes if user pass in the array value bigger than 100
-    if (Math.max.apply(Math, barArray) > 100) {
-        alert('Function doesnot accept numbers bigger than 100');
+    if (Math.max.apply(Math, barArray) > 100 || Math.min.apply(Math, barArray) < 0) {
+        alert('Function accept numbers between 0 - 100');
     }
     else {
         if (!barsAppered) {

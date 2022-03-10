@@ -4,10 +4,42 @@ const barArray:Array<number> = [80,40,30,65,45,72,12.5,90.5]
 
 let barsAppered:boolean = false
 
+const darkButton = document.getElementById('dark');
+const lightButton = document.getElementById('light');
+const solarButton = document.getElementById('solar');
+const body = document.body
+
+// Button Event Handlers
+darkButton.onclick = () => {
+    body.classList.replace('light','dark');
+};
+
+lightButton.onclick = () => {
+    body.classList.replace('dark', 'light');
+};
+
+solarButton.onclick = () => {
+    if(body.classList.contains('solar')){
+        body.classList.remove('solar');
+        solarButton.style.cssText = `
+            --bg-solar: var(--yellow);
+        `
+
+        solarButton.innerText = `solarize`;
+    }else{
+        solarButton.style.cssText = `
+            --bg-solar: white;
+        `
+
+        body.classList.add('solar');
+        solarButton.innerText = `normalize`;
+    }
+};
+
 function createGraphBars(barArray:Array<number>):void{
     // Checkes if user pass in the array value bigger than 100
-    if(Math.max(...barArray) > 100){
-        alert('Function doesnot accept numbers bigger than 100')
+    if(Math.max(...barArray) > 100 || Math.min(...barArray) < 0){
+        alert('Function accept numbers between 0 - 100')
     }else{
         if(!barsAppered){
             // Getting the width of the wrapper
