@@ -1,19 +1,54 @@
-var wrapper = document.querySelectorAll('.wrapper');
-console.dir(wrapper);
+var wrapper1 = document.querySelectorAll('.wrapper1');
+var wrapper2 = document.querySelectorAll('.wrapper2');
+console.dir(wrapper1, wrapper2);
 function listRandomNumber(number) {
     var num = Math.floor(Math.random() * number);
     return num;
 }
-function meteor() {
-    wrapper.forEach(function (element) {
-        element.style.top = listRandomNumber(80) + "vh";
-        element.style.right = listRandomNumber(80) + "vh";
-    });
+function getRandom() {
+    var randomPX = Math.floor(Math.random() * 100);
+    return randomPX + "vh";
 }
-function RandomRotation() {
-    wrapper.forEach(function (element) {
+function RandomRotation1() {
+    wrapper1.forEach(function (element) {
         element.style.transform = "rotate(" + listRandomNumber(360) + "deg)";
     });
 }
-RandomRotation();
-setInterval(wrapper, 3000);
+function RandomRotation2() {
+    wrapper2.forEach(function (element) {
+        element.style.transform = "rotate(" + listRandomNumber(360) + "deg)";
+    });
+}
+function meteor1() {
+    wrapper1.forEach(function (element) {
+        element.style.top = listRandomNumber(5) + "vh";
+        element.style.bottom = listRandomNumber(10) + "vh";
+        element.style.left = listRandomNumber(30) + "vv";
+        element.style.right = listRandomNumber(30) + "vw";
+        element.style.transform = "translate(" + getRandom() + ", " + getRandom() + ")";
+    });
+    setTimeout(meteor1, 5000);
+}
+function meteor2() {
+    wrapper2.forEach(function (element) {
+        element.style.top = listRandomNumber(5) + "vh";
+        element.style.bottom = listRandomNumber(10) + "vh";
+        element.style.left = listRandomNumber(30) + "vv";
+        element.style.right = listRandomNumber(30) + "vw";
+        element.style.transform = "translate(" + getRandom() + ", " + getRandom() + ")";
+    });
+    setTimeout(meteor2, 5000);
+}
+RandomRotation1();
+RandomRotation2();
+meteor1();
+meteor2();
+setInterval(wrapper1, 3000);
+setInterval(wrapper2, 3000);
+return !(domRect1.top > domRect2.bottom ||
+    domRect1.right < domRect2.left ||
+    domRect1.bottom < domRect2.top ||
+    domRect1.left > domRect2.right);
+var el1 = document.getElementsByClassName('wrapper1');
+var el2 = document.getElementsByClassName('wrapper2');
+console.log(elementsOverlap(el1, el2));
