@@ -8,12 +8,13 @@ function coronaMove() {
     overLapCheck();
 }
 console.log(ugiCron);
+console.dir(ugiCron);
 function randomPosition() {
     var postion;
     postion = Math.random() * 100;
     return postion;
 }
-var intervalID = setInterval(coronaMove, 2000);
+var intervalID = setInterval(coronaMove, 4000);
 function overLapCheck() {
     for (var i = 0; i < ugiCron.length; i++) {
         for (var j = i + 1; j < ugiCron.length; j++) {
@@ -26,8 +27,8 @@ function overLapCheck() {
                 ugiCron[i].getBoundingClientRect().left >
                     ugiCron[j].getBoundingClientRect().right) && i != j) {
                 console.log("covid Collision id " + i + " and " + j);
+                ugiCron[j].innerHTML = "<img src=\"Explosion.png\" alt=\"\">";
                 ugiCron[i].style.visibility = "hidden";
-                ugiCron[j].style.visibility = "hidden";
             }
         }
     }

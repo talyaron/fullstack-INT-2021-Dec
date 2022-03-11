@@ -13,6 +13,7 @@ function coronaMove() {
 }
 
 console.log(ugiCron);
+console.dir(ugiCron)
 
 function randomPosition() {
   let postion: number;
@@ -20,7 +21,7 @@ function randomPosition() {
   return postion;
 }
 
-var intervalID = setInterval(coronaMove, 2000);
+var intervalID = setInterval(coronaMove, 4000);
 
 function overLapCheck() {
 
@@ -39,13 +40,18 @@ function overLapCheck() {
         ) && i != j
       ) {
         console.log(`covid Collision id ${i} and ${j}`);
+        ugiCron[j].innerHTML="<img src=\"Explosion.png\" alt=\"\">";
         ugiCron[i].style.visibility = "hidden";
-        ugiCron[j].style.visibility = "hidden";
+
         
+
+    
+
 
       }
     }
   }
 
 }
+
 
