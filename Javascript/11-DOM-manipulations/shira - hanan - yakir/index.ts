@@ -25,7 +25,7 @@ function randomPosition() {
   return postion;
 }
 
-var intervalID = setInterval(coronaMove, 4000);
+var intervalID = setInterval(coronaMove, 1000);
 
 function overLapCheck() {
 

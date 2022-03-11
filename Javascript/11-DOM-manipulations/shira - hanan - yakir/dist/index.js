@@ -16,7 +16,7 @@ function randomPosition() {
     postion = Math.random() * 100;
     return postion;
 }
-var intervalID = setInterval(coronaMove, 4000);
+var intervalID = setInterval(coronaMove, 1000);
 function overLapCheck() {
     for (var i = 0; i < ugiCron.length; i++) {
         for (var j = i + 1; j < ugiCron.length; j++) {
