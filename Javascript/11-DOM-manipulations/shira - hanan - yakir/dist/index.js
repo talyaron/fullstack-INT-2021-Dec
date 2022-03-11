@@ -4,8 +4,6 @@ function coronaMove() {
         element.style.top = randomPosition() + "vh";
         element.style.left = randomPosition() + "vw";
     });
-    // console.log(ugiCron[5].getBoundingClientRect().top);
-    // console.log(ugiCron[5].getBoundingClientRect().bottom);
     // console.log(ugiCron[5].getBoundingClientRect().left);
     // console.log(ugiCron[5].getBoundingClientRect().right);
     overLapCheck();
@@ -16,9 +14,9 @@ function randomPosition() {
     postion = Math.random() * 100;
     return postion;
 }
-var intervalID = setInterval(coronaMove, 10000);
+var intervalID = setInterval(coronaMove, 5000);
 function overLapCheck() {
-    for (var i = 0; i < 26; i++) {
+    for (var i = 0; i < ugiCron.length; i++) {
         for (var j = i + 1; j < i - 1; j++) {
             if (ugiCron[i].getBoundingClientRect().top >
                 ugiCron[j].getBoundingClientRect().bottom ||
