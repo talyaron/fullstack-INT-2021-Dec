@@ -39,8 +39,13 @@ function overLapCheck() {
         ) && i != j
       ) {
         console.log(`covid Collision id ${i} and ${j}`);
+        ugiCron[i].style.visibility = "hidden";
+        ugiCron[j].style.visibility = "hidden";
+        
+
       }
     }
   }
 
 }
+
