@@ -25,3 +25,9 @@ setRandomRotation();
 metor.forEach(function (element) {
     (setInterval(moveMetor, getRandomTime(2500, 5000)));
 });
+function collisionDetection() {
+    for (var c = 0; c < metor; c++) {
+        for (var r = 0; r < metor; r++) {
+        }
+    }
+}
