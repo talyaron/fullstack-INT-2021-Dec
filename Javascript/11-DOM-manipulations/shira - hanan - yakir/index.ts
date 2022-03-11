@@ -1,3 +1,6 @@
+
+
+// ugiCorn is the element for the game
 const ugiCron: NodeListOf<HTMLElement> = document.querySelectorAll(".corona");
 
 function coronaMove() {
@@ -6,15 +9,15 @@ function coronaMove() {
     element.style.left = randomPosition() + "vw";
   });
 
-  // console.log(ugiCron[5].getBoundingClientRect().top);
-  // console.log(ugiCron[5].getBoundingClientRect().bottom);
-  // console.log(ugiCron[5].getBoundingClientRect().left);
-  // console.log(ugiCron[5].getBoundingClientRect().right);
+  // debugger
+
   overLapCheck()
-  
+  console.log("----next game:----")
+    
 }
 
 console.log(ugiCron);
+console.dir(ugiCron)
 
 function randomPosition() {
   let postion: number;
@@ -22,13 +25,15 @@ function randomPosition() {
   return postion;
 }
 
-var intervalID = setInterval(coronaMove, 10000);
+var intervalID = setInterval(coronaMove, 1000);
 
 function overLapCheck() {
-  for (let i = 0; i < 26; i++) {
-    for (let j = i+1; j < i-1; j++) {
-      if 
-        (
+
+  for (var i = 0; i < ugiCron.length; i++) {
+    for (var j = i + 1; j < ugiCron.length; j++) {
+      if (
+        // check the conditions if not overlap then flip the boolean to overlap
+        !(
           ugiCron[i].getBoundingClientRect().top >
             ugiCron[j].getBoundingClientRect().bottom ||
           ugiCron[i].getBoundingClientRect().right <
@@ -37,8 +42,16 @@ function overLapCheck() {
             ugiCron[j].getBoundingClientRect().top ||
           ugiCron[i].getBoundingClientRect().left >
             ugiCron[j].getBoundingClientRect().right
-        )
-      { console.log(`covid Collision id ${i} and ${j}`); }
+        ) && i != j // eleminet the possibility for same index element
+      ) {
+        console.log(`covid Collision id ${i} and ${j}`);
+        ugiCron[j].innerHTML="<img class='explosion' src=\"Boom-PNG.png\" alt=\"\">"; //replace one element to explosion
+        ugiCron[i].style.visibility = "hidden";// hide the other element
+        
+      }
     }
   }
+
 }
+
+
