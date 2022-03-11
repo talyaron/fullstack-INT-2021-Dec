@@ -1,3 +1,6 @@
+
+
+// ugiCorn is the element for the game
 const ugiCron: NodeListOf<HTMLElement> = document.querySelectorAll(".corona");
 
 function coronaMove() {
@@ -9,6 +12,7 @@ function coronaMove() {
   // debugger
 
   overLapCheck()
+  console.log("----next game:----")
     
 }
 
@@ -28,6 +32,7 @@ function overLapCheck() {
   for (var i = 0; i < ugiCron.length; i++) {
     for (var j = i + 1; j < ugiCron.length; j++) {
       if (
+        // check the conditions if not overlap then flip the boolean to overlap
         !(
           ugiCron[i].getBoundingClientRect().top >
             ugiCron[j].getBoundingClientRect().bottom ||
@@ -37,17 +42,11 @@ function overLapCheck() {
             ugiCron[j].getBoundingClientRect().top ||
           ugiCron[i].getBoundingClientRect().left >
             ugiCron[j].getBoundingClientRect().right
-        ) && i != j
+        ) && i != j // eleminet the possibility for same index element
       ) {
         console.log(`covid Collision id ${i} and ${j}`);
-        ugiCron[j].innerHTML="<img src=\"Explosion.png\" alt=\"\">";
-        ugiCron[i].style.visibility = "hidden";
-
-        
-
-    
-
-
+        ugiCron[j].innerHTML="<img src=\"Explosion.png\" alt=\"\">";   //replace one element to explosion
+        ugiCron[i].style.visibility = "hidden";                         // hide the other element
       }
     }
   }
