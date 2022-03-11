@@ -5,24 +5,7 @@ function coronaMove() {
         element.style.left = randomPosition() + "vw";
     });
     // debugger
-    // console.log(ugiCron[5].getBoundingClientRect().left);
-    // console.log(ugiCron[5].getBoundingClientRect().right);
-    // overLapCheck()
-    for (var i = 0; i < ugiCron.length; i++) {
-        for (var j = i + 1; j < ugiCron.length; j++) {
-            if ((ugiCron[i].getBoundingClientRect().top > ugiCron[j].getBoundingClientRect().bottom &&
-                ugiCron[i].getBoundingClientRect().bottom < ugiCron[j].getBoundingClientRect().top) &&
-                (ugiCron[i].getBoundingClientRect().right < ugiCron[j].getBoundingClientRect().left &&
-                    ugiCron[i].getBoundingClientRect().bottom < ugiCron[j].getBoundingClientRect().top)
-                // ugiCron[i].getBoundingClientRect().bottom <
-                //   ugiCron[j].getBoundingClientRect().top ||
-                // ugiCron[i].getBoundingClientRect().left >
-                //   ugiCron[j].getBoundingClientRect().right
-                && i != j) {
-                console.log("covid Collision id " + i + " and " + j);
-            }
-        }
-    }
+    overLapCheck();
 }
 console.log(ugiCron);
 function randomPosition() {
@@ -30,18 +13,18 @@ function randomPosition() {
     postion = Math.random() * 100;
     return postion;
 }
-var intervalID = setInterval(coronaMove, 5000);
+var intervalID = setInterval(coronaMove, 2000);
 function overLapCheck() {
     for (var i = 0; i < ugiCron.length; i++) {
-        for (var j = i + 1; j < i - 1; j++) {
-            if (ugiCron[i].getBoundingClientRect().top >
+        for (var j = i + 1; j < ugiCron.length; j++) {
+            if (!(ugiCron[i].getBoundingClientRect().top >
                 ugiCron[j].getBoundingClientRect().bottom ||
                 ugiCron[i].getBoundingClientRect().right <
                     ugiCron[j].getBoundingClientRect().left ||
                 ugiCron[i].getBoundingClientRect().bottom <
                     ugiCron[j].getBoundingClientRect().top ||
                 ugiCron[i].getBoundingClientRect().left >
-                    ugiCron[j].getBoundingClientRect().right) {
+                    ugiCron[j].getBoundingClientRect().right) && i != j) {
                 console.log("covid Collision id " + i + " and " + j);
             }
         }
