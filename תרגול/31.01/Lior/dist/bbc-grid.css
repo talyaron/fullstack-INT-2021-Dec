@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+body .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3%;
+  height: 450px;
+}
+body .container .item {
+  background-color: #f5deb3;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+body .container .item-main {
+  grid-column: 1/3;
+  grid-row: 1/3;
+  background-image: url(https://ichef.bbc.co.uk/wwhp/999/cpsprodpb/D9E0/production/_123067755_976_boris-johnson.jpg);
+}
+body .container .item-sub:nth-child(2) {
+  background-image: url(https://ichef.bbc.co.uk/wwhp/304/cpsprodpb/AB50/production/_123065834_gettyimages-1237588346.jpg);
+}
+body .container .item-sub:nth-child(3) {
+  background-image: url(https://ichef.bbc.co.uk/wwhp/304/cpsprodpb/E2D2/production/_123066085_gettyimages-1238064130.jpg);
+}
+body .container .item-sub:nth-child(4) {
+  background-image: url(https://ichef.bbc.co.uk/wwhp/304/ibroadcast/images/live/p0/bk/y9/p0bky9wl.jpg);
+}
+body .container .item-sub:nth-child(5) {
+  background-image: url(https://ichef.bbc.co.uk/wwhp/304/ibroadcast/images/live/p0/bk/ns/p0bkns3v.jpg);
+}

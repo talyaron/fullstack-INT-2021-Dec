@@ -1,0 +1,24 @@
+.box{
+    width:20vw;
+    min-height: 100px;
+    background-color: teal;
+    margin: 2px;
+    color: white;
+    padding: 10px;
+opacity: .5;
+    img{
+        width: 100%;
+    }
+}
+
+.elm1{
+    position: absolute;
+    top:20px;
+    left: 20px;
+}
+
+.elm2{
+    position: absolute;
+    top:40px;
+    left: 240px;
+}
