@@ -32,7 +32,7 @@ function overLapCheck() {
                     ugiCron[j].getBoundingClientRect().right) && i != j // eleminet the possibility for same index element
             ) {
                 console.log("covid Collision id " + i + " and " + j);
-                ugiCron[j].innerHTML = "<img src=\"Explosion.png\" alt=\"\">"; //replace one element to explosion
+                ugiCron[j].innerHTML = "<img class='explosion' src=\"Boom-PNG.png\" alt=\"\">"; //replace one element to explosion
                 ugiCron[i].style.visibility = "hidden"; // hide the other element
             }
         }
