@@ -1,3 +1,15 @@
 body {
   height: 100vh;
+  display: flex;
+}
+
+.boom-boi {
+  height: fit-content;
+  width: fit-content;
+  position: absolute;
+  transition: all 1s;
+}
+.boom-boi img {
+  height: 200px;
+  width: 200px;
 }
