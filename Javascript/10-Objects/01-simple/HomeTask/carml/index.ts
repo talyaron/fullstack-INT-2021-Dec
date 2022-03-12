@@ -86,7 +86,7 @@ function buildAFriend(name:string, lastname:string, age:number, address:string, 
 
 const newname:string=window.prompt("who is this?")
 const newlastname:string=window.prompt("who??")
-const newage:number= window.prompt("and how old are they?")
+const newage:number=parseInt(window.prompt("and how old are they?"))
 const newaddress:string= window.prompt("what?? that old??? where do they live???")
 const newfriends:Array<any>=[]
 
