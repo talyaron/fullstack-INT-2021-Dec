@@ -1,1 +1,16 @@
-body{ height: 100vh;}
+body{ height: 100vh;
+display: flex;
+}
+
+.boom-boi{
+   height: fit-content;
+    width: fit-content;
+   position: absolute;
+   transition: all 2s;
+   background-color: black;
+   opacity: .5;
+        img{
+        height: 200px;
+        width: 200px;
+        }
+}

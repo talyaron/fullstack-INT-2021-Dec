@@ -1,3 +1,6 @@
+.wrapper {
+  margin: auto;
+}
 .wrapper .corona {
   height: 50px;
   width: 50px;
