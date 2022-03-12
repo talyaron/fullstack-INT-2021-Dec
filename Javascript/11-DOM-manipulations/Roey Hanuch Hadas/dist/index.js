@@ -8,9 +8,12 @@ function moveImages() {
     images.forEach(function (element) {
         element.style.left = randomMovement() + "vw";
         element.style.top = randomMovement() + "vh";
+        console.log(element.style.left);
+        console.log(element.style.top);
     });
 }
-setInterval(moveImages, 5000);
+window.requestAnimationFrame(moveImages);
+setInterval(moveImages, 4500);
 console.log(randomMovement());
 moveImages();
 var idk = images[0].getBoundingClientRect();
