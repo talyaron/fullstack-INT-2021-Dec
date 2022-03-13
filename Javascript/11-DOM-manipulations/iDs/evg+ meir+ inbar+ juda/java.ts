@@ -15,7 +15,7 @@ function getRandomNumber (){
     const random = Math.floor(Math.random() * 90);
     return random
 }
-//  setInterval(createNewPosition,2000)
+ setInterval(createNewPosition,2000)
   createNewPosition()
 // const elm2p ={leftPosition:meteaor.getBoundingClientRect().x}
 // console.log(elm2p)
