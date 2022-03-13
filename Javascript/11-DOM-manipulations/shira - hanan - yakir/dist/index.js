@@ -2,8 +2,10 @@
 var ugiCron = document.querySelectorAll(".corona");
 function coronaMove() {
     ugiCron.forEach(function (element) {
+        element.innerHTML = "<img class='corona' src=\"covid19.jpeg\" alt=\"\">"; //replace  element to covid for case that was game alredy
         element.style.top = randomPosition() + "vh";
         element.style.left = randomPosition() + "vw";
+        element.style.visibility = "visible";
     });
     // debugger
     overLapCheck();
@@ -13,10 +15,10 @@ console.log(ugiCron);
 console.dir(ugiCron);
 function randomPosition() {
     var postion;
-    postion = Math.random() * 100;
+    postion = Math.random() * 90;
     return postion;
 }
-var intervalID = setInterval(coronaMove, 1000);
+var intervalID = setInterval(coronaMove, 2000);
 function overLapCheck() {
     for (var i = 0; i < ugiCron.length; i++) {
         for (var j = i + 1; j < ugiCron.length; j++) {

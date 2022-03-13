@@ -72,7 +72,7 @@ function buildAFriend(name, lastname, age, address, friends) {
 }
 var newname = window.prompt("who is this?");
 var newlastname = window.prompt("who??");
-var newage = window.prompt("and how old are they?");
+var newage = parseInt(window.prompt("and how old are they?"));
 var newaddress = window.prompt("what?? that old??? where do they live???");
 var newfriends = [];
 var newestfriend = buildAFriend(newname, newlastname, newage, newaddress, newfriends);
