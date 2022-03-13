@@ -11,11 +11,12 @@
 }
 .wrapper .box {
   width: 150px;
-  height: 150px;
+  min-height: 150px;
   background-color: tomato;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.548);
   border-radius: 5px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

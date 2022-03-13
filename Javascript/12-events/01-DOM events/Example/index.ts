@@ -1,27 +1,24 @@
 const aBox: HTMLDivElement = document.querySelector("#aBox");
+document.onload = handleClick;
 
+aBox.onclick = handleClick;
 
-aBox.onclick = handleClick
+function handleClick(ev) {
+  console.log(ev);
+  ev.stopPropagation();
+  const element = ev.target;
 
-aBox.addEventListener('click', handleClick)
-
-function handleClick(ev){
-
-  
-
-    ev.target.style.backgroundColor = getRandomColor();
-    ev.target.innerHTML = `<div>(${ev.x}, ${ev.y})</div>`
+  element.style.backgroundColor = getRandomColor();
+  element.innerHTML += `<div>(${ev.x}, ${ev.y})</div>`;
 }
 
-aBox.onmouseleave = handleClick
-
-console.dir(aBox)
+console.dir(aBox);
 
 function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
+  var letters = "0123456789ABCDEF";
+  var color = "#";
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
   }
+  return color;
+}
