@@ -78,25 +78,22 @@ let answer = +prompt('pick a number :');
 
 
 for (let i = 0; i < answer; i++) {
-//setInterval(getRandomMove, 2000);
-function move(){
-    let moveInterval = setInterval(getRandomMove, 2000);
-}
+setInterval(getRandomMove, 2000);
 
-    if (i === 0) {
+    if (i == 0) {
     }
 
     else if (ArrayOfRocksPositions[i].right <= positionRock1.right
         && ArrayOfRocksPositions[i].x >= positionRock1.x
-        || ArrayOfRocksPositions[i].y >= positionRock1.y
+        && ArrayOfRocksPositions[i].y >= positionRock1.y
         && ArrayOfRocksPositions[i].bottom <= positionRock1.bottom) {
 
-        alert`BOOM`;
+        console.log(`BOOM`);
     }
 
 
 
-    else if (i === 1) {
+    else if (i == 1) {
         if (ArrayOfRocksPositions[i] == positionRock2) {
 
         }
@@ -104,45 +101,45 @@ function move(){
             && ArrayOfRocksPositions[i].x >= positionRock2.x
             && ArrayOfRocksPositions[i].y >= positionRock2.y
             && ArrayOfRocksPositions[i].bottom <= positionRock2.bottom) {
-            alert`BOOM`;
+        console.log(`BOOM`);
 
         }
     }
 
-    else if (i === 2) {
+    else if (i == 2) {
         if (ArrayOfRocksPositions[i] == positionRock3) {
         }
         else if (ArrayOfRocksPositions[i].right <= positionRock3.right
             && ArrayOfRocksPositions[i].x >= positionRock3.x
             && ArrayOfRocksPositions[i].y >= positionRock3.y
             && ArrayOfRocksPositions[i].bottom <= positionRock3.bottom) {
-            alert`BOOM`;
+        console.log(`BOOM`);
 
         }
 
 
     }
 
-    else if (i === 3) {
+    else if (i == 3) {
         if (ArrayOfRocksPositions[i] == positionRock4) {
         }
         else if (ArrayOfRocksPositions[i].right <= positionRock4.right
             && ArrayOfRocksPositions[i].x >= positionRock4.x
             && ArrayOfRocksPositions[i].y >= positionRock4.y
             && ArrayOfRocksPositions[i].bottom <= positionRock4.bottom) {
-            alert`BOOM`;
+        console.log(`BOOM`);
 
         }
 
     }
-    else if (i === 4) {
+    else if (i == 4) {
         if (ArrayOfRocksPositions[i] == positionRock5) {
         }
         else if (ArrayOfRocksPositions[i].right <= positionRock5.right
             && ArrayOfRocksPositions[i].x >= positionRock5.x
             && ArrayOfRocksPositions[i].y >= positionRock5.y
             && ArrayOfRocksPositions[i].bottom <= positionRock5.bottom) {
-            alert`BOOM`;
+        console.log(`BOOM`);
 
         }
     }
@@ -154,13 +151,14 @@ function move(){
             && ArrayOfRocksPositions[i].x >= positionRock6.x
             && ArrayOfRocksPositions[i].y >= positionRock6.y
             && ArrayOfRocksPositions[i].bottom <= positionRock6.bottom) {
-            alert`BOOM`;
+        console.log(`BOOM`);
     
         }
 
 
 }
+}
+
 function stop(){
     clearInterval(moveInterval);
-    }
-}
+ }
