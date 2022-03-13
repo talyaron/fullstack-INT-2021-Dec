@@ -74,6 +74,14 @@ if(elm2p.leftPosition > elm1p.leftPosition && elm2p.leftPosition < elm1p.rightPo
     console.log('no Overlap')
 }
 
+// const move:any=document.querySelectorAll ("#move")
+//  move.onmouseover=boomFunc;
+
+//  function move(ev){
+
+//  }
+
+
 // if(elm2p.leftPosition > elm1p.leftPosition && elm2p.leftPosition <elm1p.rightPosition){
 //     console.log('Overlap')
 // } else{
