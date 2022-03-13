@@ -1,7 +1,7 @@
 
 
 // function moveObj() {
-//     const $span = $("#random");
+//     const $span = $(".spaceRock");
     
 
 //     $span.animate([
@@ -31,19 +31,18 @@ spaceRocks.forEach(element => {
 
 })
 
-
 function getRandomPosition() {
-    let positionRand = (((Math.random() * 800) + 60).toFixed()) + 'px';
-    console.dir (positionRand)
-    return positionRand;
+    let element = (((Math.random() * 800) + 60).toFixed()) + 'px';
+    console.dir (element)
+    return element;
 }
 getRandomPosition()
 
-// let element:any = astroids[0]//initializing element variable
 setInterval(() => {
-    for(let i:number = 0; i<spaceRocks.length; i++){ //running of every astroid against al the others
-      spaceRocks.style.top = getRandomPosition() + "px"
-      spaceRocks.style.left = getRandomPosition() + "px"
+    for(let i:number = 0; i<spaceRocks.length; i++){ 
+      spaceRocks.style.top = getRandomPosition() + "px";
+      spaceRocks.style.left = getRandomPosition() + "px";
         }
     }    
 ,1000)
+
