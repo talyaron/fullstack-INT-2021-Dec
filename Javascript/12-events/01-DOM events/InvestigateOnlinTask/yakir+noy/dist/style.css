@@ -13,4 +13,5 @@ body {
   height: 200px;
   background-color: #c25a6b;
   border-radius: 20px;
+  transition: all 200ms;
 }
