@@ -1,0 +1,27 @@
+body {
+  margin: 0%;
+}
+
+.dorit {
+  width: 120px;
+  min-height: 120px;
+  background-color: tomato;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.548);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 50px;
+}
+
+#meteor {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 100px;
+}
