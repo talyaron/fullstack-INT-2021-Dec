@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .container {
+            /* display: flex;
+            justify-content: space-between; */
+        }
+
+        .container div {
+            background-color: red;
+            margin: 1%;
+        }
+
+        .container__item {
+            /* display: flex;
+            flex-direction: column; */
+        }
+
+        .container__item div {
+            margin: 5%;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Flex</h1>
+    <div>
+        <div class="container" style="display: flex; flex-direction: row; ">
+            <div class="container__item" style="display: flex; flex-direction: column;">1
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+            <div class="container__item" style="display: flex; flex-direction: column;">1
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+            <div class="container__item" style="display: flex; flex-direction: column;">1
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

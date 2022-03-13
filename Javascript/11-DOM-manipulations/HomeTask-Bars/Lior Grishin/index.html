@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <script defer src="dist/app.js"></script>
+</head>
+<body class="dark">
+
+    <nav class="navbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">Home</li>
+        <li class="nav-item">About</li>
+
+        <!--Dropdown-->
+        <li class="nav-item has-dropdown">
+          <a href="#">Theme</a>
+          <ul class="dropdown">
+            <li class="dropdown-item">
+              <a id="light" href="#">light</a>
+            </li>
+            <li class="dropdown-item">
+              <a id="dark" href="#">dark</a>
+            </li>
+            <li class="dropdown-item">
+              <a id="solar" href="#">solarize</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">Login</li>
+      </ul>
+    </nav>
+
+    <header>
+      <img src="Images/LG_Logo_v2.png" alt="" class="logo">
+      <h1>FullStack Web Development</h1>
+      <p>HTML | SCSS | Typescript</p>
+    </header>
+
+    <section class="sub">
+      <div class="information">
+        <h2>Bar Charts</h2>
+        <p>A bar chart or bar graph is a chart or graph that presents categorical data with rectangular bars with heights or lengths proportional to the values that they represent. The bars can be plotted vertically or horizontally. A vertical bar chart is sometimes called a column chart.</p>
+      </div>
+      <div class="instructions">
+        <h2>How to use?</h2>
+        <p>Right click anywhere and select Inspect<br>
+          In the console tab call function "createGraphBars(barArray)" - default value<br>
+          To remove existed bars call function "removeBars( )"<br>
+          Play yourself with the "Bar Chart" by calling the function and inserting your type array<br>
+          Example: createGraphBars([25, 10, 65, 80, 45, 20, 71])<br>
+          Array must be with numbers between 0 to 100.
+        </p>
+      </div>
+    </section>
+
+    <section class="graph-section">
+        <div class="wrapper">
+        </div>
+    </section>
+</body>
+</html>

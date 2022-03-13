@@ -2,10 +2,6 @@ var myBars = document.querySelectorAll('.column');
 var myWrapper = document.querySelector('.wrapper');
 var numbersArr = [10, 26, 50, 14, 70, 84, 6];
 var myText = document.querySelectorAll('.text');
-// numbersArr.forEach(element=>{
-//     let barElm = element;
-//     element.style
-// })
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
     var color = '#';
@@ -21,4 +17,4 @@ for (var i = 0; i < numbersArr.length; i++) {
     myBars[i].style.backgroundColor = getRandomColor();
     myText[i].innerHTML = "" + numbersArr[i];
 }
-console.dir(myBars);
+// console.dir(myBars)

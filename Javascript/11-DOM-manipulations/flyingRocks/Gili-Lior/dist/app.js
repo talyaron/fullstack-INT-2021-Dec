@@ -17,5 +17,17 @@ function setRandomRotation() {
         element.style.transform = "rotate(" + getRandomNumber(360) + "deg)";
     });
 }
+function getRandomTime(min, max) {
+    return Math.random() * (max - min) + min;
+}
+moveMetor();
 setRandomRotation();
-setInterval(moveMetor, 5000);
+metor.forEach(function (element) {
+    (setInterval(moveMetor, getRandomTime(2500, 5000)));
+});
+function collisionDetection() {
+    for (var c = 0; c < metor; c++) {
+        for (var r = 0; r < metor; r++) {
+        }
+    }
+}

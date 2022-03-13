@@ -1,0 +1,24 @@
+
+.container{
+//    display: flex;
+//    gap: 5px;
+//    margin: auto;
+
+
+    .bar{
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        // display: flex;
+        // margin: auto;
+        // gap: 5px;
+        padding: 5px;
+        
+        
+        // opacity: 50%;
+        
+        &__number{
+            color: black;
+        }
+    }
+}
