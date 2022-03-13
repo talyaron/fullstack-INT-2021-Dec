@@ -43,17 +43,29 @@ RandomRotation1();
 RandomRotation2();
 meteor1();
 meteor2();
-//   ------1----  
-// function myFunction() {
-//     var div = document.getElementById("myDiv");
-//     var rect = div.getBoundingClientRect();
-//     x = rect.left;
-//     y = rect.top;
-//     w = rect.width;
-//     h = rect.height;
-//     alert ("Left: " + x + ", Top: " + y + ", Width: " + w + ", Height: " + h);
-//   }
-//   ------2-----
+// setInterval (wrapper1, 3000)
+// setInterval (wrapper2, 3000)
+var elm1 = document.querySelector('.wrapper1');
+var elm2 = document.querySelector('.wrapper2');
+var elm2p = { leftPosition: elm2.getBoundingClientRect().x };
+console.log(elm2p);
+var elm1p = {
+    leftPosition: elm1.getBoundingClientRect().x,
+    rightPosition: elm1.getBoundingClientRect().right
+};
+console.log(elm1p);
+if (elm2p.leftPosition > elm1p.leftPosition && elm2p.leftPosition < elm1p.rightPosition) {
+    console.log('Overlap');
+}
+else {
+    (elm2p.leftPosition < elm1p.leftPosition && elm2p.leftPosition > elm1p.rightPosition);
+    console.log('no Overlap');
+}
+//  setInterval (wrapper1, 3000)
+// setInterval (wrapper2, 3000)
+// function elementsOverlap('elm1',`elm2`) {
+//     const domRect1 = el1.getBoundingClientRect();
+//     const domRect2 = el2.getBoundingClientRect();
 //     return (
 //       domRect1.top > domRect2.bottom ||
 //       domRect1.right < domRect2.left ||
