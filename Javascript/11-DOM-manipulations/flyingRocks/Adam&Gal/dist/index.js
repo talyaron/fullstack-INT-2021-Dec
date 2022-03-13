@@ -61,41 +61,10 @@ else {
     (elm2p.leftPosition < elm1p.leftPosition && elm2p.leftPosition > elm1p.rightPosition);
     console.log('no Overlap');
 }
-// const move:any=document.querySelectorAll ("#move")
-//  move.onmouseover=boomFunc;
-//  function move(ev){
-//  }
-// if(elm2p.leftPosition > elm1p.leftPosition && elm2p.leftPosition <elm1p.rightPosition){
-//     console.log('Overlap')
-// } else{
-//     console.log('No Overlap')
-// }
-// ----2-----
-// Crafty.init(200, 200);
-// var dim1 = {x: 5, y: 5, w: 50, h: 50}
-// var dim2 = {x: 20, y: 10, w: 60, h: 40}
-// var rect1 = Crafty.e("2D, Canvas, Color").attr(dim1).color("red");
-// var rect2 = Crafty.e("2D, Canvas, Color, Keyboard, Fourway").fourway(2).attr(dim2).color("blue");
-// rect2.bind("EnterFrame", function () {
-//     if (rect1.x < rect2.x + rect2.w &&
-//         rect1.x + rect1.w > rect2.x &&
-//         rect1.y < rect2.y + rect2.h &&
-//         rect1.h + rect1.y > rect2.y) {
-//         // collision detected!
-//         this.color("green");
-//     } else {
-//         // no collision
-//         this.color("blue");
-//     }
-// });
-//   ------3-----
-//     return (
-//       domRect1.top > domRect2.bottom ||
-//       domRect1.right < domRect2.left ||
-//       domRect1.bottom < domRect2.top ||
-//       domRect1.left > domRect2.right
-//     );
-//   }
-//   const el1 = document.getElementsByClassName('wrapper1');
-//   const el2 = document.getElementsByClassName('wrapper2');
-// console.log(elementsOverlap(el1, el2))
+var MouseBoom = document.querySelectorAll;
+MouseBoom.onmouseover = mouseInv;
+function mouseInv(ev) {
+    MouseBoom.style.top = ev.target.style.top + 150;
+    MouseBoom.style.left = ev.target.style.left + 150;
+    MouseBoom.opacity = 0;
+}
