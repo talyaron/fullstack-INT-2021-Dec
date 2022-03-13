@@ -45,10 +45,14 @@ meteor1();
 meteor2();
 setInterval(wrapper1, 3000);
 setInterval(wrapper2, 3000);
-return !(domRect1.top > domRect2.bottom ||
-    domRect1.right < domRect2.left ||
-    domRect1.bottom < domRect2.top ||
-    domRect1.left > domRect2.right);
+function elementsOverlap(, ) {
+    var domRect1 = wrapper1.getBoundingClientRect();
+    var domRect2 = wrapper2.getBoundingClientRect();
+    return !(domRect1.top > domRect2.bottom ||
+        domRect1.right < domRect2.left ||
+        domRect1.bottom < domRect2.top ||
+        domRect1.left > domRect2.right);
+}
 var el1 = document.getElementsByClassName('wrapper1');
 var el2 = document.getElementsByClassName('wrapper2');
 console.log(elementsOverlap(el1, el2));

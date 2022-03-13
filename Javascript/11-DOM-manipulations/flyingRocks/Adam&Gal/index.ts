@@ -55,9 +55,9 @@ setInterval (wrapper1, 3000)
 setInterval (wrapper2, 3000)
     
 
-function elementsOverlap(''רש') {
-    const domRect1 = elm1.getBoundingClientRect();
-    const domRect2 = elm2.getBoundingClientRect();
+function elementsOverlap('wrapper1','wrapper2') {
+    const domRect1 = wrapper1.getBoundingClientRect();
+    const domRect2 = wrapper2.getBoundingClientRect();
   
     return !(
       domRect1.top > domRect2.bottom ||
