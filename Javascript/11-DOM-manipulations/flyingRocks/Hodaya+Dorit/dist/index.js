@@ -44,10 +44,8 @@ function colision(elem1, elem2) {
     var topHeight1 = topn1 + myHeight;
     var leftWidth2 = leftn2 + myWidth;
     var topHeight2 = topn2 + myHeight;
-    if (leftn1 < leftWidth2 && leftn1 > leftn2) { // x axis of first element is inside second element
-        return true;
-    }
-    else if (topn1 < topHeight2 && topn1 > topn2) { // y axis of first element is inside second element
+    if (leftn1 < leftWidth2 && leftn1 > leftn2 // x axis of first element is inside second element
+        && topn1 < topHeight2 && topn1 > topn2) { // y axis of first element is inside second element
         return true;
     }
     else {

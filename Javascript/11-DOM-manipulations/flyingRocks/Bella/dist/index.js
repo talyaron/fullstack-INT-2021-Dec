@@ -1,5 +1,5 @@
 // function moveObj() {
-//     const $span = $("#random");
+//     const $span = $(".spaceRock");
 //     $span.animate([
 //         // keyframes
 //         { transform: 'translateY(100vh)' },
@@ -20,14 +20,13 @@ spaceRocks.forEach(function (element) {
     element.style.top = getRandomPosition();
 });
 function getRandomPosition() {
-    var positionRand = (((Math.random() * 800) + 60).toFixed()) + 'px';
-    console.dir(positionRand);
-    return positionRand;
+    var element = (((Math.random() * 800) + 60).toFixed()) + 'px';
+    console.dir(element);
+    return element;
 }
 getRandomPosition();
-// let element:any = astroids[0]//initializing element variable
 setInterval(function () {
-    for (var i = 0; i < spaceRocks.length; i++) { //running of every astroid against al the others
+    for (var i = 0; i < spaceRocks.length; i++) {
         spaceRocks.style.top = getRandomPosition() + "px";
         spaceRocks.style.left = getRandomPosition() + "px";
     }
