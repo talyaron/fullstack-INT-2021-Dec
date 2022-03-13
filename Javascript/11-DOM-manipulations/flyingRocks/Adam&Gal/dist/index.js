@@ -58,6 +58,7 @@ if (elm2p.leftPosition > elm1p.leftPosition && elm2p.leftPosition < elm1p.rightP
     console.log('Overlap');
 }
 else {
+    (elm2p.leftPosition < elm1p.leftPosition && elm2p.leftPosition > elm1p.rightPosition);
     console.log('no Overlap');
 }
 //  setInterval (wrapper1, 3000)

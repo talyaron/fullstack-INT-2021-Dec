@@ -67,9 +67,10 @@ const elm1p = {
 }
 console.log(elm1p)
 
-if(elm2p.leftPosition > elm1p.leftPosition && elm2p.leftPosition <elm1p.rightPosition){
+if(elm2p.leftPosition > elm1p.leftPosition && elm2p.leftPosition < elm1p.rightPosition){
     console.log('Overlap')
 } else{
+    (elm2p.leftPosition < elm1p.leftPosition && elm2p.leftPosition > elm1p.rightPosition)
     console.log('no Overlap')
 }
 
