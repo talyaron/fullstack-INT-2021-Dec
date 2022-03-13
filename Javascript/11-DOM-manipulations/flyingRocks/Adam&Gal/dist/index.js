@@ -43,6 +43,7 @@ RandomRotation1();
 RandomRotation2();
 meteor1();
 meteor2();
+<<<<<<< Updated upstream
 // setInterval (wrapper1, 3000)
 // setInterval (wrapper2, 3000)
 var elm1 = document.querySelector('.wrapper1');
@@ -58,13 +59,49 @@ if (elm2p.leftPosition > elm1p.leftPosition && elm2p.leftPosition < elm1p.rightP
     console.log('Overlap');
 }
 else {
+    (elm2p.leftPosition < elm1p.leftPosition && elm2p.leftPosition > elm1p.rightPosition);
     console.log('no Overlap');
 }
-setInterval(wrapper1, 3000);
-setInterval(wrapper2, 3000);
+//  setInterval (wrapper1, 3000)
+// setInterval (wrapper2, 3000)
 // function elementsOverlap('elm1',`elm2`) {
 //     const domRect1 = el1.getBoundingClientRect();
 //     const domRect2 = el2.getBoundingClientRect();
+=======
+// -----1------
+// const elm1 = document.querySelector('.wrapper1');
+// const elm2 = document.querySelector('.wrapper2');
+// const elm2p ={leftPosition:elm2.getBoundingClientRect().x}
+// console.log(elm2p)
+// const elm1p = {
+//     leftPosition:elm1.getBoundingClientRect().x,
+//     rightPosition:elm1.getBoundingClientRect().right
+// }
+// if(elm2p.leftPosition > elm1p.leftPosition && elm2p.leftPosition <elm1p.rightPosition){
+//     console.log('Overlap')
+// } else{
+//     console.log('No Overlap')
+// }
+// ----2-----
+// Crafty.init(200, 200);
+// var dim1 = {x: 5, y: 5, w: 50, h: 50}
+// var dim2 = {x: 20, y: 10, w: 60, h: 40}
+// var rect1 = Crafty.e("2D, Canvas, Color").attr(dim1).color("red");
+// var rect2 = Crafty.e("2D, Canvas, Color, Keyboard, Fourway").fourway(2).attr(dim2).color("blue");
+// rect2.bind("EnterFrame", function () {
+//     if (rect1.x < rect2.x + rect2.w &&
+//         rect1.x + rect1.w > rect2.x &&
+//         rect1.y < rect2.y + rect2.h &&
+//         rect1.h + rect1.y > rect2.y) {
+//         // collision detected!
+//         this.color("green");
+//     } else {
+//         // no collision
+//         this.color("blue");
+//     }
+// });
+//   ------3-----
+>>>>>>> Stashed changes
 //     return (
 //       domRect1.top > domRect2.bottom ||
 //       domRect1.right < domRect2.left ||

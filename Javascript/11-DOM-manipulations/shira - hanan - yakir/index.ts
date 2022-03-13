@@ -5,8 +5,10 @@ const ugiCron: NodeListOf<HTMLElement> = document.querySelectorAll(".corona");
 
 function coronaMove() {
   ugiCron.forEach((element) => {
+    element.innerHTML="<img class='corona' src=\"covid19.jpeg\" alt=\"\">"; //replace  element to covid for case that was game alredy
     element.style.top = randomPosition() + "vh";
     element.style.left = randomPosition() + "vw";
+    element.style.visibility = "visible"
   });
 
   // debugger
@@ -21,11 +23,11 @@ console.dir(ugiCron)
 
 function randomPosition() {
   let postion: number;
-  postion = Math.random() * 100;
+  postion = Math.random() * 90;
   return postion;
 }
 
-var intervalID = setInterval(coronaMove, 1000);
+var intervalID = setInterval(coronaMove, 2000);
 
 function overLapCheck() {
 
@@ -45,8 +47,9 @@ function overLapCheck() {
         ) && i != j // eleminet the possibility for same index element
       ) {
         console.log(`covid Collision id ${i} and ${j}`);
-        ugiCron[j].innerHTML="<img src=\"Explosion.png\" alt=\"\">";   //replace one element to explosion
-        ugiCron[i].style.visibility = "hidden";                         // hide the other element
+        ugiCron[j].innerHTML="<img class='explosion' src=\"Boom-PNG.png\" alt=\"\">"; //replace one element to explosion
+        ugiCron[i].style.visibility = "hidden";// hide the other element
+        
       }
     }
   }

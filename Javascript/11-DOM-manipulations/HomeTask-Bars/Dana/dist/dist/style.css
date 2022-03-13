@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  height: 80vh;
+  width: 80vw;
+  margin: auto;
+  border: 1px solid black;
+  margin-top: 3rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.bar-style {
+  width: 6rem;
+  background-color: teal;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bar-text {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4b0dad;
+  top: -4rem;
+}
