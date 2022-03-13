@@ -54,7 +54,6 @@ meteor2()
 // setInterval (wrapper1, 3000)
 // setInterval (wrapper2, 3000)
 
-<<<<<<< Updated upstream
 const elm1 = document.querySelector('.wrapper1');
 const elm2 = document.querySelector('.wrapper2');
 
@@ -74,18 +73,6 @@ if(elm2p.leftPosition > elm1p.leftPosition && elm2p.leftPosition < elm1p.rightPo
     (elm2p.leftPosition < elm1p.leftPosition && elm2p.leftPosition > elm1p.rightPosition)
     console.log('no Overlap')
 }
-=======
-// -----1------
-// const elm1 = document.querySelector('.wrapper1');
-// const elm2 = document.querySelector('.wrapper2');
-
-// const elm2p ={leftPosition:elm2.getBoundingClientRect().x}
-// console.log(elm2p)
-// const elm1p = {
-//     leftPosition:elm1.getBoundingClientRect().x,
-//     rightPosition:elm1.getBoundingClientRect().right
-// }
->>>>>>> Stashed changes
 
 // if(elm2p.leftPosition > elm1p.leftPosition && elm2p.leftPosition <elm1p.rightPosition){
 //     console.log('Overlap')
@@ -93,16 +80,6 @@ if(elm2p.leftPosition > elm1p.leftPosition && elm2p.leftPosition < elm1p.rightPo
 //     console.log('No Overlap')
 // }
 
-<<<<<<< Updated upstream
-//  setInterval (wrapper1, 3000)
-// setInterval (wrapper2, 3000)
-    
-
-// function elementsOverlap('elm1',`elm2`) {
-//     const domRect1 = el1.getBoundingClientRect();
-//     const domRect2 = el2.getBoundingClientRect();
-  
-=======
 // ----2-----
 // Crafty.init(200, 200);
 
@@ -127,7 +104,6 @@ if(elm2p.leftPosition > elm1p.leftPosition && elm2p.leftPosition < elm1p.rightPo
 // });
 
 //   ------3-----
->>>>>>> Stashed changes
 //     return (
 //       domRect1.top > domRect2.bottom ||
 //       domRect1.right < domRect2.left ||

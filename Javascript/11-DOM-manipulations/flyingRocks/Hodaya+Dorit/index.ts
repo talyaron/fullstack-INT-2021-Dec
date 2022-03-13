@@ -45,9 +45,9 @@ function colision(elem1,elem2):boolean{
     let leftWidth2:any = leftn2+ myWidth
     let topHeight2:any = topn2 + myHeight
     
-    if(leftn1<leftWidth2 && leftn1> leftn2){ // x axis of first element is inside second element
-        return true
-    }else if(topn1 < topHeight2 && topn1 > topn2){ // y axis of first element is inside second element
+    if(leftn1<leftWidth2 && leftn1> leftn2 // x axis of first element is inside second element
+        
+    &&topn1 < topHeight2 && topn1 > topn2) {// y axis of first element is inside second element
         return true
     }else{
         return false
