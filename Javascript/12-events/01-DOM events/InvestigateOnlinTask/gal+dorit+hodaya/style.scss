@@ -1,5 +1,6 @@
 body{
     margin: 0%;
+    position: relative;
 }
 
 .dorit{
@@ -13,9 +14,13 @@ body{
     justify-content: center;
     align-items: center;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 5px;
+    position: relative;
   }
 
+#boom{
+  display: none;
+}
 
 #meteor{
     width: 150px;

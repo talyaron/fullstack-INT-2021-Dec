@@ -1,9 +1,18 @@
 var hodayaLoOna = document.querySelector("#meteor");
-var doritIsAwake = document.querySelector(".dorit");
+var doritIsAwake = document.querySelectorAll(".dorit");
 hodayaLoOna.onmousemove = wakeUpHodaya;
 hodayaLoOna.ondblclick = bokerTovHodaya;
 hodayaLoOna.onmouseover = dorit;
 doritIsAwake.onmouseenter = wen;
+doritIsAwake.forEach(function (element) {
+    element.onmouseover = onMouseBoom;
+});
+function onMouseBoom(ev) {
+    var boomImg = document.querySelector("#boom");
+    boomImg.style.top = ev.target.style.top + 10;
+    boomImg.style.left = ev.target.style.left + 10;
+    boomImg.dis;
+}
 function wen(ev) {
     ev.target.innerHTML += "<div>(" + ev.x + ", " + ev.y + ") </div>";
     ev.target.style.top = getRandomInt(100) + "vw";
