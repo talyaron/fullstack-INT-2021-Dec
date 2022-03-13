@@ -1,0 +1,12 @@
+#rapper {
+  width: 90vw;
+  height: 90vh;
+  position: relative;
+}
+#rapper .astroid {
+  position: absolute;
+}
+#rapper .astroid img {
+  height: 50px;
+  width: 67px;
+}

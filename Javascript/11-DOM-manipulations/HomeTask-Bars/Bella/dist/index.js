@@ -1,22 +1,4 @@
-// const boxes:any = document.querySelectorAll('.box');
-// console.dir(boxes)
-// function getTextbYId() {
-//   boxes.forEach(element=>{
-//     element.innerText = element.id
-//     console.log (element.id)
-//     return element.innerText
-// })
-// }
-// getTextbYId()
-// const rowsArray = [1,2,3,4,5,6,7]
-// const columnArray = ["a", "b", "c", "d"]
-// const data = [4,5,7]
-// function addDataValues () {
-//   data.forEach(Element=>{
-//     element = data.push
-//   })
-// }
-var coundArr = [22, 45, 61, 88];
+var coundArr = [22, 45, 102, 88];
 console.dir(coundArr);
 function dataVisual(data) {
     data.forEach(function (elm) {
@@ -25,6 +7,16 @@ function dataVisual(data) {
         addData.style.height = elm * 3 + "px";
         var text = document.createTextNode("" + elm);
         addData.appendChild(text);
+        //random coloring
+        var randomColor = function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        };
+        addData.style.backgroundColor = randomColor();
         var dataBars = document.getElementById("wrapper");
         dataBars.appendChild(addData);
     });
