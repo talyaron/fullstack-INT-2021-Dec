@@ -1,0 +1,28 @@
+body {
+  margin: 0%;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.metor {
+  height: 10vh;
+  display: inline-block;
+  position: relative;
+  transition: all 5000ms ease-in-out;
+  animation-name: rotate360;
+}
+.metor img {
+  height: 100%;
+}
+
+@keyframes rotate360 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+img {
+  animation: 10s rotate360 infinite linear;
+}
+
+/* TODO: Add -vendor-prefixes for different browsers */

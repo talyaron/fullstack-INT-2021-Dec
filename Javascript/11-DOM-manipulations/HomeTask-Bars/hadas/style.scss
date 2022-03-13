@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+}
+
+.wrapper{
+    display: flex;
+    margin: auto;
+    width: fit-content;
+
+    .bar{
+        background-color: rgb(211, 24, 24);
+        color: whitesmoke;
+        position: relative;
+        text-align: center;
+        margin: 2px;
+    }
+}

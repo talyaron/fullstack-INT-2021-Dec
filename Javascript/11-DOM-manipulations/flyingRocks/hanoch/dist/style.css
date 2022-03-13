@@ -1,0 +1,9 @@
+.container .meteorImg {
+  position: absolute;
+  width: 200px;
+  display: flex;
+  transition: all 5000ms;
+}
+.container .meteorImg img {
+  width: 200px;
+}

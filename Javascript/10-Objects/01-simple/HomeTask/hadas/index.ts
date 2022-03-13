@@ -3,45 +3,36 @@ interface friend {
     firstname: string,
     lastname: string,
     address: string,
+    friends: Array<friend>,
 }
 
-const Me = {
-    firstname: "Hadas",
-    lastname: "Zabahon" ,
-    address: "Beer sheva"
-}
+
 
 const friend1 :friend= {
-    firstname: "Sara" ,
-    lastname: "Koletker" ,
-    address: "Migdal haemek" ,
+    firstname:"Hadas" ,
+    lastname: "Zabahon" ,
+    address:"Beer sheva" ,
+    friends: [{firstname:"Sara", lastname: "Koletker", address:"Migdal haemek",friends:[] },
+            {firstname:"Moran", lastname: "Pinto", address:"Netivot",friends:[] },
+            {firstname:"Hodaya", lastname: "Zeharya", address:"Netivot",friends:[] }
+        ]
 }
 
-const friend2 :friend= {
-    firstname: "Moran" ,
-    lastname: "Pinto" ,
-    address: "Netivot" ,
+
+
+function PrintFriend(person:friend):String
+{
+    let count = 0;
+    let add:string= "";
+    person.friends.forEach(friend2 => {
+        count++;
+        add+=`${friend2.address} ,` ;
+
+     
+    });
+ 
+   
+    return `you have ${count} friends and they live in ${add}`;
 }
 
-const friend3 :friend= {
-    firstname: "Hodaya" ,
-    lastname: "Zeharya" ,
-    address: "Netivot" ,
-}
-
-const friend4 :friend= {
-    firstname: "Simcha" ,
-    lastname: "Uzan" ,
-    address: "Beer sheva" ,
-}
-
-const friendarr:Array<friend> = [friend1 , friend2 , friend3 , friend4];
-
-
-function friends(arr:Array<friend>):string{
-    let add:string= ``;
-    arr .forEach (elm => add+=`${elm.address},`);
-    return (`You have ${arr.length} friends and they live in ${add}`)
-}
-
-console.log (friends (friendarr));
+console.log(PrintFriend(friend1));

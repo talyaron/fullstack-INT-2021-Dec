@@ -1,0 +1,64 @@
+#theProgress {
+  width: 500px;
+  height: 600px;
+  background-color: black;
+  box-sizing: border-box;
+  position: relative;
+}
+#theProgress #progressBarOne {
+  width: 15%;
+  height: 30%;
+  background-color: #306652f5;
+  text-align: center;
+  line-height: 30px;
+  color: wheat;
+  position: absolute;
+  left: 20%;
+  bottom: 0;
+}
+#theProgress #progressBarTwo {
+  width: 15%;
+  height: 60%;
+  background-color: #4c2c88;
+  text-align: center;
+  line-height: 30px;
+  color: #f8ba46;
+  position: absolute;
+  left: 45%;
+  bottom: 0;
+}
+#theProgress #progressBarThree {
+  width: 15%;
+  height: 90%;
+  background-color: rgba(29, 89, 94, 0.966);
+  text-align: center;
+  line-height: 30px;
+  color: #f8cb76;
+  position: absolute;
+  position: absolute;
+  left: 70%;
+  bottom: 0;
+}
+
+button {
+  background-color: #7b38d8;
+  border-radius: 10px;
+  border: 4px double #cccccc;
+  color: #eeeeee;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width: 200px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-top: 0;
+  margin-left: 140px;
+}
+
+button:hover {
+  background-color: green;
+}

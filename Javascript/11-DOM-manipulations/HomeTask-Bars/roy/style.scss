@@ -1,0 +1,28 @@
+.wrapper{
+    display: flex;
+    position: relative;
+    height: 90vh;
+    width: 80vw;
+    align-items: flex-end;
+    justify-content: space-evenly;
+
+}
+
+.bar{
+    background-color: rgb(112, 226, 137);
+    color: white;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+   top: -10vh;
+
+   p{
+       color: black;
+       position: relative;
+       top: -7vh;
+   }
+   
+
+
+}

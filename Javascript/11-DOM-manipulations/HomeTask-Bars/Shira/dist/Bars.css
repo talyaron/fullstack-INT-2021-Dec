@@ -1,0 +1,28 @@
+.head {
+  font-weight: bolder;
+  color: rgba(165, 42, 42, 0.986);
+}
+
+.wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  position: fixed;
+  bottom: 0px;
+}
+.wrapper .column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0099ff;
+  margin: 10px;
+  text-align: center;
+  border-radius: 15px;
+}
+.wrapper .column .text {
+  color: black;
+  position: absolute;
+  font-weight: bolder;
+  top: -3rem;
+}

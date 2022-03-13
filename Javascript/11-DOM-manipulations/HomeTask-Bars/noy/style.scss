@@ -1,0 +1,17 @@
+body {
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: flex;
+    margin: auto;
+    width: fit-content;
+
+    .bar {
+        background-color: #c70d9f;
+        position: relative;
+        margin: 5px;
+        color: #ffffff;
+        text-align: center;
+    }
+}

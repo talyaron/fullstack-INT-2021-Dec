@@ -1,0 +1,27 @@
+var array = [100, 56, 89, 75, 36, 69, 33];
+var max = Math.max.apply(Math, array);
+var wrapper = document.querySelector('.wrapper');
+var width = '80vw';
+var h = window.innerHeight * 0.6 + 'px';
+var wrapperStyle = wrapper.style;
+wrapperStyle.width = width;
+wrapperStyle.height = h;
+wrapperStyle.backgroundColor = 'rgba(254,162,22,0.1)';
+wrapperStyle.border = '0.1rem solid black';
+wrapperStyle.display = 'flex';
+wrapperStyle.justifyContent = 'space-between';
+wrapperStyle.alignItems = 'flex-end';
+wrapperStyle.margin = 'auto';
+var text = document.createTextNode('graph');
+var par = document.createElement('P');
+par.appendChild(text);
+wrapper.appendChild(par);
+array.forEach(function (element) {
+    var bar = document.createElement('div');
+    var barStyle = bar.style;
+    barStyle.width = '3rem';
+    barStyle.backgroundColor = 'red';
+    console.log('i');
+    barStyle.height = ((element / max) * 100) + '%';
+    wrapper.appendChild(bar);
+});

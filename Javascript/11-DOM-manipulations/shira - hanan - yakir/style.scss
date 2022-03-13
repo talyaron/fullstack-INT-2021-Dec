@@ -1,0 +1,40 @@
+.wrapper{
+    // position: relative;
+    margin: auto;
+    .corona {
+        // position: absolute;
+        height: 50px;
+        width: 50px;
+        position: absolute;
+    
+        img {
+            width: 100%;
+            transition: width 2s;
+        }
+    }
+    .rotate{
+        //-webkit-animation: rotating 2s linear infinite;
+        animation: rotate 10s linear infinite; 
+    }
+    
+    .explosion {
+    
+        animation: center-animate 1s;
+    }
+    
+    @keyframes rotate{
+        to{ transform: rotate(360deg); }
+    }
+    
+    @keyframes center-animate {
+        0% {
+          transform: scale(1);
+        }
+        90% {
+            transform: scale(3);
+          }
+        100% {
+            display: block;
+        }
+      }
+}

@@ -1,0 +1,19 @@
+body {
+  background-color: black;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  background-color: #b787de;
+  width: fit-content;
+  margin: auto;
+  margin-top: 50px;
+}
+.wrapper .column {
+  margin: 6px;
+  text-align: center;
+  border-radius: 30px;
+  background-color: #664780;
+  position: relative;
+}

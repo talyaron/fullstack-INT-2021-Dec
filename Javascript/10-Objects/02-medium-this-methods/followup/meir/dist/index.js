@@ -5,10 +5,5 @@ var tzavi = {
     preferdFoods: ["lettuce", "carrot", 'Cabedge'],
     hatedFoods: ['tuna'],
     tzaviFoods: function (turtleFood) {
-        var foods = " ";
-        for (var i = 0; i < turtleFood.length; i++) {
-            foods += "I like " + this.preferdFoods + " and I hate " + this.hatedFoods;
-        }
-        return foods;
     }
 };

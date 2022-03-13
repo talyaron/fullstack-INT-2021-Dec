@@ -1,0 +1,12 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  width: 950px;
+  height: 1000px;
+  background-color: bisque;
+  margin: auto;
+}
+.wrapper .box {
+  position: absolute;
+}

@@ -1,0 +1,17 @@
+.box{
+    width: 80%;
+    height: 80%;
+    border-color: rgb(163, 93, 93);
+    border-style: groove;
+    padding: 50px;
+    position: relative;
+    background-color: rgb(211,82,139);
+    .col{
+        font-weight: bold;
+        position: relative;
+        h5{
+            position: absolute;
+            top: -50px;
+        }
+    }
+}

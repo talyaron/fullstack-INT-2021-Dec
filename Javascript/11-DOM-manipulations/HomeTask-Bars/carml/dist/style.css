@@ -1,0 +1,17 @@
+.box {
+  width: 80%;
+  height: 80%;
+  border-color: #a35d5d;
+  border-style: groove;
+  padding: 50px;
+  position: relative;
+  background-color: #d3528b;
+}
+.box .col {
+  font-weight: bold;
+  position: relative;
+}
+.box .col h5 {
+  position: absolute;
+  top: -50px;
+}
