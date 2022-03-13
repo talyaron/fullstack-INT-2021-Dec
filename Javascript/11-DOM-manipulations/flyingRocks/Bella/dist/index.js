@@ -7,8 +7,8 @@ function moveObj() {
     ], function () {
         var maxLeft = $(window).width() - $span.width();
         var maxTop = $(window).height() - $span.height();
-        var leftPos = Math.floor(Math.random() * (maxLeft + 1));
-        var topPos = Math.floor(Math.random() * (maxTop + 1));
+        var leftPos = Math.floor(Math.random() * (maxLeft + 10));
+        var topPos = Math.floor(Math.random() * (maxTop + 10));
         $span.css({ left: leftPos, top: topPos });
     });
 }
