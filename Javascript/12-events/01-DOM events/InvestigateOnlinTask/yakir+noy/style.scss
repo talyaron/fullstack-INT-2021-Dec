@@ -1,0 +1,18 @@
+body{
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+}
+
+#box{
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(194, 90, 107);
+    border-radius: 20px;
+    transition: all 200ms;
+}
