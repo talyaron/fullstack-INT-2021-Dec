@@ -14,12 +14,12 @@ body {
   justify-content: center;
   align-items: center;
   margin: auto;
-  margin-top: 5px;
   position: relative;
+  margin-top: 5px;
 }
 
 #boom {
-  display: none;
+  opacity: 1;
 }
 
 #meteor {
