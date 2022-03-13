@@ -8,10 +8,10 @@ doritIsAwake.forEach(function (element) {
     element.onmouseover = onMouseBoom;
 });
 function onMouseBoom(ev) {
-    var boomImg = document.querySelector("#boom");
-    boomImg.style.top = ev.target.style.top + 10;
-    boomImg.style.left = ev.target.style.left + 10;
-    boomImg.dis;
+    // let boomImg= document.querySelector("#boom")
+    // boomImg.style.top=ev.target.style.top+10
+    // boomImg.style.left=ev.target.style.left+10
+    // boomImg.dis
 }
 function wen(ev) {
     ev.target.innerHTML += "<div>(" + ev.x + ", " + ev.y + ") </div>";

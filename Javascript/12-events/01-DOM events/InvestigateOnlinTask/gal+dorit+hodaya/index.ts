@@ -12,10 +12,10 @@ doritIsAwake.forEach(element => {
 
 
 function onMouseBoom (ev){
-    let boomImg= document.querySelector("#boom")
-    boomImg.style.top=ev.target.style.top+10
-    boomImg.style.left=ev.target.style.left+10
-    boomImg.dis
+    // let boomImg= document.querySelector("#boom")
+    // boomImg.style.top=ev.target.style.top+10
+    // boomImg.style.left=ev.target.style.left+10
+    // boomImg.dis
 }
 
 function wen (ev){
