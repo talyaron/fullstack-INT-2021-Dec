@@ -1,17 +1,20 @@
 var hodayaLoOna = document.querySelector("#meteor");
 var doritIsAwake = document.querySelectorAll(".dorit");
+var boomImg = document.querySelector("#boom");
 hodayaLoOna.onmousemove = wakeUpHodaya;
 hodayaLoOna.ondblclick = bokerTovHodaya;
 hodayaLoOna.onmouseover = dorit;
 doritIsAwake.onmouseenter = wen;
-doritIsAwake.forEach(function (element) {
-    element.onmouseover = onMouseBoom;
+doritIsAwake.forEach(function (elem) {
+    elem.onmousedown = MouseBoom;
 });
-function onMouseBoom(ev) {
-    // let boomImg= document.querySelector("#boom")
-    // boomImg.style.top=ev.target.style.top+10
-    // boomImg.style.left=ev.target.style.left+10
-    // boomImg.dis
+doritIsAwake.forEach(function (element) {
+    element.ondblclick = MouseBoom;
+});
+function MouseBoom(ev) {
+    boomImg.style.top = ev.target.style.top + 150;
+    boomImg.style.left = ev.target.style.left + 150;
+    boomImg.opacity = 0;
 }
 function wen(ev) {
     ev.target.innerHTML += "<div>(" + ev.x + ", " + ev.y + ") </div>";

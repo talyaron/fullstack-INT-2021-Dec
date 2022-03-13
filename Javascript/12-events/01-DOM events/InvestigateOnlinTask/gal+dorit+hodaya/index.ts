@@ -1,21 +1,26 @@
 const hodayaLoOna:HTMLDivElement=document.querySelector("#meteor")
 const doritIsAwake:any=document.querySelectorAll(".dorit")
+let boomImg:any = document.querySelector("#boom")
 
 hodayaLoOna.onmousemove= wakeUpHodaya;
 hodayaLoOna.ondblclick=bokerTovHodaya;
 hodayaLoOna.onmouseover=dorit;
 doritIsAwake.onmouseenter=wen;
 
+doritIsAwake.forEach(elem=>{
+    elem.onmousedown = MouseBoom
+}
+
+)
 doritIsAwake.forEach(element => {
-    element.onmouseover=onMouseBoom
+    element.ondblclick=MouseBoom
 });
 
 
-function onMouseBoom (ev){
-    // let boomImg= document.querySelector("#boom")
-    // boomImg.style.top=ev.target.style.top+10
-    // boomImg.style.left=ev.target.style.left+10
-    // boomImg.dis
+function MouseBoom(ev){
+    boomImg.style.top= ev.target.style.top+150
+    boomImg.style.left=ev.target.style.left+150
+    boomImg.opacity=0
 }
 
 function wen (ev){
