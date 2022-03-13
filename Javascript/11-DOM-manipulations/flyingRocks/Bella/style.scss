@@ -37,12 +37,12 @@
             width: 100%;
             height: 100%;
             /* ENDLESS ROTATE */
-            // animation: rotate 4s linear infinite;
-            // @keyframes rotate {
-            //     to {
-            //         transform: rotate(360deg);
-            //     }
-            // }
+            animation: rotate 4s linear infinite;
+            @keyframes rotate {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
             width: 24vw;
             height: 24vh;
         }

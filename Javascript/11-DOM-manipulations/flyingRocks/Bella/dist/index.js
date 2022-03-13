@@ -18,22 +18,17 @@ var spaceRocks = document.querySelectorAll('.spaceRock');
 spaceRocks.forEach(function (element) {
     element.style.left = getRandomPosition();
     element.style.top = getRandomPosition();
-    setInterval(spaceRocks, 3000);
 });
-var counter = 360;
-function getRandomMove() {
-    spaceRocks.forEach(function (element) {
-        element.style.left = getRandomPosition();
-        element.style.top = getRandomPosition();
-        // element.style.transform = `rotate(${counter}deg)`;
-        // counter += 360;
-    });
-}
-function getRandomNumber() {
-    var boxsize = (((Math.random() * 100) + 60).toFixed()) + 'px';
-    return boxsize;
-}
 function getRandomPosition() {
     var positionRand = (((Math.random() * 800) + 60).toFixed()) + 'px';
+    console.dir(positionRand);
     return positionRand;
 }
+getRandomPosition();
+// let element:any = astroids[0]//initializing element variable
+setInterval(function () {
+    for (var i = 0; i < spaceRocks.length; i++) { //running of every astroid against al the others
+        spaceRocks.style.top = getRandomPosition() + "px";
+        spaceRocks.style.left = getRandomPosition() + "px";
+    }
+}, 1000);
