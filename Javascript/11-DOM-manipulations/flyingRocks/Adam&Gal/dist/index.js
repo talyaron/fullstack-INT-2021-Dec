@@ -43,16 +43,6 @@ RandomRotation1();
 RandomRotation2();
 meteor1();
 meteor2();
-//   ------1----  
-// function myFunction() {
-//     var div = document.getElementById("myDiv");
-//     var rect = div.getBoundingClientRect();
-//     x = rect.left;
-//     y = rect.top;
-//     w = rect.width;
-//     h = rect.height;
-//     alert ("Left: " + x + ", Top: " + y + ", Width: " + w + ", Height: " + h);
-//   }
 //   ------2-----
 //     return (
 //       domRect1.top > domRect2.bottom ||
