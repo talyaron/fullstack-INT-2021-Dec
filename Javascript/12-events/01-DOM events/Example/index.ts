@@ -1,7 +1,13 @@
 const aBox: HTMLDivElement = document.querySelector("#aBox");
+const boxes:any= document.querySelectorAll('.box');
+
+boxes.forEach((box:any)=>{
+  box.onmousemove = handleColors;
+})
 document.onload = handleClick;
 
 aBox.onclick = handleClick;
+document.onfullscreenchange = handleClick
 
 function handleClick(ev) {
   console.log(ev);
@@ -10,6 +16,10 @@ function handleClick(ev) {
 
   element.style.backgroundColor = getRandomColor();
   element.innerHTML += `<div>(${ev.x}, ${ev.y})</div>`;
+}
+
+function handleColors(ev){
+  ev.target.style.backgroundColor = getRandomColor();
 }
 
 console.dir(aBox);
