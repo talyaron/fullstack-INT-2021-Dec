@@ -18,24 +18,28 @@
 //     opacity: 0.7;
 //     }
 
-// body {
-//   // display: flex;
-//   // justify-content: center;
-
-// }
-
-.wrapper{
+body{
   width: 100vw;
   height: 100vh;
-  position: relative;
+  background-color: black;
+}
+.wrapper{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+
+  .videoBg{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+  }
+
 
 .box {
   height: 90px;
   width: 100px;
-  //border: 2px solid black;
   position: absolute;
-  //top: 50vh;
-  //left: 50vw;;
   transform: rotate(360deg);
   transition: all 1300ms;
 
@@ -43,10 +47,33 @@
 img{
 width: 100%;
 height: 100%;
+position: absolute;
+user-select: none;
+-webkit-user-select: none;   /* Chrome/Safari/Opera */
+cursor: default;
+
 
 }
 
+
 }
+.explosion {
+  // position: absolute; 
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+  .particle {
+    position: absolute;  
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    opacity: 0;
+    top: 300px;
+    left: 300px;
+  }
+}
+
+
 
 
 }

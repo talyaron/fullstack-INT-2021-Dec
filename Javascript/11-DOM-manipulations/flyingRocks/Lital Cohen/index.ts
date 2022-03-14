@@ -13,6 +13,11 @@ boxs.forEach(element => {
     element.style.top = getRandomPosition()
     element.style.right = getRandomPosition()
     element.style.transform = "rotate(360deg)";
+    element.onclick  = handleEvent
+    element.onmouseleave = handleEventLeave
+    element.onclick = explodeEvent
+   element.ondblclick=playBoomSound
+
 })
 
 let counter = 360;
@@ -102,39 +107,6 @@ const rock6Position = {
 }
 
 
-// I wanted to see the values of the location of each one of them
-
-console.log(rock1Position.yPosition)
-console.log(rock1Position.rPosition)
-console.log(rock1Position.xPosition)
-console.log(rock1Position.bPosition)
-
-console.log(rock2Position.yPosition)
-console.log(rock2Position.rPosition)
-console.log(rock2Position.xPosition)
-console.log(rock2Position.bPosition)
-
-console.log(rock3Position.yPosition)
-console.log(rock3Position.rPosition)
-console.log(rock3Position.xPosition)
-console.log(rock3Position.bPosition)
-
-console.log(rock4Position.yPosition)
-console.log(rock4Position.rPosition)
-console.log(rock4Position.xPosition)
-console.log(rock4Position.bPosition)
-
-console.log(rock5Position.yPosition)
-console.log(rock5Position.rPosition)
-console.log(rock5Position.xPosition)
-console.log(rock5Position.bPosition)
-
-console.log(rock6Position.yPosition)
-console.log(rock6Position.rPosition)
-console.log(rock6Position.xPosition)
-console.log(rock6Position.bPosition)
-
-
 
 
 let ArrayOfRocksPositions: Array<any> = [rock1Position, rock2Position, rock3Position, rock4Position, rock5Position, rock6Position];
@@ -143,7 +115,7 @@ let ArrayOfRocksPositions: Array<any> = [rock1Position, rock2Position, rock3Posi
 for (let i = 0; i < ArrayOfRocksPositions.length; i++) {
     setInterval(getRandomMove, 2000);
     function move() {
-        let moveInterval = setInterval(getRandomMove, 3000);
+        let moveInterval = setInterval(getRandomMove, 5000);
     }
 
     if (rock1Position.xPosition > rock2Position.xPosition && rock1Position.xPosition < rock2Position.rPosition) {
@@ -163,3 +135,48 @@ for (let i = 0; i < ArrayOfRocksPositions.length; i++) {
         console.log('BOOM')
     }
 }
+
+const explosionPracticle:any = document.querySelector(".particle");
+const boomSound:any=document.querySelector(".boomSound")
+
+function playBoomSound(ev){
+const boomSound= document.querySelector(".boomSound")
+return boomSound
+}
+
+
+
+
+
+function handleEvent(ev) {
+    console.dir(ev.target);
+    ev.target.style.opacity = "0"
+}
+
+function handleEventLeave(ev) {
+    console.dir(ev.target);
+    ev.target.style.opacity = "1"
+}
+
+function explodeEvent(ev){
+    if(ev.target.style.opacity = "0"){
+        return explosionPracticle.style.opacity="1";
+
+    }
+}
+// function playBoomSoundEvent(ev){
+//     if(explosionPracticle.style.opacity="1"){
+//         return playBoomSound
+
+//     }
+
+ 
+
+
+
+
+
+
+
+
+
