@@ -11,6 +11,7 @@ function handleClick(ev) {
     ev.stopPropagation();
     var element = ev.target;
     element.style.backgroundColor = getRandomColor();
+    element.style.backgroundColor = getRandomColor();
     element.innerHTML += "<div>(" + ev.x + ", " + ev.y + ")</div>";
 }
 function handleColors(ev) {
