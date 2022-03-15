@@ -1,0 +1,40 @@
+body {
+  background-color: #b3fde4;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.columns-page {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 20px;
+  height: 60vh;
+  width: 80vh;
+  border: 2px solid black;
+}
+.columns-page .column1 {
+  position: absolute;
+  background-color: #18702b;
+  width: 100px;
+  height: 50px;
+  bottom: 0px;
+}
+.columns-page .column2 {
+  position: absolute;
+  background-color: #92c911;
+  width: 100px;
+  height: 50px;
+  bottom: 0px;
+  left: 50px;
+}
+.columns-page .column3 {
+  position: absolute;
+  background-color: #569e66;
+  width: 100px;
+  height: 50px;
+  bottom: 0px;
+  right: 50px;
+}
