@@ -1,3 +1,16 @@
+// const canvas=document.querySelector('canvas');
+// const ctx=canvas.getContext('2d');
+// const width=canvas.width=window.innerWidth;
+// const height=canvas.height=window.innerHeight;
+// console.log(canvas)
+// function ast(x,y,velx,vely,color,size){
+//     this.x=x; //start
+//     this.y=y;
+//     this.velx=velx; //direction
+//     this.vely=vely;
+//     this.color=color;
+//     this.size=size;
+// }
 var wrapper1 = document.querySelectorAll('.wrapper1');
 var wrapper2 = document.querySelectorAll('.wrapper2');
 console.dir(wrapper1, wrapper2);
