@@ -9,6 +9,7 @@ function coronaMove() {
     element.style.top = randomPosition() + "vh";
     element.style.left = randomPosition() + "vw";
     element.style.visibility = "visible"
+    element.onclick = boomOnClick;
   });
 
   // debugger
@@ -27,7 +28,7 @@ function randomPosition() {
   return postion;
 }
 
-var intervalID = setInterval(coronaMove, 2000);
+var intervalID = setInterval(coronaMove, 5000);
 
 function overLapCheck() {
 
@@ -55,5 +56,12 @@ function overLapCheck() {
   }
 
 }
+         
 
+       function boomOnClick(ev) {
+          const element = ev.target;
+
+          element.style.visibility = `hidden`
+         
+}
 

@@ -6,6 +6,7 @@ function coronaMove() {
         element.style.top = randomPosition() + "vh";
         element.style.left = randomPosition() + "vw";
         element.style.visibility = "visible";
+        element.onclick = boomOnClick;
     });
     // debugger
     overLapCheck();
@@ -18,7 +19,7 @@ function randomPosition() {
     postion = Math.random() * 90;
     return postion;
 }
-var intervalID = setInterval(coronaMove, 2000);
+var intervalID = setInterval(coronaMove, 5000);
 function overLapCheck() {
     for (var i = 0; i < ugiCron.length; i++) {
         for (var j = i + 1; j < ugiCron.length; j++) {
@@ -39,4 +40,8 @@ function overLapCheck() {
             }
         }
     }
+}
+function boomOnClick(ev) {
+    var element = ev.target;
+    element.style.visibility = "hidden";
 }
