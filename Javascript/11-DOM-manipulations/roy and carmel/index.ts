@@ -5,7 +5,7 @@ function randomPlace(){
     return y
 }
 
-
+const exploded:HTMLElement=document.querySelector(`.explode`)
 
 function checkForCrash(astArray:Array<any>){
     for(let i=0; i<astArray.length; i++){
@@ -25,9 +25,10 @@ function checkForCrash(astArray:Array<any>){
             console.log(difx, dify)
             if(difx<=10&&dify<=10){
                 console.log(difx, dify)
-                console.log("oh no! youre dead X")
-                // astArray[i].style.display=`none`
-                // astArray[j].style.display=`none`
+                alert("oh no! youre dead X")
+                exploded.style.display=`inline`
+                exploded.style.left=otherx
+                exploded.style.top=othery
             }
         }
     }
