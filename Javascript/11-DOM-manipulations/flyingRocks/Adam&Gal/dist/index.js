@@ -56,7 +56,7 @@ function mouseInv(ev) {
     tag.className = "wrapper1";
     document.body.appendChild(tag);
     console.dir(wrapper1);
-    var wrapper = document.querySelector(".wrapper1");
+    var wrapper = document.querySelectorAll(".wrapper1");
     console.log("div.wrapper.length " + wrapper.length);
 }
 // function mouseHop(ev){
