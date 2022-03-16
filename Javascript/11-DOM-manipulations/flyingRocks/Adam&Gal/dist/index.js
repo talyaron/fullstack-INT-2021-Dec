@@ -1,69 +1,84 @@
-var canvas = document.querySelector('canvas');
-var ctx = canvas.getContext('2d');
-var width = canvas.width = window.innerWidth;
-var height = canvas.height = window.innerHeight;
-console.log(canvas);
-function ast(x, y, velx, vely, color, size) {
-    this.x = x; //start
-    this.y = y;
-    this.velx = velx; //direction
-    this.vely = vely;
-    this.color = color;
-    this.size = size;
+var wrapper1 = document.querySelectorAll('.wrapper1');
+// const wrapper2:any=document.querySelectorAll('.wrapper2');
+console.dir(wrapper1);
+function meteor1() {
+    setInterval(function () {
+        wrapper1.forEach(function (element) {
+            //console.log(listRandomNumber())
+            element.style.top = listRandomNumber();
+            element.style.left = listRandomNumber();
+            element.style.transform = "translate(" + listRandomNumber() + ", " + listRandomNumber() + ")";
+            //isOverlap()
+        });
+        isOverlap();
+    }, 2000);
+    //setTimeout (meteor1,5000)
 }
-function random(min, max) {
-    var num = Math.floor(Math.random() * (max - min + 1)) + min;
-    return num;
+var x1 = 0;
+var y1 = 0;
+var right1 = 0;
+var bottom1 = 0;
+var x2 = 0;
+var y2 = 0;
+var right2 = 0;
+var bottom2 = 0;
+function isOverlap() {
+    for (var i = 0; i < wrapper1.length; i++) {
+        x1 = wrapper1[i].getBoundingClientRect().x;
+        right1 = wrapper1[i].getBoundingClientRect().right;
+        bottom1 = wrapper1[i].getBoundingClientRect().bottom;
+        y1 = wrapper1[i].getBoundingClientRect().y;
+        for (var j = i + 1; j < wrapper1.length; j++) {
+            x2 = wrapper1[j].getBoundingClientRect().x;
+            right2 = wrapper1[j].getBoundingClientRect().right;
+            bottom2 = wrapper1[j].getBoundingClientRect().bottom;
+            y2 = wrapper1[j].getBoundingClientRect().y;
+            if (x1 > x2 && x1 < right2 && y1 > y2 && y1 < bottom2) {
+                console.log("overlap");
+            }
+        }
+    }
 }
-AUDIO;
-var aud = new Audio();
-aud.src = 'https://www.winhistory.de/more/winstart/down/owfw311.wav';
-IMAGE;
-var meteor = new Image();
-meteor.src = "";
-// const wrapper1:any= document.querySelectorAll('.wrapper1');
-// // const wrapper2:any=document.querySelectorAll('.wrapper2');
-// console.dir(wrapper1);
-// function getRandom(){
-//     const randomPX = Math.floor(Math.random() * 100)
-//     return `${randomPX}vh`
-// }
+function listRandomNumber() {
+    var randomPX = Math.floor(Math.random() * 300);
+    return randomPX + "px";
+}
+meteor1();
 // function RandomRotation1(){
 //     wrapper1.forEach(element => {
-//         element.style.transform = `rotate(${listRandomNumber(360)}deg)`
+//         element.style.transform = `rotate(${listRandomNumber()}deg)`
 //     });
 // }
-// function meteor1 (){
-//     wrapper1.forEach(element => {
-//         element.style.top=listRandomNumber(5)+`vh`
-//         element.style.bottom=listRandomNumber(10)+`vh`
-//         element.style.left=listRandomNumber(30)+`vv`
-//         element.style.right=listRandomNumber(30)+`vw`
-//         element.style.transform = `translate(${getRandom()}, ${getRandom()})`
-//     });
-//     setTimeout (meteor1,5000)
-// }
-// RandomRotation1()
-// meteor1()
-// const elm1 = document.querySelector('.wrapper1');
-// // const elm2 = document.querySelector('.wrapper2');
+//RandomRotation1()
+//const elm1 = document.querySelector('.wrapper1');
+// const elm2 = document.querySelector('.wrapper2');
 // const elm2p ={leftPosition:elm1.getBoundingClientRect().x}
 // console.log(elm2p)
 // const elm1p = {
 //     leftPosition:elm1.getBoundingClientRect().x,
-//     rightPosition:elm1.getBoundingClientRect().right
+//     rightPosition:elm1.getBoundingClientRect().right,
+//     bottomPosition:elm1.getBoundingClientRect().bottom,
+//     topPosition:elm1.getBoundingClientRect().y
 // }
-// console.log(elm1p)
-// if(elm2p.leftPosition > elm1p.leftPosition && elm2p.leftPosition < elm1p.rightPosition){
+// }
+// if(elm2p.leftPosition > elm1p.leftPosition && elm2p.leftPosition < elm1p.rightPosition && elm2p.leftPosition > elm1p.bottomPosition ){
 //     console.log('Overlap')
 // } else{
-//     (elm2p.leftPosition < elm1p.leftPosition && elm2p.leftPosition > elm1p.rightPosition)
+//    // (elm2p.leftPosition < elm1p.leftPosition && elm2p.leftPosition > elm1p.rightPosition)
 //     console.log('no Overlap')
 // }
-// const MouseBoom:any=document.querySelectorAll
-// MouseBoom.onmouseover=mouseInv;
-// function mouseInv(ev){
-//     MouseBoom.style.top= ev.target.style.top+150
-//     MouseBoom.style.left=ev.target.style.left+150
-//     MouseBoom.opacity=0
-// }
+//const MouseBoom:=document.querySelectorAll
+wrapper1.forEach(function (elem) {
+    elem.onmouseover = mouseInv;
+    elem.onmouseleave = mouseHop;
+});
+function mouseInv(ev) {
+    //ev.target.style.top= ev.target.style.top+150
+    //ev.target.style.left=ev.target.style.left+150
+    ev.target.style.opacity = 0;
+}
+function mouseHop(ev) {
+    //ev.target.style.top= ev.target.style.top+150
+    //ev.target.style.left=ev.target.style.left+150
+    ev.target.style.opacity = 1;
+}
