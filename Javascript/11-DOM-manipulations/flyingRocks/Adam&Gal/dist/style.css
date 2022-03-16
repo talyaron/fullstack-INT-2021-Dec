@@ -6,14 +6,14 @@ body {
   background-image: url(https://www.nlspacecampus.eu/cache/3/1920x1080/mob-shutterstock-481251031-20210610135721_1920x1080.jpg);
 }
 
-.wrapper1, .wrapper2 {
+.wrapper1 {
   transition: all 4000ms ease-in-out;
   animation-name: rotate360;
   height: 10vh;
   position: relative;
   display: inline-block;
 }
-.wrapper1 img, .wrapper2 img {
+.wrapper1 img {
   height: 100%;
   animation: 5s rotate360 infinite linear;
 }

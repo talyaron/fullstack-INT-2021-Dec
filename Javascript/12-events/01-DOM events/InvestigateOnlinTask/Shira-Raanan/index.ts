@@ -1,7 +1,8 @@
-const box: HTMLDivElement = document.querySelector('.box');
+// const wrapper: HTMLDivElement = document.querySelector('.wrapper');
+const box: HTMLDivElement = document.querySelectorAll('.box');
 
-box.onmousemove = paintBox;
-box.onclick = disappear;
+box.onmouseover = disappear;
+// box.onclick = disappear;
 document.onload = greating;
 // box.ondblclick = appear;
 
