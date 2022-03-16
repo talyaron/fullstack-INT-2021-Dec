@@ -1,5 +1,4 @@
 var wrapper1 = document.querySelectorAll('.wrapper1');
-// const wrapper2:any=document.querySelectorAll('.wrapper2');
 console.dir(wrapper1);
 function meteor1() {
     setInterval(function () {
@@ -44,41 +43,17 @@ function listRandomNumber() {
     return randomPX + "px";
 }
 meteor1();
-// function RandomRotation1(){
-//     wrapper1.forEach(element => {
-//         element.style.transform = `rotate(${listRandomNumber()}deg)`
-//     });
-// }
-//RandomRotation1()
-//const elm1 = document.querySelector('.wrapper1');
-// const elm2 = document.querySelector('.wrapper2');
-// const elm2p ={leftPosition:elm1.getBoundingClientRect().x}
-// console.log(elm2p)
-// const elm1p = {
-//     leftPosition:elm1.getBoundingClientRect().x,
-//     rightPosition:elm1.getBoundingClientRect().right,
-//     bottomPosition:elm1.getBoundingClientRect().bottom,
-//     topPosition:elm1.getBoundingClientRect().y
-// }
-// }
-// if(elm2p.leftPosition > elm1p.leftPosition && elm2p.leftPosition < elm1p.rightPosition && elm2p.leftPosition > elm1p.bottomPosition ){
-//     console.log('Overlap')
-// } else{
-//    // (elm2p.leftPosition < elm1p.leftPosition && elm2p.leftPosition > elm1p.rightPosition)
-//     console.log('no Overlap')
-// }
-//const MouseBoom:=document.querySelectorAll
 wrapper1.forEach(function (elem) {
     elem.onmouseover = mouseInv;
-    elem.onmouseleave = mouseHop;
+    elem.innerHTML += "<div class=\"wrapper1\"> <img src=\"png_meteor_6537 (1).png\" alt=\"\"> </div>";
 });
 function mouseInv(ev) {
     //ev.target.style.top= ev.target.style.top+150
     //ev.target.style.left=ev.target.style.left+150
     ev.target.style.opacity = 0;
 }
-function mouseHop(ev) {
-    //ev.target.style.top= ev.target.style.top+150
-    //ev.target.style.left=ev.target.style.left+150
-    ev.target.style.opacity = 1;
-}
+// function mouseHop(ev){
+//     //ev.target.style.top= ev.target.style.top+150
+//     //ev.target.style.left=ev.target.style.left+150
+//     ev.target.style.opacity=1
+// }
