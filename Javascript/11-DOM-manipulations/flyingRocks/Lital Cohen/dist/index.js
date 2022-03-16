@@ -12,7 +12,7 @@ boxs.forEach(function (element) {
     element.onclick = handleEvent;
     element.onmouseleave = handleEventLeave;
     element.onclick = explodeEvent;
-    element.ondblclick = playBoomSound;
+    //    element.onclick=playBoomSound
 });
 var counter = 360;
 function getRandomMove() {
@@ -82,7 +82,7 @@ var rock6Position = {
 };
 var ArrayOfRocksPositions = [rock1Position, rock2Position, rock3Position, rock4Position, rock5Position, rock6Position];
 for (var i = 0; i < ArrayOfRocksPositions.length; i++) {
-    setInterval(getRandomMove, 2000);
+    setInterval(getRandomMove, 3000);
     function move() {
         var moveInterval = setInterval(getRandomMove, 5000);
     }
@@ -103,6 +103,16 @@ for (var i = 0; i < ArrayOfRocksPositions.length; i++) {
     }
 }
 var explosionPracticle = document.querySelector(".particle");
+boxs.forEach(function (particle) {
+    particle.style.left = getRandomPosition();
+    particle.style.top = getRandomPosition();
+    particle.style.right = getRandomPosition();
+    particle.style.transform = "rotate(360deg)";
+    particle.onclick = handleEvent;
+    particle.onmouseleave = handleEventLeave;
+    particle.onclick = explodeEvent;
+    //    element.onclick=playBoomSound
+});
 var boomSound = document.querySelector(".boomSound");
 function playBoomSound(ev) {
     var boomSound = document.querySelector(".boomSound");

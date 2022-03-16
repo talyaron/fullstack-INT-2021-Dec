@@ -16,7 +16,7 @@ boxs.forEach(element => {
     element.onclick  = handleEvent
     element.onmouseleave = handleEventLeave
     element.onclick = explodeEvent
-   element.ondblclick=playBoomSound
+//    element.onclick=playBoomSound
 
 })
 
@@ -113,7 +113,7 @@ let ArrayOfRocksPositions: Array<any> = [rock1Position, rock2Position, rock3Posi
 
 
 for (let i = 0; i < ArrayOfRocksPositions.length; i++) {
-    setInterval(getRandomMove, 2000);
+    setInterval(getRandomMove, 3000);
     function move() {
         let moveInterval = setInterval(getRandomMove, 5000);
     }
@@ -137,6 +137,17 @@ for (let i = 0; i < ArrayOfRocksPositions.length; i++) {
 }
 
 const explosionPracticle:any = document.querySelector(".particle");
+boxs.forEach(particle => {
+    particle.style.left = getRandomPosition()
+    particle.style.top = getRandomPosition()
+    particle.style.right = getRandomPosition()
+    particle.style.transform = "rotate(360deg)";
+    particle.onclick  = handleEvent
+    particle.onmouseleave = handleEventLeave
+    particle.onclick = explodeEvent
+//    element.onclick=playBoomSound
+
+})
 const boomSound:any=document.querySelector(".boomSound")
 
 function playBoomSound(ev){
