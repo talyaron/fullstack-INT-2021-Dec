@@ -3,7 +3,8 @@ body {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    overflow: hidden;
+    background-image:url(https://www.nlspacecampus.eu/cache/3/1920x1080/mob-shutterstock-481251031-20210610135721_1920x1080.jpg)  
+    // overflow: hidden;
 }
 
 .wrapper1,.wrapper2 {
@@ -16,6 +17,7 @@ body {
     img {
         height: 100%;
       animation: 5s rotate360 infinite linear;
+    //   overflow: hidden;
     }
 }
 

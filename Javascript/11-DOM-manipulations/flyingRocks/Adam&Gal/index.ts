@@ -1,3 +1,19 @@
+// const canvas=document.querySelector('canvas');
+// const ctx=canvas.getContext('2d');
+// const width=canvas.width=window.innerWidth;
+// const height=canvas.height=window.innerHeight;
+// console.log(canvas)
+
+// function ast(x,y,velx,vely,color,size){
+//     this.x=x; //start
+//     this.y=y;
+//     this.velx=velx; //direction
+//     this.vely=vely;
+//     this.color=color;
+//     this.size=size;
+// }
+
+
 const wrapper1:any= document.querySelectorAll('.wrapper1');
 const wrapper2:any=document.querySelectorAll('.wrapper2');
 console.dir(wrapper1,wrapper2);
@@ -67,32 +83,19 @@ const elm1p = {
 }
 console.log(elm1p)
 
-if(elm2p.leftPosition > elm1p.leftPosition && elm2p.leftPosition <elm1p.rightPosition){
+if(elm2p.leftPosition > elm1p.leftPosition && elm2p.leftPosition < elm1p.rightPosition){
     console.log('Overlap')
 } else{
+    (elm2p.leftPosition < elm1p.leftPosition && elm2p.leftPosition > elm1p.rightPosition)
     console.log('no Overlap')
 }
 
+const MouseBoom:any=document.querySelectorAll
 
- setInterval (wrapper1, 3000)
-setInterval (wrapper2, 3000)
-    
+MouseBoom.onmouseover=mouseInv;
 
-// function elementsOverlap('elm1',`elm2`) {
-//     const domRect1 = el1.getBoundingClientRect();
-//     const domRect2 = el2.getBoundingClientRect();
-  
-//     return (
-//       domRect1.top > domRect2.bottom ||
-//       domRect1.right < domRect2.left ||
-//       domRect1.bottom < domRect2.top ||
-//       domRect1.left > domRect2.right
-//     );
-//   }
-  
-//   const el1 = document.getElementsByClassName('wrapper1');
-//   const el2 = document.getElementsByClassName('wrapper2');
-
-  
-// console.log(elementsOverlap(el1, el2))
-
+function mouseInv(ev){
+    MouseBoom.style.top= ev.target.style.top+150
+    MouseBoom.style.left=ev.target.style.left+150
+    MouseBoom.opacity=0
+}

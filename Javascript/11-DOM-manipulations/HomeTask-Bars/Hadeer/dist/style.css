@@ -1,0 +1,37 @@
+.title {
+  height: 150px;
+  width: vw;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.title h1 {
+  color: black;
+  size: 10pc;
+  text-align: center;
+  margin: 0%;
+}
+.title h2 {
+  color: black;
+  size: 6pc;
+  margin: 0%;
+}
+
+.wrapper {
+  padding-top: 150px;
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  height: fit-content;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  text-align: center;
+  font-size: 1.6pc;
+  font-weight: bolder;
+}
+.wrapper .bar {
+  background-color: aqua;
+  width: 70px;
+}

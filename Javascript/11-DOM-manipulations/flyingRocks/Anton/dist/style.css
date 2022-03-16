@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+}
+
+.picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 9%;
+  height: 12%;
+  position: absolute;
+  transform-origin: 0 center;
+  transition: 5000ms;
+  /* animation: 7s relocate infinite linear; */
+}
+.picture img {
+  width: 100%;
+  animation: 5s rotation infinite linear;
+}
+
+@keyframes rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.boom_image {
+  display: none;
+  position: absolute;
+  width: 10%;
+  height: 6%;
+}
+.boom_image #explode {
+  width: 100%;
+}
+
+/*    @keyframes relocate {
+       to {
+           transform: translate(50vh, 50%);
+       }
+   } */
