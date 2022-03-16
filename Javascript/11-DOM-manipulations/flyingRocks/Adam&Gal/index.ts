@@ -1,6 +1,7 @@
-const wrapper1:any= document.querySelectorAll('.wrapper1');
+let wrapper1:any= document.querySelectorAll('.wrapper1');
 console.dir(wrapper1);
 function meteor1 (){
+    wrapper1= document.querySelectorAll('.wrapper1');
     setInterval(()=>{
     wrapper1.forEach(element => {
         //console.log(listRandomNumber())
@@ -45,7 +46,7 @@ function isOverlap(){
 }
 
 function listRandomNumber():any{
-    const randomPX = Math.floor(Math.random() * 300)
+    const randomPX = Math.floor(Math.random() * 250)
     return `${randomPX}px`
 }
 
@@ -54,27 +55,19 @@ meteor1()
 
 wrapper1.forEach(elem=>{
     elem.onmouseover=mouseInv
+    window.onclick=mouseHop
+
    // elem.innerHTML += `<div class="wrapper1"> <img src="png_meteor_6537 (1).png" alt=""> </div>`;
  
 })
 
 
 function mouseInv(ev){
-    //ev.target.style.top= ev.target.style.top+150
-    //ev.target.style.left=ev.target.style.left+150
     ev.target.style.opacity=0
-    //console.log(`wrapper1.length ${wrapper1.length}`)
-    let tag=document.createElement('div')
-    tag.className="wrapper1"
-    document. body. appendChild(tag)
-    console.dir(wrapper1)
-    let wrapper:any=document.querySelectorAll(".wrapper1")
-    console.log(`div.wrapper.length ${wrapper.length}`)
 }
+function mouseHop(ev){
+    document.body.innerHTML += `<div class="wrapper1"><img src="png_meteor_6537 (1).png" alt=""></div>`;
+    meteor1()
 
-// function mouseHop(ev){
-//     //ev.target.style.top= ev.target.style.top+150
-//     //ev.target.style.left=ev.target.style.left+150
-//     ev.target.style.opacity=1
-// }
+}
 
