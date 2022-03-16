@@ -10,3 +10,8 @@
   height: 100px;
   width: 100px;
 }
+#rapper .explode {
+  position: absolute;
+  display: none;
+  height: 20px;
+}

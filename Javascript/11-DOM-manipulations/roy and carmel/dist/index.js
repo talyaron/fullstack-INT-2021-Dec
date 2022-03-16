@@ -3,6 +3,7 @@ function randomPlace() {
     var y = (Math.floor((Math.random()) * 80));
     return y;
 }
+var exploded = document.querySelector(".explode");
 function checkForCrash(astArray) {
     for (var i = 0; i < astArray.length; i++) {
         var thisx = astArray[i].style.left;
@@ -19,9 +20,10 @@ function checkForCrash(astArray) {
             console.log(difx, dify);
             if (difx <= 10 && dify <= 10) {
                 console.log(difx, dify);
-                console.log("oh no! youre dead X");
-                // astArray[i].style.display=`none`
-                // astArray[j].style.display=`none`
+                alert("oh no! youre dead X");
+                exploded.style.display = "inline";
+                exploded.style.left = otherx;
+                exploded.style.top = othery;
             }
         }
     }
