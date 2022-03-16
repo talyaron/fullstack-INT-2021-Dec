@@ -6,14 +6,20 @@ function randomPlace() {
 function checkForCrash(astArray) {
     for (var i = 0; i < astArray.length; i++) {
         var thisx = astArray[i].style.left;
+        var numthisx = thisx.replace('vw', '');
         var thisy = astArray[i].style.top;
+        var numthisy = thisy.replace('vh', '');
         for (var j = i + 1; j < astArray.length; j++) {
             var otherx = astArray[j].style.left;
+            var numotherx = otherx.replace('vw', '');
             var othery = astArray[j].style.top;
-            var difx = Math.abs(thisx - otherx);
-            var dify = Math.abs(thisy - othery);
-            if (difx <= 160 || dify <= 140) {
-                alert("oh no! youre dead X");
+            var numothery = othery.replace('vh', '');
+            var difx = Math.abs(numthisx - numotherx);
+            var dify = Math.abs(numthisy - numothery);
+            console.log(difx, dify);
+            if (difx <= 10 && dify <= 10) {
+                console.log(difx, dify);
+                console.log("oh no! youre dead X");
                 // astArray[i].style.display=`none`
                 // astArray[j].style.display=`none`
             }
@@ -30,4 +36,3 @@ function chaos() {
     checkForCrash(astroidArray);
 }
 setInterval(chaos, 5000);
-window.addEventListener("load", checkForCrash);
