@@ -1,85 +1,88 @@
-const wrapper1:any= document.querySelectorAll('.wrapper1');
-const wrapper2:any=document.querySelectorAll('.wrapper2');
-console.dir(wrapper1,wrapper2);
+const canvas=document.querySelector('canvas');
+const ctx=canvas.getContext('2d');
+const width=canvas.width=window.innerWidth;
+const height=canvas.height=window.innerHeight;
+console.log(canvas)
 
-function listRandomNumber(number):any{
-    const num=Math.floor(Math.random()* number)
-    return num
+function ast(x,y,velx,vely,color,size){
+    this.x=x; //start
+    this.y=y;
+    this.velx=velx; //direction
+    this.vely=vely;
+    this.color=color;
+    this.size=size;
 }
 
-function getRandom(){
-    const randomPX = Math.floor(Math.random() * 100)
-    return `${randomPX}vh`
+function random(min, max) { 
+    var num = Math.floor(Math.random() * (max - min + 1)) + min;
+    return num;
 }
 
-function RandomRotation1(){
-    wrapper1.forEach(element => {
-        element.style.transform = `rotate(${listRandomNumber(360)}deg)`
-    });
-}
+AUDIO
+const aud = new Audio();
+aud.src = 'https://www.winhistory.de/more/winstart/down/owfw311.wav'
 
-function RandomRotation2(){
-    wrapper2.forEach(element => {
-        element.style.transform = `rotate(${listRandomNumber(360)}deg)`
-    });
-}
+IMAGE
+const meteor = new Image();
+meteor.src = "";
 
-function meteor1 (){
-    wrapper1.forEach(element => {
-        element.style.top=listRandomNumber(5)+`vh`
-        element.style.bottom=listRandomNumber(10)+`vh`
-        element.style.left=listRandomNumber(30)+`vv`
-        element.style.right=listRandomNumber(30)+`vw`
-        element.style.transform = `translate(${getRandom()}, ${getRandom()})`
-    });
-    setTimeout (meteor1,5000)
-}
 
-function meteor2 (){
-    wrapper2.forEach(element => {
-        element.style.top=listRandomNumber(5)+`vh`
-        element.style.bottom=listRandomNumber(10)+`vh`
-        element.style.left=listRandomNumber(30)+`vv`
-        element.style.right=listRandomNumber(30)+`vw`
-        element.style.transform = `translate(${getRandom()}, ${getRandom()})`
-    });
-    setTimeout (meteor2,5000)
-}
-    
+// const wrapper1:any= document.querySelectorAll('.wrapper1');
+// // const wrapper2:any=document.querySelectorAll('.wrapper2');
+// console.dir(wrapper1);
 
-RandomRotation1()
-RandomRotation2()
-meteor1()
-meteor2()
-// setInterval (wrapper1, 3000)
-// setInterval (wrapper2, 3000)
 
-const elm1 = document.querySelector('.wrapper1');
-const elm2 = document.querySelector('.wrapper2');
+// function getRandom(){
+//     const randomPX = Math.floor(Math.random() * 100)
+//     return `${randomPX}vh`
+// }
 
-const elm2p ={leftPosition:elm2.getBoundingClientRect().x}
-console.log(elm2p)
-const elm1p = {
-    leftPosition:elm1.getBoundingClientRect().x,
-    rightPosition:elm1.getBoundingClientRect().right
-    
-   
-}
-console.log(elm1p)
+// function RandomRotation1(){
+//     wrapper1.forEach(element => {
+//         element.style.transform = `rotate(${listRandomNumber(360)}deg)`
+//     });
+// }
 
-if(elm2p.leftPosition > elm1p.leftPosition && elm2p.leftPosition < elm1p.rightPosition){
-    console.log('Overlap')
-} else{
-    (elm2p.leftPosition < elm1p.leftPosition && elm2p.leftPosition > elm1p.rightPosition)
-    console.log('no Overlap')
-}
+// function meteor1 (){
+//     wrapper1.forEach(element => {
+//         element.style.top=listRandomNumber(5)+`vh`
+//         element.style.bottom=listRandomNumber(10)+`vh`
+//         element.style.left=listRandomNumber(30)+`vv`
+//         element.style.right=listRandomNumber(30)+`vw`
+//         element.style.transform = `translate(${getRandom()}, ${getRandom()})`
+//     });
+//     setTimeout (meteor1,5000)
+// }
 
-const MouseBoom:any=document.querySelectorAll
 
-MouseBoom.onmouseover=mouseInv;
+// RandomRotation1()
+// meteor1()
 
-function mouseInv(ev){
-    MouseBoom.style.top= ev.target.style.top+150
-    MouseBoom.style.left=ev.target.style.left+150
-    MouseBoom.opacity=0
-}
+
+// const elm1 = document.querySelector('.wrapper1');
+// // const elm2 = document.querySelector('.wrapper2');
+
+// const elm2p ={leftPosition:elm1.getBoundingClientRect().x}
+// console.log(elm2p)
+// const elm1p = {
+//     leftPosition:elm1.getBoundingClientRect().x,
+//     rightPosition:elm1.getBoundingClientRect().right
+// }
+// console.log(elm1p)
+
+// if(elm2p.leftPosition > elm1p.leftPosition && elm2p.leftPosition < elm1p.rightPosition){
+//     console.log('Overlap')
+// } else{
+//     (elm2p.leftPosition < elm1p.leftPosition && elm2p.leftPosition > elm1p.rightPosition)
+//     console.log('no Overlap')
+// }
+
+// const MouseBoom:any=document.querySelectorAll
+
+// MouseBoom.onmouseover=mouseInv;
+
+// function mouseInv(ev){
+//     MouseBoom.style.top= ev.target.style.top+150
+//     MouseBoom.style.left=ev.target.style.left+150
+//     MouseBoom.opacity=0
+// }

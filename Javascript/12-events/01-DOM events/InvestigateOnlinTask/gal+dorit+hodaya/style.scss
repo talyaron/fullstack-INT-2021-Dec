@@ -9,19 +9,29 @@ body{
     background-color: tomato;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.548);
     border-radius: 5px;
+    border-color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: auto;
-    position: relative;
+    //position: relative;
     margin-top: 5px;
     
   }
 
-#boom{
-  opacity :1;
-  
+.boom{
+  position:absolute;
+  top:500px;
+  left:400px;
+  height: 100px;
+  width: 100px;
+  #boomImg{
+    background-color:pink;
+    width : 100%;
+    visibility:hidden;
+    opacity:1;
+  }
 }
 
 #meteor{

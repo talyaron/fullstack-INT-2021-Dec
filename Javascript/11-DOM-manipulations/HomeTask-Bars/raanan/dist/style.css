@@ -1,0 +1,21 @@
+body {
+  margin: auto;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  height: 70vh;
+  min-height: 10vh;
+  align-items: flex-end;
+  text-align: center;
+  justify-content: center;
+}
+.wrapper__column {
+  margin: 1.3rem;
+  background-color: #82d5ee;
+  border-radius: 10px 10px 0 0;
+  width: 4rem;
+  line-height: 2.5rem;
+}

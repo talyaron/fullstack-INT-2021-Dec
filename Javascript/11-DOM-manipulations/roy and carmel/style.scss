@@ -4,9 +4,15 @@
     position: relative;
     .astroid{
         position: absolute;
+        
         img{
-            height: 50px; 
-            width: 67px;
+            height: 100px; 
+            width: 100px;
         }
+    }
+    .explode{
+        position: absolute;
+        display: none;
+        height: 20px;
     }
 }
