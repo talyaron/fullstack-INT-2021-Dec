@@ -30,7 +30,7 @@ let b = +prompt("Enter the second number: ");
 let c = +prompt("Enter the third number: ");
 
 function QuadraticFun(a,b,c){
-    
+
 let Quadratic = b * b - 4 * a * c;
 if (Quadratic > 0) {
     root1 = (-b + Math.sqrt(Quadratic)) / (2 * a);
@@ -55,3 +55,4 @@ else {
 }
 
 QuadraticFun(a,b,c)
+
