@@ -5,17 +5,27 @@ function randomPlace(){
     return y
 }
 
+
+
 function checkForCrash(astArray:Array<any>){
     for(let i=0; i<astArray.length; i++){
         let thisx=astArray[i].style.left
+        let numthisx:number=thisx.replace('vw','')
         let thisy=astArray[i].style.top
+        let numthisy:number=thisy.replace('vh','')
+        
         for(let j=i+1; j<astArray.length; j++){
             let otherx=astArray[j].style.left
+            let numotherx:number=otherx.replace('vw','')
             let othery=astArray[j].style.top
-            let difx=Math.abs(thisx-otherx) 
-            let dify=Math.abs(thisy-othery)
-            if(difx<=160||dify<=140){
-                alert("oh no! youre dead X")
+            let numothery:number=othery.replace('vh','')
+            let difx=Math.abs(numthisx-numotherx) 
+            let dify=Math.abs(numthisy-numothery)
+            
+            console.log(difx, dify)
+            if(difx<=10&&dify<=10){
+                console.log(difx, dify)
+                console.log("oh no! youre dead X")
                 // astArray[i].style.display=`none`
                 // astArray[j].style.display=`none`
             }
@@ -36,5 +46,3 @@ function chaos(){
 
 
 setInterval(chaos, 5000)
-
-window.addEventListener(`load`, checkForCrash)

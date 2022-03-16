@@ -17,12 +17,12 @@ setInterval(moveImages, 4500);
 console.log(randomMovement());
 moveImages();
 images.forEach(function (elm) {
-    elm.onclick = disappear;
+    elm.onmousedown = disappear;
     elm.onmouseup = undisappear;
 });
 function disappear(click) {
-    click.target.style.visibility = "hidden";
+    click.target.style.opacity = "0";
 }
 function undisappear(click) {
-    click.target.style.visibility = "visible";
+    click.target.style.opacity = "100";
 }
