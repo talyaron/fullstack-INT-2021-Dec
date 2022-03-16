@@ -1,10 +1,10 @@
-// const h1 = document.querySelectorAll('h1')
+const h1 = document.querySelectorAll('h1')
 
 // console.log(h1)
 
-// h1[0].addEventListener('click', ev => {
-//     ev.target.innerHTML = `inergonregoi`
-// })
+h1[0].addEventListener('click', ev => {
+    ev.target.innerHTML = `inergonregoi`
+})
 
 // for (let i = 0; i < h1.length; i++) {
 //     h1[i].addEventListener('click', ev => {
