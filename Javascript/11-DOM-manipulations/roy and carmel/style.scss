@@ -4,7 +4,7 @@
     position: relative;
     .astroid{
         position: absolute;
-        
+        transition: all 5s;
         img{
             height: 100px; 
             width: 100px;
@@ -13,6 +13,6 @@
     .explode{
         position: absolute;
         display: none;
-        height: 20px;
+        height: 5px;
     }
 }

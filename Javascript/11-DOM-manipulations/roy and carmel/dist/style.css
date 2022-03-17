@@ -5,6 +5,7 @@
 }
 #rapper .astroid {
   position: absolute;
+  transition: all 5s;
 }
 #rapper .astroid img {
   height: 100px;
@@ -13,5 +14,5 @@
 #rapper .explode {
   position: absolute;
   display: none;
-  height: 20px;
+  height: 5px;
 }

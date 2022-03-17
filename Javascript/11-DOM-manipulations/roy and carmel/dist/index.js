@@ -1,6 +1,6 @@
 var astroidArray = document.querySelectorAll(".astroid");
 function randomPlace() {
-    var y = (Math.floor((Math.random()) * 80));
+    var y = (Math.floor((Math.random()) * 90));
     return y;
 }
 var exploded = document.querySelector(".explode");
@@ -17,10 +17,11 @@ function checkForCrash(astArray) {
             var numothery = othery.replace('vh', '');
             var difx = Math.abs(numthisx - numotherx);
             var dify = Math.abs(numthisy - numothery);
-            console.log(difx, dify);
-            if (difx <= 10 && dify <= 10) {
+            if (i == j) {
+                break;
+            }
+            if (difx <= 5 && dify <= 5) {
                 console.log(difx, dify);
-                alert("oh no! youre dead X");
                 exploded.style.display = "inline";
                 exploded.style.left = otherx;
                 exploded.style.top = othery;
@@ -31,10 +32,10 @@ function checkForCrash(astArray) {
 function checkBetter(astArray) {
 }
 function chaos() {
+    checkForCrash(astroidArray);
     for (var i = 0; i < astroidArray.length; i++) {
         astroidArray[i].style.top = randomPlace() + "vh";
         astroidArray[i].style.left = randomPlace() + "vw";
     }
-    checkForCrash(astroidArray);
 }
 setInterval(chaos, 5000);

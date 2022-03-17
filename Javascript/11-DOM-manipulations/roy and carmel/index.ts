@@ -1,7 +1,7 @@
 const astroidArray:NodeList<HTMLElement>=document.querySelectorAll(`.astroid`)
 
 function randomPlace(){
-    let y=(Math.floor((Math.random())*80))
+    let y=(Math.floor((Math.random())*90))
     return y
 }
 
@@ -21,11 +21,12 @@ function checkForCrash(astArray:Array<any>){
             let numothery:number=othery.replace('vh','')
             let difx=Math.abs(numthisx-numotherx) 
             let dify=Math.abs(numthisy-numothery)
-            
-            console.log(difx, dify)
-            if(difx<=10&&dify<=10){
+            if (i==j)
+            {
+                break
+            }
+            if(difx<=5&&dify<=5){
                 console.log(difx, dify)
-                alert("oh no! youre dead X")
                 exploded.style.display=`inline`
                 exploded.style.left=otherx
                 exploded.style.top=othery
@@ -38,11 +39,12 @@ function checkBetter(astArray:Array<any>){
 }
 
 function chaos(){
+    checkForCrash(astroidArray)
     for (let i=0; i<astroidArray.length; i++){
         astroidArray[i].style.top=randomPlace()+ `vh`
         astroidArray[i].style.left=randomPlace()+`vw`
     }
-    checkForCrash(astroidArray)
+    
 }
 
 
