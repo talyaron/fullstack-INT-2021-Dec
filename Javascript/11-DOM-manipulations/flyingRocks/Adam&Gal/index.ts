@@ -11,6 +11,13 @@ function meteor1 (){
         
        //isOverlap()
     })
+    wrapper1.forEach(elem=>{
+        elem.onmouseover=mouseInv
+        window.onclick=mouseHop
+    
+       // elem.innerHTML += `<div class="wrapper1"> <img src="png_meteor_6537 (1).png" alt=""> </div>`;
+     
+    })
     isOverlap()
 },2000)
     //setTimeout (meteor1,5000)
@@ -53,17 +60,10 @@ function listRandomNumber():any{
 meteor1()
 
 
-wrapper1.forEach(elem=>{
-    elem.onmouseover=mouseInv
-    window.onclick=mouseHop
-
-   // elem.innerHTML += `<div class="wrapper1"> <img src="png_meteor_6537 (1).png" alt=""> </div>`;
- 
-})
-
 
 function mouseInv(ev){
     ev.target.style.opacity=0
+    meteor1()
 }
 function mouseHop(ev){
     document.body.innerHTML += `<div class="wrapper1"><img src="png_meteor_6537 (1).png" alt=""></div>`;
