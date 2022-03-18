@@ -14,5 +14,7 @@
 #rapper .explode {
   position: absolute;
   display: none;
-  height: 5px;
+}
+#rapper .explode img {
+  height: 55px;
 }
