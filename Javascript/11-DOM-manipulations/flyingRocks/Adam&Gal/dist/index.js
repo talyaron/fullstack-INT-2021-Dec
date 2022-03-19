@@ -1,70 +1,59 @@
 var wrapper1 = document.querySelectorAll('.wrapper1');
-var wrapper2 = document.querySelectorAll('.wrapper2');
-console.dir(wrapper1, wrapper2);
-function listRandomNumber(number) {
-    var num = Math.floor(Math.random() * number);
-    return num;
-}
-function getRandom() {
-    var randomPX = Math.floor(Math.random() * 100);
-    return randomPX + "vh";
-}
-function RandomRotation1() {
-    wrapper1.forEach(function (element) {
-        element.style.transform = "rotate(" + listRandomNumber(360) + "deg)";
-    });
-}
-function RandomRotation2() {
-    wrapper2.forEach(function (element) {
-        element.style.transform = "rotate(" + listRandomNumber(360) + "deg)";
-    });
-}
+console.dir(wrapper1);
 function meteor1() {
-    wrapper1.forEach(function (element) {
-        element.style.top = listRandomNumber(5) + "vh";
-        element.style.bottom = listRandomNumber(10) + "vh";
-        element.style.left = listRandomNumber(30) + "vv";
-        element.style.right = listRandomNumber(30) + "vw";
-        element.style.transform = "translate(" + getRandom() + ", " + getRandom() + ")";
-    });
-    setTimeout(meteor1, 5000);
+    wrapper1 = document.querySelectorAll('.wrapper1');
+    setInterval(function () {
+        wrapper1.forEach(function (element) {
+            //console.log(listRandomNumber())
+            element.style.top = listRandomNumber();
+            element.style.left = listRandomNumber();
+            element.style.transform = "translate(" + listRandomNumber() + ", " + listRandomNumber() + ")";
+            //isOverlap()
+        });
+        wrapper1.forEach(function (elem) {
+            elem.onmouseover = mouseInv;
+            window.onclick = mouseHop;
+            // elem.innerHTML += `<div class="wrapper1"> <img src="png_meteor_6537 (1).png" alt=""> </div>`;
+        });
+        isOverlap();
+    }, 2000);
+    //setTimeout (meteor1,5000)
 }
-function meteor2() {
-    wrapper2.forEach(function (element) {
-        element.style.top = listRandomNumber(5) + "vh";
-        element.style.bottom = listRandomNumber(10) + "vh";
-        element.style.left = listRandomNumber(30) + "vv";
-        element.style.right = listRandomNumber(30) + "vw";
-        element.style.transform = "translate(" + getRandom() + ", " + getRandom() + ")";
-    });
-    setTimeout(meteor2, 5000);
+var x1 = 0;
+var y1 = 0;
+var right1 = 0;
+var bottom1 = 0;
+var x2 = 0;
+var y2 = 0;
+var right2 = 0;
+var bottom2 = 0;
+function isOverlap() {
+    for (var i = 0; i < wrapper1.length; i++) {
+        x1 = wrapper1[i].getBoundingClientRect().x;
+        right1 = wrapper1[i].getBoundingClientRect().right;
+        bottom1 = wrapper1[i].getBoundingClientRect().bottom;
+        y1 = wrapper1[i].getBoundingClientRect().y;
+        for (var j = i + 1; j < wrapper1.length; j++) {
+            x2 = wrapper1[j].getBoundingClientRect().x;
+            right2 = wrapper1[j].getBoundingClientRect().right;
+            bottom2 = wrapper1[j].getBoundingClientRect().bottom;
+            y2 = wrapper1[j].getBoundingClientRect().y;
+            if (x1 > x2 && x1 < right2 && y1 > y2 && y1 < bottom2) {
+                console.log("overlap");
+            }
+        }
+    }
 }
-RandomRotation1();
-RandomRotation2();
+function listRandomNumber() {
+    var randomPX = Math.floor(Math.random() * 250);
+    return randomPX + "px";
+}
 meteor1();
-meteor2();
-// setInterval (wrapper1, 3000)
-// setInterval (wrapper2, 3000)
-var elm1 = document.querySelector('.wrapper1');
-var elm2 = document.querySelector('.wrapper2');
-var elm2p = { leftPosition: elm2.getBoundingClientRect().x };
-console.log(elm2p);
-var elm1p = {
-    leftPosition: elm1.getBoundingClientRect().x,
-    rightPosition: elm1.getBoundingClientRect().right
-};
-console.log(elm1p);
-if (elm2p.leftPosition > elm1p.leftPosition && elm2p.leftPosition < elm1p.rightPosition) {
-    console.log('Overlap');
-}
-else {
-    (elm2p.leftPosition < elm1p.leftPosition && elm2p.leftPosition > elm1p.rightPosition);
-    console.log('no Overlap');
-}
-var MouseBoom = document.querySelectorAll;
-MouseBoom.onmouseover = mouseInv;
 function mouseInv(ev) {
-    MouseBoom.style.top = ev.target.style.top + 150;
-    MouseBoom.style.left = ev.target.style.left + 150;
-    MouseBoom.opacity = 0;
+    ev.target.style.opacity = 0;
+    meteor1();
+}
+function mouseHop(ev) {
+    document.body.innerHTML += "<div class=\"wrapper1\"><img src=\"png_meteor_6537 (1).png\" alt=\"\"></div>";
+    meteor1();
 }

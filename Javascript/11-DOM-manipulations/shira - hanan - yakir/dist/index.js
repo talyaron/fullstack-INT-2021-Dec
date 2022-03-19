@@ -1,11 +1,12 @@
-// ugiCorn is the element for the game
-var ugiCron = document.querySelectorAll(".corona");
+var ugiCron = document.querySelectorAll(".corona" || ".explosion");
 function coronaMove() {
     ugiCron.forEach(function (element) {
-        element.innerHTML = "<img class='corona' src=\"covid19.jpeg\" alt=\"\">"; //replace  element to covid for case that was game alredy
+        //replace  element to covid again for new game
+        element.innerHTML = "<img class='corona' src=\"covid19.jpeg\" alt=\"\">";
+        element.style.visibility = "visible";
+        //random position
         element.style.top = randomPosition() + "vh";
         element.style.left = randomPosition() + "vw";
-        element.style.visibility = "visible";
     });
     // debugger
     overLapCheck();
@@ -13,11 +14,13 @@ function coronaMove() {
 }
 console.log(ugiCron);
 console.dir(ugiCron);
+// function for random number for the position attributes 
 function randomPosition() {
     var postion;
     postion = Math.random() * 90;
     return postion;
 }
+window.requestAnimationFrame(coronaMove);
 var intervalID = setInterval(coronaMove, 2000);
 function overLapCheck() {
     for (var i = 0; i < ugiCron.length; i++) {
@@ -39,4 +42,12 @@ function overLapCheck() {
             }
         }
     }
+}
+ugiCron.forEach(function (element) {
+    element.onclick = boomOnClick;
+});
+function boomOnClick(ev) {
+    //console.log(`you press on ${ev}`)  // for debug the code
+    ev;
+    ev.target.innerHTML = "<img class='explosion' src=\"Boom-PNG.png\" alt=\"\">";
 }
