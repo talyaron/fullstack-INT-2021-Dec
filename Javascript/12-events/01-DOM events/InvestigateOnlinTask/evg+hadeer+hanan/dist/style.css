@@ -5,6 +5,7 @@ body {
   align-items: center;
 }
 body .wrapper .box {
+  display: flex;
   margin: 5px;
   background-color: rgba(0, 38, 255, 0.781);
   height: 100px;

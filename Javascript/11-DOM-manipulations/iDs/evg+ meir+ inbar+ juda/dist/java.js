@@ -1,6 +1,9 @@
 var meteaor = document.querySelectorAll(".boom-boi");
+var test = document.querySelector('#test');
+var image = document.querySelector("#image");
 //  window.addEventListener("keydown", move)
 // console.dir(meteaor)
+console.dir(test);
 function createNewPosition() {
     meteaor.forEach(function (a) {
         a.style.top = getRandomNumber() + "vh";
@@ -11,7 +14,7 @@ function getRandomNumber() {
     var random = Math.floor(Math.random() * 90);
     return random;
 }
-setInterval(createNewPosition, 2000);
+//  setInterval(createNewPosition,2000)
 createNewPosition();
 // const elm2p ={leftPosition:meteaor.getBoundingClientRect().x}
 // console.log(elm2p)
@@ -41,4 +44,16 @@ for (var i = 0; i < meteaor.length; i++) {
     else {
         console.log('no Overlap');
     }
+}
+meteaor.forEach(function (box) {
+    box.onmousedown = redisappear;
+    box.onmouseup = disappear;
+});
+function disappear(id) {
+    id.target.style.opacity = "0";
+}
+function redisappear() {
+    document.getElementById("image").src = "boom.jpg";
+    var audio = new Audio("boom-sound.wav");
+    audio.play();
 }
