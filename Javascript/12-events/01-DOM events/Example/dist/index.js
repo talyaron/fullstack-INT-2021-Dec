@@ -1,15 +1,26 @@
 var aBox = document.querySelector("#aBox");
+var boxes = document.querySelectorAll('.box');
+boxes.forEach(function (box) {
+    box.onmousemove = handleColors;
+});
+document.onload = handleClick;
 aBox.onclick = handleClick;
-aBox.addEventListener('click', handleClick);
+document.onfullscreenchange = handleClick;
 function handleClick(ev) {
-    ev.target.style.backgroundColor = getRandomColor();
-    ev.target.innerHTML = "<div>(" + ev.x + ", " + ev.y + ")</div>";
+    console.log(ev);
+    ev.stopPropagation();
+    var element = ev.target;
+    element.style.backgroundColor = getRandomColor();
+    element.style.backgroundColor = getRandomColor();
+    element.innerHTML += "<div>(" + ev.x + ", " + ev.y + ")</div>";
 }
-aBox.onmouseleave = handleClick;
+function handleColors(ev) {
+    ev.target.style.backgroundColor = getRandomColor();
+}
 console.dir(aBox);
 function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
+    var letters = "0123456789ABCDEF";
+    var color = "#";
     for (var i = 0; i < 6; i++) {
         color += letters[Math.floor(Math.random() * 16)];
     }

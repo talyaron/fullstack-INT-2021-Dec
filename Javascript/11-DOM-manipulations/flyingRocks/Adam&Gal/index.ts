@@ -51,23 +51,35 @@ RandomRotation1()
 RandomRotation2()
 meteor1()
 meteor2()
+// setInterval (wrapper1, 3000)
+// setInterval (wrapper2, 3000)
 
+const elm1 = document.querySelector('.wrapper1');
+const elm2 = document.querySelector('.wrapper2');
 
+const elm2p ={leftPosition:elm2.getBoundingClientRect().x}
+console.log(elm2p)
+const elm1p = {
+    leftPosition:elm1.getBoundingClientRect().x,
+    rightPosition:elm1.getBoundingClientRect().right
+    
+   
+}
+console.log(elm1p)
 
+if(elm2p.leftPosition > elm1p.leftPosition && elm2p.leftPosition < elm1p.rightPosition){
+    console.log('Overlap')
+} else{
+    (elm2p.leftPosition < elm1p.leftPosition && elm2p.leftPosition > elm1p.rightPosition)
+    console.log('no Overlap')
+}
 
+const MouseBoom:any=document.querySelectorAll
 
-//   ------2-----
-//     return (
-//       domRect1.top > domRect2.bottom ||
-//       domRect1.right < domRect2.left ||
-//       domRect1.bottom < domRect2.top ||
-//       domRect1.left > domRect2.right
-//     );
-//   }
-  
-//   const el1 = document.getElementsByClassName('wrapper1');
-//   const el2 = document.getElementsByClassName('wrapper2');
+MouseBoom.onmouseover=mouseInv;
 
-  
-// console.log(elementsOverlap(el1, el2))
-
+function mouseInv(ev){
+    MouseBoom.style.top= ev.target.style.top+150
+    MouseBoom.style.left=ev.target.style.left+150
+    MouseBoom.opacity=0
+}
