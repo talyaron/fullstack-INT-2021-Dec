@@ -3,15 +3,16 @@ body {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    overflow: hidden;
+    background-image:url(https://www.nlspacecampus.eu/cache/3/1920x1080/mob-shutterstock-481251031-20210610135721_1920x1080.jpg)  
 }
 
-.wrapper1,.wrapper2 {
+.wrapper1 {
     transition: all 4000ms ease-in-out;
     animation-name: rotate360;
     height: 10vh;
     position: relative;
     display: inline-block;
+    transition:all 2s;
 
     img {
         height: 100%;

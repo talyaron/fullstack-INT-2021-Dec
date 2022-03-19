@@ -1,0 +1,49 @@
+body {
+    background-color: rgb(179, 253, 228);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+.columns-page {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+margin: 20px;
+
+    height: 60vh;
+    width: 80vh;
+    border: 2px solid black;
+
+
+    .column1 {
+        position: absolute;
+        background-color: rgb(24, 112, 43);
+        width: 100px;
+        height: 50px;
+        bottom: 0px;
+    }
+    
+    .column2 {
+        position: absolute;
+        background-color: rgb(146, 201, 17);
+        width: 100px;
+        height: 50px;
+        bottom: 0px;
+        left: 50px;
+    }
+    
+    .column3 {
+        position: absolute;
+        background-color: rgb(86, 158, 102);
+        width: 100px;
+        height: 50px;
+        bottom: 0px;
+        right: 50px;
+    }
+
+}
+

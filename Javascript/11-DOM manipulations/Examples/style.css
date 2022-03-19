@@ -1,0 +1,14 @@
+.card {
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.205);
+  border-radius: 7px;
+  padding: 20px;
+  max-width: 400px;
+  background-color: #ebebeb;
+}
+.card h2 {
+  color: #0c0cb6;
+}
+
+img {
+  max-width: 200px;
+}
