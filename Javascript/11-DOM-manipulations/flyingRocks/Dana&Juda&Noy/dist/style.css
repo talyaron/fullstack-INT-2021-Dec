@@ -8,8 +8,19 @@
   height: 100%;
 }
 
-img {
+.asteroidWrapper img {
   position: absolute;
+  top: 2vh;
+  left: 2vw;
   width: 120px;
   height: 120px;
+  transition: all 5000ms ease-in-out;
+  animation-name: rotate360;
+  animation: 10s rotate360 infinite;
+}
+
+@keyframes rotate360 {
+  to {
+    transform: translate(120px, 50%) rotate(360deg);
+  }
 }
