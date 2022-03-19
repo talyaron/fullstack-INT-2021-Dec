@@ -30,7 +30,7 @@ function randomPosition() {
 }
 
 window.requestAnimationFrame(coronaMove)
-var intervalID = setInterval(coronaMove, 5000);
+var intervalID = setInterval(coronaMove, 2000);
 
 
 

@@ -21,7 +21,7 @@ function randomPosition() {
     return postion;
 }
 window.requestAnimationFrame(coronaMove);
-var intervalID = setInterval(coronaMove, 5000);
+var intervalID = setInterval(coronaMove, 2000);
 function overLapCheck() {
     for (var i = 0; i < ugiCron.length; i++) {
         for (var j = i + 1; j < ugiCron.length; j++) {
