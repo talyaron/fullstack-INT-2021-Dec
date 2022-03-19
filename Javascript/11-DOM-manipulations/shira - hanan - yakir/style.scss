@@ -6,10 +6,11 @@
         height: 50px;
         width: 50px;
         position: absolute;
+        transition: all 5000ms;
     
         img {
             width: 100%;
-            transition: width 2s;
+            transition: all 1ms;
         }
     }
     .rotate{

@@ -5,10 +5,11 @@
   height: 50px;
   width: 50px;
   position: absolute;
+  transition: all 5000ms;
 }
 .wrapper .corona img {
   width: 100%;
-  transition: width 2s;
+  transition: all 1ms;
 }
 .wrapper .rotate {
   animation: rotate 10s linear infinite;
