@@ -1,0 +1,13 @@
+body {
+    height: 100vh;
+    overflow-y: hidden;
+}
+.balloon{
+  height: 10vh;
+  left: 0px;
+  transition: all 5px;
+  position: absolute;
+  transition-timing-function: ease-in;
+}
+
+
