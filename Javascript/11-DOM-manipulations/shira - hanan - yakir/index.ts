@@ -30,7 +30,7 @@ function randomPosition() {
 }
 
 window.requestAnimationFrame(coronaMove)
-var intervalID = setInterval(coronaMove, 2000);
+var intervalID = setInterval(coronaMove, 10000);
 
 
 
@@ -69,7 +69,19 @@ ugiCron.forEach(element => {
 });
 
 function boomOnClick(ev) {
+    
     //console.log(`you press on ${ev}`)  // for debug the code
     ev as HTMLElement;
     ev.target.innerHTML = "<img class='explosion' src=\"Boom-PNG.png\" alt=\"\">";
-  }
+    ev.target.style.opacity = 0;
+   
+    var audio = new Audio(`Explosion Sounds/Exp2.mp3`);
+    audio.play();
+   
+      
+   
+    
+  };
+  
+  
+  

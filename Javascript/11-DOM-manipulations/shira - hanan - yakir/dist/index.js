@@ -21,7 +21,7 @@ function randomPosition() {
     return postion;
 }
 window.requestAnimationFrame(coronaMove);
-var intervalID = setInterval(coronaMove, 2000);
+var intervalID = setInterval(coronaMove, 10000);
 function overLapCheck() {
     for (var i = 0; i < ugiCron.length; i++) {
         for (var j = i + 1; j < ugiCron.length; j++) {
@@ -50,4 +50,8 @@ function boomOnClick(ev) {
     //console.log(`you press on ${ev}`)  // for debug the code
     ev;
     ev.target.innerHTML = "<img class='explosion' src=\"Boom-PNG.png\" alt=\"\">";
+    ev.target.style.opacity = 0;
+    var audio = new Audio("Explosion Sounds/Exp2.mp3");
+    audio.play();
 }
+;
