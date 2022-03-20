@@ -1,0 +1,14 @@
+body{
+   background-image: url();
+   background-size: auto;
+   background-repeat: no-repeat;
+   height: 100vh;
+   overflow-y: hidden;
+
+}
+.ballon{
+    height: 10vh;
+    transition: all 5s;
+    position: absolute;
+    transition-timing-function: ease-in;
+}

@@ -1,0 +1,14 @@
+body {
+  height: 100vh;
+  display: flex;
+  position: relative;
+}
+body .balloon {
+  display: flex;
+  transition: all 2s;
+  position: absolute;
+  width: 8vw;
+  height: 10vh;
+  top: 112vh;
+  top: 100%;
+}

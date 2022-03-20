@@ -1,0 +1,7 @@
+.div {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3) 60%), url("https://ychef.files.bbci.co.uk/1280_720/p0836dcl.jpg");
+  height: 50vh;
+}
+.div:hover {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1) 60%), url("https://ychef.files.bbci.co.uk/1280_720/p0836dcl.jpg");
+}
