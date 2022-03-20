@@ -9,6 +9,14 @@ function moveBallonDown(ballons) {
 }
 function moveBallonUp(ballons) {
     ballons.forEach(function (element) {
-        element.style.top = '0vh';
+        element.style.top = '-20vh';
     });
+}
+function setBallonRandomPosition(ballons) {
+    ballons.forEach(function (element) {
+        element.style.left = randomWidthStart() + "px";
+    });
+}
+function randomWidthStart() {
+    return Math.random() * body.offsetWidth;
 }
