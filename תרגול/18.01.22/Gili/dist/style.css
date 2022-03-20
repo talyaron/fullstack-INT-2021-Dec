@@ -1,0 +1,34 @@
+.container_mega {
+  background-color: aquamarine;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.container_mega .container_son {
+  width: 400px;
+  height: 400px;
+  background-color: black;
+  border: 1px solid white;
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+}
+.container_mega .container_son .container_Nehed {
+  width: 100px;
+  height: 100px;
+  background-color: brown;
+  margin: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container_mega .container_son .container_Nehed .container_nin {
+  font-size: 30px;
+  background-color: cadetblue;
+  width: 10px;
+  height: 10px;
+  margin: 5%;
+  display: flex;
+  flex-direction: row;
+}

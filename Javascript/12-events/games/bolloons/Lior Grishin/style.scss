@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+    width: 100vw;
+    height: 100vh;    
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    .ballon{
+        position: absolute;
+        width: 100px;
+        height: 200px;
+        transition: top 5s ease-in-out;
+        top: 100vh;
+    }
+}
