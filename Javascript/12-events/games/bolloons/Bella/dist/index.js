@@ -8,7 +8,8 @@ for (i = 1; i <= 4; i++) {
     container.appendChild(balloons);
 }
 function moveBalloons() {
-    balloons.forEach(function (element) {
+    var balloons, forEach;
+    (function (element) {
         element.style.top = "-12vh";
         element.style.left = getRandom() + "vw";
     });

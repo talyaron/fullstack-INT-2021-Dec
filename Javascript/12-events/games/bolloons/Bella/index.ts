@@ -15,7 +15,7 @@ container.appendChild (balloons);
 }  
 
 function moveBalloons() {
-    balloons.forEach(element => {
+    let balloons.forEach(element => {
         element.style.top = `-12vh`;
         element.style.left = `${getRandom()}vw`;
     });
