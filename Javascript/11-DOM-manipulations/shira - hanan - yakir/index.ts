@@ -77,18 +77,9 @@ function boomOnClick(ev) {
    
     var audio = new Audio(`Explosion Sounds/Exp2.mp3`,);
     audio.play();
+   
     
-    let myImage = document.querySelector('covid19.jpeg')
-    let mySrc = document.querySelector(`Boom-PNG.png`)
-    if(myImage === 'covid19.jpeg') {
-        mySrc.setAttribute('src','Boom-PNG.png');
-      } else {
-        myImage.setAttribute('src','covid19.jpeg');
-      }
-  };
-      
-    
- 
+};
   
   
   
