@@ -1,12 +1,15 @@
 body {
   height: 100vh;
   overflow-y: hidden;
+  position: relative;
 }
 
 .balloon {
-  height: 10vh;
-  left: 0px;
-  transition: all 5px;
+  width: 50px;
+  transition: all 2s;
   position: absolute;
-  transition-timing-function: ease-in;
+  top: 110vh;
+}
+.balloon img {
+  width: 100%;
 }

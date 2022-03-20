@@ -1,11 +1,18 @@
-const balloons:NodeListOf<HTMLImageElement>= document.querySelectorAll (".balloon")
-console.dir(balloons)
+const balloons:any= document.querySelectorAll (".balloon")
 
-moveBallons(balloons)
 
-function moveBallons(){
-    balloons.forEach(balloon => {
-       moveBallons (balloon);
+function amazingBallons(){
+    balloons.forEach(element => {
+        element.style.top= -30+"vh";
+        element.style.left = `${getRandomPosition()}vw`;
     });
 }
+
+
+function getRandomPosition() {
+    let randonsize = Math.floor(Math.random() * 100);
+    return randonsize;
+}
+
+amazingBallons()
 

@@ -1,8 +1,12 @@
 var balloons = document.querySelectorAll(".balloon");
-console.dir(balloons);
-moveBallons(balloons);
-function moveBallons() {
-    balloons.forEach(function (balloon) {
-        moveBallons(balloon);
+function amazingBallons() {
+    balloons.forEach(function (element) {
+        element.style.top = -30 + "vh";
+        element.style.left = getRandomPosition() + "vw";
     });
 }
+function getRandomPosition() {
+    var randonsize = Math.floor(Math.random() * 100);
+    return randonsize;
+}
+amazingBallons();
