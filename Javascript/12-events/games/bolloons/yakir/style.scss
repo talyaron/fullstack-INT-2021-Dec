@@ -1,20 +1,19 @@
 body{
     margin: auto;
-
 }
 
 .container{
     margin: auto;
-    position: absolute;
     transition: all 3000;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
 }
 
 .baloon{
+
     position: relative;
-    bottom: 10px;
-    // top: 0vh;
-    // left: 0vW;
-   
+    top: 90vh;   
     img{
         width: 150px;
     }
