@@ -7,10 +7,11 @@ var exploded = document.querySelector(".explode");
 var aswid = astroidArray[0].style.width;
 var ashei = astroidArray[0].style.height;
 function goneONclick(ev) {
-    ev.target.style.display = 'none';
-    var explod = document.querySelector(".explode");
-    console.log(explod);
-    explod.style = "display: inline; left:" + ev.x + "; top:" + ev.y;
+    // ev.target.style.display='none'
+    var explod = ev.target;
+    console.dir(explod);
+    explod.src = "explode.png";
+    setTimeout(function () { ev.target.style.display = 'none'; }, 2000);
 }
 for (var i = 0; i < astroidArray.length; i++) {
     astroidArray[i].onclick = goneONclick;

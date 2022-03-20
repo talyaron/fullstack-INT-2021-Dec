@@ -11,10 +11,11 @@ const aswid=astroidArray[0].style.width
 const ashei=astroidArray[0].style.height
 
 function goneONclick(ev){
-    ev.target.style.display='none'
-    let explod:HTMLElement=document.querySelector(`.explode`)
-    console.log(explod)
-    explod.style=`display: inline; left:${ev.x}; top:${ev.y}`
+    // ev.target.style.display='none'
+    let explod=ev.target
+    console.dir(explod)
+    explod.src="explode.png"
+    setTimeout(()=>{ev.target.style.display='none'}, 2000)
 }
 
 for(let i=0; i<astroidArray.length; i++){
