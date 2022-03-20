@@ -79,7 +79,6 @@ function boomOnClick(ev) {
     audio.play();
    
       
-   
     
   };
   
