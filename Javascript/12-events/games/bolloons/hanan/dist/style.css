@@ -6,6 +6,11 @@ body {
 }
 
 .ballons {
-  position: relative;
-  left: 92vh;
+  position: absolute;
+  top: 112vh;
+  transition: all 4s;
+  height: 12vh;
+}
+.ballons img {
+  height: 100%;
 }
