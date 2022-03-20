@@ -1,0 +1,12 @@
+.balloon{
+    width: 100px;
+   
+
+    &--red{
+        background-image: url('./img/balloon-red.png');
+    }
+
+    &--blue{
+        background-image: url('./img/balloon-blue.png');
+    }
+}
