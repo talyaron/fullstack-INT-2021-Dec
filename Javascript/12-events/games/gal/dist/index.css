@@ -1,20 +1,21 @@
 body {
   margin: 0%;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.wrapper {
   width: 100vw;
   height: 100vh;
 }
-
-.balon1, .balon2, .balon3 {
+.wrapper .balon1, .wrapper .balon2 {
   transition: all 4000ms ease-in-out;
   animation-name: rotate360;
   height: 10vh;
-  transition: all 2s;
-  height: 100vh;
-  overflow-y: hidden;
-  margin-top: 100px;
+  width: 70px;
+  transition: all 5s;
+  top: 100vh;
 }
-@keyframes rotate360 {
-  to {
-    transform: rotate(360deg);
-  }
+.wrapper .balon1 img, .wrapper .balon2 img {
+  width: 100%;
 }
