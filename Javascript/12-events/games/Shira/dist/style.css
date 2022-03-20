@@ -1,0 +1,10 @@
+body {
+  position: relative;
+}
+
+.balloon {
+  position: absolute;
+  height: 15vh;
+  transition: all 3s;
+  transition-timing-function: ease-in;
+}
