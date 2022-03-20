@@ -1,21 +1,12 @@
 body {
-  margin: 0%;
   height: 100vh;
   overflow-y: hidden;
 }
 
-.wrapper {
-  width: 100vw;
-  height: 100vh;
-}
-.wrapper .balon1, .wrapper .balon2 {
-  transition: all 4000ms ease-in-out;
-  animation-name: rotate360;
+.balloon {
   height: 10vh;
-  width: 70px;
-  transition: all 5s;
-  top: 100vh;
-}
-.wrapper .balon1 img, .wrapper .balon2 img {
-  width: 100%;
+  left: 0px;
+  transition: all 5px;
+  position: absolute;
+  transition-timing-function: ease-in;
 }
