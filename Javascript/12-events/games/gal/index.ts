@@ -6,6 +6,14 @@ let ballonArray:Array<any>= [ballon1,ballon2,ballon3]
 
 function amazingBallons(){
     ballonArray.forEach(element => {
-        
+        element.style.top= -30+"vh"
+        element.style.left= getRandomPosition
     });
+}
+
+setInterval (amazingBallons)
+
+function getRandomPosition() {
+    let randonsize = Math.floor(Math.random() * 100);
+    return randonsize;
 }
