@@ -6,11 +6,6 @@ function collision() {
         var position1 = meteors[i].getBoundingClientRect();
         for (var j = 0; j < meteors.length && j != i; j++) {
             var position2 = meteors[j].getBoundingClientRect();
-            console.log(position1);
-            console.log(position2);
-            // if (position1.top === position2.top && position1.left === position2.left){
-            //     console.log("collision");
-            // }
         }
     }
 }
@@ -22,7 +17,7 @@ function moveMeteors() {
     });
 }
 setInterval(moveMeteors, 3000);
-setInterval(collision, 3000);
+setInterval(collision, 100);
 // function that gets a random number for postion
 function getRandomPosition() {
     var randonsize = Math.floor(Math.random() * 90);
