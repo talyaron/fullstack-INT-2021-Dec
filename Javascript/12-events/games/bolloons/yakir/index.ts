@@ -1,22 +1,16 @@
 const baloons: NodeListOf<HTMLElement> = document.querySelectorAll(".baloon");
 
-function randomPosition() {
-    let postion: number;
-    postion = Math.random() * 90;
-    return postion;
-}
 
-
-baloonRandom()
 
 window.requestAnimationFrame(baloonRandom)
 var intervalID = setInterval(baloonRandom, 5000);
 
-function baloonRandom() {
+function baloonsUp() {
     baloons.forEach((element) => {
-        //random position
-        element.style.top = randomPosition() + "vh";
-        element.style.left = randomPosition() + "vw";
+        element.style.top = 0 + "vh";
     });
 }
+
+baloonsUp()
+
 
