@@ -17,4 +17,5 @@ body .ballon {
   width: 100px;
   height: 200px;
   transition: top 5s ease-in-out;
+  top: 100vh;
 }
