@@ -12,6 +12,10 @@ function meteor1() {
       element.style.left = listRandomNumber();
       element.style.transform = "translate(" + listRandomNumber() + ", " + listRandomNumber() + ")"; //isOverlap()
     });
+    wrapper1.forEach(function (elem) {
+      elem.onmouseover = mouseInv;
+      window.onclick = mouseHop; // elem.innerHTML += `<div class="wrapper1"> <img src="png_meteor_6537 (1).png" alt=""> </div>`;
+    });
     isOverlap();
   }, 2000); //setTimeout (meteor1,5000)
 }
@@ -51,13 +55,10 @@ function listRandomNumber() {
 }
 
 meteor1();
-wrapper1.forEach(function (elem) {
-  elem.onmouseover = mouseInv;
-  window.onclick = mouseHop; // elem.innerHTML += `<div class="wrapper1"> <img src="png_meteor_6537 (1).png" alt=""> </div>`;
-});
 
 function mouseInv(ev) {
-  ev.target.style.opacity = 0; //console.log(`wrapper1.length ${wrapper1.length}`)
+  ev.target.style.opacity = 0;
+  meteor1();
 }
 
 function mouseHop(ev) {

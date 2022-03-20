@@ -1,0 +1,17 @@
+body {
+  margin: auto;
+}
+
+.container {
+  margin: auto;
+  position: absolute;
+  transition: all 3000;
+}
+
+.baloon {
+  position: relative;
+  bottom: 10px;
+}
+.baloon img {
+  width: 150px;
+}

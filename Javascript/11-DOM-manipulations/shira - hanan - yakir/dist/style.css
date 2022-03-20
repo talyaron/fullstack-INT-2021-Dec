@@ -1,6 +1,10 @@
 .wrapper {
   margin: auto;
 }
+.wrapper h1 {
+  margin: auto;
+  text-align: center;
+}
 .wrapper .corona {
   height: 50px;
   width: 50px;
