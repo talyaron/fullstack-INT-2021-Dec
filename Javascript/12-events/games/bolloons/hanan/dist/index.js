@@ -1,7 +1,7 @@
 var ballons = document.querySelectorAll(".ballons");
 function ballonFly() {
     ballons.forEach(function (element) {
-        element.innerHTML = "<img id='ballon' src=\"imgs/ooo.jpg>";
+        element.innerHTML = " <div class=ballons>";
         element.style.visibility = "visible";
         element.style.top = randomPosition() + "vh";
     });

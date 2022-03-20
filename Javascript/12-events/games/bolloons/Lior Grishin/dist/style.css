@@ -12,9 +12,12 @@ body {
   background-size: cover;
   overflow: hidden;
 }
-body .ballon {
+body .balloon {
   position: absolute;
   width: 100px;
   height: 200px;
   transition: top 5s ease-in-out;
+}
+body .balloon img {
+  width: 100%;
 }
