@@ -10,14 +10,27 @@ const exploded:HTMLElement=document.querySelector(`.explode`)
 const aswid=astroidArray[0].style.width
 const ashei=astroidArray[0].style.height
 
+function goneONclick(ev){
+    ev.target.style.display='none'
+    let explod:HTMLElement=document.querySelector(`.explode`)
+    console.log(explod)
+    explod.style=`display: inline; left:${ev.x}; top:${ev.y}`
+}
+
+for(let i=0; i<astroidArray.length; i++){
+    astroidArray[i].onclick= goneONclick
+}
+
+
+
 function checkForCrash(astArray:Array<any>, xwidth:number, xheight:number){
-    const crashedORnot=[]
+    const crashedORnot=["no"]
     for(let i=0; i<astArray.length; i++){
         let thisx=astArray[i].style.left
         let numthisx:number=thisx.replace('vw','')
         let thisy=astArray[i].style.top
         let numthisy:number=thisy.replace('vh','')
-        crashedORnot.push("no")
+        
         
         for(let j=i+1; j<astArray.length; j++){
             let otherx=astArray[j].style.left
@@ -26,12 +39,16 @@ function checkForCrash(astArray:Array<any>, xwidth:number, xheight:number){
             let numothery:number=othery.replace('vh','')
             let difx=Math.abs(numthisx-numotherx) 
             let dify=Math.abs(numthisy-numothery)
+            crashedORnot.push("no")
             if (i==j)
             {
                 break
             }
+            
+            console.log(crashedORnot[j])
             if((difx<=xwidth&&dify<=xheight)&&(crashedORnot[j]=="no")){
                 console.log(difx, dify)
+                console.log(crashedORnot[j])
                 astArray[j].style.display='none'
                 exploded.style.display=`inline`
                 exploded.style.left=otherx
