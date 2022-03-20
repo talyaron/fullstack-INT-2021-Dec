@@ -5,6 +5,10 @@ body {
   height: 100vh;
   background-repeat: no-repeat;
 }
-body .baloonns {
+body .wrapper {
+  position: relative;
+  top: 70vh;
+}
+body .wrapper .baloonns {
   width: 12vw;
 }
