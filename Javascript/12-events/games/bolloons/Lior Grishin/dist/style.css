@@ -5,13 +5,16 @@
 }
 
 body {
+  position: relative;
   width: 100vw;
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
-body img {
-  border: 1px solid black;
+body .ballon {
+  position: absolute;
   width: 100px;
   height: 200px;
+  transition: top 5s ease-in-out;
 }
