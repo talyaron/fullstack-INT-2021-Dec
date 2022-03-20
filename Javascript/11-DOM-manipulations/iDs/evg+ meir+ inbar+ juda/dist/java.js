@@ -1,7 +1,6 @@
 var meteaor = document.querySelectorAll(".boom-boi");
 var test = document.querySelector('#test');
 var image = document.querySelector("#image");
-//  window.addEventListener("keydown", move)
 // console.dir(meteaor)
 console.dir(test);
 function createNewPosition() {
@@ -14,7 +13,7 @@ function getRandomNumber() {
     var random = Math.floor(Math.random() * 90);
     return random;
 }
-//  setInterval(createNewPosition,2000)
+setInterval(createNewPosition, 2000);
 createNewPosition();
 // const elm2p ={leftPosition:meteaor.getBoundingClientRect().x}
 // console.log(elm2p)

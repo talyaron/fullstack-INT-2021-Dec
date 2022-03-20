@@ -16,5 +16,6 @@
   display: none;
 }
 #rapper .explode img {
+  position: absolute;
   height: 55px;
 }

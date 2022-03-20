@@ -1,18 +1,36 @@
-body {
-    margin: 0%;
+.hidden {
+    display: none;
+    img {
+        display: none;
+    }
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    cursor: none;
+    margin: 0;
+    padding: 0;
     width: 100vw;
     height: 100vh;
     position: relative;
-}
-
-.metor {
-    height: 10vh;
-    display: inline-block;
-    position: relative;
-    transition: all 5000ms ease-in-out;
-    animation-name: rotate360;
-    img {
-        height: 100%;
+    background-image: url('images/Background.jpg');
+    background-size: cover;
+   
+    .meteor{
+        position: absolute;
+        // border: 1px solid black;
+        // width: 100px;
+        // height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 5000ms ease-in-out;
+        animation-name: rotate360;
+        img{
+            width: 90px;
+        }
     }
 }
 
@@ -22,8 +40,25 @@ body {
     }
 }
 
-img {
+.meteor img {
     animation: 10s rotate360 infinite linear;
 }
 
-/* TODO: Add -vendor-prefixes for different browsers */
+.wrapper{
+    position: relative;
+    height: 90%;
+}
+
+.explostion{
+    width: 125px;
+    position: absolute;
+    transition: scale 500ms ease-in-out;
+}
+
+#spaceShip{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transition: all 10ms linear;
+}
+
