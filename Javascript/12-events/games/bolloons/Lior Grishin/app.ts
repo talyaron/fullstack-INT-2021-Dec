@@ -12,6 +12,16 @@ function moveBallonDown(ballons:NodeListOf<HTMLImageElement>){
 
 function moveBallonUp(ballons:NodeListOf<HTMLImageElement>){
     ballons.forEach(element => {
-        element.style.top= '0vh';
+        element.style.top= '-20vh';
     });
+}
+
+function setBallonRandomPosition(ballons:NodeListOf<HTMLImageElement>){
+    ballons.forEach(element => {
+        element.style.left = `${randomWidthStart()}px`;
+    });
+}
+
+function randomWidthStart():number{
+    return Math.random() * body.offsetWidth;
 }
