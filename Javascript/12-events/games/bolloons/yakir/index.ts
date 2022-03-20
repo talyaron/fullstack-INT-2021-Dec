@@ -1,5 +1,4 @@
-
-
+const baloons: NodeListOf<HTMLElement> = document.querySelectorAll(".baloon");
 
 function randomPosition() {
     let postion: number;
@@ -8,7 +7,10 @@ function randomPosition() {
 }
 
 
-const baloons: NodeListOf<HTMLElement> = document.querySelectorAll("baloon");
+baloonRandom()
+
+window.requestAnimationFrame(baloonRandom)
+var intervalID = setInterval(baloonRandom, 5000);
 
 function baloonRandom() {
     baloons.forEach((element) => {
@@ -18,8 +20,3 @@ function baloonRandom() {
     });
 }
 
-
-baloonRandom()
-
-window.requestAnimationFrame(baloonRandom)
-var intervalID = setInterval(baloonRandom, 5000);
