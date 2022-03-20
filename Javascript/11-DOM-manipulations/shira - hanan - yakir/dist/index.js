@@ -47,19 +47,18 @@ ugiCron.forEach(function (element) {
     element.onclick = boomOnClick;
 });
 function boomOnClick(ev) {
-    //console.log(`you press on ${ev}`)  // for debug the code
     ev;
     ev.target.innerHTML = "<img class='explosion' src=\"Boom-PNG.png\" alt=\"\">";
     ev.target.style.opacity = 0;
     var audio = new Audio("Explosion Sounds/Exp2.mp3");
     audio.play();
-    var myImage = document.querySelector('covid19.jpeg');
-    var mySrc = document.querySelector("Boom-PNG.png");
-    if (myImage === 'covid19.jpeg') {
-        mySrc.setAttribute('src', 'Boom-PNG.png');
-    }
-    else {
-        myImage.setAttribute('src', 'covid19.jpeg');
-    }
+    ev.target.src = "Boom-PNG.png";
+    // let myImage = document.querySelectora('covid19.jpeg')
+    // let mySrc = document.querySelector(`Boom-PNG.png`)
+    // if(myImage === 'covid19.jpeg') {
+    //     mySrc.setAttribute('src','Boom-PNG.png');
+    //   } else {
+    //     myImage.setAttribute('src','covid19.jpeg');
+    //   }
 }
 ;
