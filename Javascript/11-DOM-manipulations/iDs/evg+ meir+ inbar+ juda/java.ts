@@ -1,7 +1,7 @@
 const meteaor:any = document.querySelectorAll(".boom-boi")
 const test = document.querySelector('#test')
 const image:any= document.querySelector("#image")
-//  window.addEventListener("keydown", move)
+
 // console.dir(meteaor)
 console.dir(test)
 function createNewPosition(){
@@ -71,7 +71,7 @@ function disappear(id) {
  
  function redisappear() {
     document.getElementById("image").src="boom.jpg";
-    var audio = new Audio("boom-sound.wav");
+    let audio = new Audio("boom-sound.wav");
     audio.play();
  }
 
