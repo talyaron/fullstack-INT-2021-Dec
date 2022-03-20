@@ -1,0 +1,7 @@
+body {
+  background-color: black;
+}
+body .baloons {
+  position: absolute;
+  top: 100%;
+}
