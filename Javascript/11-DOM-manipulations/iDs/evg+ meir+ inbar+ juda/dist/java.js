@@ -1,7 +1,6 @@
 var meteaor = document.querySelectorAll(".boom-boi");
 var test = document.querySelector('#test');
 var image = document.querySelector("#image");
-//  window.addEventListener("keydown", move)
 // console.dir(meteaor)
 console.dir(test);
 function createNewPosition() {
