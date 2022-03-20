@@ -1,12 +1,12 @@
-var ugiCron = document.querySelectorAll(".corona");
-var ugiCronTest = document.querySelector("#ugiCronTest");
+var ugiCron = document.querySelectorAll(".corona" || ".explosion");
 function coronaMove() {
     ugiCron.forEach(function (element) {
-        element.innerHTML = "<img class='corona' src=\"covid19.jpeg\" alt=\"\">"; //replace  element to covid for case that was game alredy
+        //replace  element to covid again for new game
+        element.innerHTML = "<img class='corona' src=\"covid19.jpeg\" alt=\"\">";
+        element.style.visibility = "visible";
+        //random position
         element.style.top = randomPosition() + "vh";
         element.style.left = randomPosition() + "vw";
-        element.style.visibility = "visible";
-        // element.onclick = boomOnClick;
     });
     // debugger
     overLapCheck();
@@ -14,12 +14,14 @@ function coronaMove() {
 }
 console.log(ugiCron);
 console.dir(ugiCron);
+// function for random number for the position attributes 
 function randomPosition() {
     var postion;
     postion = Math.random() * 90;
     return postion;
 }
-var intervalID = setInterval(coronaMove, 5000);
+window.requestAnimationFrame(coronaMove);
+var intervalID = setInterval(coronaMove, 10000);
 function overLapCheck() {
     for (var i = 0; i < ugiCron.length; i++) {
         for (var j = i + 1; j < ugiCron.length; j++) {
@@ -41,16 +43,23 @@ function overLapCheck() {
         }
     }
 }
-// ugiCron.forEach(element => {
-//     element.onclick = boomOnClick;
-// });
-// function boomOnClick(ev) {
-//     const element = ev.target;
-//     // element.style.visibility = `hidden`
-//    element.innerHTML = "<img class='explosion' src=\"Boom-PNG.png\" alt=\"\">" //replace  element to covid for case that was game alredy
-// }
-ugiCronTest.onclick = boomOnClick;
+ugiCron.forEach(function (element) {
+    element.onclick = boomOnClick;
+});
 function boomOnClick(ev) {
-    var element = ev.target;
-    element.innerHTML = "<img class='explosion' src=\"Boom-PNG.png\" alt=\"\">";
+    //console.log(`you press on ${ev}`)  // for debug the code
+    ev;
+    ev.target.innerHTML = "<img class='explosion' src=\"Boom-PNG.png\" alt=\"\">";
+    ev.target.style.opacity = 0;
+    var audio = new Audio("Explosion Sounds/Exp2.mp3");
+    audio.play();
+    var myImage = document.querySelector('covid19.jpeg');
+    var mySrc = document.querySelector("Boom-PNG.png");
+    if (myImage === 'covid19.jpeg') {
+        mySrc.setAttribute('src', 'Boom-PNG.png');
+    }
+    else {
+        myImage.setAttribute('src', 'covid19.jpeg');
+    }
 }
+;

@@ -1,11 +1,7 @@
 var getRandom = function (min, max) { return Math.floor(Math.random() * (max - min + 1) + min); };
-var asteroid = document.querySelector('#asteroid');
-asteroid.forEach(function (element) {
-    element.style.top = getRandom() + "vh";
-    element.style.left = getRandom() + "vw";
+var asteroids = document.querySelectorAll('#asteroid');
+console.dir(asteroids);
+asteroids.forEach(function (element) {
+    element.style.top = getRandom(0, 100) + "vh";
+    element.style.left = getRandom(0, 100) + "vw";
 });
-// const asteroid:Array<any> = [document.querySelectorAll('#asteroid')]
-// console.dir(asteroid)
-// expected output: "a"
-// expected output: "b"
-// expected output: "c"
