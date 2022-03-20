@@ -11,10 +11,14 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-    .ballon{
+    .balloon{
         position: absolute;
         width: 100px;
         height: 200px;
         transition: top 5s ease-in-out;
+        img {
+            width: 100%;
+        }
     }
 }
+

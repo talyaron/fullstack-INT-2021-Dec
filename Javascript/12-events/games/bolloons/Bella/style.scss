@@ -4,11 +4,12 @@ body {
     width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
-    .wrapper {
-        position: relative;
-        top: 70vh;
-        .baloonns {
-            width: 12vw;
-        }
+    position: relative;
+    .baloonns {
+        // width: 12vw;
+        height: 10vh;
+        position: absolute;
+        transition: all 2s;
+        top: 112vh;
     }
 }
