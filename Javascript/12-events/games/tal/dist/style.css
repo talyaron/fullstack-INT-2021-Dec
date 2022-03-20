@@ -1,0 +1,9 @@
+.balloon {
+  width: 100px;
+}
+.balloon--red {
+  background-image: url("./img/balloon-red.png");
+}
+.balloon--blue {
+  background-image: url("./img/balloon-blue.png");
+}
