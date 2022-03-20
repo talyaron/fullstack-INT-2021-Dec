@@ -22,7 +22,7 @@ window.requestAnimationFrame(ballonFly)
 var intervalID = setInterval(ballonFly, 1000);
 
 
- }
+ };
 
  
 
