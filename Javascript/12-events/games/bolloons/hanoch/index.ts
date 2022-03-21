@@ -9,4 +9,4 @@ balloons.forEach(elm =>{
 function getRandomNumber (){
     const random = Math.floor(Math.random() * 90);
     return random}
-setTimeout(moveBalloons)
+setInterval(moveBalloons,6000)

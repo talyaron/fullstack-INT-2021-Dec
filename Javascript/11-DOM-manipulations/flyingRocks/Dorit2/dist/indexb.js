@@ -4,32 +4,20 @@ var lastNumX = 0;
 var lastNumY = 0;
 var num = 0;
 //let blackies:NodeListOf<HTMLCanvasElement> = []
-var blackies = [];
 function randomize(min, max) {
     num = Math.floor(Math.random() * (max - min + 1)) + min;
     return num;
 }
 function checkColision() {
+    console.log("checking");
     for (var i = 0; i < blackies.length; i++) {
         if (blackies[i].style.opacity == "0") {
             i++;
         }
         var ballCenterX = parseInt(myBall.style.left.slice(0, -2)) + 12;
-        if (ballCenterX > 512) {
-            console.log("ballcenterx " + ballCenterX + " ballleft " + parseInt(myBall.style.left.slice(0, -2)));
-        }
         var ballCenterY = parseInt(myBall.style.top.slice(0, -2)) + 12;
-        if (ballCenterY > 512) {
-            console.log("ballcentery " + ballCenterY + " balltop " + parseInt(myBall.style.top.slice(0, -2)));
-        }
         var blackiCenterX = parseInt(blackies[i].style.left.slice(0, -2)) + 50;
-        if (blackiCenterX > 550) {
-            console.log("blackicenterx " + blackiCenterX + " blackix " + parseInt(blackies[i].style.left.slice(0, -2)));
-        }
         var blackiCenterY = parseInt(blackies[i].style.top.slice(0, -2)) + 50;
-        if (blackiCenterY > 550) {
-            console.log("blackicentery " + blackiCenterY + " blackitop " + parseInt(blackies[i].style.top.slice(0, -2)));
-        }
         var dx = Math.abs(ballCenterX - blackiCenterX);
         console.log("dx= " + dx);
         var dy = Math.abs(ballCenterY - blackiCenterY);
@@ -118,6 +106,7 @@ function addBlackies() {
         el.style.position = 'absolute';
         el.style.width = "120px";
         el.style.height = "120px";
+        el.style.backgroundColor = "red";
         num = randomize(50, 550);
         if (num < 120) {
             num += 200;
@@ -137,7 +126,8 @@ function addBlackies() {
 }
 function moveFigures() {
     setInterval(function () {
-        setInterval("checkColision", 200);
+        setInterval(checkColision, 200);
+        var myBall = document.querySelector("#myBall");
         num = randomize(50, 550);
         if (num < 120) {
             num += 200;
@@ -148,6 +138,7 @@ function moveFigures() {
             num += 200;
         }
         myBall.style.top = num + "px";
+        var blackies = document.querySelectorAll("#myCanvas");
         for (var i = 0; i < blackies.length; i++) {
             num = randomize(50, 550);
             if (num < 120) {
@@ -186,19 +177,18 @@ function blackiMore(ev) {
     el.style.width = "200px";
     el.style.height = "120px";
     el.style.width = "120px";
-    //Initialization:
-    addBall();
-    addBlackies();
-    var blackies = document.querySelectorAll("#myCanvas");
-    var myBall = document.querySelector("#myBall");
-    blackies.forEach(function (elem) {
-        elem.onmouseover, function (ev) {
-            ev.target.style.opacity = "0";
-        };
-        blackies = document.querySelectorAll("#myCanvas");
-    });
-    window.onmousedown = addBlackies;
-    moveFigures();
-    //checkColision()
 }
+function mouseOp(ev) {
+    ev.target.style.opacity = "0";
+}
+//Initialization:
+addBall();
+addBlackies();
+var blackies = document.querySelectorAll("#myCanvas");
+var myBall = document.querySelector("#myBall");
+blackies.forEach(function (elem) {
+    elem.onmouseover = mouseOp;
+});
+window.onmousedown = blackiMore;
+moveFigures();
 //checkColision()
