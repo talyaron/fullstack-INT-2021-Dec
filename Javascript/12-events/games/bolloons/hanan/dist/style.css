@@ -14,3 +14,13 @@ body {
 .ballons img {
   height: 100%;
 }
+
+.boss {
+  position: absolute;
+  top: 112vh;
+  transition: all 15s;
+  height: 12vh;
+}
+.boss img {
+  height: 30vh;
+}
