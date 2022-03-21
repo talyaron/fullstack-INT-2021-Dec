@@ -1,20 +1,16 @@
 body {
-    margin: 0%;
     height: 100vh;
     overflow-y: hidden;
+    position: relative;
 }
-.wrapper{
-    width: 100vw;
-    height: 100vh;
-.balon1,.balon2{
-    transition: all 4000ms ease-in-out;
-    animation-name: rotate360;
-    height: 10vh;
-    width: 70px;
-    transition:all 5s;
-    top: 100vh;
-    img{
+
+.balloon {
+    width: 50px;
+    transition: all 2s;
+    position: absolute;
+    top: 110vh;
+
+    img {
         width: 100%;
     }
-}
 }
