@@ -14,7 +14,7 @@ h1 {
 
 .ballons {
   position: absolute;
-  top: 112vh;
+  top: 114vh;
   transition: all 8s;
   height: 12vh;
 }
@@ -24,8 +24,8 @@ h1 {
 
 .boss {
   position: absolute;
-  top: 112vh;
-  transition: all 15s;
+  top: 135vh;
+  transition: all 6s;
   height: 12vh;
 }
 .boss img {
