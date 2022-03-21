@@ -3,7 +3,8 @@ let numY:number = 0
 let lastNumX:number = 0
 let lastNumY:number = 0
 let num:number = 0
-//let blackies:NodeListOf<HTMLCanvasElement> = []
+let blackies:NodeListOf<HTMLCanvasElement> = document.querySelectorAll("#myCanvas")
+let myBall:HTMLElement = document.querySelector("#myBall")
 
 function randomize(min,max){
     num = Math.floor(Math.random()*(max - min +1 ))+min
@@ -31,9 +32,9 @@ function checkColision(){
         console.log(`dy= ${dy}`)
         let distance:number = (dx + dy)/2
         console.log(`distance= ${distance}`)
-        if (distance <= 20){
+        if (distance <= 62){
             console.log("c o l i s i o n")
-            blackies[i].style.opacity="0"
+            blackies[i].style.opacity = "0"
         }
         }
 }
@@ -106,7 +107,7 @@ function addBall(){
     elB.style.position = "absolute"
     elB.style.left = "250px"
     elB.style.top = "250px"
-    
+    myBall = document.querySelector("#myBall")
 //console.log(`we have one ball ${myBall}`)
 }
 
@@ -119,7 +120,6 @@ for (let i:number=0; i<8; i++) {
     el.style.position = 'absolute';
     el.style.width = "120px"
     el.style.height = "120px"
-    el.style.backgroundColor="red"
     num = randomize(50,550)
     if(num<120){
         num += 200
@@ -136,6 +136,7 @@ for (let i:number=0; i<8; i++) {
     el.style.left = numX+"px"
     el.style.top = numY+"px"
     //console.log(`left of el ${el.style.top}`)
+    blackies = document.querySelectorAll("#myCanvas")
 }    
 }
 
@@ -143,7 +144,6 @@ for (let i:number=0; i<8; i++) {
 function moveFigures(){
     setInterval(() => {
         setInterval(checkColision,200)
-       let myBall:HTMLCanvasElement = document.querySelector("#myBall")
         num = randomize(50,550)
         if(num<120){
             num += 200
@@ -156,8 +156,6 @@ function moveFigures(){
         }
      
         myBall.style.top = num+"px"
-        let blackies:NodeListOf<HTMLCanvasElement> = document.querySelectorAll("#myCanvas")
-
         for(let i:number = 0;i<blackies.length; i++){
 
             num = randomize(50,550)
@@ -193,7 +191,7 @@ function moveFigures(){
 
 function blackiTouch(ev){
     ev.target.style.opacity="0"
-    moveFigures()
+    
 }
 
 function blackiMore(ev){
@@ -206,17 +204,16 @@ function blackiMore(ev){
     el.style.width = "200px"
     el.style.height = "120px"
     el.style.width = "120px"
+    blackies = document.querySelectorAll("#myCanvas")
 }
-function mouseOp(ev){
-    ev.target.style.opacity = "0"
-}
-    //Initialization:
+
+
+  //Initialization:
 addBall()
 addBlackies()
-let blackies:NodeListOf<HTMLCanvasElement>=document.querySelectorAll("#myCanvas")
-let myBall:HTMLCanvasElement= document.querySelector("#myBall")
+
 blackies.forEach(elem=>{
-    elem.onmouseover = mouseOp
+    elem.onmouseover = blackiTouch
  
 })
 window.onmousedown = blackiMore
