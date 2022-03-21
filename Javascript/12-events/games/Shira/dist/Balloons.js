@@ -9,6 +9,6 @@ function balloonUp(balloon) {
     balloon.style.top = '112vh';
     balloon.style.left = Math.random() * 90 + "vw";
     setInterval(function () {
-        balloon.style.top = '-12vh';
+        balloon.style.top = '0vh';
     }, 1000);
 }

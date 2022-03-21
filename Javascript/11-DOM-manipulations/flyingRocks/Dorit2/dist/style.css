@@ -1,9 +1,8 @@
 body {
-  margin: 0;
-  position: relative;
+  margin: 0 auto;
+  height: 100vh;
 }
 
 .container {
-  width: 600;
-  height: 600;
+  position: absolute;
 }

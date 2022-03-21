@@ -1,0 +1,18 @@
+ body {
+     height: 100vh;
+     overflow: hidden;
+
+
+  
+ }
+
+
+.balloon {
+    display: flex;
+    transition: all 2s;
+    position: absolute;
+    width: 8vw;
+    height: 10vh;
+     top: 100vh;
+    top: 100%;
+}

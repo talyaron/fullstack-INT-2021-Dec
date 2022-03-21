@@ -1,7 +1,13 @@
 body {
   background-color: black;
+  position: relative;
 }
 body .baloons {
   position: absolute;
-  top: 100%;
+  transition: all 5s;
+  top: 112vh;
+  height: 10vh;
+}
+body .baloons img {
+  height: 100%;
 }
