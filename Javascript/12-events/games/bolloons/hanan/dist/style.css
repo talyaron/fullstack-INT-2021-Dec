@@ -8,7 +8,7 @@ body {
 .ballons {
   position: absolute;
   top: 112vh;
-  transition: all 4s;
+  transition: all 8s;
   height: 12vh;
 }
 .ballons img {
