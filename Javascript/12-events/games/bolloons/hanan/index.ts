@@ -1,11 +1,11 @@
 const ballons: NodeListOf<HTMLElement> = document.querySelectorAll(".ballons");
 const boss: NodeListOf<HTMLElement> = document.querySelectorAll(".boss");
 
-
+//////////תעופה של בלונים ובלון בוס function of movement for the objects////////////
 function ballonFly(ballons) {
   ballons.forEach(element => {
 
-    element.style.top = `-12vh`;
+    element.style.top = `-14vh`;
     element.style.left = randomPosition() + "vw";
 
 
@@ -22,7 +22,7 @@ function ballonFly(ballons) {
 function bossballonFly(boss) {
   boss.forEach(element => {
 
-    element.style.top = `-12vh`;
+    element.style.top = `-35vh`;
     element.style.left = randomPosition() + "vw";
 
 
@@ -36,4 +36,6 @@ function bossballonFly(boss) {
 }
 
 ballonFly(ballons);
-ballonFly(boss);
+bossballonFly(boss);
+//////////////////////////////////////////
+
