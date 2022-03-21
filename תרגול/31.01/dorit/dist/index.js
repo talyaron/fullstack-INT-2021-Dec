@@ -1,2 +1,0 @@
-function modulo(a, b) {
-}
