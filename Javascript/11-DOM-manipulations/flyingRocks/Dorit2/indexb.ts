@@ -221,8 +221,5 @@ addBlackies()
 moveFigures()
 
 
-
-
-
 //checkColision()
 

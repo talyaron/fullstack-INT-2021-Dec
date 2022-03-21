@@ -4,7 +4,9 @@ var numX = 0;
 var numY = 0;
 var lastNumX = 0;
 var lastNumY = 0;
-var num = 0; //let blackies:NodeListOf<HTMLCanvasElement> = []
+var num = 0;
+var blackies = document.querySelectorAll("#myCanvas");
+var myBall = document.querySelector("#myBall");
 
 function randomize(min, max) {
   num = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -21,8 +23,8 @@ function checkColision() {
 
     var ballCenterX = parseInt(myBall.style.left.slice(0, -2)) + 12;
     var ballCenterY = parseInt(myBall.style.top.slice(0, -2)) + 12;
-    var blackiCenterX = parseInt(blackies[i].style.left.slice(0, -2)) + 70;
-    var blackiCenterY = parseInt(blackies[i].style.top.slice(0, -2)) + 70;
+    var blackiCenterX = parseInt(blackies[i].style.left.slice(0, -2)) + 50;
+    var blackiCenterY = parseInt(blackies[i].style.top.slice(0, -2)) + 50;
     var dx = Math.abs(ballCenterX - blackiCenterX);
     console.log("dx= " + dx);
     var dy = Math.abs(ballCenterY - blackiCenterY);
@@ -30,7 +32,7 @@ function checkColision() {
     var distance = (dx + dy) / 2;
     console.log("distance= " + distance);
 
-    if (distance <= 82) {
+    if (distance <= 62) {
       console.log("c o l i s i o n");
       blackies[i].style.opacity = "0";
     }
@@ -104,7 +106,8 @@ function addBall() {
 
   elB.style.position = "absolute";
   elB.style.left = "250px";
-  elB.style.top = "250px"; //console.log(`we have one ball ${myBall}`)
+  elB.style.top = "250px";
+  myBall = document.querySelector("#myBall"); //console.log(`we have one ball ${myBall}`)
 }
 
 function addBlackies() {
@@ -115,8 +118,7 @@ function addBlackies() {
     el.style.transition = "all 2000ms";
     el.style.position = 'absolute';
     el.style.width = "120px";
-    el.style.height = "120px"; //el.style.backgroundColor = "red";
-
+    el.style.height = "120px";
     num = randomize(50, 550);
 
     if (num < 120) {
@@ -135,13 +137,14 @@ function addBlackies() {
     lastNumY = numY;
     el.style.left = numX + "px";
     el.style.top = numY + "px"; //console.log(`left of el ${el.style.top}`)
+
+    blackies = document.querySelectorAll("#myCanvas");
   }
 }
 
 function moveFigures() {
   setInterval(function () {
     setInterval(checkColision, 200);
-    var myBall = document.querySelector("#myBall");
     num = randomize(50, 550);
 
     if (num < 120) {
@@ -156,7 +159,6 @@ function moveFigures() {
     }
 
     myBall.style.top = num + "px";
-    var blackies = document.querySelectorAll("#myCanvas");
 
     for (var i = 0; i < blackies.length; i++) {
       num = randomize(50, 550);
@@ -180,14 +182,18 @@ function moveFigures() {
       //}
 
       blackies[i].style.left = numX + "px";
-      blackies[i].style.top = numY + "px"; //lastNumX = numX
+      blackies[i].style.top = numY + "px";
+      blackies.forEach(function (elem) {
+        elem.onmouseover = blackiTouch;
+        window.onclick = blackiMore;
+      }); //lastNumX = numX
       //lastNumY = numY
     }
   }, 2000);
 }
 
 function blackiTouch(ev) {
-  ev.target.style.opacity = "0"; //moveFigures();
+  ev.target.style.opacity = "0"; //moveFigures()
 }
 
 function blackiMore(ev) {
@@ -200,17 +206,15 @@ function blackiMore(ev) {
   el.style.width = "200px";
   el.style.height = "120px";
   el.style.width = "120px";
-  blackies = document.querySelectorAll("#myCanvas"); //el.style.backgroundColor="red"
-  //moveFigures();
+  blackies = document.querySelectorAll("#myCanvas"); //moveFigures()
 } //Initialization:
 
 
 addBall();
-addBlackies(); //var blackies = document.querySelectorAll("#myCanvas");
-//var myBall = document.querySelector("#myBall");
-
+addBlackies();
 moveFigures();
-blackies.forEach(function (elem) {
-  elem.onmouseover = blackiTouch;
+var sound = new Howl({
+  src: ['https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3'],
+  volume: 0.5
 });
-window.onmousedown = blackiMore; //checkColision()
+sound.play(); //checkColision()
