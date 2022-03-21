@@ -20,4 +20,3 @@
 // v. Print it with its first and last digits swapped. (2731 => 1732)
 // vi. Check whether it is symmetric. (like this number: 95459)
 // vii. Print the number reversed.
-
