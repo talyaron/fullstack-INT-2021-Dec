@@ -10,4 +10,4 @@ function getRandomNumber() {
     var random = Math.floor(Math.random() * 90);
     return random;
 }
-setTimeout(moveBalloons);
+setInterval(moveBalloons, 6000);
