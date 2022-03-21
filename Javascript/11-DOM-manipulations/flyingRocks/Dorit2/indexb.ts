@@ -3,8 +3,8 @@ let numY:number = 0
 let lastNumX:number = 0
 let lastNumY:number = 0
 let num:number = 0
-//let blackies:NodeListOf<HTMLCanvasElement> = []
-let blackies:Array<object> = []
+let blackies:NodeListOf<HTMLCanvasElement> = document.querySelectorAll("#myCanvas")
+let myBall:HTMLElement = document.querySelector("#myBall")
 
 function randomize(min,max){
     num = Math.floor(Math.random()*(max - min +1 ))+min
@@ -13,36 +13,28 @@ function randomize(min,max){
 }
 
 function checkColision(){
-
+    console.log("checking")
     for(let i:number = 0;i<blackies.length;i++){
         if (blackies[i].style.opacity == "0"){
             i++
         }
         let ballCenterX:number =  parseInt(myBall.style.left.slice(0,-2)) + 12
-        if (ballCenterX>512){
-                console.log(`ballcenterx ${ballCenterX} ballleft ${parseInt(myBall.style.left.slice(0,-2))}`)
-        } 
+        
         let ballCenterY:number =  parseInt(myBall.style.top.slice(0,-2)) + 12
-        if (ballCenterY>512){
-            console.log(`ballcentery ${ballCenterY} balltop ${parseInt(myBall.style.top.slice(0,-2))}`)
-        }   
+      
         let blackiCenterX:number = parseInt(blackies[i].style.left.slice(0,-2)) + 50
-        if (blackiCenterX>550){
-            console.log(`blackicenterx ${blackiCenterX} blackix ${parseInt(blackies[i].style.left.slice(0,-2))}`)
-        }    
+     
         let blackiCenterY:number = parseInt(blackies[i].style.top.slice(0,-2)) + 50
-        if (blackiCenterY>550){
-            console.log(`blackicentery ${blackiCenterY} blackitop ${parseInt(blackies[i].style.top.slice(0,-2))}`)
-        }    
+       
         let dx:number = Math.abs(ballCenterX - blackiCenterX)
         console.log(`dx= ${dx}`)
         let dy:number = Math.abs(ballCenterY - blackiCenterY)
         console.log(`dy= ${dy}`)
         let distance:number = (dx + dy)/2
         console.log(`distance= ${distance}`)
-        if (distance <= 20){
+        if (distance <= 62){
             console.log("c o l i s i o n")
-            blackies[i].style.opacity="0"
+            blackies[i].style.opacity = "0"
         }
         }
 }
@@ -115,7 +107,7 @@ function addBall(){
     elB.style.position = "absolute"
     elB.style.left = "250px"
     elB.style.top = "250px"
-    
+    myBall = document.querySelector("#myBall")
 //console.log(`we have one ball ${myBall}`)
 }
 
@@ -139,19 +131,19 @@ for (let i:number=0; i<8; i++) {
     }
     numY = num
 
- 
     lastNumX = numX
     lastNumY = numY
     el.style.left = numX+"px"
     el.style.top = numY+"px"
     //console.log(`left of el ${el.style.top}`)
+    blackies = document.querySelectorAll("#myCanvas")
 }    
 }
 
 
 function moveFigures(){
-    setInterval(() => {
-       setInterval("checkColision",200)
+    setInterval(()=>{
+        setInterval(checkColision,200)
         num = randomize(50,550)
         if(num<120){
             num += 200
@@ -164,7 +156,6 @@ function moveFigures(){
         }
      
         myBall.style.top = num+"px"
-
         for(let i:number = 0;i<blackies.length; i++){
 
             num = randomize(50,550)
@@ -190,17 +181,23 @@ function moveFigures(){
             
             blackies[i].style.left = numX+"px"
             blackies[i].style.top = numY+"px"
+            blackies.forEach(elem=>{
+                elem.onmouseover = blackiTouch
+                window.onclick = blackiMore
+             
+            })
             //lastNumX = numX
             //lastNumY = numY
             
     }
- 
-    }, 2000);
+},2000) 
+
 }
 
 function blackiTouch(ev){
     ev.target.style.opacity="0"
-    moveFigures()
+    //moveFigures()
+    
 }
 
 function blackiMore(ev){
@@ -213,20 +210,15 @@ function blackiMore(ev){
     el.style.width = "200px"
     el.style.height = "120px"
     el.style.width = "120px"
-    //Initialization:
+    blackies = document.querySelectorAll("#myCanvas")
+    //moveFigures()
+}
+
+
+  //Initialization:
 addBall()
 addBlackies()
-let blackies:NodeListOf<HTMLCanvasElement>=document.querySelectorAll("#myCanvas")
-let myBall:HTMLCanvasElement= document.querySelector("#myBall")
-blackies.forEach(elem=>{
-    elem.onmouseover,(ev)=>{
-          ev.target.style.opacity = "0"
-    }  
-    blackies = document.querySelectorAll("#myCanvas")
-})
-window.onmousedown=addBlackies
 moveFigures()
-
 
 
 //checkColision()

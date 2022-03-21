@@ -42,7 +42,6 @@ const body = document.querySelector('body')
 //     }
 // })
 
-
 body.addEventListener('keyup', (e) => {
     console.log(e.code)
 
@@ -67,3 +66,4 @@ body.addEventListener('keyup', (e) => {
 })
 
 //על כל לחיצה של מספרים 1-3, תכתבו טקסט חדש בדיב
+
