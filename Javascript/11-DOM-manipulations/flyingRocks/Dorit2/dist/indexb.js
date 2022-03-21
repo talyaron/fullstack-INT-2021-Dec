@@ -158,6 +158,10 @@ function moveFigures() {
             //}
             blackies[i].style.left = numX + "px";
             blackies[i].style.top = numY + "px";
+            blackies.forEach(function (elem) {
+                elem.onmouseover = blackiTouch;
+                window.onclick = blackiMore;
+            });
             //lastNumX = numX
             //lastNumY = numY
         }
@@ -165,6 +169,7 @@ function moveFigures() {
 }
 function blackiTouch(ev) {
     ev.target.style.opacity = "0";
+    //moveFigures()
 }
 function blackiMore(ev) {
     var el = drawWizard();
@@ -177,13 +182,10 @@ function blackiMore(ev) {
     el.style.height = "120px";
     el.style.width = "120px";
     blackies = document.querySelectorAll("#myCanvas");
+    //moveFigures()
 }
 //Initialization:
 addBall();
 addBlackies();
-blackies.forEach(function (elem) {
-    elem.onmouseover = blackiTouch;
-});
-window.onmousedown = blackiMore;
 moveFigures();
 //checkColision()

@@ -142,7 +142,7 @@ for (let i:number=0; i<8; i++) {
 
 
 function moveFigures(){
-    setInterval(() => {
+    setInterval(()=>{
         setInterval(checkColision,200)
         num = randomize(50,550)
         if(num<120){
@@ -181,16 +181,22 @@ function moveFigures(){
             
             blackies[i].style.left = numX+"px"
             blackies[i].style.top = numY+"px"
+            blackies.forEach(elem=>{
+                elem.onmouseover = blackiTouch
+                window.onclick = blackiMore
+             
+            })
             //lastNumX = numX
             //lastNumY = numY
             
     }
-    
-    }, 2000);
+},2000) 
+
 }
 
 function blackiTouch(ev){
     ev.target.style.opacity="0"
+    //moveFigures()
     
 }
 
@@ -205,19 +211,16 @@ function blackiMore(ev){
     el.style.height = "120px"
     el.style.width = "120px"
     blackies = document.querySelectorAll("#myCanvas")
+    //moveFigures()
 }
 
 
   //Initialization:
 addBall()
 addBlackies()
-
-blackies.forEach(elem=>{
-    elem.onmouseover = blackiTouch
- 
-})
-window.onmousedown = blackiMore
 moveFigures()
+
+
 
 
 
