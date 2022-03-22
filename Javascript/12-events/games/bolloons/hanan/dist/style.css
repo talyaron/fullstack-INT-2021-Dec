@@ -1,0 +1,33 @@
+body {
+  background-image: url(https://cdn.shoplightspeed.com/shops/622314/files/19096642/670x670x1/monkey-animal-face-luncheon-napkins-16-ct.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+}
+
+h1 {
+  position: relative;
+  font-size: 90px;
+  left: 80vh;
+  bottom: 5vw;
+}
+
+.ballons {
+  position: absolute;
+  top: 114vh;
+  transition: all 8s;
+  height: 12vh;
+}
+.ballons img {
+  height: 100%;
+}
+
+.boss {
+  position: absolute;
+  top: 135vh;
+  transition: all 6s;
+  height: 12vh;
+}
+.boss img {
+  height: 30vh;
+}

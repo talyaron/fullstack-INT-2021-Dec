@@ -1,6 +1,8 @@
 var meteaor = document.querySelectorAll(".boom-boi");
-//  window.addEventListener("keydown", move)
+var test = document.querySelector('#test');
+var image = document.querySelector("#image");
 // console.dir(meteaor)
+console.dir(test);
 function createNewPosition() {
     meteaor.forEach(function (a) {
         a.style.top = getRandomNumber() + "vh";
@@ -41,4 +43,16 @@ for (var i = 0; i < meteaor.length; i++) {
     else {
         console.log('no Overlap');
     }
+}
+meteaor.forEach(function (box) {
+    box.onmousedown = redisappear;
+    box.onmouseup = disappear;
+});
+function disappear(id) {
+    id.target.style.opacity = "0";
+}
+function redisappear() {
+    document.getElementById("image").src = "boom.jpg";
+    var audio = new Audio("boom-sound.wav");
+    audio.play();
 }

@@ -1,0 +1,11 @@
+body{
+    position: relative;
+    // background-image: url();
+}
+.balloon{
+    position:absolute;
+    height: 15vh;
+  
+   transition: all 3s;
+   transition-timing-function: ease-in;
+}

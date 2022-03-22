@@ -1,15 +1,27 @@
+body{
+    background-image: url(https://laledet-beahava.co.il/wp-content/uploads/thumbs/BLOOD_1514583769-nmmjpp3rfleq5fmtpko6vxbkt233uiim1ienkeakxy.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .wrapper{
     // position: relative;
     margin: auto;
+    h1{
+        margin: auto;
+        text-align: center;
+        color: white;
+    }
     .corona {
         // position: absolute;
         height: 50px;
         width: 50px;
         position: absolute;
+        transition: all 3000ms;
+       
+        
     
         img {
             width: 100%;
-            transition: width 2s;
         }
     }
     .rotate{
@@ -20,6 +32,8 @@
     .explosion {
     
         animation: center-animate 1s;
+        
+        
     }
     
     @keyframes rotate{
@@ -38,3 +52,5 @@
         }
       }
 }
+
+#foobar { display: none;};

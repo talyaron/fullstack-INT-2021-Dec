@@ -1,0 +1,17 @@
+body {
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+
+    .box {
+        width: 100px;
+        position: absolute;
+        transition: all 5s;
+        img {
+            width: 100%;
+        }
+    }
+}

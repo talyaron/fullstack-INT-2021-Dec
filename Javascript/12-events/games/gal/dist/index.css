@@ -1,0 +1,15 @@
+body {
+  height: 100vh;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.balloon {
+  width: 50px;
+  transition: all 2s;
+  position: absolute;
+  top: 110vh;
+}
+.balloon img {
+  width: 100%;
+}

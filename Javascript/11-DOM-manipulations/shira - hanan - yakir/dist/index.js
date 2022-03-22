@@ -1,11 +1,12 @@
-// ugiCorn is the element for the game
-var ugiCron = document.querySelectorAll(".corona");
+var ugiCron = document.querySelectorAll(".corona" || ".explosion");
 function coronaMove() {
     ugiCron.forEach(function (element) {
-        element.innerHTML = "<img class='corona' src=\"covid19.jpeg\" alt=\"\">"; //replace  element to covid for case that was game alredy
+        //replace  element to covid again for new game
+        element.innerHTML = "<img class='corona' src=\"covid19.jpeg\" alt=\"\">";
+        element.style.visibility = "visible";
+        //random position
         element.style.top = randomPosition() + "vh";
         element.style.left = randomPosition() + "vw";
-        element.style.visibility = "visible";
     });
     // debugger
     overLapCheck();
@@ -13,12 +14,14 @@ function coronaMove() {
 }
 console.log(ugiCron);
 console.dir(ugiCron);
+// function for random number for the position attributes 
 function randomPosition() {
     var postion;
     postion = Math.random() * 90;
     return postion;
 }
-var intervalID = setInterval(coronaMove, 2000);
+window.requestAnimationFrame(coronaMove);
+var intervalID = setInterval(coronaMove, 10000);
 function overLapCheck() {
     for (var i = 0; i < ugiCron.length; i++) {
         for (var j = i + 1; j < ugiCron.length; j++) {
@@ -36,7 +39,27 @@ function overLapCheck() {
                 console.log("covid Collision id " + i + " and " + j);
                 ugiCron[j].innerHTML = "<img class='explosion' src=\"Boom-PNG.png\" alt=\"\">"; //replace one element to explosion
                 ugiCron[i].style.visibility = "hidden"; // hide the other element
+                var audio = new Audio("Explosion Sounds/Exp2.mp3");
+                audio.play();
             }
         }
     }
 }
+ugiCron.forEach(function (element) {
+    element.onclick = boomOnClick;
+});
+function boomOnClick(ev) {
+    ev;
+    ev.target.innerHTML = "<img class='explosion' src=\"Boom-PNG.png\" alt=\"\">";
+    ev.target.style.opacity = 0;
+    var audio = new Audio("Explosion Sounds/Exp2.mp3");
+    audio.play();
+    ev.target.src = "Boom-PNG.png";
+}
+// let myImage = document.querySelectora('covid19.jpeg')
+// let mySrc = document.querySelector(`Boom-PNG.png`)
+// if(myImage === 'covid19.jpeg') {
+//     mySrc.setAttribute('src','Boom-PNG.png');
+//   } else {
+//     myImage.setAttribute('src','covid19.jpeg');
+//   }
