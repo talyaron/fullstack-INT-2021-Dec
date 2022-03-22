@@ -11,7 +11,7 @@ function randomize(min, max) {
 }
 function checkColision() {
     console.log("checking");
-    for (var i = 0; i < blackies.length; i++) {
+    var _loop_1 = function (i) {
         if (blackies[i].style.opacity == "0") {
             i++;
         }
@@ -25,11 +25,36 @@ function checkColision() {
         console.log("dy= " + dy);
         var distance = (dx + dy) / 2;
         console.log("distance= " + distance);
-        if (distance <= 62) {
-            console.log("c o l i s i o n");
-            blackies[i].style.opacity = "0";
+        if (distance <= 100) {
+            if (!(blackies[i].style.opacity == "0")) {
+                console.log("c o l i s i o n");
+                blackies[i].style.opacity = "0";
+                var newExplostion_1 = document.createElement('img');
+                newExplostion_1.style.position = 'absolute';
+                newExplostion_1.style.left = ballCenterY + "px";
+                newExplostion_1.style.top = ballCenterX + "px";
+                newExplostion_1.style.height = "70px";
+                newExplostion_1.style.width = "70px";
+                newExplostion_1.src = "images/boomPic.png";
+                document.getElementById('container').appendChild(newExplostion_1);
+                setTimeout(function () {
+                    newExplostion_1.remove();
+                }, 100);
+            }
+            //          newExplostion.classList.add('explostion')
+            play();
         }
+        out_i_1 = i;
+    };
+    var out_i_1;
+    for (var i = 0; i < blackies.length; i++) {
+        _loop_1(i);
+        i = out_i_1;
     }
+}
+function play() {
+    var audio = new Audio('images/BoomSound.mp3');
+    audio.play();
 }
 function drawWizard() {
     var canvas = document.createElement('canvas');
@@ -81,6 +106,7 @@ function drawBall() {
     canv.style.backgroundColor = "white";
     canv.width = 36;
     canv.height = 36;
+    ('canvas');
     var ctxc = canv.getContext('2d');
     ctxc.beginPath();
     ctxc.fillStyle = "green"; //whichi color to see
@@ -96,6 +122,7 @@ function addBall() {
     elB.style.position = "absolute";
     elB.style.left = "250px";
     elB.style.top = "250px";
+    elB.style.backgroundColor = "rgb(12, 63, 158)";
     myBall = document.querySelector("#myBall");
     //console.log(`we have one ball ${myBall}`)
 }

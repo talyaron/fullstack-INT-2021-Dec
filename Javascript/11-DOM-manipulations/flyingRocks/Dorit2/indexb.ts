@@ -32,11 +32,33 @@ function checkColision(){
         console.log(`dy= ${dy}`)
         let distance:number = (dx + dy)/2
         console.log(`distance= ${distance}`)
-        if (distance <= 62){
-            console.log("c o l i s i o n")
-            blackies[i].style.opacity = "0"
+        if (distance <= 100){
+            if (!(blackies[i].style.opacity == "0")){
+                console.log("c o l i s i o n")
+                blackies[i].style.opacity = "0"
+                const newExplostion = document.createElement('img')
+                newExplostion.style.position = 'absolute';
+                newExplostion.style.left = `${ballCenterY}px`
+                newExplostion.style.top = `${ballCenterX}px`
+                newExplostion.style.height = "70px"
+                newExplostion.style.width = "70px"
+                newExplostion.src = "images/boomPic.png";
+                document.getElementById('container').appendChild(newExplostion)
+                setTimeout(() => {
+                    newExplostion.remove()
+                }, 100)
+            }   
+//          newExplostion.classList.add('explostion')
+         
+            play()
+            
         }
-        }
+    }
+}
+
+function play() {
+    var audio = new Audio('images/BoomSound.mp3');
+    audio.play();
 }
 
 function drawWizard() {
@@ -91,7 +113,8 @@ function drawBall() {
     canv.style.top = "250px"
     canv.style.backgroundColor = "white"
     canv.width = 36;
-    canv.height = 36;
+    canv.height = 36;('canvas');
+    
     const ctxc = canv.getContext('2d');
     ctxc.beginPath();
     ctxc.fillStyle ="green"; //whichi color to see
@@ -107,6 +130,7 @@ function addBall(){
     elB.style.position = "absolute"
     elB.style.left = "250px"
     elB.style.top = "250px"
+    elB.style.backgroundColor="rgb(12, 63, 158)"
     myBall = document.querySelector("#myBall")
 //console.log(`we have one ball ${myBall}`)
 }
@@ -189,7 +213,7 @@ function moveFigures(){
             //lastNumX = numX
             //lastNumY = numY
             
-    }
+        }
 },2000) 
 
 }
