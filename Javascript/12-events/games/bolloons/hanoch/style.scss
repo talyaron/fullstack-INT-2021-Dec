@@ -1,0 +1,17 @@
+body{
+    background-color: black;
+    position: relative;
+    .baloons{
+        
+        position: absolute;
+        
+        transition: all 5s;
+        top: 112vh;
+        height: 10vh;
+        img{
+            height: 100%;
+        }
+
+        
+    }
+}

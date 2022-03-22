@@ -1,5 +1,6 @@
 body{ height: 100vh;
 display: flex;
+background-color: black;
 }
 
 .boom-boi{
@@ -7,8 +8,8 @@ display: flex;
     width: fit-content;
    position: absolute;
    transition: all 2s;
-   background-color: black;
-   opacity: .5;
+   
+   
         img{
         height: 200px;
         width: 200px;

@@ -30,7 +30,7 @@ function randomPosition() {
 }
 
 window.requestAnimationFrame(coronaMove)
-var intervalID = setInterval(coronaMove, 2000);
+var intervalID = setInterval(coronaMove, 10000);
 
 
 
@@ -57,7 +57,9 @@ function overLapCheck() {
                 console.log(`covid Collision id ${i} and ${j}`);
                 ugiCron[j].innerHTML = "<img class='explosion' src=\"Boom-PNG.png\" alt=\"\">"; //replace one element to explosion
                 ugiCron[i].style.visibility = "hidden";// hide the other element
-
+                 
+                var audio = new Audio(`Explosion Sounds/Exp2.mp3`,);
+                audio.play();
             }
         }
     }
@@ -69,7 +71,24 @@ ugiCron.forEach(element => {
 });
 
 function boomOnClick(ev) {
-    //console.log(`you press on ${ev}`)  // for debug the code
+    
     ev as HTMLElement;
     ev.target.innerHTML = "<img class='explosion' src=\"Boom-PNG.png\" alt=\"\">";
-  }
+    ev.target.style.opacity = 0;
+   
+    var audio = new Audio(`Explosion Sounds/Exp2.mp3`,);
+    audio.play();
+   
+    
+    ev.target.src = `Boom-PNG.png`
+
+}
+
+    // let myImage = document.querySelectora('covid19.jpeg')
+    // let mySrc = document.querySelector(`Boom-PNG.png`)
+    // if(myImage === 'covid19.jpeg') {
+    //     mySrc.setAttribute('src','Boom-PNG.png');
+    //   } else {
+    //     myImage.setAttribute('src','covid19.jpeg');
+    //   }
+      

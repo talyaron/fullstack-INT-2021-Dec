@@ -1,0 +1,21 @@
+body {
+    height: 100vh;
+    margin: 0px;
+    position: relative;
+    background-color: pink;
+
+    .balloon {
+
+        position: absolute;
+        top: 112vh;
+        left: 0vw;
+        transition: all 2s;
+        background-color: black;
+        img {
+            width: 8vw;
+            height: 10vh;
+
+        }
+    }
+
+}
