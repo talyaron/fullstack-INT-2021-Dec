@@ -1,14 +1,21 @@
 var balloons = document.querySelectorAll('.balloon');
-balloonsGoUp(balloons);
-function balloonsGoUp(balloons) {
-    balloons.forEach(function (balloon) {
-        balloonUp(balloon);
-    });
+var body = document.querySelector('body');
+// body.style.backgroundImage = 'url(./images/sky.jpg)'
+balloons.forEach(function (balloon) {
+    createBalloon(balloon);
+});
+function createBalloon(balloon) {
+    var newBalloon = document.createElement('div');
+    body.append(newBalloon);
+    newBalloon.classList.add('balloon');
+    var balloonImg = document.createElement('img');
+    newBalloon.append(balloonImg);
+    balloonImg.src = "images/blueBalloon.png";
+    balloonUp(newBalloon);
 }
-function balloonUp(balloon) {
-    balloon.style.top = '112vh';
-    balloon.style.left = Math.random() * 90 + "vw";
+function balloonUp(newBalloon) {
     setInterval(function () {
-        balloon.style.top = '0vh';
-    }, 1000);
+        newBalloon.style.top = '-25vh';
+    }, 2000);
 }
+// function balloonFirstPosition()

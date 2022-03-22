@@ -1,20 +1,29 @@
 const balloons: NodeListOf<HTMLImageElement> = document.querySelectorAll('.balloon')
-balloonsGoUp(balloons)
+const body:HTMLBodyElement = document.querySelector('body');
 
-function balloonsGoUp(balloons: NodeListOf<HTMLImageElement>) {
-    balloons.forEach(balloon => {
-        balloonUp(balloon);
-    })
+// body.style.backgroundImage = 'url(./images/sky.jpg)'
+
+balloons.forEach(balloon=>{
+   createBalloon(balloon)
+})
+
+function createBalloon(balloon){
+    const newBalloon = document.createElement('div')
+    body.append(newBalloon)
+    newBalloon.classList.add('balloon')
+    const balloonImg = document.createElement('img')
+    newBalloon.append(balloonImg)
+    balloonImg.src = "images/blueBalloon.png"
+    balloonUp(newBalloon)
 }
 
 
-function balloonUp(balloon: HTMLImageElement) {
-
-
-    balloon.style.top = '112vh';
-    balloon.style.left = `${Math.random() * 90}vw`
-    setInterval(() => {
-        balloon.style.top = '0vh';
-
-    }, 1000)
+function balloonUp(newBalloon){
+    setInterval(()=>{
+        newBalloon.style.top = '-25vh';
+    },2000)
 }
+
+
+// function balloonFirstPosition()
+
