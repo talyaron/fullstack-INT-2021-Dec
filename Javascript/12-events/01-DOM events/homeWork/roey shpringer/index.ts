@@ -1,5 +1,5 @@
 
-const images: NodeListOf<any> = document.querySelectorAll(".meteorImg")
+const images: NodeListOf<any> = document.querySelectorAll(".starImg")
 
 console.log(images)
 
@@ -17,9 +17,10 @@ function moveImages() {
 }
 
 
+
+
+
 setInterval(moveImages, 4500)
 
 
 moveImages()
-
-

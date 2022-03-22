@@ -1,4 +1,4 @@
-var images = document.querySelectorAll(".meteorImg");
+var images = document.querySelectorAll(".starImg");
 console.log(images);
 function randomMovement() {
     var random = Math.round(Math.random() * 90);
