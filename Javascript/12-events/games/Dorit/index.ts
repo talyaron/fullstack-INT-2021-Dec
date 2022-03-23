@@ -1,39 +1,40 @@
 const balloons:NodeListOf<HTMLImageElement> = document.querySelectorAll('.balloon')
 console.dir(balloons)
 
-moveBalloons(balloons)
+// moveBalloons(balloons)
 
-function moveBalloons(balloons:NodeListOf<HTMLImageElement>){
-    balloons.forEach(balloon=>{
-        moveBalloon(balloon);
-    })
-}
+// function moveBalloons(balloons:NodeListOf<HTMLImageElement>){
+//     balloons.forEach(balloon=>{
+//         moveBalloon(balloon);
+//     })
+// }
 
 //create balloon
-function createBalloon(){
-    setInterval(()=>{
-       let body = document.querySelector("body") 
-       let leftb = Math.round(Math.random()*90)+"vw"
-       let balloonCss = body.innerHTML+=`<div balloon id="balloon" top="112vh" left = ${leftb}  <img src = "img/balloon-blue.png"></div>`
-       let balloon = document.querySelector("#balloon")
-       moveBalloon(balloon)
-
-
-
-    },Math.round(Math.random()*30))
-}
 // -> move balloon
 // in random times....
+function createBalloon(){
+    const balloonId = uid();
+    document.body.innerHTML += `<img id='${balloonId}' class='balloon' src="./dist/img/balloon-blue.png" />`
 
+    const balloon:HTMLImageElement = document.querySelector(`#${balloonId}`);
+    moveBalloon(balloon);
+}
 
 function moveBalloon(balloon:HTMLImageElement){
    
-    
+
     balloon.style.top = '112vh';
     balloon.style.left = `${Math.random()*90}vw`
-    setInterval(()=>{
+    setTimeout(()=>{
         balloon.style.top = '-12vh';
         
-    },500)
+    },100)
+}
+
+setInterval(createBalloon,1000)
+
+
+function uid(){
+    return `id-${Math.ceil(Math.random()*1e8)}`
 }
 
