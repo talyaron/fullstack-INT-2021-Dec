@@ -17,3 +17,4 @@ function handleCheck(event:any) {
     console.dir(event)
     console.log(event.target.checked);
 }
+
