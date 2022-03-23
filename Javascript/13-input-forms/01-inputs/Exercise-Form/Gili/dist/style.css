@@ -1,0 +1,63 @@
+body {
+  margin: 0%;
+  padding: 0%;
+}
+
+.wrapper {
+  width: 50vw;
+  height: 75vh;
+  background-color: aquamarine;
+  border-radius: 40px;
+  margin: auto;
+  margin-top: 50px;
+  font-size: 2rem;
+}
+.wrapper p {
+  padding-left: 60px;
+}
+.wrapper h2 {
+  text-align: center;
+  text-decoration: underline #954b4b 3px;
+}
+.wrapper__name {
+  margin: auto;
+  height: 50px;
+  width: 50vw;
+  display: flex;
+  padding: 10px;
+}
+.wrapper__name input {
+  border: none;
+  width: 50%;
+  margin: auto;
+  height: 30px;
+  font-size: 1.5rem;
+}
+.wrapper__email {
+  margin: auto;
+  height: 50px;
+  width: 50vw;
+  display: flex;
+  padding: 10px;
+}
+.wrapper__email input {
+  border: none;
+  width: 50%;
+  margin: auto;
+  height: 30px;
+  font-size: 1.5rem;
+}
+.wrapper__password {
+  margin: auto;
+  height: 50px;
+  width: 50vw;
+  display: flex;
+  padding: 10px;
+}
+.wrapper__password input {
+  border: none;
+  width: 50%;
+  margin: auto;
+  height: 30px;
+  font-size: 1.5rem;
+}
