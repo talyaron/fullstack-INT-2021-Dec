@@ -17,6 +17,11 @@ function moveImages() {
 }
 
 
+function clickFunction(){
+    alert("boom")
+}
+
+
 
 
 

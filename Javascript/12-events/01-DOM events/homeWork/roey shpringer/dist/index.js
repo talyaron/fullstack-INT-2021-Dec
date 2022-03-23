@@ -10,5 +10,8 @@ function moveImages() {
         element.style.top = randomMovement() + "vh";
     });
 }
+function clickFunction() {
+    alert("boom");
+}
 setInterval(moveImages, 4500);
 moveImages();
