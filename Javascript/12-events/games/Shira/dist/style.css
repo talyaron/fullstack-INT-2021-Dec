@@ -1,10 +1,15 @@
 body {
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
-.balloon {
+body .balloon {
   position: absolute;
-  height: 15vh;
-  transition: all 3s;
-  transition-timing-function: ease-in;
+  width: 80px;
+  height: 300px;
+  top: 99vh;
+  transition: top 5s ease-in-out;
+}
+body .balloon img {
+  width: 100%;
 }

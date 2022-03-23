@@ -1,6 +1,13 @@
-var ballons = document.querySelectorAll('#ballon');
-console.dir(ballons);
-function createBallon() {
-    var ballonId = uid();
-    document.body.innerHTML += "<img id='" + ballonId + "' class=ballon src=\"./dist/ballon.svg.png\"/>";
+var ballons = document.querySelectorAll("#ballon");
+function flyBallon() {
+    ballons.forEach(function (element) {
+        element.style.top = '-16vh';
+        element.style.left = getRandomPosition + "vw";
+    });
 }
+function getRandomPosition() {
+    var random = Math.floor(Math.random() * 100);
+    return random;
+}
+flyBallon(ballons);
+setInterval(flyBallon, 1000);

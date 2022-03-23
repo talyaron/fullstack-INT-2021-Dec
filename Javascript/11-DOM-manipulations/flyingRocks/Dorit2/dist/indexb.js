@@ -3,44 +3,60 @@ var numY = 0;
 var lastNumX = 0;
 var lastNumY = 0;
 var num = 0;
-//let blackies:NodeListOf<HTMLCanvasElement> = []
-var blackies = [];
+var blackies = document.querySelectorAll("#myCanvas");
+var myBall = document.querySelector("#myBall");
 function randomize(min, max) {
     num = Math.floor(Math.random() * (max - min + 1)) + min;
     return num;
 }
 function checkColision() {
-    for (var i = 0; i < blackies.length; i++) {
-        if (blackies[i].style.opacity == "0") {
+    var _loop_1 = function (i) {
+        if (blackies[i].style.opacity === "0") {
             i++;
         }
         var ballCenterX = parseInt(myBall.style.left.slice(0, -2)) + 12;
-        if (ballCenterX > 512) {
-            console.log("ballcenterx " + ballCenterX + " ballleft " + parseInt(myBall.style.left.slice(0, -2)));
-        }
         var ballCenterY = parseInt(myBall.style.top.slice(0, -2)) + 12;
-        if (ballCenterY > 512) {
-            console.log("ballcentery " + ballCenterY + " balltop " + parseInt(myBall.style.top.slice(0, -2)));
-        }
-        var blackiCenterX = parseInt(blackies[i].style.left.slice(0, -2)) + 50;
-        if (blackiCenterX > 550) {
-            console.log("blackicenterx " + blackiCenterX + " blackix " + parseInt(blackies[i].style.left.slice(0, -2)));
-        }
-        var blackiCenterY = parseInt(blackies[i].style.top.slice(0, -2)) + 50;
-        if (blackiCenterY > 550) {
-            console.log("blackicentery " + blackiCenterY + " blackitop " + parseInt(blackies[i].style.top.slice(0, -2)));
-        }
+        var blackiCenterX = parseInt(blackies[i].style.left.slice(0, -2)) + (60 - 18); //60 canvas width = blackie's width
+        var blackiCenterY = parseInt(blackies[i].style.top.slice(0, -2)) + (60 - 18); //same for height
         var dx = Math.abs(ballCenterX - blackiCenterX);
-        console.log("dx= " + dx);
+        //console.log(`dx= ${dx}`)
         var dy = Math.abs(ballCenterY - blackiCenterY);
-        console.log("dy= " + dy);
-        var distance = (dx + dy) / 2;
-        console.log("distance= " + distance);
-        if (distance <= 20) {
+        //console.log(`dy= ${dy}`)
+        var distance = Math.sqrt(dx * dx + dy * dy);
+        //console.log(`distance= ${distance}`)
+        if (distance <= 100) { //50+12 width and height of both
+            //if (blackies[i].style.opacity ==="0"){
             console.log("c o l i s i o n");
             blackies[i].style.opacity = "0";
+            var newExplostion_1 = document.createElement('img');
+            newExplostion_1.style.position = 'absolute';
+            var avgX = (ballCenterX + blackiCenterX) / 2;
+            var avgY = (ballCenterY + blackiCenterY) / 2;
+            newExplostion_1.style.left = avgX + "px";
+            newExplostion_1.style.top = avgY + "px";
+            newExplostion_1.style.height = "70px";
+            newExplostion_1.style.width = "70px";
+            newExplostion_1.src = "images/boomPic.png";
+            document.getElementById('container').appendChild(newExplostion_1);
+            setTimeout(function () {
+                newExplostion_1.remove();
+            }, 200);
+            //          newExplostion.classList.add('explostion')
+            // }
+            // play()
         }
+        out_i_1 = i;
+    };
+    var out_i_1;
+    //console.log("checking")
+    for (var i = 0; i < blackies.length; i++) {
+        _loop_1(i);
+        i = out_i_1;
     }
+}
+function play() {
+    var audio = new Audio('images/BoomSound.mp3');
+    audio.play();
 }
 function drawWizard() {
     var canvas = document.createElement('canvas');
@@ -92,6 +108,7 @@ function drawBall() {
     canv.style.backgroundColor = "white";
     canv.width = 36;
     canv.height = 36;
+    ('canvas');
     var ctxc = canv.getContext('2d');
     ctxc.beginPath();
     ctxc.fillStyle = "green"; //whichi color to see
@@ -107,6 +124,8 @@ function addBall() {
     elB.style.position = "absolute";
     elB.style.left = "250px";
     elB.style.top = "250px";
+    elB.style.backgroundColor = "rgb(12, 63, 158)";
+    myBall = document.querySelector("#myBall");
     //console.log(`we have one ball ${myBall}`)
 }
 function addBlackies() {
@@ -133,11 +152,12 @@ function addBlackies() {
         el.style.left = numX + "px";
         el.style.top = numY + "px";
         //console.log(`left of el ${el.style.top}`)
+        blackies = document.querySelectorAll("#myCanvas");
     }
 }
 function moveFigures() {
     setInterval(function () {
-        setInterval("checkColision", 200);
+        setInterval(checkColision, 200);
         num = randomize(50, 550);
         if (num < 120) {
             num += 200;
@@ -167,6 +187,10 @@ function moveFigures() {
             //}
             blackies[i].style.left = numX + "px";
             blackies[i].style.top = numY + "px";
+            blackies.forEach(function (elem) {
+                elem.onmouseover = blackiTouch;
+                window.onclick = blackiMore;
+            });
             //lastNumX = numX
             //lastNumY = numY
         }
@@ -174,7 +198,7 @@ function moveFigures() {
 }
 function blackiTouch(ev) {
     ev.target.style.opacity = "0";
-    moveFigures();
+    //moveFigures()
 }
 function blackiMore(ev) {
     var el = drawWizard();
@@ -186,19 +210,11 @@ function blackiMore(ev) {
     el.style.width = "200px";
     el.style.height = "120px";
     el.style.width = "120px";
-    //Initialization:
-    addBall();
-    addBlackies();
-    var blackies = document.querySelectorAll("#myCanvas");
-    var myBall = document.querySelector("#myBall");
-    blackies.forEach(function (elem) {
-        elem.onmouseover, function (ev) {
-            ev.target.style.opacity = "0";
-        };
-        blackies = document.querySelectorAll("#myCanvas");
-    });
-    window.onmousedown = addBlackies;
-    moveFigures();
-    //checkColision()
+    blackies = document.querySelectorAll("#myCanvas");
+    //moveFigures()
 }
+//Initialization:
+addBall();
+addBlackies();
+moveFigures();
 //checkColision()

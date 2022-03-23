@@ -1,6 +1,5 @@
 .balloon {
   position: absolute;
-  bottom: 70px;
-  width: 10px;
   height: 10px;
+  transition: all 5s;
 }
