@@ -7,32 +7,26 @@ function ballonFly(ballons) {
 
     element.style.top = `-14vh`;
     element.style.left = randomPosition() + "vw";
-
-
   });
-  function randomPosition() {
-    let postion: number;
-    postion = Math.random() * 90;
-    return postion;
-  }
+
   
   
 }
+
 
 function bossballonFly(boss) {
   boss.forEach(element => {
 
     element.style.top = `-35vh`;
     element.style.left = randomPosition() + "vw";
-
-
   });
-  function randomPosition() {
-    let postion: number;
-    postion = Math.random() * 90 ;
-    return postion;
+}
 
-  }
+
+function randomPosition() {
+  let postion: number;
+  postion = Math.random() * 90;
+  return postion;
 }
 
 ballonFly(ballons);
@@ -40,9 +34,3 @@ bossballonFly(boss);
 
 
 //////////////////////////////////////////
-
-function reset(ballonFly,bossballonFly){ 
-  
-
-  
-}
