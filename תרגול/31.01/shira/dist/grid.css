@@ -1,7 +1,0 @@
-.wrapper .big_box {
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr 1fr;
-}
-.wrapper .big_box .item {
-  background-color: teal;
-}
