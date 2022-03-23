@@ -10,3 +10,4 @@ function getRandomPosition() {
     return random;
 }
 flyBallon(ballons);
+setInterval(flyBallon, 1000);

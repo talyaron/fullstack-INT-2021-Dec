@@ -1,4 +1,4 @@
-const ballons:any = document.querySelectorAll("#ballon");
+const ballons:NodeList<HTMLElement> = document.querySelectorAll("#ballon");
 
 function flyBallon(){
     ballons.forEach(element => {
@@ -16,3 +16,4 @@ function getRandomPosition() {
 }
 
 flyBallon(ballons)
+setInterval(flyBallon,1000)
