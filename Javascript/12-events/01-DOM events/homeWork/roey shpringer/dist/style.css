@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100px;
+  position: absolute;
+}
+.container img {
+  transition: all 5000ms;
+  position: absolute;
+  width: 100%;
+}

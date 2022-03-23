@@ -1,10 +1,19 @@
-const ballons:NodeListOf<HTMLImageElement> = document.querySelectorAll('#ballon')
-console.dir(ballons);
+const ballons:NodeList<HTMLElement> = document.querySelectorAll("#ballon");
 
-function createBallon(){
-    const ballonId = uid();
-    document.body.innerHTML +=`<img id='${ballonId}' class=ballon src="./dist/ballon.svg.png"/>`
-
+function flyBallon(){
+    ballons.forEach(element => {
+        element.style.top ='-16vh'
+        element.style.left = `${getRandomPosition}vw`
+    })
     
 }
 
+
+
+function getRandomPosition() {
+    let random = Math.floor(Math.random()*100);
+    return random;
+}
+
+flyBallon(ballons)
+setInterval(flyBallon,1000)

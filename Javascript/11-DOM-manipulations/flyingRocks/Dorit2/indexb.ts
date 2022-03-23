@@ -13,30 +13,54 @@ function randomize(min,max){
 }
 
 function checkColision(){
-    console.log("checking")
+    //console.log("checking")
     for(let i:number = 0;i<blackies.length;i++){
-        if (blackies[i].style.opacity == "0"){
+        if (blackies[i].style.opacity === "0"){
             i++
         }
         let ballCenterX:number =  parseInt(myBall.style.left.slice(0,-2)) + 12
         
         let ballCenterY:number =  parseInt(myBall.style.top.slice(0,-2)) + 12
       
-        let blackiCenterX:number = parseInt(blackies[i].style.left.slice(0,-2)) + 50
+        let blackiCenterX:number = parseInt(blackies[i].style.left.slice(0,-2)) + (60-18)//60 canvas width = blackie's width
      
-        let blackiCenterY:number = parseInt(blackies[i].style.top.slice(0,-2)) + 50
+        let blackiCenterY:number = parseInt(blackies[i].style.top.slice(0,-2)) + (60-18)//same for height
        
         let dx:number = Math.abs(ballCenterX - blackiCenterX)
-        console.log(`dx= ${dx}`)
+        //console.log(`dx= ${dx}`)
         let dy:number = Math.abs(ballCenterY - blackiCenterY)
-        console.log(`dy= ${dy}`)
-        let distance:number = (dx + dy)/2
-        console.log(`distance= ${distance}`)
-        if (distance <= 62){
-            console.log("c o l i s i o n")
-            blackies[i].style.opacity = "0"
+        //console.log(`dy= ${dy}`)
+        let distance:number = Math.sqrt(dx*dx + dy*dy)
+        //console.log(`distance= ${distance}`)
+        if (distance <= 100){   //50+12 width and height of both
+            //if (blackies[i].style.opacity ==="0"){
+                console.log("c o l i s i o n")
+                blackies[i].style.opacity = "0"
+                const newExplostion = document.createElement('img')
+                newExplostion.style.position = 'absolute';
+                let avgX:number = (ballCenterX + blackiCenterX)/2
+                let avgY:number = (ballCenterY + blackiCenterY)/2
+                newExplostion.style.left = `${avgX}px`
+                newExplostion.style.top = `${avgY}px`
+                newExplostion.style.height = "70px"
+                newExplostion.style.width = "70px"
+                newExplostion.src = "images/boomPic.png";
+                document.getElementById('container').appendChild(newExplostion)
+                setTimeout(() => {
+                    newExplostion.remove()
+                },200)
+
+//          newExplostion.classList.add('explostion')
+           // }
+           // play()
+            
         }
-        }
+    }
+}
+
+function play() {
+    var audio = new Audio('images/BoomSound.mp3');
+    audio.play();
 }
 
 function drawWizard() {
@@ -91,7 +115,8 @@ function drawBall() {
     canv.style.top = "250px"
     canv.style.backgroundColor = "white"
     canv.width = 36;
-    canv.height = 36;
+    canv.height = 36;('canvas');
+    
     const ctxc = canv.getContext('2d');
     ctxc.beginPath();
     ctxc.fillStyle ="green"; //whichi color to see
@@ -107,6 +132,7 @@ function addBall(){
     elB.style.position = "absolute"
     elB.style.left = "250px"
     elB.style.top = "250px"
+    elB.style.backgroundColor="rgb(12, 63, 158)"
     myBall = document.querySelector("#myBall")
 //console.log(`we have one ball ${myBall}`)
 }
@@ -189,7 +215,7 @@ function moveFigures(){
             //lastNumX = numX
             //lastNumY = numY
             
-    }
+        }
 },2000) 
 
 }
