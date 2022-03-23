@@ -31,14 +31,18 @@ function createBalloon1(){
     const balloonId = uid1();
     document.body.innerHTML += `<img id='${balloonId}' class='balloon' src="https://freesvg.org/storage/img/thumb/rg1024-two-ballons.png" />`
 
-    const balloon:any = document.querySelector(`#${balloonId}`);
+    var balloon:any = document.querySelector(`#${balloonId}`);
     moveBalloon1(balloon);
-    const playBomb = ()=> new Audio("./bomb/mixkit-bomb-explosion-in-battle-2800.wav").play();
-    balloon.Array.forEach(element => {
-        element.onclick = playBomb()        
-    });
+    // const bombPicture = document.body.innerHTML = `<img src ="/bomb/istockphoto-114409917-170667a.jpg"/>`
+    function bombPicture(ev){
+        ev.target.innerHTML +=  `<img src ="./bomb/istockphoto-114409917-170667a.jpg"/>`
+    }
+      balloon.onclick = bombPicture;     
+    
     
 }
+const playBomb = ()=> new Audio("./bomb/mixkit-bomb-explosion-in-battle-2800.wav").play();
+    balloon.onclick = playBomb()
 
 function moveBalloon1(balloon:HTMLImageElement){
    
@@ -52,7 +56,7 @@ function moveBalloon1(balloon:HTMLImageElement){
 }
 const randomNumber:number = Math.floor(Math.random() * 10000);
 setInterval(createBalloon1,randomNumber)
-createBalloon1()
+
 
 
 function uid1(){
