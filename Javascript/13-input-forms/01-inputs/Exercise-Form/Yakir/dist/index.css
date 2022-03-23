@@ -1,0 +1,11 @@
+body {
+  margin: auto;
+}
+
+.signUp {
+  margin: auto;
+  width: 60vw;
+  height: 40vw;
+  background-color: whitesmoke;
+  border-radius: 20px;
+}
