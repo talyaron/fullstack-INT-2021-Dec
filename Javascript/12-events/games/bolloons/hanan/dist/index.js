@@ -26,3 +26,5 @@ function bossballonFly(boss) {
 ballonFly(ballons);
 bossballonFly(boss);
 //////////////////////////////////////////
+function reset(ballonFly, bossballonFly) {
+}
