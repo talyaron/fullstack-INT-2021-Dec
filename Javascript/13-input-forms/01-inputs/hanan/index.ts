@@ -1,13 +1,12 @@
-const userName: HTMLInputElement = document.querySelector(`#name`);
-const email: HTMLInputElement = document.querySelector(`#email`);
-const password: HTMLInputElement = document.querySelector(`#password`);
-
-
-
-function inputUserName(event) {
+const userName: HTMLInputElement = document.getElementById(`#name`);
+const email: HTMLInputElement = document.getElementById(`#email`);
+const password: HTMLInputElement = document.getElementById(`#password`);
 
 
 
 
+document.addEventListener('keyup', logKey);
+
+function logKey(ev) {
+  ev.textContent += ` ${ev.code}`;
 }
-
