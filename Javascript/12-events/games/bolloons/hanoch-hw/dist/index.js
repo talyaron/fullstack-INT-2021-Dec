@@ -24,6 +24,7 @@ function createBalloon1() {
     var balloon = document.querySelector("#" + balloonId);
     //moveBalloon1(balloon);
     //console.log("to move balloon")
+    balloon.onclick = bombPicture;
     moveBalloon(balloon);
 }
 // const bombPicture = document.body.innerHTML = `<img src ="/bomb/istockphoto-114409917-170667a.jpg"/>`

@@ -30,6 +30,7 @@ function createBalloon1(){
     let balloon:any = document.querySelector(`#${balloonId}`);
     //moveBalloon1(balloon);
     //console.log("to move balloon")
+    balloon.onclick=bombPicture
     moveBalloon(balloon)
  
 }
@@ -70,6 +71,7 @@ document.body.innerHTML += `<img id ="bombImg" src="./bomb/istockphoto-114409917
 let bombImg:HTMLImageElement = document.querySelector("#bombImg")
 bombImg.style.opacity="0"
 let randomNumber:number = Math.floor(Math.random()*2000)+ 3000
+
 setInterval(()=>{
     createBalloon1()
 },randomNumber)
