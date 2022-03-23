@@ -1,0 +1,26 @@
+.rooter {
+  position: relative;
+}
+.rooter #root1 {
+  position: absolute;
+  border: 1px red solid;
+  width: 175px;
+  height: 200px;
+  top: 40px;
+}
+.rooter #root2 {
+  position: absolute;
+  border: 1px red solid;
+  width: 175px;
+  height: 200px;
+  top: 40px;
+  left: 180px;
+}
+.rooter #root3 {
+  position: absolute;
+  border: 1px red solid;
+  width: 175px;
+  height: 200px;
+  top: 40px;
+  left: 37vh;
+}

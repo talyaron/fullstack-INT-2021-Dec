@@ -1,0 +1,15 @@
+body {
+  margin: auto;
+  background-color: #eb8dbf;
+  position: relative;
+}
+
+.balloon {
+  height: 10vh;
+  top: 120vh;
+  position: absolute;
+  transition: all 4s;
+}
+.balloon img {
+  width: 100px;
+}
