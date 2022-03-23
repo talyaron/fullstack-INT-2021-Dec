@@ -4,7 +4,7 @@ body {
   background-size: 100%;
 }
 
-.ballons {
+.img {
   height: 10vh;
   top: 112vh;
   transition: all 4s;
