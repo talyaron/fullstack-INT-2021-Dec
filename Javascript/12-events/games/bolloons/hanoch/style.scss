@@ -1,10 +1,16 @@
 body{
     background-color: black;
+    position: relative;
     .baloons{
-        // display: flex;
-        position: absolute;
-        top: 100%;
         
+        position: absolute;
+        
+        transition: all 5s;
+        top: 112vh;
+        height: 10vh;
+        img{
+            height: 100%;
+        }
 
         
     }

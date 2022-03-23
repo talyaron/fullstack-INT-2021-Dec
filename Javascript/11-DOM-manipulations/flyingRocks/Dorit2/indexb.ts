@@ -3,46 +3,71 @@ let numY:number = 0
 let lastNumX:number = 0
 let lastNumY:number = 0
 let num:number = 0
+let blackies:NodeListOf<HTMLCanvasElement> = document.querySelectorAll("#myCanvas")
+let myBall:HTMLElement = document.querySelector("#myBall")
+
 function randomize(min,max){
     num = Math.floor(Math.random()*(max - min +1 ))+min
+  
     return num
 }
-function checkColision(){
-   
-    for(let i:number = 0;i<blackies.length;i++){
-        // let ballLeft:number = parseInt(myBall.style.left.slice(0,-2))
-        // let ballRight:number = ballLeft + 40
-        // let ballTop:number = parseInt(myBall.style.top.slice(0,-2))
-        // let ballBottom:number = ballTop +40
-        // let blackiLeft:number = parseInt(blackies[i].style.left.slice(0,-2))
-        // let blackiRight:number = blackiLeft + 40
-        // let blackiTop:number = parseInt(blackies[i].style.top.slice(0,-2))
-        // let blackiBottom:number =blackiTop + 40
-        // if((ballLeft > blackiLeft && ballLeft < blackiRight && ballTop > blackiTop && ballTop < blackiBottom) ||
-        // (blackiLeft>ballLeft && blackiLeft<ballRight && blackiTop>ballTop&& blackiTop<ballBottom) ){
-        //     console.log("c o l i s i o n")
-        //     console.log(`ballleft ${ballLeft} blackileft ${blackiLeft} blackiright ${blackiRight}`)
-        //     console.log(`balltop ${ballTop} blackitop ${blackiTop} blackibottom ${blackiBottom}`)
-        //     blackies[i].style.opacity = 0
-        // }
-        let ballCenterX =  parseInt(myBall.style.left.slice(0,-2)) + 12
-        let BallCenterY =  parseInt(myBall.style.top.slice(0,-2)) + 12
-        let BlackiCenterX = parseInt(blackies[i].style.left.slice(0,-2)) + 50
-        let BlackiCenterY = parseInt(blackies[i].style.top.slice(0,-2)) + 50
-        let dx = ballCenterX - BlackiCenterX
-        let dy = BallCenterY - BlackiCenterY
-        //console.log(`blackiTop ${blackiTop} blackileft ${blackiLeft} blackiright ${blackiRight} blackibottom ${blackiBottom}`)
-        //console.log(`balltop ${ballTop} ballleft ${ballLeft} ballright ${ballRight} ballbottom ${ballBottom}`)
-       
-        }
 
+function checkColision(){
+    //console.log("checking")
+    for(let i:number = 0;i<blackies.length;i++){
+        if (blackies[i].style.opacity === "0"){
+            i++
+        }
+        let ballCenterX:number =  parseInt(myBall.style.left.slice(0,-2)) + 12
+        
+        let ballCenterY:number =  parseInt(myBall.style.top.slice(0,-2)) + 12
+      
+        let blackiCenterX:number = parseInt(blackies[i].style.left.slice(0,-2)) + (60-18)//60 canvas width = blackie's width
+     
+        let blackiCenterY:number = parseInt(blackies[i].style.top.slice(0,-2)) + (60-18)//same for height
+       
+        let dx:number = Math.abs(ballCenterX - blackiCenterX)
+        //console.log(`dx= ${dx}`)
+        let dy:number = Math.abs(ballCenterY - blackiCenterY)
+        //console.log(`dy= ${dy}`)
+        let distance:number = Math.sqrt(dx*dx + dy*dy)
+        //console.log(`distance= ${distance}`)
+        if (distance <= 100){   //50+12 width and height of both
+            //if (blackies[i].style.opacity ==="0"){
+                console.log("c o l i s i o n")
+                blackies[i].style.opacity = "0"
+                const newExplostion = document.createElement('img')
+                newExplostion.style.position = 'absolute';
+                let avgX:number = (ballCenterX + blackiCenterX)/2
+                let avgY:number = (ballCenterY + blackiCenterY)/2
+                newExplostion.style.left = `${avgX}px`
+                newExplostion.style.top = `${avgY}px`
+                newExplostion.style.height = "70px"
+                newExplostion.style.width = "70px"
+                newExplostion.src = "images/boomPic.png";
+                document.getElementById('container').appendChild(newExplostion)
+                setTimeout(() => {
+                    newExplostion.remove()
+                },200)
+
+//          newExplostion.classList.add('explostion')
+           // }
+           // play()
+            
+        }
     }
+}
+
+function play() {
+    var audio = new Audio('images/BoomSound.mp3');
+    audio.play();
+}
 
 function drawWizard() {
         const canvas = document.createElement('canvas');
         const ctx = canvas.getContext('2d');
-        canvas.width = 112;
-        canvas.height = 112;
+        canvas.width = 120;
+        canvas.height = 120;
         ctx.beginPath();
         ctx.moveTo(83, 116);
         ctx.lineTo(83, 102);
@@ -79,7 +104,6 @@ function drawWizard() {
         ctx.beginPath();
         ctx.arc(89, 102, 2, 0, Math.PI * 2, true);
         ctx.fill();
-
         return canvas;
 }
 function drawBall() {
@@ -89,9 +113,10 @@ function drawBall() {
     canv.style.position = 'absolute';
     canv.style.left = "250px"
     canv.style.top = "250px"
-    canv.style.backgroundColor = "red"
+    canv.style.backgroundColor = "white"
     canv.width = 36;
-    canv.height = 36;
+    canv.height = 36;('canvas');
+    
     const ctxc = canv.getContext('2d');
     ctxc.beginPath();
     ctxc.fillStyle ="green"; //whichi color to see
@@ -99,118 +124,128 @@ function drawBall() {
     ctxc.fill();
     return canv;
 }
-
-const elB = drawBall();
-document.getElementById('container').appendChild(elB);
-elB.id = "myBall"
-//console.log(`first ball ${elB}`)
-elB.style.position = "absolute"
-elB.style.left = "250px"
-elB.style.top = "250px"
-
-let myBall:any = document.querySelector("#myBall")
+function addBall(){
+    const elB = drawBall();
+    document.getElementById('container').appendChild(elB);
+    elB.id = "myBall"
+    //console.log(`first ball ${elB}`)
+    elB.style.position = "absolute"
+    elB.style.left = "250px"
+    elB.style.top = "250px"
+    elB.style.backgroundColor="rgb(12, 63, 158)"
+    myBall = document.querySelector("#myBall")
 //console.log(`we have one ball ${myBall}`)
+}
 
-
+function addBlackies(){
 for (let i:number=0; i<8; i++) {
     const el = drawWizard();
     document.getElementById('container').appendChild(el);
     el.id = "myCanvas"
     el.style.transition = "all 2000ms"
     el.style.position = 'absolute';
-    num = randomize(300,1000)
-    el.style.width = "100px"
-    el.style.height = "100px"
-    if (num>500){
-        num -= 300
-    }else if(num<120){
+    el.style.width = "120px"
+    el.style.height = "120px"
+    num = randomize(50,550)
+    if(num<120){
         num += 200
     }
     numX = num
-    num = randomize(300,1000)
-    if (num>500){
-        num -= 300
-    }else if(num<120){
+    num = randomize(50,550)
+    if(num<120){
         num+=200
     }
     numY = num
-    if (Math.abs(numX - lastNumX)<200){
-        numX = lastNumX + 200
-    }
-    if (Math.abs(numY - lastNumY)<200){
-        numY = lastNumY + 200
-    }
+
     lastNumX = numX
     lastNumY = numY
     el.style.left = numX+"px"
     el.style.top = numY+"px"
     //console.log(`left of el ${el.style.top}`)
-    
+    blackies = document.querySelectorAll("#myCanvas")
+}    
 }
 
 
-let blackies:any = document.querySelectorAll("#myCanvas")
-//let blackies:any = document.getElementById('container').children;
-//console.dir(blackies)
-
-setInterval(() => {
-        num = randomize(300,1000)
-        if (num>500){
-            num -= 300
-        }else if(num<120){
+function moveFigures(){
+    setInterval(()=>{
+        setInterval(checkColision,200)
+        num = randomize(50,550)
+        if(num<120){
             num += 200
         }
+     
         myBall.style.left = num+"px"
-        num = randomize(300,1000)
-        if (num>500){
-            num -= 300
-        }else if(num<120){
+        num = randomize(50,550)
+        if(num<120){
             num += 200
         }
+     
         myBall.style.top = num+"px"
+        for(let i:number = 0;i<blackies.length; i++){
+
+            num = randomize(50,550)
+           
+            if(num<120){
+                num += 200
+            }
+           
+            numX = num
+            num = randomize(50,550)
+         
+            if(num<120){
+                num+=200
+            }
+            numY = num
+
+            //if (Math.abs(numX - lastNumX)<200){
+            //    numX = lastNumX + 200
+            //}
+            //if (Math.abs(numY - lastNumY)<200){
+            //    numY = lastNumY + 200
+            //}
+            
+            blackies[i].style.left = numX+"px"
+            blackies[i].style.top = numY+"px"
+            blackies.forEach(elem=>{
+                elem.onmouseover = blackiTouch
+                window.onclick = blackiMore
+             
+            })
+            //lastNumX = numX
+            //lastNumY = numY
+            
+        }
+},2000) 
+
+}
+
+function blackiTouch(ev){
+    ev.target.style.opacity="0"
+    //moveFigures()
     
-    //console.log(`we have the ball ${myBall}`)
-    for(let i:number = 0;i<blackies.length; i++){
-       
-        //console.dir(`i = ${i}`)
-        num = randomize(300,1000)
-        if (num>500){
-            num -= 300
-        }else if(num<120){
-            num += 200
-        }
-        numX = num
-        num = randomize(300,1000)
-        if (num>500){
-            num -= 300
-        }else if(num<120){
-            num+=200
-        }
-        numY = num
-        if (Math.abs(numX - lastNumX)<200){
-            numX = lastNumX + 200
-        }
-        if (Math.abs(numY - lastNumY)<200){
-            numY = lastNumY + 200
-        }
-        
-        blackies[i].style.left = numX+"px"
-        blackies[i].style.top = numY+"px"
-        lastNumX = numX
-        lastNumY = numY
-        //checkColision()
-    }
-    checkColision()
-   
-    //checkColision()
+}
 
-    // for(let b of blackies) {
-    //     b.style.top = randomize(300,1000)+"px"
-    //     b.style.left = randomize(300,1000)+"px"
-    // }
-}, 2000);
+function blackiMore(ev){
+    const el = drawWizard();
+    document.getElementById('container').appendChild(el);
+    el.id = "myCanvas"
+    el.style.transition = "all 2000ms"
+    el.style.position = 'absolute';
+    el.style.left = "200px"
+    el.style.width = "200px"
+    el.style.height = "120px"
+    el.style.width = "120px"
+    blackies = document.querySelectorAll("#myCanvas")
+    //moveFigures()
+}
 
-//console.log(blackies);
 
-//drawImage(image, x, y)
-//Draws the CanvasImageSource specified by the image parameter at the coordinates (x, y).  
+  //Initialization:
+addBall()
+addBlackies()
+moveFigures()
+
+
+//checkColision()
+

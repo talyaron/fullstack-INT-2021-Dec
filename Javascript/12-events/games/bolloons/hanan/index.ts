@@ -1,29 +1,41 @@
- const ballons:NodeListOf<HTMLElement> = document.querySelectorAll(".ballons");
+const ballons: NodeListOf<HTMLElement> = document.querySelectorAll(".ballons");
+const boss: NodeListOf<HTMLElement> = document.querySelectorAll(".boss");
 
- function ballonFly() {
-   ballons.forEach(element => {
-  
-   
-   element.innerHTML = " <div class=ballons>";
-   element.style.visibility = "visible"
- 
-   element.style.top = randomPosition() + "vh";
-       
+//////////תעופה של בלונים ובלון בוס function of movement for the objects////////////
+function ballonFly(ballons) {
+  ballons.forEach(element => {
 
-       
-   });
-   function randomPosition() {
+    element.style.top = `-14vh`;
+    element.style.left = randomPosition() + "vw";
+
+
+  });
+  function randomPosition() {
     let postion: number;
     postion = Math.random() * 90;
     return postion;
+  }
+  
+  
 }
 
-window.requestAnimationFrame(ballonFly)
-var intervalID = setInterval(ballonFly, 1000);
+function bossballonFly(boss) {
+  boss.forEach(element => {
+
+    element.style.top = `-35vh`;
+    element.style.left = randomPosition() + "vw";
 
 
- }
+  });
+  function randomPosition() {
+    let postion: number;
+    postion = Math.random() * 90 ;
+    return postion;
 
- 
+  }
+}
 
- 
+ballonFly(ballons);
+bossballonFly(boss);
+//////////////////////////////////////////
+

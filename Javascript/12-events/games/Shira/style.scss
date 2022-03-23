@@ -1,11 +1,18 @@
-body{
+body {
     position: relative;
-    // background-image: url();
-}
-.balloon{
-    position:absolute;
-    height: 15vh;
-  
-   transition: all 3s;
-   transition-timing-function: ease-in;
+
+    // background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhbQdgMNS00eOVdRgRLEj4-X9ewLAYTp-M5w&usqp=CAU);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .balloon{
+        position: absolute;
+        width: 80px;
+        height: 300px;
+        top:99vh;
+        transition: top 5s ease-in-out;
+        img {
+            width: 100%;
+        }
+    }
 }

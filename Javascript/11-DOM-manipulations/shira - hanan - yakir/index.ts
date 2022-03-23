@@ -57,7 +57,9 @@ function overLapCheck() {
                 console.log(`covid Collision id ${i} and ${j}`);
                 ugiCron[j].innerHTML = "<img class='explosion' src=\"Boom-PNG.png\" alt=\"\">"; //replace one element to explosion
                 ugiCron[i].style.visibility = "hidden";// hide the other element
-
+                 
+                var audio = new Audio(`Explosion Sounds/Exp2.mp3`,);
+                audio.play();
             }
         }
     }
