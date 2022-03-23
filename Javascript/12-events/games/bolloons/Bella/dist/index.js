@@ -1,6 +1,13 @@
 // const getRandom = (min:number, max:number) => Math.floor(Math.random()*(max-min+1)+min);
-var balloons = document.querySelectorAll('.baloonns');
-console.dir(balloons);
+// const balloons:any = document.querySelectorAll('.baloonns');
+var container = document.querySelector('.container');
+var i = 0;
+for (i; i < 4; i++) {
+    var balloons = document.createElement('img');
+    balloons.src = "./balloons.png";
+    balloons.width = 200;
+    container.appendChild(balloons);
+}
 function moveBalloons() {
     balloons.forEach(function (element) {
         element.style.top = "-12vh";
@@ -11,5 +18,5 @@ function getRandom() {
     var random = Math.floor(Math.random() * 100);
     return random;
 }
-// setInterval(moveBalloons, 1000);
 moveBalloons();
+setInterval(moveBalloons, 1000);

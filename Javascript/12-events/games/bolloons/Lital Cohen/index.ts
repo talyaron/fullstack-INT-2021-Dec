@@ -1,12 +1,15 @@
-const balloons:NodeListOf<HTMLImageElement> =document.querySelectorAll('.balloon')
+const balloons:NodeListOf<HTMLImageElement> = document.querySelectorAll('.balloon')
+console.dir(balloons)
 
-balloonsMoveUp(balloons);
+moveBalloons(balloons)
 
-function balloonsMoveUp(balloons:NodeListOf<HTMLImageElement>){
+function moveBalloons(balloons:NodeListOf<HTMLImageElement>){
     balloons.forEach(balloon=>{
-        balloonsMoveUp(balloons);
+        moveBalloon(balloon);
     })
 }
+
+
 
 function moveBalloon(balloon:HTMLImageElement){
    

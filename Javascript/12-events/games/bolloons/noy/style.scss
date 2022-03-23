@@ -2,19 +2,13 @@ body{
     margin: 0 auto;
     overflow: hidden;
     background-color: rgb(240, 198, 205);
-}
-.wrapper{
     width: 100vw;
     height: 100vh;
     position: relative;
     .balloon{
-        width: 50px;
-        transition: all 15s;
+        height: 10vh;
+        transition: all 5s;
         position: absolute;
-        top: 110vh;
-        img{
-            width: 100%;
-        }
+
     }
-    
 }

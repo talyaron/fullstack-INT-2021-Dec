@@ -1,15 +1,28 @@
 var ballons = document.querySelectorAll(".ballons");
-function ballonFly() {
+var boss = document.querySelectorAll(".boss");
+//////////תעופה של בלונים ובלון בוס function of movement for the objects////////////
+function ballonFly(ballons) {
     ballons.forEach(function (element) {
-        element.innerHTML = " <div class=ballons>";
-        element.style.visibility = "visible";
-        element.style.top = randomPosition() + "vh";
+        element.style.top = "-14vh";
+        element.style.left = randomPosition() + "vw";
     });
     function randomPosition() {
         var postion;
         postion = Math.random() * 90;
         return postion;
     }
-    window.requestAnimationFrame(ballonFly);
-    var intervalID = setInterval(ballonFly, 1000);
 }
+function bossballonFly(boss) {
+    boss.forEach(function (element) {
+        element.style.top = "-35vh";
+        element.style.left = randomPosition() + "vw";
+    });
+    function randomPosition() {
+        var postion;
+        postion = Math.random() * 90;
+        return postion;
+    }
+}
+ballonFly(ballons);
+bossballonFly(boss);
+//////////////////////////////////////////
