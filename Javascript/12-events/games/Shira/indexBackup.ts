@@ -25,8 +25,6 @@ const balloons: NodeListOf<HTMLImageElement> = document.querySelectorAll('.ballo
 // }
 
 // function balloonUp(balloon:HTMLImageElement){
-
-
 //     balloon.style.top = '112vh';
 //     balloon.style.left = `${Math.random()*90}vw`
 //     setInterval(()=>{
