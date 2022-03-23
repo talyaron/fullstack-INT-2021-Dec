@@ -37,6 +37,7 @@ function bombPicture(ev) {
     bombImg.style.position = "absolute";
     ev.target.style.top = "50vh";
     bombImg.style.left = ev.target.style.left;
+    bombImg.style.top = ev.target.style.top;
     ev.target.style.opacity = "0";
     bombImg.style.opacity = "1";
     setTimeout(function () {
