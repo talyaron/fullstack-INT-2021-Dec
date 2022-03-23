@@ -1,9 +1,17 @@
-const root:HTMLDivElement = document.querySelector("#root");
+const root:any = document.querySelector("#root");
+
+root.innerHTML = '<div id="name"><p></p></div><div id="email"><p></p></div><div id="password"><p></p></div>'
 
 function handleName(event){
-    root.innerHTML += `<div id="#name"><p>Name: ${event.target.value}</p></div>`;
+    let name:any = document.querySelector("#name");
+    name.innerText = `Name: ${event.target.value}`;
 }
 
 function handleEmail(event){
+    let email:any = document.querySelector("#email");
+    email.innerText = `E-mail: ${event.target.value}`;
+}
+
+function handlePassword(event){
     
 }
