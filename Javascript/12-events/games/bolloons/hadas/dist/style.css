@@ -8,7 +8,7 @@ body {
   height: 10vh;
   top: 120vh;
   position: absolute;
-  transition: all 4s;
+  transition: all 6s;
 }
 .balloon img {
   width: 100px;
