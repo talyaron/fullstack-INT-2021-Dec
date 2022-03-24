@@ -1,0 +1,73 @@
+body {
+    margin: 0%;
+    padding: 0%;
+}
+
+.wrapper {
+    width: 50vw;
+    height: 75vh;
+    background-color: aquamarine;
+    border-radius: 40px;
+    margin: auto;
+    margin-top: 50px;
+    font-size: 2rem;
+
+    p {
+        padding-left: 60px;
+    }
+
+    h2 {
+        text-align: center;
+        text-decoration: underline rgb(149, 75, 75) 3px;
+    }
+
+    &__name {
+        margin: auto;
+        height: 50px;
+        width: 50vw;
+        display: flex;
+        padding: 10px;
+
+
+        input {
+            border: none;
+            width: 50%;
+            margin: auto;
+            height: 30px;
+            font-size: 1.5rem;
+
+        }
+    }
+
+    &__email {
+        margin: auto;
+        height: 50px;
+        width: 50vw;
+        display: flex;
+        padding: 10px;
+
+        input {
+            border: none;
+            width: 50%;
+            margin: auto;
+            height: 30px;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__password {
+        margin: auto;
+        height: 50px;
+        width: 50vw;
+        display: flex;
+        padding: 10px;
+
+        input {
+            border: none;
+            width: 50%;
+            margin: auto;
+            height: 30px;
+            font-size: 1.5rem;
+        }
+    }
+}
