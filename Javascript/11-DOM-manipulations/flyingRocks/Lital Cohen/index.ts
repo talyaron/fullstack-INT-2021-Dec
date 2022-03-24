@@ -7,6 +7,8 @@
 
 
 const boxs: any = document.querySelectorAll('.box');
+const sound:AudioNode= document.getElementById('boomSound').play();
+
 
 boxs.forEach(element => {
     element.style.left = getRandomPosition()
@@ -16,6 +18,7 @@ boxs.forEach(element => {
     element.onclick  = handleEvent
     element.onmouseleave = handleEventLeave
     element.onclick = explodeEvent
+    element.onclick=makeSound
 //    element.onclick=playBoomSound
 
 })
@@ -29,6 +32,7 @@ function getRandomMove() {
         element.style.left = getRandomPosition()
         element.style.top = getRandomPosition()
         element.style.right = getRandomPosition()
+        element.onclick=makeSound
         element.style.transform = `rotate(${counter}deg)`;
         counter += 360;
 
@@ -145,17 +149,23 @@ boxs.forEach(particle => {
     particle.onclick  = handleEvent
     particle.onmouseleave = handleEventLeave
     particle.onclick = explodeEvent
-//    element.onclick=playBoomSound
+    particle.onclick=makeSound
 
 })
-const boomSound:any=document.querySelector(".boomSound")
+const makeBoomSound:HTMLAudioElement=document.createElement('audio')
 
-function playBoomSound(ev){
-const boomSound= document.querySelector(".boomSound")
-return boomSound
+makeBoomSound.src ='dist/mixkit-shot-light-explosion-1682.mp3';
+makeBoomSound.play()
+
+function makeSound(ev){
+    console.dir(ev.target);
+    if(explosionPracticle.style.opacity="1"){
+        //         return playBoomSound
+
+makeBoomSound.src ='dist/mixkit-shot-light-explosion-1682.mp3';
+makeBoomSound.play()
+
 }
-
-
 
 
 

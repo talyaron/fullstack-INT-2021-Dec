@@ -4,6 +4,7 @@
 //  it is only working when the page is being refreshed 
 // i couldn't do it as they were in the move
 var boxs = document.querySelectorAll('.box');
+var sound = document.getElementById('boomSound').play();
 boxs.forEach(function (element) {
     element.style.left = getRandomPosition();
     element.style.top = getRandomPosition();
@@ -12,6 +13,7 @@ boxs.forEach(function (element) {
     element.onclick = handleEvent;
     element.onmouseleave = handleEventLeave;
     element.onclick = explodeEvent;
+    element.onclick = makeSound;
     //    element.onclick=playBoomSound
 });
 var counter = 360;
@@ -20,6 +22,7 @@ function getRandomMove() {
         element.style.left = getRandomPosition();
         element.style.top = getRandomPosition();
         element.style.right = getRandomPosition();
+        element.onclick = makeSound;
         element.style.transform = "rotate(" + counter + "deg)";
         counter += 360;
     });
@@ -111,25 +114,35 @@ boxs.forEach(function (particle) {
     particle.onclick = handleEvent;
     particle.onmouseleave = handleEventLeave;
     particle.onclick = explodeEvent;
-    //    element.onclick=playBoomSound
+    particle.onclick = makeSound;
 });
-var boomSound = document.querySelector(".boomSound");
-function playBoomSound(ev) {
-    var boomSound = document.querySelector(".boomSound");
-    return boomSound;
-}
-function handleEvent(ev) {
+var makeBoomSound = document.createElement('audio');
+makeBoomSound.src = 'dist/mixkit-shot-light-explosion-1682.mp3';
+makeBoomSound.play();
+function makeSound(ev) {
     console.dir(ev.target);
-    ev.target.style.opacity = "0";
-}
-function handleEventLeave(ev) {
-    console.dir(ev.target);
-    ev.target.style.opacity = "1";
-}
-function explodeEvent(ev) {
-    if (ev.target.style.opacity = "0") {
-        return explosionPracticle.style.opacity = "1";
+    if (explosionPracticle.style.opacity = "1") {
+        //         return playBoomSound
+        makeBoomSound.src = 'dist/mixkit-shot-light-explosion-1682.mp3';
+        makeBoomSound.play();
     }
+    function handleEvent(ev) {
+        console.dir(ev.target);
+        ev.target.style.opacity = "0";
+    }
+    function handleEventLeave(ev) {
+        console.dir(ev.target);
+        ev.target.style.opacity = "1";
+    }
+    function explodeEvent(ev) {
+        if (ev.target.style.opacity = "0") {
+            return explosionPracticle.style.opacity = "1";
+        }
+    }
+    // function playBoomSoundEvent(ev){
+    //     if(explosionPracticle.style.opacity="1"){
+    //         return playBoomSound
+    //     }
 }
 // function playBoomSoundEvent(ev){
 //     if(explosionPracticle.style.opacity="1"){
