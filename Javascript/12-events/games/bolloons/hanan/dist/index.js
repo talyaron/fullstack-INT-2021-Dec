@@ -20,7 +20,7 @@ function createBallon() {
     document.body.appendChild(div);
 }
 ;
-animateBallon(div);
+animateBallon("div");
 function animateBallon(elem) {
     var position = 0;
     var random = Math.floor(Math.random() * 6 - 3);

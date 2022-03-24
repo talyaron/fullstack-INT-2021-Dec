@@ -25,7 +25,7 @@ function createBallon() {
 };
 
 
-animateBallon(div);
+animateBallon(`div`);
 
 function animateBallon(elem) {
    let position = 0;
