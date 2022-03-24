@@ -13,8 +13,11 @@ boxs.forEach(function (element) {
     element.onclick = handleEvent;
     element.onmouseleave = handleEventLeave;
     element.onclick = explodeEvent;
+<<<<<<< Updated upstream
     element.onclick = makeSound;
     //    element.onclick=playBoomSound
+=======
+>>>>>>> Stashed changes
 });
 var counter = 360;
 function getRandomMove() {
@@ -114,12 +117,21 @@ boxs.forEach(function (particle) {
     particle.onclick = handleEvent;
     particle.onmouseleave = handleEventLeave;
     particle.onclick = explodeEvent;
+<<<<<<< Updated upstream
     particle.onclick = makeSound;
 });
 var makeBoomSound = document.createElement('audio');
 makeBoomSound.src = 'dist/mixkit-shot-light-explosion-1682.mp3';
 makeBoomSound.play();
 function makeSound(ev) {
+=======
+});
+function handleEvent(ev) {
+    console.dir(ev.target);
+    ev.target.style.opacity = "0";
+}
+function handleEventLeave(ev) {
+>>>>>>> Stashed changes
     console.dir(ev.target);
     if (explosionPracticle.style.opacity = "1") {
         //         return playBoomSound
@@ -144,7 +156,6 @@ function makeSound(ev) {
     //         return playBoomSound
     //     }
 }
-// function playBoomSoundEvent(ev){
-//     if(explosionPracticle.style.opacity="1"){
-//         return playBoomSound
-//     }
+var mytrack = document.getElementById('boomSound');
+mytrack.play();
+console.log(mytrack);
