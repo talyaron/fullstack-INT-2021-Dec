@@ -5,27 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     <link rel="stylesheet" href="dist/style.css">
+    <link rel="stylesheet" href="dist/style.css">
 </head>
-
-
 <body>
-    <h1>פוצץ אותם</h1>
-    <div class="ballons"><img src="imgs/PikPng.com_pink-balloon-png-transparent_5494729.png" id="ballon"></div>
-    <div class="ballons"><img src="imgs/PikPng.com_pink-balloon-png-transparent_5494729.png" id="ballon"></div>
-    <div class="ballons"><img src="imgs/PikPng.com_pink-balloon-png-transparent_5494729.png" id="ballon"></div>
-    <div class="ballons"><img src="imgs/PikPng.com_pink-balloon-png-transparent_5494729.png" id="ballon"></div>
-    <div class="ballons"><img src="imgs/PikPng.com_pink-balloon-png-transparent_5494729.png" id="ballon"></div>
-    <div class="ballons"><img src="imgs/PikPng.com_pink-balloon-png-transparent_5494729.png" id="ballon"></div>
+    <h1>תפוצץ אותם</h1>
+    <!-----<div class="ballon"></div>----->
 
-    <div class="boss"><img src="imgs/PikPng.com_pink-balloon-png-transparent_5494729.png" id="ballonBoss"></div>
-    
-    
-    
-    <div class="balloons"></div>
-    
-    <script src="dist/index.js"></script>
-    
+    <div class="socre-board">
+        <p>פוצץ<span class="score"> 0 </span>בלונים</p>
+    </div>
+      
+    <div class="shadow">
+        <div class="total-score">
+            <div class="warpper winner">
+                <h4 >כל הכבוד</h4>
+                <h4 >פיצצת את כל הבלונים</h4>
+                <p >אלוף!!!!!!!!!!!!</p>
+            </div>
+            <h4 class="warpper loser" >חה חה מפסידן</h4>
+            <h4>פיצצת<span class="score">0</span>בלונים</h4>
+            <p>שחק שוב</p>
+            <button class="restart">כן</button>
+            <button class="cancel">לא</button>
+        </div>
+    </div>
+   <div class="main-game">
+       <h2>מוכן?</h2>
+       <button class="start-btn" >התחל</button>
+   </div>
 
+
+<script src="dist/index.js"></script>
 </body>
 </html>
