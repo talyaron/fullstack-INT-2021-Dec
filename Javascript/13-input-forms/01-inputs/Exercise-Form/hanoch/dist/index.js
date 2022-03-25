@@ -1,7 +1,9 @@
 var name1 = document.querySelector("#name");
 var mail = document.querySelector("#mail");
 var pass = document.querySelector("#pass");
-function handleGetName(event) {
+function handleGetText(event) {
     console.dir(event);
-    body.innerHTML = event.target.value;
+    var outputText = document.querySelector("#" + event.target.name);
+    var value = event.target.value;
+    outputText.innerHTML = value;
 }
