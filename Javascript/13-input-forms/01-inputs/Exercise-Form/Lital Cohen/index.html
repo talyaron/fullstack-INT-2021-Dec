@@ -11,7 +11,7 @@
 
 <body>
 
-    <input type="text" name="theName" id="" placeholder="Name" onchange="handleGetText(event)">
+    <!-- <input type="text" name="theName" id="" placeholder="Name" onchange="handleGetText(event)">
  
     <input type="email" name="theEmail" id="" placeholder="Email" onchange="handleGetText(event)">
 
@@ -19,12 +19,24 @@
     
     <div id="theName"></div>
     <div id="theEmail"></div>
-    <div id="ThePS"></div>
+    <div id="ThePS"></div> -->
+
+<input type="text" name="userName" id="" placeholder="Name" onchange="handleGetText(event)">
+<input type="email" name="Email" id="" placeholder="Email" onchange="handleGetText(event)"> 
+<input type="password" name="password" id="" placeholder="Password" onchange="handleGetText(event)">
+<input type="url" name="output" id="output" placeholder="Load a picture?" style="cursor: pointer;" onchange="loadImg(event)">
+<input type="number" name="number" id="number" placeholder="Numbers" onchange="handleCopyTextDom(event)"> 
+<button type="submit" name="loginBtn">Login</button>
 
 
-
-
-
+  
+<div id="userName"></div>
+<div id="Email"></div>
+<div id="password"></div> 
+<div id="output"></div> 
+<div id="loginBtn"></div> 
+<img id="image" width="200"/>
+<div id="number"></div>
 
 
 
