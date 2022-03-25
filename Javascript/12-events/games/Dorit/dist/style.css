@@ -1,13 +1,13 @@
 .balloon {
   height: 10vh;
   top: 112vh;
-  transition: all 4s;
+  transition: all 6s;
   position: absolute;
   transition-timing-function: ease-in;
 }
 
 body {
-  background-image: src("./img/skyies.jpg");
+  background-image: url("./img/skyies.jpg");
   background-size: auto;
   background-repeat: no-repeat;
   height: 100vh;
