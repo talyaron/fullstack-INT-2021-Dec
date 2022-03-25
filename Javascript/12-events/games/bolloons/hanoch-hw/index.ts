@@ -48,7 +48,7 @@ function createBalloon1(){
         ev.target.style.opacity="0"
         bombImg.style.opacity="1"
         setTimeout(()=>{
-            bombImg.style.opacity = "0"
+            bombImg.style.opacity = "0" 
         },200)
      }
 

@@ -1,21 +1,28 @@
-const ballons:NodeListOf<HTMLImageElement> = document.querySelectorAll("#ballon");
-console.dir(ballons);
+// const ballons:NodeListOf<HTMLImageElement> = document.querySelectorAll("#ballon");
+// console.dir(ballons);
 
-///////////Function move objects
-function flyBallon(){
-    ballons.forEach(element => {
-        element.style.top ='-16vh'
-        element.style.left = `${getRandomPosition}vw`
-    })
-    
+///////// Function create ballon
+function createBalloon(){
+    const balloonId = uid();
+    document.body.innerHTML += `<img id=${balloonId} class="ballon" src="ballon.svg.png"/>`
+    let ballon:any = document.querySelector(`#${balloonId}`);
+    balloonId.onclick=bombPicture
+    moveBalloon(balloon)
+}
+
+//////// Function move baloon
+function moveBalloon(balloon:HTMLImageElement){
+    balloon.style.top = '90vh';
+    balloon.style.left = `${Math.random()*90}vw`
+    balloon.onclick = bombPicture
+    setTimeout(()=>{
+        balloon.style.top = '-16vh'
+    },700)
+}
+
+function uid(){
+    return `id-${Math.ceil(Math.random()*1e8)}`
 }
 
 
 
-function getRandomPosition() {
-    let random = Math.floor(Math.random()*100);
-    return random;
-}
-
-flyBallon()
-setInterval(flyBallon,1000)
