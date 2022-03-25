@@ -1,0 +1,12 @@
+body {
+  background-color: pink;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.balloon {
+  position: absolute;
+  height: 20vh;
+  transition: all 5s;
+  transition-timing-function: ease-in;
+}
