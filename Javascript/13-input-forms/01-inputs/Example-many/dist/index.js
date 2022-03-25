@@ -17,7 +17,7 @@ function createList(rootElement, numberOfElements) {
 function createElement(id) {
     return "<div id=\"id-" + id + "\">" + id + ": <button onclick='handleDeleteMe(event)' name='aaa'>DELETE ME</button><input type='color' onchange='handleChangeColor(event)' /></div>";
 }
-var root = document.querySelector("#root");
+var root = document.querySelector("#root1");
 createList(root, 25);
 function handleDeleteMe(ev) {
     console.dir(ev);

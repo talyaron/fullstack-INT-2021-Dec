@@ -4,7 +4,9 @@ const mail = document.querySelector("#mail")
 const pass =document.querySelector("#pass")
 
 
-function handleGetName(event){
+function handleGetText(event){
     console.dir(event)
-    body.innerHTML = event.target.value 
+    let outputText:HTMLElement = document.querySelector(`#${event.target.name}`)
+    const value = event.target.value 
+    outputText.innerHTML = value
 }
