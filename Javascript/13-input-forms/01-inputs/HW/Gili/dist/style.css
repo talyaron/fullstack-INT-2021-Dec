@@ -1,9 +1,9 @@
-/*NOT DONE*/
-/* NOT WORKING */
 body {
   margin: 0%;
   padding: 0%;
-  background-color: aqua;
+  background-color: #8ccff9;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 * {
@@ -51,9 +51,13 @@ body {
   justify-content: center;
   text-align: center;
 }
-.wrapper__left__edit #address {
+.wrapper__left__edit .printed_numbers {
+  height: 30px;
+}
+.wrapper__left__edit #address,
+.wrapper__left__edit #numbers {
   margin: auto;
-  width: 250px;
+  width: 300px;
   height: 25px;
   font-size: 1rem;
   background-color: azure;
@@ -61,7 +65,7 @@ body {
 }
 .wrapper__left__edit #file_design {
   margin: auto;
-  width: 250px;
+  width: 300px;
   height: 25px;
   font-size: 1rem;
   background-color: azure;
@@ -99,8 +103,19 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-.wrapper__right__form #pass,
-.wrapper__right__form #user {
+.wrapper__right__form .user_wrapper,
+.wrapper__right__form .pass_wrapper {
+  width: 350px;
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper__right__form form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.wrapper__right__form #first,
+.wrapper__right__form #second {
   width: 250px;
   height: 25px;
   font-size: 1rem;
@@ -109,4 +124,33 @@ body {
 }
 .wrapper__right__form h3 {
   font-weight: lighter;
+}
+.wrapper__right__continue .success_or_fail {
+  height: 50px;
+  width: 200px;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin: auto;
+}
+
+@media only screen and (min-width: 1280px) {
+  .wrapper {
+    width: 1200px;
+  }
+  .wrapper__right, .wrapper__left {
+    width: 600px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    height: fit-content;
+    justify-content: flex-start;
+  }
+  .wrapper__right, .wrapper__left {
+    height: fit-content;
+    padding: 10vw;
+    margin: auto;
+  }
 }
