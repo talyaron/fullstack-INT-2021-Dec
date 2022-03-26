@@ -1,7 +1,7 @@
 .balloon {
   height: 10vh;
   top: 112vh;
-  transition: all 4s;
+  transition: all 6s;
   position: absolute;
   transition-timing-function: ease-in;
 }

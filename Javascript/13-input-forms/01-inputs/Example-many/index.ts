@@ -18,7 +18,7 @@ function createElement(id: string | number) {
   return `<div id="id-${id}">${id}: <button onclick='handleDeleteMe(event)' name='aaa'>DELETE ME</button><input type='color' onchange='handleChangeColor(event)' /></div>`;
 }
 
-const root: HTMLElement = document.querySelector("#root");
+const root: HTMLElement = document.querySelector("#root1");
 
 createList(root, 25);
 

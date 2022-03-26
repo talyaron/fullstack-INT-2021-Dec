@@ -20,7 +20,7 @@ function uid() {
 }
 function createBalloon1() {
     var balloonId = uid1();
-    document.body.innerHTML += "<img id=" + balloonId + " class=\"balloon\" src=\"https://freesvg.org/storage/img/thumb/rg1024-two-ballons.png\"/>";
+    document.body.innerHTML += "<img id=" + balloonId + " class=\"balloon\" src=\"https://freesvg.org/storage/img/thumb/rg1024-two-ballons.png\"/>" + ("<img id=" + balloonId + " class=\"balloon\" src=\"https://freesvg.org/storage/img/thumb/rg1024-two-ballons.png\"/>");
     var balloon = document.querySelector("#" + balloonId);
     //moveBalloon1(balloon);
     //console.log("to move balloon")
