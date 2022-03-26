@@ -1,0 +1,7 @@
+.list p {
+  color: blue;
+}
+.list p button {
+  border: 1px dashed green;
+  border-radius: 5px;
+}

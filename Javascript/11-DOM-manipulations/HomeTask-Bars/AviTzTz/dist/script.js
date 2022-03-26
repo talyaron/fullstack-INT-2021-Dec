@@ -23,5 +23,4 @@ function creatBars(insertArr) {
         div.appendChild(par);
     }
 }
-// let property = window.getComputedStyle(div,'::after')
 creatBars(arr);
