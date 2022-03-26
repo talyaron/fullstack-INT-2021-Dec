@@ -37,6 +37,12 @@ function handleClick(ev) {
     audio.play();
     ev.target.src = 'Images/explodBalloon.jpg';
 }
+// var counterVal = 0;
+// function countClick() {
+//     handleClick(++counterVal);
+//     console.log(counterVal)
+//     return handleClick
+// }
 // Start game function , create balloon that start go up after 5 seconds :
 function startGame() {
     balloons.forEach(function (balloon) {
