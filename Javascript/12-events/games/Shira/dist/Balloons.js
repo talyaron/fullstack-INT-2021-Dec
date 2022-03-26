@@ -1,6 +1,6 @@
 var balloons = document.querySelectorAll('.balloon');
 var body = document.querySelector('body');
-body.style.backgroundImage = 'url(./images/sky.jpg)';
+body.style.backgroundImage = 'url(./images/nature.jpg)';
 // Function that create div with balloon picture:
 function createBalloon() {
     var newBalloon = document.createElement('div');
@@ -33,7 +33,7 @@ function getRandomInterval() {
 //Function that explode the balloon and makes an exploding sound
 function handleClick(ev) {
     ev;
-    var audio = new Audio("Exp3.mp3");
+    var audio = new Audio("ballon-blows-up.wav");
     audio.play();
     ev.target.src = 'Images/explodBalloon.jpg';
 }
