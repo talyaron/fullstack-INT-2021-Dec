@@ -29,7 +29,7 @@ function uid(){
 }
 
 ///////// Function explote ballons
-function handleClick(ev): void{
+function handleClick(ev) {
     ev as HTMLElement;
     let audio = new Audio(`poomballon.wav`,);
     audio.play();
