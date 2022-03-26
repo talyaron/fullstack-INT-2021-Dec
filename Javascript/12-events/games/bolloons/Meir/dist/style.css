@@ -4,11 +4,8 @@ body {
   background-size: 100%;
   overflow-y: hidden;
 }
-
-.balloon {
+body .balloon {
   height: 15vh;
-  top: 110vh;
   transition: all 4s;
   position: absolute;
-  width: 100%;
 }
