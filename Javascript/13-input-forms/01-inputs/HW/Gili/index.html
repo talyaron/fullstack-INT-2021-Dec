@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/ef6c5070b7.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gili Form</title>
+    <link rel="stylesheet" href="dist/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body style="background-image: url(images/backgroubd2.jpg);">
+    <div class="wrapper">
+        <img class="" src="" alt="" srcset="">
+        <div class="wrapper__left">
+            <div class="wrapper__left__user_img">
+                <img class="user_img" src="" alt="" srcset="">
+            </div>
+            <div class="wrapper__left__edit">
+                <label for="url">Enter Image link here:</label>
+                <input id="address" type="text" onchange="checkurl(event)">
+                <p>Or choose fro library:</p>
+                <label for="fileup" id="file_design">Click here</label>
+                <input id="fileup" type="file" hidden onchange="checkfile(event)">
+                <p>Enter Numbers here to print:</p>
+                <input id="numbers" type="number" onchange="printNumbers(event)">
+                <div class="printed_numbers">...</div>
+            </div>
+        </div>
+        <div class="wrapper__right">
+            <div class="wrapper__right__logo">
+                <i class="fa-solid fa-dove"></i>
+            </div>
+            <div class="wrapper__right__form">
+                <h2>Log In</h2>
+                <form>
+                    <div class="user_wrapper">
+                        <label>Username:
+                            <input id="first" placeholder="Enter username" type="text" name="username">
+                        </label>
+                    </div>
+                    <div class="pass_wrapper">
+                        <label>Password:
+                            <input id="second" placeholder="Enter password" type="password" name="password1"
+                                onchange="check()">
+                        </label>
+                    </div>
+                </form>
+
+            </div>
+            <div class="wrapper__right__continue">
+                <div class="success_or_fail"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./dist/app.js"></script>
+</body>
+
+</html>
