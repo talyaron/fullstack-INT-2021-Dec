@@ -6,6 +6,10 @@ moveBalloonsUp(balloons)
 function moveBalloonsUp(balloons: NodeListOf<HTMLImageElement>) {
     balloons.forEach(redBalloon =>{
     moveBalloonOnly(redBalloon)
+
+    redBalloon.addEventListener("click", balloonExplodes);
+
+    // const aBalloon: HTMLImageElement = document.querySelector("balloonId");
     }
     )
 }
@@ -51,6 +55,11 @@ function newId(){
 }());
 
 //When you press the balloon, the balloon explodes//
-function baloonExplodes(){
 
-}
+function balloonExplodes(event) {
+    event as HTMLElement;
+    let audio = new Audio("./dist/audio.mp3");
+    audio.play();
+    event.target.src = "./dist/boom.png";
+  }
+  
