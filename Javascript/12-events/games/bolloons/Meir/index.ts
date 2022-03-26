@@ -8,7 +8,7 @@ function createBalloon(){
     const balloon:HTMLImageElement = document.querySelector(`#${balloonId}`);
     moveBalloon(balloon);
     balloonId.addEventListener('click',handleClick)
-    return balloonId 
+    return balloonId
 }
 
 //////// Function move baloon ramdomly
