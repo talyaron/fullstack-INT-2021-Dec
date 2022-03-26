@@ -5,12 +5,10 @@ body {
   overflow-y: hidden;
 }
 
-.ballon {
+.balloon {
   height: 15vh;
   top: 110vh;
   transition: all 4s;
   position: absolute;
-}
-.ballon img {
   width: 100%;
 }
