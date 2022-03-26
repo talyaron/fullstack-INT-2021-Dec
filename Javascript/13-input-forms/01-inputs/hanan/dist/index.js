@@ -1,5 +1,7 @@
-var userName = document.querySelector("#name");
-var email = document.querySelector("#email");
-var password = document.querySelector("#password");
-function inputUserName(event) {
+var userName = document.getElementById("#name");
+var email = document.getElementById("#email");
+var password = document.getElementById("#password");
+document.addEventListener('keyup', logKey);
+function logKey(ev) {
+    ev.textContent += " " + ev.code;
 }

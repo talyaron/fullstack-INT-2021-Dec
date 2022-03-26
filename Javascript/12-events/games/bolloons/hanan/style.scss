@@ -1,33 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+};
+
 body{
-    background-image: url(https://cdn.shoplightspeed.com/shops/622314/files/19096642/670x670x1/monkey-animal-face-luncheon-napkins-16-ct.jpg);
+    background-image: url("/Javascript/12-events/games/bolloons/hanan/imgs/images.jpg");
+   background-size: cover;
+    background-position: cover;
     background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    direction: rtl
     
+};
+
+.ballon{
+    position:absolute;
+    top: 100vh;
+    width: 80px;
+    height: 80px;
+    background-image: url("/Javascript/12-events/games/bolloons/hanan/imgs/PikPng.com_pink-balloon-png-transparent_5494729.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+};
+
+.socre-board{
+    background-color: green;
+    width: 300px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 150px);
+
+};
+
+.loser{
+    display: none;
+
 }
-h1{
+
+.winner{
+    display: none;
+}
+
+.main-game{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+button.start-btn{
+    font-size: 20px;
+    border: none;
+    margin-top: 8px;
+    border-radius: 30px;
+    font-weight: bold;
+    height: 30px;
+    width: 5%;
+    margin: 8px auto;
+}
+
+.shadow{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
     position: relative;
-    font-size: 90px;
-   left: 80vh;
-   bottom: 5vw;
-
-}
-.ballons{
-    position: absolute;
-    top: 114vh;
-    transition: all 8s;
-    height: 12vh;
-    img{
-        height: 100%;
-    }
 }
 
- .boss{
-    position: absolute;
-    top: 135vh;
-    transition: all 6s;
-    height: 12vh;
-    img{
-        height: 30vh;
-    }
+.total-score{
+    background: white;
+    padding: 10px 100px 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
 }
