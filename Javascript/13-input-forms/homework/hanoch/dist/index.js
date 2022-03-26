@@ -8,4 +8,6 @@ function handleGetNumber(event) {
 }
 function handleGetImg(event) {
     var value = event.target.value;
+    var outPut = document.querySelector(".img");
+    outPut.innerHTML = "<img src=\"" + value + "\">";
 }
