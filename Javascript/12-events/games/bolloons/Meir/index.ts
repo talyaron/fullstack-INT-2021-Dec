@@ -4,7 +4,7 @@ console.dir(ballons);
 ///////// Function create ballon
 function createBalloon(){
     const balloonId = uid();
-    document.body.innerHTML += `<img id=${balloonId} class="ballon" src="ballon.svg.png"/>`
+    document.body.innerHTML += `<img id=${balloonId} 'class="ballon" src="ballon.svg.png"'/>`
     const balloon:HTMLImageElement = document.querySelector(`#${balloonId}`);
     moveBalloon(balloon);
     
