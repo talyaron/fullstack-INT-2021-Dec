@@ -1,0 +1,13 @@
+body {
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #f0c6cd;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+body .balloon {
+  height: 10vh;
+  transition: all 5s;
+  position: absolute;
+}
