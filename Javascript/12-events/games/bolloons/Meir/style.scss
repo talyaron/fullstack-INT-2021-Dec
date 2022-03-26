@@ -2,15 +2,17 @@ body{
     background-image: url(https://media.istockphoto.com/photos/hot-air-balloons-flying-over-the-botan-canyon-in-turkey-picture-id1309631741?b=1&k=20&m=1309631741&s=170667a&w=0&h=GxR0NjI1_pov96jKnkUevvTbNVncA0G_-auyOZPH77M=);
     background-repeat: no-repeat;
     background-size: 100%;
-    overflow-y: hidden;
-    .balloon{
-        height:15vh;
-        transition: all 4s;
-        position: absolute;
-       
-    }
+    overflow: hidden;
     
-}  
+    
+} 
+.balloon{
+    height:15vh;
+    transition: all 4s;
+    position: absolute;
+
+   
+}
   
   
 
