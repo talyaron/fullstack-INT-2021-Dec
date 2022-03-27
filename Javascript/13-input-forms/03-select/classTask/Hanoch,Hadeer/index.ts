@@ -7,8 +7,8 @@ function HandleGetFlag(ev:any){
 
         imgflag.innerHTML = `<img src="./dist/turkeyflag.jpg" alt=""> <br> ${value}`
         }
-    else if (value == "ukraineflag"){
-        imgflag.innerHTML = `<img src="./dist/ukrianeflag.jpg" alt="">`
+    else if (value == "ukriane"){
+        imgflag.innerHTML = `<img src="./dist/ukrianeflag.jpg" alt=""> <br> ${value}`
     }
 
 }
