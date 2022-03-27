@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: palevioletred;
+}
+
+.wrapper {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.baloonImg {
+  position: absolute;
+  width: 60px;
+  height: 100px;
+  top: 200vh;
+  transition: all 8s;
+}
+
+.boomImg {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+}

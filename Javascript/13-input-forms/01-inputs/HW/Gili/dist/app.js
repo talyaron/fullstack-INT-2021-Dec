@@ -1,19 +1,38 @@
 console.log("Server online");
 var body = document.querySelector('body');
 var userimg = document.querySelector('.user_img');
-function isValidUrl(_string) {
-    var matchPattern = /^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/;
-    return matchPattern.test(_string);
-}
+var writeHere = document.querySelector('.success_or_fail');
+var numbersDiv = document.querySelector('.printed_numbers');
 function checkurl(event) {
     var url = event.target.value;
-    isValidUrl(url) ? userimg.src = "" + url : console.log("URL is Invalid");
+    userimg.src = "" + url;
 }
-function checkUsername(event) {
-    var userName = event.target.value;
-    console.dir(event);
+function checkfile() {
+    var fileInput = document.getElementById('fileup');
+    var selectedFile = fileInput.files[0];
+    var path = (window.URL || window.webkitURL).createObjectURL(selectedFile);
+    console.log('path', path);
+    if (selectedFile.type === "image/jpeg") {
+        console.log("jpg");
+        userimg.src = "" + path;
+    }
+    else {
+        alert("Only upload jpg files please!");
+    }
 }
-function checkPassword(event) {
+function check() {
+    var userName = document.getElementById('first');
+    var pass = document.getElementById('second');
+    if (userName.value === pass.value) {
+        writeHere.innerHTML = "Match!";
+        writeHere.style.color = "green";
+    }
+    else {
+        writeHere.innerHTML = "try again!";
+        writeHere.style.color = "red";
+    }
 }
-//NOT DONE
-// NOT WORKING
+function printNumbers(event) {
+    console.log(event.target.value);
+    numbersDiv.innerHTML = "" + event.target.value;
+}

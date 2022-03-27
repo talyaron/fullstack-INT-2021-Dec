@@ -1,9 +1,8 @@
-
-
 const balloons: NodeListOf<HTMLImageElement> = document.querySelectorAll('.balloon')
 const body: HTMLBodyElement = document.querySelector('body');
 
-body.style.backgroundImage = 'url(./images/sky.jpg)'
+body.style.backgroundImage = 'url(./images/nature.jpg)'
+
 
 // Function that create div with balloon picture:
 function createBalloon(): any {
@@ -41,10 +40,20 @@ function getRandomInterval(): number {
 //Function that explode the balloon and makes an exploding sound
 function handleClick(ev){
     ev as HTMLElement;
-    var audio = new Audio(`Exp3.mp3`,);
+    var audio = new Audio(`ballon-blows-up.wav`,);
     audio.play();
     ev.target.src = 'Images/explodBalloon.jpg'
 }
+
+// var counterVal = 0;
+
+// function countClick() {
+//     handleClick(++counterVal);
+//     console.log(counterVal)
+//     return handleClick
+// }
+
+
 
 // Start game function , create balloon that start go up after 5 seconds :
 function startGame() {

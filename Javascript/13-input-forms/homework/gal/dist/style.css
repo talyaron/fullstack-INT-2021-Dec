@@ -1,0 +1,18 @@
+body {
+  margin: 0%;
+  position: relative;
+  background-color: coral;
+}
+
+h1 {
+  color: #2600ff;
+  text-align: center;
+}
+
+.form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  position: absolute;
+}

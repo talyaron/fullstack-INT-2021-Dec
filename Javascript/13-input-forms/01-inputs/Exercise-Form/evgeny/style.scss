@@ -1,0 +1,22 @@
+body{height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-direction: column;
+    #image_input{
+        border: 1px solid rgb(19, 7, 7);
+        color: red;
+    }
+    #display-image{
+        width: 375px;
+        height: 211px;
+        border: 1px solid black;
+        background-size: cover;
+        background-position: center;
+        justify-content: center;
+        justify-content: center;
+        display: flex;
+    }
+
+}
