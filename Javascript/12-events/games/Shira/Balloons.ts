@@ -1,5 +1,3 @@
-
-
 const balloons: NodeListOf<HTMLImageElement> = document.querySelectorAll('.balloon')
 const body: HTMLBodyElement = document.querySelector('body');
 
@@ -54,6 +52,8 @@ function handleClick(ev){
 //     console.log(counterVal)
 //     return handleClick
 // }
+
+
 
 // Start game function , create balloon that start go up after 5 seconds :
 function startGame() {
