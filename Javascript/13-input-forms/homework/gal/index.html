@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="dist/style.css">
 </head>
 <body>
+    <!-- <div class="registration"> -->
     <h1>Registration form</h1>
     <div class="form" id="root">
         <input type="text" name="firstname" id="FirstName"  placeholder="Enter your first name" onchange="handleFirstName(event)">
@@ -15,6 +16,7 @@
         <input type="number" name="phoneNumber" id="phoneNumber" placeholder="Enter your phone number" onchange="handlePhoneNumber(event)">
         <input type="email" name="email" id="email" placeholder="Enter your email address" onchange="handleEmail(event)">
         <input type="password" name="password" id="password" placeholder="Enter your new password" onchange="handlePassword(event)">
+        <input type="confirmPassword" name="confirmPassword" id="confirmPassword" placeholder="Please confirm your password" onchange="handleConfirmPassword(event)">
         <input type="date" name="date" id="date" onchange="handleDate(event)">
     <div id="gender">
        <input type="checkbox" name="male" id="male"  placeholder="male" onchange="handleMale(event)">
@@ -26,6 +28,7 @@
         </div>
         <input type="submit" name="submit" placeholder="submit" id="submit" onclick="handleSubmit(event)">
     </div>
+<!-- </div> -->
     <script src="dist/index.js"></script>
 </body>
 </html>
