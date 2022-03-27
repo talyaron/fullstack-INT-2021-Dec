@@ -27,6 +27,12 @@ body {
             padding: 8px 24px;
             border-radius: 0.6em;
             border: 1px solid lightgray;
+            font-size: 15px;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
         }
         #submitBtn {
             height: 7em;
@@ -34,7 +40,9 @@ body {
             border: none;
             background-color: rgb(30, 117, 171);
             color: white;
-            padding: 8px;
+            padding: 8px 24px;
+            font-size: 15px;
+            font-weight: normal;
         }
     }
 }

@@ -14,8 +14,11 @@ boxs.forEach(function (element) {
     element.onmouseleave = handleEventLeave;
     element.onclick = explodeEvent;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     element.onclick = makeSound;
     //    element.onclick=playBoomSound
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 });
@@ -118,6 +121,7 @@ boxs.forEach(function (particle) {
     particle.onmouseleave = handleEventLeave;
     particle.onclick = explodeEvent;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     particle.onclick = makeSound;
 });
 var makeBoomSound = document.createElement('audio');
@@ -125,6 +129,8 @@ makeBoomSound.src = 'dist/mixkit-shot-light-explosion-1682.mp3';
 makeBoomSound.play();
 function makeSound(ev) {
 =======
+=======
+>>>>>>> Stashed changes
 });
 function handleEvent(ev) {
     console.dir(ev.target);
