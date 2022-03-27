@@ -10,11 +10,15 @@
 </head>
 
 <body>
+    <div class="form">
+        <input type="url" name="image" placeholder="Enter the url of your image " id="image" onchange="handleUrl(event)">
+        <div class="img">
+            <img src="">
+        </div>
+        <label for="countriesFlags">Choose a flag:</label>
+        <input list="countries" id="countriesFlags" name="countriesFlags" onchange="handleSelectCountry(event)" />
 
-    <label for="countriesFlags">Choose a flag:</label>
-    <input list="countries" id="countriesFlags" name="countriesFlags" onchange="handleSelectFlavor(event)" />
-
-    <datalist id="countries">
+        <datalist id="countries">
         <option value="Israel">
         <option value="Greece">
         <option value="Jordan">
@@ -25,10 +29,10 @@
         <option value="U.S.A"></option>
     </datalist>
 
+
+    </div>
+
     <script src="./dist/index.js"></script>
 </body>
 
 </html>
-
-
-
