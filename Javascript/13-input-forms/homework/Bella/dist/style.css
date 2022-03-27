@@ -1,0 +1,40 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+body .form {
+  width: 27em;
+  height: 27em;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 44px;
+  border-radius: 20px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+body .form .heading {
+  text-align: center;
+}
+body .form input {
+  height: 7em;
+  margin-bottom: 1em;
+  padding: 8px 24px;
+  border-radius: 0.6em;
+  border: 1px solid lightgray;
+}
+body .form #submitBtn {
+  height: 7em;
+  border-radius: 0.6em;
+  border: none;
+  background-color: #1e75ab;
+  color: white;
+  padding: 8px;
+}

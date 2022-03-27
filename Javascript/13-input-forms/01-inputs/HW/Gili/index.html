@@ -13,9 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
 
 </head>
-/*NOT DONE*/
-/* NOT WORKING */
-<body>
+
+<body style="background-image: url(images/backgroubd2.jpg);">
     <div class="wrapper">
         <img class="" src="" alt="" srcset="">
         <div class="wrapper__left">
@@ -24,10 +23,13 @@
             </div>
             <div class="wrapper__left__edit">
                 <label for="url">Enter Image link here:</label>
-                <input id="address" type="text" onchange="checkurl(event)">
-                <p>Or choose fro library:</p>
+                <input id="address" type="url" onchange="checkurl(event)">
+                <p>Or choose from library:</p>
                 <label for="fileup" id="file_design">Click here</label>
-                <input id="fileup" type="file" hidden onchange="checkfile(event)">
+                <input id="fileup" type="file" hidden onchange="checkfile()">
+                <p>Enter Numbers here to print:</p>
+                <input id="numbers" type="number" onchange="printNumbers(event)">
+                <div class="printed_numbers">...</div>
             </div>
         </div>
         <div class="wrapper__right">
@@ -36,14 +38,19 @@
             </div>
             <div class="wrapper__right__form">
                 <h2>Log In</h2>
-                <div class="username">
-                    <h3>Username:</h3>
-                    <input id="user" placeholder="Enter username" type="text" onchange="checkUsername(event)">
-                </div>
-                <div class="password">
-                    <h3>Password:</h3>
-                    <input id="pass" placeholder="Enter password" type="password" onchange="checkPassword(event)">
-                </div>
+                <form>
+                    <div class="user_wrapper">
+                        <label>Username:
+                            <input id="first" placeholder="Enter username" type="text" name="username">
+                        </label>
+                    </div>
+                    <div class="pass_wrapper">
+                        <label>Password:
+                            <input id="second" placeholder="Enter password" type="password" name="password1"
+                                onchange="check()">
+                        </label>
+                    </div>
+                </form>
 
             </div>
             <div class="wrapper__right__continue">

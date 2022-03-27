@@ -1,16 +1,21 @@
 body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
     position: relative;
-
-    // background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhbQdgMNS00eOVdRgRLEj4-X9ewLAYTp-M5w&usqp=CAU);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
+    overflow: hidden;
 
-    .balloon{
+    .balloon {
         position: absolute;
         width: 80px;
         height: 300px;
-        top:99vh;
+        top: 84vh;
         transition: top 5s ease-in-out;
+
         img {
             width: 100%;
         }

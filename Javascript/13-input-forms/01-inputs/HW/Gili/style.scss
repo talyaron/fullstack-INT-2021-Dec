@@ -1,10 +1,9 @@
-/*NOT DONE*/
-/* NOT WORKING */
-
 body {
     margin: 0%;
     padding: 0%;
-    background-color: aqua;
+    background-color: rgb(140, 207, 249);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 * {
@@ -54,9 +53,14 @@ body {
             justify-content: center;
             text-align: center;
 
-            #address {
+            .printed_numbers {
+                height: 30px;
+            }
+
+            #address,
+            #numbers {
                 margin: auto;
-                width: 250px;
+                width: 300px;
                 height: 25px;
                 font-size: 1rem;
                 background-color: azure;
@@ -65,7 +69,7 @@ body {
 
             #file_design {
                 margin: auto;
-                width: 250px;
+                width: 300px;
                 height: 25px;
                 font-size: 1rem;
                 background-color: azure;
@@ -111,8 +115,21 @@ body {
             flex-direction: column;
             justify-content: center;
 
-            #pass,
-            #user {
+            .user_wrapper,
+            .pass_wrapper {
+                width: 350px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+            }
+
+            #first,
+            #second {
                 width: 250px;
                 height: 25px;
                 font-size: 1rem;
@@ -125,5 +142,41 @@ body {
             }
         }
 
+        &__continue {
+            .success_or_fail {
+                height: 50px;
+                width: 200px;
+                font-size: 1.5rem;
+                font-weight: bolder;
+                margin: auto;
+            }
+        }
     }
+}
+
+@media only screen and (min-width: 1280px) {
+    .wrapper {
+        width: 1200px;
+        &__right,
+        &__left {
+            width: 600px;
+        }
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        height: fit-content;
+        justify-content: flex-start;
+
+        &__right,
+        &__left {
+            height: fit-content;
+            padding: 10vw;
+            margin: auto;
+        }
+    }
+
 }
