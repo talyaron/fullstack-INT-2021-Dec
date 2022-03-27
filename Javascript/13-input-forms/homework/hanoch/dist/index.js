@@ -11,3 +11,14 @@ function handleGetImg(event) {
     var outPut = document.querySelector(".img");
     outPut.innerHTML = "<img src=\"" + value + "\">";
 }
+function handleGetIdentify(event) {
+    var value = event.value;
+    console.dir(value);
+}
+var nameIdentify = document.querySelector("#nameIdentify");
+var passIdentify = document.querySelector("#passIdentify");
+var name1 = document.querySelector("#name");
+var pass = document.querySelector("#pass");
+if (nameIdentify === name1 && passIdentify === pass) {
+    document.body.style.backgroundColor = "red";
+}
