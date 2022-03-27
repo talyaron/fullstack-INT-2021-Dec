@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="dist/style.css">
 </head>
 <body>
-    <!-- <div class="registration"> -->
     <h1>Registration form</h1>
     <div class="form" id="root">
         <input type="text" name="firstname" id="FirstName"  placeholder="Enter your first name" onchange="handleFirstName(event)">
@@ -17,29 +16,18 @@
         <input type="email" name="email" id="email" placeholder="Enter your email address" onchange="handleEmail(event)">
         <input type="password" name="password" id="password" placeholder="Enter your new password" onchange="handlePassword(event)">
         <input type="confirmPassword" name="confirmPassword" id="confirmPassword" placeholder="confirm your password" onchange="handleConfirmPassword(event)">
-        <label for="date">Date of birth:</label>
-        <input type="date" name="date" id="date" onchange="handleDate(event)">
-        <label for="Male">Male</label>
+       <div>  <input type="date" name="date" id="date" onchange="handleDate(event)"></div>
+      <div>  <label for="Male">Male</label>
        <input type="radio" name="gender" id="Male"  placeholder="male" onchange="handleMale(event)">
        <label for="Female">Female</label>
-        <input type="radio" name="gender" id="Female"  placeholder="female" onchange="handleFemale(event)">
+        <input type="radio" name="gender" id="Female"  placeholder="female" onchange="handleFemale(event)"></div>
         <input type="url" name="image" placeholder="Enter the url of your image " id="date" onchange="handleUrl(event)">
         <div class="img">
             <img src="">
         </div>
         <input type="submit" name="submit" placeholder="submit" id="submit" onclick="handleSubmit(event)">
     </div>
-<!-- </div> -->
     <script src="dist/index.js"></script>
 </body>
 </html>
 
-<!-- שם פרטי,
-     שם משפחה,
-      נייד
-     ,אימייל,
-      תאריך לידה, 
-      ססמה,
-       מין,
-       קישור לתמונה
-        הרשמה -->
