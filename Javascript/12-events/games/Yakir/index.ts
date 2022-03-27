@@ -2,6 +2,7 @@ const balloons: NodeListOf<HTMLImageElement> = document.querySelectorAll('.ballo
 const body: HTMLBodyElement = document.querySelector('body');
 const userScore: HTMLBodyElement = document.querySelector('#userScore');
 let countUserScore:number = 0
+let gameOverFlag:boolean = false
 
 // New Baloon element
 function createBalloon(): any {
@@ -17,17 +18,17 @@ function createBalloon(): any {
 
 
 // baloon explosion + count player score
-// game time is 30sec each game
 function handleClick(ev){
+    if (!gameOverFlag) {
     ev as HTMLElement;
     ev.target.src = './img/explosion.png'
     var audio = new Audio(`./audio/explosion.wav`,);
     audio.play();
     countUserScore++;
-
     //update the score after each explosion on screen and on console log
     console.log(`user Score is ${countUserScore}`)
     userScore.innerHTML = `User Score is: ${countUserScore}`;
+    }
 }
 
 // random Time for Crate Baloons
@@ -51,9 +52,9 @@ function balloonUp(Balloon, interval: number) {
 }
 
 function gameOver(){
-    const finalScore: number = 0+countUserScore
-    document.querySelector('#gameOver').innerHTML = `Game Over user final Scor is ${finalScore},
-    <br> you can keep play or refresh for new game`
+    gameOverFlag = true
+    document.querySelector('#gameOver').innerHTML = `Game Over user final Scor is ${countUserScore},
+    <br>Refresh for new game`
 }
 
 
@@ -64,7 +65,7 @@ function startGame() {
     balloonUp(createBalloon(), getRandomInterval()) // random time
     setTimeout(() => {
         gameOver()
-    }, 5000);
+    }, 30000);
 }
 
 // Time to start a new game:

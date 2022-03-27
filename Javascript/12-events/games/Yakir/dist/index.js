@@ -2,6 +2,7 @@ var balloons = document.querySelectorAll('.balloon');
 var body = document.querySelector('body');
 var userScore = document.querySelector('#userScore');
 var countUserScore = 0;
+var gameOverFlag = false;
 // New Baloon element
 function createBalloon() {
     var newBalloon = document.createElement('div');
@@ -14,16 +15,17 @@ function createBalloon() {
     return newBalloon;
 }
 // baloon explosion + count player score
-// game time is 30sec each game
 function handleClick(ev) {
-    ev;
-    ev.target.src = './img/explosion.png';
-    var audio = new Audio("./audio/explosion.wav");
-    audio.play();
-    countUserScore++;
-    //update the score after each explosion on screen and on console log
-    console.log("user Score is " + countUserScore);
-    userScore.innerHTML = "User Score is: " + countUserScore;
+    if (!gameOverFlag) {
+        ev;
+        ev.target.src = './img/explosion.png';
+        var audio = new Audio("./audio/explosion.wav");
+        audio.play();
+        countUserScore++;
+        //update the score after each explosion on screen and on console log
+        console.log("user Score is " + countUserScore);
+        userScore.innerHTML = "User Score is: " + countUserScore;
+    }
 }
 // random Time for Crate Baloons
 function getRandomInterval() {
@@ -43,8 +45,8 @@ function balloonUp(Balloon, interval) {
     }, interval);
 }
 function gameOver() {
-    var finalScore = 0 + countUserScore;
-    document.querySelector('#gameOver').innerHTML = "Game Over user final Scor is " + finalScore + ",\n    <br> you can keep play or refresh for new game";
+    gameOverFlag = true;
+    document.querySelector('#gameOver').innerHTML = "Game Over user final Scor is " + countUserScore + ",\n    <br>Refresh for new game";
 }
 // Start game function , create balloon that start go up in random times and every 5 sec :
 function startGame() {
@@ -53,7 +55,7 @@ function startGame() {
     balloonUp(createBalloon(), getRandomInterval()); // random time
     setTimeout(function () {
         gameOver();
-    }, 5000);
+    }, 30000);
 }
 // Time to start a new game:
 setInterval(startGame, 1000);
