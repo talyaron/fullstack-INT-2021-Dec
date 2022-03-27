@@ -1,5 +1,7 @@
-const ballons:NodeList<HTMLElement> = document.querySelectorAll("#ballon");
+const ballons:NodeListOf<HTMLImageElement> = document.querySelectorAll("#ballon");
+console.dir(ballons);
 
+///////////Function move objects
 function flyBallon(){
     ballons.forEach(element => {
         element.style.top ='-16vh'
@@ -15,5 +17,5 @@ function getRandomPosition() {
     return random;
 }
 
-flyBallon(ballons)
+flyBallon()
 setInterval(flyBallon,1000)

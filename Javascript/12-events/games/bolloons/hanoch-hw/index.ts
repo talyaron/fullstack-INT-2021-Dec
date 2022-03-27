@@ -26,7 +26,7 @@ function uid(){
 
 function createBalloon1(){
     const balloonId = uid1();
-    document.body.innerHTML += `<img id=${balloonId} class="balloon" src="https://freesvg.org/storage/img/thumb/rg1024-two-ballons.png"/>`
+    document.body.innerHTML += `<img id=${balloonId} class="balloon" src="https://freesvg.org/storage/img/thumb/rg1024-two-ballons.png"/>` + `<img id=${balloonId} class="balloon" src="https://freesvg.org/storage/img/thumb/rg1024-two-ballons.png"/>`
     let balloon:any = document.querySelector(`#${balloonId}`);
     //moveBalloon1(balloon);
     //console.log("to move balloon")
@@ -45,6 +45,7 @@ function createBalloon1(){
         bombImg.style.position="absolute"
         ev.target.style.top = "50vh"
         bombImg.style.left = ev.target.style.left
+        bombImg.style.top = ev.target.style.top
         ev.target.style.opacity="0"
         bombImg.style.opacity="1"
         setTimeout(()=>{

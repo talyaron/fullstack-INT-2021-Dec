@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position:relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('https://thumbs.dreamstime.com/b/two-hot-air-balloons-beautiful-blue-sky-up-52158879.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+    .baloon{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        border-radius: 100% 50% / 100% 50%;
+        transform: rotate(-45deg);
+        transition: all(1000ms);
+        cursor: pointer;
+    }
+    p{
+        font-size: 2rem;
+        margin: 2rem;
+    }
+}

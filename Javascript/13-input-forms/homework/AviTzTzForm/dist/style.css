@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  background-color: antiquewhite;
+}
+
+header {
+  border: 1px solid black;
+}
+header h1 {
+  margin: 1rem;
+  text-align: center;
+}
+
+main {
+  margin-top: 1rem;
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+}
+main section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 90vw;
+  height: 40vh;
+}
+main section #myform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 30vw;
+  border: solid 2px #0e0949;
+  padding: 1rem 0;
+  border-radius: 2rem;
+}
+main section #myform h2 {
+  color: #0e0949;
+}
+main section #myform #upload {
+  display: none;
+}
+main section #myform .fa-cloud-upload {
+  font-size: 2rem;
+  color: #0e0949;
+}
+main section #myform .numberarea {
+  width: 10vw;
+  height: 2rem;
+  border-radius: 1.4rem;
+  text-align: center;
+}
+main section #myform .numberarea::placeholder {
+  text-align: center;
+}
+main section #myform .btn {
+  height: 2rem;
+  width: 8vw;
+  background-color: #0e0949;
+  color: antiquewhite;
+  border: none;
+  border-radius: 10px;
+  outline: solid 2px antiquewhite;
+  box-shadow: 0 0 5px black, 0 0 15px #0e0949;
+}
+main section .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 30vw;
+  height: 30vh;
+  border: solid 2px black;
+  border-radius: 1rem;
+  padding: 0 0 1rem;
+}
+main section .wrapper .img {
+  border-top-right-radius: 4%;
+  border-top-left-radius: 4%;
+}
+main section .wrapper p {
+  font-size: 1.5rem;
+}
