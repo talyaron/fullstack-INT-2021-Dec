@@ -22,6 +22,7 @@ body .form {
 }
 body .form .heading {
   text-align: center;
+  margin-bottom: 32px;
 }
 body .form input {
   height: 7em;
@@ -29,12 +30,23 @@ body .form input {
   padding: 8px 24px;
   border-radius: 0.6em;
   border: 1px solid lightgray;
+  font-size: 15px;
+}
+body .form input::-webkit-outer-spin-button,
+body .form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body .form #phoneNumber {
+  margin-bottom: 32px;
 }
 body .form #submitBtn {
-  height: 7em;
+  height: 9em;
   border-radius: 0.6em;
   border: none;
   background-color: #1e75ab;
   color: white;
-  padding: 8px;
+  padding: 8px 24px;
+  font-size: 15px;
+  font-weight: normal;
 }
