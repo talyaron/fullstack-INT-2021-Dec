@@ -1,0 +1,20 @@
+body {
+  margin: 0%;
+}
+
+.wrapper {
+  width: 50vw;
+  height: 20vh;
+  margin: auto;
+  margin-top: 250px;
+  border: 2.5px solid coral;
+  border-radius: 20px;
+}
+.wrapper__filler {
+  height: 100px;
+}
+.wrapper__radio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
