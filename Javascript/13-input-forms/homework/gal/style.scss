@@ -1,0 +1,22 @@
+body{
+    margin: 0%;
+    background-color: greenyellow;
+}
+
+h1{
+    color: rgb(248, 43, 7);
+}
+
+.form{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+}
+
+#gender{
+    display: flex;
+    flex-direction: row;
+    
+}
