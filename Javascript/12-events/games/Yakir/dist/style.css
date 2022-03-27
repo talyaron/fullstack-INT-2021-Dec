@@ -1,3 +1,21 @@
 body {
   margin: auto;
 }
+
+#userScore {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  font-size: 40px;
+}
+
+.balloon {
+  position: absolute;
+  width: 100px;
+  height: 300px;
+  top: 99vh;
+  transition: top 5s ease-in-out;
+}
+.balloon img {
+  width: 100%;
+}
