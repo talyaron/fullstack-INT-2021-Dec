@@ -2,6 +2,10 @@ let baloon = document.querySelector(".baloonImg")
 
 const wrapper = document.querySelector(".wrapper")
 
+let counterDiv = document.querySelector(".counterDiv")
+
+counterDiv.innerHTML = `baloons popped: 0`
+
 function randomLeft() {
     let x = Math.round(Math.random() * 87) + `vw`
     return x
@@ -47,7 +51,7 @@ function handleClick(ev) {
     newBoom.style.left = Math.round(baloonPosition.left)+ `px`
     wrapper.append(newBoom)
     if(ev.isTrusted){
-        counter++
+        counterDiv.innerHTML = `baloons popped ${++counter}`
     }
     console.log(counter)
     setInterval(() => {
