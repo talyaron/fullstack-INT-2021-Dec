@@ -22,6 +22,7 @@ body .form {
 }
 body .form .heading {
   text-align: center;
+  margin-bottom: 32px;
 }
 body .form input {
   height: 7em;
@@ -36,8 +37,11 @@ body .form input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+body .form #phoneNumber {
+  margin-bottom: 32px;
+}
 body .form #submitBtn {
-  height: 7em;
+  height: 9em;
   border-radius: 0.6em;
   border: none;
   background-color: #1e75ab;

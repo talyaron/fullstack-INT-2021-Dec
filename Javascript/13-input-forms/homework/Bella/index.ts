@@ -1,9 +1,11 @@
 const form = document.querySelector('#root')
 
-function handlePhoneNumber(event) {
-    console.dir(event)
+function handleFirstName (ev){}
+
+
+function handlePhoneNumber(ev) {
+    console.dir(ev)
     let inputNumber:HTMLElement = document.querySelector(`#${event.target.name}`);
-    const value = event.target.value;
+    const value = ev.target.value;
     inputNumber.innerHTML = value
-    form.append(value);
 };

@@ -20,6 +20,7 @@ body {
         box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
         .heading {
             text-align: center;
+            margin-bottom: 32px;
         }
         input {
             height: 7em;
@@ -34,8 +35,11 @@ body {
             -webkit-appearance: none;
             margin: 0;
         }
+        #phoneNumber {
+            margin-bottom: 32px;
+        }
         #submitBtn {
-            height: 7em;
+            height: 9em;
             border-radius: 0.6em;
             border: none;
             background-color: rgb(30, 117, 171);
