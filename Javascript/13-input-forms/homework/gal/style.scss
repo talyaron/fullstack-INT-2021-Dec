@@ -2,22 +2,18 @@ body{
     margin: 0%;
     position: relative;
     background-color: coral;
-    // put background img
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://www.howtogeek.com/wp-content/uploads/2018/04/preview-2.png?height=200p&trim=2,2,2,2&crop=16:9);
 }
 
-// .registration{
-//     display: flex;
-//     // flex-direction: column
-//     justify-content: center;
-// }
 
 h1{
-    color: rgb(38, 0, 255);
+    color: rgb(0, 140, 255);
     text-align: center;
 }
 
 .form{
-    
     align-items: center;
     display: flex;
     flex-direction: column;

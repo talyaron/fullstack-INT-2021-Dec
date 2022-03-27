@@ -1,4 +1,4 @@
-const Url = document.querySelector("#img")
+
 
 function handleUrl(event){
     const value = event.target.value

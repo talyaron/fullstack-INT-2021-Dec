@@ -16,12 +16,13 @@
         <input type="number" name="phoneNumber" id="phoneNumber" placeholder="Enter your phone number" onchange="handlePhoneNumber(event)">
         <input type="email" name="email" id="email" placeholder="Enter your email address" onchange="handleEmail(event)">
         <input type="password" name="password" id="password" placeholder="Enter your new password" onchange="handlePassword(event)">
-        <input type="confirmPassword" name="confirmPassword" id="confirmPassword" placeholder="Please confirm your password" onchange="handleConfirmPassword(event)">
+        <input type="confirmPassword" name="confirmPassword" id="confirmPassword" placeholder="confirm your password" onchange="handleConfirmPassword(event)">
+        <label for="date">Date of birth:</label>
         <input type="date" name="date" id="date" onchange="handleDate(event)">
-    <div id="gender">
-       <input type="checkbox" name="male" id="male"  placeholder="male" onchange="handleMale(event)">
-        <input type="checkbox" name="female" id="female"  placeholder="female" onchange="handleFemale(event)">
-    </div>
+        <label for="Male">Male</label>
+       <input type="radio" name="gender" id="Male"  placeholder="male" onchange="handleMale(event)">
+       <label for="Female">Female</label>
+        <input type="radio" name="gender" id="Female"  placeholder="female" onchange="handleFemale(event)">
         <input type="url" name="image" placeholder="Enter the url of your image " id="date" onchange="handleUrl(event)">
         <div class="img">
             <img src="">
