@@ -1,0 +1,29 @@
+body{
+    margin: 0%;
+    position: relative;
+    background-color: coral;
+    // put background img
+}
+
+// .registration{
+//     display: flex;
+//     // flex-direction: column
+//     justify-content: center;
+// }
+
+h1{
+    color: rgb(38, 0, 255);
+    text-align: center;
+}
+
+.form{
+    
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    position: absolute;
+    // put space beetwen the lines
+}
+
+

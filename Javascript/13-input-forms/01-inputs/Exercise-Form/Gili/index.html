@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gili</title>
+    <link rel="stylesheet" href="dist/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h2>Input Area</h2>
+        <div class="wrapper__name">
+            <input type="text" name="" id="name" placeholder="Name" onchange="handleNameCheck(event)">
+        </div>
+        <div class="wrapper__email">
+            <input type="email" name="" id="email" placeholder="Email" onchange="handleEmailCheck(event)">
+        </div>
+        <div class="wrapper__password">
+            <input type="password" name="" id="password" placeholder="Password" onchange="handlePasswordCheck(event)">
+        </div>
+        <div class="wrapper__outpot">
+            <h2>Output Area</h2>
+            <p id="name_output">Your name is:</p>
+            <p id="email_output">Your email is:</p>
+            <p id="password_output">Your password is:</p>
+        </div>
+    </div>
+    <script src="./dist/app.js"></script>
+</body>
+
+</html>
