@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/style.css">
+</head>
+
+<body>
+
+    <label for="countriesFlags">Choose a flag:</label>
+    <input list="countries" id="countriesFlags" name="countriesFlags" onchange="handleSelectFlavor(event)" />
+
+    <datalist id="countries">
+        <option value="Israel">
+        <option value="Greece">
+        <option value="Jordan">
+        <option value="Egypt">
+        <option value="Syria">
+        <option value="Russia"></option>
+        <option value="Belarus"></option>
+        <option value="U.S.A"></option>
+    </datalist>
+
+    <script src="./dist/index.js"></script>
+</body>
+
+</html>
+
+
+
