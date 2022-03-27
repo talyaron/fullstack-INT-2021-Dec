@@ -36,4 +36,5 @@ h1 {
   width: 50%;
   position: absolute;
   row-gap: 10px;
+  right: 20px;
 }
