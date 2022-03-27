@@ -18,14 +18,17 @@ h1{
     border-radius: 20px;
 }
 
+.form{
+    margin-left: 100px;
+    padding: 20px;
+}
+
 .form1{
     align-items: center;
     display: flex;
     flex-direction: column;
-    // width: 50%;
     position: absolute;
-    row-gap: 10px;
-    // put space beetwen the lines
+    row-gap: 10px;  
 }
 
 .form2{
@@ -35,7 +38,6 @@ h1{
     width: 50%;
     position: absolute;
     row-gap: 10px;
-    // put space beetwen the lines
 }
 
 

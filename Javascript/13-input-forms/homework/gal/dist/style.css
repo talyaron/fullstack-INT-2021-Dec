@@ -16,6 +16,11 @@ h1 {
   border-radius: 20px;
 }
 
+.form {
+  margin-left: 100px;
+  padding: 20px;
+}
+
 .form1 {
   align-items: center;
   display: flex;
