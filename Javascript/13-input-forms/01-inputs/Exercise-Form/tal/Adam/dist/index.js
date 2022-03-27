@@ -1,7 +1,8 @@
 var root = document.querySelector("#root");
-function handleName(event) {
-    var name = document.createElement("div");
-    name.id = "name";
-    name.innerHTML += "<div id=\"Text\"><p>name: " + event.target.value + "</p></div>";
-    root.appendChild(name);
+root.innerHTML = "<div id=\"name\"><p>/p></div><div id=\"email\">\nfunction handleName(event){\n    let name:any=document.createElement(\"div\");\n    name.id=\"name\";\n    name.innerHTML += " < div;
+id = "Text" > name;
+$;
+{
+    event.target.value;
 }
+/p></div > ";\n    root.appendChild(name);\n}";
