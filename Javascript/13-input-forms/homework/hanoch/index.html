@@ -8,15 +8,20 @@
     <link rel="stylesheet" href="dist/style.css">
 </head>
 <body>
-    <input type="text" placeholder="what is your name">
+    <input type="text" placeholder="what is your name" id="name">
     <input type="number" placeholder="phon number" onchange="handleGetNumber(event)" id="phon">
-    <input type="password" placeholder="enter a password">
+    <input type="password" placeholder="enter a password" id="pass">
     <br>
     <br>
     <input type="url" placeholder="enter url of your picture" onchange="handleGetImg(event)" id="img" >
     <div class="phon"></div>
     <div class="img">
-        <img src="">
+        <br> <br>
+        
+        <input type="text" placeholder="name" onchange="handleGetIdentify(event)" id="nameIdentify">
+        <input type="password" placeholder="password" onchange="handleGetIdentify(event)" id="passIdentify">
+        
+
     </div>
     <script src="dist/index.js"></script>
 

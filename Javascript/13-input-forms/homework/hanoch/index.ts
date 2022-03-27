@@ -15,3 +15,16 @@ function handleGetImg(event){
     let outPut = document.querySelector(".img")
     outPut.innerHTML = `<img src="${value}">`
 }
+function handleGetIdentify(event){
+    const value = event.value
+    console.dir(value)
+}
+
+const nameIdentify =document.querySelector("#nameIdentify")
+const passIdentify = document.querySelector("#passIdentify")
+const name1 = document.querySelector("#name")
+const pass = document.querySelector("#pass")
+
+if (nameIdentify === name1 && passIdentify === pass){
+    document.body.style.backgroundColor = "red";
+}
