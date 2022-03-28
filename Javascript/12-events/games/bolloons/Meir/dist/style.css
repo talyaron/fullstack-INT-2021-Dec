@@ -13,7 +13,6 @@ body .ballon {
   position: absolute;
   width: 80px;
   height: 300px;
-  top: 90vh;
   transition: all 4s;
   max-height: auto;
 }
