@@ -1,7 +1,7 @@
-var ballons = document.querySelectorAll(".ballon");
+var ballons = document.querySelectorAll('.ballon');
 var body = document.querySelector('body');
 ///////Function create balloon:
-function createBalloons() {
+function createBalloon() {
     var myBalloons = document.createElement('div');
     body.append(myBalloons);
     myBalloons.classList.add('ballon');
@@ -15,7 +15,7 @@ function createBalloons() {
 function flyBallon(Balloon, interval) {
     Balloon.element.style.left = getRandomPosition() + 'vw';
     setInterval(function () {
-        Balloon.style.top = '-25vh';
+        Balloon.style.top = '10vh';
     }, interval);
 }
 /////Function ramdomly position of objects
@@ -38,9 +38,9 @@ function handleClick(ev) {
 }
 ////Start game Function
 function startGame() {
-    ballons.forEach(function (balloon) {
-        flyBallon(createBalloons(), 5000);
+    ballons.forEach(function (ballon) {
+        flyBallon(createBalloon(), 5000);
     });
-    flyBallon(createBalloons(), getRandomInterval());
+    flyBallon(createBalloon(), getRandomInterval());
 }
 setInterval(startGame, 2000);
