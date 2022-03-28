@@ -1,9 +1,6 @@
 const ballons: NodeListOf<HTMLImageElement> = document.querySelectorAll('.ballon');
 const body: HTMLBodyElement = document.querySelector('body');
 
-
-
-
 ///////Function create balloon:
 function createBalloon(): any {
     const myBalloons = document.createElement('div')
@@ -18,7 +15,6 @@ function createBalloon(): any {
 
 ///////////Function move objects
 function flyBallon(Balloon, interval: number) {
-    
     Balloon.element.style.left= getRandomPosition() + 'vw';
     setInterval(() => {
         Balloon.style.top = '-90vh';
