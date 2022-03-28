@@ -5,16 +5,11 @@ const userimg: HTMLImageElement = document.querySelector('.user_img');
 const writeHere: HTMLDivElement = document.querySelector('.success_or_fail')
 const numbersDiv = document.querySelector('.printed_numbers')
 
-function isValidUrl(_string) {
-    const matchPattern = /^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/;
-    return matchPattern.test(_string);
-}
-
 function checkurl(event) {
-    const url: string = event.target.value;
-    isValidUrl(url) ? userimg.src = `${url}` : console.log("URL is Invalid")
+    const url:URL = event.target.value;
+    userimg.src = `${url}`;
 }
-function checkfile(event) {
+function checkfile() {
     const fileInput = document.getElementById('fileup');
     const selectedFile = fileInput.files[0];
     var path = (window.URL || window.webkitURL).createObjectURL(selectedFile);
@@ -30,8 +25,8 @@ function checkfile(event) {
 
 
 function check() {
-     const userName:HTMLInputElement = document.getElementById('first');
-     const pass:HTMLInputElement = document.getElementById('second');
+     const userName:HTMLInputElement = <HTMLInputElement>document.getElementById('first');
+     const pass:HTMLInputElement = <HTMLInputElement> document.getElementById('second');
     if (userName.value === pass.value) {
         writeHere.innerHTML = "Match!"
         writeHere.style.color = "green"
@@ -46,6 +41,3 @@ function printNumbers(event) {
     numbersDiv.innerHTML = `${event.target.value}`
 }
 
-
-//NOT DONE
-// NOT WORKING

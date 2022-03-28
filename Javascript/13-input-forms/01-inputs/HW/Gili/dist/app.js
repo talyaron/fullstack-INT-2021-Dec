@@ -3,15 +3,11 @@ var body = document.querySelector('body');
 var userimg = document.querySelector('.user_img');
 var writeHere = document.querySelector('.success_or_fail');
 var numbersDiv = document.querySelector('.printed_numbers');
-function isValidUrl(_string) {
-    var matchPattern = /^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/;
-    return matchPattern.test(_string);
-}
 function checkurl(event) {
     var url = event.target.value;
-    isValidUrl(url) ? userimg.src = "" + url : console.log("URL is Invalid");
+    userimg.src = "" + url;
 }
-function checkfile(event) {
+function checkfile() {
     var fileInput = document.getElementById('fileup');
     var selectedFile = fileInput.files[0];
     var path = (window.URL || window.webkitURL).createObjectURL(selectedFile);
@@ -40,5 +36,3 @@ function printNumbers(event) {
     console.log(event.target.value);
     numbersDiv.innerHTML = "" + event.target.value;
 }
-//NOT DONE
-// NOT WORKING

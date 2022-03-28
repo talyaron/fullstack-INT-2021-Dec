@@ -1,14 +1,11 @@
-const ballons = [`ballon`]
-const windowWidth = window.innerWidth;
-const body = document.querySelector(`.body`);
-const windowHeight = window.innerHeight;
-const scores = document.querySelectorAll(`.score`);
-const noPop = 0;
-const total = 45;
-const currentBallon = 0;
-const gameOver = false;
-const shadow = document.querySelector(".shadow");
-const startBtn = document.querySelectorAll(`.start-btn`);
+let ballons = [`ballon`]
+let windowWidth = window.innerWidth;
+let body = document.querySelector(`.body`);
+let windowHeight = window.innerHeight;
+let scores = document.querySelectorAll(`.score`);let noPop = 0;
+let total = 45;let currentBallon = 0;let gameOver = false;
+let shadow = document.querySelector(".shadow");
+let startBtn = document.querySelectorAll(`.start-btn`);
 
 function createBallon() {
    let div = document.createElement(`div`);
@@ -25,7 +22,7 @@ function createBallon() {
 };
 
 
-animateBallon(div);
+animateBallon(`div`);
 
 function animateBallon(elem) {
    let position = 0;
@@ -54,8 +51,8 @@ function popBallons(elem) {
 function scorupdate() {
    for (let i = 0; i < scores.length; i++)
       scores[i].textContent = noPop;
-}
-function startGame() {
+};
+function startGame(): void {
    restartGame();
    let timeOut = 0;
    let loop = setInterval(function () {

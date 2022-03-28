@@ -1,0 +1,12 @@
+body {
+  background-image: url(http://cdn.onlinewebfonts.com/svg/img_551740.png);
+  background-color: wheat;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.wrapper {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: large;
+  color: purple;
+}

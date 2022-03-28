@@ -1,0 +1,27 @@
+h1 {
+  color: aqua;
+  size: 2rem;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: azure;
+}
+
+.wrapper {
+  border-radius: 5%;
+  border-color: black;
+  height: 100vh;
+  width: 100wh;
+}
+
+.flagwrapper {
+  border: 1px black solid;
+  height: 50vh;
+  width: 50wh;
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: row;
+}

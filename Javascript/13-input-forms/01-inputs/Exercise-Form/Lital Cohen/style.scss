@@ -1,18 +1,129 @@
-#rootOfTask{
-    background-color: gray;
-    width: 200px;
-    height: 50px;
+// $p: hsl(213deg 85% 97%);
+// $s: hsl(233deg 36% 38%);
+// * { font-family: 'Poppins' }
 
+// body {
+// 	user-select: none;
+// 	overflow-y: hidden;
+// 	background: hsl(218deg 50% 91%);
+// 	height: 100vh;
+//     user-select: none;
+// 	overflow-y: hidden;
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	background: hsl(218deg 50% 91%);
+// 	height: 100vh;
+// }
+
+#userNameF{
+    background: hsl(0deg 0% 100%);
+    box-shadow: 0 0 2em hsl(231deg 62% 94%);
+    padding: 1em;
+		
+		gap: 0.5em;
+		border-radius: 20px;
+		color: hsl(0deg 0% 30%);
+		margin-top: -3em;
+		input {
+			outline: none;
+			border: none;
+			&::placeholder {
+				color: hsl(0deg 0% 0%);
+				font-size: 0.9em;
+			}
+        }
 
 }
-#particle{
-    background-color: gray;
-    width: 200px;
-    height: 50px;
-    text-decoration: line-through;
-    opacity: 0;
+
+#EmailF{
+    background: hsl(0deg 0% 100%);
+    box-shadow: 0 0 2em hsl(231deg 62% 94%);
+    padding: 1em;
+
+		gap: 0.5em;
+		border-radius: 20px;
+		color: hsl(0deg 0% 30%);
+		margin-top: -3em;
+		input {
+			outline: none;
+			border: none;
+			&::placeholder {
+				color: hsl(0deg 0% 0%);
+				font-size: 0.9em;
+			}
+        }
 
 }
-.title{
-    color: red;
+#Email{
+    background-color: rgba(102, 51, 153, 0.486);
+}
+#passwordF{
+    background: hsl(0deg 0% 100%);
+    box-shadow: 0 0 2em hsl(231deg 62% 94%);
+    padding: 1em;
+
+		gap: 0.5em;
+		border-radius: 20px;
+		color: hsl(0deg 0% 30%);
+		margin-top: -3em;
+		input {
+			outline: none;
+			border: none;
+			&::placeholder {
+				color: hsl(0deg 0% 0%);
+				font-size: 0.9em;
+			}
+        }
+
+}
+
+#output{
+    background: hsl(0deg 0% 100%);
+    box-shadow: 0 0 2em hsl(231deg 62% 94%);
+    padding: 1em;
+
+		gap: 0.5em;
+		border-radius: 20px;
+		color: hsl(0deg 0% 30%);
+		margin-top: -3em;
+		input {
+			outline: none;
+			border: none;
+			&::placeholder {
+				color: hsl(0deg 0% 0%);
+				font-size: 0.9em;
+			}
+        }
+
+}
+
+
+#number{
+    background: hsl(0deg 0% 100%);
+    box-shadow: 0 0 2em hsl(231deg 62% 94%);
+    padding: 1em;
+
+		gap: 0.5em;
+		border-radius: 20px;
+		color: hsl(0deg 0% 30%);
+		margin-top: -3em;
+		input {
+			outline: none;
+			border: none;
+			&::placeholder {
+				color: hsl(0deg 0% 0%);
+				font-size: 0.9em;
+			}
+        }
+
+}
+button {
+    padding: 1em;
+    background: hsl(233deg 36% 38%);
+    color: hsl(0 0 100);
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    
 }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/style.css">
+</head>
+
+<body>
+    <div class="form">
+        <input type="url" name="image" placeholder="Enter the url of your image " id="image" onchange="handleUrl(event)">
+        <div class="img"></div>
+        <label for="countriesFlags">Choose a flag:</label>
+        <input list="countries" id="countriesFlags" name="countriesFlags" onchange="handleSelectCountry(event)" />
+
+        <datalist id="countries">
+            <option class="option" value="Israel"></option>
+            <option class="option" value="Greece"></option>
+            <option class="option" value="Jordan"></option>
+            <option class="option" value="Egypt"></option>
+            <option class="option" value="Syria"></option>
+            <option class="option" value="Russia"></option>
+            <option class="option" value="Belarus"></option>
+            <option class="option" value="U.S.A"></option>
+        </datalist>
+        </select>
+
+    </div>
+
+    <script src="./dist/index.js"></script>
+</body>
+
+</html>

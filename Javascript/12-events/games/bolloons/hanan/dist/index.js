@@ -20,7 +20,7 @@ function createBallon() {
     document.body.appendChild(div);
 }
 ;
-animateBallon(div);
+animateBallon("div");
 function animateBallon(elem) {
     var position = 0;
     var random = Math.floor(Math.random() * 6 - 3);
@@ -47,6 +47,7 @@ function scorupdate() {
     for (var i = 0; i < scores.length; i++)
         scores[i].textContent = noPop;
 }
+;
 function startGame() {
     restartGame();
     var timeOut = 0;
