@@ -2,7 +2,7 @@ function renderimg(event) {
     console.log(event);
     switch (event.target.value) {
         case "messi":
-            document.getElementById("selectFootball").innerHTML = "<img src='messi.jpg'>";
+            document.getElementById("messi").innerHTML = "<img src='messi.jpg'>";
             break;
         case "swissFlag":
             document.getElementById("flagImg").innerHTML = "<img src='./dist/swiss.png'>";
@@ -12,3 +12,9 @@ function renderimg(event) {
             break;
     }
 }
+function setCar() {
+    var img = document.getElementById("image");
+    img.src = this.value;
+    return false;
+}
+document.getElementById("CarList").onchange = setCar;
