@@ -2,20 +2,20 @@ var ballons = document.querySelectorAll(".ballon");
 var body = document.querySelector('body');
 ///////Function create balloon:
 function createBalloons() {
-    var balloons = document.createElement('div');
-    body.append(balloons);
-    balloons.classList.add('ballon');
+    var myBalloons = document.createElement('div');
+    body.append(myBalloons);
+    myBalloons.classList.add('ballon');
     var balloonImg = document.createElement('img');
-    balloons.append(balloonImg);
+    myBalloons.append(balloonImg);
     balloonImg.src = "balloons.png";
-    balloons.addEventListener('click', handleClick);
-    return balloons;
+    myBalloons.addEventListener('click', handleClick);
+    return myBalloons;
 }
 ///////////Function move objects
 function flyBallon(Balloon, interval) {
     Balloon.element.style.left = getRandomPosition() + 'vw';
     setInterval(function () {
-        Balloon.style.top = '-15vh';
+        Balloon.style.top = '-25vh';
     }, interval);
 }
 /////Function ramdomly position of objects
