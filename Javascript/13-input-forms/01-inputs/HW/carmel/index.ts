@@ -17,4 +17,19 @@ function handleChoseNum(event){
         num.innerHTML = theNum
     }
 }
+
+let userName:string
+
+function saveUserName(event){
+    userName=event.target.value
+}
+
+let userPassword:string
+
+function saveUserPassword(event){
+    userPassword=event.target.value
+}
     
+function handleName(event){
+    let name=event.target.value
+}
