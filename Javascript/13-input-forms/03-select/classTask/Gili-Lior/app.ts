@@ -65,9 +65,10 @@ function handleSelectSport(event) {
 }
 
 function createOptions(arr:Array<object>) {
-    newOptionDiv.innerHTML = "";
+    newOptionDiv.innerHTML = '<img id="back" src="images/back2.png" alt="" srcset="">';
     const newSelect = document.createElement('select');
     newOptionDiv.append(newSelect);
+    newSelect.setAttribute("id", "sports_select");
     const choose = document.createElement('option');
     choose.innerHTML = `Choose Player`;
     newSelect.append(choose)

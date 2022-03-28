@@ -7,20 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Players</title>
     <link rel="stylesheet" href="dist/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <header class="header">
+        <h3>Who am I?</h3>
+    </header>
     <div class="wrapper">
         <div class="card">
-            <select name="sports" id="" onchange="handleSelectSport(event)">
+            <img id="back" src="images/back1.png" alt="" srcset="">
+            <select name="sports" id="sports_select" onchange="handleSelectSport(event)">
                 <option value="" disabled selected>Choose sport</option>
                 <option value="basketball">Basketball</option>
                 <option value="football">Football</option>
                 <option value="tennis">Tennis</option>
             </select>
         </div>
-        <div class="card" id="second_option"></div>
+        <div class="card" id="second_option">
+            <img id="back" src="images/back2.png" alt="" srcset="">
+        </div>
         <div class="card" id="img">
+            <img id="back" src="images/back3.png" alt="" srcset="">
             <img id="playerimg" src="" alt="" srcset="">
         </div>
     </div>
