@@ -1,15 +1,17 @@
 body {
   margin: auto;
-  background-color: #eb8dbf;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI4IVNXotpGnUjG_rehOMzoMg5kvtGqew17Q&usqp=CAU");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: hidden;
   position: relative;
 }
 
 .balloon {
   height: 10vh;
-  top: 120vh;
   position: absolute;
-  transition: all 6s;
+  transition: all 7s;
 }
 .balloon img {
-  width: 100px;
+  width: 150px;
 }
