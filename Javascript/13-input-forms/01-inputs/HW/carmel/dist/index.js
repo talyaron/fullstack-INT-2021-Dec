@@ -16,3 +16,14 @@ function handleChoseNum(event) {
         num.innerHTML = theNum;
     }
 }
+var userName;
+function saveUserName(event) {
+    userName = event.target.value;
+}
+var userPassword;
+function saveUserPassword(event) {
+    userPassword = event.target.value;
+}
+function handleName(event) {
+    var name = event.target.value;
+}

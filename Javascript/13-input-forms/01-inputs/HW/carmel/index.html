@@ -15,8 +15,24 @@
         </div>
         
         <div class="num">num
-            <input type="text" placeholder="some number" onclick="handleChoseNum(event)">
+            <input type="text" placeholder="some number" onchange="handleChoseNum(event)">
             <div class="answernum"></div>
+        </div>
+
+        <h1>Dear User: Please Sign Up</h1>
+        <div class="username">
+            <input type="text" placeholder="new username" onchange="saveUserName(event)">
+        </div>
+        <div class="password">
+            <input type="password" placeholder="new password" onchange="saveUserPassword(event)">
+        </div>
+
+        <h1>Dear User: Please Log In</h1>
+        <div class="username">
+            <input type="text" placeholder="your username" onchange="handleName(event)">
+        </div>
+        <div class="password">
+            <input type="password" placeholder="your password" onchange="handlePassword(event)">
         </div>
         
     <script src="dist/index.js"></script>
