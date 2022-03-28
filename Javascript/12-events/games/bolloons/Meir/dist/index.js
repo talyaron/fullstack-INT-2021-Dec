@@ -15,12 +15,12 @@ function createBalloon() {
 function flyBallon(Balloon, interval) {
     Balloon.element.style.left = getRandomPosition() + 'vw';
     setInterval(function () {
-        Balloon.style.top = '10vh';
+        Balloon.style.top = '-90vh';
     }, interval);
 }
 /////Function ramdomly position of objects
 function getRandomPosition() {
-    var random = Math.floor(Math.random() * 50);
+    var random = Math.floor(Math.random() * 90);
     return random;
 }
 /////Function ramdomly interval of objects
@@ -39,8 +39,8 @@ function handleClick(ev) {
 ////Start game Function
 function startGame() {
     ballons.forEach(function (ballon) {
-        flyBallon(createBalloon(), 5000);
+        flyBallon(createBalloon(), 2000);
     });
     flyBallon(createBalloon(), getRandomInterval());
 }
-setInterval(startGame, 2000);
+setInterval(startGame, 1000);
