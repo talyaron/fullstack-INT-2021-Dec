@@ -2,13 +2,16 @@ const ballons:NodeListOf<HTMLImageElement> = document.querySelectorAll(".ballon"
 const body: HTMLBodyElement = document.querySelector('body');
 
 
+
+
 ///////Function create balloon:
 function createBalloons(): any {
     const balloons = document.createElement('div')
     body.append(balloons)
+    balloons.classList.add('ballon')
     const balloonImg = document.createElement('img')
     balloons.append(balloonImg)
-    balloonImg.src = "balloons.png"
+    balloonImg.src="balloons.png"
     balloons.addEventListener('click',handleClick)
     return balloons
 }
@@ -17,7 +20,7 @@ function createBalloons(): any {
 function flyBallon(Balloon, interval: number) {
     Balloon.element.style.left = getRandomPosition() + 'vw';
     setInterval(() => {
-        Balloon.style.top = '-25vh';
+        Balloon.style.top = '-15vh';
     }, interval)    
 }
 
@@ -35,15 +38,15 @@ function getRandomInterval(): number {
 }
 
 ////Function that explote balloon and explonding sound
-function handleClick(ev) {
+function handleClick(ev: any): void {
     ev as HTMLElement;
     let audio = new Audio(`poomballon.wav`,);
     audio.play();
-    ev.target.src = 'bombPicture.png'
+    ev.target.src='bombPicture.png'
 }
 
 ////Start game Function
-function startGame() {
+function startGame(): void {
     ballons.forEach(balloon => {
         flyBallon(createBalloons(), 5000)
     })

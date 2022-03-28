@@ -4,6 +4,7 @@ var body = document.querySelector('body');
 function createBalloons() {
     var balloons = document.createElement('div');
     body.append(balloons);
+    balloons.classList.add('ballon');
     var balloonImg = document.createElement('img');
     balloons.append(balloonImg);
     balloonImg.src = "balloons.png";
@@ -14,7 +15,7 @@ function createBalloons() {
 function flyBallon(Balloon, interval) {
     Balloon.element.style.left = getRandomPosition() + 'vw';
     setInterval(function () {
-        Balloon.style.top = '-25vh';
+        Balloon.style.top = '-15vh';
     }, interval);
 }
 /////Function ramdomly position of objects
