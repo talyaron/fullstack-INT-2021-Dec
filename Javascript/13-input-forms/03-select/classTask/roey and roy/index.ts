@@ -1,3 +1,5 @@
+
+
 let sports = document.querySelector("#sports")
 
 let body = document.querySelector("body")
@@ -41,11 +43,25 @@ const footballPlayers: Array<football> = [ronaldo, messi]
 function createSelector(selectorName) {
     let newSelector = document.createElement("select")
     body.append(newSelector)
+    const newDisabledOption = document.createElement("option")
+    newDisabledOption.setAttribute('selected', 'selected')
+    newDisabledOption.disabled = true
+    newDisabledOption.innerHTML = 'Choose a Player'
+    newSelector.append(newDisabledOption)
     selectorName.forEach(element => {
         const newOption = document.createElement("option")
         newSelector.append(newOption)
         newOption.innerHTML = element.cName
-        console.dir(element)
+        newSelector.onchange = function handlePlayer(ev){
+            let result = ev.target.value
+            if(result == element.cName){
+                console.log(ev.target.value)
+                let newPlayerDiv = document.createElement("div")
+                newPlayerDiv.innerHTML = 'apifsoifedjn'
+                body.append(newPlayerDiv)
+            }
+            console.dir(ev.target)
+        }
     });
 }
 
@@ -54,8 +70,7 @@ function handleSport(ev) {
     if (sport == 'football') {
         createSelector(footballPlayers)
         console.log('a')
-    }else if(sport == 'basketball'){
+    } else if (sport == 'basketball') {
         createSelector()
     }
 }
-
