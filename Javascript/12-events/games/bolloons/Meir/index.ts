@@ -15,9 +15,9 @@ function createBalloon(): any {
 
 ///////////Function move objects
 function flyBallon(Balloon, interval: number) {
-    Balloon.element.style.left= getRandomPosition() + 'vw';
+    Balloon.style.left= getRandomPosition() + 'vw';
     setInterval(() => {
-        Balloon.style.top = '-90vh';
+        Balloon.style.top = '-25vh';
     }, interval)    
 }
 
@@ -30,7 +30,7 @@ function getRandomPosition(): number {
 /////Function ramdomly interval of objects
 function getRandomInterval(): number {
     let random = Math.floor(Math.random() * 10000);
-    console.log(`${random / 1000}s`)
+    // console.log(`${random / 1000}s`)
     return random
 }
 
@@ -45,10 +45,11 @@ function handleClick(ev: any): void {
 
 ////Start game Function
 function startGame(): void {
-    ballons.forEach(ballon => {
-        flyBallon(createBalloon(), 2000)
-    })
-    flyBallon(createBalloon(), getRandomInterval())    
+   
+    flyBallon(createBalloon(), 5000)
+    flyBallon(createBalloon(), getRandomInterval())
+    flyBallon(createBalloon(), getRandomInterval()) 
+
 }
 
 setInterval(startGame, 1000)

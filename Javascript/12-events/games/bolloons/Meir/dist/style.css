@@ -7,6 +7,7 @@ body .ballon {
   position: absolute;
   width: 80px;
   height: 300px;
+  top: 85vh;
   transition: top 5s ease-in-out;
 }
 body .ballon img {
