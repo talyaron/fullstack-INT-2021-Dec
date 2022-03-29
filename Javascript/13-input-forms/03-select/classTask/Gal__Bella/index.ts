@@ -5,7 +5,7 @@ function handleSelectCountry(ev: any){
 
     root.innerHTML = `
             <div>${ev.target.value}</div>
-            
+
         `
 }
 const countries:NodeList = document.querySelectorAll('.option')
@@ -41,20 +41,20 @@ function countryOptions(option:string){
     return `<option value=${option}>${option}</option>`
 }
 
-function handleUrl(options:Array<string>, functionName:URL, element:Element){
-    try {
-        let html = `<select onchange="${functionName}(event)"> 
-        <option value="" disabled selected>Choose</option></select>`;
-        options.forEach(el => {
-            html += countryOptions(el)
-        });
-        element.innerHTML = html;
+// function handleUrl(options:Array<string>, functionName:URL, element:Element){
+//     try {
+//         let html = `<select onchange="${functionName}(event)"> 
+//         <option value="" disabled selected>Choose</option></select>`;
+//         options.forEach(el => {
+//             html += countryOptions(el)
+//         });
+//         element.innerHTML = html;
 
-        // root.innerHTML = `
-        //     <div>${}</div>
-        //     <img src="${}" alt=""/>
-        // `
-    } catch (error) {
-        console.log(error)
-    }
-}
+//         // root.innerHTML = `
+//         //     <div>${}</div>
+//         //     <img src="${}" alt=""/>
+//         // `
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
