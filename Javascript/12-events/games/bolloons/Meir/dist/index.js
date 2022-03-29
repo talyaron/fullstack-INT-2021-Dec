@@ -13,9 +13,9 @@ function createBalloon() {
 }
 ///////////Function move objects
 function flyBallon(Balloon, interval) {
-    Balloon.element.style.left = getRandomPosition() + 'vw';
+    Balloon.style.left = getRandomPosition() + 'vw';
     setInterval(function () {
-        Balloon.style.top = '-90vh';
+        Balloon.style.top = '-25vh';
     }, interval);
 }
 /////Function ramdomly position of objects
@@ -26,7 +26,7 @@ function getRandomPosition() {
 /////Function ramdomly interval of objects
 function getRandomInterval() {
     var random = Math.floor(Math.random() * 10000);
-    console.log(random / 1000 + "s");
+    // console.log(`${random / 1000}s`)
     return random;
 }
 ////Function that explote balloon and explonding sound
@@ -38,9 +38,8 @@ function handleClick(ev) {
 }
 ////Start game Function
 function startGame() {
-    ballons.forEach(function (ballon) {
-        flyBallon(createBalloon(), 2000);
-    });
+    flyBallon(createBalloon(), 5000);
+    flyBallon(createBalloon(), getRandomInterval());
     flyBallon(createBalloon(), getRandomInterval());
 }
 setInterval(startGame, 1000);
