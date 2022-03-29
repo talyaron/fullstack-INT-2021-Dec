@@ -1,0 +1,28 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    position: relative;
+}
+.selectIssue{
+    position:absolute;
+    top:100px;
+    left:300px;
+    border:2px solid black;
+    background-color: aquamarine; 
+}
+#root{
+    position:absolute;
+    top:0px;
+    left:150px;
+    border:2px solid black;
+    background-color: aquamarine; 
+
+}
+#img{
+    border-radius:40px;
+    border:2px solid red;
+    overflow: hidden;
+    position: absolute;
+    top:400px;
+    left:300px;
+    }

@@ -1,8 +1,8 @@
 var body = document.querySelector('body');
 var userimg = document.querySelector('.user_img');
 var basketballArray = ["KareenAbdulJabbar", "KevinDurant", "KobeBrayant", "MaginJonson", "MichalJordan", "StephenCurry"];
-var footballArray = ["CristianoRonaldo", "DiegoMaradona", "LionelMessi", "Pele", "AinedineZidan"];
-var tennisArray = ["MariaSharapova", "NovacDjukovic", "RafaelNadal", "RogerFederer", "Williams"];
+var footballArray = ["CristianoRonaldo", "DiegoMaradona", "LionelMessi", "Pele", "ZinedineZidan"];
+var tennisArray = ["MariaSharapova", "NovakDjokovic", "RafaelNadal", "RogerFederer", "VenusWilliams"];
 // function checkurl(event) {
 //     const url:URL = event.target.value;
 //     userimg.src = `${url}`;
@@ -23,33 +23,39 @@ var tennisArray = ["MariaSharapova", "NovacDjukovic", "RafaelNadal", "RogerFeder
 function handleSelectsports(event) {
     var sportType = event.target.value;
     var root = document.querySelector("#root");
-    root.innerHTML = "<select name=\"" + sportType + "\" id=\"\" disabled selected onchange=\"handleDisplay(event)\">";
-    var texti = "choose a " + sportType + " player to display";
-    root.innerHTML += "<option value = \"\" disabled selected>" + texti + "</option>";
+    var html = "<select name=\"" + sportType + "\" id=\"\" onchange=\"handleDisplay(event)\">";
+    var texti = "choose a " + sportType + " player";
+    html += "<option value=\"\" disabled selected>" + texti + "</option>";
     switch (sportType) {
         case "basketball":
             basketballArray.forEach(function (Element) {
-                root.innerHTML += "<option value=\"" + Element + "\">" + Element + "</option>";
+                html += "<option value=\"" + Element + "\">" + Element + "</option>";
             });
             break;
         case "football":
             footballArray.forEach(function (Element) {
-                root.innerHTML += "<option value=\"" + Element + "\">" + Element + "</option>";
+                html += "<option value=\"" + Element + "\">" + Element + "</option>";
             });
             break;
         case "tennis":
             tennisArray.forEach(function (Element) {
-                root.innerHTML += "<option value=\"" + Element + "\">" + Element + "</option>";
+                html += "<option value=\"" + Element + "\">" + Element + "</option>";
             });
             break;
         default:
             console.log('defualt');
     }
-    root.innerHTML += "</select>";
+    html += "</select>";
+    console.log(html);
+    root.innerHTML = html;
 }
 function handleDisplay(event) {
     var player = event.target.value;
-    console.log(player);
+    console.log("player:" + player);
+    var src = "../images/" + player + ".jpg";
+    console.log("value of src:" + src);
+    var outPut = document.querySelector(".img");
+    outPut.innerHTML = "<img src=\"" + src + "\" width=\"120px\" height=\"120px\">";
 }
 //     switch (sportType) {
 //         case "basketball":
