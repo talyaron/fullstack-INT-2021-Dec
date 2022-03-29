@@ -1,0 +1,15 @@
+body {
+  height: 100vh;
+  background-image: url(https://i.pinimg.com/736x/dd/9a/6f/dd9a6ff24493dec8fd4ddcc7ea9189ba.jpg);
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: contain;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body #selection {
+  border: 2px solid brown;
+  border-radius: 20%;
+  background-color: yellowgreen;
+}
