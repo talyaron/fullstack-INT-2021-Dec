@@ -9,7 +9,24 @@
 </head>
 
 <body>
+    <h1>Reg form</h1>
 
+
+    <form onsubmit="hendleReg(event)">
+        <input type="text" name="userName" placeholder="User name">
+        <input type="password" name="password" placeholder="Password">
+        <input type="password" name="confirmPassword" placeholder="Confirm password">
+        <input type="submit" value="Send">
+    </form>
+
+    <h1>Login</h1>
+    <form onsubmit="hendleLogin(event)">
+        <input type="text" name="userName" placeholder="User name">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit" value="Send">
+    </form>
+
+    <div class="root"></div>
     <script src="./dist/index.js"></script>
 </body>
 
