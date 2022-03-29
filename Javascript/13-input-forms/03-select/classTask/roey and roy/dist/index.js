@@ -14,6 +14,13 @@ var messi = {
     team: 'PSG',
     age: 34
 };
+var roey = {
+    cName: 'r',
+    fName: 's',
+    lNmae: 'Messi',
+    team: 'PSG',
+    age: 34
+};
 var kobe = {
     fName: 'Kobe',
     lName: 'Brian'
@@ -22,7 +29,7 @@ var StephenCurry = {
     fName: 'Stephen',
     lName: 'Curry'
 };
-var footballPlayers = [ronaldo, messi];
+var footballPlayers = [ronaldo, messi, roey];
 function createSelector(selectorName) {
     var newSelector = document.createElement("select");
     body.append(newSelector);
@@ -37,11 +44,18 @@ function createSelector(selectorName) {
         newOption.innerHTML = element.cName;
         newSelector.onchange = function handlePlayer(ev) {
             var result = ev.target.value;
-            if (result == element.cName) {
+            if (result == result) {
                 console.log(ev.target.value);
                 var newPlayerDiv = document.createElement("div");
-                newPlayerDiv.innerHTML = 'apifsoifedjn';
+                newPlayerDiv.className = 'newPlayerDiv';
                 body.append(newPlayerDiv);
+                var newPlayerUl_1 = document.createElement("ul");
+                newPlayerDiv.append(newPlayerUl_1);
+                selectorName.forEach(function (property) {
+                    var newPlayerLi = document.createElement("li");
+                    newPlayerLi.innerHTML += 'asfpiafsjapisfjpiasjf';
+                    newPlayerUl_1.append(newPlayerLi);
+                });
             }
             console.dir(ev.target);
         };

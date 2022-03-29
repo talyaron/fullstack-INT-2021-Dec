@@ -28,6 +28,14 @@ const messi: football = {
     age: 34
 }
 
+const roey: football = {
+    cName: 'r',
+    fName: 's',
+    lNmae: 'Messi',
+    team: 'PSG',
+    age: 34
+}
+
 const kobe = {
     fName: 'Kobe',
     lName: 'Brian'
@@ -38,7 +46,7 @@ const StephenCurry = {
     lName: 'Curry'
 }
 
-const footballPlayers: Array<football> = [ronaldo, messi]
+const footballPlayers: Array<football> = [ronaldo, messi, roey]
 
 function createSelector(selectorName) {
     let newSelector = document.createElement("select")
@@ -52,13 +60,20 @@ function createSelector(selectorName) {
         const newOption = document.createElement("option")
         newSelector.append(newOption)
         newOption.innerHTML = element.cName
-        newSelector.onchange = function handlePlayer(ev){
+        newSelector.onchange = function handlePlayer(ev) {
             let result = ev.target.value
-            if(result == element.cName){
+            if (result == result) {
                 console.log(ev.target.value)
                 let newPlayerDiv = document.createElement("div")
-                newPlayerDiv.innerHTML = 'apifsoifedjn'
+                newPlayerDiv.className = 'newPlayerDiv'
                 body.append(newPlayerDiv)
+                let newPlayerUl = document.createElement("ul")
+                newPlayerDiv.append(newPlayerUl)
+                selectorName.forEach(property => {
+                    let newPlayerLi = document.createElement("li")
+                    newPlayerLi.innerHTML += 'asfpiafsjapisfjpiasjf'
+                    newPlayerUl.append(newPlayerLi)
+                });
             }
             console.dir(ev.target)
         }
