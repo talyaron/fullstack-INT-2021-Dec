@@ -1,0 +1,138 @@
+#userNameF {
+  background: white;
+  box-shadow: 0 0 2em #e6e9f9;
+  padding: 1em;
+  gap: 0.5em;
+  border-radius: 20px;
+  color: #4d4d4d;
+  margin-top: -3em;
+}
+#userNameF input {
+  outline: none;
+  border: none;
+}
+#userNameF input::placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+
+#EmailF {
+  background: white;
+  box-shadow: 0 0 2em #e6e9f9;
+  padding: 1em;
+  gap: 0.5em;
+  border-radius: 20px;
+  color: #4d4d4d;
+  margin-top: -3em;
+}
+#EmailF input {
+  outline: none;
+  border: none;
+}
+#EmailF input::placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+
+#Email {
+  background-color: rgba(102, 51, 153, 0.486);
+}
+
+#passwordF {
+  background: white;
+  box-shadow: 0 0 2em #e6e9f9;
+  padding: 1em;
+  gap: 0.5em;
+  border-radius: 20px;
+  color: #4d4d4d;
+  margin-top: -3em;
+}
+#passwordF input {
+  outline: none;
+  border: none;
+}
+#passwordF input::placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+
+#output {
+  background: white;
+  box-shadow: 0 0 2em #e6e9f9;
+  padding: 1em;
+  gap: 0.5em;
+  border-radius: 20px;
+  color: #4d4d4d;
+  margin-top: -3em;
+}
+#output input {
+  outline: none;
+  border: none;
+}
+#output input::placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+
+#number {
+  background: white;
+  box-shadow: 0 0 2em #e6e9f9;
+  padding: 1em;
+  gap: 0.5em;
+  border-radius: 20px;
+  color: #4d4d4d;
+  margin-top: -3em;
+}
+#number input {
+  outline: none;
+  border: none;
+}
+#number input::placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+
+button {
+  padding: 1em;
+  background: #3e4684;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+#userNameLoginF {
+  background: white;
+  box-shadow: 0 0 2em #e6e9f9;
+  padding: 1em;
+  gap: 0.5em;
+  border-radius: 20px;
+  color: #4d4d4d;
+  margin-top: -3em;
+}
+#userNameLoginF input {
+  outline: none;
+  border: none;
+}
+#userNameLoginF input::placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+
+#passwordLoginF {
+  background: white;
+  box-shadow: 0 0 2em #e6e9f9;
+  padding: 1em;
+  gap: 0.5em;
+  border-radius: 20px;
+  color: #4d4d4d;
+  margin-top: -3em;
+}
+#passwordLoginF input {
+  outline: none;
+  border: none;
+}
+#passwordLoginF input::placeholder {
+  color: black;
+  font-size: 0.9em;
+}

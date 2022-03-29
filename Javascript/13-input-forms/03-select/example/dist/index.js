@@ -10,7 +10,7 @@ function renderOption(option) {
 }
 function renderSelect(options, functionName, element) {
     try {
-        var html_1 = "<select onchange=\"" + functionName + "(event)\"> \n        <option value=\"\" disabled selected>Choose</option>";
+        var html_1 = "<select onchange=\"" + functionName + "(event)\"><option value=\"\" disabled selected>Choose</option>";
         options.forEach(function (el) {
             html_1 += renderOption(el);
         });

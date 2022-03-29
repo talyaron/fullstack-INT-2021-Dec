@@ -11,32 +11,46 @@
 
 <body>
 
-    <!-- <input type="text" name="theName" id="" placeholder="Name" onchange="handleGetText(event)">
- 
-    <input type="email" name="theEmail" id="" placeholder="Email" onchange="handleGetText(event)">
-
-    <input type="password" name="ThePS" id="" placeholder="Password" onchange="handleGetText(event)">
-    
-    <div id="theName"></div>
-    <div id="theEmail"></div>
-    <div id="ThePS"></div> -->
-
-<input type="text" name="userName" id="" placeholder="Name" onchange="handleGetText(event)">
-<input type="email" name="Email" id="" placeholder="Email" onchange="handleGetText(event)"> 
-<input type="password" name="password" id="" placeholder="Password" onchange="handleGetText(event)">
-<input type="url" name="output" id="output" placeholder="Load a picture?" style="cursor: pointer;" onchange="loadImg(event)">
-<input type="number" name="number" id="number" placeholder="Numbers" onchange="handleCopyTextDom(event)"> 
-<button type="submit" name="loginBtn">Login</button>
+    <label for="sifnMeUP">
+        <h1>Sign Up</h1>
+    </label>
+    <input type="text" name="userName" id="userNameF" placeholder="Name" onchange="handleGetText(event)">
+    <input type="password" name="password" id="passwordF" placeholder="Password" onchange="handleGetText(event)">
+    <input type="url" name="output" id="output" placeholder="Load a picture?" style="cursor: pointer;"
+        oninput="loadImg(event)">
+    <input type="number" name="Number" id="userNameF" placeholder="Number" oninput="handleGetText(event)">
 
 
-  
-<div id="userName"></div>
-<div id="Email"></div>
-<div id="password"></div> 
-<div id="output"></div> 
-<div id="loginBtn"></div> 
-<img id="image" width="200"/>
-<div id="number"></div>
+    <button type="submit" name="signupBtn" id="signupBtnF">Sign Up</button>
+
+
+    <label for="sifnMeIn">
+        <h1>Sign in with the Username and password you signed up with</h1>
+    </label>
+    <input type="text" name="userNameLogin" id="userNameLoginF" placeholder="User Name" onchange="handleGetText(event)">
+    <input type="password" name="passwordLogin" id="passwordLoginF" placeholder="User Password"
+        onchange="handleGetText(event)">
+    <button type="submit" name="loginBtn" id="loginBtnF" onclick="checkThePassword(event)">Login</button>
+
+    <label for="file">
+        <h1>DOM Fileupload Object Example</h1>
+    </label>
+    <input type="file" name="file" id="file" onclick="uploadFile(event)" class="fileme">
+
+
+
+    <div id="userName"></div>
+    <div id="password"></div>
+    <div id="output"></div>
+    <div id="signupBtn"></div>
+    <img id="image" width="200" />
+    <div id="Number"></div>
+    <!-- <div id="addtextarea"></div> -->
+    <div id="userNameLogin"></div>
+    <div id="passwordLogin"></div>
+    <div id="loginBtn"></div>
+    <div id="file"></div>
+
 
 
 

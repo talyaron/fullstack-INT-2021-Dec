@@ -1,5 +1,5 @@
 function handleSelectMusic(ev:any){
-   
+       
     console.log(ev.target.value)
 }
 
@@ -14,8 +14,7 @@ function renderOption(option:string){
 
 function renderSelect(options:Array<string>, functionName:string, element:Element){
     try {
-        let html = `<select onchange="${functionName}(event)"> 
-        <option value="" disabled selected>Choose</option>`;
+        let html = `<select onchange="${functionName}(event)"><option value="" disabled selected>Choose</option>`;
         options.forEach(el => {
             html += renderOption(el)
         });
