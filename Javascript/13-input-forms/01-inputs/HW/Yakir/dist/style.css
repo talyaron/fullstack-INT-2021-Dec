@@ -1,0 +1,25 @@
+body {
+  margin: auto;
+  background-color: navy;
+  display: grid;
+  gap: 10px;
+}
+
+img {
+  position: relative;
+  top: 100px;
+  margin: auto;
+  width: 100px;
+  border-radius: 20px;
+}
+
+.signUp, .login, form {
+  padding: 10px;
+  display: grid;
+  margin: auto;
+  position: relative;
+  top: 100px;
+  width: 300px;
+  background-color: white;
+  border-radius: 30px;
+}
