@@ -1,14 +1,20 @@
 
 function handleSelectCountry(ev: any){
+    ev.preventDefault()
     console.log(ev.target.value)
+
+    root.innerHTML = `
+            <div>${ev.target.value}</div>
+
+        `
 }
-const countries:any = document.querySelectorAll('.option')
-const findFlag = countriesFlags.find(countries)
+const countries:NodeList = document.querySelectorAll('.option')
+// const findFlag = countriesFlags.find(countries)
 
-
+const root:HTMLDivElement= document.querySelector('#root')
 const countriesFlags:Array<any> = [
     {
-        name:"israel", 
+        name:"Israel", 
         src: "https://www.countryflags.com/wp-content/uploads/israel-flag-png-large.png"
     },
     {
@@ -24,9 +30,9 @@ const countriesFlags:Array<any> = [
 
 
 
-function findCountry (){
-    for (let i=0, i<countriesFlags.length, i++)
-}
+// function findCountry (){
+//     for (let i=0, i<countriesFlags.length, i++)
+// }
 
 
 
@@ -35,17 +41,20 @@ function countryOptions(option:string){
     return `<option value=${option}>${option}</option>`
 }
 
-function handleUrl(options:Array<string>, functionName:URL, element:Element){
-    try {
-        let html = `<select onchange="${functionName}(event)"> 
-        <option value="" disabled selected>Choose</option>`;
-        options.forEach(el => {
-            html += countryOptions(el)
-        });
-        html += `</select>`
-        element.innerHTML = html;
+// function handleUrl(options:Array<string>, functionName:URL, element:Element){
+//     try {
+//         let html = `<select onchange="${functionName}(event)"> 
+//         <option value="" disabled selected>Choose</option></select>`;
+//         options.forEach(el => {
+//             html += countryOptions(el)
+//         });
+//         element.innerHTML = html;
 
-    } catch (error) {
-        console.log(error)
-    }
-}
+//         // root.innerHTML = `
+//         //     <div>${}</div>
+//         //     <img src="${}" alt=""/>
+//         // `
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
