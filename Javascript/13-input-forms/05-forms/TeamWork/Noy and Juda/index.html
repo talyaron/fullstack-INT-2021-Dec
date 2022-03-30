@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="dist/style.css"> -->
+</head>
+<body>
+    <form onsubmit="handleEnter(event)">
+        <label for="user" >User name</label>
+        <input type="text" id="user" name="user" placeholder="Enter User name">
+        <label for="pass" >Password</label>
+        <input type="password" id="pass" name="pass" placeholder="Enter password">
+        <label for="confirmPass" >Confirm password</label>
+        <input type="password" id="confirmPass" name="confirmPass" placeholder="Re-Enter password">
+        <label for="url" >Please enter image URL</label>
+       <input type="url" name="url" id="url" placeholder="Enter img URL">
+       <button type="submit">Enter</button>
+</form>
+
+<div class="details"></div>
+
+<script src="dist/app.js"></script>
+</body>
+</html>
