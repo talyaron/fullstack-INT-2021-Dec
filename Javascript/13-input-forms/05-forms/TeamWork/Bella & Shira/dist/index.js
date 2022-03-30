@@ -16,8 +16,14 @@ function handleSend(ev) {
     }
 }
 function handleLogin(ev) {
-    var image = document.querySelector('.img');
-    var imgValue = ev.target.elements.image.value;
-    image.innerHTML = "<img src=" + imgValue + ">";
-    console.log(imgValue);
+    try {
+        ev.preventDefault();
+        var image = document.querySelector('.img');
+        var imgValue = ev.target.elements.image.value;
+        image.innerHTML = "<img src=" + imgValue + ">";
+        console.log(imgValue);
+    }
+    catch (err) {
+        console.log(err);
+    }
 }

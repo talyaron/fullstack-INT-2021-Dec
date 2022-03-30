@@ -20,12 +20,20 @@ function handleSend(ev: any) {
     }
 }
 
-function handleLogin(ev){
+function handleLogin(ev:any){
+    try{
+        ev.preventDefault();
 
-    let image: HTMLImageElement = document.querySelector('.img');
+        let image: HTMLImageElement = document.querySelector('.img');
+        
+        const imgValue = ev.target.elements.image.value;
+        image.innerHTML = `<img src=${imgValue}>`
     
-    const imgValue = ev.target.elements.image.value;
-    image.innerHTML = `<img src=${imgValue}>`
+        console.log(imgValue); 
+    }
+    catch(err) {
+        console.log(err);
 
-    console.log(imgValue); 
+    }
+
 }   
