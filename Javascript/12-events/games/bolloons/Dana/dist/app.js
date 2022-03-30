@@ -1,9 +1,10 @@
-var BalloonsGroup = document.querySelectorAll('.balloon');
-console.dir(BalloonsGroup);
-// const floatUp = function ballonMove () {
-//     style.top = `-12vh`;
-//     style.left = `100vw`;
-// }
-// BalloonsGroup.forEach(element => {
-//     setInterval(floatUp, 1000);
-//   });
+var balloonSelect = document.querySelector('.balloon');
+console.dir(balloonSelect);
+newBallon.addEventListener('click', function () {
+    newBallon.style.display === none;
+});
+function creatBallon() {
+    var newBallon = document.createElement('ballonSelect');
+    var ballonCreation = document.body.appendChild(newBallon);
+}
+setInterval(creatBallon, 5000);
