@@ -1,19 +1,31 @@
 function handleSend(ev) {
     ev.preventDefault();
     console.log(ev);
-    var userName = ev.target.elements.userName.value;
-    var password = ev.target.elements.password.value;
-    ev.target.elements.userName.value = '';
-    ev.target.elements.password.value = '';
-    console.log(userName, password);
-    //   const elements = ev.target.elements;
-    //   const result = {};
-    //   for (let i = 0; i < elements.length; i++) {
-    //     if (elements[i].type === "checkbox" ) {
-    //       result[elements[i].name] = elements[i].checked;
-    //     } else if (elements[i].name && elements[i].value) {
-    //       result[elements[i].name] = elements[i].value;
-    //     }
-    //   }
-    //   console.log(result);
+    var firstInput = ev.target.elements.firstInput.value;
+    var secondInput = ev.target.elements.secondInput.value;
+    ev.target.elements.firstInput.value = '';
+    ev.target.elements.secondInput.value = '';
+    // return{
+    // 
+    console.log(Math.floor(firstInput / secondInput));
+    var result = document.querySelector('.result');
+    try {
+        var value = Math.floor(firstInput / secondInput);
+        result.innerHTML = value;
+    }
+    catch (err) {
+        console.log(err);
+    }
+    // console.log(firstInput, secondInput)
 }
+// function result(event){
+//     console.dir(event)
+// let result:HTMLDivElement = document.querySelector('.result');
+// try{
+//     const value = event.target.value;
+//     result.innerHTML = value
+// }
+// catch(err){
+//     console.log(err);
+// }
+// }
