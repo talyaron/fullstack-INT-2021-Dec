@@ -23,7 +23,7 @@ function handleSend(ev: any) {
 function handleLogin(ev:any){
     try{
         ev.preventDefault();
-
+        
         let image: HTMLImageElement = document.querySelector('.img');
         
         const imgValue = ev.target.elements.image.value;
