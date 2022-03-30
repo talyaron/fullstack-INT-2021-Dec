@@ -1,13 +1,15 @@
-function handleSend(ev: any) {
-    ev.preventDefault();
-    const elements = ev.target.elements;
+function handleSend(event) {
+    event.preventDefault();
+    console.log(event.value)
+    const elements = event.target.elements;
     const result = {};
     for (let i = 0; i < elements.length; i++) {
-      if (elements[i].type === "checkbox" ) {
-        result[elements[i].name] = elements[i].checked;
-      } else if (elements[i].name && elements[i].value) {
+      if (elements[i].type === "password" ) {
+        result[elements[i].name] = elements[i].value;
+      } else if (elements[i].type === "text") {
         result[elements[i].name] = elements[i].value;
       }
     }
     console.log(result);
-  }
+}
+console.log("hi")
