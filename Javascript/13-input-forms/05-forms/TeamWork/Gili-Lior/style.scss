@@ -1,4 +1,34 @@
 body {
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    background-color: rgb(192, 255, 206);
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .65em;
+        input{
+            font-size: 1.5rem;
+        }
+        button{
+            font-size: 1.5rem;
+            background-color: rgb(130, 255, 168);
+            border: none;
+            border-radius: 1.2em;
+            padding: .5em;
+            margin-top: .5em;
+        }
+        button:hover{
+            cursor: pointer;
+            opacity: .7;
+        }
+    }
+    .login{
+        display: none;
+    }
 }
