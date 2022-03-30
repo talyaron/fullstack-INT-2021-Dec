@@ -19,6 +19,16 @@ body form {
   padding: 44px;
   border-radius: 20px;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  margin: 25px;
+}
+body form .result {
+  margin-top: 40px;
+  background-color: whitesmoke;
+  width: 50px;
+  height: 2.5em;
+  padding: 12px;
+  border-radius: 5px;
+  text-align: center;
 }
 body form .heading {
   text-align: center;
