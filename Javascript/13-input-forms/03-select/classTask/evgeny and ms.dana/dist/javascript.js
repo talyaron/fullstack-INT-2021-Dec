@@ -18,7 +18,15 @@ function FlagSelect(options, someFunction, element) {
 }
 function handlepapaya(event) {
     var selection = document.querySelector("#selection");
+    var images = document.querySelector("#image-slot");
     selection.innerText = "your papaya is: " + event.target.value;
-    console.log(event.target.value);
+    if (event.target.value == 'israel')
+        return images.innerHTML = '<img  src="papaya-images/papaya1.jpg" alt="">';
+    if (event.target.value == 'syria')
+        return images.innerHTML = '<img  src="papaya-images/papaya2.jpg" alt="">';
+    if (event.target.value == 'thiland')
+        return images.innerHTML = '<img  src="papaya-images/papaya3.jpg" alt="">';
+    if (event.target.value == 'wonderland')
+        return images.innerHTML = '<img  src="papaya-images/papaya4.jpg" alt="">';
 }
 FlagSelect(flags, 'handlepapaya', boot);
