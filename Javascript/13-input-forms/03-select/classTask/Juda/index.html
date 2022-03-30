@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="./dist/index.css">
+</head>
+<body id="bodyDiv">
+<h1>Sign up</h1>
+
+<input type="text" id="pic" placeholder="url" onchange="createImg(event)">
+
+<input type="number" id="numbers" placeholder="Type numbers" onchange="showNumbers(event)">
+
+<img id=urlImg src="" alt="">
+
+<div class="showNum" id="showNumbers"></div>
+
+
+<h2>Log in:</h2>
+
+<div class="id">Id:
+    <input type="text" id="userId" placeholder="Your id" onchange="enterId(event)">
+
+
+</div>
+
+<div class="password"></div>
+   
+    <script src="./dist/index.js"></script>
+</body>
+
+</html>

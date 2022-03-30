@@ -1,4 +1,4 @@
-function handleSend(event) {
+function handleLogin(event) {
     event.preventDefault();
     console.log(event.value);
     var elements = event.target.elements;
@@ -13,4 +13,3 @@ function handleSend(event) {
     }
     console.log(result);
 }
-console.log("hi");
