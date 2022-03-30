@@ -12,8 +12,6 @@ function handleEnter(event) {
             form[elements[i].name] = elements[i].value;
         }
     }
-    console.log(form);
     if (form.pass === form.confirmPass) {
     }
 }
-console.log(form.user);
