@@ -31,17 +31,17 @@ function handleSend(ev) {
     console.log(ev);
     var name = ev.target.elements.name.value;
     var eeee = ev.target.elements.eeee.value;
-    var bbb = ev.target.elements.bbb.checked;
+    var checkbox = ev.target.elements.checkbox.checked;
     var number = ev.target.elements.number.valueAsNumber;
     var color = ev.target.elements.color.value;
-    console.log(name, eeee, bbb, number, color);
+    console.log(name, eeee, checkbox, number, color);
     var elements = ev.target.elements;
     var result = {};
     for (var i = 0; i < elements.length; i++) {
         if (elements[i].type === "checkbox") {
             result[elements[i].name] = elements[i].checked;
         }
-        else if (elements[i].type !== "submit") {
+        else if (elements[i].name && elements[i].value) {
             result[elements[i].name] = elements[i].value;
         }
     }
