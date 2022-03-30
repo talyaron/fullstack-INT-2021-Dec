@@ -1,26 +1,22 @@
 
 
 
-  const BalloonsGroup = document.querySelectorAll('.balloon');
+  const balloonSelect = document.querySelector('.balloon');
 
-    console.dir(BalloonsGroup)
-
-
-
-    // const floatUp = function ballonMove () {
-
-    //     style.top = `-12vh`;
-    //     style.left = `100vw`;
-
-    // }
-    
-
-
-    // BalloonsGroup.forEach(element => {
-
-    //     setInterval(floatUp, 1000);
-
-    //   });
-
-      
+    console.dir(balloonSelect)
   
+    
+    newBallon.addEventListener ('click', () => {
+     newBallon.style.display === none; 
+      
+    })
+
+    function creatBallon () {
+      let newBallon = document.createElement('ballonSelect');
+    
+    const ballonCreation = document.body.appendChild(newBallon);
+   
+
+    }
+
+  setInterval(creatBallon, 5000); 
