@@ -16,7 +16,7 @@ function handleSend(ev: any) {
 
     let result:any = document.querySelector('.result');
     try{
-        const value = Math.floor(firstInput/secondInput)
+        const value = Math.round(firstInput/secondInput)
         result.innerHTML = value
     }
     catch(err){
