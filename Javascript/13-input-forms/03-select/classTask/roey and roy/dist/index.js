@@ -14,6 +14,7 @@ var messi = {
     team: 'PSG',
     age: 34
 };
+var messiArray = Object.values(messi);
 var roey = {
     cName: 'r',
     fName: 's',
@@ -21,6 +22,7 @@ var roey = {
     team: 'PSG',
     age: 34
 };
+var roeyArray = Object.values(roey);
 var kobe = {
     fName: 'Kobe',
     lName: 'Brian'
@@ -30,10 +32,10 @@ var StephenCurry = {
     lName: 'Curry'
 };
 var footballPlayers = [ronaldo, messi, roey];
+var newSelector = document.createElement("select");
+var newDisabledOption = document.createElement("option");
 function createSelector(selectorName) {
-    var newSelector = document.createElement("select");
     body.append(newSelector);
-    var newDisabledOption = document.createElement("option");
     newDisabledOption.setAttribute('selected', 'selected');
     newDisabledOption.disabled = true;
     newDisabledOption.innerHTML = 'Choose a Player';
@@ -44,20 +46,23 @@ function createSelector(selectorName) {
         newOption.innerHTML = element.cName;
         newSelector.onchange = function handlePlayer(ev) {
             var result = ev.target.value;
-            if (result == result) {
-                console.log(ev.target.value);
-                var newPlayerDiv = document.createElement("div");
-                newPlayerDiv.className = 'newPlayerDiv';
-                body.append(newPlayerDiv);
-                var newPlayerUl_1 = document.createElement("ul");
-                newPlayerDiv.append(newPlayerUl_1);
-                selectorName.forEach(function (property) {
-                    var newPlayerLi = document.createElement("li");
-                    newPlayerLi.innerHTML += 'asfpiafsjapisfjpiasjf';
-                    newPlayerUl_1.append(newPlayerLi);
-                });
+            for (var i = 0; i < selectorName.length; i++) {
+                if (selectorName[i].cName == result) {
+                    var newPlayerDiv = document.createElement("div");
+                    newPlayerDiv.className = 'newPlayerDiv';
+                    body.append(newPlayerDiv);
+                    var newPlayerUl = document.createElement("ul");
+                    newPlayerDiv.append(newPlayerUl);
+                    var selectedSelector = selectorName[i];
+                    for (var property in selectedSelector) {
+                        console.log(selectedSelector[property]);
+                        var newPlayerLi = document.createElement("li");
+                        newPlayerLi.innerHTML = selectedSelector[property];
+                        newPlayerUl.append(newPlayerLi);
+                    }
+                }
             }
-            console.dir(ev.target);
+            //console.dir(ev.target)
         };
     });
 }
@@ -65,7 +70,8 @@ function handleSport(ev) {
     var sport = ev.target.value;
     if (sport == 'football') {
         createSelector(footballPlayers);
-        console.log('a');
+        console.dir(ev.target);
+        //console.log('a')
     }
     else if (sport == 'basketball') {
         createSelector();
