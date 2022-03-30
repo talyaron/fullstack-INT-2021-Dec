@@ -23,6 +23,8 @@ body form {
 body form .heading {
   text-align: center;
   margin-bottom: 76px;
+  font-size: 38px;
+  color: #1e75ab;
 }
 body form input {
   height: 2em;

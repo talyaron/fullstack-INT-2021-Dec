@@ -5,6 +5,8 @@ function handleSend(ev: any) {
   console.log(ev);
   const userName = ev.target.elements.userName.value;
   const password = ev.target.elements.password.value;
+  ev.target.elements.userName.value = '';
+  ev.target.elements.password.value = '';
 
   console.log(userName, password);
 
