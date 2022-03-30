@@ -1,7 +1,5 @@
 function handleExe(ev) {
     ev.preventDefault();
-    var username = ev.target.elements.username.value;
-    var password = ev.target.elements.password.value;
     var elements = ev.target.elements;
     var consol = {};
     for (var i = 0; i < elements.length; i++) {
