@@ -7,15 +7,32 @@
     <title>Document</title>
     <link rel="stylesheet" href="./dist/style.css">
 </head>
-<body>
 
-    <h1>Hello, Choose the countrey to see the Flag:</h1>
-    <select name="flag" id=""  style="width: 100px;" onchange="HandleGetFlag(event)">
+<body>   
+<div class="wrapper">
+    <div class="flagwrapper" style="background-image: url('./dist/backgroundflags.jpg');">
+    <h1>Hello, Choose the country to see the Flag:</h1>
+    <select name="flag" id="" style="height: 20px; width: 150px;" onchange="HandleGetFlag(event)">
         <option value="" disabled selected>Choose your country</option>
         <option value="turkey"> Turkey </option>
         <option value="ukriane"> Ukriane</option>
     </select>
+
     <div id="imgflag"></div>
+    
+</div>
+    <h1>Please choose your favorite sport:</h1>
+    <select name="sport" id="sport" onchange="handleGetPlayrs(event)">
+        <option value="" disabled selected>Choose your favorite Sport</option>
+        <option value="football" >Football</option>
+        <option value="basketball" >Basketball</option>
+        <option value="tennis"  >Tennis</option>
+    </select>
+</div>
+
+<div class="playrs"></div>
+
     <script src="./dist/index.js"></script>
+
 </body>
 </html>

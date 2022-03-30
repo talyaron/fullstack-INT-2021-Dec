@@ -1,11 +1,31 @@
 body {
   margin: 0%;
   padding: 0%;
+  font-family: "Open Sans", sans-serif;
 }
 
-.card {
-  width: 20vw;
-  height: 20vh;
+.header {
+  width: 100vw;
+  height: 100px;
+  background-color: #f58bef;
+}
+.header h3 {
+  padding: 0%;
+  margin: 0%;
+  color: #742ea6;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  margin-top: 250px;
+}
+.wrapper .card {
+  width: 200px;
+  height: 200px;
   margin: auto;
   margin-top: 100px;
   border: 1px solid gray;
@@ -13,14 +33,49 @@ body {
   place-items: center;
   border-radius: 40px;
   box-shadow: 5px 5px 15px 5px gray;
+  background-color: white;
+  position: relative;
 }
-.card #playerimg {
+.wrapper .card #sports_select {
+  position: absolute;
+}
+.wrapper .card #playerimg {
   width: 100%;
   height: 100%;
   border-radius: 40px;
   overflow: hidden;
+  z-index: 6;
+  position: absolute;
+}
+.wrapper .card #back {
+  position: relative;
+  height: 300px;
+  top: -60px;
+  left: -90px;
+  z-index: -6;
 }
 
-.card:nth-child(2) {
-  margin-top: 50px;
+select {
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: #BC56B7;
+  color: white;
+  font-weight: 400;
+  border: none;
+  border-radius: 1em;
+  padding: 0.5em 0.2em;
+}
+
+@media only screen and (min-width: 1550px) {
+  .wrapper {
+    width: 1550px;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 1100px;
+    margin: auto;
+  }
 }

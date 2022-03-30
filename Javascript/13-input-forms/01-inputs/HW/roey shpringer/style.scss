@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.usernamelabel {
+    display: block;
+}
+
+.yourusername {
+
+    display: block;
+}
+
+.nocaps {
+    text-decoration: underline;
+}
+
+.redcolor {
+    color: red;
+    text-decoration: underline;
+}
+
+.enterurpicture {
+    margin-top: 20px;
+    border-top: 2px solid black;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.profileImg {
+    margin: 10px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 500px;
+}
+
+.clearText {
+    margin: 10px;
+    font-size: 10px;
+    display: inline;
+    background-color: red;
+}

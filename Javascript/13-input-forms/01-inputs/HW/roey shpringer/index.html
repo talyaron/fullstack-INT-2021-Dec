@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <label for="username" class="usernamelabel">Username</label>
+        <input type="text" name="username" class="username" required onchange="handleUserName(event)">
+        <button class="clearText" onclick="handleDeleteOne(event)">delete text</button>
+        <div class="yourusername">Your username: </div>
+        <p class="enterurpicture">enter your picture:</p>
+        <input class="url" onchange="handleUrl(event)"></input>
+        <button class="clearText" onclick="handleDeleteTwo(event)">delete text</button>
+        <img src="" alt="" class="newUrlDiv">
+    </div>
+    <script src="dist/index.js"></script>
+</body>
+
+</html>

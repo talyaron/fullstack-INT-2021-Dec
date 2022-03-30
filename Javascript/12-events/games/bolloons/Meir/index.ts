@@ -1,39 +1,36 @@
-const ballons:NodeListOf<HTMLImageElement> = document.querySelectorAll(".ballon");
+const ballons: NodeListOf<HTMLImageElement> = document.querySelectorAll('.ballon');
 const body: HTMLBodyElement = document.querySelector('body');
 
-
-
-
 ///////Function create balloon:
-function createBalloons(): any {
-    const balloons = document.createElement('div')
-    body.append(balloons)
-    balloons.classList.add('ballon')
+function createBalloon(): any {
+    const myBalloons = document.createElement('div')
+    body.append(myBalloons)
+    myBalloons.classList.add('ballon')
     const balloonImg = document.createElement('img')
-    balloons.append(balloonImg)
+    myBalloons.append(balloonImg)
     balloonImg.src="balloons.png"
-    balloons.addEventListener('click',handleClick)
-    return balloons
+    myBalloons.addEventListener('click',handleClick)
+    return myBalloons
 }
 
 ///////////Function move objects
 function flyBallon(Balloon, interval: number) {
-    Balloon.element.style.left = getRandomPosition() + 'vw';
+    Balloon.style.left= getRandomPosition() + 'vw';
     setInterval(() => {
-        Balloon.style.top = '-15vh';
+        Balloon.style.top = '-25vh';
     }, interval)    
 }
 
 /////Function ramdomly position of objects
 function getRandomPosition(): number {
-    let random = Math.floor(Math.random()*50);
+    let random = Math.floor(Math.random() * 90);
     return random
 }
 
 /////Function ramdomly interval of objects
 function getRandomInterval(): number {
     let random = Math.floor(Math.random() * 10000);
-    console.log(`${random / 1000}s`)
+    // console.log(`${random / 1000}s`)
     return random
 }
 
@@ -43,17 +40,19 @@ function handleClick(ev: any): void {
     let audio = new Audio(`poomballon.wav`,);
     audio.play();
     ev.target.src='bombPicture.png'
+    
 }
 
 ////Start game Function
 function startGame(): void {
-    ballons.forEach(balloon => {
-        flyBallon(createBalloons(), 5000)
-    })
-    flyBallon(createBalloons(), getRandomInterval())    
+   
+    flyBallon(createBalloon(), 5000)
+    flyBallon(createBalloon(), getRandomInterval())
+    flyBallon(createBalloon(), getRandomInterval()) 
+
 }
 
-setInterval(startGame, 2000)
+setInterval(startGame, 1000)
  
 
 

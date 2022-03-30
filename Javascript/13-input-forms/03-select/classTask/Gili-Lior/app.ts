@@ -2,9 +2,9 @@
 console.log(`Connected!`);
 interface PlayersArr {
     name: string,
-    src:string
+    src: string
 }
-const basketballPlayer:Array<PlayersArr> = [
+const basketballPlayer: Array<PlayersArr> = [
     {
         name: 'Lebron James',
         src: 'https://avatarfiles.alphacoders.com/141/141680.jpg'
@@ -19,7 +19,7 @@ const basketballPlayer:Array<PlayersArr> = [
     }
 
 ];
-const tennisPlayer:Array<PlayersArr> = [
+const tennisPlayer: Array<PlayersArr> = [
     {
         name: 'Rafael Nadal',
         src: 'https://i.pinimg.com/736x/5f/fa/3f/5ffa3f2ae385d750a8a6f7106fc7fe5e--tv-schedule-rafael-nadal.jpg'
@@ -34,7 +34,7 @@ const tennisPlayer:Array<PlayersArr> = [
     }
 
 ];
-const footballPlayer:Array<PlayersArr> = [
+const footballPlayer: Array<PlayersArr> = [
     {
         name: 'Lionel Messi',
         src: 'https://pbs.twimg.com/media/DyhGubJX0AYjCkn.jpg'
@@ -50,8 +50,8 @@ const footballPlayer:Array<PlayersArr> = [
 
 ];
 
-const newOptionDiv:HTMLDivElement = document.querySelector('#second_option');
-const playerimg:HTMLImageElement = document.querySelector('#playerimg');
+const newOptionDiv: HTMLDivElement = document.querySelector('#second_option');
+const playerimg: HTMLImageElement = document.querySelector('#playerimg');
 
 
 function handleSelectSport(event) {
@@ -64,24 +64,25 @@ function handleSelectSport(event) {
     }
 }
 
-function createOptions(arr:Array<object>) {
-    newOptionDiv.innerHTML = "";
+function createOptions(arr: Array<object>) {
+    newOptionDiv.innerHTML = '<img id="back" src="images/back2.png" alt="" srcset="">';
     const newSelect = document.createElement('select');
     newOptionDiv.append(newSelect);
+    newSelect.setAttribute("id", "sports_select");
     const choose = document.createElement('option');
     choose.innerHTML = `Choose Player`;
     newSelect.append(choose)
-    newSelect.onchange = function handleCheck(event){
-       const playerName = event.target.value;
-       arr.forEach(player =>{
-           console.dir(player)
-           if(playerName === player.name){
-               playerimg.src = `${player.src}`;
-           }
-       })
+    newSelect.onchange = function handleCheck(event) {
+        const playerName = event.target.value;
+        arr.forEach(player => {
+            console.dir(player)
+            if (playerName === player.name) {
+                playerimg.src = `${player.src}`;
+            }
+        })
     };
 
-    arr.forEach(elm =>{
+    arr.forEach(elm => {
         const newOption = document.createElement('option');
         newOption.innerHTML = elm.name;
         newOption.value = `${elm.name}`;

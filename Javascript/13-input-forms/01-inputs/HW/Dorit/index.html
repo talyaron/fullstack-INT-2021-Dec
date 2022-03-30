@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="bigForm">
+        <div id="root1">
+            <h1>SIGNUP FORM </h1>
+            <div class="item">
+                <div>User Name :
+                    <input type="text" name="username" id="username"" placeholder=" User Name"
+                        onchange="handleGetUserName(event)">
+                    <p class="username"></p>
+                </div>
+                <div>Password :
+                    <input type="text" name='password' id="password" placeholder="Password"
+                        onchange="handleGetPassword(event)"><br>
+                    <p class="password"></p>
+                </div>
+            </div>
+            <div class="item">
+                <div>Address :
+                    <input type="text" name='address' id="address" placeholder="Address"
+                        onchange="handleGetAddress(event)">
+                    <div class="address"></div>
+                </div>
+                <div>Apartment number:
+                    <input type="number" name="apartNo" id="apartNo" placeholder="apartNo"
+                        onchange="handleGetNo(event)" />
+                    <div class="apartNum"></div>
+                </div>
+
+            </div>
+            <div class="item">
+                <div>Mail address :
+                    <input type="mail" name="mail" id="mail" placeholder="mail" onchange="handleGetMail(event)"><br>
+                    <div class="mailAddress"></div>
+                </div><br>
+                <div>Birthdate :
+                    <input type="date" name="birthdate" id="birthdate" placeholder="birthdate>"
+                        onchange="handleGetBirthDate(event)"><br>
+                    <div class="birthDate"></div>
+                </div>
+            </div>
+            <div class="item">
+                <div>Chose your gender:
+                    <div>Male:
+                        <input type="radio" id="male" name="gender" placeholder=="Male" value="male"
+                            onchange="handleRadioB(event)"><br>
+                    </div>
+                    <div>Female:
+                        <input type="radio" id="female" name="gender" placeholder=="Female" value="female"
+                            onchange="handleRadioB(event)"><br>
+                    </div>
+                    <div class="gender"></div>
+                </div>
+            </div>
+            <div class="item">
+                <div>Pick your resume file
+                    <input type="file" name="resume" id="resume" placeholder="Chose your resume-file"
+                        onchange="handleUploadResume(event)">
+                    <div class="file"></div>
+                </div>
+            </div> 
+            <div class="item">   
+                <div>enter url of picture
+                    <input type="url" placeholder="enter url ofpicture" onchange="handleGetImg(event)" id="img">
+                    <div class="img">
+                        <img src="" />
+                    </div>
+                </div>    
+            </div>
+            <div class="item">
+                <input type="button" class="button" value ="Submit" onclick="handleButtonClick(event)">
+            </div>
+        </div>
+        <div id="root2">
+            <h1>SIGNIN FORM </h1>
+            <div class="item2">
+                <div>User Name :
+                    <input type="text" name="username" id="username"" placeholder=" User Name"
+                        onchange="handleGetUserName2(event)">
+                    <p class="username2"></p>
+                </div>
+                <div>Password :
+                    <input type="text" name='password' id="password" placeholder="Password"
+                        onchange="handleGetPassword2(event)"><br>
+                    <p class="password2"></p>
+                </div>
+            </div>
+            <div class="result">
+                <h1>RESULT</h1>
+                <div class="addressR"></div>
+                <div class="apartNoR"></div>
+                <div class="mailR"></div>
+                <div class ="birthdateR"></div> 
+                <div class="genderR"></div>
+                <div class="resumeR"></div>
+            </div>
+        
+        </div>
+    </div>
+    <script src="dist/index.js"></script>
+
+</body>
+
+</html>

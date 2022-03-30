@@ -10,8 +10,7 @@
 </head>
 
 <body>
-    <div class="form">
-        <input type="url" name="image" placeholder="Enter the url of your image " id="image" onchange="handleUrl(event)">
+    <div class="form" >
         <div class="img"></div>
         <label for="countriesFlags">Choose a flag:</label>
         <input list="countries" id="countriesFlags" name="countriesFlags" onchange="handleSelectCountry(event)" />
@@ -29,7 +28,7 @@
         </select>
 
     </div>
-
+        <div id="root"></div>
     <script src="./dist/index.js"></script>
 </body>
 

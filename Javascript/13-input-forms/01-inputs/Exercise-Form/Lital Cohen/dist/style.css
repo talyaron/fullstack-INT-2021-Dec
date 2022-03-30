@@ -100,3 +100,39 @@ button {
   border-radius: 30px;
   font-weight: 600;
 }
+
+#userNameLoginF {
+  background: white;
+  box-shadow: 0 0 2em #e6e9f9;
+  padding: 1em;
+  gap: 0.5em;
+  border-radius: 20px;
+  color: #4d4d4d;
+  margin-top: -3em;
+}
+#userNameLoginF input {
+  outline: none;
+  border: none;
+}
+#userNameLoginF input::placeholder {
+  color: black;
+  font-size: 0.9em;
+}
+
+#passwordLoginF {
+  background: white;
+  box-shadow: 0 0 2em #e6e9f9;
+  padding: 1em;
+  gap: 0.5em;
+  border-radius: 20px;
+  color: #4d4d4d;
+  margin-top: -3em;
+}
+#passwordLoginF input {
+  outline: none;
+  border: none;
+}
+#passwordLoginF input::placeholder {
+  color: black;
+  font-size: 0.9em;
+}
