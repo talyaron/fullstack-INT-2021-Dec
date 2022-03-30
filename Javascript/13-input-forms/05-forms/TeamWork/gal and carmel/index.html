@@ -9,16 +9,23 @@
 </head>
 <body>
     <form class="signUp" onsubmit="handleSend(event)" >
+        <label for="username" >User Name:</label>
         <input type="text" id="username" name="username">
-        <input type="text" id="password" name="password">
-        <input type="image" id="pic" name="pic">
-        <button type="submit"></button>
+        <label for="username" >Password:</label>
+        <input type="password" id="password" name="password">
+        <input type="file" id="pic" name="pic">
+        <button type="submit">send</button>
     </form>
     <form class="logIn" onsubmit="handleCheck(event)">
+        <label for="username" >User Name:</label>
         <input type="text" id="usernameCheck" name="usernameheck">
-        <input type="text" id="passwordCheck" name="passwordheck">
-        <button type="submit"></button>
+        <label for="username" >Password:</label>
+        <input type="password" id="passwordCheck" name="passwordheck">
+        <button type="submit">enter</button>
     </form>
+    <div class="welcome">
+        welcome user
+    </div>
     <script src="dist/index.js"></script>
 </body>
 </html>
