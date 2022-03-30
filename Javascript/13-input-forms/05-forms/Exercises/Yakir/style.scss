@@ -1,0 +1,22 @@
+body{
+
+    margin: auto;
+    background-color: navy;
+    display: grid;
+}
+
+
+.login{
+    position: relative;
+    top: 100px;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    display: grid;
+    align-items: center;
+    margin: auto;
+    width: 300px;
+    height: 100px;
+    form{
+        margin:auto;
+    }
+}
