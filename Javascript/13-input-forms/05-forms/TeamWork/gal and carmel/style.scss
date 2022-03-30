@@ -1,3 +1,26 @@
+// body{
+//     margin: 0%;
+//     padding: 10px;
+//     // width: 100px;
+//     // height: 80px;
+//     position: relative;
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// .logIn, .signUp{
+//     position: absolute;
+//     margin-left: 20px;
+//     margin-top: 20px;
+//     display: flex;
+//     flex-direction: column;
+//     // width: 100px;
+//     // height: 80px;
+// }
+
 .logIn{
+    display: none;
+}
+.welcome{
     display: none;
 }
