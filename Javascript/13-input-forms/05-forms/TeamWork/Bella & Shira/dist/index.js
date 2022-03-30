@@ -10,7 +10,7 @@ function handleSend(ev) {
     console.log(Math.floor(firstInput / secondInput));
     var result = document.querySelector('.result');
     try {
-        var value = Math.floor(firstInput / secondInput);
+        var value = Math.round(firstInput / secondInput);
         result.innerHTML = value;
     }
     catch (err) {
