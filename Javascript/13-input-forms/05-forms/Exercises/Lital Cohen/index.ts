@@ -11,5 +11,5 @@ function handleLogIn(event){
       }
     }
     console.log(result);
-  }
-  console.log("hey");
+}
+ console.log("hey")
