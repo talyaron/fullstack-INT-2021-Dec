@@ -20,7 +20,7 @@ body img {
   bottom: 0px;
   width: 100px;
   height: 100vh;
-  animation: balloonMove 1s infinite;
+  animation: balloonMove 5s infinite;
 }
 .balloon img {
   height: 150px;
