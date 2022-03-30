@@ -13,16 +13,31 @@
     <form onsubmit="handleSend(event)">
         
         <h1 class="heading">Calculate numbers</h1>
-        <input type="number" name="firstInput" id="firstInput" placeholder="First input">
-        <input type="number" name="secondInput" id="secondInput" placeholder="Second input">
+        <input type="number" name="firstInput"  placeholder="First input">
+        <input type="number" name="secondInput"  placeholder="Second input">
         
         <button type="submit">Calclate</button>
         
 
         <div class="result">
-        
         </div>
         <!-- <a class="reset" href="">Forgot password?</a> -->
+    </form>
+
+    <form onsubmit="handleLogin(ev)">
+        <h1 class="heading">Sign In</h1>
+        <input type="text" name="userName" id="userName" placeholder="User name">
+
+        <input type="password" name="password" id="password" placeholder="Password">
+        <input type="password" name="repeatPassword" id="repeatPassword" placeholder="Repeat password">
+
+        <input type="url" name="image" id="image" placeholder="Add image url">
+        
+
+        <button type="submit">Submit</button>
+
+        <a class="reset" href="">Forgot password?</a>
+        <div class="img"></div>
     </form>
 
 
