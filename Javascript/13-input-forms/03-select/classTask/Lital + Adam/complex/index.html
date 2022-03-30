@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./dist/style.css">
 </head>
 
 <body>
     <select name="football" id="selectFootball" onchange="showPlayerImg(event)">
         <option value="" disabled selected>Football</option>
-        <option value="messi">Messi</option>
+        <option value="messi" onchange="showPlayerImg(event)">Messi</option>
         <option value="ronaldo">Ronaldo</option>
         <option value="pele">Pele</option>
     </select>
@@ -27,15 +28,17 @@
         <option value="nadal">Nadal</option>
         <option value="agassi">Agassi</option>
     </select>
-    <!-- <img src="messi.jpg" alt="" srcset=""> -->
-<div id="messi"></div>
+    
 
-<img id="image" src="federer.jpg" />
-<select id="CarList">
-<option value="federer.jpg">player</option>
-<option value="http://mebe.co/volvo">Volvo</option>
-</select>
+    <!-- <div id="messi"><img id="messiidm" src="./dist/federer.jpg" alt="">
+    </div>
+    <div id="ronaldo"><img src="./dist/messi.jpg" alt="">
+    </div>
+    <div id="pele"><img src="./dist/mj.jpg" alt="">
+    </div> -->
 
+
+<script src="./dist/index.js"></script>
 </body>
 
 </html>
