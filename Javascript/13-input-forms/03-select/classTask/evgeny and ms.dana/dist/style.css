@@ -13,3 +13,8 @@ body #selection {
   border-radius: 20%;
   background-color: yellowgreen;
 }
+body #image-slot {
+  border: 1px solid black;
+  height: 100px;
+  width: 200px;
+}

@@ -59,6 +59,18 @@ body {
         }
     }
 }
+
+select{
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: #BC56B7;
+    color: white;
+    font-weight: 400;
+    border: none;
+    border-radius: 1em;
+    padding: .5em .2em;
+}
+
 @media only screen and (min-width: 1550px) {
     .wrapper {
         width: 1550px;
