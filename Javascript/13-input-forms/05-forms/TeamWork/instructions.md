@@ -7,5 +7,3 @@ create a form for registration with image(simple from url, advance, from file), 
 
 challange:
 medium + create on the same page a login form do it it dinamicly (after submit). and then chack if password and username are matching theses from register
-
-
