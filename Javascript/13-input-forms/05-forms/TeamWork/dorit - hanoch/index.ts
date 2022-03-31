@@ -7,15 +7,15 @@ function handleSend(ev){
   for (let i = 0; i < elements.length; i++) {
       if (elements[i].name && elements[i].value) {
       result[elements[i].name] = elements[i].value;
-    }
-    
+        }
+    } 
+    let img = document.querySelector("#root")
+    let value = result['img']
+    img.innerHTML = `<img src="${value}" width="100px" hight="100px"/>`
+    if (result['pass'] == result['repass']){
+        alert('ok')
+    }  
 }
-let img = document.querySelector("#root")
-let value = result['img']
-img.innerHTML = `<img src="${value}" width="100px" hi>`
-if (result['pass'] == result['repass']){
-    alert('ok')
-}
-console.log(result['img'])
-}
+
+
 

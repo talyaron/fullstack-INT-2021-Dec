@@ -10,9 +10,8 @@ function handleSend(ev) {
     }
     var img = document.querySelector("#root");
     var value = result['img'];
-    img.innerHTML = "<img src=\"" + value + "\" width=\"100px\" hi>";
+    img.innerHTML = "<img src=\"" + value + "\" width=\"100px\" hight=\"100px\"/>";
     if (result['pass'] == result['repass']) {
         alert('ok');
     }
-    console.log(result['img']);
 }
