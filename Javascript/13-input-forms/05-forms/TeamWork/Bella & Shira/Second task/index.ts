@@ -18,7 +18,7 @@
 //     }
 // }
 
-
+const users: Array<object> = [];
 
 function handleSignUp(ev: any) {
     try {
@@ -29,21 +29,21 @@ function handleSignUp(ev: any) {
         const image: HTMLImageElement = document.querySelector('.img');
         const imgValue = ev.target.elements.image.value;
         image.innerHTML = `<img src=${imgValue}>`
-        
+
         const person = {
-            personUserName: `${userName}`, 
+            personUserName: `${userName}`,
             personPassword: `${password}`,
-            personRepeatPassword: `${repeatPassword}`
         };
         console.log(person);
 
-// compare passwords
+        // compare passwords
         if (repeatPassword != password) {
             alert('Your passwords does not match, try again!')
             console.log('false password')
             return false;
         } else {
-            console.log (password);
+            users.push(person);
+            console.log(password);
         }
 
     } catch (err) {
@@ -58,10 +58,19 @@ function handleLogin(ev: any) {
         ev.preventDefault();
         const loginUserName: any = ev.target.elements.loginUserName.value;
         const loginPassword: any = ev.target.elements.loginPassword.value;
-        
+        let isConnected: boolean = false;
 
         console.log(loginUserName, loginPassword);
 
+        users.forEach(userInfo => {
+            if (userInfo['personUserName'] == loginUserName) {
+                if (userInfo['personPassword'] == loginPassword) {
+                    isConnected = true;
+                }
+            }
+        })
+
+        isConnected ? alert('Connected') : alert('Username or password were inccorent');
 
         // const person = {
         //     personUserName: `${userName}`, 
@@ -70,14 +79,15 @@ function handleLogin(ev: any) {
         // };
         // console.log(person);
 
-// compare passwords
-        if (loginUserName != `${person.personPassword}`) {
-            alert('Your passwords does not match, try again!')
-            console.log('false password')
-            return false;
-        } else {
-            console.log (person.personPassword);
-        }
+        // compare passwords
+        // if (loginUserName != `${users.personPassword}`) {
+        //     alert('Your passwords does not match, try again!')
+        //     console.log('false password')
+        //     return false;
+        // } else {
+        //     alert('Connected!');
+        //     console.log (users.personPassword);
+        // }
 
     } catch (err) {
         console.log(err);
@@ -87,7 +97,7 @@ function handleLogin(ev: any) {
 
 
 // challange:
-// medium + create on the same page a login form do it it dinamicly (after submit). 
+// medium + create on the same page a login form do it it dinamicly (after submit).
 // and then chack if password and username are matching theses from register
 
 

@@ -14,6 +14,7 @@
 //         console.log(err);
 //     }
 // }
+var users = [];
 function handleSignUp(ev) {
     try {
         ev.preventDefault();
@@ -25,8 +26,7 @@ function handleSignUp(ev) {
         image.innerHTML = "<img src=" + imgValue + ">";
         var person = {
             personUserName: "" + userName,
-            personPassword: "" + password,
-            personRepeatPassword: "" + repeatPassword
+            personPassword: "" + password
         };
         console.log(person);
         // compare passwords
@@ -36,6 +36,7 @@ function handleSignUp(ev) {
             return false;
         }
         else {
+            users.push(person);
             console.log(password);
         }
     }
@@ -46,9 +47,18 @@ function handleSignUp(ev) {
 function handleLogin(ev) {
     try {
         ev.preventDefault();
-        var loginUserName = ev.target.elements.loginUserName.value;
-        var loginPassword = ev.target.elements.loginPassword.value;
-        console.log(loginUserName, loginPassword);
+        var loginUserName_1 = ev.target.elements.loginUserName.value;
+        var loginPassword_1 = ev.target.elements.loginPassword.value;
+        var isConnected_1 = false;
+        console.log(loginUserName_1, loginPassword_1);
+        users.forEach(function (userInfo) {
+            if (userInfo['personUserName'] == loginUserName_1) {
+                if (userInfo['personPassword'] == loginPassword_1) {
+                    isConnected_1 = true;
+                }
+            }
+        });
+        isConnected_1 ? alert('Connected') : alert('Username or password were inccorent');
         // const person = {
         //     personUserName: `${userName}`, 
         //     personPassword: `${password}`,
@@ -56,21 +66,21 @@ function handleLogin(ev) {
         // };
         // console.log(person);
         // compare passwords
-        if (loginUserName != "" + person.personPassword) {
-            alert('Your passwords does not match, try again!');
-            console.log('false password');
-            return false;
-        }
-        else {
-            console.log(person.personPassword);
-        }
+        // if (loginUserName != `${users.personPassword}`) {
+        //     alert('Your passwords does not match, try again!')
+        //     console.log('false password')
+        //     return false;
+        // } else {
+        //     alert('Connected!');
+        //     console.log (users.personPassword);
+        // }
     }
     catch (err) {
         console.log(err);
     }
 }
 // challange:
-// medium + create on the same page a login form do it it dinamicly (after submit). 
+// medium + create on the same page a login form do it it dinamicly (after submit).
 // and then chack if password and username are matching theses from register
 //SIGN UP - הרשמה
 // sign up datails are saved
