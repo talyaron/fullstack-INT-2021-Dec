@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form class="signUp" onsubmit="handleSend(event)" >
+        <label for="username" >User Name:</label>
+        <input type="text" id="username" name="username">
+        <label for="username" >Password:</label>
+        <input type="password" id="password" name="password">
+        <input type="file" id="pic" name="pic">
+        <button type="submit">send</button>
+    </form>
+    <form class="logIn" onsubmit="handleCheck(event)">
+        <label for="username" >User Name:</label>
+        <input type="text" id="usernameCheck" name="usernameheck">
+        <label for="username" >Password:</label>
+        <input type="password" id="passwordCheck" name="passwordheck">
+        <button type="submit">enter</button>
+    </form>
+    <div class="welcome">
+        welcome user
+    </div>
+    <script src="dist/index.js"></script>
+</body>
+</html>

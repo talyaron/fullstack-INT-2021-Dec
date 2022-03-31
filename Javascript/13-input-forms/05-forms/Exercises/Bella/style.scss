@@ -20,12 +20,18 @@ body {
         box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
         .heading {
             text-align: center;
-            margin-bottom: 76px;
+            margin-bottom: 60px;
             font-size: 38px;
             color: rgb(30, 117, 171);
         }
+        .reset {
+            text-align: center;
+            margin-top: 60px;
+            color: rgb(30, 117, 171);
+            font-size: 15px;
+        }
         input {
-            height: 2em;
+            height: 2.5em;
             margin-bottom: 1em;
             padding: 8px 24px;
             border-radius: 0.6em;

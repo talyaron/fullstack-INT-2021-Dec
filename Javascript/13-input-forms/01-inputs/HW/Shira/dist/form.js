@@ -9,7 +9,7 @@ function handleInputNumber(event) {
         console.log(err);
     }
 }
-function handleInputInage(event) {
+function handleInputImage(event) {
     console.dir(event);
     var inputImg = document.querySelector("#" + event.target.name);
     try {

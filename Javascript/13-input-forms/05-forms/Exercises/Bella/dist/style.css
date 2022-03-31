@@ -22,12 +22,18 @@ body form {
 }
 body form .heading {
   text-align: center;
-  margin-bottom: 76px;
+  margin-bottom: 60px;
   font-size: 38px;
   color: #1e75ab;
 }
+body form .reset {
+  text-align: center;
+  margin-top: 60px;
+  color: #1e75ab;
+  font-size: 15px;
+}
 body form input {
-  height: 2em;
+  height: 2.5em;
   margin-bottom: 1em;
   padding: 8px 24px;
   border-radius: 0.6em;

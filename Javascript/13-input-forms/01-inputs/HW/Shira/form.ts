@@ -10,7 +10,7 @@ function handleInputNumber(event){
     }
 }
 
-function handleInputInage(event){
+function handleInputImage(event){
     console.dir(event)
     let inputImg:HTMLElement = document.querySelector(`#${event.target.name}`);
     try{
