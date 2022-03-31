@@ -1,20 +1,4 @@
-// function handleSend(ev: any) {
-//     try {
-//         ev.preventDefault();
-//         console.log(ev);
-//         const firstInput: any = ev.target.elements.firstInput.value;
-//         const secondInput: any = ev.target.elements.secondInput.value;
-//         ev.target.elements.firstInput.value = '';
-//         ev.target.elements.secondInput.value = '';
-//         console.log(Math.floor(firstInput / secondInput))
-//         let result: any = document.querySelector('.result');
-//         const value = Math.abs(firstInput / secondInput)
-//         result.innerHTML = value
-//     } catch (err) {
-//         console.log(err);
-//     }
-// }
-var users = [];
+var users = []; // Creating Fake Data Base To Hold All new Users
 function handleSignUp(ev) {
     try {
         ev.preventDefault();
@@ -36,7 +20,7 @@ function handleSignUp(ev) {
             return false;
         }
         else {
-            users.push(person);
+            users.push(person); // Pushing new user information to fake data base 
             console.log(password);
         }
     }
@@ -51,6 +35,7 @@ function handleLogin(ev) {
         var loginPassword_1 = ev.target.elements.loginPassword.value;
         var isConnected_1 = false;
         console.log(loginUserName_1, loginPassword_1);
+        // Checking if username and password exsixt in data base
         users.forEach(function (userInfo) {
             if (userInfo['personUserName'] == loginUserName_1) {
                 if (userInfo['personPassword'] == loginPassword_1) {
@@ -59,21 +44,6 @@ function handleLogin(ev) {
             }
         });
         isConnected_1 ? alert('Connected') : alert('Username or password were inccorent');
-        // const person = {
-        //     personUserName: `${userName}`, 
-        //     personPassword: `${password}`,
-        //     personRepeatPassword: `${repeatPassword}`
-        // };
-        // console.log(person);
-        // compare passwords
-        // if (loginUserName != `${users.personPassword}`) {
-        //     alert('Your passwords does not match, try again!')
-        //     console.log('false password')
-        //     return false;
-        // } else {
-        //     alert('Connected!');
-        //     console.log (users.personPassword);
-        // }
     }
     catch (err) {
         console.log(err);
