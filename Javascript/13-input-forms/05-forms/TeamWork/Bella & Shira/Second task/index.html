@@ -11,7 +11,7 @@
 
 <body>
 
-
+    <!-- Sign up -->
     <form onsubmit="handleSignUp(event)">
         <h1 class="heading">Sign Up</h1>
         <input type="text" name="userName" placeholder="User name" required>
@@ -22,23 +22,25 @@
         <input type="url" name="image" placeholder="Add image url" required>
         <div class="img"></div>
 
-        <button type="submit">Submit</button>
+        <button type="submit">Sign up</button>
 
-        <a class="signIn" href="">Alredy have an account? SIGN IN</a>
+        <a class="signIn" href="">Alredy have an account? Sign in</a>
 
     </form>
 
+
+    <!-- Login -->
     <form onsubmit="handleLogin(event)">
 
         <h1 class="heading">Login</h1>
-        <input type="number" name="firstInput" placeholder="First input" required>
-        <input type="number" name="secondInput" placeholder="Second input" required>
+        <input type="text" name="loginUserName" placeholder="User name" required>
+        <input type="password" name="loginPassword" placeholder="Password" required>
 
-        <button type="submit">Calculate</button>
+        <button type="submit">Login</button>
 
 
-        <div class="result"></div>
-        <!-- <a class="reset" href="">Forgot password?</a> -->
+        <!-- <div class="result"></div> -->
+        <a class="reset" href="">Forgot password?</a>
     </form>
 
 

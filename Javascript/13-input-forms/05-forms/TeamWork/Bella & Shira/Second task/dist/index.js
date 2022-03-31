@@ -43,6 +43,32 @@ function handleSignUp(ev) {
         console.log(err);
     }
 }
+function handleLogin(ev) {
+    try {
+        ev.preventDefault();
+        var loginUserName = ev.target.elements.loginUserName.value;
+        var loginPassword = ev.target.elements.loginPassword.value;
+        console.log(loginUserName, loginPassword);
+        // const person = {
+        //     personUserName: `${userName}`, 
+        //     personPassword: `${password}`,
+        //     personRepeatPassword: `${repeatPassword}`
+        // };
+        // console.log(person);
+        // compare passwords
+        if (loginUserName != "" + person.personPassword) {
+            alert('Your passwords does not match, try again!');
+            console.log('false password');
+            return false;
+        }
+        else {
+            console.log(person.personPassword);
+        }
+    }
+    catch (err) {
+        console.log(err);
+    }
+}
 // challange:
 // medium + create on the same page a login form do it it dinamicly (after submit). 
 // and then chack if password and username are matching theses from register

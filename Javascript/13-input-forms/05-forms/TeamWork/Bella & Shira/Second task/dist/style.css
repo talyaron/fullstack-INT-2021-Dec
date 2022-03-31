@@ -50,7 +50,8 @@ body form .heading {
   font-size: 38px;
   color: #1e75ab;
 }
-body form .signIn {
+body form .signIn,
+body form .reset {
   text-align: center;
   margin-top: 48px;
   color: #1e75ab;
