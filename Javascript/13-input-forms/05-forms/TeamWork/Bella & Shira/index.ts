@@ -30,6 +30,7 @@ function handleSignUp(ev: any) {
         image.innerHTML = `<img src=${imgValue}>`
         console.log(userName, password, repeatPassword, imgValue);
 
+// compare passwords
         if (repeatPassword != password) {
             alert('Your passwords does not match, try again!')
             console.log('false password')
@@ -44,42 +45,3 @@ function handleSignUp(ev: any) {
     }
 }
 
-// function ComparePasswords(){
-//     const passwordCheck = document.querySelector('#password').value;
-//     const repeatPasswordCheck = document.querySelector('#repeatPassword').value;
-    
-//     if (repeatPasswordCheck!= passwordCheck) {
-//         console.log (passwordCheck);
-//     } else {
-//         console.log (passwordCheck);
-//         alert('Your password does not match!')
-//     }
-// }
-
-
-            // // Function to check Whether both passwords
-            // // is same or not.
-            // function checkPassword(form) {
-            //     passwordCheck = form.password1.value;
-            //     password2 = form.password2.value;
-  
-            //     // If password not entered
-            //     if (password1 == '')
-            //         alert ("Please enter Password");
-                      
-            //     // If confirm password not entered
-            //     else if (password2 == '')
-            //         alert ("Please enter confirm password");
-                      
-            //     // If Not same return False.    
-            //     else if (password1 != password2) {
-            //         alert ("\nPassword did not match: Please try again...")
-            //         return false;
-            //     }
-  
-            //     // If same return True.
-            //     else{
-            //         alert("Password Match: Welcome to GeeksforGeeks!")
-            //         return true;
-            //     }
-            // }
