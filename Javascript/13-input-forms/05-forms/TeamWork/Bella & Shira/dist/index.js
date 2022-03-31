@@ -8,20 +8,23 @@ function handleSend(ev) {
         ev.target.elements.secondInput.value = '';
         console.log(Math.floor(firstInput / secondInput));
         var result = document.querySelector('.result');
-        var value = Math.floor(firstInput / secondInput);
+        var value = Math.abs(firstInput / secondInput);
         result.innerHTML = value;
     }
     catch (err) {
         console.log(err);
     }
 }
-function handleLogin(ev) {
+function handleSignUp(ev) {
     try {
         ev.preventDefault();
+        var userName = ev.target.elements.userName.value;
+        var password = ev.target.elements.password.value;
+        var repeatPassword = ev.target.elements.repeatPassword.value;
         var image = document.querySelector('.img');
         var imgValue = ev.target.elements.image.value;
         image.innerHTML = "<img src=" + imgValue + ">";
-        console.log(imgValue);
+        console.log(userName, password, repeatPassword, imgValue);
     }
     catch (err) {
         console.log(err);

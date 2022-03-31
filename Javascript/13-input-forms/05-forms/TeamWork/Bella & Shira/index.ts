@@ -12,7 +12,7 @@ function handleSend(ev: any) {
 
     let result: any = document.querySelector('.result');
     
-        const value = Math.floor(firstInput / secondInput)
+        const value = Math.abs(firstInput / secondInput)
         result.innerHTML = value
     }
     catch (err) {
@@ -20,16 +20,17 @@ function handleSend(ev: any) {
     }
 }
 
-function handleLogin(ev:any){
+
+function handleSignUp(ev:any){
     try{
         ev.preventDefault();
-        
-        let image: HTMLImageElement = document.querySelector('.img');
-        
+        const userName: any = ev.target.elements.userName.value;
+        const password: number = ev.target.elements.password.value;
+        const repeatPassword: number = ev.target.elements.repeatPassword.value;
+        const image: HTMLImageElement = document.querySelector('.img');
         const imgValue = ev.target.elements.image.value;
         image.innerHTML = `<img src=${imgValue}>`
-    
-        console.log(imgValue); 
+        console.log(userName, password, repeatPassword, imgValue); 
     }
     catch(err) {
         console.log(err);

@@ -6,13 +6,14 @@ body {
   width: 100vw;
   height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   background-color: whitesmoke;
+  padding-top: 32px;
 }
 body form {
   width: 27em;
-  height: 27em;
+  max-height: 45em;
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -30,6 +31,18 @@ body form .result {
   padding: 12px;
   border-radius: 5px;
   text-align: center;
+  line-height: 2.4;
+  font-weight: bold;
+  color: #1e75ab;
+  font-size: 20px;
+}
+body form .img {
+  width: 9em;
+  position: relative;
+  margin-bottom: 1em;
+}
+body form .img img {
+  width: 100%;
 }
 body form .heading {
   text-align: center;
@@ -37,9 +50,9 @@ body form .heading {
   font-size: 38px;
   color: #1e75ab;
 }
-body form .reset {
+body form .signIn {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 48px;
   color: #1e75ab;
   font-size: 15px;
 }

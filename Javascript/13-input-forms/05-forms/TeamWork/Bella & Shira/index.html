@@ -11,40 +11,40 @@
 
 <body>
     <form onsubmit="handleSend(event)">
-        
-        <h1 class="heading">Calculate numbers</h1>
-        <input type="number" name="firstInput"  placeholder="First input">
-        <input type="number" name="secondInput"  placeholder="Second input">
-        
-        <button type="submit">Calclate</button>
-        
 
-        <div class="result">
-        </div>
+        <h1 class="heading">Divide numbers</h1>
+        <input type="number" name="firstInput" placeholder="First input" required>
+        <input type="number" name="secondInput" placeholder="Second input" required>
+
+        <button type="submit">Calculate</button>
+
+
+        <div class="result"></div>
         <!-- <a class="reset" href="">Forgot password?</a> -->
     </form>
 
-    <form onsubmit="handleLogin(event)">
-        <h1 class="heading">Sign In</h1>
-        <input type="text" name="userName" id="userName" placeholder="User name">
 
-        <input type="password" name="password" id="password" placeholder="Password">
+    <form onsubmit="handleSignUp(event)">
+        <h1 class="heading">Sign Up</h1>
+        <input type="text" name="userName" placeholder="User name" required>
+
+        <input type="password" name="password" placeholder="Password" required>
         <input type="password" name="repeatPassword" id="repeatPassword" placeholder="Repeat password">
 
-        <input type="url" name="image" id="image" placeholder="Add image url">
+        <input type="url" name="image" placeholder="Add image url" required>
         <div class="img"></div>
 
         <button type="submit">Submit</button>
 
-        <a class="reset" href="">Forgot password?</a>
-       
+        <a class="signIn" href="">Alredy have an account? SIGN IN</a>
+
     </form>
 
 
 
 
 
-<script src="./dist/index.js"></script>
+    <script src="./dist/index.js"></script>
 </body>
 
 </html>
