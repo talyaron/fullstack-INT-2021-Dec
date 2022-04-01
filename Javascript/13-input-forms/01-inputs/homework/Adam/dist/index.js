@@ -1,9 +1,8 @@
-function handleSend(ev) {
+function handleComplete(ev) {
     ev.preventDefault();
     console.log(ev);
     var userName = ev.target.elements.userName.value;
     var password = ev.target.elements.password.value;
-    ev.target.elements.userName.value = '';
-    ev.target.elements.password.value = '';
-    console.log(userName, password);
+    var image = ev.target.elements.image.value;
+    console.log(userName, password, image);
 }

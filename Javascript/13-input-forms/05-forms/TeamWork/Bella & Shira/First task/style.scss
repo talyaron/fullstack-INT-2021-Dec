@@ -6,12 +6,14 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     background-color: whitesmoke;
+    padding-top: 32px;
     form {
         width: 27em;
-        height: 27em;
+        // height: 27em;
+        max-height: 45em;
         display: flex;
         flex-direction: column;
         background-color: rgb(255, 255, 255);
@@ -28,20 +30,28 @@ body {
             padding: 12px;
             border-radius: 5px;
             text-align: center;
+            line-height: 2.4;
+            font-weight: bold;
+            color: rgb(30, 117, 171);
+            font-size: 20px;
         }
-        // .img{
-        //     width: 10px;
-        //     height: 10px;
-        // }
+        .img {
+            width: 9em;
+            position: relative;
+            margin-bottom: 1em;
+            img {
+                width: 100%;
+            }
+        }
         .heading {
             text-align: center;
             margin-bottom: 60px;
             font-size: 38px;
             color: rgb(30, 117, 171);
         }
-        .reset {
+        .signIn {
             text-align: center;
-            margin-top: 60px;
+            margin-top: 48px;
             color: rgb(30, 117, 171);
             font-size: 15px;
         }
