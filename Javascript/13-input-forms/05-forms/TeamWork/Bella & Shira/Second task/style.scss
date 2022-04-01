@@ -12,7 +12,6 @@ body {
     padding-top: 32px;
     form {
         width: 27em;
-        // height: 27em;
         max-height: 45em;
         display: flex;
         flex-direction: column;
@@ -45,16 +44,24 @@ body {
         }
         .heading {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 48px;
+            margin-top: 0;
             font-size: 38px;
-            color: rgb(30, 117, 171);
+            background: linear-gradient(90deg, rgb(97, 61, 193) 0%, rgba(216, 49, 91, 1) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        .signIn,
+        .login,
         .reset {
             text-align: center;
             margin-top: 48px;
-            color: rgb(30, 117, 171);
+            color: #613dc1;
+            text-decoration: none;
             font-size: 15px;
+            span {
+                text-decoration: underline;
+            }
         }
         input {
             height: 2.5em;
@@ -63,24 +70,39 @@ body {
             border-radius: 0.6em;
             border: 1px solid lightgray;
             font-size: 15px;
+            &:nth-last-child(3) {
+                margin-bottom: 2em;
+            }
+        }
+        input:focus {
+            border-color: #613dc1;
+            outline: none;
         }
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
         }
-        #phoneNumber {
-            margin-bottom: 32px;
-        }
         button {
             height: 4em;
-            border-radius: 0.6em;
+            border-radius: 10em;
             border: none;
-            background-color: rgb(30, 117, 171);
+            background: rgb(97, 61, 193);
+            background: linear-gradient(104deg, rgba(97, 61, 193, 1) 0%, rgba(216, 49, 91, 1) 100%);
             color: white;
             padding: 8px 24px;
             font-size: 15px;
             font-weight: normal;
+            box-shadow: 0px 8px 20px rgba(216, 49, 91, 0.1);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            outline: none;
+            &:hover {
+                background-color: #2EE59D;
+                box-shadow: 0px 15px 32px rgba(216, 49, 91, 0.2);
+                color: #fff;
+                transform: translateY(-4px);
+            }
         }
     }
 }
