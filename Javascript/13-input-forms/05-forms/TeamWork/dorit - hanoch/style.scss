@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(216, 200, 170, 0.582);
+    form{
+        border:1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        input{
+            font-size: 15px;
+        }
+        button{
+            font-size: 10px;
+            background-color: rgb(172, 143, 161);
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+    }
+    #login{
+        border:1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        input{
+            font-size: 15px;
+        } 
+        button{
+            font-size: 10px;
+            background-color: rgb(172, 143, 161);
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+    }
+}

@@ -1,12 +1,10 @@
 var root = document.querySelector("#root");
+var login = document.querySelector("#login");
 var signUpPassword = "";
 var result = {};
 function handleSend(ev) {
-    //console.log(ev)
     ev.preventDefault();
     var elements = ev.target.elements;
-    //console.log(elements)()
-    //console.log('first for')
     for (var i = 0; i < elements.length; i++) {
         if (elements[i].name && elements[i].value) {
             result[elements[i].name] = elements[i].value;
@@ -21,7 +19,7 @@ function handleSend(ev) {
     }
 }
 function handleLoginForm() {
-    var html = "<form onsubmit=\"handleSendSignIn(event)\">\n        <input type=\"text\" name=\"name\" id=\"name\" placeholder=\"name\">\n        <input type=\"password\" name=\"pass\" placeholder=\"password\">\n        <button type=\"submit\">SEND</button>\n        </form>";
+    var html = " <div id=\"login\"><form onsubmit=\"handleSendSignIn(event)\">\n        <input type=\"text\" name=\"name\" id=\"name\" placeholder=\"name\">\n        <input type=\"password\" name=\"pass\" placeholder=\"password\">\n        <button type=\"submit\">SEND</button>\n        </form></div>";
     console.log(html);
     root.innerHTML += html;
 }

@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(216, 200, 170, 0.582);
+}
+body form {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+body form input {
+  font-size: 15px;
+}
+body form button {
+  font-size: 10px;
+  background-color: #ac8fa1;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 15px;
+}
+body form button:hover {
+  cursor: pointer;
+}
+body #login {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+body #login input {
+  font-size: 15px;
+}
+body #login button {
+  font-size: 10px;
+  background-color: #ac8fa1;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 15px;
+}
+body #login button:hover {
+  cursor: pointer;
+}

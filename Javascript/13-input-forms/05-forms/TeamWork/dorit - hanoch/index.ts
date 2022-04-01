@@ -1,13 +1,12 @@
 let root:HTMLElement= document.querySelector("#root")
+let login:HTMLElement = document.querySelector("#login")
 let signUpPassword:string = ""
 const result = {};
 function handleSend(ev){
-    //console.log(ev)
+
     ev.preventDefault();
     const elements = ev.target.elements;
    
-    //console.log(elements)()
-  //console.log('first for')
   for (let i = 0; i < elements.length; i++) {
       if (elements[i].name && elements[i].value) {
       result[elements[i].name] = elements[i].value;
@@ -25,11 +24,11 @@ if (result['pass'] === result['repass']){
 }
 
 function handleLoginForm(){
-        let html = `<form onsubmit="handleSendSignIn(event)">
+        let html = ` <div id="login"><form onsubmit="handleSendSignIn(event)">
         <input type="text" name="name" id="name" placeholder="name">
         <input type="password" name="pass" placeholder="password">
         <button type="submit">SEND</button>
-        </form>`
+        </form></div>`
         console.log(html)
         root.innerHTML+= html 
     }
