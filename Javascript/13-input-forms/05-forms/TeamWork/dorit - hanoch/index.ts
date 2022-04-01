@@ -1,5 +1,6 @@
 const result = {};
 function handleSend(ev){
+    console.log(ev)
     ev.preventDefault();
     const elements = ev.target.elements;
     // console.log(elements)
@@ -12,10 +13,11 @@ function handleSend(ev){
 }
 let img = document.querySelector("#root")
 let value = result['img']
-img.innerHTML = `<img src="${value}" width="100px" hi>`
+img.innerHTML = `<img src="${value}" width="100px" height="100px">`
 if (result['pass'] == result['repass']){
     alert('ok')
 }
-console.log(result['img'])
+// console.log(result['img'])
+
 }
 

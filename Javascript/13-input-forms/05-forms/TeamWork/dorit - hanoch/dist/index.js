@@ -1,5 +1,6 @@
 var result = {};
 function handleSend(ev) {
+    console.log(ev);
     ev.preventDefault();
     var elements = ev.target.elements;
     // console.log(elements)
@@ -10,9 +11,9 @@ function handleSend(ev) {
     }
     var img = document.querySelector("#root");
     var value = result['img'];
-    img.innerHTML = "<img src=\"" + value + "\" width=\"100px\" hi>";
+    img.innerHTML = "<img src=\"" + value + "\" width=\"100px\" height=\"100px\">";
     if (result['pass'] == result['repass']) {
         alert('ok');
     }
-    console.log(result['img']);
+    // console.log(result['img'])
 }
