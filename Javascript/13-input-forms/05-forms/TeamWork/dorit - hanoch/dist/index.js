@@ -15,5 +15,7 @@ function handleSend(ev) {
     if (result['pass'] == result['repass']) {
         alert('ok');
     }
-    // console.log(result['img'])
+    var login = document.querySelector(".login");
+    login.innerHTML = "please login";
+    login.innerHTML = "<form onsubmit=\"handleCheck(event)\"> <input type=\"text\" name=\"loginName\" placeholder=\"name\"> <input type=\"password\" name=\"loginPass\" placeholder=\"password\"></form>";
 }

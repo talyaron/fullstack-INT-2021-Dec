@@ -17,7 +17,9 @@ img.innerHTML = `<img src="${value}" width="100px" height="100px">`
 if (result['pass'] == result['repass']){
     alert('ok')
 }
-// console.log(result['img'])
+const login = document.querySelector(".login")
+login.innerHTML = "please login"
+login.innerHTML = `<form onsubmit="handleCheck(event)"> <input type="text" name="loginName" placeholder="name"> <input type="password" name="loginPass" placeholder="password"></form>`
 
 }
 
