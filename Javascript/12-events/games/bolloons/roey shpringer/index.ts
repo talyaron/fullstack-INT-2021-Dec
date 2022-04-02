@@ -1,8 +1,12 @@
 let baloon = document.querySelector(".baloonImg")
 
+const body = document.querySelector("body")
+
 const wrapper = document.querySelector(".wrapper")
 
 let counterDiv = document.querySelector(".counterDiv")
+
+let storeText = document.querySelector(".storeText")
 
 counterDiv.innerHTML = `baloons popped: 0`
 
@@ -63,3 +67,20 @@ function handleClick(ev) {
 }
 
 setInterval(createNewBaloon, 2000)
+
+let store = document.createElement("div")
+let storeH1 = document.createElement("h1")
+storeH1.innerHTML = 'welcome to the store!'
+store.className = 'store'
+
+
+
+function handleStore(ev){
+    const click = ev
+    if(click.isTrusted == true){
+        console.log('hi')
+        body.append(store)
+        store.append(storeH1)
+        storeText.style.pointerEvents = "none";
+    }
+}
