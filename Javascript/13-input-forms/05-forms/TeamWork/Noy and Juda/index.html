@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="dist/style.css"> -->
+    <link rel="stylesheet" href="dist/style.css">
+   
 </head>
 <body>
+<h1>Registration</h1>
+
     <form onsubmit="handleEnter(event)">
         <label for="user" >User name</label>
         <input type="text" id="user" name="user" placeholder="Enter User name">
@@ -21,6 +24,17 @@
 </form>
 
 <div class="details"></div>
+
+<h2>Log in</h2>
+
+<form onsubmit="handleLogIn(event)">
+    <label for="LoginUser" >User name</label>
+    <input type="text" id="LoginUser" name="LoginUser" placeholder="Enter User name">
+    <label for="LoginPass" >Password</label>
+    <input type="password" id="LoginPass" name="LoginPass" placeholder="Enter password">
+  
+   <button type="submit">Log in</button>
+</form>
 
 <script src="dist/app.js"></script>
 </body>
