@@ -1,6 +1,8 @@
 var baloon = document.querySelector(".baloonImg");
+var body = document.querySelector("body");
 var wrapper = document.querySelector(".wrapper");
 var counterDiv = document.querySelector(".counterDiv");
+var storeText = document.querySelector(".storeText");
 counterDiv.innerHTML = "baloons popped: 0";
 function randomLeft() {
     var x = Math.round(Math.random() * 87) + "vw";
@@ -53,3 +55,16 @@ function handleClick(ev) {
     //console.log(baloonPosition)
 }
 setInterval(createNewBaloon, 2000);
+var store = document.createElement("div");
+var storeH1 = document.createElement("h1");
+storeH1.innerHTML = 'welcome to the store!';
+store.className = 'store';
+function handleStore(ev) {
+    var click = ev;
+    if (click.isTrusted == true) {
+        console.log('hi');
+        body.append(store);
+        store.append(storeH1);
+        storeText.style.pointerEvents = "none";
+    }
+}
