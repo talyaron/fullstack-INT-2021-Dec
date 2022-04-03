@@ -15,12 +15,48 @@
         <div class='header'>
             <h3 class='logo'>Taskify</h3>
         </div>
+        <div class='tasksContainer'>
+            <!-- const task = document.querySelector (".tasksContainer") -->
+            <!-- const tasks: Array<object> = []; // Creating Fake Data Base To Hold All new Users -->
+            <!-- append -->
+
+        </div>
+        <!-- responsible for the slide up -->
         <div class='addBtn' onclick='handleAddTask(event)'> + </div>
     </div>
+    <!-- when clicking the add button - overlay slide up with a form -->
+
+
+
+
+    <!-- recieve the data submitted, and push into "data base" array (tasks) -->
+    <form id='newTask' onsubmit='handleTask(event)'>
+        <input type='text' name='heading' placeholder='Task name'>
+        <input type='text' name='description' placeholder='description'>
+        <input type='datetime-local' name='startTime'>
+        <input type='datetime-local' name='endTime'>
+
+        <button type='submit'>Save task</button>
+        <button onclick='handleCancel(event)'>Cancel</button>
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- Sign up -->
-    <!-- <form onsubmit="handleSignUp(event)">
-        <h1 class="heading">Sign Up</h1>
+    <!-- <form onsubmit='handleSignUp(event)">
         <input type="text" name="userName" placeholder="User name" required>
 
         <input type="password" name="password" id="password" placeholder="Password" required>
@@ -33,7 +69,7 @@
 
         <a class="login" href="">Alredy have an account? <span>Login</span></a>
 
-    </form> -->
+    </form>  -->
 
 
     <!-- Login -->
