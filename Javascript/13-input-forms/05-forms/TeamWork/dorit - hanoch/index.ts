@@ -10,6 +10,7 @@ function handleSend(ev){
   for (let i = 0; i < elements.length; i++) {
       if (elements[i].name && elements[i].value) {
       result[elements[i].name] = elements[i].value;
+
     }
     
 }
@@ -29,7 +30,7 @@ function handleLoginForm(){
         <input type="password" name="pass" placeholder="password">
         <button type="submit">SEND</button>
         </form></div>`
-        console.log(html)
+        //console.log(html)
         root.innerHTML+= html 
     }
 

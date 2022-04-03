@@ -20,7 +20,7 @@ body form button {
   font-size: 10px;
   background-color: #ac8fa1;
   border: 1px solid black;
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 15px;
   margin-top: 15px;
 }
@@ -41,7 +41,7 @@ body #login button {
   font-size: 10px;
   background-color: #ac8fa1;
   border: 1px solid black;
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 15px;
   margin-top: 15px;
 }

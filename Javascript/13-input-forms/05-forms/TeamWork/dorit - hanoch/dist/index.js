@@ -20,7 +20,7 @@ function handleSend(ev) {
 }
 function handleLoginForm() {
     var html = " <div id=\"login\"><form onsubmit=\"handleSendSignIn(event)\">\n        <input type=\"text\" name=\"name\" id=\"name\" placeholder=\"name\">\n        <input type=\"password\" name=\"pass\" placeholder=\"password\">\n        <button type=\"submit\">SEND</button>\n        </form></div>";
-    console.log(html);
+    //console.log(html)
     root.innerHTML += html;
 }
 function handleSendSignIn(ev) {
