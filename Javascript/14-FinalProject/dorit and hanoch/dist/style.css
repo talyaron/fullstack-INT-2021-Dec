@@ -1,0 +1,25 @@
+body {
+  text-align: center;
+  background-color: rgba(216, 200, 170, 0.582);
+}
+body form {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+body form input {
+  font-size: 15px;
+}
+body form button {
+  font-size: 10px;
+  background-color: #ac8fa1;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 15px;
+}
+body form button:hover {
+  cursor: pointer;
+}
