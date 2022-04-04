@@ -1,12 +1,6 @@
-// const tasks: Array<object> = []; // Creating Fake Data Base To Hold All new Users
+var tasks = []; // Creating Fake Data Base To Hold All new Users
 function handleTask(event) {
     event.preventDefault();
-    // console.log(event);
-    // const heading: any = event.target.elements.heading.value;
-    // const description: any = event.target.elements.description.value;
-    // const startTime: any = event.target.elements.startTime.value;
-    // const endTime: any = event.target.elements.endTime.value;
-    // console.log(heading, description, startTime, endTime);
     var elements = event.target.elements;
     var result = {};
     for (var i = 0; i < elements.length; i++) {
@@ -16,12 +10,19 @@ function handleTask(event) {
         else if (elements[i].name && elements[i].value) {
             result[elements[i].name] = elements[i].value;
         }
+        var task_1 = "" + result;
+        task_1.push(tasks);
     }
     console.log(result);
     var taskContainer = document.querySelector('.tasksContainer');
     var task = "" + result;
-    taskContainer.innerHTML = task;
-    console.log(taskContainer);
+    task.push(tasks);
+    for (var property in tasks) {
+        console.log(tasks[property]);
+        taskContainer.innerHTML = tasks[property];
+        taskContainer.append(tasks);
+        console.log(tasks);
+    }
 }
 //   <div class='task'>
 //   <h3 class='title'>Task name</h3>
@@ -84,4 +85,3 @@ function handleTask(event) {
 //compare if the datails are match
 //if userName !== loginusername{
 //     return alert("false")
-// }

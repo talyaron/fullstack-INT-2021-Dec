@@ -1,38 +1,39 @@
-// const tasks: Array<object> = []; // Creating Fake Data Base To Hold All new Users
+const tasks: Array < object > = []; // Creating Fake Data Base To Hold All new Users
 
 function handleTask(event: any) {
-    event.preventDefault();
-    // console.log(event);
-    // const heading: any = event.target.elements.heading.value;
-    // const description: any = event.target.elements.description.value;
-    // const startTime: any = event.target.elements.startTime.value;
-    // const endTime: any = event.target.elements.endTime.value;
-    // console.log(heading, description, startTime, endTime);
-  
-    const elements = event.target.elements;
-    const result = {};
-    for (let i = 0; i < elements.length; i++) {
-      if (elements[i].type === 'input') {
-        result[elements[i].name] = elements[i].checked;
-      } else if (elements[i].name && elements[i].value) {
-        result[elements[i].name] = elements[i].value;
-      }
+  event.preventDefault();
+
+  const elements = event.target.elements;
+  const result = {};
+  for (let i = 0; i < elements.length; i++) {
+    if (elements[i].type === 'input') {
+      result[elements[i].name] = elements[i].checked;
+    } else if (elements[i].name && elements[i].value) {
+      result[elements[i].name] = elements[i].value;
     }
-    console.log(result);
-
-    let taskContainer: any = document.querySelector('.tasksContainer');
-
-    const task = `${result}`;
-    taskContainer.innerHTML = task;
-
-    console.log(taskContainer);
+    const task: any = `${result}`;
+    task.push(tasks);
   }
+  console.log(result);
 
+
+  let taskContainer: any = document.querySelector('.tasksContainer');
+
+  const task: any = `${result}`;
+  task.push(tasks);
+
+  for (const property in tasks) {
+    console.log(tasks[property]);
+    taskContainer.innerHTML = tasks[property];
+    taskContainer.append(tasks);
+
+    console.log(tasks);
+  }
+}
 //   <div class='task'>
 //   <h3 class='title'>Task name</h3>
 //   <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.quam autem est.</p>
 // </div>
- 
 
 
 
@@ -55,7 +56,8 @@ function handleTask(event: any) {
 
 
 
-  
+
+
 // function handleSignUp(event: any) {
 //     try {
 //         event.prevententDefault();
@@ -129,4 +131,3 @@ function handleTask(event: any) {
 
 //if userName !== loginusername{
 //     return alert("false")
-// }
