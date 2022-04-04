@@ -2,17 +2,18 @@ body {
   text-align: center;
   background-color: rgba(216, 200, 170, 0.582);
 }
-body form {
+
+form {
   border: 1px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
 }
-body form input {
+form input {
   font-size: 15px;
 }
-body form button {
+form button {
   font-size: 10px;
   background-color: #ac8fa1;
   border: 1px solid black;
@@ -20,6 +21,31 @@ body form button {
   padding: 15px;
   margin-top: 15px;
 }
-body form button:hover {
+form button:hover {
   cursor: pointer;
+}
+
+#managerTasks {
+  border: 1px solid black;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 250px;
+  left: 250px;
+  gap: 15px;
+}
+#managerTasks p {
+  font-size: 15px;
+  position: absolute;
+  top: -50px;
+  left: 10px;
+}
+#managerTasks button {
+  font-size: 10px;
+  background-color: #ac8fa1;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 15px;
 }

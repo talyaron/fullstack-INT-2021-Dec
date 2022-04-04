@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="dist/style.css">
 </head>
 <body>
     <!-- <div id="newitem">
@@ -21,8 +22,16 @@
     <div id="addItemPrice"></div>
     </div> -->
     
-    <div id="root"></div>
-    <button onclick="handleNew(event)"> add an item</button> 
-    <script src="dist/index.js"></script>
+    <div id="root">
+        <h3>Management Page</h3>
+    </div>
+
+    <div id="managerTasks">
+        <p>Please Choose Action</p>
+        <button onclick ="updateItems(event)">Update Items</button>
+        <button id="button2" onclick="handleNew(event)">Add Items</button> 
+        <button onclick="deleteItems(event)">Delete Items</button>
+    </div>
+    <script src="./dist/index.js"></script>
 </body>
 </html>
