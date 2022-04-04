@@ -1,19 +1,22 @@
 var tasks = []; // Creating Fake Data Base To Hold All new Users
 function handleTask(event) {
     event.preventDefault();
-    var elements = event.target;
+    var elements = event.target.elements;
+    console.log(event.target.elements);
     console.log(elements.length);
     var result = {};
     for (var i = 0; i < elements.length; i++) {
-        if (elements[i].type === 'input') {
+        if (elements[i].type === "input") {
             result[elements[i].name] = elements[i].checked;
         }
         else if (elements[i].name && elements[i].value) {
             result[elements[i].name] = elements[i].value;
         }
-        var task = result;
-        tasks.push(task);
+        // const task: any = result;
+        // tasks.push(task);
     }
+    var task = result;
+    tasks.push(task);
     console.log(tasks);
     console.log(result);
     var taskContainer = document.querySelector('.tasksContainer');
@@ -49,7 +52,7 @@ function handleTask(event) {
 //             console.log('false password')
 //             return false;
 //         } else {
-//             users.push(person); // Pushing new user information to fake data base 
+//             users.push(person); // Pushing new user information to fake data base
 //             console.log(password);
 //         }
 //     } catch (err) {
@@ -67,7 +70,7 @@ function handleTask(event) {
 //         users.forEach(userInfo => {
 //             if (userInfo['personUserName'] == loginUserName) {
 //                 if (userInfo['personPassword'] == loginPassword) {
-//                     isConnected = true; 
+//                     isConnected = true;
 //                 }
 //             }
 //         })
