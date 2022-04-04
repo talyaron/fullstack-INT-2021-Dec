@@ -7,5 +7,12 @@ function handle(ev) {
             result[elements[i].name] = elements[i].value;
         }
     }
-    console.log(result);
+    var passOne = ev.target.elements.password.value;
+    var passTwo = ev.target.elements.repassword.value;
+    if (passOne === passTwo) {
+        console.log(result);
+    }
+    else {
+        document.querySelector("#error").innerHTML = '<p>password does not match</p>';
+    }
 }
