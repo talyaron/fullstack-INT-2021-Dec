@@ -50,23 +50,27 @@ function handleNew(ev){
     const myButton:HTMLElement = document.querySelector("#button2")
     myButton.style.backgroundColor="gray"
     root.innerHTML += `<div id="newitem">
-                        <form action="" onsubmit="handleNewProduct(event)">
-                            <input type="text" name="typeName" placeholder="Enter type of item">
-                            <input type="text" name="serialNo" placeholder="Enter serial number of item">
-                            <input type="text" name="description" placeholder="Enter description of item">
-                            <input type="number" name="price" placeholder="Enter a price" >
-                            <input type="text" name="currencty" placeholder="Enter currency">
-                            <input type="file" name="imageFile" placeholder = "Please pick the image of the item">
-                            <button type="submit">SEND</button>
-                        </form>
-                        <p><img id="output" width="200" top="150px" left="550px"/></p>
-                        <p><label for="file" style="cursor: pointer;" onclick="handleHidden(event)">Upload Image</label></p>`
-    root.style.display="flex"                   
-    root.style.flexDirection="column"
-    root.style.position="absolute"
-    root.style.top="250px"
-    root.style.left="400px"
-    root.style.border="1px solid black"
+                            <form action="" onsubmit="handleNewProduct(event)">
+                                <input type="text" name="typeName" placeholder="Enter type of item">
+                                <input type="text" name="serialNo" placeholder="Enter serial number of item">
+                                <input type="text" name="description" placeholder="Enter description of item">
+                                <input type="number" name="price" placeholder="Enter a price" >
+                                <input type="text" name="currencty" placeholder="Enter currency">
+                                <input type="file" name="imageFile" placeholder = "Please pick the image of the item">
+                                <button type="submit">SEND</button>
+                            </form>
+                            <img id="output" width="200"/>
+                        </div>`
+                        
+                        //image.src = URL.createObjectURL(ev.target.files[0]);
+    let newitem:HTMLDivElement=document.querySelector("#newitem")
+    newitem.style.display="flex"                   
+    newitem.style.flexDirection="column"
+    newitem.style.position="absolute"
+    newitem.style.top="250px"
+    newitem.style.left="400px"
+    //newitem.style.border = "1px solid black"
+    //root.style.border="1px solid black"
     //<p><label for="file" style="cursor: pointer;" onclick="handleHidden(event)">Upload Image</label></p>
 }    
 
@@ -74,12 +78,21 @@ function handleNew(ev){
         console.log("we are here")
         ev.preventDefault();
         const details = ev.target.elements
+        console.dir(details)
         for (let i = 0; i < details.length; i++) {
             if (details[i].name && details[i].value) {
-            result[details[i].name] = details[i].value;
+                if(details[i].name == "imageFile"){
+                    result['imageFile']=details['imageFile'].files[0]
+                    console.log(result['imageFile'])
+                }
+            else{
+                 result[details[i].name] = details[i].value;
             }
         }
-   
+        console.log(result["imageFile"])
+        let image:HTMLImageElement = document.getElementById('output');
+        image.src = URL.createObjectURL(result["imageFile"]);
+
         let newProduct:product={
             name:details['typeName'],
             serialNo:details['serailNo'],
@@ -89,8 +102,7 @@ function handleNew(ev){
             Pimage:details['file']
         }
         console.log(newProduct)
-        var image:any = document.getElementById('output');
-	    image.src = URL.createObjectURL(ev.target.files[0]);
+        
     }
 
                         // <p><img id="output" width="200" /></p>
