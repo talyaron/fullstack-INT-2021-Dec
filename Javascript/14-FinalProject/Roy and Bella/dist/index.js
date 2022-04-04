@@ -10,7 +10,7 @@ function handleTask(event) {
     var elements = event.target.elements;
     var result = {};
     for (var i = 0; i < elements.length; i++) {
-        if (elements[i].type === "checkbox") {
+        if (elements[i].type === "input") {
             result[elements[i].name] = elements[i].checked;
         }
         else if (elements[i].name && elements[i].value) {
@@ -18,6 +18,10 @@ function handleTask(event) {
         }
     }
     console.log(result);
+    var taskContainer = document.querySelector('.tasksContainer');
+    var task = "" + result;
+    taskContainer.innerHTML = task;
+    console.log(taskContainer);
 }
 // function handleSignUp(event: any) {
 //     try {
