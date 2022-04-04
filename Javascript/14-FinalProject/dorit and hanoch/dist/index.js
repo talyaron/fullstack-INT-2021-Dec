@@ -53,50 +53,60 @@ function handleNewProduct(ev) {
                 result[details[i].name] = details[i].value;
             }
         }
-        console.log(result["imageFile"]);
-        var image = document.getElementById('output');
-        image.src = URL.createObjectURL(result["imageFile"]);
-        var newProduct = {
-            name: details['typeName'],
-            serialNo: details['serailNo'],
-            description: details['description'],
-            price: details["price"],
-            currency: details['currency'],
-            Pimage: details['file']
-        };
-        console.log(newProduct);
+        // מקודם הקוד היה כאן והפונקציה לא הייתה סגורה. 
     }
-    // <p><img id="output" width="200" /></p>
-    // <p><label for="file" style="cursor: pointer;" onclick="handleHidden(event)">Upload Image</label></p>
-    // <div id="addItemName"></div>
-    // <div id="addItemPrice"></div>
-    // </div>
-    // <button onclick="handleDelete(event)"> delete item</button>`
-    var loadImg = function (event) {
-        var image = document.getElementById('output');
-        image.src = URL.createObjectURL(event.target.files[0]);
+    console.log(result['imageFile']);
+    var image = document.getElementById('output');
+    image.src = URL.createObjectURL(result["imageFile"]);
+    //אם את רוצה להכניס משתנים שאת מקבלת מהמשתמש לאובייקט חדש, ההכרזה רציכה להיות עם ריזאלט.
+    // let newProduct: product = {
+    //     name: result['typeName'],
+    //     serialNo: result['serailNo'],
+    //     description: result['description'],
+    //     price: result["price"],
+    //     currency: result['currency'],
+    //     Pimage: result['file']
+    // }
+    var newProduct = {
+        name: details['typeName'],
+        serialNo: details['serailNo'],
+        description: details['description'],
+        price: details["price"],
+        currency: details['currency'],
+        Pimage: details['file']
     };
-    function handleHidden(ev) {
-        ev.target.hidden = true;
-    }
-    function handleItem1(ev) {
-        console.log(ev);
-        var content = ev.target.value;
-        var div = document.querySelector("#addItemName");
-        div.innerHTML = "<p>" + content + "</p>";
-        ev.target.hidden = true;
-    }
-    function handleItem0(ev) {
-        console.log(ev);
-        var content = ev.target.value;
-        var div = document.querySelector("#addItemPrice");
-        div.innerHTML = "<p>" + content + " \u05E9\"\u05D7</p>";
-        ev.target.hidden = true;
-    }
-    function handleDelete(ev) {
-        var catchItem = document.querySelector("#newitem");
-        console.log(catchItem);
-        catchItem.innerHTML = "";
-        ev.target.hidden = true;
-    }
+    console.log(newProduct);
+}
+// <p><img id="output" width="200" /></p>
+// <p><label for="file" style="cursor: pointer;" onclick="handleHidden(event)">Upload Image</label></p>
+// <div id="addItemName"></div>
+// <div id="addItemPrice"></div>
+// </div>
+// <button onclick="handleDelete(event)"> delete item</button>`
+var loadImg = function (event) {
+    var image = document.getElementById('output');
+    image.src = URL.createObjectURL(event.target.files[0]);
+};
+function handleHidden(ev) {
+    ev.target.hidden = true;
+}
+function handleItem1(ev) {
+    console.log(ev);
+    var content = ev.target.value;
+    var div = document.querySelector("#addItemName");
+    div.innerHTML = "<p>" + content + "</p>";
+    ev.target.hidden = true;
+}
+function handleItem0(ev) {
+    console.log(ev);
+    var content = ev.target.value;
+    var div = document.querySelector("#addItemPrice");
+    div.innerHTML = "<p>" + content + " \u05E9\"\u05D7</p>";
+    ev.target.hidden = true;
+}
+function handleDelete(ev) {
+    var catchItem = document.querySelector("#newitem");
+    console.log(catchItem);
+    catchItem.innerHTML = "";
+    ev.target.hidden = true;
 }
