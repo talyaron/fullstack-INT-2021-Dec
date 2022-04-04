@@ -1,4 +1,4 @@
-const tasks: Array<object> = []; // Creating Fake Data Base To Hold All new Users
+// const tasks: Array<object> = []; // Creating Fake Data Base To Hold All new Users
 
 function handleTask(event: any) {
     event.preventDefault();
@@ -12,7 +12,7 @@ function handleTask(event: any) {
     const elements = event.target.elements;
     const result = {};
     for (let i = 0; i < elements.length; i++) {
-      if (elements[i].type === "input") {
+      if (elements[i].type === 'input') {
         result[elements[i].name] = elements[i].checked;
       } else if (elements[i].name && elements[i].value) {
         result[elements[i].name] = elements[i].value;
@@ -28,6 +28,10 @@ function handleTask(event: any) {
     console.log(taskContainer);
   }
 
+//   <div class='task'>
+//   <h3 class='title'>Task name</h3>
+//   <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.quam autem est.</p>
+// </div>
  
 
 
