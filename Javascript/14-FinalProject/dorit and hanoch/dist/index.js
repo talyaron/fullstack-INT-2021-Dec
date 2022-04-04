@@ -26,23 +26,47 @@ function handleNew(ev) {
     var root = document.querySelector("#root");
     var myButton = document.querySelector("#button2");
     myButton.style.backgroundColor = "gray";
-    root.innerHTML += "<div id=\"newitem\">\n                        <form action=\"\" onsubmit=\"handleNewProduct(event)\">\n                            <input type=\"text\" name=\"typeName\" placeholder=\"Enter type of item\">\n                            <input type=\"text\" name=\"serialNo\" placeholder=\"Enter serial number of item\">\n                            <input type=\"text\" name=\"description\" placeholder=\"Enter dexcription of item\">\n                            <input type=\"number\" name=\"price\" placeholder=\"Enter a price\" >\n                            <input type=\"text\" name=\"currencty\" placeholder=\"Enter currency\">\n                            <input type=\"URL\" name=\"imageItem\" placeholder=\"Enter URL of item image\">\n                            <input type=\"file\" name=\"imageFile\" placeholder = \"Please pick the image of the item\">\n                            <button type=\"submit\">SEND</button>\n                        </form>\n                        <p><img id=\"output\" width=\"200\" /></p>\n                        <p><label for=\"file\" style=\"cursor: pointer;\" onclick=\"handleHidden(event)\">Upload Image</label></p>";
-    root.style.display = "flex";
-    root.style.flexDirection = "column";
-    root.style.position = "absolute";
-    root.style.top = "250px";
-    root.style.left = "400px";
-    root.style.border = "1px solid black";
+    root.innerHTML += "<div id=\"newitem\">\n                            <form action=\"\" onsubmit=\"handleNewProduct(event)\">\n                                <input type=\"text\" name=\"typeName\" placeholder=\"Enter type of item\">\n                                <input type=\"text\" name=\"serialNo\" placeholder=\"Enter serial number of item\">\n                                <input type=\"text\" name=\"description\" placeholder=\"Enter description of item\">\n                                <input type=\"number\" name=\"price\" placeholder=\"Enter a price\" >\n                                <input type=\"text\" name=\"currencty\" placeholder=\"Enter currency\">\n                                <input type=\"file\" name=\"imageFile\" placeholder = \"Please pick the image of the item\">\n                                <button type=\"submit\">SEND</button>\n                            </form>\n                            <img id=\"output\" width=\"200\"/>\n                        </div>";
+    //image.src = URL.createObjectURL(ev.target.files[0]);
+    var newitem = document.querySelector("#newitem");
+    newitem.style.display = "flex";
+    newitem.style.flexDirection = "column";
+    newitem.style.position = "absolute";
+    newitem.style.top = "250px";
+    newitem.style.left = "400px";
+    //newitem.style.border = "1px solid black"
+    //root.style.border="1px solid black"
+    //<p><label for="file" style="cursor: pointer;" onclick="handleHidden(event)">Upload Image</label></p>
 }
 function handleNewProduct(ev) {
     console.log("we are here");
     ev.preventDefault();
     var details = ev.target.elements;
+    console.dir(details);
     for (var i = 0; i < details.length; i++) {
         if (details[i].name && details[i].value) {
-            result[details[i].name] = details[i].value;
+            if (details[i].name == "imageFile") {
+                result['imageFile'] = details['imageFile'].files[0];
+                console.log(result['imageFile']);
+            }
+            else {
+                result[details[i].name] = details[i].value;
+            }
         }
+        // מקודם הקוד היה כאן והפונקציה לא הייתה סגורה. 
     }
+    console.log(result['imageFile']);
+    var image = document.getElementById('output');
+    image.src = URL.createObjectURL(result["imageFile"]);
+    //אם את רוצה להכניס משתנים שאת מקבלת מהמשתמש לאובייקט חדש, ההכרזה רציכה להיות עם ריזאלט.
+    // let newProduct: product = {
+    //     name: result['typeName'],
+    //     serialNo: result['serailNo'],
+    //     description: result['description'],
+    //     price: result["price"],
+    //     currency: result['currency'],
+    //     Pimage: result['file']
+    // }
     var newProduct = {
         name: details['typeName'],
         serialNo: details['serailNo'],

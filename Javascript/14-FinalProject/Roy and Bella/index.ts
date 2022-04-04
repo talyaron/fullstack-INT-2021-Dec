@@ -1,25 +1,46 @@
+
+
 const tasks: Array<object> = []; // Creating Fake Data Base To Hold All new Users
 
 function handleTask(event: any) {
-    event.preventDefault();
-    // console.log(event);
-    // const heading: any = event.target.elements.heading.value;
-    // const description: any = event.target.elements.description.value;
-    // const startTime: any = event.target.elements.startTime.value;
-    // const endTime: any = event.target.elements.endTime.value;
-    // console.log(heading, description, startTime, endTime);
-  
-    const elements = event.target.elements;
-    const result = {};
-    for (let i = 0; i < elements.length; i++) {
-      if (elements[i].type === "checkbox") {
-        result[elements[i].name] = elements[i].checked;
-      } else if (elements[i].name && elements[i].value) {
-        result[elements[i].name] = elements[i].value;
-      }
+  event.preventDefault();
+
+  const elements = event.target.elements;
+  console.log(event.target.elements);
+  console.log(elements.length);
+
+  const result = {};
+  for (let i = 0; i < elements.length; i++) {
+    if (elements[i].type === "input") {
+      result[elements[i].name] = elements[i].checked;
+    } else if (elements[i].name && elements[i].value) {
+      result[elements[i].name] = elements[i].value;
     }
-    console.log(result);
+    // const task: any = result;
+    // tasks.push(task);
   }
+  const task: any = result;
+  tasks.push(task);
+  console.log(tasks);
+  console.log(result);
+
+
+  let taskContainer: any = document.querySelector('.tasksContainer');
+  console.log(taskContainer);
+
+
+  // for (const property in tasks) {
+  //   console.log(tasks[property]);
+  //   taskContainer.innerHTML = tasks[property];
+  //   taskContainer.append(tasks);
+
+  //   console.log(tasks);
+  // }
+}
+//   <div class='task'>
+//   <h3 class='title'>Task name</h3>
+//   <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.quam autem est.</p>
+// </div>
 
 
 
@@ -42,7 +63,8 @@ function handleTask(event: any) {
 
 
 
-  
+
+
 // function handleSignUp(event: any) {
 //     try {
 //         event.prevententDefault();
@@ -65,7 +87,7 @@ function handleTask(event: any) {
 //             console.log('false password')
 //             return false;
 //         } else {
-//             users.push(person); // Pushing new user information to fake data base 
+//             users.push(person); // Pushing new user information to fake data base
 //             console.log(password);
 //         }
 
@@ -89,7 +111,7 @@ function handleTask(event: any) {
 //         users.forEach(userInfo => {
 //             if (userInfo['personUserName'] == loginUserName) {
 //                 if (userInfo['personPassword'] == loginPassword) {
-//                     isConnected = true; 
+//                     isConnected = true;
 //                 }
 //             }
 //         })
@@ -116,4 +138,3 @@ function handleTask(event: any) {
 
 //if userName !== loginusername{
 //     return alert("false")
-// }

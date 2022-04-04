@@ -16,30 +16,40 @@
             <h3 class='logo'>Taskify</h3>
         </div>
         <div class='tasksContainer'>
+            <!-- <div class='task'>
+                <h3 class='title'>Task name</h3>
+                <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.quam autem est.</p>
+            </div> -->
             <!-- const task = document.querySelector (".tasksContainer") -->
             <!-- const tasks: Array<object> = []; // Creating Fake Data Base To Hold All new Users -->
             <!-- append -->
-
         </div>
         <!-- responsible for the slide up -->
+        <!-- when clicking the add button - overlay slide up with a form -->
         <div class='addBtn' onclick='handleAddTask(event)'> + </div>
+
+
+        <!-- recieve the data submitted, and push into "data base" array (tasks) -->
+        <form id='newTask' onsubmit='handleTask(event)'>
+            <label for="heading">Task title</label>
+            <input type='text' name='heading' placeholder='Task name'>
+            <label for="description">Task description</label>
+            <input type='text' name='description' placeholder='description'>
+            <label for="startTime">Start time</label>
+            <input type='datetime-local' name='startTime'>
+            <label for="endTime">End time</label>
+            <input type='datetime-local' name='endTime'>
+
+            <button type='submit' id="saveBtn">Save task</button>
+            <div id="cancelBtn" onclick='handleCancel(event)'>Cancel</div>
+
+        </form>
     </div>
-    <!-- when clicking the add button - overlay slide up with a form -->
 
 
 
 
-    <!-- recieve the data submitted, and push into "data base" array (tasks) -->
-    <form id='newTask' onsubmit='handleTask(event)'>
-        <input type='text' name='heading' placeholder='Task name'>
-        <input type='text' name='description' placeholder='description'>
-        <input type='datetime-local' name='startTime'>
-        <input type='datetime-local' name='endTime'>
 
-        <button type='submit' id="saveBtn">Save task</button>
-        <button id="cancelBtn" onclick='handleCancel(event)'>Cancel</button>
-
-    </form>
 
 
 
