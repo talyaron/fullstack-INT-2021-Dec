@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/style.css">
+</head>
+
+<body>
+
+    <!-- Sign up -->
+    <form onsubmit="handleSignUp(event)">
+        <h1 class="heading">Sign Up</h1>
+        <input type="text" name="userName" placeholder="User name" required>
+
+        <input type="password" name="password" id="password" placeholder="Password" required>
+        <input type="password" name="repeatPassword" id="repeatPassword" placeholder="Repeat password">
+
+        <input type="url" name="image" placeholder="Add image url" required>
+        <div class="img"></div>
+
+        <button type="submit">Sign up</button>
+
+        <a class="login" href="">Alredy have an account? <span>Login</span></a>
+
+    </form>
+
+
+    <!-- Login -->
+    <form onsubmit="handleLogin(event)">
+
+        <h1 class="heading">Login</h1>
+        <input type="text" name="loginUserName" placeholder="User name" required>
+        <input type="password" name="loginPassword" placeholder="Password" required>
+
+        <button type="submit">Login</button>
+
+
+        <!-- <div class="result"></div> -->
+        <a class="reset" href="">Forgot password?</a>
+    </form>
+
+
+
+
+    <script src="./dist/index.js"></script>
+</body>
+
+</html>

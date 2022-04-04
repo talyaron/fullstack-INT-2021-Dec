@@ -10,7 +10,7 @@
 </head>
 
 <body>
-
+<form onsubmit="checkThePassword(event)">
     <label for="sifnMeUP">
         <h1>Sign Up</h1>
     </label>
@@ -28,16 +28,16 @@
         <h1>Sign in with the Username and password you signed up with</h1>
     </label>
     <input type="text" name="userNameLogin" id="userNameLoginF" placeholder="User Name" onchange="handleGetText(event)">
-    <input type="password" name="passwordLogin" id="passwordLoginF" placeholder="User Password"
+    <input type="password" name="passwordLogin" id="passwordLoginF" placeholder="Confirm Password"
         onchange="handleGetText(event)">
-    <button type="submit" name="loginBtn" id="loginBtnF" onclick="checkThePassword(event)">Login</button>
+    <button type="submit" name="loginBtn" id="loginBtnF">Submit</button>
 
     <label for="file">
         <h1>DOM Fileupload Object Example</h1>
     </label>
     <input type="file" name="file" id="file" onclick="uploadFile(event)" class="fileme">
 
-
+</form>
 
     <div id="userName"></div>
     <div id="password"></div>

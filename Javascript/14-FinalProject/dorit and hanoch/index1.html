@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/style.css">
+</head>
+<body>
+    <!-- <div id="newitem">
+    <form action="" >
+        <input type="text" name="typeName" placeholder="enter type of item" onchange="handleItem1(event)" >
+        <input type="file" onchange="loadImg(event)" id="file" style="display: none;">
+        <p><img id="output" width="200" /></p>
+        <p><label for="file" style="cursor: pointer;" onclick="handleDisplay(event)">Upload Image</label></p>
+        <input type="number" name="price" placeholder="inter a price" onchange="handleItem0(event)" >
+
+    </form>
+    
+    <div id="addItemName"></div>
+    <div id="addItemPrice"></div>
+    </div> -->
+    
+    <div id="root">
+        <h3>Management Page</h3>
+    </div>
+
+    <div id="managerTasks">
+        <p>Please Choose Action</p>
+        <button onclick ="updateItems(event)">Update Items</button>
+        <button id="button2" onclick="handleNew(event)">Add Items</button> 
+        <button onclick="deleteItems(event)">Delete Items</button>
+    </div>
+    <script src="./dist/index.js"></script>
+</body>
+</html>

@@ -1,19 +1,19 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background-color: palevioletred;
 }
 
-.wrapper{
+.wrapper {
     position: relative;
     height: 100vh;
     overflow: hidden;
 }
 
-.baloonImg{
+.baloonImg {
     position: absolute;
     width: 60px;
     height: 100px;
@@ -21,14 +21,34 @@ body{
     transition: all 8s;
 }
 
-.boomImg{
+.boomImg {
     position: absolute;
     width: 70px;
     height: 70px;
 }
 
-.counterDiv{
+.counterDiv {
     position: absolute;
     bottom: 0;
     font-size: 30px;
+    padding: 10px;
+    pointer-events: none;
+}
+
+.storeText {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 30px;
+    margin: 0 20px 10px 0px;
+    background-color: white;
+}
+
+.store {
+    position: absolute;
+    top: 50%;
+    left: 37%;
+    background-color: black;
+    color: white;
+    font-size: 15px;
 }

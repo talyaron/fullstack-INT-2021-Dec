@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+header {
+    border: 1px solid black;
+
+    h1 {
+        margin: 1rem;
+        text-align: center;
+    }
+}
+
+.popupback {
+    position: absolute;
+    background-color: rgba( #000000, 0.9);
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    .popup {
+        position: absolute;
+        width: 30vw;
+        height: 30vh;
+        top: 30%;
+        left: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        transform: translate(-50%);
+        opacity: 1.5;
+        background-color: rgb(14, 9, 73);
+        border-radius: 1rem;
+        color: antiquewhite;
+        outline: 2px ridge antiquewhite;
+        outline-offset: -1rem;
+        box-shadow:inset 0 0 0.5rem white,0 0 0.5rem white;
+        .username{
+            position: relative;
+            margin: 1rem 0 0.5rem;
+            text-align: center;
+            outline: antiquewhite 2px solid;
+            border-radius: 1rem;
+            transition: all(200ms);
+        }
+        .password {
+            text-align: center;
+            outline: antiquewhite 2px solid;
+            border-radius: 1rem;
+        }
+
+        .submitpopup {
+            margin: 1rem auto 0;
+            width: fit-content;
+            font-size: 1.3rem;
+            background-color: transparent;
+            border: none ;
+            color: antiquewhite;
+            cursor: pointer;
+        }
+    }
+}
+
+@keyframes wrong-pass-user{
+    0%{transform: translateX(-2%);}
+    50%{transform: translateX(-1%);}
+    100%{transform: translateX(0);}
+}
+
+main {
+    margin-top: 1rem;
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 90vw;
+        height: 40vh;
+
+        #myform {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            width: 30vw;
+            border: solid 2px rgb(14, 9, 73);
+            padding: 1rem 0;
+            border-radius: 2rem;
+
+            h2 {
+                color: rgb(14, 9, 73);
+            }
+
+            #upload {
+                display: none;
+            }
+
+            .fa-cloud-upload {
+                font-size: 2rem;
+                color: rgb(14, 9, 73);
+            }
+
+            .numberarea {
+                width: 10vw;
+                height: 2rem;
+                border-radius: 1.4rem;
+                text-align: center;
+
+                &::placeholder {
+                    text-align: center;
+                }
+            }
+
+            .btn {
+                height: 2rem;
+                width: 8vw;
+                background-color: rgb(14, 9, 73);
+                color: antiquewhite;
+                border: none;
+                border-radius: 10px;
+                outline: solid 2px antiquewhite;
+                box-shadow: 0 0 5px black, 0 0 15px rgb(14, 9, 73);
+            }
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            width: 30vw;
+            height: 30vh;
+            border: solid 2px black;
+            border-radius: 1rem;
+            padding: 0 0 1rem;
+
+            .img {
+                border-top-right-radius: 4%;
+                border-top-left-radius: 4%;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/style.css">
+    <title>Forms</title>
+</head>
+<body>
+    <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png" alt="" srcset="" id="userPhoto">
+    <div class="signUp">
+        <form onsubmit="signUp(event)">
+        <H1>Sign Up zoom task</H1>
+        <label for="firstName">First Name</label>
+       <input type="text" name="firstName" id="firstName">
+       <label for="lastName">Last Name</label>
+       <input type="text" name="lastName" id="lastName">
+       <label for="email">Email</label>
+       <input type="text" name="email" id="email">
+       <label for="mobilePhone">Mobile Phone</label>
+       <input type="number" name="mobilePhone" id="mobilePhone">
+       <!-- <label for="photoURL">URL Photo</label>
+       <input type="url" name="photoURL" id="photoURL">    -->
+
+       <label for="photoURL">URL Photo</label>
+       <input type="file" name="photoURL" id="photoURL" accept="image/png, image/jpeg">   
+
+       <label for="userName">User Name</label>
+       <input type="userName" name="UserName" id="UserName">
+       <label for="password">Password</label>
+       <input type="password" name="password" id="password">
+       <label for="confirmPassword">Confirm Password</label>
+       <input type="password" name="confirmPassword" id="confirmPassword">
+       <input type="checkbox" name="policy" id="policy"><label for="policy">confirm site policy:</label>
+       <button type="submit">Sign Up</button>
+       <div id="signUpMsg"></div>
+    </form>
+  
+    </div>
+
+    <div class="login">
+        <form onsubmit="handleLogin(event)">
+        <H1>Login</H1>
+        <label for="userName">User Name</label>
+        <input type="userName" name="userName" id="LoginUserName">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="LoginPassword">
+        <button>Login</button>
+        <div id="loginMsg"></div>
+    </form>
+    </div>
+
+    <script src="./dist/index.js"></script>
+</body>
+</html>
