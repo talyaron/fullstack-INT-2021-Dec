@@ -1,28 +1,29 @@
 var tasks = []; // Creating Fake Data Base To Hold All new Users
 function handleTask(event) {
     event.preventDefault();
-    var elements = event.target.elements;
+    var elements = event.target;
+    console.log(elements.length);
     var result = {};
-    for (var i = 0; i < elements.length; i++) {
+    for (var i = 0; i < 1; i++) {
         if (elements[i].type === 'input') {
             result[elements[i].name] = elements[i].checked;
         }
         else if (elements[i].name && elements[i].value) {
             result[elements[i].name] = elements[i].value;
         }
-        var task_1 = "" + result;
-        task_1.push(tasks);
+        var task = result;
+        tasks.push(task);
     }
+    console.log(tasks);
     console.log(result);
     var taskContainer = document.querySelector('.tasksContainer');
-    var task = "" + result;
-    task.push(tasks);
-    for (var property in tasks) {
-        console.log(tasks[property]);
-        taskContainer.innerHTML = tasks[property];
-        taskContainer.append(tasks);
-        console.log(tasks);
-    }
+    console.log(taskContainer);
+    // for (const property in tasks) {
+    //   console.log(tasks[property]);
+    //   taskContainer.innerHTML = tasks[property];
+    //   taskContainer.append(tasks);
+    //   console.log(tasks);
+    // }
 }
 //   <div class='task'>
 //   <h3 class='title'>Task name</h3>
