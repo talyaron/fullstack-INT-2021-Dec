@@ -8,7 +8,7 @@ function handleTask(event: any) {
   const elements = event.target;
   console.log(elements.length);
   const result = {};
-  for (let i = 0; i < 1; i++) {
+  for (let i = 0; i < elements.length; i++) {
     if (elements[i].type === 'input') {
       result[elements[i].name] = elements[i].checked;
     } else if (elements[i].name && elements[i].value) {
