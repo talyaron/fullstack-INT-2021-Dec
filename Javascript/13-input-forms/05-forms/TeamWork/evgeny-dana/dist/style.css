@@ -1,0 +1,26 @@
+body {
+  height: 100vh;
+}
+body .Server_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body .Server_wrapper .input_fields {
+  background-color: aqua;
+  height: 10rem;
+  width: 20rem;
+}
+body .Server_wrapper .display_card {
+  background-color: grey;
+  height: 13rem;
+  width: 35rem;
+  display: flex;
+}
+body .Server_wrapper .display_card #image_output {
+  width: 375px;
+  border: solid black;
+  background-position: center;
+  background-size: cover;
+}
