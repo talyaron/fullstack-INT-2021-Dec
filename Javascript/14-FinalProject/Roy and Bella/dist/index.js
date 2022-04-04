@@ -1,4 +1,4 @@
-var tasks = []; // Creating Fake Data Base To Hold All new Users
+// const tasks: Array<object> = []; // Creating Fake Data Base To Hold All new Users
 function handleTask(event) {
     event.preventDefault();
     // console.log(event);
@@ -10,7 +10,7 @@ function handleTask(event) {
     var elements = event.target.elements;
     var result = {};
     for (var i = 0; i < elements.length; i++) {
-        if (elements[i].type === "checkbox") {
+        if (elements[i].type === 'input') {
             result[elements[i].name] = elements[i].checked;
         }
         else if (elements[i].name && elements[i].value) {
@@ -18,7 +18,15 @@ function handleTask(event) {
         }
     }
     console.log(result);
+    var taskContainer = document.querySelector('.tasksContainer');
+    var task = "" + result;
+    taskContainer.innerHTML = task;
+    console.log(taskContainer);
 }
+//   <div class='task'>
+//   <h3 class='title'>Task name</h3>
+//   <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.quam autem est.</p>
+// </div>
 // function handleSignUp(event: any) {
 //     try {
 //         event.prevententDefault();
