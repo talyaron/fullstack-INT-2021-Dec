@@ -53,14 +53,13 @@ function handleNew(ev){
                         <form action="" onsubmit="handleNewProduct(event)">
                             <input type="text" name="typeName" placeholder="Enter type of item">
                             <input type="text" name="serialNo" placeholder="Enter serial number of item">
-                            <input type="text" name="description" placeholder="Enter dexcription of item">
+                            <input type="text" name="description" placeholder="Enter description of item">
                             <input type="number" name="price" placeholder="Enter a price" >
                             <input type="text" name="currencty" placeholder="Enter currency">
-                            <input type="URL" name="imageItem" placeholder="Enter URL of item image">
                             <input type="file" name="imageFile" placeholder = "Please pick the image of the item">
                             <button type="submit">SEND</button>
                         </form>
-                        <p><img id="output" width="200" /></p>
+                        <p><img id="output" width="200" top="150px" left="550px"/></p>
                         <p><label for="file" style="cursor: pointer;" onclick="handleHidden(event)">Upload Image</label></p>`
     root.style.display="flex"                   
     root.style.flexDirection="column"
@@ -68,6 +67,7 @@ function handleNew(ev){
     root.style.top="250px"
     root.style.left="400px"
     root.style.border="1px solid black"
+    //<p><label for="file" style="cursor: pointer;" onclick="handleHidden(event)">Upload Image</label></p>
 }    
 
     function handleNewProduct(ev){
@@ -89,6 +89,8 @@ function handleNew(ev){
             Pimage:details['file']
         }
         console.log(newProduct)
+        var image:any = document.getElementById('output');
+	    image.src = URL.createObjectURL(ev.target.files[0]);
     }
 
                         // <p><img id="output" width="200" /></p>
