@@ -5,3 +5,7 @@ body {
   align-items: center;
   flex-direction: column;
 }
+body #error {
+  color: red;
+  text-transform: uppercase;
+}
