@@ -25,10 +25,6 @@ body {
         text-align: center;
         font-size: 32px;
         line-height: 1;
-        // background: linear-gradient(90deg, rgb(97, 61, 193) 0%, rgba(216, 49, 91, 1) 100%);
-        // -webkit-background-clip: text;
-        // background-clip: text;
-        // -webkit-text-fill-color: transparent;
         position: absolute;
         bottom: 1.4em;
         right: 1em;
@@ -64,13 +60,40 @@ body {
         padding: 1.4em;
         .task {
             width: 21em;
-            max-height: 6em;
+            max-height: 10em;
             padding: 1em;
             border-radius: 8px;
             border: 1px solid lightgray;
             background-color: rgb(255, 255, 255);
             box-sizing: border-box;
             margin: 0.4em;
+            position: relative;
+            .heading {
+                font-size: 1.2em;
+                margin-bottom: 0.8em;
+                font-weight: 600;
+            }
+            .description,
+            .startTime {
+                font-size: 0.9em;
+                color: gray;
+                margin-bottom: 0.4em;
+                &:nth-last-child(2) {
+                    margin-bottom: 0;
+                    color: black;
+                }
+            }
+            .description {
+                max-width: 28ch;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            img {
+                position: absolute;
+                left: 18.5em;
+                top: 2.5em;
+            }
         }
     }
 }

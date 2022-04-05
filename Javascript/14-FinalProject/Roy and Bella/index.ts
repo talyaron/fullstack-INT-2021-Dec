@@ -18,7 +18,7 @@ function handleTask(event: any) {
 // Appending new tasks into the tasks container.
   task.innerHTML = `<div class='heading'>${heading}</div>
     <div class='description'>${description}</div>
-    <div class='startTime'>${startTime}</div> 
+    <div class='startTime'>Scheduled to: ${startTime}</div> 
    <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>`;
   console.log(task);
   taskContainer.append(task);
