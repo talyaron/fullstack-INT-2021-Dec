@@ -95,7 +95,7 @@ let i: any = 0;
 
 for (i = 0; i < arrayOfProducts.length; i++) {
   container.innerHTML += '<div id="product"></div>';
-  //   console.log(`hey${container}`)
+    console.log(`hey${container}`)
 }
 
 document.body.appendChild(container);
@@ -108,6 +108,7 @@ arrayOfProducts.forEach((product) => {
   newDivProduct.setAttribute("height", "228");
   newDivProduct.setAttribute("alt", "divOfProduct");
   newDivProduct.setAttribute("id", "divProduct");
+  newDivProduct.setAttribute("class", "imgProduct")
   document.body.appendChild(newDivProduct);
 
   // Create the add to cart btn
@@ -156,7 +157,7 @@ arrayOfProducts.forEach((product) => {
   imgProduct.setAttribute("height", "200");
   imgProduct.setAttribute("alt", "imgOfProduct");
   document.body.appendChild(imgProduct);
-  imgProduct.setAttribute("id", "imgProduct");
+  imgProduct.setAttribute("class", "imgProduct");
 
   // Create the p description of product
   const descriptionProduct = document.createElement("p");
@@ -176,7 +177,7 @@ arrayOfProducts.forEach((product) => {
   priceOfProduct.appendChild(price);
   const priOfProducts = document.getElementById("divProduct");
   priOfProducts.appendChild(priceOfProduct);
-  priOfProducts.setAttribute("class", "priceMe");
+  priOfProducts.setAttribute("class", "imgProduct");
 
   //   console.log(price);
 });

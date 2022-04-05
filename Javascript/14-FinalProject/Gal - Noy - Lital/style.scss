@@ -1,251 +1,251 @@
-// #navbar {
+// // #navbar {
+// //     overflow: hidden;
+// //     background-color: rgb(10, 10, 10);
+// //     width: 100vw;
+
+
+// //     a {
+// //         float: left;
+// //         color: #f2f2f2;
+// //         text-align: center;
+// //         padding: 14px;
+// //         text-decoration: none;
+// //         font-size: 17px;
+// //         font-family: Arial, Helvetica, sans-serif;
+
+
+// //     }
+// // }
+
+// // .nav-logo {
+// //     display: flex;
+
+// //     img {
+// //         width: 80px;
+// //         height: 30px;
+
+// //     }
+// // }
+
+// // .header {
+// //     background-color: rgb(159, 68, 244);
+// //     width: 100vw;
+// //     height: 100px;
+// //     display: flex;
+// //     position: relative;
+
+// //     h1 {
+// //         font-size: 30px;
+// //         font-family: Arial, Helvetica, sans-serif;
+// //         position: absolute;
+// //         margin-left: 80px;
+// //         margin-top: 22px;
+// //         text-decoration-line: underline;
+// //     }
+
+// //     .nabar-small {
+// //         position: sticky;
+
+// //         a {
+// //             float: left;
+// //             color: #f2f2f2;
+// //             text-align: center;
+// //             padding: 14px;
+// //             text-decoration: none;
+// //             font-size: 15px;
+// //             font-family: Arial, Helvetica, sans-serif;
+// //             margin-left: 70px;
+// //             margin-top: 60px;
+// //         }
+// //     }
+
+
+// // }
+
+// // .bigProduct {
+// //     width: 800px;
+// //     height: 300px;
+// //     background-color: rgb(255, 255, 255);
+// //     margin: auto;
+// //     position: relative;
+// //     margin-bottom: 15px;
+// //     margin-top: 15px;
+
+
+// //     img {
+// //         width: 60%;
+// //         height: 100%;
+// //         position: absolute;
+// //         padding: 10px;
+
+// //     }
+
+// //     h2 {
+// //         font-size: 40px;
+// //         color: black;
+// //         position: absolute;
+// //         margin-left: 480px;
+// //         font-family: 'Segoe UI';
+// //         font-weight: bold;
+// //         text-align: center;
+
+// //     }
+
+// //     p {
+// //         color: black;
+// //         position: absolute;
+// //         margin-left: 480px;
+// //         margin-top: 125px;
+// //         font-family: 'Segoe UI';
+// //         font-weight: lighter;
+// //         text-align: center;
+// //         font-size: 18px;
+// //         padding: 10px;
+
+// //     }
+// // }
+
+// // .containerOfProducts {
+
+// //     background-color: rgb(255, 255, 255);
+// //     width: 100vw;
+// //     height: 600px;
+// //     display: flex;
+// //     flex-direction: column;
+// //     flex-wrap: wrap;
+// //     flex-flow: column wrap;
+// //     justify-content: space-between;
+// //     align-items: stretch;
+// //     align-content: space-evenly;
+// //     column-gap: 20px;
+// //     padding: 20px;
+
+// //     .product {
+// //         background-color: rgb(255, 255, 255);
+// //         height: 280px;
+// //         align-self: auto;
+
+// //     }
+
+// //     img {
+// //         width: 300px;
+// //         height: 200px;
+// //     }
+
+// //     h3 {
+// //         color: black;
+// //         font-family: 'Segoe UI';
+// //         font-size: 15px;
+// //         font-weight: lighter;
+// //     }
+
+// //     h2 {
+// //         font-size: 30px;
+// //         color: black;
+// //         position: absolute;
+// //         margin-left: 500px;
+// //         font-family: Arial, Helvetica, sans-serif;
+
+// //     }
+
+// //     .price {
+// //         display: flex;
+// //         flex-direction: row;
+// //         justify-content: center;
+// //         align-items: center;
+// //         position: absolute;
+// //         margin-left: o;
+
+// //         p {
+// //             font-family: 'Segoe UI';
+// //             font-size: 14px;
+// //             font-weight: lighter;
+// //             position: absolute;
+// //             margin-left: 35px;
+// //             margin-top: 18px;
+// //             color: rgba(10, 10, 10, 0.541);
+// //         }
+// //     }
+// // }
+
+// .btnaddToCart {
+//     display: block;
+//     padding: 0.5em 1em 0.5em 1em;
+//     border-radius: 100px;
+//     border: none;
+//     font-size: 1em;
+//   position: relative;
+//     background: rgb(235, 68, 244);
+
+//     ;
+//     cursor: pointer;
+//     height: 3em;
+//     width: 6em;
 //     overflow: hidden;
-//     background-color: rgb(10, 10, 10);
-//     width: 100vw;
-
-
-//     a {
-//         float: left;
-//         color: #f2f2f2;
-//         text-align: center;
-//         padding: 14px;
-//         text-decoration: none;
-//         font-size: 17px;
-//         font-family: Arial, Helvetica, sans-serif;
-
-
-//     }
+//     transition: transform 0.1s;
+//     z-index: 1;
 // }
 
-// .nav-logo {
-//     display: flex;
-
-//     img {
-//         width: 80px;
-//         height: 30px;
-
-//     }
+// .btnaddToCart:hover {
+//     transform: scale(1.1);
 // }
 
-// .header {
-//     background-color: rgb(159, 68, 244);
-//     width: 100vw;
-//     height: 100px;
-//     display: flex;
+// #btnDone {
+//     background: #be2edd;
 //     position: relative;
+//     width: 100%;
+//     top: 0;
+//     left: 0;
+//     transition: transform 0.3s ease;
 
-//     h1 {
-//         font-size: 30px;
-//         font-family: Arial, Helvetica, sans-serif;
-//         position: absolute;
-//         margin-left: 80px;
-//         margin-top: 22px;
-//         text-decoration-line: underline;
-//     }
-
-//     .nabar-small {
-//         position: sticky;
-
-//         a {
-//             float: left;
-//             color: #f2f2f2;
-//             text-align: center;
-//             padding: 14px;
-//             text-decoration: none;
-//             font-size: 15px;
-//             font-family: Arial, Helvetica, sans-serif;
-//             margin-left: 70px;
-//             margin-top: 60px;
-//         }
-//     }
-
-
+//     transform: translate(-110%) skew(-40deg);
 // }
 
-// .bigProduct {
-//     width: 800px;
-//     height: 300px;
-//     background-color: rgb(255, 255, 255);
-//     margin: auto;
-//     position: relative;
-//     margin-bottom: 15px;
-//     margin-top: 15px;
+// body{
 
-
-//     img {
-//         width: 60%;
-//         height: 100%;
-//         position: absolute;
-//         padding: 10px;
-
-//     }
-
-//     h2 {
-//         font-size: 40px;
-//         color: black;
-//         position: absolute;
-//         margin-left: 480px;
-//         font-family: 'Segoe UI';
-//         font-weight: bold;
-//         text-align: center;
-
-//     }
-
-//     p {
-//         color: black;
-//         position: absolute;
-//         margin-left: 480px;
-//         margin-top: 125px;
-//         font-family: 'Segoe UI';
-//         font-weight: lighter;
-//         text-align: center;
-//         font-size: 18px;
-//         padding: 10px;
-
-//     }
-// }
-
-// .containerOfProducts {
-
-//     background-color: rgb(255, 255, 255);
 //     width: 100vw;
-//     height: 600px;
+//     height: 100vh;
+//     background-color: #ffffff;
 //     display: flex;
 //     flex-direction: column;
 //     flex-wrap: wrap;
 //     flex-flow: column wrap;
 //     justify-content: space-between;
-//     align-items: stretch;
 //     align-content: space-evenly;
 //     column-gap: 20px;
 //     padding: 20px;
+//     position: relative;
 
-//     .product {
-//         background-color: rgb(255, 255, 255);
+//     #containerOfProducts {
+
+//         background-color: rgb(178, 49, 49);
 //         height: 280px;
 //         align-self: auto;
-
-//     }
-
-//     img {
-//         width: 300px;
-//         height: 200px;
-//     }
-
-//     h3 {
-//         color: black;
-//         font-family: 'Segoe UI';
-//         font-size: 15px;
-//         font-weight: lighter;
-//     }
-
-//     h2 {
-//         font-size: 30px;
-//         color: black;
+//         color: #be2edd;
 //         position: absolute;
-//         margin-left: 500px;
-//         font-family: Arial, Helvetica, sans-serif;
-
-//     }
-
-//     .price {
-//         display: flex;
-//         flex-direction: row;
-//         justify-content: center;
-//         align-items: center;
-//         position: absolute;
-//         margin-left: o;
-
-//         p {
-//             font-family: 'Segoe UI';
-//             font-size: 14px;
-//             font-weight: lighter;
-//             position: absolute;
-//             margin-left: 35px;
-//             margin-top: 18px;
-//             color: rgba(10, 10, 10, 0.541);
-//         }
-//     }
-// }
-
-.btnaddToCart {
-    display: block;
-    padding: 0.5em 1em 0.5em 1em;
-    border-radius: 100px;
-    border: none;
-    font-size: 1em;
-  position: relative;
-    background: rgb(235, 68, 244);
-
-    ;
-    cursor: pointer;
-    height: 3em;
-    width: 6em;
-    overflow: hidden;
-    transition: transform 0.1s;
-    z-index: 1;
-}
-
-.btnaddToCart:hover {
-    transform: scale(1.1);
-}
-
-#btnDone {
-    background: #be2edd;
-    position: relative;
-    width: 100%;
-    top: 0;
-    left: 0;
-    transition: transform 0.3s ease;
-
-    transform: translate(-110%) skew(-40deg);
-}
-
-body{
-
-    width: 100vw;
-    height: 100vh;
-    background-color: #00000030;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    flex-flow: column wrap;
-    justify-content: space-between;
-    align-content: space-evenly;
-    column-gap: 20px;
-    padding: 20px;
-    position: relative;
-
-    #containerOfProducts {
-
-        background-color: rgb(178, 49, 49);
-        height: 280px;
-        align-self: auto;
-        color: #be2edd;
-        position: absolute;
        
 
 
-    }
+//     }
 
-    #imgProduct{
-        position: relative;
-        // background-color: rgb(255, 255, 255);
-        //         height: 280px;
-        //         // align-self: center;
+//     #imgProduct{
+//         position: relative;
+//         background-color: rgb(255, 255, 255);
+//                 height: 280px;
+//                 // align-self: center;
 
       
        
-    }
-    .priceMe{
-        color: #000000;
+//     }
+//     .priceMe{
+//         color: #000000;
 
 
-        display: block;
-        border-radius: 50px;
-        font-size: 1em;
-        position: absolute;
-        background: rgb(235, 68, 244);
-    }
-}
+//         display: block;
+//         border-radius: 50px;
+//         font-size: 1em;
+//         position: absolute;
+//         background: rgb(235, 68, 244);
+//     }
+// }
 

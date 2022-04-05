@@ -72,7 +72,7 @@ var container = document.getElementById("containerOfProducts");
 var i = 0;
 for (i = 0; i < arrayOfProducts.length; i++) {
     container.innerHTML += '<div id="product"></div>';
-    //   console.log(`hey${container}`)
+    console.log("hey" + container);
 }
 document.body.appendChild(container);
 arrayOfProducts.forEach(function (product) {
@@ -83,6 +83,7 @@ arrayOfProducts.forEach(function (product) {
     newDivProduct.setAttribute("height", "228");
     newDivProduct.setAttribute("alt", "divOfProduct");
     newDivProduct.setAttribute("id", "divProduct");
+    newDivProduct.setAttribute("class", "imgProduct");
     document.body.appendChild(newDivProduct);
     // Create the add to cart btn
     var btnAddToCart = document.createElement("button");
@@ -125,7 +126,7 @@ arrayOfProducts.forEach(function (product) {
     imgProduct.setAttribute("height", "200");
     imgProduct.setAttribute("alt", "imgOfProduct");
     document.body.appendChild(imgProduct);
-    imgProduct.setAttribute("id", "imgProduct");
+    imgProduct.setAttribute("class", "imgProduct");
     // Create the p description of product
     var descriptionProduct = document.createElement("p");
     var nameOfProduct = document.createTextNode("" + product.description);
@@ -142,7 +143,7 @@ arrayOfProducts.forEach(function (product) {
     priceOfProduct.appendChild(price);
     var priOfProducts = document.getElementById("divProduct");
     priOfProducts.appendChild(priceOfProduct);
-    priOfProducts.setAttribute("class", "priceMe");
+    priOfProducts.setAttribute("class", "imgProduct");
     //   console.log(price);
 });
 //add to cart function
