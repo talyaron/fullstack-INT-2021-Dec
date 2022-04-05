@@ -13,12 +13,20 @@ function handleTask(event) {
     var task = document.createElement('div');
     task.classList.add('task');
     // Appending new tasks into the tasks container.
-    task.innerHTML = "<div class='heading'>" + heading + "</div>\n    <div class='description'>" + description + "</div>\n    <div class='startTime'>" + startTime + "</div> \n    <img src='./images/delete.svg>";
+    task.innerHTML = "<div class='heading'>" + heading + "</div>\n    <div class='description'>" + description + "</div>\n    <div class='startTime'>Scheduled to: " + startTime + "</div> \n   <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>";
     console.log(task);
     taskContainer.append(task);
     // Pushing the task into a tasks array ("data base").
     tasks.push(task.name);
     console.log(tasks);
+}
+function removeTask(event) {
+    event.preventDefault();
+    var button = event.target;
+    var task = button.parentNode;
+    var array = task.parentNode;
+    var div = array.parentNode;
+    div.removeChild(array);
 }
 // Drafts -------------------------------------------------------------------------------------------------------------------------
 // const tasks: Array<object> = []; 

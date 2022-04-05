@@ -5,7 +5,7 @@
 body {
   width: 100vw;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   background-color: #262626;
   overflow: hidden;
@@ -20,7 +20,7 @@ body {
 .app_wrapper .addBtn {
   width: 1.2em;
   height: 1.2em;
-  box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 24px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 24px 0px;
   border-radius: 50px;
   padding: 0.4em;
   text-align: center;
@@ -62,13 +62,41 @@ body {
 }
 .app_wrapper .tasksContainer .task {
   width: 21em;
-  max-height: 6em;
+  max-height: 10em;
   padding: 1em;
   border-radius: 8px;
   border: 1px solid lightgray;
   background-color: white;
   box-sizing: border-box;
   margin: 0.4em;
+  position: relative;
+}
+.app_wrapper .tasksContainer .task .heading {
+  font-size: 1.2em;
+  margin-bottom: 0.8em;
+  font-weight: 600;
+}
+.app_wrapper .tasksContainer .task .description,
+.app_wrapper .tasksContainer .task .startTime {
+  font-size: 0.9em;
+  color: gray;
+  margin-bottom: 0.4em;
+}
+.app_wrapper .tasksContainer .task .description:nth-last-child(2),
+.app_wrapper .tasksContainer .task .startTime:nth-last-child(2) {
+  margin-bottom: 0;
+  color: black;
+}
+.app_wrapper .tasksContainer .task .description {
+  max-width: 28ch;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.app_wrapper .tasksContainer .task img {
+  position: absolute;
+  left: 18.5em;
+  top: 2.5em;
 }
 
 #newTask {
@@ -79,7 +107,7 @@ body {
   width: 375px;
   background-color: white;
   box-sizing: border-box;
-  padding: 1em;
+  padding: 2em;
   padding-top: 2em;
   margin-left: 24px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px -9px 32px 0px;
