@@ -14,8 +14,27 @@ body {
 .app_wrapper {
     height: 812px;
     width: 375px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(244, 244, 244);
     position: relative;
+    .addBtn {
+        width: 1.2em;
+        height: 1.2em;
+        box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 24px 0px;
+        border-radius: 50px;
+        padding: 0.4em;
+        text-align: center;
+        font-size: 32px;
+        line-height: 1;
+        // background: linear-gradient(90deg, rgb(97, 61, 193) 0%, rgba(216, 49, 91, 1) 100%);
+        // -webkit-background-clip: text;
+        // background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        position: absolute;
+        bottom: 1.4em;
+        right: 1em;
+        background-color: rgb(255, 255, 255);
+        z-index: 99;
+    }
     .header {
         height: 4.4em;
         width: 100%;
@@ -33,30 +52,10 @@ body {
             -webkit-text-fill-color: transparent;
         }
     }
-    .addBtn {
-        width: 1.2em;
-        height: 1.2em;
-        box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 24px 0px;
-        background-color: rgb(255, 255, 255);
-        border-radius: 50px;
-        padding: 0.4em;
-        text-align: center;
-        font-size: 32px;
-        line-height: 1;
-        background: linear-gradient(90deg, rgb(97, 61, 193) 0%, rgba(216, 49, 91, 1) 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        position: absolute;
-        bottom: 1.4em;
-        right: 1em;
-        z-index: 99;
-    }
     .tasksContainer {
         height: 75%;
         width: 90%;
         margin: auto;
-        background-color: aqua;
         z-index: 0;
         display: flex;
         flex-direction: column;
@@ -64,11 +63,14 @@ body {
         box-sizing: border-box;
         padding: 1.4em;
         .task {
-            width: 20.8em;
-            height: 2em;
-            background-color: rgb(47, 134, 134);
+            width: 21em;
+            max-height: 6em;
+            padding: 1em;
+            border-radius: 8px;
+            border: 1px solid lightgray;
+            background-color: rgb(255, 255, 255);
             box-sizing: border-box;
-            margin: 1em;
+            margin: 0.4em;
         }
     }
 }

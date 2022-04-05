@@ -18,7 +18,8 @@ function handleTask(event: any) {
 // Appending new tasks into the tasks container.
   task.innerHTML = `<div class='heading'>${heading}</div>
     <div class='description'>${description}</div>
-    <div class='startTime'>${startTime}</div>`;
+    <div class='startTime'>${startTime}</div> 
+    <img src='./delete.svg>`;
   console.log(task);
   taskContainer.append(task);
 

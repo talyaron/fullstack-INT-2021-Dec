@@ -13,7 +13,7 @@ function handleTask(event) {
     var task = document.createElement('div');
     task.classList.add('task');
     // Appending new tasks into the tasks container.
-    task.innerHTML = "<div class='heading'>" + heading + "</div>\n    <div class='description'>" + description + "</div>\n    <div class='startTime'>" + startTime + "</div>";
+    task.innerHTML = "<div class='heading'>" + heading + "</div>\n    <div class='description'>" + description + "</div>\n    <div class='startTime'>" + startTime + "</div> \n    <img src='./delete.svg>";
     console.log(task);
     taskContainer.append(task);
     // Pushing the task into a tasks array ("data base").
