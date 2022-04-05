@@ -1,172 +1,172 @@
-// // #navbar {
-// //     overflow: hidden;
-// //     background-color: rgb(10, 10, 10);
-// //     width: 100vw;
+// // // #navbar {
+// // //     overflow: hidden;
+// // //     background-color: rgb(10, 10, 10);
+// // //     width: 100vw;
 
 
-// //     a {
-// //         float: left;
-// //         color: #f2f2f2;
-// //         text-align: center;
-// //         padding: 14px;
-// //         text-decoration: none;
-// //         font-size: 17px;
-// //         font-family: Arial, Helvetica, sans-serif;
+// // //     a {
+// // //         float: left;
+// // //         color: #f2f2f2;
+// // //         text-align: center;
+// // //         padding: 14px;
+// // //         text-decoration: none;
+// // //         font-size: 17px;
+// // //         font-family: Arial, Helvetica, sans-serif;
 
 
-// //     }
-// // }
+// // //     }
+// // // }
 
-// // .nav-logo {
-// //     display: flex;
+// // // .nav-logo {
+// // //     display: flex;
 
-// //     img {
-// //         width: 80px;
-// //         height: 30px;
+// // //     img {
+// // //         width: 80px;
+// // //         height: 30px;
 
-// //     }
-// // }
+// // //     }
+// // // }
 
-// // .header {
-// //     background-color: rgb(159, 68, 244);
-// //     width: 100vw;
-// //     height: 100px;
-// //     display: flex;
-// //     position: relative;
+// // // .header {
+// // //     background-color: rgb(159, 68, 244);
+// // //     width: 100vw;
+// // //     height: 100px;
+// // //     display: flex;
+// // //     position: relative;
 
-// //     h1 {
-// //         font-size: 30px;
-// //         font-family: Arial, Helvetica, sans-serif;
-// //         position: absolute;
-// //         margin-left: 80px;
-// //         margin-top: 22px;
-// //         text-decoration-line: underline;
-// //     }
+// // //     h1 {
+// // //         font-size: 30px;
+// // //         font-family: Arial, Helvetica, sans-serif;
+// // //         position: absolute;
+// // //         margin-left: 80px;
+// // //         margin-top: 22px;
+// // //         text-decoration-line: underline;
+// // //     }
 
-// //     .nabar-small {
-// //         position: sticky;
+// // //     .nabar-small {
+// // //         position: sticky;
 
-// //         a {
-// //             float: left;
-// //             color: #f2f2f2;
-// //             text-align: center;
-// //             padding: 14px;
-// //             text-decoration: none;
-// //             font-size: 15px;
-// //             font-family: Arial, Helvetica, sans-serif;
-// //             margin-left: 70px;
-// //             margin-top: 60px;
-// //         }
-// //     }
-
-
-// // }
-
-// // .bigProduct {
-// //     width: 800px;
-// //     height: 300px;
-// //     background-color: rgb(255, 255, 255);
-// //     margin: auto;
-// //     position: relative;
-// //     margin-bottom: 15px;
-// //     margin-top: 15px;
+// // //         a {
+// // //             float: left;
+// // //             color: #f2f2f2;
+// // //             text-align: center;
+// // //             padding: 14px;
+// // //             text-decoration: none;
+// // //             font-size: 15px;
+// // //             font-family: Arial, Helvetica, sans-serif;
+// // //             margin-left: 70px;
+// // //             margin-top: 60px;
+// // //         }
+// // //     }
 
 
-// //     img {
-// //         width: 60%;
-// //         height: 100%;
-// //         position: absolute;
-// //         padding: 10px;
+// // // }
 
-// //     }
+// // // .bigProduct {
+// // //     width: 800px;
+// // //     height: 300px;
+// // //     background-color: rgb(255, 255, 255);
+// // //     margin: auto;
+// // //     position: relative;
+// // //     margin-bottom: 15px;
+// // //     margin-top: 15px;
 
-// //     h2 {
-// //         font-size: 40px;
-// //         color: black;
-// //         position: absolute;
-// //         margin-left: 480px;
-// //         font-family: 'Segoe UI';
-// //         font-weight: bold;
-// //         text-align: center;
 
-// //     }
+// // //     img {
+// // //         width: 60%;
+// // //         height: 100%;
+// // //         position: absolute;
+// // //         padding: 10px;
 
-// //     p {
-// //         color: black;
-// //         position: absolute;
-// //         margin-left: 480px;
-// //         margin-top: 125px;
-// //         font-family: 'Segoe UI';
-// //         font-weight: lighter;
-// //         text-align: center;
-// //         font-size: 18px;
-// //         padding: 10px;
+// // //     }
 
-// //     }
-// // }
+// // //     h2 {
+// // //         font-size: 40px;
+// // //         color: black;
+// // //         position: absolute;
+// // //         margin-left: 480px;
+// // //         font-family: 'Segoe UI';
+// // //         font-weight: bold;
+// // //         text-align: center;
 
-// // .containerOfProducts {
+// // //     }
 
-// //     background-color: rgb(255, 255, 255);
-// //     width: 100vw;
-// //     height: 600px;
-// //     display: flex;
-// //     flex-direction: column;
-// //     flex-wrap: wrap;
-// //     flex-flow: column wrap;
-// //     justify-content: space-between;
-// //     align-items: stretch;
-// //     align-content: space-evenly;
-// //     column-gap: 20px;
-// //     padding: 20px;
+// // //     p {
+// // //         color: black;
+// // //         position: absolute;
+// // //         margin-left: 480px;
+// // //         margin-top: 125px;
+// // //         font-family: 'Segoe UI';
+// // //         font-weight: lighter;
+// // //         text-align: center;
+// // //         font-size: 18px;
+// // //         padding: 10px;
 
-// //     .product {
-// //         background-color: rgb(255, 255, 255);
-// //         height: 280px;
-// //         align-self: auto;
+// // //     }
+// // // }
 
-// //     }
+// // // .containerOfProducts {
 
-// //     img {
-// //         width: 300px;
-// //         height: 200px;
-// //     }
+// // //     background-color: rgb(255, 255, 255);
+// // //     width: 100vw;
+// // //     height: 600px;
+// // //     display: flex;
+// // //     flex-direction: column;
+// // //     flex-wrap: wrap;
+// // //     flex-flow: column wrap;
+// // //     justify-content: space-between;
+// // //     align-items: stretch;
+// // //     align-content: space-evenly;
+// // //     column-gap: 20px;
+// // //     padding: 20px;
 
-// //     h3 {
-// //         color: black;
-// //         font-family: 'Segoe UI';
-// //         font-size: 15px;
-// //         font-weight: lighter;
-// //     }
+// // //     .product {
+// // //         background-color: rgb(255, 255, 255);
+// // //         height: 280px;
+// // //         align-self: auto;
 
-// //     h2 {
-// //         font-size: 30px;
-// //         color: black;
-// //         position: absolute;
-// //         margin-left: 500px;
-// //         font-family: Arial, Helvetica, sans-serif;
+// // //     }
 
-// //     }
+// // //     img {
+// // //         width: 300px;
+// // //         height: 200px;
+// // //     }
 
-// //     .price {
-// //         display: flex;
-// //         flex-direction: row;
-// //         justify-content: center;
-// //         align-items: center;
-// //         position: absolute;
-// //         margin-left: o;
+// // //     h3 {
+// // //         color: black;
+// // //         font-family: 'Segoe UI';
+// // //         font-size: 15px;
+// // //         font-weight: lighter;
+// // //     }
 
-// //         p {
-// //             font-family: 'Segoe UI';
-// //             font-size: 14px;
-// //             font-weight: lighter;
-// //             position: absolute;
-// //             margin-left: 35px;
-// //             margin-top: 18px;
-// //             color: rgba(10, 10, 10, 0.541);
-// //         }
-// //     }
-// // }
+// // //     h2 {
+// // //         font-size: 30px;
+// // //         color: black;
+// // //         position: absolute;
+// // //         margin-left: 500px;
+// // //         font-family: Arial, Helvetica, sans-serif;
+
+// // //     }
+
+// // //     .price {
+// // //         display: flex;
+// // //         flex-direction: row;
+// // //         justify-content: center;
+// // //         align-items: center;
+// // //         position: absolute;
+// // //         margin-left: o;
+
+// // //         p {
+// // //             font-family: 'Segoe UI';
+// // //             font-size: 14px;
+// // //             font-weight: lighter;
+// // //             position: absolute;
+// // //             margin-left: 35px;
+// // //             margin-top: 18px;
+// // //             color: rgba(10, 10, 10, 0.541);
+// // //         }
+// // //     }
+// // // }
 
 // .btnaddToCart {
 //     display: block;
@@ -249,3 +249,37 @@
 //     }
 // }
 
+body{
+    margin: 0;
+    width: 100vw;
+    height: 80vh;
+    
+}
+  
+
+  .containerOfProducts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  img {
+    width: 200px;
+    height: 100px;
+    margin: auto;
+  }
+  .image-wrapper {
+    position: relative;
+}
+.image-wrapper image-desc{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.image-wrapper:hover image-desc{
+    display: block;
+}
