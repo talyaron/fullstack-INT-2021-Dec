@@ -1,0 +1,62 @@
+.btnaddToCart {
+  display: block;
+  padding: 0.5em 1em 0.5em 1em;
+  border-radius: 100px;
+  border: none;
+  font-size: 1em;
+  position: relative;
+  background: #eb44f4;
+  cursor: pointer;
+  height: 3em;
+  width: 6em;
+  overflow: hidden;
+  transition: transform 0.1s;
+  z-index: 1;
+}
+
+.btnaddToCart:hover {
+  transform: scale(1.1);
+}
+
+#btnDone {
+  background: #be2edd;
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease;
+  transform: translate(-110%) skew(-40deg);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000030;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-content: space-evenly;
+  column-gap: 20px;
+  padding: 20px;
+  position: relative;
+}
+body #containerOfProducts {
+  background-color: #b23131;
+  height: 280px;
+  align-self: auto;
+  color: #be2edd;
+  position: absolute;
+}
+body #imgProduct {
+  position: relative;
+}
+body .priceMe {
+  color: #000000;
+  display: block;
+  border-radius: 50px;
+  font-size: 1em;
+  position: absolute;
+  background: #eb44f4;
+}
