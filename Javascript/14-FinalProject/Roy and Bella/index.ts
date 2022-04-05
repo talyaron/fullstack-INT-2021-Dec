@@ -19,7 +19,7 @@ function handleTask(event: any) {
   task.innerHTML = `<div class='heading'>${heading}</div>
     <div class='description'>${description}</div>
     <div class='startTime'>${startTime}</div> 
-    <img src='./delete.svg>`;
+    <img src='./images/delete.svg>`;
   console.log(task);
   taskContainer.append(task);
 
