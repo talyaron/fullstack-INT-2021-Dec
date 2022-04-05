@@ -1,9 +1,6 @@
 
+const server_wrapper = document.querySelector('.Server_wrapper')
 
-const image_output: HTMLImageElement = document.querySelector('#image_output')
-const name_output = document.querySelector('#name_output')
-const price_output = document.querySelector('#price_output')
-const item_avalible = document.querySelector('#item_avalible')
 
 function handleBtn(ev: any) {
     ev.preventDefault();
@@ -19,36 +16,45 @@ function handleBtn(ev: any) {
 
     const imgSrc = URL.createObjectURL(item.image)
 
-    // const imagePreview = document.querySelector('#image-preview')
-    // imagePreview.src = imgSrc
+    
+    
+    
+    
+     const display_item = document.createElement('div')
+     server_wrapper.appendChild(display_item)
+     display_item.setAttribute('class', 'display_card')
+    
+    const detail_list = document.createElement('div')
+    display_item.appendChild(detail_list)
+    detail_list.setAttribute('class', 'detail_list')
 
+    const image_output = document.createElement('div')
+    display_item.appendChild(image_output)
+    image_output.setAttribute('id', 'image_output')
+    image_output.innerHTML = `<img src="${imgSrc}" alt="" id="image-preview"> </div>`
+    const imagePreview = document.querySelector('#image-preview')
+    imagePreview.src = imgSrc
+    
+    const name_output =document.createElement('div')
+    detail_list.appendChild(name_output)
+    name_output.setAttribute('id', 'name_output')
     name_output.innerHTML = `<div>item name:${nameinput}</div>`
+    
+    const price_output = document.createElement('div')
+    detail_list.appendChild(price_output)
+    price_output.setAttribute('id', 'price_output')
     price_output.innerHTML = `<div>item price:${priceinput}</div>`
-    image_output.innerHTML = `<img src="${imgSrc}" alt=""> </div>`
-
-    // image.addEventListener("change", function () {
-
-    //     const file = this.files[0]
-    //     console.log(file)
-
-
-
-
-    // })
+    
+    
+    
+    
+    
+    
 
 
 
-
+   
 }
-
-// image_input.addEventListener("change", function() {
-//     const reader = new FileReader();
-//     reader.addEventListener("load", () => {
-//       const uploaded_image = reader.result;
-//       image_output.style.backgroundImage = `url(${uploaded_image})`;
-//  });
-//     reader.readAsDataURL(this.files[0]);
-//  });
 
 
 
