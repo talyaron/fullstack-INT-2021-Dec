@@ -66,6 +66,28 @@ var arrayOfProducts = [
     toiletPaper,
 ];
 console.log(arrayOfProducts);
+arrayOfProducts.forEach(function (product) {
+    var btnAddToCart = document.querySelector(".addMe");
+    var cont = document.querySelector(".containerOfProducts");
+    var imageTitle = document.querySelector(".imageTitle");
+    var images = [
+        {
+            src: "" + product.image,
+            title: "" + product.description,
+            tags: "" + product.price,
+            button: "click",
+            "function": function (event) {
+                var btnAddToCart = document.querySelector(".addMe");
+                var addProductToCart = this.getAttribute("data-addProductToCart");
+                console.log(addProductToCart);
+                console.log("the product was added to cart successfully");
+            }
+        },
+    ];
+    images.forEach(function (par) {
+        cont.innerHTML += "<div class=\"parent\"><img src=\"" + par.src + "\" alt=\"" + par.title + "\"><div class=\"overlay\"><div>" + par.title + "</div><div>" + par.tags + "\u20AA</div><button class=\"addMe\">Add</button></div></div>";
+    });
+});
 // //selecting the array each product will be making its own div+img+p
 // //create a container for the shop
 // const container = document.getElementById("containerOfProducts");
@@ -154,28 +176,6 @@ console.log(arrayOfProducts);
 //   //   console.log(price);
 // });
 // //add to cart function
-arrayOfProducts.forEach(function (product) {
-    var btnAddToCart = document.querySelector(".addMe");
-    var cont = document.querySelector(".containerOfProducts");
-    var imageTitle = document.querySelector(".imageTitle");
-    var images = [
-        {
-            src: "" + product.image,
-            title: "" + product.description,
-            tags: "" + product.price,
-            button: "click",
-            "function": function (event) {
-                var btnAddToCart = document.querySelector(".addMe");
-                var addProductToCart = this.getAttribute("data-addProductToCart");
-                console.log(addProductToCart);
-                console.log("the product was added to cart successfully");
-            }
-        },
-    ];
-    images.forEach(function (par) {
-        cont.innerHTML += "<div class=\"parent\"><img src=\"" + par.src + "\" alt=\"" + par.title + "\"><div class=\"overlay\"><div>" + par.title + "</div><div>" + par.tags + "\u20AA</div><button class=\"addMe\">Add</button></div></div>";
-    });
-});
 // function addMeToCart(event){
 //     const btnAddToCart = document.querySelector(".addMe");
 // let addProductToCart = this.getAttribute("data-addProductToCart");
