@@ -34,15 +34,15 @@ body {
         }
     }
     .addBtn {
-        width: 1.5em;
-        height: 1.5em;
+        width: 1.2em;
+        height: 1.2em;
         box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 24px 0px;
         background-color: rgb(255, 255, 255);
         border-radius: 50px;
         padding: 0.4em;
         text-align: center;
         font-size: 32px;
-        line-height: 1.4;
+        line-height: 1;
         background: linear-gradient(90deg, rgb(97, 61, 193) 0%, rgba(216, 49, 91, 1) 100%);
         -webkit-background-clip: text;
         background-clip: text;
@@ -50,6 +50,25 @@ body {
         position: absolute;
         bottom: 1.4em;
         right: 1em;
+        z-index: 99;
+    }
+    .tasksContainer {
+        height: 75%;
+        width: 100%;
+        background-color: aqua;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 1.4em;
+        .task {
+            width: 20.8em;
+            height: 2em;
+            background-color: rgb(47, 134, 134);
+            box-sizing: border-box;
+            margin: 1em;
+        }
     }
 }
 
