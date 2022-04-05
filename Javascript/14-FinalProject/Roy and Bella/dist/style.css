@@ -55,7 +55,8 @@ body {
 }
 .app_wrapper .tasksContainer {
   height: 75%;
-  width: 100%;
+  width: 90%;
+  margin: auto;
   background-color: aqua;
   z-index: 0;
   display: flex;
