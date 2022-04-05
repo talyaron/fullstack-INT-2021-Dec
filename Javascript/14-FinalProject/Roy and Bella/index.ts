@@ -1,5 +1,6 @@
 const tasks: Array < object > = []; // Creating Fake Data Base To Hold All tasks.
 
+// Add new task form.
 function handleTask(event: any) {
   event.preventDefault();
   console.log(event);
@@ -9,17 +10,19 @@ function handleTask(event: any) {
   const endTime: object = event.target.elements.endTime.value;
   console.log(heading, description, startTime, endTime);
 
-
+// Creating new task div each time a task added from the form.
   let taskContainer: any = document.querySelector('.tasksContainer');
   let task: any = document.createElement('div')
   task.classList.add('task');
 
+// Appending new tasks into the tasks container.
   task.innerHTML = `<div class='heading'>${heading}</div>
     <div class='description'>${description}</div>
     <div class='startTime'>${startTime}</div>`;
   console.log(task);
   taskContainer.append(task);
 
+  // Pushing the task into a tasks array ("data base").
   tasks.push(task.name);
   console.log(tasks);
 
