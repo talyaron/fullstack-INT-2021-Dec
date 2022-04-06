@@ -57,7 +57,6 @@ function tasksPage(){
     const todayDate: HTMLElement = document.querySelector("#todayDate");
     todayDate.innerHTML = `${todayDisplay}`;
 
-    
 }
 
 tasksPage()

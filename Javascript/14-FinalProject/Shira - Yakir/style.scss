@@ -1,3 +1,53 @@
+.tasksPage{
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+        grid-template-rows: 150px auto;
+        grid-template-areas: 
+          "appHeader appHeader"
+          "categories tasks";
+      
+   
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    margin: 25px;
+
+    .appHeader{
+        grid-area: appHeader;
+    }
+
+    .categories{
+        grid-area: categories;
+    }
+
+    .tasks{
+        grid-area: tasks;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------------------------------------
+
 body {
     width: 100vw;
     height: 100vh;
@@ -7,8 +57,7 @@ body {
     background-color: whitesmoke;
     padding-top: 32px;
 
-    form,
-    .tasksPage {
+    form {
         width: 27em;
         max-height: 45em;
         display: flex;
@@ -19,12 +68,6 @@ body {
         border-radius: 20px;
         box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
         margin: 25px;
-
-        &__app {
-            width: 80%;
-            height: 100%;
-        }
-
     }
 
     .appHeader{
@@ -96,3 +139,8 @@ body {
         }
     }
 }
+
+
+
+
+
