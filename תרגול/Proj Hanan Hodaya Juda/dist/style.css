@@ -12,6 +12,7 @@ body {
 
 .products {
   direction: rtl;
+  color: white;
 }
 .products img {
   width: 200px;
