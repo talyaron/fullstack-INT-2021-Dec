@@ -39,3 +39,10 @@ function checkLogin(check_username, check_password) {
     else
         return false;
 }
+function tasksPage() {
+    var today = new Date();
+    var todayDisplay = today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear();
+    var todayDate = document.querySelector("#todayDate");
+    todayDate.innerHTML = "" + todayDisplay;
+}
+tasksPage();

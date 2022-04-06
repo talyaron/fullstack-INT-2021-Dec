@@ -7,7 +7,8 @@ body {
   background-color: whitesmoke;
   padding-top: 32px;
 }
-body form {
+body form,
+body .tasksPage {
   width: 27em;
   max-height: 45em;
   display: flex;
@@ -18,6 +19,18 @@ body form {
   border-radius: 20px;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   margin: 25px;
+}
+body form__app,
+body .tasksPage__app {
+  width: 80%;
+  height: 100%;
+}
+body .appHeader {
+  border-radius: 20px;
+  width: 100%;
+  height: 50px;
+  justify-content: space-between;
+  background-color: #ccd3fa;
 }
 body .heading {
   text-align: center;

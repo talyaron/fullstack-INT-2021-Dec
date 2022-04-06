@@ -44,3 +44,20 @@ function checkLogin(check_username: String, check_password: string): Boolean {
     if (check_username === userName && check_password === password) return true;
     else return false;
 }
+
+
+
+
+
+
+function tasksPage(){
+    let today = new Date();
+    let todayDisplay = `${today.getDate()}/${today.getMonth()+1}/${today.getFullYear()}`;
+
+    const todayDate: HTMLElement = document.querySelector("#todayDate");
+    todayDate.innerHTML = `${todayDisplay}`;
+
+    
+}
+
+tasksPage()
