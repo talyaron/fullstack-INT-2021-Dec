@@ -15,10 +15,6 @@ function handleBtn(ev: any) {
     console.log(item.image)
 
     const imgSrc = URL.createObjectURL(item.image)
-
-    
-    
-    
     
      const display_item = document.createElement('div')
      server_wrapper.appendChild(display_item)
