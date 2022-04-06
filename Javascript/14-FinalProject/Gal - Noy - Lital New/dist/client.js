@@ -77,6 +77,45 @@ var arrayOfProducts = [
 ];
 console.log(arrayOfProducts);
 var cart = [];
+arrayOfProducts.forEach(function (product) {
+    var btnAddToCart = document.querySelector(".addMe");
+    var cont = document.querySelector(".containerOfProducts");
+    var imageTitle = document.querySelector(".imageTitle");
+    var products = [
+        {
+            src: "" + product.image,
+            title: "" + product.description,
+            tags: "" + product.price,
+            id: "" + product.id
+        },
+    ];
+    products.forEach(function (par) {
+        cont.innerHTML += "<div class=\"parent\"><img src=\"" + par.src + "\" alt=\"" + par.title + "\"><div id=" + par.id + " class=\"overlay\"><div>" + par.title + "</div><div>" + par.tags + "\u20AA</div><button onclick=\"addMeToCart(event)\" class=\"addMe\">Add</button></div></div>";
+    });
+});
+function addMeToCart(event) {
+    var productId = event.target.parentElement.id;
+    var productIndex = arrayOfProducts.findIndex(function (element) { return element.id == productId; });
+    var productInCartIndex = cart.findIndex(function (element) { return element.id == productId; });
+    if (productInCartIndex != -1) {
+        cart[productInCartIndex].quantity++;
+        console.log(cart);
+    }
+    else {
+        var currentProduct = {
+            id: productId,
+            quantity: 1
+        };
+        cart.push(currentProduct);
+        console.log(cart);
+    }
+}
+function uid() {
+    return "id-" + Math.ceil(Math.random() * 1e8);
+}
+// cart.forEach(function (par) {
+//     htmlCart.innerHTML += `<div class="parent"><img src="${par.src}" alt="${par.title}"><div id=${par.id} class="overlay"><div>${par.title}</div><div>${par.tags}₪</div><button onclick="addMeToCart(event)" class="addMe">Add</button></div></div>`;
+//   });
 // //selecting the array each product will be making its own div+img+p
 // //create a container for the shop
 // const container = document.getElementById("containerOfProducts");
@@ -164,43 +203,3 @@ var cart = [];
 //   priOfProducts.setAttribute("class", "imgProduct");
 //   //   console.log(price);
 // });
-// //add to cart function
-arrayOfProducts.forEach(function (product) {
-    var btnAddToCart = document.querySelector(".addMe");
-    var cont = document.querySelector(".containerOfProducts");
-    var imageTitle = document.querySelector(".imageTitle");
-    var products = [
-        {
-            src: "" + product.image,
-            title: "" + product.description,
-            tags: "" + product.price,
-            id: "" + product.id
-        },
-    ];
-    products.forEach(function (par) {
-        cont.innerHTML += "<div class=\"parent\"><img src=\"" + par.src + "\" alt=\"" + par.title + "\"><div id=" + par.id + " class=\"overlay\"><div>" + par.title + "</div><div>" + par.tags + "\u20AA</div><button onclick=\"addMeToCart(event)\" class=\"addMe\">Add</button></div></div>";
-    });
-});
-function addMeToCart(event) {
-    var productId = event.target.parentElement.id;
-    var productIndex = arrayOfProducts.findIndex(function (element) { return element.id == productId; });
-    var productInCartIndex = cart.findIndex(function (element) { return element.id == productId; });
-    if (productInCartIndex != -1) {
-        cart[productInCartIndex].quantity++;
-        console.log(cart);
-    }
-    else {
-        var currentProduct = {
-            id: productId,
-            quantity: 1
-        };
-        cart.push(currentProduct);
-        console.log(cart);
-    }
-}
-function uid() {
-    return "id-" + Math.ceil(Math.random() * 1e8);
-}
-// cart.forEach(function (par) {
-//     htmlCart.innerHTML += `<div class="parent"><img src="${par.src}" alt="${par.title}"><div id=${par.id} class="overlay"><div>${par.title}</div><div>${par.tags}₪</div><button onclick="addMeToCart(event)" class="addMe">Add</button></div></div>`;
-//   });

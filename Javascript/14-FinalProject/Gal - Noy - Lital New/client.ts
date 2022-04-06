@@ -114,6 +114,55 @@ console.log(arrayOfProducts);
 
 let cart: Array<cartProduct> = [];
 
+arrayOfProducts.forEach((product) => {
+  const btnAddToCart = document.querySelector(".addMe");
+  const cont = document.querySelector(".containerOfProducts");
+  const imageTitle = document.querySelector(".imageTitle");
+  const products = [
+    {
+      src: `${product.image}`,
+      title: `${product.description}`,
+      tags: `${product.price}`,
+      id: `${product.id}`,
+      
+    },
+  ];
+  products.forEach(function (par) {
+    cont.innerHTML += `<div class="parent"><img src="${par.src}" alt="${par.title}"><div id=${par.id} class="overlay"><div>${par.title}</div><div>${par.tags}₪</div><button onclick="addMeToCart(event)" class="addMe">Add</button></div></div>`;
+  });
+});
+
+function addMeToCart(event) {
+  const productId = event.target.parentElement.id;
+  const productIndex = arrayOfProducts.findIndex(
+    (element) => element.id == productId
+  );
+  const productInCartIndex =  cart.findIndex(element => element.id == productId);
+
+  if (productInCartIndex != -1) {
+    cart[productInCartIndex].quantity++;
+    console.log(cart);
+
+  } else {
+    const currentProduct:cartProduct = {
+        id:productId,
+        quantity:1,
+    }
+    cart.push(currentProduct);
+    console.log(cart);
+  }
+}
+function uid() {
+  return `id-${Math.ceil(Math.random() * 1e8)}`;
+}
+
+
+
+// cart.forEach(function (par) {
+//     htmlCart.innerHTML += `<div class="parent"><img src="${par.src}" alt="${par.title}"><div id=${par.id} class="overlay"><div>${par.title}</div><div>${par.tags}₪</div><button onclick="addMeToCart(event)" class="addMe">Add</button></div></div>`;
+//   });
+
+
 // //selecting the array each product will be making its own div+img+p
 
 // //create a container for the shop
@@ -217,52 +266,3 @@ let cart: Array<cartProduct> = [];
 
 //   //   console.log(price);
 // });
-// //add to cart function
-
-arrayOfProducts.forEach((product) => {
-  const btnAddToCart = document.querySelector(".addMe");
-  const cont = document.querySelector(".containerOfProducts");
-  const imageTitle = document.querySelector(".imageTitle");
-  const products = [
-    {
-      src: `${product.image}`,
-      title: `${product.description}`,
-      tags: `${product.price}`,
-      id: `${product.id}`,
-      
-    },
-  ];
-  products.forEach(function (par) {
-    cont.innerHTML += `<div class="parent"><img src="${par.src}" alt="${par.title}"><div id=${par.id} class="overlay"><div>${par.title}</div><div>${par.tags}₪</div><button onclick="addMeToCart(event)" class="addMe">Add</button></div></div>`;
-  });
-});
-
-function addMeToCart(event) {
-  const productId = event.target.parentElement.id;
-  const productIndex = arrayOfProducts.findIndex(
-    (element) => element.id == productId
-  );
-  const productInCartIndex =  cart.findIndex(element => element.id == productId);
-
-  if (productInCartIndex != -1) {
-    cart[productInCartIndex].quantity++;
-    console.log(cart);
-
-  } else {
-    const currentProduct:cartProduct = {
-        id:productId,
-        quantity:1,
-    }
-    cart.push(currentProduct);
-    console.log(cart);
-  }
-}
-function uid() {
-  return `id-${Math.ceil(Math.random() * 1e8)}`;
-}
-
-
-
-// cart.forEach(function (par) {
-//     htmlCart.innerHTML += `<div class="parent"><img src="${par.src}" alt="${par.title}"><div id=${par.id} class="overlay"><div>${par.title}</div><div>${par.tags}₪</div><button onclick="addMeToCart(event)" class="addMe">Add</button></div></div>`;
-//   });
