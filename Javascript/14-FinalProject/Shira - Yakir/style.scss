@@ -1,0 +1,74 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: whitesmoke;
+    padding-top: 32px;
+    form {
+        width: 27em;
+        max-height: 45em;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+        padding: 44px;
+        margin: auto;
+        border-radius: 20px;
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        margin: 25px;
+    }
+      
+        .heading {
+            text-align: center;
+            margin-bottom: 48px;
+            margin-top: 0;
+            font-size: 38px;
+            background: linear-gradient(90deg, rgb(97, 61, 193) 0%, rgba(216, 49, 91, 1) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        input {
+            height: 2.5em;
+            margin-bottom: 1em;
+            padding: 8px 24px;
+            border-radius: 0.6em;
+            border: 1px solid lightgray;
+            font-size: 15px;
+            &:nth-last-child(3) {
+                margin-bottom: 2em;
+            }
+        }
+        input:focus {
+            border-color: #613dc1;
+            outline: none;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        button {
+            height: 4em;
+            border-radius: 10em;
+            border: none;
+            background: rgb(97, 61, 193);
+            background: linear-gradient(104deg, rgba(97, 61, 193, 1) 0%, rgba(216, 49, 91, 1) 100%);
+            color: white;
+            padding: 8px 24px;
+            font-size: 15px;
+            font-weight: normal;
+            box-shadow: 0px 8px 20px rgba(216, 49, 91, 0.1);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            outline: none;
+            &:hover {
+                background-color: #2EE59D;
+                box-shadow: 0px 15px 32px rgba(216, 49, 91, 0.2);
+                color: #fff;
+                transform: translateY(-4px);
+            }
+        }
+    }
