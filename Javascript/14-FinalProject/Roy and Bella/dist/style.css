@@ -3,17 +3,16 @@
 }
 
 body {
+  height: 100vh;
   width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: auto;
   background-color: #262626;
   overflow: hidden;
 }
 
 .app_wrapper {
-  height: 75vh;
-  width: 20vw;
+  height: 100%;
+  width: 100%;
   background-color: #f4f4f4;
   position: relative;
 }
@@ -170,8 +169,6 @@ body {
 }
 
 .slide {
-  background-color: rgba(0, 255, 0, 0.3);
-  padding: 5px;
   transition: 0.5s cubic-bezier(0, 1, 0.5, 1);
   transform: translateY(100%);
 }

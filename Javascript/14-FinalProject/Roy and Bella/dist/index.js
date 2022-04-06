@@ -32,6 +32,8 @@ function handleAddTask(event) {
     event.preventDefault();
     var addBtn = document.querySelector('.addBtn');
     var slide = document.querySelector('.slide');
+    var saveBtn = document.querySelector('.saveBtn');
+    var cancelBtn = document.querySelector('.cancelBtn');
     addBtn.addEventListener('click', toggleSlider, false);
     function toggleSlider() {
         if (slide.classList.contains('slide-up')) {
@@ -39,6 +41,13 @@ function handleAddTask(event) {
         }
         else {
             slide.classList.add('slide-up');
+        }
+    }
+    saveBtn.addEventListener('click', toggleSlide, false);
+    function toggleSlide() {
+        slide.classList.contains('slide');
+        {
+            slide.classList.remove('slide-up');
         }
     }
 }

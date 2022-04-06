@@ -10,12 +10,12 @@ function handleTask(event: any) {
   const endTime: object = event.target.elements.endTime.value;
   console.log(heading, description, startTime, endTime);
 
-// Creating new task div each time a task added from the form.
+  // Creating new task div each time a task added from the form.
   let taskContainer: any = document.querySelector('.tasksContainer');
   let task: any = document.createElement('div')
   task.classList.add('task');
 
-// Appending new tasks into the tasks container.
+  // Appending new tasks into the tasks container.
   task.innerHTML = `<div class='heading'>${heading}</div>
     <div class='description'>${description}</div>
     <div class='startTime'>Scheduled to: ${startTime}</div> 
@@ -26,25 +26,25 @@ function handleTask(event: any) {
   // Pushing the task into a tasks array ("data base").
   tasks.push(task.name);
   console.log(tasks);
-
 }
 
-
-function removeTask(event){
+function removeTask(event) {
   event.preventDefault();
-  const button= event.target;
-  const task= button.parentNode;
-  const array= task.parentNode;
-  const div= array.parentNode
- 
+  const button = event.target;
+  const task = button.parentNode;
+  const array = task.parentNode;
+  const div = array.parentNode
+
   div.removeChild(array);
-  
 }
 
-function handleAddTask (event){
+function handleAddTask(event) {
   event.preventDefault();
   const addBtn = document.querySelector('.addBtn');
   const slide = document.querySelector('.slide');
+  const saveBtn = document.querySelector('.saveBtn');
+  const cancelBtn = document.querySelector('.cancelBtn');
+
 
   addBtn.addEventListener('click', toggleSlider, false);
 
@@ -55,6 +55,15 @@ function handleAddTask (event){
       slide.classList.add('slide-up');
     }
   }
+
+  saveBtn.addEventListener('click', toggleSlide, false);
+
+  function toggleSlide() {
+    slide.classList.contains('slide'); {
+      slide.classList.remove('slide-up');
+    }
+  }
+
 }
 
 
