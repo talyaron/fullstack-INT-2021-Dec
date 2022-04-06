@@ -1,4 +1,4 @@
-var tasks = []; // Creating Fake Data Base To Hold All tasks.
+var tasks = []; // Creating "Data Base" To Hold All the tasks.
 // Add new task form.
 function handleTask(event) {
     event.preventDefault();
@@ -20,6 +20,7 @@ function handleTask(event) {
     tasks.push(task.name);
     console.log(tasks);
 }
+// Remove tasks.
 function removeTask(event) {
     event.preventDefault();
     var button = event.target;
@@ -28,13 +29,16 @@ function removeTask(event) {
     var div = array.parentNode;
     div.removeChild(array);
 }
+// Add new task (using 'handleTask' form).
 function handleAddTask(event) {
     event.preventDefault();
     var addBtn = document.querySelector('.addBtn');
     var slide = document.querySelector('.slide');
     var saveBtn = document.querySelector('.saveBtn');
     var cancelBtn = document.querySelector('.cancelBtn');
+    // Pressing the 'add' button.
     addBtn.addEventListener('click', toggleSlider, false);
+    // Slide up
     function toggleSlider() {
         if (slide.classList.contains('slide-up')) {
             slide.classList.remove('slide-up');
@@ -43,7 +47,9 @@ function handleAddTask(event) {
             slide.classList.add('slide-up');
         }
     }
+    // Pressing the 'save task' button.
     saveBtn.addEventListener('click', toggleSlide, false);
+    // Slide down
     function toggleSlide() {
         slide.classList.contains('slide');
         {
