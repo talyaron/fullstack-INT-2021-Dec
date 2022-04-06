@@ -14,6 +14,6 @@ function refreshPro() {
             "img": 
         },
         {},
-    ];
-    console.log("check one two three");
+    ][Symbol], console, log;
+    ("check one two three");
 }
