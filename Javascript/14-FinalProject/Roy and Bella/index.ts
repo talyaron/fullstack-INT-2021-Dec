@@ -41,11 +41,21 @@ function removeTask(event){
   
 }
 
+function handleAddTask (event){
+  event.preventDefault();
+  const addBtn = document.querySelector('.addBtn');
+  const slide = document.querySelector('.slide');
 
+  addBtn.addEventListener('click', toggleSlider, false);
 
-
-
-
+  function toggleSlider() {
+    if (slide.classList.contains('slide-up')) {
+      slide.classList.remove('slide-up');
+    } else {
+      slide.classList.add('slide-up');
+    }
+  }
+}
 
 
 

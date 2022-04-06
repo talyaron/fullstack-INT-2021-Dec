@@ -28,6 +28,20 @@ function removeTask(event) {
     var div = array.parentNode;
     div.removeChild(array);
 }
+function handleAddTask(event) {
+    event.preventDefault();
+    var addBtn = document.querySelector('.addBtn');
+    var slide = document.querySelector('.slide');
+    addBtn.addEventListener('click', toggleSlider, false);
+    function toggleSlider() {
+        if (slide.classList.contains('slide-up')) {
+            slide.classList.remove('slide-up');
+        }
+        else {
+            slide.classList.add('slide-up');
+        }
+    }
+}
 // Drafts -------------------------------------------------------------------------------------------------------------------------
 // const tasks: Array<object> = []; 
 // function handleTask(event: any) {
