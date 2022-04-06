@@ -1,4 +1,4 @@
-const root = document.querySelector('.root')
+const roots = document.querySelector('.root')
 
 function handleNote(ev: any) {
     ev.preventDefault();
@@ -19,13 +19,3 @@ function handleNote(ev: any) {
     
 }    
 
-form.noteText.value === '';
-
-form.addButton.addEventListener(elm => {
-    elm.preventDefault();  
-    if (form.noteText.value !== '' {
-      addNote();
-    }
-  })
-
-  

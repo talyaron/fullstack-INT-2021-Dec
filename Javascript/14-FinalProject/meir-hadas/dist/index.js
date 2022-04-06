@@ -1,4 +1,4 @@
-var root = document.querySelector('.root');
+var roots = document.querySelector('.root');
 function handleNote(ev) {
     ev.preventDefault();
     var elements = ev.target.elements;
@@ -15,10 +15,3 @@ function handleNote(ev) {
     console.log(result);
     console.log(elements);
 }
-form.noteText.value === '';
-form.addButton.addEventListener(function (elm) {
-    elm.preventDefault();
-    if (form.noteText.value !== '') {
-        addNote();
-    }
-});
