@@ -60,3 +60,12 @@ function tasksPage(){
 }
 
 tasksPage()
+
+
+function addTask(event){
+
+    const addTaskInput: HTMLInputElement = document.querySelector("#addTask");
+    
+
+
+}

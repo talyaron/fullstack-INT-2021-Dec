@@ -46,3 +46,6 @@ function tasksPage() {
     todayDate.innerHTML = "" + todayDisplay;
 }
 tasksPage();
+function addTask(event) {
+    var addTaskInput = document.querySelector("#addTask");
+}

@@ -3,8 +3,8 @@
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 150px auto;
-  grid-template-areas: "appHeader appHeader" "categories tasks";
+  grid-template-rows: 150px 150px auto;
+  grid-template-areas: "appHeader appHeader" "addTask addTask" "categories tasks";
   background-color: white;
   padding: 10px;
   margin: auto;
