@@ -49,16 +49,29 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.app_wrapper h1 {
+  font-size: 24px;
+  padding-left: 1em;
+  padding-bottom: 0.5em;
+  font-weight: bold;
+}
+.app_wrapper h2 {
+  font-size: 1em;
+  padding-left: 1.4em;
+  padding-bottom: 0;
+  font-weight: 400;
+  color: gray;
+}
 .app_wrapper .tasksContainer {
   height: 75%;
   width: 90%;
   margin: auto;
+  margin-top: 0;
   z-index: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  padding: 1.4em;
 }
 .app_wrapper .tasksContainer .task {
   width: 21em;
@@ -68,7 +81,7 @@ body {
   border: 1px solid lightgray;
   background-color: white;
   box-sizing: border-box;
-  margin: 0.4em;
+  margin-bottom: 0.8em;
   position: relative;
 }
 .app_wrapper .tasksContainer .task .heading {
@@ -80,7 +93,7 @@ body {
 .app_wrapper .tasksContainer .task .startTime {
   font-size: 0.9em;
   color: gray;
-  margin-bottom: 0.4em;
+  margin-bottom: 0.8em;
 }
 .app_wrapper .tasksContainer .task .description:nth-last-child(2),
 .app_wrapper .tasksContainer .task .startTime:nth-last-child(2) {
@@ -92,6 +105,12 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+.app_wrapper .tasksContainer .task .startTime {
+  background-color: #e5defa;
+  max-width: 25ch;
+  padding: 0.4em;
+  border-radius: 0.3em;
 }
 .app_wrapper .tasksContainer .task img {
   position: absolute;
