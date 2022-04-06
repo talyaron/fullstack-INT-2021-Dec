@@ -112,6 +112,8 @@ function handleNewProduct(ev) {
 }
 function handleDirection(action:string){
     if (action=='managerAddProduct'){
+        let newitem:HTMLElement=document.querySelector("#newitem")
+        newitem.remove()
         root.innerHTML+=
         `<div id="contOrBack">
         <h2>new product created</h2>
@@ -121,13 +123,6 @@ function handleDirection(action:string){
         contOrBack = document.querySelector("#contOrBack")
         contOrBack.style.top = "600px"
         contOrBack.style.left = "400px"
-        contOrBack.style.fontSize="10px"
-
-        // background-color: rgb(172, 143, 161);
-        // border: 1px solid black;
-        // border-radius: 10px;
-        // padding: 15px;
-        // margin-top: 15px;
     }
 }
 

@@ -73,17 +73,13 @@ function handleNewProduct(ev) {
 }
 function handleDirection(action) {
     if (action == 'managerAddProduct') {
+        var newitem = document.querySelector("#newitem");
+        newitem.remove();
         root.innerHTML +=
             "<div id=\"contOrBack\">\n        <h2>new product created</h2>\n        <button id=\"back\" onclick =window.location.href = \"index1.html\">back to manager tasks</button>\n        <button id=\"cont\" onclick=\"handleNew(event)\">Add another Items</button> \n        </div>";
         contOrBack = document.querySelector("#contOrBack");
         contOrBack.style.top = "600px";
         contOrBack.style.left = "400px";
-        contOrBack.style.fontSize = "10px";
-        // background-color: rgb(172, 143, 161);
-        // border: 1px solid black;
-        // border-radius: 10px;
-        // padding: 15px;
-        // margin-top: 15px;
     }
 }
 // <p><img id="output" width="200" /></p>
