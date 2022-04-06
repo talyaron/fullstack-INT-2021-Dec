@@ -4,14 +4,14 @@ const tasks: Array < object > = []; // Creating "Data Base" To Hold All the task
 function handleTask(event: any) {
   event.preventDefault();
   console.log(event);
-  const heading: object = event.target.elements.heading.value;
-  const description: object = event.target.elements.description.value;
-  const startTime: object = event.target.elements.startTime.value;
-  const endTime: object = event.target.elements.endTime.value;
+  const heading: HTMLInputElement = event.target.elements.heading.value;
+  const description: HTMLInputElement = event.target.elements.description.value;
+  const startTime: HTMLInputElement = event.target.elements.startTime.value;
+  const endTime: HTMLInputElement = event.target.elements.endTime.value;
   console.log(heading, description, startTime, endTime);
 
   // Creating new task div each time a task added from the form.
-  let taskContainer: any = document.querySelector('.tasksContainer');
+  let taskContainer: HTMLDivElement = document.querySelector('.tasksContainer');
   let task: any = document.createElement('div')
   task.classList.add('task');
 
@@ -20,7 +20,8 @@ function handleTask(event: any) {
     <div class='description'>${description}</div>
     <div class='startTime'>Scheduled to: ${startTime}</div> 
    <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>`;
-  console.log(task);
+  
+   console.log(task);
   taskContainer.append(task);
 
   // Pushing the task into a tasks array ("data base").
@@ -46,21 +47,19 @@ function handleAddTask(event) {
   const saveBtn = document.querySelector('.saveBtn');
   const cancelBtn = document.querySelector('.cancelBtn');
 
-// Pressing the 'add' button.
-  addBtn.addEventListener('click', toggleSlider, false);
-// Slide up
-  function toggleSlider() {
-    if (slide.classList.contains('slide-up')) {
-      slide.classList.remove('slide-up');
-    } else {
-      slide.classList.add('slide-up');
+  // Pressing the 'add' button.
+  addBtn.addEventListener('click', toggleSliderUp, false);
+  // Slide up
+  function toggleSliderUp() {
+    slide.classList.contains('slide-up'); {
+      slide.classList.add('slide-up')
     }
   }
 
-// Pressing the 'save task' button.
-  saveBtn.addEventListener('click', toggleSlide, false);
-// Slide down
-  function toggleSlide() {
+  // Pressing the 'save task' button.
+  saveBtn.addEventListener('click', toggleSliderDown, false);
+  // Slide down
+  function toggleSliderDown() {
     slide.classList.contains('slide'); {
       slide.classList.remove('slide-up');
     }

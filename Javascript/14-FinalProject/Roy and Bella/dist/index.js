@@ -37,20 +37,18 @@ function handleAddTask(event) {
     var saveBtn = document.querySelector('.saveBtn');
     var cancelBtn = document.querySelector('.cancelBtn');
     // Pressing the 'add' button.
-    addBtn.addEventListener('click', toggleSlider, false);
+    addBtn.addEventListener('click', toggleSliderUp, false);
     // Slide up
-    function toggleSlider() {
-        if (slide.classList.contains('slide-up')) {
-            slide.classList.remove('slide-up');
-        }
-        else {
+    function toggleSliderUp() {
+        slide.classList.contains('slide-up');
+        {
             slide.classList.add('slide-up');
         }
     }
     // Pressing the 'save task' button.
-    saveBtn.addEventListener('click', toggleSlide, false);
+    saveBtn.addEventListener('click', toggleSliderDown, false);
     // Slide down
-    function toggleSlide() {
+    function toggleSliderDown() {
         slide.classList.contains('slide');
         {
             slide.classList.remove('slide-up');
