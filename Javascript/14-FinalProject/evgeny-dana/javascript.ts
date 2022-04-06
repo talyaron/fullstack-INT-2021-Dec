@@ -2,52 +2,50 @@ const uid = function () {
   return Date.now().toString(36) + Math.random().toString(36).substr(2);
 };
 
-const products = [];
+interface Product{
+    id:string;
+    image:string;
+    price:string;
+    name:string;
+    imgSrc:string;
+}
+
+const products:Array<Product> = [];
+
+
 
 const handleAddProduct = (ev: any) => {
-  const server_wrapper = document.querySelector(".Server_wrapper");
+ 
   ev.preventDefault();
 
   const image = ev.target.elements.image.files[0];
-  const nameinput = ev.target.elements.name.value;
-  const priceinput = ev.target.elements.price.value;
+  const name = ev.target.elements.name.value;
+  const price = ev.target.elements.price.value;
 
-  console.log(image, nameinput, priceinput);
   const id = uid();
-
-  const item = { id, image, nameinput, priceinput };
+  const imgSrc = URL.createObjectURL(image);
+  
+  const item:Product = { id, image,imgSrc, name, price };
   products.push(item);
 
-  //   const imgSrc = URL.createObjectURL(item.image);
-
-  //   const display_item = document.createElement("div");
-  //   server_wrapper.appendChild(display_item);
-  //   display_item.setAttribute("class", "display_card");
-
-  //   const detail_list = document.createElement("div");
-  //   display_item.appendChild(detail_list);
-  //   detail_list.setAttribute("class", "detail_list");
-
-  //   const image_output = document.createElement("div");
-  //   display_item.appendChild(image_output);
-  //   image_output.setAttribute("id", "image_output");
-  //   image_output.innerHTML = `<img src="${imgSrc}" alt="" id="image-preview"> </div>`;
-  //   const imagePreview: HTMLImageElement =
-  //     document.querySelector("#image-preview");
-
-  //   imagePreview.src = imgSrc;
-
-  //   const name_output = document.createElement("div");
-  //   detail_list.appendChild(name_output);
-  //   name_output.setAttribute("id", "name_output");
-  //   name_output.innerHTML = `<div>item name:${nameinput}</div>`;
-
-  //   const price_output = document.createElement("div");
-  //   detail_list.appendChild(price_output);
-  //   price_output.setAttribute("id", "price_output");
-  //   price_output.innerHTML = `<div>item price:${priceinput}</div>`;
+  renderProducts();
+  ev.target.reset()
+  
 };
 
 function renderProducts(){
-    
+    const root = document.querySelector("#root");
+
+    let html = '';
+    products.forEach(product=>{
+       html+=
+        `<div>
+            <div>${product.name}</div>
+            <img src=${product.imgSrc}>
+            <div>Price: ${product.price}</div>
+        </div>`
+
+    })
+
+    root.innerHTML = html;
 }
