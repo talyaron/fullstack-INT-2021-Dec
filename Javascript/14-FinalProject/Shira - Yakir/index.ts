@@ -63,9 +63,9 @@ tasksPage()
 
 
 function addTask(event){
-
-    const addTaskInput: HTMLInputElement = document.querySelector("#addTask");
-    
-
-
+    // const addTaskInput: HTMLInputElement = document.querySelector("#addTask");
+    const tasks: HTMLElement = document.querySelector(".tasks");
+    const addTaskInput = document.createElement('div')
+    tasks.append(addTaskInput)
+    addTaskInput.classList.add('task')
 }

@@ -47,5 +47,9 @@ function tasksPage() {
 }
 tasksPage();
 function addTask(event) {
-    var addTaskInput = document.querySelector("#addTask");
+    // const addTaskInput: HTMLInputElement = document.querySelector("#addTask");
+    var tasks = document.querySelector(".tasks");
+    var addTaskInput = document.createElement('div');
+    tasks.append(addTaskInput);
+    addTaskInput.classList.add('task');
 }
