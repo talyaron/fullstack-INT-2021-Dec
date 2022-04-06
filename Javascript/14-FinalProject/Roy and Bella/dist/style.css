@@ -12,8 +12,8 @@ body {
 }
 
 .app_wrapper {
-  height: 812px;
-  width: 375px;
+  height: 75vh;
+  width: 20vw;
   background-color: #f4f4f4;
   position: relative;
 }

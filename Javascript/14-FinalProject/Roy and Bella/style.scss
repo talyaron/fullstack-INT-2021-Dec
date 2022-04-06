@@ -12,8 +12,8 @@ body {
 }
 
 .app_wrapper {
-    height: 812px;
-    width: 375px;
+    height: 75vh;
+    width: 20vw;
     background-color: rgb(244, 244, 244);
     position: relative;
     .addBtn {
@@ -183,4 +183,5 @@ body {
 
 .slide-up {
     transform: translateY(0);
+    // top: 100px;
 }
