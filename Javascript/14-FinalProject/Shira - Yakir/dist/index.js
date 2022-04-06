@@ -5,16 +5,17 @@ var formPassword = document.querySelector("#password");
 var formconfirmPassword = document.querySelector("#repeatPassword");
 var formSignUpMsg = document.querySelector("#signUpMsg");
 var formLoginMsg = document.querySelector("#loginMsg");
-function handleSignUp(ev) {
-    ev.preventDefault();
+function handleSignUp(event) {
+    event.preventDefault();
     if (formPassword.value === formconfirmPassword.value) {
         userName = formUserName.value;
         password = formPassword.value;
-        var elements = ev.target.elements;
+        var elements = event.target.elements;
         formSignUpMsg.innerHTML = "sign up success";
     }
     else {
         alert("confirm password dosent match");
+        formSignUpMsg.innerHTML = "confirm password dosent match";
     }
 }
 function handleLogin(ev) {

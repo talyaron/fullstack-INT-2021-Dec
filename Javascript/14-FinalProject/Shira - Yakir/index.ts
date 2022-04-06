@@ -6,15 +6,16 @@ const formconfirmPassword: HTMLInputElement = document.querySelector("#repeatPas
 const formSignUpMsg: HTMLElement = document.querySelector("#signUpMsg");
 const formLoginMsg: HTMLElement = document.querySelector("#loginMsg");
 
-function handleSignUp(ev) {
-    ev.preventDefault();
+function handleSignUp(event) {
+    event.preventDefault();
     if (formPassword.value === formconfirmPassword.value) {
         userName = formUserName.value;
         password = formPassword.value;
-        const elements = ev.target.elements;
+        const elements = event.target.elements;
         formSignUpMsg.innerHTML = `sign up success`;
     } else {
         alert("confirm password dosent match");
+        formSignUpMsg.innerHTML = `confirm password dosent match`;
     }
 }
 
