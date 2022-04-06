@@ -20,11 +20,7 @@ console.log(b)
 b = Math.random(); // random number between 0 - 1; 
 console.log(b)
 
-b = Math.round(Math.random() * 10) + 10; // random number between 10 to 20; 
-console.log(b)
-
-
-var c = Math.ceil(Math.random()*7);
+var c = Math.ceil( Math.random()*7);
 console.log(c)
 
 //between 10 - 20
