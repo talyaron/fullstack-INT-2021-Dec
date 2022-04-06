@@ -2,7 +2,7 @@
   width: 80%;
   height: 100%;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: 150px auto;
   grid-template-areas: "appHeader appHeader" "categories tasks";
   background-color: white;
