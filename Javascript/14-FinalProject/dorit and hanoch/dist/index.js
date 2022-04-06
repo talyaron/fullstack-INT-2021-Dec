@@ -4,6 +4,7 @@ var output = document.querySelector("#output");
 var fileName = '';
 var root = document.querySelector("#root");
 var contOrBack = document.querySelector("#contOrBack");
+var newitem = document.querySelector("#newitem");
 var manager = {
     name: "Tal Yaron",
     username: "tal",
@@ -73,7 +74,6 @@ function handleNewProduct(ev) {
 }
 function handleDirection(action) {
     if (action == 'managerAddProduct') {
-        var newitem = document.querySelector("#newitem");
         newitem.remove();
         root.innerHTML +=
             "<div id=\"contOrBack\">\n        <h2>new product created</h2>\n        <button id=\"back\" onclick =window.location.href = \"index1.html\">back to manager tasks</button>\n        <button id=\"cont\" onclick=\"handleNew(event)\">Add another Items</button> \n        </div>";

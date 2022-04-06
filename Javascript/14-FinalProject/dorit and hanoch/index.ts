@@ -21,6 +21,7 @@ let output:HTMLImageElement=document.querySelector("#output")
 let fileName:string = ''
 let root: HTMLElement = document.querySelector("#root")
 let contOrBack:HTMLDivElement=document.querySelector("#contOrBack")
+let newitem:HTMLElement=document.querySelector("#newitem")
 const manager: users = {
     name: "Tal Yaron",
     username: "tal",
@@ -112,7 +113,6 @@ function handleNewProduct(ev) {
 }
 function handleDirection(action:string){
     if (action=='managerAddProduct'){
-        let newitem:HTMLElement=document.querySelector("#newitem")
         newitem.remove()
         root.innerHTML+=
         `<div id="contOrBack">
