@@ -18,8 +18,24 @@ calculatorButtons.map(button => {
         console.log(`clicked`); //Any button that been clicked pop a `clicked` messege
         console.log(ev);
         console.log(ev.target);
-        console.log(ev.target.innerText)
+        console.log(ev.target.innetText)
         switch (ev.target.innerText) {
+            case 'AC':
+                display.innerText = ''
+                break;
+            case 'DEL':
+                if (display.innerText) {
+                    display.innerText = display.innerText.slice(0, -1);
+                }
+                break;
+            case '=':
+                try{
+                    display.innerText = eval(display.innerText);
+                }
+                catch{
+                    display.innerText = ''
+                }
+                break;
             default:
                 display.innerText += ev.target.innerText;//any button press making the number pop at the Display
         }
