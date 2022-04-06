@@ -163,6 +163,9 @@ function cartHtmlBuild () {
   })
 }
 
+// reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ })
+
+
 
 
 

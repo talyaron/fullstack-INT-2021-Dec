@@ -121,6 +121,7 @@ function cartHtmlBuild() {
         htmlCart.innerHTML += "<div class=\"parent\"><img src=\"" + currentCartProduct.image + "\" alt=\"" + currentCartProduct.description + "\"><div id=" + currentCartProduct.id + " class=\"overlay\"><div>" + currentCartProduct.name + "</div><div>" + currentCartProduct.price + "\u20AA</div><div>quantity: " + product.quantity;
     });
 }
+// reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ })
 // cart.forEach(function (par) {
 //     htmlCart.innerHTML += `<div class="parent"><img src="${par.src}" alt="${par.title}"><div id=${par.id} class="overlay"><div>${par.title}</div><div>${par.tags}₪</div><button onclick="addMeToCart(event)" class="addMe">Add</button></div></div>`;
 //   });
