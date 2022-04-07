@@ -1,27 +1,34 @@
 const tasks: Array < object > = []; // Creating "Data Base" To Hold All the tasks.
+// const tasks = new Map([]);
+// const obj = Object.fromEntries(tasks);
+
+// console.log(obj);
+// // expected output: Object { foo: "bar", baz: 42 }
+
+
 
 // Add new task form.
 function handleTask(event: any) {
   event.preventDefault();
-  console.log(event);
+  // console.log(event);
   const heading: HTMLInputElement = event.target.elements.heading.value;
   const description: HTMLInputElement = event.target.elements.description.value;
   const startTime: HTMLInputElement = event.target.elements.startTime.value;
   const endTime: HTMLInputElement = event.target.elements.endTime.value;
-  console.log(heading, description, startTime, endTime);
 
   // Creating new task div each time a task added from the form.
-  const taskContainer: HTMLDivElement = document.querySelector('.tasksContainer');
-  const task: any = document.createElement('div')
+  const taskContainer: any = document.querySelector('.tasksContainer');
+  let task = document.createElement('div');
+  const newtask:object = Object.create(task);
+  console.log(newtask);
+
+
   // creating checkbox element
   const checkbox = document.createElement('input');
-
   // Assigning the attributes
   // to created checkbox
   checkbox.type = "checkbox";
-  checkbox.name = "name";
-  checkbox.value = "value";
-  checkbox.id = "id";
+
 
   task.append(checkbox);
 
@@ -33,13 +40,13 @@ function handleTask(event: any) {
     <div class='startTime'>Scheduled to: ${startTime}</div> 
    <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>
    <input type='checkbox' class='checkbox'>`;
+  //  console.log(task);
 
-  console.log(task);
   taskContainer.append(task);
 
 
   // Pushing the task into a tasks array ("data base").
-  tasks.push(task.name);
+  tasks.push(newtask);
   console.log(tasks);
 }
 // Remove tasks.
