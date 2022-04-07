@@ -5,6 +5,10 @@ var fileName = '';
 var root = document.querySelector("#root");
 var contOrBack = document.querySelector("#contOrBack");
 var newitem = document.querySelector("#newitem");
+var firstTime = true;
+var ans = false;
+var fileinput = "";
+var myButton = document.querySelector("#button2");
 var manager = {
     name: "Tal Yaron",
     username: "tal",
@@ -23,10 +27,10 @@ function handleUser(ev) {
     }
 }
 function handleNew(ev) {
-    var myButton = document.querySelector("#button2");
     myButton.style.backgroundColor = "gray";
-    root.innerHTML += "<div id=\"newitem\">\n                            <p>Please type details</>\n                            <form action=\"\" onsubmit=\"handleNewProduct(event)\">\n                                <input type=\"text\" name=\"typeName\" placeholder=\"Enter type of item\">\n                                <input type=\"text\" name=\"serialNo\" placeholder=\"Enter serial number of item\">\n                                <input type=\"text\" name=\"description\" placeholder=\"Enter description of item\">\n                                <input type=\"number\" name=\"price\" placeholder=\"Enter a price\" >\n                                <input type=\"text\" name=\"currency\" placeholder=\"Enter currency\">\n                                <input type=\"file\" name=\"imageFile\" placeholder = \"Please pick the image of the item\">\n                                <button type=\"submit\">SEND</button>\n                            </form>\n                            <img id=\"output\" width=\"100px\"/>\n                        </div>";
-    var newitem = document.querySelector("#newitem");
+    root.innerHTML += "<div id=\"newitem\">\n                                <p>Please type details</>\n                                <form action=\"\" onsubmit=\"handleNewProduct(event)\">\n                                    <input type=\"text\" name=\"typeName\" placeholder=\"Enter type of item\">\n                                    <input type=\"text\" name=\"serialNo\" placeholder=\"Enter serial number of item\">\n                                    <input type=\"text\" name=\"description\" placeholder=\"Enter description of item\">\n                                    <input type=\"number\" name=\"price\" placeholder=\"Enter a price\" >\n                                    <input type=\"text\" name=\"currency\" placeholder=\"Enter currency\">\n                                    <input type=\"file\" name=\"imageFile\" placeholder = \"Please pick the image of the item\">\n                                    <button type=\"submit\">SEND</button> \n                                </form>\n                                <img id=\"output\" width=\"100px\"/>\n                                <button id=\"exitButton\" onclick=\"backToManager(event)\">Back To Manager Page</button>\n                            </div>";
+    //<a href="index1.html">back to manager page</a> 
+    newitem = document.querySelector("#newitem");
     newitem.style.display = "flex";
     newitem.style.flexDirection = "column";
     newitem.style.position = "absolute";
@@ -45,13 +49,17 @@ function handleNewProduct(ev) {
         if (details[i].name && details[i].value) {
             if (details[i].name == "imageFile") {
                 result['imageFile'] = details['imageFile'].files[0];
+                fileinput = URL.createObjectURL(result["imageFile"]);
+                //displayPic()
             }
             else {
                 result[details[i].name] = details[i].value;
             }
         }
     }
-    var fileinput = URL.createObjectURL(result["imageFile"]);
+    fileinput = URL.createObjectURL(result["imageFile"]);
+    output = document.querySelector("#output");
+    console.log(output.style.opacity);
     output.src = fileinput;
     //console.log(typeof fileinput)
     var newProduct = {
@@ -62,32 +70,30 @@ function handleNewProduct(ev) {
         currency: result['currency'],
         pImage: fileinput
     };
-    // console.log(`newProduct of typeName: ${newProduct['name']}`)
-    // console.log(`newProduct of serialNo: ${newProduct['serialNo']}`)
-    // console.log(`newProduct of description: ${newProduct['description']}`)
-    // console.log(`newProduct of price: ${newProduct['price']}`)
-    // console.log(`newProduct of currency: ${newProduct['currency']}`)
-    // console.log(`newProduct of imgFile: ${newProduct['pImage']}`)
-    //console.log(`newProduct ${newProduct}`)
     productsArr.push(newProduct);
-    handleDirection('managerAddProduct');
+    console.dir(productsArr);
+    ev.target.reset();
+    renderProducts();
+    //ans = handleDirection('managerAddProduct')
 }
-function handleDirection(action) {
-    if (action == 'managerAddProduct') {
-        newitem.remove();
-        root.innerHTML +=
-            "<div id=\"contOrBack\">\n        <h2>new product created</h2>\n        <button id=\"back\" onclick =window.location.href = \"index1.html\">back to manager tasks</button>\n        <button id=\"cont\" onclick=\"handleNew(event)\">Add another Items</button> \n        </div>";
-        contOrBack = document.querySelector("#contOrBack");
-        contOrBack.style.top = "600px";
-        contOrBack.style.left = "400px";
-    }
+function renderProducts() {
+    var render = document.querySelector("#render");
+    var html = '';
+    productsArr.forEach(function (product) {
+        html +=
+            "<div class=\"test\" >\n                <img src=" + product.pImage + " width=\"100px\">\n                <div class=\"test2\" >\n                      <div>name:" + product.name + "</div>  \n                      <div>serialNo:" + product.serialNo + "</div>\n                      <div>description: " + product.description + "</div>\n                      <div>price: " + product.price + "</div>\n                      <div>currency: " + product.currency + "</div>\n                      <button class=\"button\">delete</button>\n                      <button class=\"button\">update</button>\n                </div>\n            </div>";
+    });
+    render.innerHTML = html;
+    render.style.position = "absolute";
+    render.style.top = "250px";
+    render.style.left = "700px";
 }
-// <p><img id="output" width="200" /></p>
-// <p><label for="file" style="cursor: pointer;" onclick="handleHidden(event)">Upload Image</label></p>
-// <div id="addItemName"></div>
-// <div id="addItemPrice"></div>
-// </div>
-// <button onclick="handleDelete(event)"> delete item</button>`
+function backToManager(ev) {
+    alert("Products added");
+    newitem.remove();
+    myButton.style.backgroundColor = "rgb(172, 143, 161)";
+    window.location.href = "index1.html";
+}
 var loadImg = function (event) {
     var image = document.getElementById('output');
     image.src = URL.createObjectURL(event.target.files[0]);
