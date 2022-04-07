@@ -37,6 +37,7 @@ function handleTask(event: any) {
   console.log(task);
   taskContainer.append(task);
 
+
   // Pushing the task into a tasks array ("data base").
   tasks.push(task.name);
   console.log(tasks);
@@ -142,3 +143,4 @@ function handleAddTask(event) {
 //   <h3 class='title'>Task name</h3>
 //   <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.quam autem est.</p>
 // </div>
+
