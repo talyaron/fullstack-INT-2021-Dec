@@ -215,6 +215,13 @@ body {
 
 .slide-up {
     transform: translateY(0);
+
+}
+.timer{
+    font-size: 1em;
+    z-index: 3;
+    color: wheat;
+    display: flex;
 }
 
 // @media only screen and (max-width: 1920px) {
@@ -229,3 +236,8 @@ body {
 //         overflow: hidden;
 //     }
 // }
+
+    // top: 100px;
+
+
+

@@ -22,6 +22,10 @@ let fileName:string = ''
 let root: HTMLElement = document.querySelector("#root")
 let contOrBack:HTMLDivElement=document.querySelector("#contOrBack")
 let newitem:HTMLElement=document.querySelector("#newitem")
+let firstTime:boolean=true
+let ans:boolean=false
+let fileinput:string = ""
+const myButton: HTMLElement = document.querySelector("#button2")
 const manager: users = {
     name: "Tal Yaron",
     username: "tal",
@@ -42,36 +46,35 @@ function handleUser(ev) {
 }
 
 function handleNew(ev) {
-
+        myButton.style.backgroundColor = "gray"
+        root.innerHTML += `<div id="newitem">
+                                <p>Please type details</>
+                                <form action="" onsubmit="handleNewProduct(event)">
+                                    <input type="text" name="typeName" placeholder="Enter type of item">
+                                    <input type="text" name="serialNo" placeholder="Enter serial number of item">
+                                    <input type="text" name="description" placeholder="Enter description of item">
+                                    <input type="number" name="price" placeholder="Enter a price" >
+                                    <input type="text" name="currency" placeholder="Enter currency">
+                                    <input type="file" name="imageFile" placeholder = "Please pick the image of the item">
+                                    <button type="submit">SEND</button> 
+                                </form>
+                                <img id="output" width="100px"/>
+                                <button id="exitButton" onclick="backToManager(event)">Back To Manager Page</button>
+                            </div>`
+        //<a href="index1.html">back to manager page</a> 
+        newitem = document.querySelector("#newitem")
+        newitem.style.display = "flex"
+        newitem.style.flexDirection = "column"
+        newitem.style.position = "absolute"
+        newitem.style.top = "200px"
+        newitem.style.left = "400px"
+        output = document.querySelector("#output")
+        output.style.position="absolute"
+        output.style.top = "50px"
+        output.style.left="350px"
     
-    const myButton: HTMLElement = document.querySelector("#button2")
-    myButton.style.backgroundColor = "gray"
-    root.innerHTML += `<div id="newitem">
-                            <p>Please type details</>
-                            <form action="" onsubmit="handleNewProduct(event)">
-                                <input type="text" name="typeName" placeholder="Enter type of item">
-                                <input type="text" name="serialNo" placeholder="Enter serial number of item">
-                                <input type="text" name="description" placeholder="Enter description of item">
-                                <input type="number" name="price" placeholder="Enter a price" >
-                                <input type="text" name="currency" placeholder="Enter currency">
-                                <input type="file" name="imageFile" placeholder = "Please pick the image of the item">
-                                <button type="submit">SEND</button>
-                            </form>
-                            <img id="output" width="100px"/>
-                        </div>`
-                        
+    }
 
-    let newitem: HTMLDivElement = document.querySelector("#newitem")
-    newitem.style.display = "flex"
-    newitem.style.flexDirection = "column"
-    newitem.style.position = "absolute"
-    newitem.style.top = "200px"
-    newitem.style.left = "400px"
-    output = document.querySelector("#output")
-    output.style.position="absolute"
-    output.style.top = "50px"
-    output.style.left="350px"
-}
 
 function handleNewProduct(ev) {
     console.log("we are here")
@@ -81,6 +84,8 @@ function handleNewProduct(ev) {
         if (details[i].name && details[i].value) {
             if (details[i].name == "imageFile") {
                 result['imageFile'] = details['imageFile'].files[0]
+                fileinput = URL.createObjectURL(result["imageFile"])
+                //displayPic()
             }
             else {
                 result[details[i].name] = details[i].value;
@@ -88,9 +93,10 @@ function handleNewProduct(ev) {
         }
       
     }
-
-    let fileinput:string = URL.createObjectURL(result["imageFile"])
-    output.src = fileinput
+     fileinput = URL.createObjectURL(result["imageFile"])
+     output = document.querySelector("#output")
+     console.log(output.style.opacity)
+     output.src = fileinput
     //console.log(typeof fileinput)
     let newProduct: product = {
         name: result['typeName'],
@@ -100,38 +106,48 @@ function handleNewProduct(ev) {
         currency: result['currency'],
         pImage : fileinput
     }
-    // console.log(`newProduct of typeName: ${newProduct['name']}`)
-    // console.log(`newProduct of serialNo: ${newProduct['serialNo']}`)
-    // console.log(`newProduct of description: ${newProduct['description']}`)
-    // console.log(`newProduct of price: ${newProduct['price']}`)
-    // console.log(`newProduct of currency: ${newProduct['currency']}`)
-    // console.log(`newProduct of imgFile: ${newProduct['pImage']}`)
-    //console.log(`newProduct ${newProduct}`)
     productsArr.push(newProduct)
-    handleDirection('managerAddProduct')
- 
-}
-function handleDirection(action:string){
-    if (action=='managerAddProduct'){
-        newitem.remove()
-        root.innerHTML+=
-        `<div id="contOrBack">
-        <h2>new product created</h2>
-        <button id="back" onclick =window.location.href = "index1.html">back to manager tasks</button>
-        <button id="cont" onclick="handleNew(event)">Add another Items</button> 
-        </div>`
-        contOrBack = document.querySelector("#contOrBack")
-        contOrBack.style.top = "600px"
-        contOrBack.style.left = "400px"
-    }
+    console.dir(productsArr)
+    ev.target.reset()
+    renderProducts()
+
+    //ans = handleDirection('managerAddProduct')
 }
 
-// <p><img id="output" width="200" /></p>
-// <p><label for="file" style="cursor: pointer;" onclick="handleHidden(event)">Upload Image</label></p>
-// <div id="addItemName"></div>
-// <div id="addItemPrice"></div>
-// </div>
-// <button onclick="handleDelete(event)"> delete item</button>`
+function renderProducts(){
+        const render:HTMLDivElement=document.querySelector("#render")
+    
+        let html = '';
+        productsArr.forEach(product=>{
+           html+=
+            `<div class="test" >
+                <img src=${product.pImage} width="100px">
+                <div class="test2" >
+                      <div>name:${product.name}</div>  
+                      <div>serialNo:${product.serialNo}</div>
+                      <div>description: ${product.description}</div>
+                      <div>price: ${product.price}</div>
+                      <div>currency: ${product.currency}</div>
+                      <button class="button">delete</button>
+                      <button class="button">update</button>
+                </div>
+            </div>`
+        })
+    
+        render.innerHTML = html;
+        render.style.position="absolute"
+        render.style.top="250px"
+        render.style.left="700px"
+        render.style.border= "1px solid black"
+}
+
+
+function backToManager(ev){
+    alert("Products added")
+    newitem.remove()
+    myButton.style.backgroundColor = "rgb(172, 143, 161)"
+    window.location.href = "index1.html"
+}
 
 
 var loadImg = function (event) {
