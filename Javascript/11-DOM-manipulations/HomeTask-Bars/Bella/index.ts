@@ -1,8 +1,8 @@
-const coundArr: Array < number > = [22, 45, 102, 88];
+const coundArr: Array<number> = [22, 45, 102, 88];
 console.dir(coundArr);
 
 
-function dataVisual(data: Array < number > ) {
+function dataVisual(data: Array<number>) {
   data.forEach((elm) => {
     let addData = document.createElement("wrapper__column");
     addData.classList.add("wrapper__column");
