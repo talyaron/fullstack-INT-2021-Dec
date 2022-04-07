@@ -42,7 +42,7 @@ body {
   box-shadow: rgba(100, 100, 111, 0.119) 0px 7px 14px 0px;
 }
 .app_wrapper .header .logo {
-  font-size: 24px;
+  font-size: 1.6em;
   background: linear-gradient(90deg, #613dc1 0%, #d8315b 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -50,73 +50,96 @@ body {
 }
 .app_wrapper h1 {
   font-size: 1.5em;
-  padding: 0.3em 0.8em 0.3em 0.8em;
-  font-weight: bold;
+  padding: 0.6em 0.9em 0.1em 0.9em;
+  font-weight: 500;
 }
-.app_wrapper h2 {
-  font-size: 1em;
-  padding-left: 1.4em;
-  padding-bottom: 0;
-  font-weight: 400;
-  color: gray;
+.app_wrapper .upperSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.app_wrapper .upperSection .allTasksBtn {
+  height: 2.6em;
+  width: 8em;
+  margin-right: 1.5em;
+  background-color: #613dc1;
+  border: none;
+  color: white;
+  border-radius: 0.4em;
 }
 .app_wrapper .tasksContainer {
+  height: 64%;
   max-height: 72%;
   overflow-y: scroll;
   overflow-x: hidden;
   width: 90%;
   margin: auto;
   margin-top: 0;
+  padding: 1.2em;
   z-index: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  border-radius: 0.8em;
+  background-color: white;
 }
 .app_wrapper .tasksContainer .task {
-  width: 22em;
+  width: 20em;
   max-height: 10em;
-  padding: 1em;
+  padding: 1em 3.4em;
   border-radius: 8px;
-  border: 1px solid lightgray;
+  border: 1px solid #ededed;
   background-color: white;
   box-sizing: border-box;
+  box-shadow: rgba(100, 100, 111, 0.119) 0px 7px 14px 0px;
   margin-bottom: 0.8em;
   position: relative;
 }
 .app_wrapper .tasksContainer .task .heading {
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin-bottom: 0.8em;
   font-weight: 600;
+}
+.app_wrapper .tasksContainer .task .checkbox {
+  position: absolute;
+  top: 1.2em;
+  left: 1em;
+  width: 1.4em;
+  height: 1.4em;
+  padding: 2em;
+}
+.app_wrapper .tasksContainer .task input[type=checkbox] {
+  accent-color: #613dc1;
 }
 .app_wrapper .tasksContainer .task .description,
 .app_wrapper .tasksContainer .task .startTime {
   font-size: 0.9em;
+  font-weight: 300;
   color: gray;
-  margin-bottom: 0.8em;
+  margin-bottom: 0.5em;
+  max-width: 23.9ch;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .app_wrapper .tasksContainer .task .description:nth-last-child(2),
 .app_wrapper .tasksContainer .task .startTime:nth-last-child(2) {
   margin-bottom: 0;
   color: black;
 }
-.app_wrapper .tasksContainer .task .description {
-  max-width: 28ch;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
 .app_wrapper .tasksContainer .task .startTime {
   background-color: #e5defa;
-  max-width: 25ch;
   padding: 0.4em;
   border-radius: 0.3em;
+  font-weight: 400;
+  color: #3c3c3c;
 }
 .app_wrapper .tasksContainer .task img {
   position: absolute;
-  left: 18.5em;
-  top: 3em;
-  width: 1.9em;
+  left: 17em;
+  top: 1em;
+  width: 1.7em;
 }
 
 #newTask {
