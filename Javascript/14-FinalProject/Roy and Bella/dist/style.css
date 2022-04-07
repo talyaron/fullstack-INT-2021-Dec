@@ -217,4 +217,5 @@ body {
   font-size: 1em;
   z-index: 3;
   color: wheat;
+  display: flex;
 }

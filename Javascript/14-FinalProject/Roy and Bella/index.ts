@@ -1,5 +1,10 @@
-const tasks: Array < object > = []; // Creating "Data Base" To Hold All the tasks.
-
+const tasks: Array < task1 > = []; // Creating "Data Base" To Hold All the tasks.
+interface task1{
+  heading:HTMLInputElement
+  description:HTMLInputElement
+  startTime:HTMLInputElement
+  endTime:HTMLInputElement
+}
 // Add new task form.
 function handleTask(event: any) {
   event.preventDefault();
@@ -9,10 +14,12 @@ function handleTask(event: any) {
   const startTime: HTMLInputElement = event.target.elements.startTime.value;
   const endTime: HTMLInputElement = event.target.elements.endTime.value;
   console.log(heading, description, startTime, endTime);
-
+   const task1:task1={heading, description, startTime, endTime}
   // Creating new task div each time a task added from the form.
   const taskContainer: HTMLDivElement = document.querySelector('.tasksContainer');
   const task: any = document.createElement('div')
+ 
+  
   // creating checkbox element
   const checkbox = document.createElement('input');
 
@@ -31,29 +38,33 @@ function handleTask(event: any) {
   task.innerHTML = `<div class='heading'>${heading}</div>
     <div class='description'>${description}</div>
     <div class='startTime'>Scheduled to: ${startTime}</div> 
-   <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>
-<<<<<<< Updated upstream
-   <input type='checkbox' class='checkbox'>`;
-
-=======
+   <input type='checkbox' class='checkbox'>
    <div class="timer">
-    <div id="days"></div>
-    <div id="hours"></div>
-    <div id="mins"></div>
-    <div id="secs"></div>
-</div>`;
->>>>>>> Stashed changes
-  console.log(task);
+   <div id="days"></div>
+   <div id="hours"></div>
+   <div id="mins"></div>
+   <div id="secs"></div>
+</div>
+<div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>`;
+
+
+ 
+
+  
   taskContainer.append(task);
-
-
+console.log(task1)
+console.log(task1.startTime)
   // Pushing the task into a tasks array ("data base").
-  tasks.push(task.name);
-  console.log(tasks);
-<<<<<<< Updated upstream
-=======
-  for(let i=0; i<tasks.length;i++){
-  var countDownDate = new Date(startTime).getTime();
+  //tasks.push(task.name);
+  tasks.push(task1)
+  console.log(tasks)
+  
+  for(let i=0;i<tasks.length;i++) {
+    
+    
+   const startDate= tasks[i].startTime
+   console.log(startDate)
+  const countDownDate = new Date(startDate).getTime();
 
 // Run myfunc every second
 var myfunc = setInterval(function() {
@@ -72,19 +83,22 @@ document.getElementById("days").innerHTML = days + "d "
 document.getElementById("hours").innerHTML = hours + "h " 
 document.getElementById("mins").innerHTML = minutes + "m " 
 document.getElementById("secs").innerHTML = seconds + "s " 
-    
+
+
+taskContainer.append(task)
 // Display the message when countdown is over
 if (timeleft < 0) {
     clearInterval(myfunc);
    alert(`'it's time to ${heading} `)
 }
 }, 1000);
+
 }
     
     
       
     event.target.reset()
->>>>>>> Stashed changes
+
 }
 // Remove tasks.
 function removeTask(event) {
