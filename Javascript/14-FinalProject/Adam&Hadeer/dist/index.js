@@ -8,12 +8,12 @@ console.log(calculatorButtons, "its working"); //Check the Array Of the buttons
 function handleClick(ev) {
     // console.log(ev.target.value)
 }
-calculatorButtons.map(function (button) {
+calculatorButtons.forEach(function (button) {
     addEventListener("click", function (ev) {
         console.log("clicked"); //Any button that been clicked pop a `clicked` messege
         console.log(ev);
         console.log(ev.target);
-        console.log(ev.target.innetText);
+        console.log(ev.target.innerText.value);
         switch (ev.target.innerText) {
             case 'AC':
                 display.innerText = '';
@@ -28,7 +28,7 @@ calculatorButtons.map(function (button) {
                     display.innerText = eval(display.innerText);
                 }
                 catch (_a) {
-                    display.innerText = '';
+                    display.innerText = 'NAN';
                 }
                 break;
             default:
