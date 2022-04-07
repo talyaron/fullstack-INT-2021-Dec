@@ -94,8 +94,8 @@ arrayOfProducts.forEach(function (product) {
     });
 });
 function addMeToCart(event) {
+    event.preventDefault();
     var productId = event.target.parentElement.id;
-    var productIndex = arrayOfProducts.findIndex(function (element) { return element.id == productId; });
     var productInCartIndex = cart.findIndex(function (element) { return element.id == productId; });
     if (productInCartIndex != -1) {
         cart[productInCartIndex].quantity++;
@@ -109,10 +109,19 @@ function addMeToCart(event) {
         cart.push(currentProduct);
         console.log(cart);
     }
+    cartHtmlBuild();
 }
 function uid() {
     return "id-" + Math.ceil(Math.random() * 1e8);
 }
+function cartHtmlBuild() {
+    htmlCart.innerHTML = "";
+    cart.forEach(function (product) {
+        var currentCartProduct = arrayOfProducts.find(function (element) { return element.id == product.id; });
+        htmlCart.innerHTML += "<div class=\"parent\"><img src=\"" + currentCartProduct.image + "\" alt=\"" + currentCartProduct.description + "\"><div id=" + currentCartProduct.id + " class=\"overlay\"><div>" + currentCartProduct.name + "</div><div>" + currentCartProduct.price + "\u20AA</div><div>quantity: " + product.quantity;
+    });
+}
+// reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ })
 // cart.forEach(function (par) {
 //     htmlCart.innerHTML += `<div class="parent"><img src="${par.src}" alt="${par.title}"><div id=${par.id} class="overlay"><div>${par.title}</div><div>${par.tags}₪</div><button onclick="addMeToCart(event)" class="addMe">Add</button></div></div>`;
 //   });
