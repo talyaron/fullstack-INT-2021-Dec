@@ -87,6 +87,7 @@ function renderProducts() {
     render.style.position = "absolute";
     render.style.top = "250px";
     render.style.left = "700px";
+    render.style.border = "1px solid black";
 }
 function backToManager(ev) {
     alert("Products added");
