@@ -12,8 +12,8 @@ function handleNote(ev: any) {
       } else if (elements[i].name && elements[i].valueAsString) {
         result[elements[i].name] = elements[i].valueAsString;
       }
-      console.log(elements[i].name, elements[i].value)
-    }
+    //   console.log(elements[i].name, elements[i].value)
+  }
     console.log(result);
     console.log(elements)
     
