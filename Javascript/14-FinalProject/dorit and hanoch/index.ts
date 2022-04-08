@@ -25,6 +25,7 @@ let newitem:HTMLElement=document.querySelector("#newitem")
 let firstTime:boolean=true
 let ans:boolean=false
 let fileinput:string = ""
+let render:HTMLDivElement=document.querySelector("#render")
 const myButton: HTMLElement = document.querySelector("#button2")
 const manager: users = {
     name: "Tal Yaron",
@@ -115,8 +116,7 @@ function handleNewProduct(ev) {
 }
 
 function renderProducts(){
-        const render:HTMLDivElement=document.querySelector("#render")
-    
+        render=document.querySelector("#render")
         let html = '';
         productsArr.forEach(product=>{
            html+=
@@ -143,8 +143,11 @@ function renderProducts(){
 
 
 function backToManager(ev){
+    console.log(render)
     alert("Products added")
+    output.remove()
     newitem.remove()
+    render.remove()
     myButton.style.backgroundColor = "rgb(172, 143, 161)"
     window.location.href = "index1.html"
 }

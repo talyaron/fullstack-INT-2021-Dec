@@ -8,6 +8,7 @@ var newitem = document.querySelector("#newitem");
 var firstTime = true;
 var ans = false;
 var fileinput = "";
+var render = document.querySelector("#render");
 var myButton = document.querySelector("#button2");
 var manager = {
     name: "Tal Yaron",
@@ -77,7 +78,7 @@ function handleNewProduct(ev) {
     //ans = handleDirection('managerAddProduct')
 }
 function renderProducts() {
-    var render = document.querySelector("#render");
+    render = document.querySelector("#render");
     var html = '';
     productsArr.forEach(function (product) {
         html +=
@@ -90,8 +91,11 @@ function renderProducts() {
     render.style.border = "1px solid black";
 }
 function backToManager(ev) {
+    console.log(render);
     alert("Products added");
+    output.remove();
     newitem.remove();
+    render.remove();
     myButton.style.backgroundColor = "rgb(172, 143, 161)";
     window.location.href = "index1.html";
 }
