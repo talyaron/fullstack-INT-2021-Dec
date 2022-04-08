@@ -68,4 +68,6 @@ function addTask(event){
     const addTaskInput = document.createElement('div')
     tasks.append(addTaskInput)
     addTaskInput.classList.add('task')
+    addTaskInput.innerHTML = event.target.value
+    console.log("test")
 }
