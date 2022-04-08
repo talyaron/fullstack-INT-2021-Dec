@@ -6,7 +6,7 @@
         grid-template-rows: 150px 150px auto;
         grid-template-areas: 
           "appHeader appHeader"
-           "addTask addTask"
+           "addCategory addTask"
           "categories tasks";
       
    
@@ -19,6 +19,10 @@
 
     .appHeader{
         grid-area: appHeader;
+    }
+
+    .addCategory{
+        grid-area: addCategory;
     }
 
     .categories{

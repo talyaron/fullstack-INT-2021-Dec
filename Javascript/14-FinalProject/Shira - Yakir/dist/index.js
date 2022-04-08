@@ -6,10 +6,12 @@ var formconfirmPassword = document.querySelector("#repeatPassword");
 var formSignUpMsg = document.querySelector("#signUpMsg");
 var formLoginMsg = document.querySelector("#loginMsg");
 //create task object
-function task(title, content, dueDate) {
+function task(title, content, dueDate, status) {
     this.title = title;
     this.contect = content;
     this.dueDate = dueDate;
+    this.status = status; // true = taskDone, false= Task open
+    this.category = "";
 }
 ;
 function handleSignUp(event) {
@@ -59,7 +61,12 @@ function addTask(event) {
     var addTaskInput = document.createElement('div');
     tasks.append(addTaskInput);
     addTaskInput.classList.add('task');
-    // const newTask = task(event.target.value,"","")
+    //------------------
+    var newTask = task("gfgdgfdgdgdf", "gfdgdf", "gfgfddg");
+    // console.dir(newTask);
+    // addTaskInput.innerHTML = newTask.title
+    // console.log("test" + newTask.title.value)
+    //------------------
+    console.log(newTask);
     addTaskInput.innerHTML = event.target.value;
-    console.log("test");
 }

@@ -7,10 +7,12 @@ const formSignUpMsg: HTMLElement = document.querySelector("#signUpMsg");
 const formLoginMsg: HTMLElement = document.querySelector("#loginMsg");
 
 //create task object
-function task(title:String, content:String, dueDate):any {
+function task(title:String, content:String, dueDate:String, status:boolean) {
     this.title = title;
     this.contect = content;
     this.dueDate = dueDate;
+    this.status = status;  // true = taskDone, false= Task open
+    this.category = "";
 };
 
 
@@ -76,7 +78,17 @@ function addTask(event) {
     const addTaskInput = document.createElement('div')
     tasks.append(addTaskInput)
     addTaskInput.classList.add('task')
-    // const newTask = task(event.target.value,"","")
+    //------------------
+    const newTask = task("gfgdgfdgdgdf","gfdgdf","gfgfddg");
+    // console.dir(newTask);
+        // addTaskInput.innerHTML = newTask.title
+    // console.log("test" + newTask.title.value)
+ //------------------
+
+    console.log(newTask);
+    
+
+
     addTaskInput.innerHTML = event.target.value;
-    console.log("test")
+
 }
