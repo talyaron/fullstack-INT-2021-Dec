@@ -6,21 +6,36 @@ body .Server_wrapper {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 20px;
 }
 body .Server_wrapper .input_fields {
   background-color: aqua;
   height: 10rem;
   width: 20rem;
 }
-body .Server_wrapper .display_card {
-  background-color: grey;
-  height: 13rem;
-  width: 35rem;
+body .Server_wrapper #root {
   display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
-body .Server_wrapper .display_card #image_output {
-  width: 375px;
-  border: solid black;
-  background-position: center;
-  background-size: cover;
+body .Server_wrapper #root .test {
+  background-color: purple;
+  height: 100%;
+  width: 90%;
+  display: flex;
+  border-radius: 2rem;
+  box-shadow: 2px 2px 5px rgba(67, 6, 93, 0.721);
+}
+body .Server_wrapper #root .test .test2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+}
+body .Server_wrapper #root img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem 0 0 2rem;
 }
