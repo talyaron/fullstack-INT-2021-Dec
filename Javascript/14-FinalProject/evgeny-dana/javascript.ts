@@ -39,24 +39,24 @@ function renderProducts() {
   let html = '';
   products.forEach(product => {
     html +=
-    `<div class="megaTest" >
+      `<div class="megaTest" >
       <div class="test" >
             <img src=${product.imgSrc}>
             <div class="test2" >
                   <div>name:${product.name}</div>
                   <div>Price: ${product.price}</div>
                   <button onclick="handleRemoveProduct('${product.id}')" class="btnDelete">delete</button>
-                  <button onclick="handleUpdateProduct('${product.id}')" class="btnUpdate">update</button>
+                  <button" class="btnUpdate">update</button>
                   <p>in/out stock</p>
                   <input type="checkbox"> 
             </div>
         </div>
-        <form onsubmit="handleUpdateProduct(event, ${product.id})">
-            <input type="text" name="productName" value="${product.name}" >
-            <input type="text" value="${product.price}" >
-            <input type="file" value="${product.imgSrc}" >
-            <input type="submit" value="confirm changes"/>
-            </form>
+        <form onsubmit="handleUpdateProduct(event, '${product.id}')">
+        <input type="text" name="productName" value="${product.name}">
+        <input type="file">
+        <input type="text" value="${product.price}">
+        <button type="submit">send</button>
+    </form>
      </div>`
   })
 
@@ -76,16 +76,22 @@ function handleRemoveProduct(productId: string) {
 }
 
 
-function handleUpdateProduct(event, productId: string) {
-event.preventDefault();
+function handleUpdateProduct(ev: any, productId: string) {
+  ev.preventDefault();
+
+  console.log(productId)
+
   const index = products.findIndex(object => {
     return object.id === productId;
   });
 
-  if(index!==-1) products[index].name = event.target.elements.productName.value
+  console.log(index)
+
+  if (index !== -1) {
+    products[index].name = ev.target.elements.productName.value
+  }
+
   console.log(products)
 
-  
-
-
+  renderProducts()
 }
