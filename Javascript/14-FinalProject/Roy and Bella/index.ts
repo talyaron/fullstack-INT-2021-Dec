@@ -1,58 +1,88 @@
-const tasks: Array < object > = []; // Creating Fake Data Base To Hold All tasks.
+const tasks: Array < object > = []; // Creating "Data Base" To Hold All the tasks.
+// const tasks = new Map([]);
+// const obj = Object.fromEntries(tasks);
+
+// console.log(obj);
+// // expected output: Object { foo: "bar", baz: 42 }
+
+
 
 // Add new task form.
 function handleTask(event: any) {
   event.preventDefault();
-  console.log(event);
-  const heading: object = event.target.elements.heading.value;
-  const description: object = event.target.elements.description.value;
-  const startTime: object = event.target.elements.startTime.value;
-  const endTime: object = event.target.elements.endTime.value;
-  console.log(heading, description, startTime, endTime);
+  // console.log(event);
+  const heading: HTMLInputElement = event.target.elements.heading.value;
+  const description: HTMLInputElement = event.target.elements.description.value;
+  const startTime: HTMLInputElement = event.target.elements.startTime.value;
+  const endTime: HTMLInputElement = event.target.elements.endTime.value;
 
-// Creating new task div each time a task added from the form.
-  let taskContainer: any = document.querySelector('.tasksContainer');
-  let task: any = document.createElement('div')
+  // Creating new task div each time a task added from the form.
+  const taskContainer: any = document.querySelector('.tasksContainer');
+  let task = document.createElement('div');
+  const newtask:object = Object.create(task);
+  console.log(newtask);
+
+
+  // creating checkbox element
+  const checkbox = document.createElement('input');
+  // Assigning the attributes
+  // to created checkbox
+  checkbox.type = "checkbox";
+
+
+  task.append(checkbox);
+
   task.classList.add('task');
 
-// Appending new tasks into the tasks container.
+  // Appending new tasks into the tasks container.
   task.innerHTML = `<div class='heading'>${heading}</div>
     <div class='description'>${description}</div>
     <div class='startTime'>Scheduled to: ${startTime}</div> 
-   <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>`;
-  console.log(task);
+   <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>
+   <input type='checkbox' class='checkbox'>`;
+  //  console.log(task);
+
   taskContainer.append(task);
 
+
   // Pushing the task into a tasks array ("data base").
-  tasks.push(task.name);
+  tasks.push(newtask);
   console.log(tasks);
-
 }
-
-
-function removeTask(event){
+// Remove tasks.
+function removeTask(event) {
   event.preventDefault();
-  const button= event.target;
-  const task= button.parentNode;
-  const array= task.parentNode;
-  const div= array.parentNode
- 
+  const button = event.target;
+  const task = button.parentNode;
+  const array = task.parentNode;
+  const div = array.parentNode
+
   div.removeChild(array);
-  
 }
 
-function handleAddTask (event){
+// Add new task (using 'handleTask' form).
+function handleAddTask(event) {
   event.preventDefault();
   const addBtn = document.querySelector('.addBtn');
   const slide = document.querySelector('.slide');
+  const saveBtn = document.querySelector('.saveBtn');
+  const cancelBtn = document.querySelector('.cancelBtn');
 
-  addBtn.addEventListener('click', toggleSlider, false);
+  // Pressing the 'add' button.
+  addBtn.addEventListener('click', toggleSliderUp, false);
+  // Slide up
+  function toggleSliderUp() {
+    slide.classList.contains('slide-up'); {
+      slide.classList.add('slide-up')
+    }
+  }
 
-  function toggleSlider() {
-    if (slide.classList.contains('slide-up')) {
+  // Pressing the 'save task' button.
+  saveBtn.addEventListener('click', toggleSliderDown, false);
+  // Slide down
+  function toggleSliderDown() {
+    slide.classList.contains('slide'); {
       slide.classList.remove('slide-up');
-    } else {
-      slide.classList.add('slide-up');
     }
   }
 }
@@ -120,3 +150,4 @@ function handleAddTask (event){
 //   <h3 class='title'>Task name</h3>
 //   <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.quam autem est.</p>
 // </div>
+

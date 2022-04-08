@@ -1,25 +1,37 @@
-var tasks = []; // Creating Fake Data Base To Hold All tasks.
+var tasks = []; // Creating "Data Base" To Hold All the tasks.
+// const tasks = new Map([]);
+// const obj = Object.fromEntries(tasks);
+// console.log(obj);
+// // expected output: Object { foo: "bar", baz: 42 }
 // Add new task form.
 function handleTask(event) {
     event.preventDefault();
-    console.log(event);
+    // console.log(event);
     var heading = event.target.elements.heading.value;
     var description = event.target.elements.description.value;
     var startTime = event.target.elements.startTime.value;
     var endTime = event.target.elements.endTime.value;
-    console.log(heading, description, startTime, endTime);
     // Creating new task div each time a task added from the form.
     var taskContainer = document.querySelector('.tasksContainer');
     var task = document.createElement('div');
+    var newtask = Object.create(task);
+    console.log(newtask);
+    // creating checkbox element
+    var checkbox = document.createElement('input');
+    // Assigning the attributes
+    // to created checkbox
+    checkbox.type = "checkbox";
+    task.append(checkbox);
     task.classList.add('task');
     // Appending new tasks into the tasks container.
-    task.innerHTML = "<div class='heading'>" + heading + "</div>\n    <div class='description'>" + description + "</div>\n    <div class='startTime'>Scheduled to: " + startTime + "</div> \n   <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>";
-    console.log(task);
+    task.innerHTML = "<div class='heading'>" + heading + "</div>\n    <div class='description'>" + description + "</div>\n    <div class='startTime'>Scheduled to: " + startTime + "</div> \n   <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>\n   <input type='checkbox' class='checkbox'>";
+    //  console.log(task);
     taskContainer.append(task);
     // Pushing the task into a tasks array ("data base").
-    tasks.push(task.name);
+    tasks.push(newtask);
     console.log(tasks);
 }
+// Remove tasks.
 function removeTask(event) {
     event.preventDefault();
     var button = event.target;
@@ -28,17 +40,29 @@ function removeTask(event) {
     var div = array.parentNode;
     div.removeChild(array);
 }
+// Add new task (using 'handleTask' form).
 function handleAddTask(event) {
     event.preventDefault();
     var addBtn = document.querySelector('.addBtn');
     var slide = document.querySelector('.slide');
-    addBtn.addEventListener('click', toggleSlider, false);
-    function toggleSlider() {
-        if (slide.classList.contains('slide-up')) {
-            slide.classList.remove('slide-up');
-        }
-        else {
+    var saveBtn = document.querySelector('.saveBtn');
+    var cancelBtn = document.querySelector('.cancelBtn');
+    // Pressing the 'add' button.
+    addBtn.addEventListener('click', toggleSliderUp, false);
+    // Slide up
+    function toggleSliderUp() {
+        slide.classList.contains('slide-up');
+        {
             slide.classList.add('slide-up');
+        }
+    }
+    // Pressing the 'save task' button.
+    saveBtn.addEventListener('click', toggleSliderDown, false);
+    // Slide down
+    function toggleSliderDown() {
+        slide.classList.contains('slide');
+        {
+            slide.classList.remove('slide-up');
         }
     }
 }
