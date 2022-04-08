@@ -1,35 +1,40 @@
 const tasks: Array < object > = []; // Creating "Data Base" To Hold All the tasks.
-// const tasks = new Map([]);
-// const obj = Object.fromEntries(tasks);
-
-// console.log(obj);
-// // expected output: Object { foo: "bar", baz: 42 }
 
 
 
 // Add new task form.
 function handleTask(event: any) {
   event.preventDefault();
-  // console.log(event);
   const heading: HTMLInputElement = event.target.elements.heading.value;
   const description: HTMLInputElement = event.target.elements.description.value;
   const startTime: HTMLInputElement = event.target.elements.startTime.value;
   const endTime: HTMLInputElement = event.target.elements.endTime.value;
 
+
+  const elements = event.target.elements;
+
+  const result = {};
+  for (let i = 0; i < elements.length; i++) {
+    if (elements[i].type === "checkbox") {
+      result[elements[i].name] = elements[i].checked;
+    } else if (elements[i].name && elements[i].value) {
+      result[elements[i].name] = elements[i].value;
+    }
+    // const task: any = result;
+ 
+  }
+
+
   // Creating new task div each time a task added from the form.
   const taskContainer: any = document.querySelector('.tasksContainer');
   let task = document.createElement('div');
-  const newtask:object = Object.create(task);
-  console.log(newtask);
-
+  const newtask: object = Object.create(result);
 
   // creating checkbox element
   const checkbox = document.createElement('input');
   // Assigning the attributes
   // to created checkbox
   checkbox.type = "checkbox";
-
-
   task.append(checkbox);
 
   task.classList.add('task');
@@ -40,7 +45,6 @@ function handleTask(event: any) {
     <div class='startTime'>Scheduled to: ${startTime}</div> 
    <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>
    <input type='checkbox' class='checkbox'>`;
-  //  console.log(task);
 
   taskContainer.append(task);
 
@@ -105,7 +109,6 @@ function handleAddTask(event) {
 
 
 
-
 // Drafts -------------------------------------------------------------------------------------------------------------------------
 
 
@@ -150,4 +153,3 @@ function handleAddTask(event) {
 //   <h3 class='title'>Task name</h3>
 //   <p class="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit.quam autem est.</p>
 // </div>
-
