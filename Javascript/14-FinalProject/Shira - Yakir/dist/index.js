@@ -5,6 +5,13 @@ var formPassword = document.querySelector("#password");
 var formconfirmPassword = document.querySelector("#repeatPassword");
 var formSignUpMsg = document.querySelector("#signUpMsg");
 var formLoginMsg = document.querySelector("#loginMsg");
+//create task object
+function task(title, content, dueDate) {
+    this.title = title;
+    this.contect = content;
+    this.dueDate = dueDate;
+}
+;
 function handleSignUp(event) {
     event.preventDefault();
     if (formPassword.value === formconfirmPassword.value) {
@@ -52,6 +59,7 @@ function addTask(event) {
     var addTaskInput = document.createElement('div');
     tasks.append(addTaskInput);
     addTaskInput.classList.add('task');
+    // const newTask = task(event.target.value,"","")
     addTaskInput.innerHTML = event.target.value;
     console.log("test");
 }

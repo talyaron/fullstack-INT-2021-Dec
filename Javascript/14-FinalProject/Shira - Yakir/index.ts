@@ -6,6 +6,14 @@ const formconfirmPassword: HTMLInputElement = document.querySelector("#repeatPas
 const formSignUpMsg: HTMLElement = document.querySelector("#signUpMsg");
 const formLoginMsg: HTMLElement = document.querySelector("#loginMsg");
 
+//create task object
+function task(title:String, content:String, dueDate):any {
+    this.title = title;
+    this.contect = content;
+    this.dueDate = dueDate;
+};
+
+
 function handleSignUp(event) {
     event.preventDefault();
     if (formPassword.value === formconfirmPassword.value) {
@@ -50,9 +58,9 @@ function checkLogin(check_username: String, check_password: string): Boolean {
 
 
 
-function tasksPage(){
+function tasksPage() {
     let today = new Date();
-    let todayDisplay = `${today.getDate()}/${today.getMonth()+1}/${today.getFullYear()}`;
+    let todayDisplay = `${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()}`;
 
     const todayDate: HTMLElement = document.querySelector("#todayDate");
     todayDate.innerHTML = `${todayDisplay}`;
@@ -62,12 +70,13 @@ function tasksPage(){
 tasksPage()
 
 
-function addTask(event){
+function addTask(event) {
     // const addTaskInput: HTMLInputElement = document.querySelector("#addTask");
     const tasks: HTMLElement = document.querySelector(".tasks");
     const addTaskInput = document.createElement('div')
     tasks.append(addTaskInput)
     addTaskInput.classList.add('task')
-    addTaskInput.innerHTML = event.target.value
+    // const newTask = task(event.target.value,"","")
+    addTaskInput.innerHTML = event.target.value;
     console.log("test")
 }
