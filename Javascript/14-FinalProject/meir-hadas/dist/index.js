@@ -1,4 +1,4 @@
-var roots = document.querySelector('.root');
+var root = document.querySelector('.root');
 function handleNote(ev) {
     ev.preventDefault();
     var elements = ev.target.elements;
@@ -7,11 +7,14 @@ function handleNote(ev) {
         if (elements[i].type === "text") {
             result[elements[i].name] = elements[i].value;
         }
-        else if (elements[i].name && elements[i].valueAsString) {
-            result[elements[i].name] = elements[i].valueAsString;
+        else if (elements[i].name && elements[i].value) {
+            result[elements[i].name] = elements[i].value;
         }
         //   console.log(elements[i].name, elements[i].value)
     }
     console.log(result);
-    console.log(elements);
+    // console.log(elements)
+    // let html = result.map(el=>{
+    // })
+    root.innerHTML += "<div>" + result.note + "</div>";
 }
