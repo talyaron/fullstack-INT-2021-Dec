@@ -52,7 +52,8 @@ function clickAdd(ev) {
 
   foodMenu[ev.target.id].count += 1
   console.log(foodMenu)
-
+  cart.innerText = ""
+order();
 
 }
 
