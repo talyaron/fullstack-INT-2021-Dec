@@ -62,11 +62,16 @@ function addTask(event) {
     tasks.append(addTaskInput);
     addTaskInput.classList.add('task');
     //------------------
-    var newTask = task("gfgdgfdgdgdf", "gfdgdf", "gfgfddg");
+    // const newTask = task("gfgdgfdgdgdf","gfdgdf","gfgfddg");
     // console.dir(newTask);
     // addTaskInput.innerHTML = newTask.title
     // console.log("test" + newTask.title.value)
     //------------------
-    console.log(newTask);
+    // console.log(newTask);
     addTaskInput.innerHTML = event.target.value;
 }
+//'click' event that delete a task div when click  'delete task'
+// function deleteTask(event){
+//  
+//    addTaskInput.remove()
+// }
