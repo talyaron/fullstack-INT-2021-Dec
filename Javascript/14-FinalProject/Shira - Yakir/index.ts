@@ -76,15 +76,11 @@ tasksPage()
 
 function addTask(event) {
 
-    // 
-    const HTML_tasks: HTMLElement = document.querySelector(".tasks");
-    const HTML_addTaskInput = document.createElement('div');
-    HTML_tasks.append(HTML_addTaskInput);
-    HTML_addTaskInput.classList.add('task');
-
     //------------------
     let newTask = new task(event.target.value, "test content", new Date('2022-04-08') ,false,"test");
     tasksArray.push(newTask);
+    updateHtmlTasksView(tasksArray.length-1);
+
 
     // for debug console purpose
     console.dir(tasksArray); 
@@ -98,8 +94,9 @@ function addTask(event) {
 
 function addTask_demo_DATA() {
     //------------------
-    let newTask = new task(`test title`, "test content", new Date('2022-04-08') ,false,"test");
+    let newTask = new task(`test title`, "test content", new Date('08/04/2022') ,false,"test");
     tasksArray.push(newTask);
+    updateHtmlTasksView(tasksArray.length-1);
 
     // for debug console purpose
     console.dir(tasksArray); 
@@ -110,8 +107,6 @@ addTask_demo_DATA()
 
 
 function updateHtmlTasksView(taskIndex){
-    
-
     const HTML_tasks: HTMLElement = document.querySelector(".tasks");
     const HTML_addTaskInput = document.createElement('div');
     HTML_tasks.append(HTML_addTaskInput);
@@ -126,3 +121,5 @@ function updateHtmlTasksView(taskIndex){
     </div>
     `;
 }
+
+updateHtmlTasksView(0);
