@@ -10,6 +10,7 @@ var newitem = document.querySelector("#newitem");
 var firstTime = true;
 var ans = false;
 var fileinput = "";
+var html = "";
 var render = document.querySelector("#render");
 var myButton = document.querySelector("#button2");
 var manager = {
@@ -30,9 +31,9 @@ function handleUser(ev) {
     }
 }
 function handleNew(ev) {
-    window.localStorage.clear();
+    //window.localStorage.clear()
     myButton.style.backgroundColor = "gray";
-    root.innerHTML += "<div id=\"newitem\">\n                                <p>Please type details</>\n                                <form action=\"\" onsubmit=\"handleNewProduct(event)\">\n                                    <input type=\"text\" name=\"typeName\" placeholder=\"Enter type of item\">\n                                    <input type=\"text\" name=\"description\" placeholder=\"Enter description of item\">\n                                    <input type=\"number\" name=\"price\" placeholder=\"Enter a price\" >\n                                    <input type=\"text\" name=\"currency\" placeholder=\"Enter currency\">\n                                    <input type=\"file\" name=\"imageFile\" placeholder = \"Please pick the image of the item\">\n                                    <button type=\"submit\">SEND</button> \n                                </form>\n                                <img id=\"output\" width=\"100px\"/>\n                                <button id=\"exitButton\" onclick=\"backToManager(event)\">Back To Manager Page</button>\n                            </div>";
+    root.innerHTML = "<div id=\"newitem\">\n                                <p>Please type details</>\n                                <form action=\"\" onsubmit=\"handleNewProduct(event)\">\n                                    <input type=\"text\" name=\"typeName\" placeholder=\"Enter type of item\">\n                                    <input type=\"text\" name=\"description\" placeholder=\"Enter description of item\">\n                                    <input type=\"number\" name=\"price\" placeholder=\"Enter a price\" >\n                                    <input type=\"text\" name=\"currency\" placeholder=\"Enter currency\">\n                                    <input type=\"file\" name=\"imageFile\" placeholder = \"Please pick the image of the item\">\n                                    <button type=\"submit\">SEND</button> \n                                </form>\n                                <img id=\"output\" width=\"100px\"/>\n                                <button id=\"exitButton\" onclick=\"backToManager(event)\">Back To Manager Page</button>\n                            </div>";
     //<a href="index1.html">back to manager page</a> 
     newitem = document.querySelector("#newitem");
     newitem.style.display = "flex";
@@ -68,22 +69,24 @@ function handleNewProduct(ev) {
         currency: result['currency'],
         pImage: fileinput
     };
-    ev.target.reset();
-    productsArr.push(newProduct);
-    window.localStorage.setItem(result['serialNo'], JSON.stringify(newProduct));
     console.dir(productsArr);
-<<<<<<< Updated upstream
-=======
-    localStorage.setItem("productsArr", JSON.stringify(productsArr));
+    window.localStorage.setItem(result['serialNo'], JSON.stringify(newProduct));
+    productsArr.push(newProduct);
+    renderProducts(newProduct);
     ev.target.reset();
->>>>>>> Stashed changes
-    renderProducts();
-    //ans = handleDirection('managerAddProduct')
 }
 function uID() {
     return Date.now().toString(36) + Math.random().toString(36).substring(2);
 }
-function renderProducts() {
+function renderProducts(newProduct) {
+    render = document.querySelector("#render");
+    html += "<div class=\"bigDiv\" >\n            <img src=" + newProduct.pImage + " width=\"100px\">\n            <div class=\"productDiv\" >\n                <div>name:" + newProduct.name + "</div>  \n                <div>serialNo:" + newProduct.serialNo + "</div>\n                <div>description: " + newProduct.description + "</div>\n                <div>price: " + newProduct.price + "</div>\n                <div>currency: " + newProduct.currency + "</div>\n                <button class=\"button\">delete</button>\n                <button class=\"button\">update</button>\n            </div>\n        </div>";
+    render.innerHTML = html;
+    render.style.position = "absolute";
+    render.style.top = "250px";
+    render.style.left = "700px";
+}
+function renderSavedProducts() {
     render = document.querySelector("#render");
     console.log("length " + window.localStorage.length);
     for (var i = 0; i < window.localStorage.length; i++) {
@@ -96,7 +99,6 @@ function renderProducts() {
     }
     ;
     // let newObject = window.localStorage.getItem("myObject");
-    //console.log(JSON.parse(newObject));
     var html = '';
     productsArrFLS.forEach(function (product) {
         html +=
@@ -109,6 +111,7 @@ function renderProducts() {
     //render.style.border= "1px solid black"
 }
 function backToManager(ev) {
+    saveNewProducts();
     console.log("render before remove  " + render);
     alert("Products added");
     output.remove();
@@ -116,10 +119,7 @@ function backToManager(ev) {
     render.remove();
     console.log("render after remove  " + render);
     myButton.style.backgroundColor = "rgb(172, 143, 161)";
-<<<<<<< Updated upstream
     //window.location.href = "index1.html"
-=======
-    window.location.href = "index1.html";
 }
 function presentItem() {
     var cliant = document.querySelector("#cliant");
@@ -132,32 +132,4 @@ function presentItem() {
     });
     cliant.innerHTML = html;
     cliant.style.display = "plex";
-}
-var loadImg = function (event) {
-    var image = document.getElementById('output');
-    image.src = URL.createObjectURL(event.target.files[0]);
-};
-function handleHidden(ev) {
-    ev.target.hidden = true;
-}
-function handleItem1(ev) {
-    console.log(ev);
-    var content = ev.target.value;
-    var div = document.querySelector("#addItemName");
-    div.innerHTML = "<p>" + content + "</p>";
-    ev.target.hidden = true;
-}
-function handleItem0(ev) {
-    console.log(ev);
-    var content = ev.target.value;
-    var div = document.querySelector("#addItemPrice");
-    div.innerHTML = "<p>" + content + " \u05E9\"\u05D7</p>";
-    ev.target.hidden = true;
-}
-function handleDelete(ev) {
-    var catchItem = document.querySelector("#newitem");
-    console.log(catchItem);
-    catchItem.innerHTML = "";
-    ev.target.hidden = true;
->>>>>>> Stashed changes
 }

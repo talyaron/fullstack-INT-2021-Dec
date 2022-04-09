@@ -26,6 +26,7 @@ let newitem:HTMLElement=document.querySelector("#newitem")
 let firstTime:boolean=true
 let ans:boolean=false
 let fileinput:string = ""
+let html:string = ""
 let render:HTMLDivElement=document.querySelector("#render")
 const myButton: HTMLElement = document.querySelector("#button2")
 const manager: users = {
@@ -48,9 +49,9 @@ function handleUser(ev) {
 } 
 
 function handleNew(ev) {
-        window.localStorage.clear()
+        //window.localStorage.clear()
         myButton.style.backgroundColor = "gray"
-        root.innerHTML += `<div id="newitem">
+        root.innerHTML = `<div id="newitem">
                                 <p>Please type details</>
                                 <form action="" onsubmit="handleNewProduct(event)">
                                     <input type="text" name="typeName" placeholder="Enter type of item">
@@ -94,7 +95,7 @@ function handleNewProduct(ev) {
         }
     }
     result["serialNo"]=uID()
-    let newProduct: product = {
+    let newProduct:product= {
         name: result['typeName'],
         serialNo: result['serialNo'],
         description: result['description'],
@@ -102,25 +103,40 @@ function handleNewProduct(ev) {
         currency: result['currency'],
         pImage : fileinput
     }
-    ev.target.reset()
-    productsArr.push(newProduct)
-    window.localStorage.setItem(result['serialNo'], JSON.stringify(newProduct));
+   
     console.dir(productsArr)
-<<<<<<< Updated upstream
-=======
-    localStorage.setItem("productsArr", JSON.stringify(productsArr))
+    window.localStorage.setItem(result['serialNo'], JSON.stringify(newProduct));
+    productsArr.push(newProduct)
+    renderProducts(newProduct)
     ev.target.reset()
->>>>>>> Stashed changes
-    renderProducts()
-
-    //ans = handleDirection('managerAddProduct')
 }
 function uID(){
     return Date.now().toString(36)+Math.random().toString(36).substring(2)
 }
 
 
-function renderProducts(){
+function renderProducts(newProduct){
+    render=document.querySelector("#render")
+    html+=`<div class="bigDiv" >
+            <img src=${newProduct.pImage} width="100px">
+            <div class="productDiv" >
+                <div>name:${newProduct.name}</div>  
+                <div>serialNo:${newProduct.serialNo}</div>
+                <div>description: ${newProduct.description}</div>
+                <div>price: ${newProduct.price}</div>
+                <div>currency: ${newProduct.currency}</div>
+                <button class="button">delete</button>
+                <button class="button">update</button>
+            </div>
+        </div>`
+    render.innerHTML=html
+    render.style.position="absolute"
+    render.style.top="250px"
+    render.style.left="700px"
+}
+
+
+function renderSavedProducts(){
         render=document.querySelector("#render")
         console.log(`length ${window.localStorage.length}`)
         for (let i:number = 0;i<window.localStorage.length;i++) {
@@ -132,7 +148,6 @@ function renderProducts(){
             console.log(productsArrFLS)
         };
        // let newObject = window.localStorage.getItem("myObject");
-       //console.log(JSON.parse(newObject));
         let html = '';
          productsArrFLS.forEach(product=>{
            html+=
@@ -159,6 +174,7 @@ function renderProducts(){
 
 
 function backToManager(ev){
+    saveNewProducts()
     console.log(`render before remove  ${render}`)
     alert("Products added")
     output.remove()
