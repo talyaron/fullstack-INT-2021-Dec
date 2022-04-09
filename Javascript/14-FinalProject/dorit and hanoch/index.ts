@@ -14,9 +14,10 @@ interface product {
     currency: string,
     pImage?:string,
 }
-
 let result = {};
+let stringStorage:string = ""
 let productsArr:Array<product> = []
+let productsArrFLS:Array<product> = []
 let output:HTMLImageElement=document.querySelector("#output")
 let fileName:string = ''
 let root: HTMLElement = document.querySelector("#root")
@@ -47,12 +48,12 @@ function handleUser(ev) {
 }
 
 function handleNew(ev) {
+        window.localStorage.clear()
         myButton.style.backgroundColor = "gray"
         root.innerHTML += `<div id="newitem">
                                 <p>Please type details</>
                                 <form action="" onsubmit="handleNewProduct(event)">
                                     <input type="text" name="typeName" placeholder="Enter type of item">
-                                    <input type="text" name="serialNo" placeholder="Enter serial number of item">
                                     <input type="text" name="description" placeholder="Enter description of item">
                                     <input type="number" name="price" placeholder="Enter a price" >
                                     <input type="text" name="currency" placeholder="Enter currency">
@@ -78,27 +79,21 @@ function handleNew(ev) {
 
 
 function handleNewProduct(ev) {
-    console.log("we are here")
     ev.preventDefault();
     const details = ev.target.elements
     for (let i = 0; i < details.length; i++) {
         if (details[i].name && details[i].value) {
+            
             if (details[i].name == "imageFile") {
                 result['imageFile'] = details['imageFile'].files[0]
                 fileinput = URL.createObjectURL(result["imageFile"])
-                //displayPic()
             }
             else {
                 result[details[i].name] = details[i].value;
             }
         }
-      
     }
-     fileinput = URL.createObjectURL(result["imageFile"])
-     output = document.querySelector("#output")
-     console.log(output.style.opacity)
-     output.src = fileinput
-    //console.log(typeof fileinput)
+    result["serialNo"]=uID()
     let newProduct: product = {
         name: result['typeName'],
         serialNo: result['serialNo'],
@@ -107,22 +102,37 @@ function handleNewProduct(ev) {
         currency: result['currency'],
         pImage : fileinput
     }
-    productsArr.push(newProduct)
-    console.dir(productsArr)
     ev.target.reset()
+    productsArr.push(newProduct)
+    window.localStorage.setItem(result['serialNo'], JSON.stringify(newProduct));
+    console.dir(productsArr)
     renderProducts()
 
     //ans = handleDirection('managerAddProduct')
 }
+function uID(){
+    return Date.now().toString(36)+Math.random().toString(36).substring(2)
+}
 
 function renderProducts(){
         render=document.querySelector("#render")
+        console.log(`length ${window.localStorage.length}`)
+        for (let i:number = 0;i<window.localStorage.length;i++) {
+            stringStorage = window.localStorage.key(i)
+            console.log(`the storage: ${stringStorage}`)
+            const ourString:string = window.localStorage.getItem(`${stringStorage}`)
+            console.log(`ourString:${ourString}`)
+            productsArrFLS.push(JSON.parse(ourString))
+            console.log(productsArrFLS)
+        };
+       // let newObject = window.localStorage.getItem("myObject");
+       //console.log(JSON.parse(newObject));
         let html = '';
-        productsArr.forEach(product=>{
+         productsArrFLS.forEach(product=>{
            html+=
-            `<div class="test" >
+            `<div class="bigDiv" >
                 <img src=${product.pImage} width="100px">
-                <div class="test2" >
+                <div class="productDiv" >
                       <div>name:${product.name}</div>  
                       <div>serialNo:${product.serialNo}</div>
                       <div>description: ${product.description}</div>
@@ -138,48 +148,23 @@ function renderProducts(){
         render.style.position="absolute"
         render.style.top="250px"
         render.style.left="700px"
-        render.style.border= "1px solid black"
+        //render.style.border= "1px solid black"
 }
 
 
 function backToManager(ev){
-    console.log(render)
+    console.log(`render before remove  ${render}`)
     alert("Products added")
     output.remove()
     newitem.remove()
     render.remove()
+    console.log(`render after remove  ${render}`)
     myButton.style.backgroundColor = "rgb(172, 143, 161)"
-    window.location.href = "index1.html"
+    //window.location.href = "index1.html"
 }
 
 
-var loadImg = function (event) {
-    var image: any = document.getElementById('output');
-    image.src = URL.createObjectURL(event.target.files[0]);
-}
-function handleHidden(ev) {
-    ev.target.hidden = true
-}
-function handleItem1(ev) {
-    console.log(ev)
-    const content = ev.target.value
-    const div = document.querySelector("#addItemName")
-    div.innerHTML = `<p>${content}</p>`
-    ev.target.hidden = true
-
-}
-function handleItem0(ev) {
-    console.log(ev)
-    const content = ev.target.value
-    const div = document.querySelector("#addItemPrice")
-    div.innerHTML = `<p>${content} ש"ח</p>`
-    ev.target.hidden = true
 
 
-}
-function handleDelete(ev) {
-    const catchItem = document.querySelector("#newitem")
-    console.log(catchItem)
-    catchItem.innerHTML = ""
-    ev.target.hidden = true
-}
+
+
