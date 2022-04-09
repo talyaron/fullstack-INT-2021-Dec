@@ -6,7 +6,7 @@ const formconfirmPassword: HTMLInputElement = document.querySelector("#repeatPas
 const formSignUpMsg: HTMLElement = document.querySelector("#signUpMsg");
 const formLoginMsg: HTMLElement = document.querySelector("#loginMsg");
 
-let tasksArray = [];
+let tasksArray = []; // arays that contain the tasks
 
 //create task object
 function task(title:String, content?:String, dueDate?:Date, status?:boolean, category?:String) {

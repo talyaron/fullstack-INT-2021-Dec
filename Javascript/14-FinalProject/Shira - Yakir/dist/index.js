@@ -5,7 +5,7 @@ var formPassword = document.querySelector("#password");
 var formconfirmPassword = document.querySelector("#repeatPassword");
 var formSignUpMsg = document.querySelector("#signUpMsg");
 var formLoginMsg = document.querySelector("#loginMsg");
-var tasksArray = [];
+var tasksArray = []; // arays that contain the tasks
 //create task object
 function task(title, content, dueDate, status, category) {
     this.title = title;
