@@ -1,0 +1,33 @@
+// body{
+//     background-image: url(https://i.pinimg.com/originals/35/e9/5c/35e95c361a44204cec2bf57eb7eac82b.jpg);
+//    background-repeat: no-repeat;
+//    background-size: cover;
+// }
+
+
+
+.cotar {
+    font-size: 5rem;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.products {
+
+    font-size: 2rem;
+    direction: rtl;
+    color: rgb(0, 0, 0);
+
+    img {
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        width: 105px;
+        height: 105px;
+        border-radius: 30%;
+    }
+
+    ;
+}
+
+;

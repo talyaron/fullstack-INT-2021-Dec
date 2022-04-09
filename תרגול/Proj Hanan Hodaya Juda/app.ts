@@ -24,11 +24,11 @@ const foodMenu = [
 ];
 const products: any = document.querySelector(".products")
 
-function refreshPro() {
+function refreshPro(ev) {
   let html =
     `<h2>${foodMenu[0].type}<h2>
   <h2>מחיר: ${foodMenu[0].price}<h2>
-  <img src=${foodMenu[0].img}>
+  <img src=${foodMenu[0].img} onclick="addCart">
   <h2>${foodMenu[1].type}<h2>
   <h2>מחיר: ${foodMenu[1].price}<h2>
   <img src=${foodMenu[1].img}>
@@ -38,8 +38,12 @@ function refreshPro() {
   <h2>${foodMenu[3].type}<h2>
   <h2>מחיר: ${foodMenu[3].price}<h2>
   <img src=${foodMenu[3].img}>`;
+
   products.innerHTML = html
-  
+
+  ev.img.oncl
+
   
 };
+
 
