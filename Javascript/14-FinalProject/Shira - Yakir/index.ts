@@ -81,31 +81,14 @@ function addTask(event) {
     tasksArray.push(newTask);
     updateHtmlTasksView(tasksArray.length-1);
 
-
     // for debug console purpose
     console.dir(tasksArray); 
     console.log(`tasks has ${tasksArray.length} objects`);
     console.dir(newTask); 
 
-    //for test the html update
-    HTML_addTaskInput.innerHTML = newTask.title;
-
 }
 
-function addTask_demo_DATA() {
-    //------------------
-    let newTask = new task(`test title`, "test content", new Date('08/04/2022') ,false,"test");
-    tasksArray.push(newTask);
-    updateHtmlTasksView(tasksArray.length-1);
-
-    // for debug console purpose
-    console.dir(tasksArray); 
-    console.log(`tasks has ${tasksArray.length} objects`);
-}
-
-addTask_demo_DATA()
-
-
+// add the task from the array to the html by its givin index
 function updateHtmlTasksView(taskIndex){
     const HTML_tasks: HTMLElement = document.querySelector(".tasks");
     const HTML_addTaskInput = document.createElement('div');
@@ -122,4 +105,17 @@ function updateHtmlTasksView(taskIndex){
     `;
 }
 
-updateHtmlTasksView(0);
+// demo data for Development and Testing process
+
+function addTask_demo_DATA() {
+    //------------------
+    let newTask = new task(`test title`, "test content", new Date('08/04/2022') ,false,"test");
+    tasksArray.push(newTask);
+    updateHtmlTasksView(tasksArray.length-1);
+
+    // for debug console purpose
+    console.dir(tasksArray); 
+    console.log(`tasks has ${tasksArray.length} objects`);
+}
+
+addTask_demo_DATA()

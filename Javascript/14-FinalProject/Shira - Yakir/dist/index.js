@@ -65,9 +65,17 @@ function addTask(event) {
     console.dir(tasksArray);
     console.log("tasks has " + tasksArray.length + " objects");
     console.dir(newTask);
-    //for test the html update
-    HTML_addTaskInput.innerHTML = newTask.title;
 }
+// add the task from the array to the html by its givin index
+function updateHtmlTasksView(taskIndex) {
+    var HTML_tasks = document.querySelector(".tasks");
+    var HTML_addTaskInput = document.createElement('div');
+    HTML_tasks.append(HTML_addTaskInput);
+    HTML_addTaskInput.classList.add('task');
+    HTML_addTaskInput.innerHTML =
+        "<div class=\"task\" id=\"taskIndex" + taskIndex + "\">\n    <h1 class=\"title\">" + tasksArray[taskIndex].title + "</h1>\n    <h2 class=\"contect\">" + tasksArray[taskIndex].content + "</h2>\n    <h3 class=\"dueDate\">" + tasksArray[taskIndex].dueDate + "</h3>\n    <h3 status=\"status\">" + tasksArray[taskIndex].status + "</h3>\n    <h3 status=\"category\">" + tasksArray[taskIndex].category + "</h3>    \n    </div>\n    ";
+}
+// demo data for Development and Testing process
 function addTask_demo_DATA() {
     //------------------
     var newTask = new task("test title", "test content", new Date('08/04/2022'), false, "test");
@@ -78,12 +86,3 @@ function addTask_demo_DATA() {
     console.log("tasks has " + tasksArray.length + " objects");
 }
 addTask_demo_DATA();
-function updateHtmlTasksView(taskIndex) {
-    var HTML_tasks = document.querySelector(".tasks");
-    var HTML_addTaskInput = document.createElement('div');
-    HTML_tasks.append(HTML_addTaskInput);
-    HTML_addTaskInput.classList.add('task');
-    HTML_addTaskInput.innerHTML =
-        "<div class=\"task\" id=\"taskIndex" + taskIndex + "\">\n    <h1 class=\"title\">" + tasksArray[taskIndex].title + "</h1>\n    <h2 class=\"contect\">" + tasksArray[taskIndex].content + "</h2>\n    <h3 class=\"dueDate\">" + tasksArray[taskIndex].dueDate + "</h3>\n    <h3 status=\"status\">" + tasksArray[taskIndex].status + "</h3>\n    <h3 status=\"category\">" + tasksArray[taskIndex].category + "</h3>    \n    </div>\n    ";
-}
-updateHtmlTasksView(0);
