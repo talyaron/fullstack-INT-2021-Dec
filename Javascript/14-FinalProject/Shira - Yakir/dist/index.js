@@ -57,8 +57,16 @@ function tasksPage() {
 }
 tasksPage();
 function addTask(event) {
-    //------------------
-    var newTask = new task(event.target.value, "test content", new Date('2022-04-08'), false, "test");
+    // pass the arguments from the event to the object constractor 
+    // and/or use some demo data for development and testing untile all set
+    var title = event.target.value;
+    var dueDate = new Date();
+    var content = "test content";
+    var dueDate = new Date(); // set current date
+    var status = false;
+    var category = "test category";
+    //-----------------------------------------------------------------
+    var newTask = new task(title, content, dueDate, false, category);
     tasksArray.push(newTask);
     updateHtmlTasksView(tasksArray.length - 1);
     // for debug console purpose
@@ -73,12 +81,12 @@ function updateHtmlTasksView(taskIndex) {
     HTML_tasks.append(HTML_addTaskInput);
     HTML_addTaskInput.classList.add('task');
     HTML_addTaskInput.innerHTML =
-        "<div class=\"task\" id=\"taskIndex" + taskIndex + "\">\n    <h1 class=\"title\">" + tasksArray[taskIndex].title + "</h1>\n    <h2 class=\"contect\">" + tasksArray[taskIndex].content + "</h2>\n    <h3 class=\"dueDate\">" + tasksArray[taskIndex].dueDate + "</h3>\n    <h3 status=\"status\">" + tasksArray[taskIndex].status + "</h3>\n    <h3 status=\"category\">" + tasksArray[taskIndex].category + "</h3>    \n    </div>\n    ";
+        "<div class=\"task\" id=\"taskIndex" + taskIndex + "\">\n    <h1 class=\"title\">" + (taskIndex + 1) + ". " + tasksArray[taskIndex].title + "</h1>\n    <h2 class=\"contect\">" + tasksArray[taskIndex].content + "</h2>\n    <h3 class=\"dueDate\">" + tasksArray[taskIndex].dueDate + "</h3>\n    <h3 status=\"status\">" + tasksArray[taskIndex].status + "</h3>\n    <h3 status=\"category\">" + tasksArray[taskIndex].category + "</h3>    \n    </div>\n    ";
 }
 // demo data for Development and Testing process
 function addTask_demo_DATA() {
     //------------------
-    var newTask = new task("test title", "test content", new Date('08/04/2022'), false, "test");
+    var newTask = new task("test title", "test content", new Date('08/04/2022'), false, "test category");
     tasksArray.push(newTask);
     updateHtmlTasksView(tasksArray.length - 1);
     // for debug console purpose

@@ -15,7 +15,6 @@ function task(title:String, content?:String, dueDate?:Date, status?:boolean, cat
     this.dueDate = dueDate;
     this.status = status;  // true = task is Done , false= Task open
     this.category = category;
-
 };
 
 function handleSignUp(event) {
@@ -76,8 +75,18 @@ tasksPage()
 
 function addTask(event) {
 
-    //------------------
-    let newTask = new task(event.target.value, "test content", new Date('2022-04-08') ,false,"test");
+    // pass the arguments from the event to the object constractor 
+    // and/or use some demo data for development and testing untile all set
+
+    let title = event.target.value
+    let dueDate = new Date();
+    let  content= `test content`;
+    let dueDate =  new Date(); // set current date
+    let status = false;
+    let category = "test category";
+
+    //-----------------------------------------------------------------
+    let newTask = new task(title, content,dueDate,false,category);
     tasksArray.push(newTask);
     updateHtmlTasksView(tasksArray.length-1);
 
@@ -96,7 +105,7 @@ function updateHtmlTasksView(taskIndex){
     HTML_addTaskInput.classList.add('task');
     HTML_addTaskInput.innerHTML = 
     `<div class="task" id="taskIndex${taskIndex}">
-    <h1 class="title">${tasksArray[taskIndex].title}</h1>
+    <h1 class="title">${taskIndex+1}. ${tasksArray[taskIndex].title}</h1>
     <h2 class="contect">${tasksArray[taskIndex].content}</h2>
     <h3 class="dueDate">${tasksArray[taskIndex].dueDate}</h3>
     <h3 status="status">${tasksArray[taskIndex].status}</h3>
@@ -109,7 +118,7 @@ function updateHtmlTasksView(taskIndex){
 
 function addTask_demo_DATA() {
     //------------------
-    let newTask = new task(`test title`, `test content`, new Date('08/04/2022') ,false,`test`);
+    let newTask = new task(`test title`, `test content`, new Date('08/04/2022') ,false,`test category`);
     tasksArray.push(newTask);
     updateHtmlTasksView(tasksArray.length-1);
 
