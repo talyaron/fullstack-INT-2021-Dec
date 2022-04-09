@@ -75,6 +75,8 @@ tasksPage()
 
 
 function addTask(event) {
+
+    // 
     const HTML_tasks: HTMLElement = document.querySelector(".tasks");
     const HTML_addTaskInput = document.createElement('div')
     HTML_tasks.append(HTML_addTaskInput)
@@ -82,11 +84,16 @@ function addTask(event) {
 
     //------------------
     let newTask = new task(event.target.value, "test content", new Date('2022-04-08') ,false,"test");
-   
-    console.dir(newTask);
-    HTML_addTaskInput.innerHTML = newTask.title;
-    console.log("test" + newTask.title.value);
-
-    console.log(newTask);
     tasksArray.push(newTask);
+
+    // for debug console purpose
+    console.dir(tasksArray); 
+    console.log(`tasks has ${tasksArray.length} objects`);
+    console.dir(newTask); 
+
+
+    //for test the html update
+    HTML_addTaskInput.innerHTML = newTask.title;
+
+
 }
