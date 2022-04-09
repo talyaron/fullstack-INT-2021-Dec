@@ -45,7 +45,7 @@ function handleUser(ev) {
     if (result['name'] == manager['name'] && result['pass'] == manager['password']) {
         window.location.href = "index1.html"
     }
-}
+} 
 
 function handleNew(ev) {
         window.localStorage.clear()
@@ -106,6 +106,11 @@ function handleNewProduct(ev) {
     productsArr.push(newProduct)
     window.localStorage.setItem(result['serialNo'], JSON.stringify(newProduct));
     console.dir(productsArr)
+<<<<<<< Updated upstream
+=======
+    localStorage.setItem("productsArr", JSON.stringify(productsArr))
+    ev.target.reset()
+>>>>>>> Stashed changes
     renderProducts()
 
     //ans = handleDirection('managerAddProduct')
@@ -113,6 +118,7 @@ function handleNewProduct(ev) {
 function uID(){
     return Date.now().toString(36)+Math.random().toString(36).substring(2)
 }
+
 
 function renderProducts(){
         render=document.querySelector("#render")
@@ -162,6 +168,36 @@ function backToManager(ev){
     myButton.style.backgroundColor = "rgb(172, 143, 161)"
     //window.location.href = "index1.html"
 }
+
+function presentItem(){
+     
+    const cliant:any = document.querySelector("#cliant")
+    const storedArr = JSON.parse(localStorage.getItem("productsArr"))
+    console.log(storedArr)
+        let html = '';
+        storedArr.forEach(product=>{
+           html+=
+            `<div class="display" >
+                <img src=${product.pImage} width="100px">
+                <div class="test2" >
+                      <div>name:${product.name}</div>  
+                      <div>serialNo:${product.serialNo}</div>
+                      <div>description: ${product.description}</div>
+                      <div>price: ${product.price}</div>
+                      <div>currency: ${product.currency}</div>
+                     
+                </div>
+            </div>`
+        })
+        
+        cliant.innerHTML = html;
+        cliant.style.display ="plex"
+        
+        
+}
+
+
+
 
 
 

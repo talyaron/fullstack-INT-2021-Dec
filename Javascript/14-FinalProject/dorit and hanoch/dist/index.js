@@ -72,6 +72,11 @@ function handleNewProduct(ev) {
     productsArr.push(newProduct);
     window.localStorage.setItem(result['serialNo'], JSON.stringify(newProduct));
     console.dir(productsArr);
+<<<<<<< Updated upstream
+=======
+    localStorage.setItem("productsArr", JSON.stringify(productsArr));
+    ev.target.reset();
+>>>>>>> Stashed changes
     renderProducts();
     //ans = handleDirection('managerAddProduct')
 }
@@ -111,5 +116,48 @@ function backToManager(ev) {
     render.remove();
     console.log("render after remove  " + render);
     myButton.style.backgroundColor = "rgb(172, 143, 161)";
+<<<<<<< Updated upstream
     //window.location.href = "index1.html"
+=======
+    window.location.href = "index1.html";
+}
+function presentItem() {
+    var cliant = document.querySelector("#cliant");
+    var storedArr = JSON.parse(localStorage.getItem("productsArr"));
+    console.log(storedArr);
+    var html = '';
+    storedArr.forEach(function (product) {
+        html +=
+            "<div class=\"display\" >\n                <img src=" + product.pImage + " width=\"100px\">\n                <div class=\"test2\" >\n                      <div>name:" + product.name + "</div>  \n                      <div>serialNo:" + product.serialNo + "</div>\n                      <div>description: " + product.description + "</div>\n                      <div>price: " + product.price + "</div>\n                      <div>currency: " + product.currency + "</div>\n                     \n                </div>\n            </div>";
+    });
+    cliant.innerHTML = html;
+    cliant.style.display = "plex";
+}
+var loadImg = function (event) {
+    var image = document.getElementById('output');
+    image.src = URL.createObjectURL(event.target.files[0]);
+};
+function handleHidden(ev) {
+    ev.target.hidden = true;
+}
+function handleItem1(ev) {
+    console.log(ev);
+    var content = ev.target.value;
+    var div = document.querySelector("#addItemName");
+    div.innerHTML = "<p>" + content + "</p>";
+    ev.target.hidden = true;
+}
+function handleItem0(ev) {
+    console.log(ev);
+    var content = ev.target.value;
+    var div = document.querySelector("#addItemPrice");
+    div.innerHTML = "<p>" + content + " \u05E9\"\u05D7</p>";
+    ev.target.hidden = true;
+}
+function handleDelete(ev) {
+    var catchItem = document.querySelector("#newitem");
+    console.log(catchItem);
+    catchItem.innerHTML = "";
+    ev.target.hidden = true;
+>>>>>>> Stashed changes
 }
