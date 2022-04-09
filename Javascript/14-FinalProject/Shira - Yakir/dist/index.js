@@ -9,7 +9,7 @@ var tasksArray = []; // arays that contain the tasks
 //create task object
 function task(title, content, dueDate, status, category) {
     this.title = title;
-    this.contect = content;
+    this.content = content;
     this.dueDate = dueDate;
     this.status = status; // true = task is Done , false= Task open
     this.category = category;

@@ -11,7 +11,7 @@ let tasksArray = []; // arays that contain the tasks
 //create task object
 function task(title:String, content?:String, dueDate?:Date, status?:boolean, category?:String) {
     this.title = title;
-    this.contect = content;
+    this.content = content;
     this.dueDate = dueDate;
     this.status = status;  // true = task is Done , false= Task open
     this.category = category;
@@ -109,7 +109,7 @@ function updateHtmlTasksView(taskIndex){
 
 function addTask_demo_DATA() {
     //------------------
-    let newTask = new task(`test title`, "test content", new Date('08/04/2022') ,false,"test");
+    let newTask = new task(`test title`, `test content`, new Date('08/04/2022') ,false,`test`);
     tasksArray.push(newTask);
     updateHtmlTasksView(tasksArray.length-1);
 
