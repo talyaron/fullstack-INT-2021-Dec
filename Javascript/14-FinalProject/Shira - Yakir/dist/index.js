@@ -5,13 +5,14 @@ var formPassword = document.querySelector("#password");
 var formconfirmPassword = document.querySelector("#repeatPassword");
 var formSignUpMsg = document.querySelector("#signUpMsg");
 var formLoginMsg = document.querySelector("#loginMsg");
+var tasksArray = [];
 //create task object
-function task(title, content, dueDate, status) {
+function task(title, content, dueDate, status, category) {
     this.title = title;
     this.contect = content;
     this.dueDate = dueDate;
-    this.status = status; // true = taskDone, false= Task open
-    this.category = "";
+    this.status = status; // true = task is Done , false= Task open
+    this.category = category;
 }
 ;
 function handleSignUp(event) {
@@ -56,17 +57,15 @@ function tasksPage() {
 }
 tasksPage();
 function addTask(event) {
-    // const addTaskInput: HTMLInputElement = document.querySelector("#addTask");
-    var tasks = document.querySelector(".tasks");
-    var addTaskInput = document.createElement('div');
-    tasks.append(addTaskInput);
-    addTaskInput.classList.add('task');
+    var HTML_tasks = document.querySelector(".tasks");
+    var HTML_addTaskInput = document.createElement('div');
+    HTML_tasks.append(HTML_addTaskInput);
+    HTML_addTaskInput.classList.add('task');
     //------------------
-    var newTask = task("gfgdgfdgdgdf", "gfdgdf", "gfgfddg");
-    // console.dir(newTask);
-    // addTaskInput.innerHTML = newTask.title
-    // console.log("test" + newTask.title.value)
-    //------------------
+    var newTask = new task(event.target.value, "test content", new Date('2022-04-08'), false, "test");
+    console.dir(newTask);
+    HTML_addTaskInput.innerHTML = newTask.title;
+    console.log("test" + newTask.title.value);
     console.log(newTask);
-    addTaskInput.innerHTML = event.target.value;
+    tasksArray.push(newTask);
 }
