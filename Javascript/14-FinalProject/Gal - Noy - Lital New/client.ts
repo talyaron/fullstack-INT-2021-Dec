@@ -1,4 +1,4 @@
-console.log("shopping ");
+
 
 // function handleSetName(event){
 //   let name=event.target.value;

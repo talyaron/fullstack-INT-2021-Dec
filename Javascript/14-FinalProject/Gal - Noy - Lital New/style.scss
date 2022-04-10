@@ -1,18 +1,17 @@
 body {
-  // width: 100vw;
-  // height: 100vh;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  flex-flow: column wrap;
-  justify-content: space-between;
-  align-content: space-evenly;
-  column-gap: 20px;
-  padding: 30px;
-  margin-top: -75px;
-  margin-left: 60px;
-  position: relative;
+    width: 100vw;
+    // height: 100vh;
+    background-color: #ffffff;
+    // display: flex;
+    // flex-direction: column;
+    // flex-wrap: wrap;
+    // flex-flow: column wrap;
+    // justify-content: space-between;
+    // align-content: space-evenly;
+    // column-gap: 20px;
+ 
+    margin: 0 auto;
+    position: relative;
 
 }
 
@@ -22,22 +21,22 @@ body {
     width: 100vw;
 }
 
-    a {
-        float: left;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px;
-        text-decoration: none;
-        font-size: 17px;
-        font-family: Arial, Helvetica, sans-serif;
+a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
 
 
-    }
+}
 
 
 .nav-logo {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 
     img {
         width: 80px;
@@ -62,28 +61,12 @@ body {
         text-decoration-line: underline;
     }
 
-    .nabar-small {
-        position: sticky;
-
-        a {
-            float: left;
-            color: #f2f2f2;
-            text-align: center;
-            padding: 14px;
-            text-decoration: none;
-            font-size: 15px;
-            font-family: Arial, Helvetica, sans-serif;
-            margin-left: 70px;
-            margin-top: 60px;
-        }
-    }
-
 
 }
 
 .bigProduct {
-    width: 800px;
-    height: 300px;
+    width: 100vw;
+    height: 200px;
     background-color: rgb(255, 255, 255);
     margin: auto;
     position: relative;
@@ -95,7 +78,7 @@ body {
         width: 60%;
         height: 100%;
         position: absolute;
-        padding: 10px;
+        // padding: 10px;
 
     }
 
@@ -119,7 +102,7 @@ body {
         font-weight: lighter;
         text-align: center;
         font-size: 18px;
-        padding: 10px;
+        // padding: 10px;
 
     }
 }
@@ -128,7 +111,7 @@ body {
 
     background-color: rgb(255, 255, 255);
     width: 100vw;
-    height: 600px;
+
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -137,7 +120,7 @@ body {
     align-items: stretch;
     align-content: space-evenly;
     column-gap: 20px;
-    padding: 20px;
+    // padding: 20px;
 
     .product {
         background-color: rgb(255, 255, 255);
@@ -193,7 +176,7 @@ body {
     border-radius: 100px;
     border: none;
     font-size: 1em;
-  position: relative;
+    position: relative;
     background: rgb(235, 68, 244);
 
     ;
@@ -222,63 +205,37 @@ body {
 
 
 
-    #containerOfProducts {
+#containerOfProducts {
 
-        background-color: rgb(178, 49, 49);
-        height: 280px;
-        align-self: auto;
-        color: #be2edd;
-        position: absolute;
-       
-
-
-    }
-
-    #imgProduct{
-        position: relative;
-        background-color: rgb(255, 255, 255);
-                height: 280px;
-                // align-self: center;
-
-      
-       
-    }
-    .priceMe{
-        color: #000000;
+    background-color: rgb(178, 49, 49);
+    height: 280px;
+    align-self: auto;
+    color: #be2edd;
+    position: absolute;
 
 
-        display: block;
-        border-radius: 50px;
-        font-size: 1em;
-        position: absolute;
-        background: rgb(235, 68, 244);
-    }
 
-  
+}
 
-  .containerOfProducts {
+#imgProduct {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    height: 280px;
+    // align-self: center;
+
+
+
+}
+
+
+
+.containerOfProducts {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-  }
-  
-  img {
+}
+
+img {
     width: 200px;
     height: 100px;
     margin: auto;
-  }
-  .image-wrapper {
-    position: relative;
-}
-.image-wrapper image-desc{
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-.image-wrapper:hover image-desc{
-    display: block;
 }
