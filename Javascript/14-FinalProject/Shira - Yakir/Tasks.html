@@ -12,17 +12,18 @@
     <div class="tasksPage">
 
         <div class="appHeader">
+            <img class="account" src="./images/avatar - Copy.jpg" alt="" style="border-radius:50px; width: 43px; height: 43px; margin-top:5px; margin-left: 2px;">
             <h1 class="myDay">My Day</h1>
             <h3 id="todayDate"></h3>
         </div>
             
-            <input type="text" class="addCategory" id="addCategory" placeholder="Add Category">
-            <input type="text" class="addTask" id="addTask" placeholder="Add Task" onblur="addTask(event)">
+            <input type="text" class="addCategory" id="addCategory" placeholder="+ Add Category" onblur="addCategory(event)">
+            <input type="text" class="addTask" id="addTask" placeholder="+ Add Task" onblur="addTask(event)">
 
 
         <div class="categories">
             <div id="Category">Work</div>
-            <div id="Category">Studies</div>
+            <!-- <div id="Category">Studies</div> -->
         </div>
 
         <div class="tasks">

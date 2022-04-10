@@ -98,3 +98,7 @@ function deleteTask(taskIndex) {
     tasksArray.splice(taskIndex, 1);
     console.dir(tasksArray);
 }
+function addCategory(ev) {
+    var categories = document.querySelector('.categories');
+    categories.innerHTML += ev.target.value + ("" + '<br>');
+}

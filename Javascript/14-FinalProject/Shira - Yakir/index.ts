@@ -125,7 +125,11 @@ addTask_demo_DATA()
 
 function deleteTask(taskIndex) {
     tasksArray.splice(taskIndex, 1)
-    
+
     console.dir(tasksArray);
 
+}
+function addCategory(ev){
+   const categories = document.querySelector('.categories')
+   categories.innerHTML += ev.target.value + `${'<br>'}`
 }

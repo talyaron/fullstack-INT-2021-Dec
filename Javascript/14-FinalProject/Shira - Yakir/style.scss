@@ -11,27 +11,28 @@
           "categories tasks";
       
    
-    background-color: rgb(255, 255, 255);
+    // background-color: rgb(255, 255, 255);
+    background-color: #3176bc;
     padding: 10px;
     margin: auto;
     border-radius: 20px;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     margin: 25px;
 
-    .appHeader{
-        grid-area: appHeader;
-        display: flex;
-        .myDay{
-        margin-top: 0.5rem;
-        margin-left: 1rem;
-        }
-        //h3 - the Date:
-        h3 {
-        margin-right: 1rem;
+    // .appHeader{
+        // grid-area: appHeader;
+        // display: flex;
+        // .myDay{
+        // margin-top: 0.5rem;
+        // margin-left: 1rem;
+        // }
+        // //h3 - the Date:
+        // h3 {
+        // margin-right: 1rem;
 
-        }
+        // }
 
-    }
+    // }
 
     .addCategory{
         grid-area: addCategory;
@@ -43,7 +44,10 @@
 
     .tasks{
         grid-area: tasks;
-        background-color: #3d48c1;
+        // background-color: #3d48c1;
+        // background-color: rgb(167, 176, 224);
+        background-color: rgb(16, 98, 176);
+
         padding:10px;
 
         .task{
@@ -99,7 +103,19 @@ body {
         width: 100%;
         height: 50px;
         justify-content: space-between;
-        background-color: rgb(204, 211, 250);
+        background-color: rgb(16, 98, 176);
+        grid-area: appHeader;
+        display: flex;
+        .myDay{
+        margin-top: 0.5rem;
+        margin-left: 1rem;
+        }
+        //h3 - the Date:
+        h3 {
+        margin-right: 1rem;
+
+        }
+
 
 
 
@@ -147,7 +163,8 @@ body {
         border-radius: 10em;
         border: none;
         background: rgb(97, 61, 193);
-        background: linear-gradient(104deg, rgba(97, 61, 193, 1) 0%, rgba(216, 49, 91, 1) 100%);
+        // background: linear-gradient(104deg, rgba(97, 61, 193, 1) 0%, rgba(216, 49, 91, 1) 100%);
+        background: linear-gradient(104deg, rgba(97, 61, 193, 1) 0%, rgba(160, 9, 9, 0.414) 100%);
         color: white;
         padding: 8px 24px;
         font-size: 15px;
@@ -168,10 +185,12 @@ body {
         }
 
         &--delete{
-            text-align: center;
-            font-size: smaller;
+            background: none;
+            background-color: #e5652e;
+            font-size: small;
             width: 80px;
             height: 40px;
+            text-align: center;
         }
 
     } 
@@ -179,7 +198,8 @@ body {
     .categories{
         width: 210px;
         // border-right: solid 1px rgb(32, 13, 139);
-        background-color: rgb(204, 211, 250);
+        // background-color: rgb(204, 211, 250);
+        background-color: rgb(16, 98, 176);
         border-radius: 20px;
         padding: 10px;
         color: rgb(29, 8, 87);
