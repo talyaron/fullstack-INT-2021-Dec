@@ -6,7 +6,7 @@ interface task {
   endTime: HTMLInputElement
 }
 // Add new task form.
-function handleTask(event: any) {
+function handleAddTask(event: any) {
   event.preventDefault();
   //console.log(event);
   const heading: HTMLInputElement = event.target.elements.heading.value;
@@ -60,28 +60,27 @@ function handleTask(event: any) {
 
 
   taskContainer.append(task);
-  //console.log(task1)
-  //console.log(task1.startTime)
+  
   // Pushing the task into a tasks array ("data base").
   tasks.push(newtask);
   tasks.push(task)
-  //console.log(tasks)
+  
 
   for (let i = 0; i < tasks.length; i++) {
 
 
     const startDate: any = tasks[i].startTime
     // console.log(startDate)
-    const countDownDate:number = new Date(startDate).getTime();
+    const countDownDate: number = new Date(startDate).getTime();
 
     // Run myfunc every second
     var myfunc = setInterval(showTime, 1000);
 
     function showTime() {
-      const now:number = new Date().getTime();
+      const now: number = new Date().getTime();
       const timeleft = countDownDate - now;
-const textTime = timeToText(timeleft);
-      
+      const textTime = timeToText(timeleft);
+
 
       // Result is output to the specific element
       document.getElementById("time").innerText = textTime;
@@ -113,7 +112,7 @@ function removeTask(event) {
 }
 
 // Add new task (using 'handleTask' form).
-function handleAddTask(event) {
+function handleOpenForm(event) {
   event.preventDefault();
   const addBtn = document.querySelector('.addBtn');
   const slide = document.querySelector('.slide');
@@ -140,22 +139,27 @@ function handleAddTask(event) {
 }
 
 
-function timeToText(time:number){
+function timeToText(time: number) {
   // Calculating the days, hours, minutes and seconds left
-  const days:string =timeToString(Math.floor(time / (1000 * 60 * 60 * 24)));
- 
-  const hours = timeToString( Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-  const minutes = timeToString(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
-  const seconds = timeToString(Math.floor((time % (1000 * 60)) / 1000));
 
-  function timeToString(time:number):string{
+  if (time >= 0) {
+    const days: string = timeToString(Math.floor(time / (1000 * 60 * 60 * 24)));
+
+    const hours = timeToString(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+    const minutes = timeToString(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
+    const seconds = timeToString(Math.floor((time % (1000 * 60)) / 1000));
+    return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+  return '0d 0h 0m 0s';
+
+  function timeToString(time: number): string {
     if (time < 10) {
       return '0' + time;
     }
     return `${time}`;
   }
 
-  return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
 }
 
 

@@ -1,6 +1,6 @@
 var tasks = []; // Creating "Data Base" To Hold All the tasks.
 // Add new task form.
-function handleTask(event) {
+function handleAddTask(event) {
     event.preventDefault();
     //console.log(event);
     var heading = event.target.elements.heading.value;
@@ -38,8 +38,6 @@ function handleTask(event) {
     task.innerHTML = "<div class='heading'>" + heading + "</div>\n    <div class='description'>" + description + "</div>\n    <div class='startTime'>Scheduled to: " + startTime + "</div> \n   <input type='checkbox' class='checkbox'>\n   <div id=\"time\"></div>\n</div>\n<div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>";
     console.dir(newtask);
     taskContainer.append(task);
-    //console.log(task1)
-    //console.log(task1.startTime)
     // Pushing the task into a tasks array ("data base").
     tasks.push(newtask);
     tasks.push(task);
@@ -64,7 +62,6 @@ function handleTask(event) {
         }
     };
     var myfunc;
-    //console.log(tasks)
     for (var i = 0; i < tasks.length; i++) {
         _loop_1(i);
     }
@@ -80,7 +77,7 @@ function removeTask(event) {
     div.removeChild(array);
 }
 // Add new task (using 'handleTask' form).
-function handleAddTask(event) {
+function handleOpenForm(event) {
     event.preventDefault();
     var addBtn = document.querySelector('.addBtn');
     var slide = document.querySelector('.slide');
@@ -107,17 +104,20 @@ function handleAddTask(event) {
 }
 function timeToText(time) {
     // Calculating the days, hours, minutes and seconds left
-    var days = timeToString(Math.floor(time / (1000 * 60 * 60 * 24)));
-    var hours = timeToString(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-    var minutes = timeToString(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
-    var seconds = timeToString(Math.floor((time % (1000 * 60)) / 1000));
+    if (time >= 0) {
+        var days = timeToString(Math.floor(time / (1000 * 60 * 60 * 24)));
+        var hours = timeToString(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+        var minutes = timeToString(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
+        var seconds = timeToString(Math.floor((time % (1000 * 60)) / 1000));
+        return days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+    }
+    return '0d 0h 0m 0s';
     function timeToString(time) {
         if (time < 10) {
             return '0' + time;
         }
         return "" + time;
     }
-    return days + "d " + hours + "h " + minutes + "m " + seconds + "s";
 }
 // Drafts -------------------------------------------------------------------------------------------------------------------------
 // const tasks: Array<object> = [];

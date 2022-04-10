@@ -24,11 +24,11 @@
         <div class='tasksContainer'></div>
 
         <!-- when clicking the add button - overlay slide up with a form -->
-        <div type='submit' class='addBtn' onclick='handleAddTask(event)'> + </div>
+        <div type='submit' class='addBtn' onclick='handleOpenForm(event)'> + </div>
 
 
         <!-- recieve the data submitted, and push into "data base" array (tasks) -->
-        <form id='newTask' class="slide" onsubmit='handleTask(event)'>
+        <form id='newTask' class="slide" onsubmit='handleAddTask(event)'>
             <label for="heading">Task title</label>
             <input type='text' name='heading' placeholder='Task name' required>
             <label for="description">Task description</label>
