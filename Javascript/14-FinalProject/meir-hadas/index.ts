@@ -12,14 +12,10 @@ function handleNote(ev: any) {
     } else if (elements[i].name && elements[i].value) {
       result[elements[i].name] = elements[i].value;
     }
-    //   console.log(elements[i].name, elements[i].value)
+    
   }
   console.log(result);
-  // console.log(elements)
-
-  // let html = result.map(el=>{
-
-  // })
+ 
   root.innerHTML += `<div>${result.note}</div>`
 }
 
