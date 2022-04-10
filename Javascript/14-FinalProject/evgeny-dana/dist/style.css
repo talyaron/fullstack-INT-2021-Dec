@@ -34,6 +34,10 @@ body .Server_wrapper #root .test .test2 {
   align-items: center;
   font-size: larger;
 }
+body .Server_wrapper #root .updateProduct {
+  display: none;
+  font-size: larger;
+}
 body .Server_wrapper #root img {
   width: 100%;
   height: 100%;
