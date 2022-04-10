@@ -205,8 +205,8 @@ function backToManager(ev){
 
 function presentItem(){
      
-    // const cliant:any = document.querySelector("#cliant")
-    // const storedArr = JSON.parse(localStorage.getItem("productsArr"))
+    const cliant:any = document.querySelector("#cliant")
+    const storedArr = JSON.parse(localStorage.getItem("productsArr"))
     let products:HTMLDivElement=document.querySelector("#products")
         for (let i:number = 0;i<window.localStorage.length;i++) {
             stringStorage = window.localStorage.key(i)
@@ -236,22 +236,22 @@ function presentItem(){
         })
         products.innerHTML = html;
 
-    // console.log(storedArr)
-    //     let html = '';
-    //     storedArr.forEach(product=>{
-    //        html+=
-    //         `<div class="display" >
-    //             <img src=${product.pImage} width="100px">
-    //             <div class="test2" >
-    //                   <div>name:${product.name}</div>  
-    //                   <div>serialNo:${product.serialNo}</div>
-    //                   <div>description: ${product.description}</div>
-    //                   <div>price: ${product.price}</div>
-    //                   <div>currency: ${product.currency}</div>
+    console.log(storedArr)
+        let html = '';
+        storedArr.forEach(product=>{
+           html+=
+            `<div class="display" >
+                <img src=${product.pImage} width="100px">
+                <div class="test2" >
+                      <div>name:${product.name}</div>  
+                      <div>serialNo:${product.serialNo}</div>
+                      <div>description: ${product.description}</div>
+                      <div>price: ${product.price}</div>
+                      <div>currency: ${product.currency}</div>
                      
-    //             </div>
-    //         </div>`
-    //     })
+                </div>
+            </div>`
+        })
         
         cliant.innerHTML = html;
         cliant.style.display ="flex"

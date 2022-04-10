@@ -138,8 +138,8 @@ function backToManager(ev) {
     window.location.href = "index1.html";
 }
 function presentItem() {
-    // const cliant:any = document.querySelector("#cliant")
-    // const storedArr = JSON.parse(localStorage.getItem("productsArr"))
+    var cliant = document.querySelector("#cliant");
+    var storedArr = JSON.parse(localStorage.getItem("productsArr"));
     var products = document.querySelector("#products");
     for (var i = 0; i < window.localStorage.length; i++) {
         stringStorage = window.localStorage.key(i);
@@ -157,21 +157,12 @@ function presentItem() {
             "<div class=\"wrapper\">\n                <div class=\"item\">\n                        <img src=" + product.pImage + " width=\"100px\"> \n                        <div class=\"upload\">\n                            <div>name:" + product.name + "</div>  \n                            <div>serialNo:" + product.serialNo + "</div>\n                            <div>description: " + product.description + "</div>\n                            <div>price: " + product.price + "</div>\n                            <div>currency: " + product.currency + "</div>\n                        </div>\n                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>\n                    </div>\n            </div>";
     });
     products.innerHTML = html;
-    // console.log(storedArr)
-    //     let html = '';
-    //     storedArr.forEach(product=>{
-    //        html+=
-    //         `<div class="display" >
-    //             <img src=${product.pImage} width="100px">
-    //             <div class="test2" >
-    //                   <div>name:${product.name}</div>  
-    //                   <div>serialNo:${product.serialNo}</div>
-    //                   <div>description: ${product.description}</div>
-    //                   <div>price: ${product.price}</div>
-    //                   <div>currency: ${product.currency}</div>
-    //             </div>
-    //         </div>`
-    //     })
+    console.log(storedArr);
+    var html = '';
+    storedArr.forEach(function (product) {
+        html +=
+            "<div class=\"display\" >\n                <img src=" + product.pImage + " width=\"100px\">\n                <div class=\"test2\" >\n                      <div>name:" + product.name + "</div>  \n                      <div>serialNo:" + product.serialNo + "</div>\n                      <div>description: " + product.description + "</div>\n                      <div>price: " + product.price + "</div>\n                      <div>currency: " + product.currency + "</div>\n                     \n                </div>\n            </div>";
+    });
     cliant.innerHTML = html;
     cliant.style.display = "flex";
 }
