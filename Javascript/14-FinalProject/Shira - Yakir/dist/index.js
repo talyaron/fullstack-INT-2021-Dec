@@ -81,7 +81,7 @@ function updateHtmlTasksView(taskIndex) {
     HTML_tasks.append(HTML_addTaskInput);
     HTML_addTaskInput.classList.add('task');
     HTML_addTaskInput.innerHTML =
-        "<div class=\"task\" id=\"taskInde-" + taskIndex + "\">\n    <h1 class=\"title\">" + (taskIndex + 1) + ". " + tasksArray[taskIndex].title + "</h1>\n    <h2 class=\"contect\">" + tasksArray[taskIndex].content + "</h2>\n    <h3 class=\"dueDate\">" + tasksArray[taskIndex].dueDate + "</h3>\n    <h3 status=\"status\">" + tasksArray[taskIndex].status + "</h3>\n    <h3 status=\"category\">" + tasksArray[taskIndex].category + "</h3> \n    <button class=\"deleteBtn\" onclick=\"deleteTask(" + taskIndex + ")\">Delete</button>\n    </div>\n    ";
+        "<div class=\"task\" id=\"taskInde-" + taskIndex + "\">\n    <h1 class=\"title\">" + (taskIndex + 1) + ". " + tasksArray[taskIndex].title + "</h1>\n    <h2 class=\"contect\">" + tasksArray[taskIndex].content + "</h2>\n    <h3 class=\"dueDate\">" + tasksArray[taskIndex].dueDate + "</h3>\n    <h3 status=\"status\">" + tasksArray[taskIndex].status + "</h3>\n    <h3 status=\"category\">" + tasksArray[taskIndex].category + "</h3> \n    <button class=\"btn btn--delete\" onclick=\"deleteTask(" + taskIndex + ")\">Delete</button>\n    </div>\n    ";
 }
 // demo data for Development and Testing process
 function addTask_demo_DATA() {

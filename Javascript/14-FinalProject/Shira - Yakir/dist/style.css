@@ -95,7 +95,7 @@ body input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-body .signUp_loginBtns, body .deleteBtn {
+body .btn {
   width: 29em;
   height: 4em;
   border-radius: 10em;
@@ -111,16 +111,19 @@ body .signUp_loginBtns, body .deleteBtn {
   cursor: pointer;
   outline: none;
 }
-body .signUp_loginBtns:hover, body .deleteBtn:hover {
+body .btn:hover {
   background-color: #2EE59D;
   box-shadow: 0px 15px 32px rgba(216, 49, 91, 0.2);
   color: #fff;
   transform: translateY(-4px);
 }
-body .signUp_loginBtns .deleteBtn, body .deleteBtn .deleteBtn {
+body .btn--signUp, body .btn--login {
+  font-size: 15px;
+}
+body .btn--delete {
   text-align: center;
   font-size: smaller;
-  width: 60px;
+  width: 80px;
   height: 40px;
 }
 body .categories {

@@ -103,7 +103,7 @@ function updateHtmlTasksView(taskIndex) {
     <h3 class="dueDate">${tasksArray[taskIndex].dueDate}</h3>
     <h3 status="status">${tasksArray[taskIndex].status}</h3>
     <h3 status="category">${tasksArray[taskIndex].category}</h3> 
-    <button class="deleteBtn" onclick="deleteTask(${taskIndex})">Delete</button>
+    <button class="btn btn--delete" onclick="deleteTask(${taskIndex})">Delete</button>
     </div>
     `;
 }

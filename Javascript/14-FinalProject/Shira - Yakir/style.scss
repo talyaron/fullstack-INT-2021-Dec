@@ -141,7 +141,7 @@ body {
         margin: 0;
     }
 
-    .signUp_loginBtns, .deleteBtn {
+    .btn{
         width: 29em;
         height: 4em;
         border-radius: 10em;
@@ -156,21 +156,26 @@ body {
         transition: all 0.3s ease 0s;
         cursor: pointer;
         outline: none;
-
         &:hover {
             background-color: #2EE59D;
             box-shadow: 0px 15px 32px rgba(216, 49, 91, 0.2);
             color: #fff;
             transform: translateY(-4px);
         }
-        .deleteBtn{
-            // background: #2EE59D;
+
+        &--signUp, &--login{
+            font-size: 15px;
+        }
+
+        &--delete{
             text-align: center;
             font-size: smaller;
-            width: 60px;
+            width: 80px;
             height: 40px;
         }
-    }
+
+    } 
+ 
     .categories{
         width: 210px;
         // border-right: solid 1px rgb(32, 13, 139);
