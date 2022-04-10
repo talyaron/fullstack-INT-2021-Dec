@@ -28,7 +28,7 @@ var products = document.querySelector(".products");
 var cart = document.querySelector(".cart");
 function refreshPro() {
     for (var i = 0; i < foodMenu.length; i++) {
-        products.innerHTML += "\n    <div class=\"html" + foodMenu[i].type + "\">\n    " + foodMenu[i].type + "\n    <img src=\"" + foodMenu[i].img + "\" alt=\"\">\n    " + foodMenu[i].price + " \u20AA\n    <button id=\"" + i + "\" onclick=\"clickAdd(event)\">Panek Oti</button>\n    </div>\n\n    ";
+        products.innerHTML += "\n    <div class=\"cube\">\n    " + foodMenu[i].type + "\n    <img src=\"" + foodMenu[i].img + "\" alt=\"\">\n    " + foodMenu[i].price + " \u20AA\n    <button id=\"" + i + "\" onclick=\"clickAdd(event)\">Panek Oti</button>\n    </div>\n\n    ";
     }
 }
 function clickAdd(ev) {

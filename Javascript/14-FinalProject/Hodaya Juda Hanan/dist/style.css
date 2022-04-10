@@ -1,19 +1,38 @@
-p {
+body {
+  text-align: center;
+}
+body p {
   font-size: 1.8rem;
 }
-
-.cotar {
+body .cottar-cart {
+  position: relative;
+  bottom: 5vh;
+  left: 8vw;
+  font-size: 25px;
+}
+body .wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+body .wrapper .cotar {
   font-size: 5rem;
   text-align: center;
   color: black;
 }
-
-.products {
+body .wrapper .products {
+  display: grid;
   font-size: 2rem;
   direction: rtl;
   color: black;
+  grid-template-columns: repeat(4, 20vw);
 }
-.products img {
+body .wrapper .products .cube {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .wrapper .products .cube img {
   margin: 5px;
   display: flex;
   flex-direction: column;

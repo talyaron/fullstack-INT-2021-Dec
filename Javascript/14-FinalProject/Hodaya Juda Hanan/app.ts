@@ -35,7 +35,7 @@ function refreshPro() {
 
   for (let i = 0; i < foodMenu.length; i++) {
     products.innerHTML += `
-    <div class="html${foodMenu[i].type}">
+    <div class="cube">
     ${foodMenu[i].type}
     <img src="${foodMenu[i].img}" alt="">
     ${foodMenu[i].price} ₪
