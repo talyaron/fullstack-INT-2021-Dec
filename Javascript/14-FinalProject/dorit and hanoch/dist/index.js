@@ -70,10 +70,17 @@ function handleNewProduct(ev) {
         pImage: fileinput
     };
     console.dir(productsArr);
+<<<<<<< Updated upstream
     window.localStorage.setItem(result['serialNo'], JSON.stringify(newProduct));
     productsArr.push(newProduct);
     renderProducts(newProduct);
     ev.target.reset();
+=======
+    localStorage.setItem("productsArr", JSON.stringify(productsArr));
+    ev.target.reset();
+    renderProducts();
+    //ans = handleDirection('managerAddProduct')
+>>>>>>> Stashed changes
 }
 function uID() {
     return Date.now().toString(36) + Math.random().toString(36).substring(2);
