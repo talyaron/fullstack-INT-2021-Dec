@@ -57,6 +57,29 @@ function handleTask(event: any) {
   // Pushing the task into a tasks array ("data base").
   tasks.push(result);
   console.log(tasks);
+  for (var i = 0; i < tasks.length; i++) {
+    
+    var startDate = tasks[i].startTime;
+    console.log(startDate);
+    var countDownDate = new Date(startDate).getTime();
+    // Run myfunc every second
+    var myfunc = setInterval(function () {
+    myfunc = setInterval(function () {
+        var now = new Date().getTime();
+        var timeleft = countDownDate - now;
+        // Calculating the days, hours, minutes and seconds left
+ 
+        document.getElementById("hours").innerHTML = hours + "h ";
+        document.getElementById("mins").innerHTML = minutes + "m ";
+        document.getElementById("secs").innerHTML = seconds + "s ";
+        taskContainer.append(task);
+        // Display the message when countdown is over
+        if (timeleft < 0) {
+            clearInterval(myfunc);
+            alert("'it's time to " + heading + " ");
+        }
+    }, 1000);
+}
 
   
 
@@ -104,6 +127,32 @@ function handleAddTask(event) {
 
 
 
+
+
+for (var i = 0; i < tasks.length; i++) {
+    var countDownDate = new Date(startTime).getTime();
+var _loop_1 = function (i) {
+    var startDate = tasks[i].startTime;
+    console.log(startDate);
+    var countDownDate = new Date(startDate).getTime();
+    // Run myfunc every second
+    var myfunc = setInterval(function () {
+    myfunc = setInterval(function () {
+        var now = new Date().getTime();
+        var timeleft = countDownDate - now;
+        // Calculating the days, hours, minutes and seconds left
+ 
+        document.getElementById("hours").innerHTML = hours + "h ";
+        document.getElementById("mins").innerHTML = minutes + "m ";
+        document.getElementById("secs").innerHTML = seconds + "s ";
+        taskContainer.append(task);
+        // Display the message when countdown is over
+        if (timeleft < 0) {
+            clearInterval(myfunc);
+            alert("'it's time to " + heading + " ");
+        }
+    }, 1000);
+}
 
 
 
