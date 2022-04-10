@@ -20,10 +20,11 @@
 .tasksPage .tasks {
   grid-area: tasks;
   background-color: #1062b0;
+  border-radius: 5px;
   padding: 10px;
 }
 .tasksPage .tasks .task {
-  background-color: white;
+  background-color: whitesmoke;
 }
 
 body {
@@ -125,6 +126,11 @@ body .btn--delete {
   width: 80px;
   height: 40px;
   text-align: center;
+  margin-bottom: 40px;
+}
+body .btn--delete:hover {
+  background-color: #a24218;
+  box-shadow: 0px 15px 32px rgba(216, 49, 91, 0.2);
 }
 body .categories {
   width: 210px;
@@ -143,4 +149,11 @@ body .addCategory {
 }
 body .addTask {
   width: 20rem;
+}
+body .inputDate {
+  background-color: #e5652e;
+}
+body .editTaskBtn {
+  width: 45px;
+  height: 48px;
 }

@@ -104,6 +104,9 @@ function updateHtmlTasksView(taskIndex) {
     <h3 status="status">${tasksArray[taskIndex].status}</h3>
     <h3 status="category">${tasksArray[taskIndex].category}</h3> 
     <button class="btn btn--delete" onclick="deleteTask(${taskIndex})">Delete</button>
+    <input type="checkbox" class="input input--check" name="check" id="checkboxDone"  style="width: 20px; height: 45px; margin-left:230px;">
+    <input type="date" class="inputDate" name="dueDate" id="dueDate" >
+    <img class="editTaskBtn" src="./images/edit.png" alt="">
     </div>
     `;
 }

@@ -47,11 +47,11 @@
         // background-color: #3d48c1;
         // background-color: rgb(167, 176, 224);
         background-color: rgb(16, 98, 176);
-
+        border-radius: 5px;
         padding:10px;
 
         .task{
-           background-color: white;
+           background-color: whitesmoke;
        
         }
     }
@@ -143,6 +143,8 @@ body {
         &:nth-last-child(3) {
             margin-bottom: 2em;
         }
+
+     
       
     }
 
@@ -191,6 +193,11 @@ body {
             width: 80px;
             height: 40px;
             text-align: center;
+            margin-bottom: 40px;
+            &:hover{
+                background-color: #a24218;
+                box-shadow: 0px 15px 32px rgba(216, 49, 91, 0.2);
+            }
         }
 
     } 
@@ -216,6 +223,14 @@ body {
     // margin-right: 3rem;
        width: 20rem;
     }
+    .inputDate{
+        background-color: #e5652e;
+        // margin-left: 100px;
+    }
+    .editTaskBtn{
+        width: 45px;
+        height: 48px;
+    }     
 }
 
 
