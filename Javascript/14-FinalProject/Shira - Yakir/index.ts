@@ -6,15 +6,16 @@ const formconfirmPassword: HTMLInputElement = document.querySelector("#repeatPas
 const formSignUpMsg: HTMLElement = document.querySelector("#signUpMsg");
 const formLoginMsg: HTMLElement = document.querySelector("#loginMsg");
 
-//create task object
-function task(title:String, content:String, dueDate:String, status:boolean) {
-    this.title = title;
-    this.contect = content;
-    this.dueDate = dueDate;
-    this.status = status;  // true = taskDone, false= Task open
-    this.category = "";
-};
+let tasksArray = []; // arays that contain the tasks
 
+//create task object
+function task(title:String, content?:String, dueDate?:Date, status?:boolean, category?:String) {
+    this.title = title;
+    this.content = content;
+    this.dueDate = dueDate;
+    this.status = status;  // true = task is Done , false= Task open
+    this.category = category;
+};
 
 function handleSignUp(event) {
     event.preventDefault();
@@ -73,28 +74,57 @@ tasksPage()
 
 
 function addTask(event) {
-    // const addTaskInput: HTMLInputElement = document.querySelector("#addTask");
-    const tasks: HTMLElement = document.querySelector(".tasks");
-    let addTaskInput = document.createElement('div')
-    tasks.append(addTaskInput)
-    addTaskInput.classList.add('task')
-    //------------------
-    // const newTask = task("gfgdgfdgdgdf","gfdgdf","gfgfddg");
-    // console.dir(newTask);
-        // addTaskInput.innerHTML = newTask.title
-    // console.log("test" + newTask.title.value)
- //------------------
 
-    // console.log(newTask);
-    
+    // pass the arguments from the event to the object constractor 
+    // and/or use some demo data for development and testing untile all set
 
+    let title = event.target.value
+    let dueDate = new Date();
+    let  content= `test content`;
+    let dueDate =  new Date(); // set current date
+    let status = false;
+    let category = "test category";
 
-    addTaskInput.innerHTML = event.target.value;
+    //-----------------------------------------------------------------
+    let newTask = new task(title, content,dueDate,false,category);
+    tasksArray.push(newTask);
+    updateHtmlTasksView(tasksArray.length-1);
+
+    // for debug console purpose
+    console.dir(tasksArray); 
+    console.log(`tasks has ${tasksArray.length} objects`);
+    console.dir(newTask); 
+
 }
 
+// add the task from the array to the html by its givin index
+function updateHtmlTasksView(taskIndex){
+    const HTML_tasks: HTMLElement = document.querySelector(".tasks");
+    const HTML_addTaskInput = document.createElement('div');
+    HTML_tasks.append(HTML_addTaskInput);
+    HTML_addTaskInput.classList.add('task');
+    HTML_addTaskInput.innerHTML = 
+    `<div class="task" id="taskIndex${taskIndex}">
+    <h1 class="title">${taskIndex+1}. ${tasksArray[taskIndex].title}</h1>
+    <h2 class="contect">${tasksArray[taskIndex].content}</h2>
+    <h3 class="dueDate">${tasksArray[taskIndex].dueDate}</h3>
+    <h3 status="status">${tasksArray[taskIndex].status}</h3>
+    <h3 status="category">${tasksArray[taskIndex].category}</h3>    
+    </div>
+    `;
+}
 
-//'click' event that delete a task div when click  'delete task'
-// function deleteTask(event){
-//  
-//    addTaskInput.remove()
-// }
+// demo data for Development and Testing process
+
+function addTask_demo_DATA() {
+    //------------------
+    let newTask = new task(`test title`, `test content`, new Date('08/04/2022') ,false,`test category`);
+    tasksArray.push(newTask);
+    updateHtmlTasksView(tasksArray.length-1);
+
+    // for debug console purpose
+    console.dir(tasksArray); 
+    console.log(`tasks has ${tasksArray.length} objects`);
+}
+
+addTask_demo_DATA()
