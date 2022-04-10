@@ -56,11 +56,6 @@ function checkLogin(check_username: String, check_password: string): Boolean {
     else return false;
 }
 
-
-
-
-
-
 function tasksPage() {
     let today = new Date();
     let todayDisplay = `${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()}`;
@@ -79,7 +74,6 @@ function addTask(event) {
     // and/or use some demo data for development and testing untile all set
 
     let title = event.target.value
-    let dueDate = new Date();
     let  content= `test content`;
     let dueDate =  new Date(); // set current date
     let status = false;

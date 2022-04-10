@@ -60,7 +60,6 @@ function addTask(event) {
     // pass the arguments from the event to the object constractor 
     // and/or use some demo data for development and testing untile all set
     var title = event.target.value;
-    var dueDate = new Date();
     var content = "test content";
     var dueDate = new Date(); // set current date
     var status = false;
