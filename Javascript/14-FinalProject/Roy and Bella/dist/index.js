@@ -1,11 +1,16 @@
 var tasks = []; // Creating "Data Base" To Hold All the tasks.
 // Add new task form.
-function handleTask(event) {
     event.preventDefault();
+    //console.log(event);
     var heading = event.target.elements.heading.value;
     var description = event.target.elements.description.value;
     var startTime = event.target.elements.startTime.value;
     var endTime = event.target.elements.endTime.value;
+    // console.log(heading, description, startTime, endTime);
+    //const task1:task1={heading, description, startTime, endTime}
+    // Creating new task div each time a task added from the form.
+    var taskContainer = document.querySelector('.tasksContainer');
+    var task = document.createElement('div');
     var elements = event.target.elements;
     var result = {};
     for (var i = 0; i < elements.length; i++) {
@@ -17,23 +22,49 @@ function handleTask(event) {
         }
         // const task: any = result;
     }
-    // Creating new task div each time a task added from the form.
-    var taskContainer = document.querySelector('.tasksContainer');
-    var task = document.createElement('div');
-    // const newtask: object = Object.create(result);
+    var newtask = Object.create(result);
     // creating checkbox element
     var checkbox = document.createElement('input');
     // Assigning the attributes
     // to created checkbox
     checkbox.type = "checkbox";
+    checkbox.name = "name";
+    checkbox.value = "value";
+    checkbox.id = "id";
     task.append(checkbox);
     task.classList.add('task');
     // Appending new tasks into the tasks container.
-    task.innerHTML = "<div class='heading'>" + heading + "</div>\n    <div class='description'>" + description + "</div>\n    <div class='startTime'>Scheduled to: " + startTime + "</div> \n   <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>\n   <input type='checkbox' class='checkbox'></input>";
+    task.innerHTML = "<div class='heading'>" + heading + "</div>\n    <div class='description'>" + description + "</div>\n    <div class='startTime'>Scheduled to: " + startTime + "</div> \n   <input type='checkbox' class='checkbox'>\n   <div id=\"time\"></div>\n</div>\n<div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>";
+    console.dir(newtask);
     taskContainer.append(task);
     // Pushing the task into a tasks array ("data base").
-    tasks.push(result);
-    console.log(tasks);
+    tasks.push(newtask);
+    tasks.push(task);
+    var _loop_1 = function (i) {
+        var startDate = tasks[i].startTime;
+        // console.log(startDate)
+        var countDownDate = new Date(startDate).getTime();
+        // Run myfunc every second
+        myfunc = setInterval(showTime, 1000);
+        function showTime() {
+            var now = new Date().getTime();
+            var timeleft = countDownDate - now;
+            var textTime = timeToText(timeleft);
+            // Result is output to the specific element
+            document.getElementById("time").innerText = textTime;
+            taskContainer.append(newtask);
+            // Display the message when countdown is over
+            if (timeleft < 0) {
+                clearInterval(myfunc);
+                alert("'it's time to " + heading + " ");
+            }
+        }
+    };
+    var myfunc;
+    for (var i = 0; i < tasks.length; i++) {
+        _loop_1(i);
+    }
+    event.target.reset();
 }
 // Remove tasks.
 function removeTask(event) {
@@ -45,7 +76,7 @@ function removeTask(event) {
     div.removeChild(array);
 }
 // Add new task (using 'handleTask' form).
-function handleAddTask(event) {
+function handleOpenForm(event) {
     event.preventDefault();
     var addBtn = document.querySelector('.addBtn');
     var slide = document.querySelector('.slide');
@@ -70,8 +101,25 @@ function handleAddTask(event) {
         }
     }
 }
+function timeToText(time) {
+    // Calculating the days, hours, minutes and seconds left
+    if (time >= 0) {
+        var days = timeToString(Math.floor(time / (1000 * 60 * 60 * 24)));
+        var hours = timeToString(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+        var minutes = timeToString(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
+        var seconds = timeToString(Math.floor((time % (1000 * 60)) / 1000));
+        return days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+    }
+    return '0d 0h 0m 0s';
+    function timeToString(time) {
+        if (time < 10) {
+            return '0' + time;
+        }
+        return "" + time;
+    }
+}
 // Drafts -------------------------------------------------------------------------------------------------------------------------
-// const tasks: Array<object> = []; 
+// const tasks: Array<object> = [];
 // function handleTask(event: any) {
 //   event.preventDefault();
 //   const elements = event.target.elements;
