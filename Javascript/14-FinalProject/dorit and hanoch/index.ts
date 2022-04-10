@@ -211,7 +211,7 @@ function presentItem(){
         })
         
         cliant.innerHTML = html;
-        cliant.style.display ="plex"
+        cliant.style.display ="flex"
         
         
 }

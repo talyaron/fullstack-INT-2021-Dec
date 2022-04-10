@@ -134,5 +134,5 @@ function presentItem() {
             "<div class=\"display\" >\n                <img src=" + product.pImage + " width=\"100px\">\n                <div class=\"test2\" >\n                      <div>name:" + product.name + "</div>  \n                      <div>serialNo:" + product.serialNo + "</div>\n                      <div>description: " + product.description + "</div>\n                      <div>price: " + product.price + "</div>\n                      <div>currency: " + product.currency + "</div>\n                     \n                </div>\n            </div>";
     });
     cliant.innerHTML = html;
-    cliant.style.display = "plex";
+    cliant.style.display = "flex";
 }
