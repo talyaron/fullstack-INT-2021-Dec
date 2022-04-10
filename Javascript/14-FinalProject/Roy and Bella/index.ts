@@ -10,7 +10,6 @@ function handOpenForm(event: any) {
   const startTime: HTMLInputElement = event.target.elements.startTime.value;
   const endTime: HTMLInputElement = event.target.elements.endTime.value;
 
-
   const elements = event.target.elements;
 
   const result = {};
