@@ -1,9 +1,9 @@
-const tasks: Array < task > = []; // Creating "Data Base" To Hold All the tasks.
+const tasks: Array<task> = []; // Creating "Data Base" To Hold All the tasks.
 interface task {
-  heading:HTMLInputElement
-  description:HTMLInputElement
-  startTime:HTMLInputElement
-  endTime:HTMLInputElement
+  heading: HTMLInputElement
+  description: HTMLInputElement
+  startTime: HTMLInputElement
+  endTime: HTMLInputElement
 }
 // Add new task form.
 function handleTask(event: any) {
@@ -13,24 +13,24 @@ function handleTask(event: any) {
   const description: HTMLInputElement = event.target.elements.description.value;
   const startTime: HTMLInputElement = event.target.elements.startTime.value;
   const endTime: HTMLInputElement = event.target.elements.endTime.value;
- // console.log(heading, description, startTime, endTime);
-   //const task1:task1={heading, description, startTime, endTime}
+  // console.log(heading, description, startTime, endTime);
+  //const task1:task1={heading, description, startTime, endTime}
   // Creating new task div each time a task added from the form.
   const taskContainer: HTMLDivElement = document.querySelector('.tasksContainer');
   const task: any = document.createElement('div')
- 
+
   let elements = event.target.elements;
   let result = {};
   for (let i = 0; i < elements.length; i++) {
-      if (elements[i].type === "checkbox") {
-          result[elements[i].name] = elements[i].checked;
-      }
-      else if (elements[i].name && elements[i].value) {
-          result[elements[i].name] = elements[i].value;
-      }
-      // const task: any = result;
+    if (elements[i].type === "checkbox") {
+      result[elements[i].name] = elements[i].checked;
+    }
+    else if (elements[i].name && elements[i].value) {
+      result[elements[i].name] = elements[i].value;
+    }
+    // const task: any = result;
   }
- 
+
   var newtask = Object.create(result);
   // creating checkbox element
   const checkbox = document.createElement('input');
@@ -51,64 +51,54 @@ function handleTask(event: any) {
     <div class='description'>${description}</div>
     <div class='startTime'>Scheduled to: ${startTime}</div> 
    <input type='checkbox' class='checkbox'>
-   <div class="timer">
-   <div id="days"></div>
-   <div id="hours"></div>
-   <div id="mins"></div>
-   <div id="secs"></div>
+   <div id="time"></div>
 </div>
 <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>`;
 
 
- console.dir(newtask)
+  console.dir(newtask)
 
-  
+
   taskContainer.append(task);
-//console.log(task1)
-//console.log(task1.startTime)
+  //console.log(task1)
+  //console.log(task1.startTime)
   // Pushing the task into a tasks array ("data base").
   tasks.push(newtask);
   tasks.push(task)
   //console.log(tasks)
-  
-  for(let i=0;i<tasks.length;i++) {
-    
-    
-   const startDate:any= tasks[i].startTime
-  // console.log(startDate)
-  const countDownDate = new Date(startDate).getTime();
 
-// Run myfunc every second
-var myfunc = setInterval(function() {
-var now = new Date().getTime();
-var timeleft = countDownDate - now;
-    
-// Calculating the days, hours, minutes and seconds left
-var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
-    
-// Result is output to the specific element
-document.getElementById("days").innerHTML = days + "d "
-document.getElementById("hours").innerHTML = hours + "h " 
-document.getElementById("mins").innerHTML = minutes + "m " 
-document.getElementById("secs").innerHTML = seconds + "s " 
+  for (let i = 0; i < tasks.length; i++) {
 
 
-taskContainer.append(newtask)
-// Display the message when countdown is over
-if (timeleft < 0) {
-    clearInterval(myfunc);
-   alert(`'it's time to ${heading} `)
-}
-}, 1000);
+    const startDate: any = tasks[i].startTime
+    // console.log(startDate)
+    const countDownDate:number = new Date(startDate).getTime();
 
-}
-    
-    
+    // Run myfunc every second
+    var myfunc = setInterval(showTime, 1000);
+
+    function showTime() {
+      const now:number = new Date().getTime();
+      const timeleft = countDownDate - now;
+const textTime = timeToText(timeleft);
       
-    event.target.reset()
+
+      // Result is output to the specific element
+      document.getElementById("time").innerText = textTime;
+
+
+      taskContainer.append(newtask)
+      // Display the message when countdown is over
+      if (timeleft < 0) {
+        clearInterval(myfunc);
+        alert(`'it's time to ${heading} `)
+      }
+    }
+  }
+
+
+
+  event.target.reset()
 
 }
 // Remove tasks.
@@ -148,7 +138,25 @@ function handleAddTask(event) {
     }
   }
 }
+
+
+function timeToText(time:number){
+  // Calculating the days, hours, minutes and seconds left
+  const days:string =timeToString(Math.floor(time / (1000 * 60 * 60 * 24)));
  
+  const hours = timeToString( Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+  const minutes = timeToString(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
+  const seconds = timeToString(Math.floor((time % (1000 * 60)) / 1000));
+
+  function timeToString(time:number):string{
+    if (time < 10) {
+      return '0' + time;
+    }
+    return `${time}`;
+  }
+
+  return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+}
 
 
 
@@ -172,7 +180,7 @@ function handleAddTask(event) {
 // Drafts -------------------------------------------------------------------------------------------------------------------------
 
 
-// const tasks: Array<object> = []; 
+// const tasks: Array<object> = [];
 
 // function handleTask(event: any) {
 //   event.preventDefault();

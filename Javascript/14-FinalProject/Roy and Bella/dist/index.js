@@ -35,7 +35,7 @@ function handleTask(event) {
     task.append(checkbox);
     task.classList.add('task');
     // Appending new tasks into the tasks container.
-    task.innerHTML = "<div class='heading'>" + heading + "</div>\n    <div class='description'>" + description + "</div>\n    <div class='startTime'>Scheduled to: " + startTime + "</div> \n   <input type='checkbox' class='checkbox'>\n   <div class=\"timer\">\n   <div id=\"days\"></div>\n   <div id=\"hours\"></div>\n   <div id=\"mins\"></div>\n   <div id=\"secs\"></div>\n</div>\n<div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>";
+    task.innerHTML = "<div class='heading'>" + heading + "</div>\n    <div class='description'>" + description + "</div>\n    <div class='startTime'>Scheduled to: " + startTime + "</div> \n   <input type='checkbox' class='checkbox'>\n   <div id=\"time\"></div>\n</div>\n<div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>";
     console.dir(newtask);
     taskContainer.append(task);
     //console.log(task1)
@@ -48,26 +48,20 @@ function handleTask(event) {
         // console.log(startDate)
         var countDownDate = new Date(startDate).getTime();
         // Run myfunc every second
-        myfunc = setInterval(function () {
+        myfunc = setInterval(showTime, 1000);
+        function showTime() {
             var now = new Date().getTime();
             var timeleft = countDownDate - now;
-            // Calculating the days, hours, minutes and seconds left
-            var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+            var textTime = timeToText(timeleft);
             // Result is output to the specific element
-            document.getElementById("days").innerHTML = days + "d ";
-            document.getElementById("hours").innerHTML = hours + "h ";
-            document.getElementById("mins").innerHTML = minutes + "m ";
-            document.getElementById("secs").innerHTML = seconds + "s ";
+            document.getElementById("time").innerText = textTime;
             taskContainer.append(newtask);
             // Display the message when countdown is over
             if (timeleft < 0) {
                 clearInterval(myfunc);
                 alert("'it's time to " + heading + " ");
             }
-        }, 1000);
+        }
     };
     var myfunc;
     //console.log(tasks)
@@ -111,8 +105,22 @@ function handleAddTask(event) {
         }
     }
 }
+function timeToText(time) {
+    // Calculating the days, hours, minutes and seconds left
+    var days = timeToString(Math.floor(time / (1000 * 60 * 60 * 24)));
+    var hours = timeToString(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+    var minutes = timeToString(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
+    var seconds = timeToString(Math.floor((time % (1000 * 60)) / 1000));
+    function timeToString(time) {
+        if (time < 10) {
+            return '0' + time;
+        }
+        return "" + time;
+    }
+    return days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+}
 // Drafts -------------------------------------------------------------------------------------------------------------------------
-// const tasks: Array<object> = []; 
+// const tasks: Array<object> = [];
 // function handleTask(event: any) {
 //   event.preventDefault();
 //   const elements = event.target.elements;
