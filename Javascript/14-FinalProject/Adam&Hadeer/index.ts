@@ -13,18 +13,12 @@ function handleClick(ev: any) {
     // console.log(ev.target.value)
 }
 
-
-
-
-
-
-
 calculatorButtons.forEach(button => {
    addEventListener(`click`, (ev) => {
         console.log(`clicked`); //Any button that been clicked pop a `clicked` messege
         console.log(ev);
         console.log(ev.target);
-        console.log(ev.target.innerText.value)
+        console.log(ev.target.innerText)
         switch (ev.target.innerText) {
             case 'AC':
                 display.innerText = ''
@@ -48,5 +42,6 @@ calculatorButtons.forEach(button => {
     });
 
 });
+
 
 
