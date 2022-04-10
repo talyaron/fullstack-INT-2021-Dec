@@ -1,15 +1,7 @@
 body {
+  width: 100vw;
   background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  flex-flow: column wrap;
-  justify-content: space-between;
-  align-content: space-evenly;
-  column-gap: 20px;
-  padding: 30px;
-  margin-top: -75px;
-  margin-left: 60px;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -53,24 +45,10 @@ a {
   margin-top: 22px;
   text-decoration-line: underline;
 }
-.header .nabar-small {
-  position: sticky;
-}
-.header .nabar-small a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px;
-  text-decoration: none;
-  font-size: 15px;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-left: 70px;
-  margin-top: 60px;
-}
 
 .bigProduct {
-  width: 800px;
-  height: 300px;
+  width: 100vw;
+  height: 200px;
   background-color: white;
   margin: auto;
   position: relative;
@@ -81,7 +59,6 @@ a {
   width: 60%;
   height: 100%;
   position: absolute;
-  padding: 10px;
 }
 .bigProduct h2 {
   font-size: 40px;
@@ -101,13 +78,11 @@ a {
   font-weight: lighter;
   text-align: center;
   font-size: 18px;
-  padding: 10px;
 }
 
 .containerOfProducts {
   background-color: white;
   width: 100vw;
-  height: 600px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -116,7 +91,6 @@ a {
   align-items: stretch;
   align-content: space-evenly;
   column-gap: 20px;
-  padding: 20px;
 }
 .containerOfProducts .product {
   background-color: white;
@@ -202,15 +176,6 @@ a {
   height: 280px;
 }
 
-.priceMe {
-  color: #000000;
-  display: block;
-  border-radius: 50px;
-  font-size: 1em;
-  position: absolute;
-  background: #eb44f4;
-}
-
 .containerOfProducts {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -220,23 +185,4 @@ img {
   width: 200px;
   height: 100px;
   margin: auto;
-}
-
-.image-wrapper {
-  position: relative;
-}
-
-.image-wrapper image-desc {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.image-wrapper:hover image-desc {
-  display: block;
 }

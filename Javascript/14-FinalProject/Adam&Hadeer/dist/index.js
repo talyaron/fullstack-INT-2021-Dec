@@ -13,7 +13,8 @@ calculatorButtons.forEach(function (button) {
     addEventListener("click", function (ev) {
         ev.stopPropagation();
         console.log(ev.target.type);
-        if (ev.target.nodeName !== 'BODY') {
+        if (ev.target.className !== 'wrapper' && ev.target.className !== 'calculatorButtons' && ev.target.nodeName !== 'BODY') {
+            //if (ev.target.nodeName !== 'BODY') {
             console.log("clicked"); //Any button that been clicked pop a `clicked` messege
             console.log(ev);
             console.dir(ev.target);

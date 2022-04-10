@@ -19,7 +19,8 @@ calculatorButtons.forEach(button => {
     addEventListener(`click`, (ev: any) => {
         ev.stopPropagation()
         console.log(ev.target.type)
-        if (ev.target.nodeName !== 'BODY') {
+        if (ev.target.className !== 'wrapper' && ev.target.className !== 'calculatorButtons' && ev.target.nodeName !== 'BODY') {
+            //if (ev.target.nodeName !== 'BODY') {
 
             console.log(`clicked`); //Any button that been clicked pop a `clicked` messege
             console.log(ev);
@@ -34,8 +35,8 @@ calculatorButtons.forEach(button => {
                         display.innerText = display.innerText.slice(0, -1);
                         break;
                     }
-                    else{
-                        display.innerText='';
+                    else {
+                        display.innerText = '';
                         break;
                     }
 
@@ -46,7 +47,7 @@ calculatorButtons.forEach(button => {
                     }
                     catch {
                         display.innerText = 'NAN'
-                       return;
+                        return;
 
                     }
 
