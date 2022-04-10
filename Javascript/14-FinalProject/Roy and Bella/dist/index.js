@@ -20,7 +20,7 @@ function handleTask(event) {
     // Creating new task div each time a task added from the form.
     var taskContainer = document.querySelector('.tasksContainer');
     var task = document.createElement('div');
-    var newtask = Object.create(result);
+    // const newtask: object = Object.create(result);
     // creating checkbox element
     var checkbox = document.createElement('input');
     // Assigning the attributes
@@ -29,10 +29,10 @@ function handleTask(event) {
     task.append(checkbox);
     task.classList.add('task');
     // Appending new tasks into the tasks container.
-    task.innerHTML = "<div class='heading'>" + heading + "</div>\n    <div class='description'>" + description + "</div>\n    <div class='startTime'>Scheduled to: " + startTime + "</div> \n   <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>\n   <input type='checkbox' class='checkbox'>";
+    task.innerHTML = "<div class='heading'>" + heading + "</div>\n    <div class='description'>" + description + "</div>\n    <div class='startTime'>Scheduled to: " + startTime + "</div> \n   <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>\n   <input type='checkbox' class='checkbox'></input>";
     taskContainer.append(task);
     // Pushing the task into a tasks array ("data base").
-    tasks.push(newtask);
+    tasks.push(result);
     console.log(tasks);
 }
 // Remove tasks.
