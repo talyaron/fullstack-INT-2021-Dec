@@ -1,6 +1,7 @@
 .tasksPage{
+    // background-color: ;
     width: 80%;
-    height: 100%;
+    // height: 100vh;
     display: grid;
     grid-template-columns: 1fr 2fr;
         grid-template-rows: 150px 150px auto;
@@ -42,6 +43,13 @@
 
     .tasks{
         grid-area: tasks;
+        background-color: #3d48c1;
+        padding:10px;
+
+        .task{
+           background-color: white;
+       
+        }
     }
 
 
@@ -73,6 +81,7 @@ body {
     padding-top: 32px;
 
     form {
+  
         width: 27em;
         max-height: 45em;
         display: flex;
@@ -132,7 +141,7 @@ body {
         margin: 0;
     }
 
-    button {
+    .signUp_loginBtns, .deleteBtn {
         width: 29em;
         height: 4em;
         border-radius: 10em;
@@ -154,10 +163,23 @@ body {
             color: #fff;
             transform: translateY(-4px);
         }
+        .deleteBtn{
+            // background: #2EE59D;
+            text-align: center;
+            font-size: smaller;
+            width: 60px;
+            height: 40px;
+        }
     }
     .categories{
-        color: rgb(98, 57, 213);
+        width: 210px;
+        // border-right: solid 1px rgb(32, 13, 139);
+        background-color: rgb(204, 211, 250);
+        border-radius: 20px;
+        padding: 10px;
+        color: rgb(29, 8, 87);
         font-weight: bold;
+        font-size: larger;
     }
     h2{
         color:rgb(117, 110, 110) ;

@@ -1,6 +1,5 @@
 .tasksPage {
   width: 80%;
-  height: 100%;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 150px 150px auto;
@@ -31,6 +30,11 @@
 }
 .tasksPage .tasks {
   grid-area: tasks;
+  background-color: #3d48c1;
+  padding: 10px;
+}
+.tasksPage .tasks .task {
+  background-color: white;
 }
 
 body {
@@ -91,7 +95,7 @@ body input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-body button {
+body .signUp_loginBtns, body .deleteBtn {
   width: 29em;
   height: 4em;
   border-radius: 10em;
@@ -107,15 +111,26 @@ body button {
   cursor: pointer;
   outline: none;
 }
-body button:hover {
+body .signUp_loginBtns:hover, body .deleteBtn:hover {
   background-color: #2EE59D;
   box-shadow: 0px 15px 32px rgba(216, 49, 91, 0.2);
   color: #fff;
   transform: translateY(-4px);
 }
+body .signUp_loginBtns .deleteBtn, body .deleteBtn .deleteBtn {
+  text-align: center;
+  font-size: smaller;
+  width: 60px;
+  height: 40px;
+}
 body .categories {
-  color: #6239d5;
+  width: 210px;
+  background-color: #ccd3fa;
+  border-radius: 20px;
+  padding: 10px;
+  color: #1d0857;
   font-weight: bold;
+  font-size: larger;
 }
 body h2 {
   color: #756e6e;
