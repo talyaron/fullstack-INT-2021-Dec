@@ -1,6 +1,5 @@
 var tasks = []; // Creating "Data Base" To Hold All the tasks.
 // Add new task form.
-function handleAddTask(event) {
     event.preventDefault();
     //console.log(event);
     var heading = event.target.elements.heading.value;
