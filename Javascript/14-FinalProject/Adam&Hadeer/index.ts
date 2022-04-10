@@ -34,6 +34,10 @@ calculatorButtons.forEach(button => {
                         display.innerText = display.innerText.slice(0, -1);
                         break;
                     }
+                    else{
+                        display.innerText='';
+                        break;
+                    }
 
                 case '=':
                     try {
