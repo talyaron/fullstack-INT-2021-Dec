@@ -45,11 +45,14 @@ function handleUser(ev) {
     }
     if (result['name'] == manager['name'] && result['pass'] == manager['password']) {
         window.location.href = "index1.html"
+    }else{
+        window.location.href="client.html"
     }
 } 
 
 function handleNew(ev) {
-        //window.localStorage.clear()
+        window.localStorage.clear()
+        console.log(window.localStorage)
         myButton.style.backgroundColor = "gray"
         root.innerHTML = `<div id="newitem">
                                 <p>Please type details</>
@@ -64,7 +67,6 @@ function handleNew(ev) {
                                 <img id="output" width="100px"/>
                                 <button id="exitButton" onclick="backToManager(event)">Back To Manager Page</button>
                             </div>`
-        //<a href="index1.html">back to manager page</a> 
         newitem = document.querySelector("#newitem")
         newitem.style.display = "flex"
         newitem.style.flexDirection = "column"
@@ -106,6 +108,7 @@ function handleNewProduct(ev) {
    
     console.dir(productsArr)
     window.localStorage.setItem(result['serialNo'], JSON.stringify(newProduct));
+    console.dir(window.localStorage)
     productsArr.push(newProduct)
     renderProducts(newProduct)
     ev.target.reset()
@@ -141,8 +144,7 @@ function renderProducts(newProduct){
 
 
 function renderSavedProducts(){
-        render=document.querySelector("#render")
-        console.log(`length ${window.localStorage.length}`)
+        let products:HTMLDivElement=document.querySelector("#products")
         for (let i:number = 0;i<window.localStorage.length;i++) {
             stringStorage = window.localStorage.key(i)
             console.log(`the storage: ${stringStorage}`)
@@ -151,34 +153,46 @@ function renderSavedProducts(){
             productsArrFLS.push(JSON.parse(ourString))
             console.log(productsArrFLS)
         };
-       // let newObject = window.localStorage.getItem("myObject");
         let html = '';
          productsArrFLS.forEach(product=>{
-           html+=
-            `<div class="bigDiv" >
-                <img src=${product.pImage} width="100px">
-                <div class="productDiv" >
-                      <div>name:${product.name}</div>  
-                      <div>serialNo:${product.serialNo}</div>
-                      <div>description: ${product.description}</div>
-                      <div>price: ${product.price}</div>
-                      <div>currency: ${product.currency}</div>
-                      <button class="button">delete</button>
-                      <button class="button">update</button>
-                </div>
-            </div>`
+        //    html+=
+        //     `<div class="bigDiv" >
+        //         <img src=${product.pImage} width="100px">
+        //         <div class="productDiv" >
+        //               <div>name:${product.name}</div>  
+        //               <div>serialNo:${product.serialNo}</div>
+        //               <div>description: ${product.description}</div>
+        //               <div>price: ${product.price}</div>
+        //               <div>currency: ${product.currency}</div>
+        //         </div>
+        //     </div>`
+            html+=
+            `<div class="wrapper">
+                <div class="item">
+                        <img src=${product.pImage} width="100px"> 
+                        <div class="upload">
+                            <div>name:${product.name}</div>  
+                            <div>serialNo:${product.serialNo}</div>
+                            <div>description: ${product.description}</div>
+                            <div>price: ${product.price}</div>
+                            <div>currency: ${product.currency}</div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+            </div>`        
+
         })
     
-        render.innerHTML = html;
-        render.style.position="absolute"
-        render.style.top="250px"
-        render.style.left="700px"
+        products.innerHTML = html;
+        // render.style.position="absolute"
+        // render.style.top="250px"
+        // render.style.left="700px"
         //render.style.border= "1px solid black"
 }
 
 
 function backToManager(ev){
-    saveNewProducts()
+    //saveNewProducts()
     console.log(`render before remove  ${render}`)
     alert("Products added")
     output.remove()
@@ -186,29 +200,58 @@ function backToManager(ev){
     render.remove()
     console.log(`render after remove  ${render}`)
     myButton.style.backgroundColor = "rgb(172, 143, 161)"
-    //window.location.href = "index1.html"
+    window.location.href = "index1.html"
 }
 
 function presentItem(){
      
-    const cliant:any = document.querySelector("#cliant")
-    const storedArr = JSON.parse(localStorage.getItem("productsArr"))
-    console.log(storedArr)
-        let html = '';
-        storedArr.forEach(product=>{
-           html+=
-            `<div class="display" >
-                <img src=${product.pImage} width="100px">
-                <div class="test2" >
-                      <div>name:${product.name}</div>  
-                      <div>serialNo:${product.serialNo}</div>
-                      <div>description: ${product.description}</div>
-                      <div>price: ${product.price}</div>
-                      <div>currency: ${product.currency}</div>
-                     
-                </div>
+    // const cliant:any = document.querySelector("#cliant")
+    // const storedArr = JSON.parse(localStorage.getItem("productsArr"))
+    let products:HTMLDivElement=document.querySelector("#products")
+        for (let i:number = 0;i<window.localStorage.length;i++) {
+            stringStorage = window.localStorage.key(i)
+            console.log(`the storage: ${stringStorage}`)
+            const ourString:string = window.localStorage.getItem(`${stringStorage}`)
+            console.log(`ourString:${ourString}`)
+            productsArrFLS.push(JSON.parse(ourString))
+            console.log(productsArrFLS)
+        };
+        let html:string = '';
+        productsArrFLS.forEach(product=>{
+            console.log(product.pImage)
+            html+=
+            `<div class="wrapper">
+                <div class="item">
+                        <img src=${product.pImage} width="100px"> 
+                        <div class="upload">
+                            <div>name:${product.name}</div>  
+                            <div>serialNo:${product.serialNo}</div>
+                            <div>description: ${product.description}</div>
+                            <div>price: ${product.price}</div>
+                            <div>currency: ${product.currency}</div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
             </div>`
         })
+        products.innerHTML = html;
+
+    // console.log(storedArr)
+    //     let html = '';
+    //     storedArr.forEach(product=>{
+    //        html+=
+    //         `<div class="display" >
+    //             <img src=${product.pImage} width="100px">
+    //             <div class="test2" >
+    //                   <div>name:${product.name}</div>  
+    //                   <div>serialNo:${product.serialNo}</div>
+    //                   <div>description: ${product.description}</div>
+    //                   <div>price: ${product.price}</div>
+    //                   <div>currency: ${product.currency}</div>
+                     
+    //             </div>
+    //         </div>`
+    //     })
         
         cliant.innerHTML = html;
         cliant.style.display ="flex"

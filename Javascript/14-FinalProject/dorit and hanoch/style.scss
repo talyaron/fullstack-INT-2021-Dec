@@ -62,6 +62,8 @@ button{
 button:hover{
     cursor: pointer;
 }
+
+
 body{height: 100vh ;
     
    
@@ -102,13 +104,44 @@ body{height: 100vh ;
                 height: 100%;
                 border-radius: 2rem 0 0 2rem;
             }
+        
             
 
-        
+            .page{
+               
+                display:flex;
+                flex-direction: column;
+                position:relative;
+            
 
-
-
-        }
+                .wrapper {
+    
+                    margin-top: 65px;
+                    margin-left: 5px;
+                    column-width: 200px;
+                    -webkit-column-break-inside: avoid;
+            
+            
+                    .item {
+                        width: 200px;
+                        -webkit-column-break-inside: avoid;
+                        position:relative;
+                        cursor: pointer;
+                    
+                        img {
+                            width: 100%;
+                            border-radius: 30px;
+                        
+                        }
+                        .upload{
+                            background-color: rgb(186, 245, 245);
+                        }
+                    
+                        p {
+                            padding-left: 2px;
+                        }
+                    }
+                }
+            }
     
 
-    }
