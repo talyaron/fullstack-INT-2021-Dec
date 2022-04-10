@@ -1,4 +1,19 @@
 console.log("shopping ");
+
+// function handleSetName(event){
+//   let name=event.target.value;
+//   console.log(name)
+//   localStorage.setItem('name',JSON.stringify({name}));
+// }
+
+// function handleLoadSeller(){
+//   const UserInput=JSON.parse(localStorage.getItem('name'));
+// }
+
+// function handleLoadIndex(){
+
+// }
+
 const htmlCart = document.querySelector(".cart");
 // localStorage.setItem()
 
