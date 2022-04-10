@@ -50,7 +50,7 @@ function renderProducts() {
                   <div>name:${product.name}</div>
                   <div>Price: ${product.price}</div>
                   <button onclick="handleRemoveProduct('${product.id}')" class="btnDelete">delete</button>
-                  <button onclick="showUpdateMenu(event)" class="btnUpdate">update</button>
+                  <button onclick="showUpdateMenu()" class="btnUpdate">update</button>
                   <p>in/out stock</p>
                   <input type="checkbox"> 
             </div>
@@ -84,9 +84,7 @@ function handleUpdateProduct(ev: any, productId: string) {
   ev.preventDefault();
   console.log(productId)
   
-  const index = products.findIndex(object => {
-    return object.id === productId;
-  });
+  const index = products.findIndex(object =>object.id === productId);
   
   
   if (index !== -1) {
@@ -103,15 +101,16 @@ function handleUpdateProduct(ev: any, productId: string) {
   renderProducts()
 }
 //////////////////////////////////////////////////////////////////////////////
-function showUpdateMenu(event){
+function showUpdateMenu(){
   
   
-  const showUpdatePanal =document.querySelector(".updateProduct").style.display
-  if(showUpdatePanal == "none"){
+  const updatePanel:HTMLElement =document.querySelector(".updateProduct")
+  if(updatePanel.style.display === "none"){
   
-    showUpdatePanal == "block"
+    updatePanel.style.display = "block"
+  } else {
+    updatePanel.style.display = "none"
   }
   
-  console.dir(showUpdatePanal)
 
 }

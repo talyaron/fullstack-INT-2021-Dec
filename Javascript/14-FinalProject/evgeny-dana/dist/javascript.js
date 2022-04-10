@@ -26,7 +26,7 @@ function renderProducts() {
     var html = '';
     products.forEach(function (product) {
         html +=
-            "<div class=\"megaTest\" >\n      <div class=\"test\" >\n            <img src=" + product.image + ">\n            <div class=\"test2\" >\n                  <div>name:" + product.name + "</div>\n                  <div>Price: " + product.price + "</div>\n                  <button onclick=\"handleRemoveProduct('" + product.id + "')\" class=\"btnDelete\">delete</button>\n                  <button onclick=\"showUpdateMenu(event)\" class=\"btnUpdate\">update</button>\n                  <p>in/out stock</p>\n                  <input type=\"checkbox\"> \n            </div>\n        </div>\n        <form class=\"updateProduct\" onsubmit=\"handleUpdateProduct(event, '" + product.id + "')\">\n        <input type=\"text\" name=\"productName\" value=\"" + product.name + "\">\n        <input type=\"text\" name=\"newUrl\" placeholder=\"NEW Item Image url\">\n        <input type=\"text\" name=\"NewPrice\" value=\"" + product.price + "\">\n        <button type=\"submit\">send</button>\n    </form>\n     </div>";
+            "<div class=\"megaTest\" >\n      <div class=\"test\" >\n            <img src=" + product.image + ">\n            <div class=\"test2\" >\n                  <div>name:" + product.name + "</div>\n                  <div>Price: " + product.price + "</div>\n                  <button onclick=\"handleRemoveProduct('" + product.id + "')\" class=\"btnDelete\">delete</button>\n                  <button onclick=\"showUpdateMenu()\" class=\"btnUpdate\">update</button>\n                  <p>in/out stock</p>\n                  <input type=\"checkbox\"> \n            </div>\n        </div>\n        <form class=\"updateProduct\" onsubmit=\"handleUpdateProduct(event, '" + product.id + "')\">\n        <input type=\"text\" name=\"productName\" value=\"" + product.name + "\">\n        <input type=\"text\" name=\"newUrl\" placeholder=\"NEW Item Image url\">\n        <input type=\"text\" name=\"NewPrice\" value=\"" + product.price + "\">\n        <button type=\"submit\">send</button>\n    </form>\n     </div>";
     });
     root.innerHTML = html;
 }
@@ -46,9 +46,7 @@ function handleRemoveProduct(productId) {
 function handleUpdateProduct(ev, productId) {
     ev.preventDefault();
     console.log(productId);
-    var index = products.findIndex(function (object) {
-        return object.id === productId;
-    });
+    var index = products.findIndex(function (object) { return object.id === productId; });
     if (index !== -1) {
         products[index].name = ev.target.elements.productName.value;
     }
@@ -62,10 +60,12 @@ function handleUpdateProduct(ev, productId) {
     renderProducts();
 }
 //////////////////////////////////////////////////////////////////////////////
-function showUpdateMenu(event) {
-    var showUpdatePanal = document.querySelector(".updateProduct").style.display;
-    if (showUpdatePanal == "none") {
-        showUpdatePanal == "block";
+function showUpdateMenu() {
+    var updatePanel = document.querySelector(".updateProduct");
+    if (updatePanel.style.display === "none") {
+        updatePanel.style.display = "block";
     }
-    console.dir(showUpdatePanal);
+    else {
+        updatePanel.style.display = "none";
+    }
 }
