@@ -15,86 +15,32 @@
         <div class='header'>
             <h3 class='logo'>Taskify</h3>
         </div>
+
         <div class="upperSection">
             <h1>Your daily tasks</h1>
             <button class='allTasksBtn'>All tasks</button>
         </div>
 
-
+        <!-- Tasks container-->
         <div class='tasksContainer'></div>
 
-        <!-- when clicking the add button - overlay slide up with a form -->
+        <!-- Overlay slides up with a form -->
         <div type='submit' class='addBtn' onclick='handleOpenForm(event)'> + </div>
 
 
-        <!-- recieve the data submitted, and push into "data base" array (tasks) -->
-        <form id='newTask' class="slide" onsubmit='handleAddTask(event)'>
-            <label for="heading">Task title</label>
+        <!-- Recieves the data that have been submitted, and pushes it into a " fake data base" array (tasks) -->
+        <form class="addTask slide" onsubmit='handleAddTask(event)'>
+            <label for="heading">Write a title</label>
             <input type='text' name='heading' placeholder='Task name' required>
-            <label for="description">Task description</label>
+            <label for="description">Describe your task</label>
             <input type='text' name='description' class='description' placeholder='description' required>
-            <label for="startTime">Start time</label>
-            <input type='datetime-local' name='startTime' required>
-            <label for="endTime">End time</label>
-            <input type='datetime-local' name='endTime'>
+            <label for="setReminderDate">Set a reminder</label>
+            <input type='datetime-local' name='setReminderDate' required>
 
-            <button type='submit' id="saveBtn" class='saveBtn'>Save task</button>
-            <div id="cancelBtn" class='cancelBtn' onclick='handleCancel(event)'>Cancel</div>
-
+            <button type='submit' class='saveBtn'>Save task</button>
+            <div class='cancelBtn' onclick='handleCancelTask(event)'>Cancel</div>
         </form>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Sign up -->
-    <!-- <form onsubmit='handleSignUp(event)">
-        <input type="text" name="userName" placeholder="User name" required>
-
-        <input type="password" name="password" id="password" placeholder="Password" required>
-        <input type="password" name="repeatPassword" id="repeatPassword" placeholder="Repeat password">
-
-        <input type="url" name="image" placeholder="Add image url" required>
-        <div class="img"></div>
-
-        <button type="submit">Sign up</button>
-
-        <a class="login" href="">Alredy have an account? <span>Login</span></a>
-
-    </form>  -->
-
-
-    <!-- Login -->
-    <!-- <form onsubmit="handleLogin(event)">
-
-        <h1 class="heading">Login</h1>
-        <input type="text" name="loginUserName" placeholder="User name" required>
-        <input type="password" name="loginPassword" placeholder="Password" required>
-
-        <button type="submit">Login</button>
-
-
-        <a class="reset" href="">Forgot password?</a>
-    </form> -->
-
-
 
 
     <script src="./dist/index.js"></script>
