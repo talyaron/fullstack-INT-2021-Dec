@@ -154,8 +154,9 @@ function presentItem(ev) {
     var html = '';
     productsArrFLS.forEach(function (product) {
         console.log("pImage = " + product.pImage);
+        var serial = product.serialNo;
         html +=
-            "<div class=\"page\">\n                <div class=\"wrapper\">\n                    <div class=\"item\">\n                            <img src=" + product.pImage + " width=\"100px\"> \n                            <div class=\"upload\">\n                                <div>name:" + product.name + "</div>  \n                                <div onclick=\"handlePurchase(event)\">serialNo:" + product.serialNo + "</div>\n                                <div>description: " + product.description + "</div>\n                                <div>price: " + product.price + "</div>\n                                <div>currency: " + product.currency + "</div>\n                            </div>\n                    </div>\n                </div>\n            </div>";
+            "<div class=\"page\">\n                <div class=\"wrapper\">\n                    <div class=\"item\">\n                            <img src=" + product.pImage + " width=\"100px\"> \n                            <div class=\"upload\">\n                                <div onclick='handlePurchase(event,\"" + serial + "\")'>name:" + product.name + "</div>  \n                                <div onclick='handlePurchase(event,\"" + serial + "\")'>serialNo:" + product.serialNo + "</div>\n                                <div onclick='handlePurchase(event,\"" + serial + "\")'>description: " + product.description + "</div>\n                                <div onclick='handlePurchase(event,\"" + serial + "\")'>price: " + product.price + "</div>\n                                <div onclick='handlePurchase(event,\"" + serial + "\")'>currency: " + product.currency + "</div>\n                            </div>\n                    </div>\n                </div>\n            </div>";
     });
     //console.log(`html ${html}`)
     products.innerHTML = html;
@@ -178,9 +179,12 @@ function presentItem(ev) {
     //     cliant.innerHTML = html;
     //     cliant.style.display ="flex"
 }
-function handlePurchase(ev) {
+function handlePurchase(ev, serialNo) {
     console.log("handle purchase");
-    console.dir(ev);
-    console.log(ev.target);
     var cart = [];
+    var productn = window.localStorage.getItem("" + serialNo);
+    var productB = JSON.parse(productn);
+    cart.push(productB);
+    console.log(cart);
+    var html = "div class=\"cart\"";
 }

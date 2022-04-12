@@ -227,18 +227,18 @@ function presentItem(ev){
         let html:string = '';
         productsArrFLS.forEach(product=>{
             console.log(`pImage = ${product.pImage}`)
-            
+            const serial:string = product.serialNo
             html+=
             `<div class="page">
                 <div class="wrapper">
                     <div class="item">
                             <img src=${product.pImage} width="100px"> 
                             <div class="upload">
-                                <div>name:${product.name}</div>  
-                                <div onclick="handlePurchase(event)">serialNo:${product.serialNo}</div>
-                                <div>description: ${product.description}</div>
-                                <div>price: ${product.price}</div>
-                                <div>currency: ${product.currency}</div>
+                                <div onclick='handlePurchase(event,"${serial}")'>name:${product.name}</div>  
+                                <div onclick='handlePurchase(event,"${serial}")'>serialNo:${product.serialNo}</div>
+                                <div onclick='handlePurchase(event,"${serial}")'>description: ${product.description}</div>
+                                <div onclick='handlePurchase(event,"${serial}")'>price: ${product.price}</div>
+                                <div onclick='handlePurchase(event,"${serial}")'>currency: ${product.currency}</div>
                             </div>
                     </div>
                 </div>
@@ -270,12 +270,15 @@ function presentItem(ev){
         
         
 }
-function handlePurchase(ev){
+function handlePurchase(ev,serialNo){
     console.log("handle purchase")
-    console.dir(ev)
-    console.log(ev.target)
+  
     let cart:Array<product>=[]
-
+    let productn:string = window.localStorage.getItem(`${serialNo}`)
+    let productB:product = JSON.parse(productn)
+    cart.push(productB)
+    console.log(cart)
+    let html:string = `div class="cart"`
 
 }
 
