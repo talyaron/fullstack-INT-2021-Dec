@@ -47,9 +47,12 @@ calculatorButtons.forEach(button => {
                     }
                     catch {
                         display.innerText = 'NAN'
-                        return;
+                        break;
 
                     }
+                case 'NAN':
+                    display.innerText ='';
+
 
                 default:
                     display.innerText += ev.target.innerText;//any button press making the number pop at the Display

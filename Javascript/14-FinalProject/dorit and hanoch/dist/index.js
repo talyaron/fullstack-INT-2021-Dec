@@ -9,7 +9,7 @@ var contOrBack = document.querySelector("#contOrBack");
 var newitem = document.querySelector("#newitem");
 var firstTime = true;
 var ans = false;
-var fileinput = "";
+var fileinput = new Blob;
 var html = "";
 var render = document.querySelector("#render");
 var myButton = document.querySelector("#button2");
@@ -56,7 +56,14 @@ function handleNewProduct(ev) {
         if (details[i].name && details[i].value) {
             if (details[i].name == "imageFile") {
                 result['imageFile'] = details['imageFile'].files[0];
-                fileinput = URL.createObjectURL(result["imageFile"]);
+                console.log(result['imageFile']);
+                console.dir(result['imageFile']);
+                //fileinput = URL.createObjectURL(result["imageFile"])
+                fileinput = result["imageFile"].name;
+                console.log("fileinput1: " + fileinput);
+                fileinput = result["imageFile"]["name"];
+                console.log("fileinput2: " + fileinput);
+                console.log("typeof fileinput" + typeof fileinput);
             }
             else {
                 result[details[i].name] = details[i].value;
@@ -70,24 +77,35 @@ function handleNewProduct(ev) {
         description: result['description'],
         price: result["price"],
         currency: result['currency'],
+        pImage: result["imageFile"]
+    };
+    var reader = new FileReader();
+    reader.readAsDataURL(result["imageFile"]);
+    var base64String = reader.result;
+    var saveProduct = {
+        name: result['typeName'],
+        serialNo: result['serialNo'],
+        description: result['description'],
+        price: result["price"],
+        currency: result['currency'],
+        //pImage : base64String
         pImage: fileinput
     };
     console.dir(productsArr);
-    window.localStorage.setItem(result['serialNo'], JSON.stringify(newProduct));
+    window.localStorage.setItem(result['serialNo'], JSON.stringify(saveProduct));
     console.dir(window.localStorage);
     productsArr.push(newProduct);
     renderProducts(newProduct);
+    //localStorage.setItem("productsArr", JSON.stringify(productsArr))
     ev.target.reset();
-    localStorage.setItem("productsArr", JSON.stringify(productsArr));
-    ev.target.reset();
-    renderProducts();
 }
 function uID() {
     return Date.now().toString(36) + Math.random().toString(36).substring(2);
 }
 function renderProducts(newProduct) {
     render = document.querySelector("#render");
-    html += "<div class=\"bigDiv\" >\n            <img src=" + newProduct.pImage + " width=\"100px\">\n            <div class=\"productDiv\" >\n                <div>name:" + newProduct.name + "</div>  \n                <div>serialNo:" + newProduct.serialNo + "</div>\n                <div>description: " + newProduct.description + "</div>\n                <div>price: " + newProduct.price + "</div>\n                <div>currency: " + newProduct.currency + "</div>\n                <button class=\"button\">delete</button>\n                <button class=\"button\">update</button>\n            </div>\n        </div>";
+    var fileurl = URL.createObjectURL(result["imageFile"]);
+    html += "<div class=\"bigDiv\" >\n            <img src=" + fileurl + " width=\"100px\">\n            <div class=\"productDiv\" >\n                <div>name:" + newProduct.name + "</div>  \n                <div>serialNo:" + newProduct.serialNo + "</div>\n                <div>description: " + newProduct.description + "</div>\n                <div>price: " + newProduct.price + "</div>\n                <div>currency: " + newProduct.currency + "</div>\n                <button class=\"button\">delete</button>\n                <button class=\"button\">update</button>\n            </div>\n        </div>";
     render.innerHTML = html;
     render.style.position = "absolute";
     render.style.top = "250px";
@@ -137,32 +155,44 @@ function backToManager(ev) {
     myButton.style.backgroundColor = "rgb(172, 143, 161)";
     window.location.href = "index1.html";
 }
-function presentItem() {
-    var cliant = document.querySelector("#cliant");
-    var storedArr = JSON.parse(localStorage.getItem("productsArr"));
+function presentItem(ev) {
+    // const cliant:any = document.querySelector("#cliant")
+    // const storedArr:Array<string> = JSON.parse(localStorage.getItem("productsArr"))
+    //console.log(storedArr)
+    console.log("we are in presentItem");
     var products = document.querySelector("#products");
     for (var i = 0; i < window.localStorage.length; i++) {
         stringStorage = window.localStorage.key(i);
-        console.log("the storage: " + stringStorage);
         var ourString = window.localStorage.getItem("" + stringStorage);
         console.log("ourString:" + ourString);
         productsArrFLS.push(JSON.parse(ourString));
-        console.log(productsArrFLS);
+        console.log(" productsArrFLS " + productsArrFLS);
     }
     ;
     var html = '';
     productsArrFLS.forEach(function (product) {
-        console.log(product.pImage);
+        console.log("pImage = " + product.pImage);
         html +=
-            "<div class=\"wrapper\">\n                <div class=\"item\">\n                        <img src=" + product.pImage + " width=\"100px\"> \n                        <div class=\"upload\">\n                            <div>name:" + product.name + "</div>  \n                            <div>serialNo:" + product.serialNo + "</div>\n                            <div>description: " + product.description + "</div>\n                            <div>price: " + product.price + "</div>\n                            <div>currency: " + product.currency + "</div>\n                        </div>\n                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>\n                    </div>\n            </div>";
+            "<div class=\"page\">\n                <div class=\"wrapper\">\n                    <div class=\"item\">\n                            <img src=" + product.pImage + " width=\"100px\"> \n                            <div class=\"upload\">\n                                <div>name:" + product.name + "</div>  \n                                <div>serialNo:" + product.serialNo + "</div>\n                                <div>description: " + product.description + "</div>\n                                <div>price: " + product.price + "</div>\n                                <div>currency: " + product.currency + "</div>\n                            </div>\n                    </div>\n                </div>\n            </div>";
     });
+    console.log("html " + html);
     products.innerHTML = html;
-    console.log(storedArr);
-    var html = '';
-    storedArr.forEach(function (product) {
-        html +=
-            "<div class=\"display\" >\n                <img src=" + product.pImage + " width=\"100px\">\n                <div class=\"test2\" >\n                      <div>name:" + product.name + "</div>  \n                      <div>serialNo:" + product.serialNo + "</div>\n                      <div>description: " + product.description + "</div>\n                      <div>price: " + product.price + "</div>\n                      <div>currency: " + product.currency + "</div>\n                     \n                </div>\n            </div>";
-    });
-    cliant.innerHTML = html;
-    cliant.style.display = "flex";
+    console.dir(products);
+    // console.log(storedArr)
+    //     let html = '';
+    //     storedArr.forEach(product=>{
+    //        html+=
+    //         `<div class="display" >
+    //             <img src=${product.pImage} width="100px">
+    //             <div class="test2" >
+    //                   <div>name:${product.name}</div>  
+    //                   <div>serialNo:${product.serialNo}</div>
+    //                   <div>description: ${product.description}</div>
+    //                   <div>price: ${product.price}</div>
+    //                   <div>currency: ${product.currency}</div>
+    //             </div>
+    //         </div>`
+    //     })
+    //     cliant.innerHTML = html;
+    //     cliant.style.display ="flex"
 }
