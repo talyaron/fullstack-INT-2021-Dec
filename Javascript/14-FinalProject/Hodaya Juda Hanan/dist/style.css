@@ -4,11 +4,22 @@ body {
 body p {
   font-size: 1.8rem;
 }
-body .cottar-cart {
-  position: relative;
-  bottom: 5vh;
-  left: 8vw;
-  font-size: 25px;
+body .cart {
+  display: flex;
+  flex-direction: column;
+  border: 1px black solid;
+  justify-content: space-between;
+}
+body .cart .orderLine {
+  display: flex;
+  justify-content: space-between;
+  margin: 1%;
+}
+body .cart .circleCount {
+  background-color: aqua;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 10%;
 }
 body .wrapper {
   display: flex;
