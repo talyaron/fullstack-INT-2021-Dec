@@ -2,28 +2,28 @@ const foodMenu: Array<any> = [
 
   {
 
-    type: "Pargit",
+    type: "פרגית",
     price: 30,
     img: 'imgs/pargit.jpg',
     count: 0,
 
   },
   {
-    type: "Ceves",
+    type: "כבש",
     price: 35,
     img: 'imgs/ceves.jpg',
     count: 0,
 
   },
   {
-    type: "Chips",
+    type: "צ'יפס",
     price: 15,
     img: 'imgs/fries.jpg',
     count: 0,
 
   },
   {
-    type: "Grapes",
+    type: "ענבים",
     price: 10,
     img: 'imgs/grapeJuice.jpg',
     count: 0,
@@ -47,7 +47,7 @@ function refreshPro() {
     ${foodMenu[i].type}
     <img src="${foodMenu[i].img}" alt="">
     ${foodMenu[i].price} ₪
-    <button id="${i}" onclick="clickAdd(event)">Panek Oti</button>
+    <button id="${i}" onclick="clickAdd(event)">פנק אותי</button>
     </div>
 
     `
@@ -92,5 +92,5 @@ function totalSum() {
   for (let i = 0; i < foodMenu.length; i++) {
     totalPrice += foodMenu[i].price * foodMenu[i].count
   }
-  totalDiv.innerText = `Total : ${totalPrice}₪`
+  totalDiv.innerText = `סה"כ : ${totalPrice}₪`
 }

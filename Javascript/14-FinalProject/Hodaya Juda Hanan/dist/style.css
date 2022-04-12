@@ -1,10 +1,51 @@
 body {
+  background-image: url(" ../imgs/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
   text-align: center;
 }
 body p {
   font-size: 1.8rem;
 }
+body .cotar {
+  font-size: 5rem;
+  text-align: center;
+  color: black;
+}
+body .products {
+  background-size: cover;
+  background: radial-gradient(circle, white 0%, rgba(255, 255, 255, 0.697) 100%);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  border-radius: 1vh;
+  font-size: 2rem;
+  color: black;
+  grid-template-columns: repeat(4, 20vw);
+}
+body .products .cube {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .products .cube img {
+  margin: 15%;
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  height: 50px;
+  border-radius: 30%;
+}
+@media only screen and (min-width: 600px) {
+  body .products .cube img {
+    width: 50%;
+    height: 50%;
+  }
+}
 body .cart {
+  background: radial-gradient(circle, white 0%, rgba(255, 255, 255, 0.697) 100%);
+  border-radius: 1vh;
   display: flex;
   flex-direction: column;
   border: 1px black solid;
@@ -12,42 +53,21 @@ body .cart {
 }
 body .cart .orderLine {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row-reverse;
   margin: 1%;
 }
 body .cart .circleCount {
   background-color: aqua;
   font-weight: bold;
-  border-radius: 50%;
-  width: 10%;
+  border-radius: 50px;
 }
-body .wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+body .cart-products p {
+  color: azure;
+  font-weight: bold;
 }
-body .wrapper .cotar {
-  font-size: 5rem;
-  text-align: center;
-  color: black;
-}
-body .wrapper .products {
-  display: grid;
-  font-size: 2rem;
-  direction: rtl;
-  color: black;
-  grid-template-columns: repeat(4, 20vw);
-}
-body .wrapper .products .cube {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-body .wrapper .products .cube img {
-  margin: 5px;
-  display: flex;
-  flex-direction: column;
-  width: 105px;
-  height: 105px;
-  border-radius: 30%;
+body .cart-products .totalDiv {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #eaff03;
+  z-index: 2;
 }
