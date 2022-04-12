@@ -26,7 +26,7 @@ function renderProducts() {
     var html = '';
     products.forEach(function (product) {
         html +=
-            "<div class=\"megaTest\" >\n      <div class=\"test\" >\n            <img src=" + product.image + ">\n            <div class=\"test2\" >\n                  <div>name:" + product.name + "</div>\n                  <div>Price: " + product.price + "</div>\n                  <button onclick=\"handleRemoveProduct('" + product.id + "')\" class=\"btnDelete\">delete</button>\n                  <button onclick=\"showUpdateMenu()\" class=\"btnUpdate\">update</button>\n                  <p>in/out stock</p>\n                  <input type=\"checkbox\"> \n            </div>\n        </div>\n        <form class=\"updateProduct\" onsubmit=\"handleUpdateProduct(event, '" + product.id + "')\">\n        <input type=\"text\" name=\"productName\" value=\"" + product.name + "\">\n        <input type=\"text\" name=\"newUrl\" placeholder=\"NEW Item Image url\">\n        <input type=\"text\" name=\"NewPrice\" value=\"" + product.price + "\">\n        <button type=\"submit\">send</button>\n    </form>\n     </div>";
+            "<div class=\"megaTest\" >\n      <div class=\"test\" >\n      \n            <img src=" + product.image + ">\n            <div class=\"test2\" >\n                  <div>name:" + product.name + "</div>\n                  <div>Price: " + product.price + "</div>\n                  <button onclick=\"handleRemoveProduct('" + product.id + "')\" class=\"btnDelete\">delete</button>\n                  <button onclick=\"showUpdateMenu('" + product.id + "')\" class=\"btnUpdate\">update</button>\n                  <p id=\"stock_Text\"> stock</p>\n                  <input onchange=\"outOfStockFunc(event)\" class=\"NumInput\" name=\"stockNum\" type=\"number\" value=\"1\" min=\"0\" > \n            </div>\n        </div>\n        <form class=\"updateProduct\" onsubmit=\"handleUpdateProduct(event, '" + product.id + "')\">\n        <input type=\"text\" name=\"productName\" value=\"" + product.name + "\">\n        <input type=\"text\" name=\"newUrl\" placeholder=\"NEW Item Image url\">\n        <input type=\"text\" name=\"NewPrice\" value=\"" + product.price + "\">\n        <button type=\"submit\">send</button>\n    </form>\n     </div>";
     });
     root.innerHTML = html;
 }
@@ -56,16 +56,36 @@ function handleUpdateProduct(ev, productId) {
     if (index !== -1) {
         products[index].image = ev.target.elements.newUrl.value;
     }
-    console.log(products);
     renderProducts();
 }
 //////////////////////////////////////////////////////////////////////////////
-function showUpdateMenu() {
+function showUpdateMenu(productId) {
+    var index = products.findIndex(function (object) { return object.id === productId; });
     var updatePanel = document.querySelector(".updateProduct");
-    if (updatePanel.style.display === "none") {
-        updatePanel.style.display = "block";
+    // if(updatePanel.style.display === "none"){
+    //   updatePanel.style.display = "block"
+    // } else {
+    //   updatePanel.style.display = "none"
+    // }
+    console.log(productId);
+    if (productId) {
+        updatePanel.style.display === "none";
+        return updatePanel.style.display = "block";
     }
     else {
         updatePanel.style.display = "none";
+    }
+    renderProducts();
+    products.forEach(showUpdateMenu);
+}
+//////////////////////////////////////////////////////////////////////////////////////
+function outOfStockFunc(event) {
+    var stock = document.querySelector(".test");
+    var inStock = event.target.elements.stockNum.value;
+    console.log(2);
+    if (inStock == "0") {
+        return stock.innerHTML + '<h2>out of stock</h2>';
+    }
+    else {
     }
 }
