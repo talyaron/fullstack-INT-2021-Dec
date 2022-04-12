@@ -4,7 +4,7 @@ interface users {
     password: string,
     address?: string,
     telephon?: number,
-    email?: string
+    email?: URL
 }
 interface product {
     name: string,
@@ -20,7 +20,7 @@ interface productR{
     description: string,
     price: number,
     currency: string,
-    pImage?:string 
+    pImage?:URL
 }
 let result = {};
 let stringStorage:string = ""
@@ -69,7 +69,7 @@ function handleNew(ev) {
                                     <input type="text" name="description" placeholder="Enter description of item">
                                     <input type="number" name="price" placeholder="Enter a price" >
                                     <input type="text" name="currency" placeholder="Enter currency">
-                                    <input type="file" name="imageFile" placeholder = "Please pick the image of the item">
+                                    <input type="URL" name="imageFile" placeholder = "Please type the url of the image">
                                     <button type="submit">SEND</button> 
                                 </form>
                                 <img id="output" width="100px"/>
@@ -95,22 +95,17 @@ function handleNewProduct(ev) {
     for (let i = 0; i < details.length; i++) {
         if (details[i].name && details[i].value) {
             
-            if (details[i].name == "imageFile") {
-                result['imageFile'] = details['imageFile'].files[0]
-                console.log(result['imageFile'])
-                console.dir(result['imageFile'])
-                //fileinput = URL.createObjectURL(result["imageFile"])
-                fileinput=result["imageFile"].name
-                console.log(`fileinput1: ${fileinput}`)
-                fileinput=result["imageFile"]["name"]
-                console.log(`fileinput2: ${fileinput}`)
-                console.log(`typeof fileinput${typeof fileinput}`)
-            }
-            else {
+            // if (details[i].name == "imageFile") {
+            //     //result['imageFile'] = details['imageFile'].files[0]
+            //     //fileinput = URL.createObjectURL(result["imageFile"])
+            //     result["imageFile"] = details['imageFile']
+            //     //fileinput=result["imageFile"]["name"]
+            // }
+           // else {
                 result[details[i].name] = details[i].value;
             }
         }
-    }
+    console.log(`result.imageFile: ${result['imageFile']}`)    
     result["serialNo"]=uID()
     let newProduct:product= {
         name: result['typeName'],
@@ -120,22 +115,7 @@ function handleNewProduct(ev) {
         currency: result['currency'],
         pImage : result["imageFile"]
     }
-        const reader = new FileReader();
-        reader.readAsDataURL(result["imageFile"])
-        const base64String = reader.result  
-        let saveProduct:productR={
-        name: result['typeName'],
-        serialNo: result['serialNo'],
-        description: result['description'],
-        price: result["price"],
-        currency: result['currency'],
-        //pImage : base64String
-        pImage : fileinput
-    }
-   
-    console.dir(productsArr)
-    window.localStorage.setItem(result['serialNo'], JSON.stringify(saveProduct));
-    console.dir(window.localStorage)
+    window.localStorage.setItem(result['serialNo'], JSON.stringify(newProduct));
     productsArr.push(newProduct)
     renderProducts(newProduct)
     //localStorage.setItem("productsArr", JSON.stringify(productsArr))
@@ -149,9 +129,9 @@ function uID(){
 
 function renderProducts(newProduct){
     render=document.querySelector("#render")
-    let fileurl:URL = URL.createObjectURL(result["imageFile"])
+    //let fileurl:URL = URL.createObjectURL(result["imageFile"])
     html+=`<div class="bigDiv" >
-            <img src=${fileurl} width="100px">
+            <img src=${newProduct.pImage} width="100px">
             <div class="productDiv" >
                 <div>name:${newProduct.name}</div>  
                 <div>serialNo:${newProduct.serialNo}</div>
@@ -162,6 +142,7 @@ function renderProducts(newProduct){
                 <button class="button">update</button>
             </div>
         </div>`
+    console.log(`html: ${html}`)
     render.innerHTML=html
     render.style.position="absolute"
     render.style.top="250px"
@@ -254,7 +235,7 @@ function presentItem(ev){
                             <img src=${product.pImage} width="100px"> 
                             <div class="upload">
                                 <div>name:${product.name}</div>  
-                                <div>serialNo:${product.serialNo}</div>
+                                <div onclick="handlePurchase(event)">serialNo:${product.serialNo}</div>
                                 <div>description: ${product.description}</div>
                                 <div>price: ${product.price}</div>
                                 <div>currency: ${product.currency}</div>
@@ -263,9 +244,9 @@ function presentItem(ev){
                 </div>
             </div>`
         })
-        console.log(`html ${html}`)
+        //console.log(`html ${html}`)
         products.innerHTML = html;
-        console.dir(products)
+        //console.dir(products)
 
     // console.log(storedArr)
     //     let html = '';
@@ -288,6 +269,14 @@ function presentItem(ev){
     //     cliant.style.display ="flex"
         
         
+}
+function handlePurchase(ev){
+    console.log("handle purchase")
+    console.dir(ev)
+    console.log(ev.target)
+    let cart:Array<product>=[]
+
+
 }
 
 
