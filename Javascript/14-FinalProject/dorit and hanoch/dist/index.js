@@ -127,6 +127,13 @@ function handlePurchase(ev, serialNo) {
     cart.push(productB);
     console.log(cart);
     var html = "div class=\"cart\"";
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+function payment() {
+    JSON.parse(localStorage.cart);
+}
+function moveToPayment() {
+    window.location.href = "cliant1.html";
 }
 function handleUpdate(ev, serialNo) {
     console.log("handleUpdate");
