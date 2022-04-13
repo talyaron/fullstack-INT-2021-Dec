@@ -56,7 +56,7 @@ function renderProducts() {
                   <input onchange="outOfStockFunc(event)" class="NumInput" name="stockNum" type="number" value="1" min="0" > 
             </div>
         </div>
-        <form class="updateProduct" onsubmit="handleUpdateProduct(event, '${product.id}')">
+        <form class="updateProduct" id="update-${product.id}" onsubmit="handleUpdateProduct(event, '${product.id}')">
         <input type="text" name="productName" value="${product.name}">
         <input type="text" name="newUrl" placeholder="NEW Item Image url">
         <input type="text" name="NewPrice" value="${product.price}">
