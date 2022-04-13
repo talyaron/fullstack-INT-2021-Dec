@@ -77,7 +77,8 @@ function order() {
 
     if (foodMenu[i].count != 0) {
       cart.innerHTML += 
-       `<div class="orderLine">${foodMenu[i].type} : ${foodMenu[i].price}₪  <div class="circleCount">${foodMenu[i].count}</div> </div>`
+       `<div class="orderLine">${foodMenu[i].type} : ${foodMenu[i].price}₪ 
+       <div class="circleCount">כמות:${foodMenu[i].count}</div>  <div class="plus" onclick="plusCount(event)">+</div></div>`
 
     }
     else {

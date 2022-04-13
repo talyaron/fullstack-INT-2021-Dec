@@ -74,9 +74,11 @@ body {
         }
 
         .circleCount {
-            background-color: aqua;
+            position: relative;
             font-weight: bold;
             border-radius: 50px;
+            right: 2vw;
+            
 
         }
     }

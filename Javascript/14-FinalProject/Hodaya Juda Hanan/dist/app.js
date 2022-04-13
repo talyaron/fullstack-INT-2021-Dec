@@ -47,7 +47,7 @@ function order() {
     for (var i = 0; i < foodMenu.length; i++) {
         if (foodMenu[i].count != 0) {
             cart.innerHTML +=
-                "<div class=\"orderLine\">" + foodMenu[i].type + " : " + foodMenu[i].price + "\u20AA  <div class=\"circleCount\">" + foodMenu[i].count + "</div> </div>";
+                "<div class=\"orderLine\">" + foodMenu[i].type + " : " + foodMenu[i].price + "\u20AA \n       <div class=\"circleCount\">\u05DB\u05DE\u05D5\u05EA:" + foodMenu[i].count + "</div>  <div class=\"plus\" onclick=\"plusCount(event)\">+</div></div>";
         }
         else {
         }

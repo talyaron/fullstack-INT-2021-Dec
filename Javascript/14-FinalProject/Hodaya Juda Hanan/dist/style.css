@@ -57,9 +57,10 @@ body .cart .orderLine {
   margin: 1%;
 }
 body .cart .circleCount {
-  background-color: aqua;
+  position: relative;
   font-weight: bold;
   border-radius: 50px;
+  right: 2vw;
 }
 body .cart-products p {
   color: azure;
