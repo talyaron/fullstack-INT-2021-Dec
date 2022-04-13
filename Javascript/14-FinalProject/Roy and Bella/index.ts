@@ -5,7 +5,6 @@ interface task {
   heading: HTMLInputElement
   description: HTMLInputElement
   setReminderDate: HTMLInputElement
-  task: HTMLDivElement;
 }
 
 // Add task form
@@ -85,7 +84,6 @@ function handleOpenForm(event) {
     }
   }
 }
-
 
 
 for (let i = 0; i < tasks.length; i++) {
