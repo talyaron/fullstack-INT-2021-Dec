@@ -3,12 +3,7 @@ var tasks = [];
 function handleAddTask(event) {
     event.preventDefault();
     var elements = event.target.elements;
-    var result = {
-        heading: undefined,
-        description: undefined,
-        setReminderDate: undefined,
-        task: undefined
-    };
+    var result = {};
     var heading = elements.heading.value;
     var description = elements.description.value;
     var setReminderDate = elements.setReminderDate.value;
@@ -71,7 +66,6 @@ function handleOpenForm(event) {
 var _loop_1 = function (i) {
     var newReminderDate = tasks[i].setReminderDate;
     var countDownDate = new Date(newReminderDate).getTime();
-    // Run timer every second
     var runTimer = setInterval(showTime, 1000);
     function showTime() {
         var now = new Date().getTime();
@@ -99,10 +93,11 @@ function timeToText(time) {
         return days + "d " + hours + "h " + minutes + "m " + seconds + "s";
     }
     return '0d 0h 0m 0s';
-    function timeToString(time) {
-        if (time < 10) {
-            return '0' + time;
-        }
-        return "" + time;
+}
+// time to string function
+function timeToString(time) {
+    if (time < 10) {
+        return '0' + time;
     }
+    return "" + time;
 }

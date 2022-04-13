@@ -1,4 +1,3 @@
-
 const tasks: Array < task > = [];
 
 // Interface
@@ -8,21 +7,16 @@ interface task {
   setReminderDate: HTMLInputElement
   task: HTMLDivElement;
 }
-  
+
 // Add task form
 function handleAddTask(event: any) {
   event.preventDefault();
 
   const elements = event.target.elements;
-  const result: task = {
-    heading: undefined,
-    description: undefined,
-    setReminderDate: undefined,
-    task: undefined
-  };
+  const result: task = {};
   const heading: HTMLInputElement = elements.heading.value;
-  const description: HTMLInputElement =  elements.description.value;
-  const setReminderDate: HTMLInputElement =  elements.setReminderDate.value;
+  const description: HTMLInputElement = elements.description.value;
+  const setReminderDate: HTMLInputElement = elements.setReminderDate.value;
 
   for (let i = 0; i < elements.length; i++) {
     if (elements[i].name && elements[i].value) {
@@ -68,6 +62,7 @@ function handleOpenForm(event) {
 
   // Form slides up
   addBtn.addEventListener('click', toggleSliderUp);
+
   function toggleSliderUp() {
     slide.classList.contains('slide-up'); {
       slide.classList.add('slide-up')
@@ -93,27 +88,26 @@ function handleOpenForm(event) {
 
 
 
-  for (let i = 0; i < tasks.length; i++) {
-    const newReminderDate: any = tasks[i].setReminderDate;
-    const countDownDate: number = new Date(newReminderDate).getTime();
-    // Run timer every second
-    const runTimer = setInterval(showTime, 1000);
+for (let i = 0; i < tasks.length; i++) {
+  const newReminderDate: any = tasks[i].setReminderDate;
+  const countDownDate: number = new Date(newReminderDate).getTime();
+  const runTimer = setInterval(showTime, 1000);
 
-    function showTime() {
-      const now: number = new Date().getTime();
-      const timeleft = countDownDate - now;
-      const textTime = timeToText(timeleft);
+  function showTime() {
+    const now: number = new Date().getTime();
+    const timeleft = countDownDate - now;
+    const textTime = timeToText(timeleft);
 
-      // Result is output to the specific element
-      document.getElementById("time").innerText = textTime;
+    // Result is output to the specific element
+    document.getElementById("time").innerText = textTime;
 
-      // Display the message when countdown is over
-      if (timeleft < 0) {
-        clearInterval(runTimer);
-        alert(`'it's time to ${heading} `)
-      }
+    // Display the message when countdown is over
+    if (timeleft < 0) {
+      clearInterval(runTimer);
+      alert(`'it's time to ${heading} `)
     }
   }
+}
 
 
 // Calculating the days, hours, minutes and seconds left
@@ -126,11 +120,12 @@ function timeToText(time: number) {
     return `${days}d ${hours}h ${minutes}m ${seconds}s`;
   }
   return '0d 0h 0m 0s';
+}
 
-  function timeToString(time: number): string {
-    if (time < 10) {
-      return '0' + time;
-    }
-    return `${time}`;
+// time to string function
+function timeToString(time: number): string {
+  if (time < 10) {
+    return '0' + time;
   }
+  return `${time}`;
 }
