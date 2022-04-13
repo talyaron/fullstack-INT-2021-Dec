@@ -239,6 +239,7 @@ function presentItem(ev){
                                 <div onclick='handlePurchase(event,"${serial}")'>description: ${product.description}</div>
                                 <div onclick='handlePurchase(event,"${serial}")'>price: ${product.price}</div>
                                 <div onclick='handlePurchase(event,"${serial}")'>currency: ${product.currency}</div>
+                                <button onclick="moveToPayment(event)">shoping basket</button>
                             </div>
                     </div>
                 </div>
@@ -279,7 +280,14 @@ function handlePurchase(ev,serialNo){
     cart.push(productB)
     console.log(cart)
     let html:string = `div class="cart"`
+    localStorage.setItem("cart", JSON.stringify(cart))
 
+}
+function payment(){
+    JSON.parse(localStorage.cart)
+}
+function moveToPayment(){
+    window.location.href = "cliant1.html"
 }
 
 

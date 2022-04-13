@@ -156,7 +156,7 @@ function presentItem(ev) {
         console.log("pImage = " + product.pImage);
         var serial = product.serialNo;
         html +=
-            "<div class=\"page\">\n                <div class=\"wrapper\">\n                    <div class=\"item\">\n                            <img src=" + product.pImage + " width=\"100px\"> \n                            <div class=\"upload\">\n                                <div onclick='handlePurchase(event,\"" + serial + "\")'>name:" + product.name + "</div>  \n                                <div onclick='handlePurchase(event,\"" + serial + "\")'>serialNo:" + product.serialNo + "</div>\n                                <div onclick='handlePurchase(event,\"" + serial + "\")'>description: " + product.description + "</div>\n                                <div onclick='handlePurchase(event,\"" + serial + "\")'>price: " + product.price + "</div>\n                                <div onclick='handlePurchase(event,\"" + serial + "\")'>currency: " + product.currency + "</div>\n                            </div>\n                    </div>\n                </div>\n            </div>";
+            "<div class=\"page\">\n                <div class=\"wrapper\">\n                    <div class=\"item\">\n                            <img src=" + product.pImage + " width=\"100px\"> \n                            <div class=\"upload\">\n                                <div onclick='handlePurchase(event,\"" + serial + "\")'>name:" + product.name + "</div>  \n                                <div onclick='handlePurchase(event,\"" + serial + "\")'>serialNo:" + product.serialNo + "</div>\n                                <div onclick='handlePurchase(event,\"" + serial + "\")'>description: " + product.description + "</div>\n                                <div onclick='handlePurchase(event,\"" + serial + "\")'>price: " + product.price + "</div>\n                                <div onclick='handlePurchase(event,\"" + serial + "\")'>currency: " + product.currency + "</div>\n                                <button onclick=\"moveToPayment(event)\">shoping basket</button>\n                            </div>\n                    </div>\n                </div>\n            </div>";
     });
     //console.log(`html ${html}`)
     products.innerHTML = html;
@@ -187,4 +187,11 @@ function handlePurchase(ev, serialNo) {
     cart.push(productB);
     console.log(cart);
     var html = "div class=\"cart\"";
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+function payment() {
+    JSON.parse(localStorage.cart);
+}
+function moveToPayment() {
+    window.location.href = "cliant1.html";
 }
