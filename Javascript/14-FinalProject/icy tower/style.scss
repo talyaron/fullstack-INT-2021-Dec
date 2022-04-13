@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: aquamarine;
+    position: relative;
+    .rapper{
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+        background-color: aquamarine;
+        position: relative;
+        .floor{
+            height: 50px;
+            width: 100vw;
+            position: absolute;
+            bottom: 0;
+            background-color: gold;
+        }
+        .step{
+            height: 50px;
+            position: absolute;
+            background-color: gold;
+            top: -50px;
+        }
+        .player{
+            width: 80px;
+            position: fixed;
+            bottom: 40px;
+            left: 45vw;
+            transition: all 200ms;
+        }
+    }
+   
+
+}
