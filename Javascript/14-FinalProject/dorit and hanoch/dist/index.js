@@ -37,7 +37,7 @@ function handleNew(ev) {
     window.localStorage.clear();
     console.log(window.localStorage);
     myButton.style.backgroundColor = "gray";
-    root.innerHTML = "<div id=\"newitem\">\n                                <p>Please type details</>\n                                <form action=\"\" onsubmit=\"handleNewProduct(event)\">\n                                    <input type=\"text\" name=\"typeName\" placeholder=\"Enter type of item\">\n                                    <input type=\"text\" name=\"description\" placeholder=\"Enter description of item\">\n                                    <input type=\"number\" name=\"price\" placeholder=\"Enter a price\" >\n                                    <input type=\"text\" name=\"currency\" placeholder=\"Enter currency\">\n                                    <input type=\"file\" name=\"imageFile\" placeholder = \"Please pick the image of the item\">\n                                    <button type=\"submit\">SEND</button> \n                                </form>\n                                <img id=\"output\" width=\"100px\"/>\n                                <button id=\"exitButton\" onclick=\"backToManager(event)\">Back To Manager Page</button>\n                            </div>";
+    root.innerHTML = "<div id=\"newitem\">\n                                <p>Please type details</>\n                                <form action=\"\" onsubmit=\"handleNewProduct(event)\">\n                                    <input type=\"text\" name=\"typeName\" placeholder=\"Enter type of item\">\n                                    <input type=\"text\" name=\"description\" placeholder=\"Enter description of item\">\n                                    <input type=\"number\" name=\"price\" placeholder=\"Enter a price\" >\n                                    <input type=\"text\" name=\"currency\" placeholder=\"Enter currency\">\n                                    <input type=\"URL\" name=\"imageFile\" placeholder = \"Please type the url of the image\">\n                                    <button type=\"submit\">SEND</button> \n                                </form>\n                                <img id=\"output\" width=\"100px\"/>\n                                <button id=\"exitButton\" onclick=\"backToManager(event)\">Back To Manager Page</button>\n                            </div>";
     newitem = document.querySelector("#newitem");
     newitem.style.display = "flex";
     newitem.style.flexDirection = "column";
@@ -54,22 +54,17 @@ function handleNewProduct(ev) {
     var details = ev.target.elements;
     for (var i = 0; i < details.length; i++) {
         if (details[i].name && details[i].value) {
-            if (details[i].name == "imageFile") {
-                result['imageFile'] = details['imageFile'].files[0];
-                console.log(result['imageFile']);
-                console.dir(result['imageFile']);
-                //fileinput = URL.createObjectURL(result["imageFile"])
-                fileinput = result["imageFile"].name;
-                console.log("fileinput1: " + fileinput);
-                fileinput = result["imageFile"]["name"];
-                console.log("fileinput2: " + fileinput);
-                console.log("typeof fileinput" + typeof fileinput);
-            }
-            else {
-                result[details[i].name] = details[i].value;
-            }
+            // if (details[i].name == "imageFile") {
+            //     //result['imageFile'] = details['imageFile'].files[0]
+            //     //fileinput = URL.createObjectURL(result["imageFile"])
+            //     result["imageFile"] = details['imageFile']
+            //     //fileinput=result["imageFile"]["name"]
+            // }
+            // else {
+            result[details[i].name] = details[i].value;
         }
     }
+    console.log("result.imageFile: " + result['imageFile']);
     result["serialNo"] = uID();
     var newProduct = {
         name: result['typeName'],
@@ -79,21 +74,7 @@ function handleNewProduct(ev) {
         currency: result['currency'],
         pImage: result["imageFile"]
     };
-    var reader = new FileReader();
-    reader.readAsDataURL(result["imageFile"]);
-    var base64String = reader.result;
-    var saveProduct = {
-        name: result['typeName'],
-        serialNo: result['serialNo'],
-        description: result['description'],
-        price: result["price"],
-        currency: result['currency'],
-        //pImage : base64String
-        pImage: fileinput
-    };
-    console.dir(productsArr);
-    window.localStorage.setItem(result['serialNo'], JSON.stringify(saveProduct));
-    console.dir(window.localStorage);
+    window.localStorage.setItem(result['serialNo'], JSON.stringify(newProduct));
     productsArr.push(newProduct);
     renderProducts(newProduct);
     //localStorage.setItem("productsArr", JSON.stringify(productsArr))
@@ -104,8 +85,9 @@ function uID() {
 }
 function renderProducts(newProduct) {
     render = document.querySelector("#render");
-    var fileurl = URL.createObjectURL(result["imageFile"]);
-    html += "<div class=\"bigDiv\" >\n            <img src=" + fileurl + " width=\"100px\">\n            <div class=\"productDiv\" >\n                <div>name:" + newProduct.name + "</div>  \n                <div>serialNo:" + newProduct.serialNo + "</div>\n                <div>description: " + newProduct.description + "</div>\n                <div>price: " + newProduct.price + "</div>\n                <div>currency: " + newProduct.currency + "</div>\n                <button class=\"button\">delete</button>\n                <button class=\"button\">update</button>\n            </div>\n        </div>";
+    //let fileurl:URL = URL.createObjectURL(result["imageFile"])
+    html += "<div class=\"bigDiv\" >\n            <img src=" + newProduct.pImage + " width=\"100px\">\n            <div class=\"productDiv\" >\n                <div>name:" + newProduct.name + "</div>  \n                <div>serialNo:" + newProduct.serialNo + "</div>\n                <div>description: " + newProduct.description + "</div>\n                <div>price: " + newProduct.price + "</div>\n                <div>currency: " + newProduct.currency + "</div>\n                <button class=\"button\">delete</button>\n                <button class=\"button\">update</button>\n            </div>\n        </div>";
+    console.log("html: " + html);
     render.innerHTML = html;
     render.style.position = "absolute";
     render.style.top = "250px";
@@ -172,12 +154,13 @@ function presentItem(ev) {
     var html = '';
     productsArrFLS.forEach(function (product) {
         console.log("pImage = " + product.pImage);
+        var serial = product.serialNo;
         html +=
-            "<div class=\"page\">\n                <div class=\"wrapper\">\n                    <div class=\"item\">\n                            <img src=" + product.pImage + " width=\"100px\"> \n                            <div class=\"upload\">\n                                <div>name:" + product.name + "</div>  \n                                <div>serialNo:" + product.serialNo + "</div>\n                                <div>description: " + product.description + "</div>\n                                <div>price: " + product.price + "</div>\n                                <div>currency: " + product.currency + "</div>\n                            </div>\n                    </div>\n                </div>\n            </div>";
+            "<div class=\"page\">\n                <div class=\"wrapper\">\n                    <div class=\"item\">\n                            <img src=" + product.pImage + " width=\"100px\"> \n                            <div class=\"upload\">\n                                <div onclick='handlePurchase(event,\"" + serial + "\")'>name:" + product.name + "</div>  \n                                <div onclick='handlePurchase(event,\"" + serial + "\")'>serialNo:" + product.serialNo + "</div>\n                                <div onclick='handlePurchase(event,\"" + serial + "\")'>description: " + product.description + "</div>\n                                <div onclick='handlePurchase(event,\"" + serial + "\")'>price: " + product.price + "</div>\n                                <div onclick='handlePurchase(event,\"" + serial + "\")'>currency: " + product.currency + "</div>\n                            </div>\n                    </div>\n                </div>\n            </div>";
     });
-    console.log("html " + html);
+    //console.log(`html ${html}`)
     products.innerHTML = html;
-    console.dir(products);
+    //console.dir(products)
     // console.log(storedArr)
     //     let html = '';
     //     storedArr.forEach(product=>{
@@ -195,4 +178,13 @@ function presentItem(ev) {
     //     })
     //     cliant.innerHTML = html;
     //     cliant.style.display ="flex"
+}
+function handlePurchase(ev, serialNo) {
+    console.log("handle purchase");
+    var cart = [];
+    var productn = window.localStorage.getItem("" + serialNo);
+    var productB = JSON.parse(productn);
+    cart.push(productB);
+    console.log(cart);
+    var html = "div class=\"cart\"";
 }
