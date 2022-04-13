@@ -60,7 +60,6 @@ function handleUser(ev) {
 
 function handleNew(ev) {
         window.localStorage.clear()
-        console.log(window.localStorage)
         myButton.style.backgroundColor = "gray"
         root.innerHTML = `<div id="newitem">
                                 <p>Please type details</>
@@ -105,7 +104,6 @@ function handleNewProduct(ev) {
                 result[details[i].name] = details[i].value;
             }
         }
-    console.log(`result.imageFile: ${result['imageFile']}`)    
     result["serialNo"]=uID()
     let newProduct:product= {
         name: result['typeName'],
@@ -130,7 +128,7 @@ function uID(){
 function renderProducts(newProduct){
     render=document.querySelector("#render")
     //let fileurl:URL = URL.createObjectURL(result["imageFile"])
-    html+=`<div class="bigDiv" >
+    html+=`<div class="bigDiv" id="${newProduct.serialNo}">
             <img src=${newProduct.pImage} width="100px">
             <div class="productDiv" >
                 <div>name:${newProduct.name}</div>  
@@ -138,101 +136,45 @@ function renderProducts(newProduct){
                 <div>description: ${newProduct.description}</div>
                 <div>price: ${newProduct.price}</div>
                 <div>currency: ${newProduct.currency}</div>
-                <button class="button">delete</button>
-                <button class="button">update</button>
+                <button class="button" onclick = handleDelete(event,"${newProduct.serialNo}")>Delete product</button>
+                <button class="button" onclick = handleUpdate(event,"${newProduct.serialNo}")>Update product</button>
             </div>
         </div>`
-    console.log(`html: ${html}`)
+    console.log(`html:${html}`)    
     render.innerHTML=html
     render.style.position="absolute"
     render.style.top="250px"
     render.style.left="700px"
 }
 
-
-function renderSavedProducts(){
-        let products:HTMLDivElement=document.querySelector("#products")
-        for (let i:number = 0;i<window.localStorage.length;i++) {
-            stringStorage = window.localStorage.key(i)
-            console.log(`the storage: ${stringStorage}`)
-            const ourString:string = window.localStorage.getItem(`${stringStorage}`)
-            console.log(`ourString:${ourString}`)
-            productsArrFLS.push(JSON.parse(ourString))
-            console.log(productsArrFLS)
-        };
-        let html = '';
-         productsArrFLS.forEach(product=>{
-        //    html+=
-        //     `<div class="bigDiv" >
-        //         <img src=${product.pImage} width="100px">
-        //         <div class="productDiv" >
-        //               <div>name:${product.name}</div>  
-        //               <div>serialNo:${product.serialNo}</div>
-        //               <div>description: ${product.description}</div>
-        //               <div>price: ${product.price}</div>
-        //               <div>currency: ${product.currency}</div>
-        //         </div>
-        //     </div>`
-            html+=
-            `<div class="wrapper">
-                <div class="item">
-                        <img src=${product.pImage} width="100px"> 
-                        <div class="upload">
-                            <div>name:${product.name}</div>  
-                            <div>serialNo:${product.serialNo}</div>
-                            <div>description: ${product.description}</div>
-                            <div>price: ${product.price}</div>
-                            <div>currency: ${product.currency}</div>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-            </div>`        
-
-        })
-    
-        products.innerHTML = html;
-        // render.style.position="absolute"
-        // render.style.top="250px"
-        // render.style.left="700px"
-        //render.style.border= "1px solid black"
-}
-
-
 function backToManager(ev){
     //saveNewProducts()
-    console.log(`render before remove  ${render}`)
+    //console.log(`render before remove  ${render}`)
     alert("Products added")
     output.remove()
     newitem.remove()
     render.remove()
-    console.log(`render after remove  ${render}`)
+    //console.log(`render after remove  ${render}`)
     myButton.style.backgroundColor = "rgb(172, 143, 161)"
     window.location.href = "index1.html"
 }
 
 function presentItem(ev){
      
-    // const cliant:any = document.querySelector("#cliant")
-    // const storedArr:Array<string> = JSON.parse(localStorage.getItem("productsArr"))
-    //console.log(storedArr)
-    console.log("we are in presentItem")
     let products:HTMLDivElement=document.querySelector("#products")
         for (let i:number = 0;i<window.localStorage.length;i++) {
             stringStorage = window.localStorage.key(i)
             const ourString:string = window.localStorage.getItem(`${stringStorage}`)
-            console.log(`ourString:${ourString}`)
             productsArrFLS.push(JSON.parse(ourString))
-            console.log(` productsArrFLS ${productsArrFLS}`)
         };
         let html:string = '';
         productsArrFLS.forEach(product=>{
-            console.log(`pImage = ${product.pImage}`)
             const serial:string = product.serialNo
             html+=
             `<div class="page">
                 <div class="wrapper">
                     <div class="item">
-                            <img src=${product.pImage} width="100px"> 
+                            <img src=${product.pImage} width="100px" onclick='handlePurchase(event,"${serial}")> 
                             <div class="upload">
                                 <div onclick='handlePurchase(event,"${serial}")'>name:${product.name}</div>  
                                 <div onclick='handlePurchase(event,"${serial}")'>serialNo:${product.serialNo}</div>
@@ -244,31 +186,9 @@ function presentItem(ev){
                 </div>
             </div>`
         })
-        //console.log(`html ${html}`)
+        console.log(`html ${html}`)
         products.innerHTML = html;
-        //console.dir(products)
-
-    // console.log(storedArr)
-    //     let html = '';
-    //     storedArr.forEach(product=>{
-    //        html+=
-    //         `<div class="display" >
-    //             <img src=${product.pImage} width="100px">
-    //             <div class="test2" >
-    //                   <div>name:${product.name}</div>  
-    //                   <div>serialNo:${product.serialNo}</div>
-    //                   <div>description: ${product.description}</div>
-    //                   <div>price: ${product.price}</div>
-    //                   <div>currency: ${product.currency}</div>
-                     
-    //             </div>
-    //         </div>`
-    //     })
-        
-    //     cliant.innerHTML = html;
-    //     cliant.style.display ="flex"
-        
-        
+         
 }
 function handlePurchase(ev,serialNo){
     console.log("handle purchase")
@@ -279,6 +199,56 @@ function handlePurchase(ev,serialNo){
     cart.push(productB)
     console.log(cart)
     let html:string = `div class="cart"`
+
+}
+
+function handleUpdate(ev,serialNo){
+    console.log("handleUpdate")
+    console.log(serialNo)
+    const Prodstring:string = localStorage.getItem(serialNo);
+    let prodToDel:Array<product> = JSON.parse(Prodstring)
+}
+
+function handleDelete(ev,serialNo){
+    console.log(serialNo)
+    localStorage.removeItem(serialNo)
+    let toDel=document.querySelector(`#${serialNo}`)
+    toDel.remove()
+
+}
+
+function deleteItems(ev){
+    let products:HTMLDivElement=document.querySelector("#render")
+    for (let i:number = 0;i<window.localStorage.length;i++) {
+        stringStorage = window.localStorage.key(i)
+        const ourString:string = window.localStorage.getItem(`${stringStorage}`)
+        productsArrFLS.push(JSON.parse(ourString))
+    };
+    let html:string = '';
+    productsArrFLS.forEach(product=>{
+        const serial:string = product.serialNo
+        html+=
+        `<div class="page" id="${product.serialNo}">
+            <div class="wrapper">
+                <div class="item">
+                        <img src=${product.pImage} width="100px")> 
+                        <div class="upload">
+                            <div>name:${product.name}</div>  
+                            <div>serialNo:${product.serialNo}</div>
+                            <div>description: ${product.description}</div>
+                            <divprice: ${product.price}</div>
+                            <div>currency: ${product.currency}</div>
+                            <button class="button" onclick = handleDelete(event,"${Product.serialNo}")>Delete product</button>
+                        </div>
+                </div>
+            </div>
+        </div>`
+    })
+    console.log(`html ${html}`)
+    render.innerHTML = html;
+}
+
+function updateItems(ev){
 
 }
 
