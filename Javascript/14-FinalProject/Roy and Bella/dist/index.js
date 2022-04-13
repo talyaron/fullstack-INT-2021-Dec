@@ -64,3 +64,7 @@ function handleOpenForm(event) {
         }
     }
 }
+function calculate() {
+    Math.round(Math.random() * (100 - 1) + 1);
+    console.log(Math.round(Math.random() * (100 - 1) + 1));
+}

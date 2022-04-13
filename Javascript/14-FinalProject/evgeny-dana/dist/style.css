@@ -20,8 +20,8 @@ body .Server_wrapper #root {
 }
 body .Server_wrapper #root .test {
   background-color: purple;
-  height: 100%;
-  width: 90%;
+  height: 10rem;
+  width: 40rem;
   display: flex;
   border-radius: 2rem;
   box-shadow: 2px 2px 5px rgba(67, 6, 93, 0.721);
@@ -30,9 +30,18 @@ body .Server_wrapper #root .test .test2 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  justify-content: center;
   align-items: center;
   font-size: larger;
+  position: relative;
+}
+body .Server_wrapper #root .test .test2 #stock_Text {
+  position: absolute;
+  top: 4em;
+}
+body .Server_wrapper #root .test .test2 .NumInput {
+  position: absolute;
+  top: 9em;
+  width: 4rem;
 }
 body .Server_wrapper #root .updateProduct {
   display: none;

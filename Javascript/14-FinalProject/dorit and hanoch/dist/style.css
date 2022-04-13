@@ -62,3 +62,70 @@ button {
 button:hover {
   cursor: pointer;
 }
+
+body {
+  height: 100vh;
+}
+body .Server_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+body .Server_wrapper .input_fields {
+  background-color: aqua;
+  height: 10rem;
+  width: 20rem;
+}
+body .Server_wrapper #root {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+body .Server_wrapper #root .bigDiv {
+  background-color: #e4cfe4;
+  height: 100%;
+  width: 90%;
+  display: flex;
+  border-radius: 2rem;
+}
+body .Server_wrapper #root .bigDiv .bodyDiv {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+}
+body .Server_wrapper #root img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem 0 0 2rem;
+}
+body .page {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+body .page .wrapper {
+  margin-top: 65px;
+  margin-left: 5px;
+  column-width: 200px;
+  -webkit-column-break-inside: avoid;
+}
+body .page .wrapper .item {
+  width: 200px;
+  -webkit-column-break-inside: avoid;
+  position: relative;
+  cursor: pointer;
+}
+body .page .wrapper .item img {
+  width: 100%;
+  border-radius: 30px;
+  border: 1px solid black;
+}
+body .page .wrapper .item .upload {
+  background-color: #baf5f5;
+  border: 1px solid black;
+}

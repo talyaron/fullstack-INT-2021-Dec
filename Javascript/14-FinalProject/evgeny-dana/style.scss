@@ -19,8 +19,8 @@ body{height: 100vh ;
             gap: 50px;
             .test{
                 background-color: purple;
-                height: 100%;
-                width: 90%;
+                height: 10rem;
+                width: 40rem;
                 display: flex;
                 border-radius: 2rem;
                 box-shadow: 2px 2px 5px  rgba(67, 6, 93, 0.721);
@@ -28,9 +28,19 @@ body{height: 100vh ;
                     display: flex;
                     flex-direction: column;
                     width: 100%;
-                    justify-content: center;
+                    
                     align-items: center;
                     font-size: larger;
+                    position: relative;
+                    #stock_Text{
+                        position: absolute;
+                        top: 4em;
+                    }
+                    .NumInput{
+                        position: absolute;
+                        top: 9em;
+                        width: 4rem;
+                    }
                 }
             }
             .updateProduct{

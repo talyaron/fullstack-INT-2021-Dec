@@ -4,7 +4,7 @@ interface users {
     password: string,
     address?: string,
     telephon?: number,
-    email?: string
+    email?: URL
 }
 interface product {
     name: string,
@@ -12,7 +12,15 @@ interface product {
     description: string,
     price: number,
     currency: string,
-    pImage?:string,
+    pImage?:URL
+}
+interface productR{
+    name: string,
+    serialNo: string,
+    description: string,
+    price: number,
+    currency: string,
+    pImage?:URL
 }
 let result = {};
 let stringStorage:string = ""
@@ -25,7 +33,7 @@ let contOrBack:HTMLDivElement=document.querySelector("#contOrBack")
 let newitem:HTMLElement=document.querySelector("#newitem")
 let firstTime:boolean=true
 let ans:boolean=false
-let fileinput:string = ""
+let fileinput:Blob = new Blob
 let html:string = ""
 let render:HTMLDivElement=document.querySelector("#render")
 const myButton: HTMLElement = document.querySelector("#button2")
@@ -46,7 +54,7 @@ function handleUser(ev) {
     if (result['name'] == manager['name'] && result['pass'] == manager['password']) {
         window.location.href = "index1.html"
     }else{
-        window.location.href="client.html"
+        window.location.href = "client.html"
     }
 } 
 
@@ -61,7 +69,7 @@ function handleNew(ev) {
                                     <input type="text" name="description" placeholder="Enter description of item">
                                     <input type="number" name="price" placeholder="Enter a price" >
                                     <input type="text" name="currency" placeholder="Enter currency">
-                                    <input type="file" name="imageFile" placeholder = "Please pick the image of the item">
+                                    <input type="URL" name="imageFile" placeholder = "Please type the url of the image">
                                     <button type="submit">SEND</button> 
                                 </form>
                                 <img id="output" width="100px"/>
@@ -87,15 +95,17 @@ function handleNewProduct(ev) {
     for (let i = 0; i < details.length; i++) {
         if (details[i].name && details[i].value) {
             
-            if (details[i].name == "imageFile") {
-                result['imageFile'] = details['imageFile'].files[0]
-                fileinput = URL.createObjectURL(result["imageFile"])
-            }
-            else {
+            // if (details[i].name == "imageFile") {
+            //     //result['imageFile'] = details['imageFile'].files[0]
+            //     //fileinput = URL.createObjectURL(result["imageFile"])
+            //     result["imageFile"] = details['imageFile']
+            //     //fileinput=result["imageFile"]["name"]
+            // }
+           // else {
                 result[details[i].name] = details[i].value;
             }
         }
-    }
+    console.log(`result.imageFile: ${result['imageFile']}`)    
     result["serialNo"]=uID()
     let newProduct:product= {
         name: result['typeName'],
@@ -103,18 +113,13 @@ function handleNewProduct(ev) {
         description: result['description'],
         price: result["price"],
         currency: result['currency'],
-        pImage : fileinput
+        pImage : result["imageFile"]
     }
-   
-    console.dir(productsArr)
     window.localStorage.setItem(result['serialNo'], JSON.stringify(newProduct));
-    console.dir(window.localStorage)
     productsArr.push(newProduct)
     renderProducts(newProduct)
+    //localStorage.setItem("productsArr", JSON.stringify(productsArr))
     ev.target.reset()
-    localStorage.setItem("productsArr", JSON.stringify(productsArr))
-    ev.target.reset()
-    renderProducts()
 
 }
 function uID(){
@@ -124,6 +129,7 @@ function uID(){
 
 function renderProducts(newProduct){
     render=document.querySelector("#render")
+    //let fileurl:URL = URL.createObjectURL(result["imageFile"])
     html+=`<div class="bigDiv" >
             <img src=${newProduct.pImage} width="100px">
             <div class="productDiv" >
@@ -136,6 +142,7 @@ function renderProducts(newProduct){
                 <button class="button">update</button>
             </div>
         </div>`
+    console.log(`html: ${html}`)
     render.innerHTML=html
     render.style.position="absolute"
     render.style.top="250px"
@@ -203,60 +210,76 @@ function backToManager(ev){
     window.location.href = "index1.html"
 }
 
-function presentItem(){
+function presentItem(ev){
      
-    const cliant:any = document.querySelector("#cliant")
-    const storedArr = JSON.parse(localStorage.getItem("productsArr"))
+    // const cliant:any = document.querySelector("#cliant")
+    // const storedArr:Array<string> = JSON.parse(localStorage.getItem("productsArr"))
+    //console.log(storedArr)
+    console.log("we are in presentItem")
     let products:HTMLDivElement=document.querySelector("#products")
         for (let i:number = 0;i<window.localStorage.length;i++) {
             stringStorage = window.localStorage.key(i)
-            console.log(`the storage: ${stringStorage}`)
             const ourString:string = window.localStorage.getItem(`${stringStorage}`)
             console.log(`ourString:${ourString}`)
             productsArrFLS.push(JSON.parse(ourString))
-            console.log(productsArrFLS)
+            console.log(` productsArrFLS ${productsArrFLS}`)
         };
         let html:string = '';
         productsArrFLS.forEach(product=>{
-            console.log(product.pImage)
+            console.log(`pImage = ${product.pImage}`)
+            const serial:string = product.serialNo
             html+=
-            `<div class="wrapper">
-                <div class="item">
-                        <img src=${product.pImage} width="100px"> 
-                        <div class="upload">
-                            <div>name:${product.name}</div>  
-                            <div>serialNo:${product.serialNo}</div>
-                            <div>description: ${product.description}</div>
-                            <div>price: ${product.price}</div>
-                            <div>currency: ${product.currency}</div>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            `<div class="page">
+                <div class="wrapper">
+                    <div class="item">
+                            <img src=${product.pImage} width="100px"> 
+                            <div class="upload">
+                                <div onclick='handlePurchase(event,"${serial}")'>name:${product.name}</div>  
+                                <div onclick='handlePurchase(event,"${serial}")'>serialNo:${product.serialNo}</div>
+                                <div onclick='handlePurchase(event,"${serial}")'>description: ${product.description}</div>
+                                <div onclick='handlePurchase(event,"${serial}")'>price: ${product.price}</div>
+                                <div onclick='handlePurchase(event,"${serial}")'>currency: ${product.currency}</div>
+                            </div>
                     </div>
-            </div>`
-        })
-        products.innerHTML = html;
-
-    console.log(storedArr)
-        let html = '';
-        storedArr.forEach(product=>{
-           html+=
-            `<div class="display" >
-                <img src=${product.pImage} width="100px">
-                <div class="test2" >
-                      <div>name:${product.name}</div>  
-                      <div>serialNo:${product.serialNo}</div>
-                      <div>description: ${product.description}</div>
-                      <div>price: ${product.price}</div>
-                      <div>currency: ${product.currency}</div>
-                     
                 </div>
             </div>`
         })
+        //console.log(`html ${html}`)
+        products.innerHTML = html;
+        //console.dir(products)
+
+    // console.log(storedArr)
+    //     let html = '';
+    //     storedArr.forEach(product=>{
+    //        html+=
+    //         `<div class="display" >
+    //             <img src=${product.pImage} width="100px">
+    //             <div class="test2" >
+    //                   <div>name:${product.name}</div>  
+    //                   <div>serialNo:${product.serialNo}</div>
+    //                   <div>description: ${product.description}</div>
+    //                   <div>price: ${product.price}</div>
+    //                   <div>currency: ${product.currency}</div>
+                     
+    //             </div>
+    //         </div>`
+    //     })
         
-        cliant.innerHTML = html;
-        cliant.style.display ="flex"
+    //     cliant.innerHTML = html;
+    //     cliant.style.display ="flex"
         
         
+}
+function handlePurchase(ev,serialNo){
+    console.log("handle purchase")
+  
+    let cart:Array<product>=[]
+    let productn:string = window.localStorage.getItem(`${serialNo}`)
+    let productB:product = JSON.parse(productn)
+    cart.push(productB)
+    console.log(cart)
+    let html:string = `div class="cart"`
+
 }
 
 
