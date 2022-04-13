@@ -1,4 +1,5 @@
 var root = document.querySelector('.root');
+////Functions
 function handleNote(ev) {
     ev.preventDefault();
     var elements = ev.target.elements;

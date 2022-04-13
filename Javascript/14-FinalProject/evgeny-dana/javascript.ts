@@ -1,4 +1,3 @@
-
 //this gives a unique id
 const uid = function () {
   return Date.now().toString(36) + Math.random().toString(36).substr(2);
@@ -18,7 +17,6 @@ const products: Array<Product> = [];
 //////////////////////////////////////////////////////////////////////////////////////
 // this handles the button for adding a product
 const handleAddProduct = (ev: any) => {
-
   ev.preventDefault();
 
   const image = ev.target.elements.image.value;
@@ -28,22 +26,20 @@ const handleAddProduct = (ev: any) => {
   const id = uid();
   // const imgSrc = URL.createObjectURL(image);
 
-  const item: Product = { id, image,  name, price };
+  const item: Product = { id, image, name, price };
   products.push(item);
 
   renderProducts();
-  ev.target.reset()
-
+  ev.target.reset();
 };
 ////////////////////////////////////////////////////////////////////////////
-//this renders products 
+//this renders products
 function renderProducts() {
   const root = document.querySelector("#root");
 
-  let html = '';
-  products.forEach(product => {
-    html +=
-      `<div class="megaTest" >
+  let html = "";
+  products.forEach((product) => {
+    html += `<div class="megaTest" id="${product.id}">
       <div class="test" >
       
             <img src=${product.image}>
@@ -56,38 +52,36 @@ function renderProducts() {
                   <input onchange="outOfStockFunc(event)" class="NumInput" name="stockNum" type="number" value="1" min="0" > 
             </div>
         </div>
-        <form class="updateProduct" onsubmit="handleUpdateProduct(event, '${product.id}')">
-        <input type="text" name="productName" value="${product.name}">
-        <input type="text" name="newUrl" placeholder="NEW Item Image url">
-        <input type="text" name="NewPrice" value="${product.price}">
-        <button type="submit">send</button>
+        <form class="updateProduct" id="update-${product.id}" onsubmit="handleUpdateProduct(event, '${product.id}')" style="display:none">
+          <input type="text" name="productName" value="${product.name}">
+          <input type="text" name="newUrl" placeholder="NEW Item Image url">
+          <input type="text" name="NewPrice" value="${product.price}">
+          <button type="submit">send</button>
     </form>
-     </div>`
-  })
+     </div>`;
+  });
 
   root.innerHTML = html;
 }
 ////////////////////////////////////////////////////////////////////////
 // this removes the product card
 function handleRemoveProduct(productId: string) {
-  const index = products.findIndex(object => {
+  const index = products.findIndex((object) => {
     return object.id === productId;
-
   });
   if (index !== -1) products.splice(index, 1);
 
-  console.log(products)
-  renderProducts()
+  console.log(products);
+  renderProducts();
 }
 ///////////////////////////////////////////////////////////////////////
 // this updates the product card
 function handleUpdateProduct(ev: any, productId: string) {
   ev.preventDefault();
-  console.log(productId)
-  
-  const index = products.findIndex(object =>object.id === productId);
-  
-  
+  console.log(productId);
+
+  const index = products.findIndex((object) => object.id === productId);
+
   if (index !== -1) {
     products[index].name = ev.target.elements.productName.value;
   }
@@ -97,47 +91,40 @@ function handleUpdateProduct(ev: any, productId: string) {
   if (index !== -1) {
     products[index].image = ev.target.elements.newUrl.value;
   }
-  
-  
-  renderProducts()
+
+  renderProducts();
 }
 //////////////////////////////////////////////////////////////////////////////
-function showUpdateMenu(productId){
+function showUpdateMenu(productId) {
+  try {
+    const updatePanel: HTMLElement = document.querySelector(
+      `#update-${productId}`
+    );
+
   
-  const index = products.findIndex(object =>object.id === productId);
-   const updatePanel:HTMLElement =document.querySelector(".updateProduct")
-   
-  // if(updatePanel.style.display === "none"){
-  
-  //   updatePanel.style.display = "block"
-  // } else {
-  //   updatePanel.style.display = "none"
-  // }
-  console.log(productId)
-  if (productId) {
-     updatePanel.style.display === "none"
-    return updatePanel.style.display = "block"
-  }else {
+    //toggle update form
+    if (updatePanel) {
+      if (updatePanel.style.display === "none") {
+        updatePanel.style.display = "block"
+      }else {
         updatePanel.style.display = "none"
-
+      }
+    } else {
+      throw new Error (`Couldnt find update form with id "update-${productId}"`)
+    }
+  } catch (err) {
+    console.error(err);
   }
-  renderProducts()
-  products.forEach(showUpdateMenu)
 }
-
 
 //////////////////////////////////////////////////////////////////////////////////////
 
 function outOfStockFunc(event) {
- const stock = document.querySelector(".test")
+  const stock = document.querySelector(".test");
   const inStock = event.target.elements.stockNum.value;
   console.log(2);
- if( inStock == "0" ){
-
-     return stock.innerHTML + '<h2>out of stock</h2>'
+  if (inStock == "0") {
+    return stock.innerHTML + "<h2>out of stock</h2>";
   } else {
-    
   }
-  
- 
 }
