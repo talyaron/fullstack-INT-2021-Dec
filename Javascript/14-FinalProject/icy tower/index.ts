@@ -50,6 +50,7 @@ function createStep(){
 }
 
 function handleClick(ev){
+
     player.style.left = `${ev.x}px`
     player.style.top = `${ev.y}px`
    
