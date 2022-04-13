@@ -14,7 +14,6 @@ calculatorButtons.forEach(function (button) {
         ev.stopPropagation();
         console.log(ev.target.type);
         if (ev.target.className !== 'wrapper' && ev.target.className !== 'calculatorButtons' && ev.target.nodeName !== 'BODY') {
-            //if (ev.target.nodeName !== 'BODY') {
             console.log("clicked"); //Any button that been clicked pop a `clicked` messege
             console.log(ev);
             console.dir(ev.target);
@@ -38,11 +37,9 @@ calculatorButtons.forEach(function (button) {
                         break;
                     }
                     catch (_a) {
-                        display.innerText = 'NAN';
+                        display.innerText = '';
                         break;
                     }
-                case 'NAN':
-                    display.innerText = '';
                 default:
                     display.innerText += ev.target.innerText; //any button press making the number pop at the Display
             }
