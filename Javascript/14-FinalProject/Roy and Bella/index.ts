@@ -6,7 +6,10 @@ interface task {
   description: HTMLInputElement
   setReminderDate: HTMLInputElement
   task: HTMLDivElement;
+
 }
+
+
 
 // Add task form
 function handleAddTask(event: any) {
@@ -17,25 +20,28 @@ function handleAddTask(event: any) {
   const heading: HTMLInputElement = elements.heading.value;
   const description: HTMLInputElement = elements.description.value;
   const setReminderDate: HTMLInputElement = elements.setReminderDate.value;
+  
 
   for (let i = 0; i < elements.length; i++) {
     if (elements[i].name && elements[i].value) {
       result[elements[i].name] = elements[i].value;
     }
   }
-
   // Create new task
   const taskContainer: any = document.querySelector('.tasksContainer');
   let task = document.createElement('div');
   task.classList.add('task');
-
+  task.setAttribute('id',`${generateid()}`);
+  console.log(task)
+  timerStarter(heading, setReminderDate);
   // Append a new task to the tasks container
   task.innerHTML = `<div class='heading'>${heading}</div>
     <div class='description'>${description}</div>
-    <div class='setReminderDate'>Scheduled to: ${setReminderDate}</div> 
+    <div class='setReminderDate'>${setReminderDate}</div>
+    <div class="time"></div> 
    <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>
-   <div id="time"></div>`;
-
+   `;
+  
   taskContainer.append(task);
   tasks.push(result);
   event.target.reset()
@@ -87,9 +93,9 @@ function handleOpenForm(event) {
 }
 
 
+function timerStarter(heading, setReminderDate){
 
-for (let i = 0; i < tasks.length; i++) {
-  const newReminderDate: any = tasks[i].setReminderDate;
+  const newReminderDate: any = setReminderDate;
   const countDownDate: number = new Date(newReminderDate).getTime();
   const runTimer = setInterval(showTime, 1000);
 
@@ -97,12 +103,10 @@ for (let i = 0; i < tasks.length; i++) {
     const now: number = new Date().getTime();
     const timeleft = countDownDate - now;
     const textTime = timeToText(timeleft);
-
     // Result is output to the specific element
-    document.getElementById("time").innerText = textTime;
-
+    document.querySelector(".time").innerHTML = textTime;
     // Display the message when countdown is over
-    if (timeleft < 0) {
+    if (timeleft <= 0) {
       clearInterval(runTimer);
       alert(`'it's time to ${heading} `)
     }
@@ -129,3 +133,12 @@ function timeToString(time: number): string {
   }
   return `${time}`;
 }
+//set uniqid to the array's objects
+function generateid() {
+  let id = () => {
+    return Math.floor((1 + Math.random()) * 10000)
+        .toString()
+        
+  }
+    return id();
+  }
