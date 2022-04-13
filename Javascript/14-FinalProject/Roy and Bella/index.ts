@@ -1,12 +1,25 @@
 
-const tasks: Array < object > = [];
+const tasks: Array < task > = [];
 
+// Interface
+interface task {
+  heading: HTMLInputElement
+  description: HTMLInputElement
+  setReminderDate: HTMLInputElement
+  task: HTMLDivElement;
+}
+  
 // Add task form
 function handleAddTask(event: any) {
   event.preventDefault();
 
   const elements = event.target.elements;
-  const result = {};
+  const result: task = {
+    heading: undefined,
+    description: undefined,
+    setReminderDate: undefined,
+    task: undefined
+  };
   const heading: HTMLInputElement = elements.heading.value;
   const description: HTMLInputElement =  elements.description.value;
   const setReminderDate: HTMLInputElement =  elements.setReminderDate.value;
@@ -26,13 +39,12 @@ function handleAddTask(event: any) {
   task.innerHTML = `<div class='heading'>${heading}</div>
     <div class='description'>${description}</div>
     <div class='setReminderDate'>Scheduled to: ${setReminderDate}</div> 
-   <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>`;
+   <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>
+   <div id="time"></div>`;
+
   taskContainer.append(task);
-
-  // Push a new task to the tasks array ("data base").
   tasks.push(result);
-  console.log(tasks);
-
+  event.target.reset()
 }
 
 // Remove tasks.
@@ -76,5 +88,49 @@ function handleOpenForm(event) {
     slide.classList.contains('slide'); {
       slide.classList.remove('slide-up');
     }
+  }
+}
+
+
+
+  for (let i = 0; i < tasks.length; i++) {
+    const newReminderDate: any = tasks[i].setReminderDate;
+    const countDownDate: number = new Date(newReminderDate).getTime();
+    // Run timer every second
+    const runTimer = setInterval(showTime, 1000);
+
+    function showTime() {
+      const now: number = new Date().getTime();
+      const timeleft = countDownDate - now;
+      const textTime = timeToText(timeleft);
+
+      // Result is output to the specific element
+      document.getElementById("time").innerText = textTime;
+
+      // Display the message when countdown is over
+      if (timeleft < 0) {
+        clearInterval(runTimer);
+        alert(`'it's time to ${heading} `)
+      }
+    }
+  }
+
+
+// Calculating the days, hours, minutes and seconds left
+function timeToText(time: number) {
+  if (time >= 0) {
+    const days: string = timeToString(Math.floor(time / (1000 * 60 * 60 * 24)));
+    const hours = timeToString(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+    const minutes = timeToString(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
+    const seconds = timeToString(Math.floor((time % (1000 * 60)) / 1000));
+    return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+  return '0d 0h 0m 0s';
+
+  function timeToString(time: number): string {
+    if (time < 10) {
+      return '0' + time;
+    }
+    return `${time}`;
   }
 }
