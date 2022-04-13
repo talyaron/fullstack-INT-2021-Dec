@@ -46,7 +46,7 @@ function refreshPro() {
     <div class="cube">
     ${foodMenu[i].type}
     <img src="${foodMenu[i].img}" alt="">
-    ${foodMenu[i].price} ₪
+   ₪ ${foodMenu[i].price} 
     <button id="${i}" onclick="clickAdd(event)">פנק אותי</button>
     </div>
 
@@ -77,8 +77,8 @@ function order() {
 
     if (foodMenu[i].count != 0) {
       cart.innerHTML += 
-       `<div class="orderLine">${foodMenu[i].type} : ${foodMenu[i].price}₪ 
-       <div class="circleCount">כמות:${foodMenu[i].count}</div>  <div class="plus" onclick="plusCount(event)">+</div></div>`
+       `<div class="orderLine">₪${foodMenu[i].type}: ${foodMenu[i].price}
+       <div class="circleCount">כמות</div> <div class="minus" id="${i}" onclick="minusCount(event)">-</div>${foodMenu[i].count}  <div class="plus" id="${i}" onclick="plusCount(event)">+</div></div>`
 
     }
     else {
@@ -93,5 +93,24 @@ function totalSum() {
   for (let i = 0; i < foodMenu.length; i++) {
     totalPrice += foodMenu[i].price * foodMenu[i].count
   }
-  totalDiv.innerText = `סה"כ : ${totalPrice}₪`
+  totalDiv.innerText = `₪סה"כ : ${totalPrice}`
+}
+
+function minusCount(ev){
+  console.log(ev)
+  foodMenu[ev.target.attributes.id.value].count -= 1
+  console.log(foodMenu)
+  cart.innerText = ""
+  totalPrice = 0;
+  order();
+  totalSum();
+}
+function plusCount(ev){
+  console.log(ev)
+  foodMenu[ev.target.attributes.id.value].count += 1
+  console.log(foodMenu)
+  cart.innerText = ""
+  totalPrice = 0;
+  order();
+  totalSum();
 }

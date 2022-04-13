@@ -58,7 +58,7 @@ body {
 
 
     .cart {
-
+        
         background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.697) 100%);
         border-radius: 2vh;
         display: flex;
@@ -66,15 +66,33 @@ body {
         border: 1px black solid;
         justify-content: space-between;
 
-        .orderLine {
+        .orderLine { 
             display: flex;
             flex-direction: row-reverse;
-
             margin: 1%;
+            justify-content: flex-start;
+            gap: 1vw;
+            .plus{
+                width: 18px;
+                height: 18px;
+                background-color: white;
+                color: black;
+                border: 1px rgb(165, 140, 140) solid;
+                border-radius: 50%;
+            }
+            .minus{
+                width: 18px;
+                height: 18px;
+                background-color: white;
+                color: black;
+                border: 1px rgb(117, 101, 101) solid;
+                border-radius: 50%;
+
+            }
         }
 
         .circleCount {
-            position: relative;
+            
             font-weight: bold;
             border-radius: 50px;
             right: 2vw;
