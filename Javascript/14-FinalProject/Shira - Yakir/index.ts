@@ -7,6 +7,7 @@ const formSignUpMsg: HTMLElement = document.querySelector("#signUpMsg");
 const formLoginMsg: HTMLElement = document.querySelector("#loginMsg");
 
 let tasksArray = []; // arays that contain the tasks
+let Category = [];  // arays that contain the Categories
 
 //create task object
 function task(title: String, content?: String, dueDate?: Date, status?: boolean, category?: String) {
@@ -17,6 +18,7 @@ function task(title: String, content?: String, dueDate?: Date, status?: boolean,
     this.category = category;
 };
 
+//    SignUp
 function handleSignUp(event) {
     event.preventDefault();
     if (formPassword.value === formconfirmPassword.value) {
@@ -30,6 +32,7 @@ function handleSignUp(event) {
     }
 }
 
+//    Login
 function handleLogin(ev) {
     ev.preventDefault();
     const LoginUserName: HTMLInputElement =
@@ -50,11 +53,13 @@ function handleLogin(ev) {
     }
 }
 
+// help function for Login
 function checkLogin(check_username: String, check_password: string): Boolean {
     if (check_username === userName && check_password === password) return true;
     else return false;
 }
 
+//    tasks Page header Date VIEW
 function tasksPage() {
     let today = new Date();
     let todayDisplay = `${today.getDate()}/${today.getMonth() + 1}/${today.getFullYear()}`;
@@ -66,7 +71,7 @@ function tasksPage() {
 
 tasksPage()
 
-
+// create NEW task in the array then display it on HTML
 function addTask(event) {
 
     // pass the arguments from the event to the object constractor 

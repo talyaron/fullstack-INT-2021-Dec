@@ -6,6 +6,7 @@ var formconfirmPassword = document.querySelector("#repeatPassword");
 var formSignUpMsg = document.querySelector("#signUpMsg");
 var formLoginMsg = document.querySelector("#loginMsg");
 var tasksArray = []; // arays that contain the tasks
+var Category = []; // arays that contain the Categories
 //create task object
 function task(title, content, dueDate, status, category) {
     this.title = title;
@@ -15,6 +16,7 @@ function task(title, content, dueDate, status, category) {
     this.category = category;
 }
 ;
+//    SignUp
 function handleSignUp(event) {
     event.preventDefault();
     if (formPassword.value === formconfirmPassword.value) {
@@ -28,6 +30,7 @@ function handleSignUp(event) {
         formSignUpMsg.innerHTML = "confirm password dosent match";
     }
 }
+//    Login
 function handleLogin(ev) {
     ev.preventDefault();
     var LoginUserName = document.querySelector("#LoginUserName");
@@ -44,12 +47,14 @@ function handleLogin(ev) {
         formLoginMsg.innerHTML = "Login Failed";
     }
 }
+// help function for Login
 function checkLogin(check_username, check_password) {
     if (check_username === userName && check_password === password)
         return true;
     else
         return false;
 }
+//    tasks Page header Date VIEW
 function tasksPage() {
     var today = new Date();
     var todayDisplay = today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear();
@@ -57,6 +62,7 @@ function tasksPage() {
     todayDate.innerHTML = "" + todayDisplay;
 }
 tasksPage();
+// create NEW task in the array then display it on HTML
 function addTask(event) {
     // pass the arguments from the event to the object constractor 
     // and/or use some demo data for development and testing untile all set
