@@ -5,8 +5,6 @@ interface task {
   heading: HTMLInputElement
   description: HTMLInputElement
   setReminderDate: HTMLInputElement
-  task: HTMLDivElement;
-
 }
 
 
@@ -91,6 +89,7 @@ function handleOpenForm(event) {
     }
   }
 }
+
 
 
 function timerStarter(heading, setReminderDate){
