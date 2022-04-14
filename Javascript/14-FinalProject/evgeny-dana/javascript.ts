@@ -12,7 +12,7 @@ interface Product {
 }
 ////////////////////////////////////////////////////////////////////////////////////
 //this is a temporary array for storing the new product cards
-const products: Array<Product> = [];
+let products: Array<Product> = [];
 
 //////////////////////////////////////////////////////////////////////////////////////
 // this handles the button for adding a product
@@ -29,9 +29,20 @@ const handleAddProduct = (ev: any) => {
   const item: Product = { id, image, name, price };
   products.push(item);
 
+
+ localStorage.setItem('products', JSON.stringify(products))
   renderProducts();
   ev.target.reset();
 };
+function handleLoad(){
+  const stringProducts = localStorage.getItem('products')
+  if (stringProducts){
+    products = JSON.parse(stringProducts)
+    console.log(products)
+    renderProducts();
+  }
+
+} 
 ////////////////////////////////////////////////////////////////////////////
 //this renders products
 function renderProducts() {
@@ -40,8 +51,8 @@ function renderProducts() {
   let html = "";
   products.forEach((product) => {
     html += `<div class="megaTest" id="${product.id}">
-      <div class="test" >
-      
+      <div class="test"  >
+              <div class="outOfStuckText" id="noStock-${product.id}" style="display:none"><h2>out of stock</h2></div>
             <img src=${product.image}>
             <div class="test2" >
                   <div>name:${product.name}</div>
@@ -49,7 +60,7 @@ function renderProducts() {
                   <button onclick="handleRemoveProduct('${product.id}')" class="btnDelete">delete</button>
                   <button onclick="showUpdateMenu('${product.id}')" class="btnUpdate">update</button>
                   <p id="stock_Text"> stock</p>
-                  <input onchange="outOfStockFunc(event)" class="NumInput" name="stockNum" type="number" value="1" min="0" > 
+                  <input onchange="outOfStockFunc(event, '${product.id}')" class="NumInput" name="stockNum" type="number" value="1" min="0" > 
             </div>
         </div>
         <form class="updateProduct" id="update-${product.id}" onsubmit="handleUpdateProduct(event, '${product.id}')" style="display:none">
@@ -97,9 +108,7 @@ function handleUpdateProduct(ev: any, productId: string) {
 //////////////////////////////////////////////////////////////////////////////
 function showUpdateMenu(productId) {
   try {
-    const updatePanel: HTMLElement = document.querySelector(
-      `#update-${productId}`
-    );
+    const updatePanel: HTMLElement = document.querySelector(`#update-${productId}`);
 
   
     //toggle update form
@@ -119,12 +128,15 @@ function showUpdateMenu(productId) {
 
 //////////////////////////////////////////////////////////////////////////////////////
 
-function outOfStockFunc(event) {
-  const stock = document.querySelector(".test");
-  const inStock = event.target.elements.stockNum.value;
-  console.log(2);
-  if (inStock == "0") {
-    return stock.innerHTML + "<h2>out of stock</h2>";
+function outOfStockFunc(event, productId) {
+  const stock: HTMLElement = document.querySelector(`#noStock-${productId}`);
+    
+  const inStock = event.target.value
+  
+  if (inStock === '0') {
+     stock.style.display = "block"
   } else {
+    stock.style.display = "none"
   }
+  
 }

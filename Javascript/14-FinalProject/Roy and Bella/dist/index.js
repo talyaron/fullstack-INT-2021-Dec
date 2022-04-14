@@ -3,12 +3,7 @@ var tasks = [];
 function handleAddTask(event) {
     event.preventDefault();
     var elements = event.target.elements;
-    var result = {
-        heading: undefined,
-        description: undefined,
-        setReminderDate: undefined,
-        task: undefined
-    };
+    var result = {};
     var heading = elements.heading.value;
     var description = elements.description.value;
     var setReminderDate = elements.setReminderDate.value;
@@ -21,8 +16,11 @@ function handleAddTask(event) {
     var taskContainer = document.querySelector('.tasksContainer');
     var task = document.createElement('div');
     task.classList.add('task');
+    task.setAttribute('id', "" + generateid());
+    console.log(task);
+    timerStarter(heading, setReminderDate);
     // Append a new task to the tasks container
-    task.innerHTML = "<div class='heading'>" + heading + "</div>\n    <div class='description'>" + description + "</div>\n    <div class='setReminderDate'>Scheduled to: " + setReminderDate + "</div> \n   <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>\n   <div id=\"time\"></div>";
+    task.innerHTML = "<div class='heading'>" + heading + "</div>\n    <div class='description'>" + description + "</div>\n    <div class='setReminderDate'>" + setReminderDate + "</div>\n    <div class=\"time\"></div> \n   <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>\n   ";
     taskContainer.append(task);
     tasks.push(result);
     event.target.reset();
@@ -68,26 +66,22 @@ function handleOpenForm(event) {
         }
     }
 }
-var _loop_1 = function (i) {
-    var newReminderDate = tasks[i].setReminderDate;
+function timerStarter(heading, setReminderDate) {
+    var newReminderDate = setReminderDate;
     var countDownDate = new Date(newReminderDate).getTime();
-    // Run timer every second
     var runTimer = setInterval(showTime, 1000);
     function showTime() {
         var now = new Date().getTime();
         var timeleft = countDownDate - now;
         var textTime = timeToText(timeleft);
         // Result is output to the specific element
-        document.getElementById("time").innerText = textTime;
+        document.querySelector(".time").innerHTML = textTime;
         // Display the message when countdown is over
-        if (timeleft < 0) {
+        if (timeleft <= 0) {
             clearInterval(runTimer);
             alert("'it's time to " + heading + " ");
         }
     }
-};
-for (var i = 0; i < tasks.length; i++) {
-    _loop_1(i);
 }
 // Calculating the days, hours, minutes and seconds left
 function timeToText(time) {
@@ -99,10 +93,19 @@ function timeToText(time) {
         return days + "d " + hours + "h " + minutes + "m " + seconds + "s";
     }
     return '0d 0h 0m 0s';
-    function timeToString(time) {
-        if (time < 10) {
-            return '0' + time;
-        }
-        return "" + time;
+}
+// time to string function
+function timeToString(time) {
+    if (time < 10) {
+        return '0' + time;
     }
+    return "" + time;
+}
+//set uniqid to the array's objects
+function generateid() {
+    var id = function () {
+        return Math.floor((1 + Math.random()) * 10000)
+            .toString();
+    };
+    return id();
 }
