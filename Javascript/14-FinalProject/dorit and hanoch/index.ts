@@ -26,6 +26,7 @@ let result = {};
 let stringStorage:string = ""
 let productsArr:Array<product> = []
 let productsArrFLS:Array<product> = []
+let productsCart:Array<product> = []
 let output:HTMLImageElement=document.querySelector("#output")
 let fileName:string = ''
 let root: HTMLElement = document.querySelector("#root")
@@ -181,9 +182,11 @@ function presentItem(ev){
                                 <div onclick='handlePurchase(event,"${serial}")'>description: ${product.description}</div>
                                 <div onclick='handlePurchase(event,"${serial}")'>price: ${product.price}</div>
                                 <div onclick='handlePurchase(event,"${serial}")'>currency: ${product.currency}</div>
-                                <button onclick="moveToPayment(event)">shoping basket</button>
+                                
                             </div>
+                            
                     </div>
+                    <button onclick="moveToPayment(event)">shopping basket</button>
                 </div>
             </div>`
         })
@@ -193,19 +196,45 @@ function presentItem(ev){
 }
 function handlePurchase(ev,serialNo){
     console.log("handle purchase")
-  
-    let cart:Array<product>=[]
-    let productn:string = window.localStorage.getItem(`${serialNo}`)
-    let productB:product = JSON.parse(productn)
-    cart.push(productB)
-    console.log(cart)
-    let html:string = `div class="cart"`
-    localStorage.setItem("cart", JSON.stringify(cart))
+  console.dir(ev)
+  console.dir(serialNo)
+    
+    let cart1:string = window.localStorage.getItem(serialNo)
+    let cart2:Array<product> = [] //JSON.parse(cart1)
+    productsCart.push(JSON.parse(cart1))
 
+    //const pro = ev.target.parentElement.innerText
+    
+    cart2.push(JSON.parse(cart1))
+    console.log(cart2)
+    localStorage.setItem("cart", JSON.stringify(productsCart))
+    console.log(productsCart)
 }
+let p = ''
 function payment(){
-    JSON.parse(localStorage.cart)
-}
+    console.log(localStorage.cart)
+   const pay = JSON.parse(localStorage.cart)
+   pay.forEach(item=>{
+        p += 
+       `<div class="item1">
+                            <img src=${item.pImage} width="100px" )> 
+                            <div>
+                                <div)'>name:${item.name}</div>  
+                                <div)'>serialNo:${item.serialNo}</div>
+                                <div)'>description: ${item.description}</div>
+                                <div)'>price: ${item.price}</div>
+                                <div)'>currency: ${item.currency}</div>
+                                
+                            </div>
+                            
+                    </div>`
+                })
+                   
+                    document.body.innerHTML = p
+                    document.body.innerHTML += `<br> <br> <img src="cart.png" width = 20px>  <p  font-size= 3px> you got ${pay.length} items'<p></p>`
+                }
+   
+   
 function moveToPayment(){
     window.location.href = "cliant1.html"
 }
@@ -244,7 +273,7 @@ function deleteItems(ev){
                             <div>name:${product.name}</div>  
                             <div>serialNo:${product.serialNo}</div>
                             <div>description: ${product.description}</div>
-                            <divprice: ${product.price}</div>
+                            <div>price: ${product.price}</div>
                             <div>currency: ${product.currency}</div>
                             <button class="button" onclick = handleDelete(event,"${Product.serialNo}")>Delete product</button>
                         </div>
