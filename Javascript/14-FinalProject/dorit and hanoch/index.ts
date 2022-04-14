@@ -94,15 +94,7 @@ function handleNewProduct(ev) {
     const details = ev.target.elements
     for (let i = 0; i < details.length; i++) {
         if (details[i].name && details[i].value) {
-            
-            // if (details[i].name == "imageFile") {
-            //     //result['imageFile'] = details['imageFile'].files[0]
-            //     //fileinput = URL.createObjectURL(result["imageFile"])
-            //     result["imageFile"] = details['imageFile']
-            //     //fileinput=result["imageFile"]["name"]
-            // }
-           // else {
-                result[details[i].name] = details[i].value;
+                 result[details[i].name] = details[i].value;
             }
         }
     result["serialNo"]=uID()
@@ -127,6 +119,7 @@ function uID(){
 
 
 function renderProducts(newProduct){
+    console.log("we are at renderProducts")
     render=document.querySelector("#render")
     //let fileurl:URL = URL.createObjectURL(result["imageFile"])
     html+=`<div class="bigDiv" id="${newProduct.serialNo}">
@@ -243,7 +236,34 @@ function handleUpdate(ev,serialNo){
     console.log("handleUpdate")
     console.log(serialNo)
     const Prodstring:string = localStorage.getItem(serialNo);
-    let prodToDel:Array<product> = JSON.parse(Prodstring)
+    let prodToUpd:product = JSON.parse(Prodstring)
+    let updRnd:HTMLDivElement = document.querySelector("#updRnd")
+    try{
+    html=`<div id="itemUpd">
+    <p>Please update details</>
+    <form action="" onsubmit="updateItems(event,"${prodToUpd.serialNo}")">
+        <input type="text" name="typeName" value="${prodToUpd.name}">
+        <input type="text" name="description" value="${prodToUpd.description}">
+        <input type="number" name="price" value="${prodToUpd.price}" >
+        <input type="text" name="currency" value="${prodToUpd.currency}">
+        <button type="submit">SEND</button> 
+    </form>
+    <img id="output" src="${prodToUpd.pImage}" width="100px"/>
+    </div>`
+updRnd.innerHTML=html
+updRnd.style.display = "flex"
+updRnd.style.flexDirection = "column"
+updRnd.style.position = "absolute"
+updRnd.style.top = "200px"
+updRnd.style.left = "400px"
+updRnd.style.backgroundColor="blue"
+output.style.position="absolute"
+output.style.top = "50px"
+output.style.left="350px"
+    }catch{}
+
+
+
 }
 
 function handleDelete(ev,serialNo){
@@ -285,9 +305,36 @@ function deleteItems(ev){
     render.innerHTML = html;
 }
 
-function updateItems(ev){
-
+function updateItems(ev,serialNo){
+    console.log("updateItems")
+    ev.preventDefault();
+    const details = ev.target.elements
+    console.log(`details of this ${details}`)
+    for (let i = 0; i < details.length; i++) {
+        if (details[i].name && details[i].value) {
+                 result[details[i].name] = details[i].value;
+            }
+        }
+    result["serialNo"]=serialNo
+    console.log(`result: ${result}`)
+    let newProduct:product= {
+        name: result['typeName'],
+        serialNo: result['serialNo'],
+        description: result['description'],
+        price: result["price"],
+        currency: result['currency'],
+        pImage : result["imageFile"]
+    }
+    console.log(`newProduct: ${newProduct}`)
+    window.localStorage.removeItem(serialNo)
+    window.localStorage.setItem(result['serialNo'], JSON.stringify(newProduct));
+    console.log("to renderProducts")
+    renderProducts(newProduct)
+    //localStorage.setItem("productsArr", JSON.stringify(productsArr))
+    // let updRnd:HTMLDivElement = document.querySelector("#itemUpd")
+    // updRnd.remove()
 }
+
 
 
 

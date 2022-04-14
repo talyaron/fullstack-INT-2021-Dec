@@ -54,13 +54,6 @@ function handleNewProduct(ev) {
     var details = ev.target.elements;
     for (var i = 0; i < details.length; i++) {
         if (details[i].name && details[i].value) {
-            // if (details[i].name == "imageFile") {
-            //     //result['imageFile'] = details['imageFile'].files[0]
-            //     //fileinput = URL.createObjectURL(result["imageFile"])
-            //     result["imageFile"] = details['imageFile']
-            //     //fileinput=result["imageFile"]["name"]
-            // }
-            // else {
             result[details[i].name] = details[i].value;
         }
     }
@@ -83,6 +76,7 @@ function uID() {
     return Date.now().toString(36) + Math.random().toString(36).substring(2);
 }
 function renderProducts(newProduct) {
+    console.log("we are at renderProducts");
     render = document.querySelector("#render");
     //let fileurl:URL = URL.createObjectURL(result["imageFile"])
     html += "<div class=\"bigDiv\" id=\"" + newProduct.serialNo + "\">\n            <img src=" + newProduct.pImage + " width=\"100px\">\n            <div class=\"productDiv\" >\n                <div>name:" + newProduct.name + "</div>  \n                <div>serialNo:" + newProduct.serialNo + "</div>\n                <div>description: " + newProduct.description + "</div>\n                <div>price: " + newProduct.price + "</div>\n                <div>currency: " + newProduct.currency + "</div>\n                <button class=\"button\" onclick = handleDelete(event,\"" + newProduct.serialNo + "\")>Delete product</button>\n                <button class=\"button\" onclick = handleUpdate(event,\"" + newProduct.serialNo + "\")>Update product</button>\n            </div>\n        </div>";
@@ -151,7 +145,22 @@ function handleUpdate(ev, serialNo) {
     console.log("handleUpdate");
     console.log(serialNo);
     var Prodstring = localStorage.getItem(serialNo);
-    var prodToDel = JSON.parse(Prodstring);
+    var prodToUpd = JSON.parse(Prodstring);
+    var updRnd = document.querySelector("#updRnd");
+    try {
+        html = "<div id=\"itemUpd\">\n    <p>Please update details</>\n    <form action=\"\" onsubmit=\"updateItems(event,\"" + prodToUpd.serialNo + "\")\">\n        <input type=\"text\" name=\"typeName\" value=\"" + prodToUpd.name + "\">\n        <input type=\"text\" name=\"description\" value=\"" + prodToUpd.description + "\">\n        <input type=\"number\" name=\"price\" value=\"" + prodToUpd.price + "\" >\n        <input type=\"text\" name=\"currency\" value=\"" + prodToUpd.currency + "\">\n        <button type=\"submit\">SEND</button> \n    </form>\n    <img id=\"output\" src=\"" + prodToUpd.pImage + "\" width=\"100px\"/>\n    </div>";
+        updRnd.innerHTML = html;
+        updRnd.style.display = "flex";
+        updRnd.style.flexDirection = "column";
+        updRnd.style.position = "absolute";
+        updRnd.style.top = "200px";
+        updRnd.style.left = "400px";
+        updRnd.style.backgroundColor = "blue";
+        output.style.position = "absolute";
+        output.style.top = "50px";
+        output.style.left = "350px";
+    }
+    catch (_a) { }
 }
 function handleDelete(ev, serialNo) {
     console.log(serialNo);
@@ -176,5 +185,32 @@ function deleteItems(ev) {
     console.log("html " + html);
     render.innerHTML = html;
 }
-function updateItems(ev) {
+function updateItems(ev, serialNo) {
+    console.log("updateItems");
+    ev.preventDefault();
+    var details = ev.target.elements;
+    console.log("details of this " + details);
+    for (var i = 0; i < details.length; i++) {
+        if (details[i].name && details[i].value) {
+            result[details[i].name] = details[i].value;
+        }
+    }
+    result["serialNo"] = serialNo;
+    console.log("result: " + result);
+    var newProduct = {
+        name: result['typeName'],
+        serialNo: result['serialNo'],
+        description: result['description'],
+        price: result["price"],
+        currency: result['currency'],
+        pImage: result["imageFile"]
+    };
+    console.log("newProduct: " + newProduct);
+    window.localStorage.removeItem(serialNo);
+    window.localStorage.setItem(result['serialNo'], JSON.stringify(newProduct));
+    console.log("to renderProducts");
+    renderProducts(newProduct);
+    //localStorage.setItem("productsArr", JSON.stringify(productsArr))
+    // let updRnd:HTMLDivElement = document.querySelector("#itemUpd")
+    // updRnd.remove()
 }
