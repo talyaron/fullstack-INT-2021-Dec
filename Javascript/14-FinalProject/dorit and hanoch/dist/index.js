@@ -80,7 +80,7 @@ function renderProducts(newProduct) {
     render = document.querySelector("#render");
     //let fileurl:URL = URL.createObjectURL(result["imageFile"])
     html += "<div class=\"bigDiv\" id=\"" + newProduct.serialNo + "\">\n            <img src=" + newProduct.pImage + " width=\"100px\">\n            <div class=\"productDiv\" >\n                <div>name:" + newProduct.name + "</div>  \n                <div>serialNo:" + newProduct.serialNo + "</div>\n                <div>description: " + newProduct.description + "</div>\n                <div>price: " + newProduct.price + "</div>\n                <div>currency: " + newProduct.currency + "</div>\n                <button class=\"button\" onclick = handleDelete(event,\"" + newProduct.serialNo + "\")>Delete product</button>\n                <button class=\"button\" onclick = handleUpdate(event,\"" + newProduct.serialNo + "\")>Update product</button>\n            </div>\n        </div>";
-    console.log("html:" + html);
+    //console.log(`html:${html}`)    
     render.innerHTML = html;
     render.style.position = "absolute";
     render.style.top = "250px";
@@ -160,57 +160,60 @@ function handleUpdate(ev, serialNo) {
         output.style.top = "50px";
         output.style.left = "350px";
     }
-    catch (_a) { }
-}
-function handleDelete(ev, serialNo) {
-    console.log(serialNo);
-    localStorage.removeItem(serialNo);
-    var toDel = document.querySelector("#" + serialNo);
-    toDel.remove();
-}
-function deleteItems(ev) {
-    var products = document.querySelector("#render");
-    for (var i = 0; i < window.localStorage.length; i++) {
-        stringStorage = window.localStorage.key(i);
-        var ourString = window.localStorage.getItem("" + stringStorage);
-        productsArrFLS.push(JSON.parse(ourString));
+    catch (err) {
+        console.error(err);
     }
-    ;
-    var html = '';
-    productsArrFLS.forEach(function (product) {
-        var serial = product.serialNo;
-        html +=
-            "<div class=\"page\" id=\"" + product.serialNo + "\">\n            <div class=\"wrapper\">\n                <div class=\"item\">\n                        <img src=" + product.pImage + " width=\"100px\")> \n                        <div class=\"upload\">\n                            <div>name:" + product.name + "</div>  \n                            <div>serialNo:" + product.serialNo + "</div>\n                            <div>description: " + product.description + "</div>\n                            <div>price: " + product.price + "</div>\n                            <div>currency: " + product.currency + "</div>\n                            <button class=\"button\" onclick = handleDelete(event,\"" + Product.serialNo + "\")>Delete product</button>\n                        </div>\n                </div>\n            </div>\n        </div>";
-    });
-    console.log("html " + html);
-    render.innerHTML = html;
-}
-function updateItems(ev, serialNo) {
-    console.log("updateItems");
-    ev.preventDefault();
-    var details = ev.target.elements;
-    console.log("details of this " + details);
-    for (var i = 0; i < details.length; i++) {
-        if (details[i].name && details[i].value) {
-            result[details[i].name] = details[i].value;
+    function handleDelete(ev, serialNo) {
+        console.log("handleDelete");
+        console.log(serialNo);
+        localStorage.removeItem(serialNo);
+        var toDel = document.querySelector("#" + serialNo);
+        toDel.remove();
+    }
+    function deleteItems(ev) {
+        var products = document.querySelector("#render");
+        for (var i = 0; i < window.localStorage.length; i++) {
+            stringStorage = window.localStorage.key(i);
+            var ourString = window.localStorage.getItem("" + stringStorage);
+            productsArrFLS.push(JSON.parse(ourString));
         }
+        ;
+        var html = '';
+        productsArrFLS.forEach(function (product) {
+            var serial = product.serialNo;
+            html +=
+                "<div class=\"page\" id=\"" + product.serialNo + "\">\n            <div class=\"wrapper\">\n                <div class=\"item\">\n                        <img src=" + product.pImage + " width=\"100px\")> \n                        <div class=\"upload\">\n                            <div>name:" + product.name + "</div>  \n                            <div>serialNo:" + product.serialNo + "</div>\n                            <div>description: " + product.description + "</div>\n                            <div>price: " + product.price + "</div>\n                            <div>currency: " + product.currency + "</div>\n                            <button class=\"button\" onclick = handleDelete(event,\"" + Product.serialNo + "\")>Delete product</button>\n                        </div>\n                </div>\n            </div>\n        </div>";
+        });
+        console.log("html " + html);
+        render.innerHTML = html;
     }
-    result["serialNo"] = serialNo;
-    console.log("result: " + result);
-    var newProduct = {
-        name: result['typeName'],
-        serialNo: result['serialNo'],
-        description: result['description'],
-        price: result["price"],
-        currency: result['currency'],
-        pImage: result["imageFile"]
-    };
-    console.log("newProduct: " + newProduct);
-    window.localStorage.removeItem(serialNo);
-    window.localStorage.setItem(result['serialNo'], JSON.stringify(newProduct));
-    console.log("to renderProducts");
-    renderProducts(newProduct);
-    //localStorage.setItem("productsArr", JSON.stringify(productsArr))
-    // let updRnd:HTMLDivElement = document.querySelector("#itemUpd")
-    // updRnd.remove()
+    function updateItems(ev, serialNo) {
+        console.log("updateItems");
+        ev.preventDefault();
+        var details = ev.target.elements;
+        console.log("details of this " + details);
+        for (var i = 0; i < details.length; i++) {
+            if (details[i].name && details[i].value) {
+                result[details[i].name] = details[i].value;
+            }
+        }
+        result["serialNo"] = serialNo;
+        console.log("result: " + result);
+        var newProduct = {
+            name: result['typeName'],
+            serialNo: result['serialNo'],
+            description: result['description'],
+            price: result["price"],
+            currency: result['currency'],
+            pImage: result["imageFile"]
+        };
+        console.log("newProduct: " + newProduct);
+        window.localStorage.removeItem(serialNo);
+        window.localStorage.setItem(result['serialNo'], JSON.stringify(newProduct));
+        console.log("to renderProducts");
+        renderProducts(newProduct);
+        //localStorage.setItem("productsArr", JSON.stringify(productsArr))
+        // let updRnd:HTMLDivElement = document.querySelector("#itemUpd")
+        // updRnd.remove()
+    }
 }

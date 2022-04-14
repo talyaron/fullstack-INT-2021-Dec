@@ -134,7 +134,7 @@ function renderProducts(newProduct){
                 <button class="button" onclick = handleUpdate(event,"${newProduct.serialNo}")>Update product</button>
             </div>
         </div>`
-    console.log(`html:${html}`)    
+    //console.log(`html:${html}`)    
     render.innerHTML=html
     render.style.position="absolute"
     render.style.top="250px"
@@ -260,18 +260,16 @@ updRnd.style.backgroundColor="blue"
 output.style.position="absolute"
 output.style.top = "50px"
 output.style.left="350px"
-    }catch{}
-
-
-
-}
+} catch (err) {
+    console.error(err);
+  }
 
 function handleDelete(ev,serialNo){
+    console.log("handleDelete")
     console.log(serialNo)
     localStorage.removeItem(serialNo)
     let toDel=document.querySelector(`#${serialNo}`)
     toDel.remove()
-
 }
 
 function deleteItems(ev){
