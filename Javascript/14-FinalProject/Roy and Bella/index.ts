@@ -8,17 +8,20 @@ interface task {
 }
 
 
-
 // Add task form
 function handleAddTask(event: any) {
   event.preventDefault();
 
   const elements = event.target.elements;
-  const result: task = {};
+  const result: task = {
+    heading: undefined,
+    description: undefined,
+    setReminderDate: undefined
+  };
   const heading: HTMLInputElement = elements.heading.value;
   const description: HTMLInputElement = elements.description.value;
   const setReminderDate: HTMLInputElement = elements.setReminderDate.value;
-  
+
 
   for (let i = 0; i < elements.length; i++) {
     if (elements[i].name && elements[i].value) {
@@ -29,7 +32,7 @@ function handleAddTask(event: any) {
   const taskContainer: any = document.querySelector('.tasksContainer');
   let task = document.createElement('div');
   task.classList.add('task');
-  task.setAttribute('id',`${generateid()}`);
+  task.setAttribute('id', `${generateid()}`);
   console.log(task)
   timerStarter(heading, setReminderDate);
   // Append a new task to the tasks container
@@ -37,9 +40,8 @@ function handleAddTask(event: any) {
     <div class='description'>${description}</div>
     <div class='setReminderDate'>${setReminderDate}</div>
     <div class="time"></div> 
-   <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>
-   `;
-  
+    <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>`;
+
   taskContainer.append(task);
   tasks.push(result);
   event.target.reset()
@@ -92,7 +94,7 @@ function handleOpenForm(event) {
 
 
 
-function timerStarter(heading, setReminderDate){
+function timerStarter(heading, setReminderDate) {
 
   const newReminderDate: any = setReminderDate;
   const countDownDate: number = new Date(newReminderDate).getTime();
@@ -136,8 +138,8 @@ function timeToString(time: number): string {
 function generateid() {
   let id = () => {
     return Math.floor((1 + Math.random()) * 10000)
-        .toString()
-        
+      .toString()
+
   }
-    return id();
-  }
+  return id();
+}

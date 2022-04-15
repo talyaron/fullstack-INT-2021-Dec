@@ -3,7 +3,11 @@ var tasks = [];
 function handleAddTask(event) {
     event.preventDefault();
     var elements = event.target.elements;
-    var result = {};
+    var result = {
+        heading: undefined,
+        description: undefined,
+        setReminderDate: undefined
+    };
     var heading = elements.heading.value;
     var description = elements.description.value;
     var setReminderDate = elements.setReminderDate.value;
@@ -20,7 +24,7 @@ function handleAddTask(event) {
     console.log(task);
     timerStarter(heading, setReminderDate);
     // Append a new task to the tasks container
-    task.innerHTML = "<div class='heading'>" + heading + "</div>\n    <div class='description'>" + description + "</div>\n    <div class='setReminderDate'>" + setReminderDate + "</div>\n    <div class=\"time\"></div> \n   <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>\n   ";
+    task.innerHTML = "<div class='heading'>" + heading + "</div>\n    <div class='description'>" + description + "</div>\n    <div class='setReminderDate'>" + setReminderDate + "</div>\n    <div class=\"time\"></div> \n    <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>";
     taskContainer.append(task);
     tasks.push(result);
     event.target.reset();
