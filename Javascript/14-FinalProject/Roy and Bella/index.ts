@@ -35,6 +35,7 @@ function handleAddTask(event: any) {
   task.setAttribute('id', `${generateid()}`);
   console.log(task)
   timerStarter(heading, setReminderDate);
+  
   // Append a new task to the tasks container
   task.innerHTML = `<div class='heading'>${heading}</div>
     <div class='description'>${description}</div>
