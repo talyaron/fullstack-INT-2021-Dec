@@ -1,32 +1,3 @@
-.tasksPage {
-  width: 80%;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 150px 150px auto;
-  grid-template-areas: "appHeader appHeader" "addCategory addTask" "categories tasks";
-  background-color: #3176bc;
-  padding: 10px;
-  margin: auto;
-  border-radius: 20px;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-  margin: 25px;
-}
-.tasksPage .addCategory {
-  grid-area: addCategory;
-}
-.tasksPage .categories {
-  grid-area: categories;
-}
-.tasksPage .tasks {
-  grid-area: tasks;
-  background-color: #1062b0;
-  border-radius: 5px;
-  padding: 10px;
-}
-.tasksPage .tasks .task {
-  background-color: whitesmoke;
-}
-
 body {
   width: 100vw;
   height: 100vh;
@@ -150,10 +121,56 @@ body .addCategory {
 body .addTask {
   width: 20rem;
 }
-body .inputDate {
-  background-color: #e5652e;
+body .tasksPage {
+  background-color: #4a83bd;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 150px 150px auto;
+  grid-template-areas: "appHeader appHeader" "addCategory addTask" "categories tasks";
+  padding: 10px;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  margin: 25px;
 }
-body .editTaskBtn {
-  width: 45px;
-  height: 48px;
+body .tasksPage .addCategory {
+  grid-area: addCategory;
+}
+body .tasksPage .categories {
+  grid-area: categories;
+  font-weight: bolder;
+}
+body .tasksPage .tasks {
+  position: relative;
+  grid-area: tasks;
+  background-color: #1062b0;
+  border-radius: 5px;
+  padding: 10px;
+}
+body .tasksPage .tasks .task {
+  background-color: #fcffed;
+}
+body .tasksPage .tasks .inputDate {
+  position: absolute;
+  background-color: #e5652e;
+  left: 120px;
+  top: 270px;
+  width: 105px;
+  height: 10px;
+  bottom: 0px;
+}
+body .tasksPage .tasks .editTaskBtn {
+  position: absolute;
+  right: 10px;
+  width: 35px;
+  height: 38px;
+  bottom: 10px;
+}
+body .tasksPage .tasks .inputCheck {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  width: 20px;
+  height: 45px;
 }

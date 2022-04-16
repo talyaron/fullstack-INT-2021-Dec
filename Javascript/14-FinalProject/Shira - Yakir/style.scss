@@ -1,63 +1,63 @@
-.tasksPage{
-    // background-color: ;
-    width: 80%;
-    // height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-        grid-template-rows: 150px 150px auto;
-        grid-template-areas: 
-          "appHeader appHeader"
-           "addCategory addTask"
-          "categories tasks";
+// .tasksPage{
+//     // background-color: ;
+//     width: 80%;
+//     // height: 100vh;
+//     display: grid;
+//     grid-template-columns: 1fr 2fr;
+//         grid-template-rows: 150px 150px auto;
+//         grid-template-areas: 
+//           "appHeader appHeader"
+//            "addCategory addTask"
+//           "categories tasks";
       
    
-    // background-color: rgb(255, 255, 255);
-    background-color: #3176bc;
-    padding: 10px;
-    margin: auto;
-    border-radius: 20px;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-    margin: 25px;
+//     // background-color: rgb(255, 255, 255);
+//     background-color: #3176bc;
+//     padding: 10px;
+//     margin: auto;
+//     border-radius: 20px;
+//     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+//     margin: 25px;
 
-    // .appHeader{
-        // grid-area: appHeader;
-        // display: flex;
-        // .myDay{
-        // margin-top: 0.5rem;
-        // margin-left: 1rem;
-        // }
-        // //h3 - the Date:
-        // h3 {
-        // margin-right: 1rem;
+//     // .appHeader{
+//         // grid-area: appHeader;
+//         // display: flex;
+//         // .myDay{
+//         // margin-top: 0.5rem;
+//         // margin-left: 1rem;
+//         // }
+//         // //h3 - the Date:
+//         // h3 {
+//         // margin-right: 1rem;
 
-        // }
+//         // }
 
-    // }
+//     // }
 
-    .addCategory{
-        grid-area: addCategory;
-    }
+//     .addCategory{
+//         grid-area: addCategory;
+//     }
 
-    .categories{
-        grid-area: categories;
-    }
+//     .categories{
+//         grid-area: categories;
+//     }
 
-    .tasks{
-        grid-area: tasks;
-        // background-color: #3d48c1;
-        // background-color: rgb(167, 176, 224);
-        background-color: rgb(16, 98, 176);
-        border-radius: 5px;
-        padding:10px;
+//     .tasks{
+//         grid-area: tasks;
+//         // background-color: #3d48c1;
+//         // background-color: rgb(167, 176, 224);
+//         background-color: rgb(16, 98, 176);
+//         border-radius: 5px;
+//         padding:10px;
 
-        .task{
-           background-color: whitesmoke;
+//         .task{
+//            background-color: whitesmoke;
        
-        }
-    }
+//         }
+//     }
 
 
-}
+// }
 
 
 
@@ -85,7 +85,6 @@ body {
     padding-top: 32px;
 
     form {
-  
         width: 27em;
         max-height: 45em;
         display: flex;
@@ -113,12 +112,7 @@ body {
         //h3 - the Date:
         h3 {
         margin-right: 1rem;
-
         }
-
-
-
-
     }
 
     .heading {
@@ -194,6 +188,7 @@ body {
             height: 40px;
             text-align: center;
             margin-bottom: 40px;
+
             &:hover{
                 background-color: #a24218;
                 box-shadow: 0px 15px 32px rgba(216, 49, 91, 0.2);
@@ -223,14 +218,73 @@ body {
     // margin-right: 3rem;
        width: 20rem;
     }
-    .inputDate{
-        background-color: #e5652e;
-        // margin-left: 100px;
-    }
-    .editTaskBtn{
-        width: 45px;
-        height: 48px;
-    }     
+
+    .tasksPage{
+        // background-color: rgb(255, 255, 255);
+        // background-color: #3176bc;
+        background-color: #4a83bd;
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 150px 150px auto;
+        grid-template-areas: 
+              "appHeader appHeader"
+               "addCategory addTask"
+              "categories tasks";
+
+        padding: 10px;
+        margin: auto;
+        border-radius: 20px;
+        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        margin: 25px;
+    
+        .addCategory{
+            grid-area: addCategory;
+        }
+    
+        .categories{
+            grid-area: categories;
+            font-weight:bolder;
+        }
+    
+        .tasks{
+            position: relative;
+            grid-area: tasks;
+            // background-color: #3d48c1;
+            // background-color: rgb(167, 176, 224);
+            background-color: rgb(16, 98, 176);
+            border-radius: 5px;
+            padding:10px;
+    
+            .task{
+               background-color: rgb(252, 255, 237);
+           
+            }
+            .inputDate{
+                position: absolute;
+                background-color: #e5652e;
+                left: 120px;
+                top:270px;
+                width: 105px;
+                height: 10px;
+                bottom: 0px;
+            }
+            .editTaskBtn{
+                position: absolute;
+                right: 10px;
+                width: 35px;
+                height: 38px;
+                bottom: 10px;
+            } 
+            .inputCheck{
+                position: absolute;
+                top: 30px;
+                right:20px;
+                width: 20px;
+                height: 45px;
+            }
+        }
+    }   
 }
 
 

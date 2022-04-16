@@ -1,13 +1,15 @@
 let userName;
 let password;
+
 const formUserName: HTMLInputElement = document.querySelector("#UserName");
 const formPassword: HTMLInputElement = document.querySelector("#password");
 const formconfirmPassword: HTMLInputElement = document.querySelector("#repeatPassword");
 const formSignUpMsg: HTMLElement = document.querySelector("#signUpMsg");
 const formLoginMsg: HTMLElement = document.querySelector("#loginMsg");
+let newCategory = document.querySelector('.categories');
 
 let tasksArray = []; // arays that contain the tasks
-let Category = [];  // arays that contain the Categories
+let CategoryArray = [];  // arays that contain the Categories
 
 //create task object
 function task(title: String, content?: String, dueDate?: Date, status?: boolean, category?: String) {
@@ -109,7 +111,7 @@ function updateHtmlTasksView(taskIndex) {
     <h3 status="status">${tasksArray[taskIndex].status}</h3>
     <h3 status="category">${tasksArray[taskIndex].category}</h3> 
     <button class="btn btn--delete" onclick="deleteTask(${taskIndex})">Delete</button>
-    <input type="checkbox" class="input input--check" name="check" id="checkboxDone"  style="width: 20px; height: 45px; margin-left:230px;">
+    <input type="checkbox" class="inputCheck" name="check" id="checkboxDone"  ">
     <input type="date" class="inputDate" name="dueDate" id="dueDate" >
     <img class="editTaskBtn" src="./images/edit.png" alt="">
     </div>
@@ -138,6 +140,9 @@ function deleteTask(taskIndex) {
 
 }
 function addCategory(ev){
-   const categories = document.querySelector('.categories')
-   categories.innerHTML += ev.target.value + `${'<br>'}`
+    let li = document.createElement("li");
+    li.innerText = ev.target.value ;
+    newCategory.appendChild(li);
+    CategoryArray.push(newCategory);
+// console.log(CategoryArray)
 }

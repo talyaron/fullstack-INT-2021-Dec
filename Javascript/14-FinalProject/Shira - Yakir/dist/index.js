@@ -5,8 +5,9 @@ var formPassword = document.querySelector("#password");
 var formconfirmPassword = document.querySelector("#repeatPassword");
 var formSignUpMsg = document.querySelector("#signUpMsg");
 var formLoginMsg = document.querySelector("#loginMsg");
+var newCategory = document.querySelector('.categories');
 var tasksArray = []; // arays that contain the tasks
-var Category = []; // arays that contain the Categories
+var CategoryArray = []; // arays that contain the Categories
 //create task object
 function task(title, content, dueDate, status, category) {
     this.title = title;
@@ -87,7 +88,7 @@ function updateHtmlTasksView(taskIndex) {
     HTML_tasks.append(HTML_addTaskInput);
     HTML_addTaskInput.classList.add('task');
     HTML_addTaskInput.innerHTML =
-        "<div class=\"task\" id=\"taskInde-" + taskIndex + "\">\n    <h1 class=\"title\">" + (taskIndex + 1) + ". " + tasksArray[taskIndex].title + "</h1>\n    <h2 class=\"contect\">" + tasksArray[taskIndex].content + "</h2>\n    <h3 class=\"dueDate\">" + tasksArray[taskIndex].dueDate + "</h3>\n    <h3 status=\"status\">" + tasksArray[taskIndex].status + "</h3>\n    <h3 status=\"category\">" + tasksArray[taskIndex].category + "</h3> \n    <button class=\"btn btn--delete\" onclick=\"deleteTask(" + taskIndex + ")\">Delete</button>\n    <input type=\"checkbox\" class=\"input input--check\" name=\"check\" id=\"checkboxDone\"  style=\"width: 20px; height: 45px; margin-left:230px;\">\n    <input type=\"date\" class=\"inputDate\" name=\"dueDate\" id=\"dueDate\" >\n    <img class=\"editTaskBtn\" src=\"./images/edit.png\" alt=\"\">\n    </div>\n    ";
+        "<div class=\"task\" id=\"taskInde-" + taskIndex + "\">\n    <h1 class=\"title\">" + (taskIndex + 1) + ". " + tasksArray[taskIndex].title + "</h1>\n    <h2 class=\"contect\">" + tasksArray[taskIndex].content + "</h2>\n    <h3 class=\"dueDate\">" + tasksArray[taskIndex].dueDate + "</h3>\n    <h3 status=\"status\">" + tasksArray[taskIndex].status + "</h3>\n    <h3 status=\"category\">" + tasksArray[taskIndex].category + "</h3> \n    <button class=\"btn btn--delete\" onclick=\"deleteTask(" + taskIndex + ")\">Delete</button>\n    <input type=\"checkbox\" class=\"inputCheck\" name=\"check\" id=\"checkboxDone\"  \">\n    <input type=\"date\" class=\"inputDate\" name=\"dueDate\" id=\"dueDate\" >\n    <img class=\"editTaskBtn\" src=\"./images/edit.png\" alt=\"\">\n    </div>\n    ";
 }
 // demo data for Development and Testing process
 function addTask_demo_DATA() {
@@ -105,6 +106,9 @@ function deleteTask(taskIndex) {
     console.dir(tasksArray);
 }
 function addCategory(ev) {
-    var categories = document.querySelector('.categories');
-    categories.innerHTML += ev.target.value + ("" + '<br>');
+    var li = document.createElement("li");
+    li.innerText = ev.target.value;
+    newCategory.appendChild(li);
+    CategoryArray.push(newCategory);
+    // console.log(CategoryArray)
 }
