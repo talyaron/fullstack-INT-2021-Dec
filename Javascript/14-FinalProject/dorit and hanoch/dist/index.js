@@ -128,20 +128,19 @@ function handlePurchase(ev, serialNo) {
     console.log(productsCart);
 }
 var p = '';
-function payment1() {
-    try {
-        console.log(localStorage.cart);
-        var pay = JSON.parse(localStorage.cart);
-        pay.forEach(function (item) {
-            p +=
-                "<div class=\"item1\">\n                            <img src=" + item.pImage + " width=\"100px\"> \n                            <div>\n                                <div>name:" + item.name + "</div>  \n                                <div>serialNo:" + item.serialNo + "</div>\n                                <div>description: " + item.description + "</div>\n                                <div>price: " + item.price + "</div>\n                                <div>currency: " + item.currency + "</div>\n                                \n                            </div>\n                            \n                    </div>";
-        });
-        document.body.innerHTML = p;
-        document.body.innerHTML += "<br> <br> <img src=\"cart.png\" width = 20px>  <p> you got " + pay.length + " items'</p>";
-    }
-    catch (err) {
-        console.error(err);
-    }
+function payment() {
+    console.log(localStorage.cart);
+    var pay = JSON.parse(localStorage.cart);
+    pay.forEach(function (item) {
+        p +=
+            "<div class=\"item1\">\n                            <img src=" + item.pImage + " width=\"100px\"> \n                            <div>\n                                <div>name:" + item.name + "</div>  \n                                <div>serialNo:" + item.serialNo + "</div>\n                                <div>description: " + item.description + "</div>\n                                <div>price: " + item.price + "</div>\n                                <div>currency: " + item.currency + "</div>\n                                \n                            </div>\n                            \n                    </div>";
+    });
+    document.body.innerHTML = p;
+    document.body.innerHTML += "<br> <br> <img src=\"cart.png\" width = 20px>  <p> you got " + pay.length + " items'</p>";
+}
+try { }
+catch (err) {
+    console.error(err);
 }
 function moveToPayment() {
     window.location.href = "cliant1.html";
@@ -168,57 +167,57 @@ function handleUpdate(ev, serialNo) {
     catch (err) {
         console.error(err);
     }
-    function handleDelete(ev, serialNo) {
-        console.log("handleDelete");
-        console.log(serialNo);
-        localStorage.removeItem(serialNo);
-        var toDel = document.querySelector("#" + serialNo);
-        toDel.remove();
+}
+function handleDelete(ev, serialNo) {
+    console.log("handleDelete");
+    console.log(serialNo);
+    localStorage.removeItem(serialNo);
+    var toDel = document.querySelector("#" + serialNo);
+    toDel.remove();
+}
+function deleteItems(ev) {
+    var products = document.querySelector("#render");
+    for (var i = 0; i < window.localStorage.length; i++) {
+        stringStorage = window.localStorage.key(i);
+        var ourString = window.localStorage.getItem("" + stringStorage);
+        productsArrFLS.push(JSON.parse(ourString));
     }
-    function deleteItems(ev) {
-        var products = document.querySelector("#render");
-        for (var i = 0; i < window.localStorage.length; i++) {
-            stringStorage = window.localStorage.key(i);
-            var ourString = window.localStorage.getItem("" + stringStorage);
-            productsArrFLS.push(JSON.parse(ourString));
+    ;
+    var html = '';
+    productsArrFLS.forEach(function (product) {
+        var serial = product.serialNo;
+        html +=
+            "<div class=\"page\" id=\"" + product.serialNo + "\">\n            <div class=\"wrapper\">\n                <div class=\"item\">\n                        <img src=" + product.pImage + " width=\"100px\")> \n                        <div class=\"upload\">\n                            <div>name:" + product.name + "</div>  \n                            <div>serialNo:" + product.serialNo + "</div>\n                            <div>description: " + product.description + "</div>\n                            <div>price: " + product.price + "</div>\n                            <div>currency: " + product.currency + "</div>\n                            <button class=\"button\" onclick = handleDelete(event,\"" + Product.serialNo + "\")>Delete product</button>\n                        </div>\n                </div>\n            </div>\n        </div>";
+    });
+    console.log("html " + html);
+    render.innerHTML = html;
+}
+function updateItems(ev, serialNo) {
+    console.log("updateItems");
+    ev.preventDefault();
+    var details = ev.target.elements;
+    console.log("details of this " + details);
+    for (var i = 0; i < details.length; i++) {
+        if (details[i].name && details[i].value) {
+            result[details[i].name] = details[i].value;
         }
-        ;
-        var html = '';
-        productsArrFLS.forEach(function (product) {
-            var serial = product.serialNo;
-            html +=
-                "<div class=\"page\" id=\"" + product.serialNo + "\">\n            <div class=\"wrapper\">\n                <div class=\"item\">\n                        <img src=" + product.pImage + " width=\"100px\")> \n                        <div class=\"upload\">\n                            <div>name:" + product.name + "</div>  \n                            <div>serialNo:" + product.serialNo + "</div>\n                            <div>description: " + product.description + "</div>\n                            <div>price: " + product.price + "</div>\n                            <div>currency: " + product.currency + "</div>\n                            <button class=\"button\" onclick = handleDelete(event,\"" + Product.serialNo + "\")>Delete product</button>\n                        </div>\n                </div>\n            </div>\n        </div>";
-        });
-        console.log("html " + html);
-        render.innerHTML = html;
     }
-    function updateItems(ev, serialNo) {
-        console.log("updateItems");
-        ev.preventDefault();
-        var details = ev.target.elements;
-        console.log("details of this " + details);
-        for (var i = 0; i < details.length; i++) {
-            if (details[i].name && details[i].value) {
-                result[details[i].name] = details[i].value;
-            }
-        }
-        result["serialNo"] = serialNo;
-        console.log("result: " + result);
-        var newProduct = {
-            name: result['typeName'],
-            serialNo: result['serialNo'],
-            description: result['description'],
-            price: result["price"],
-            currency: result['currency'],
-            pImage: result["imageFile"]
-        };
-        console.log("newProduct: " + newProduct);
-        window.localStorage.removeItem(serialNo);
-        window.localStorage.setItem(result['serialNo'], JSON.stringify(newProduct));
-        console.log("to renderProducts");
-        renderProducts(newProduct);
-        //localStorage.setItem("productsArr", JSON.stringify(productsArr))
-        // let updRnd:HTMLDivElement = document.querySelector("#itemUpd")
-        // updRnd.remove()
-    }
+    result["serialNo"] = serialNo;
+    console.log("result: " + result);
+    var newProduct = {
+        name: result['typeName'],
+        serialNo: result['serialNo'],
+        description: result['description'],
+        price: result["price"],
+        currency: result['currency'],
+        pImage: result["imageFile"]
+    };
+    console.log("newProduct: " + newProduct);
+    window.localStorage.removeItem(serialNo);
+    window.localStorage.setItem(result['serialNo'], JSON.stringify(newProduct));
+    console.log("to renderProducts");
+    renderProducts(newProduct);
+    //localStorage.setItem("productsArr", JSON.stringify(productsArr))
+    // let updRnd:HTMLDivElement = document.querySelector("#itemUpd")
+    // updRnd.remove()
 }
