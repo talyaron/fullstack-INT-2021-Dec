@@ -122,7 +122,7 @@ function renderProducts(newProduct){
     console.log("we are at renderProducts")
     render=document.querySelector("#render")
     //let fileurl:URL = URL.createObjectURL(result["imageFile"])
-    html+=`<div class="bigDiv" id="${newProduct.serialNo}">
+    html=`<div class="bigDiv" id="${newProduct.serialNo}">
             <img src=${newProduct.pImage} width="100px">
             <div class="productDiv" >
                 <div>name:${newProduct.name}</div>  
@@ -134,8 +134,8 @@ function renderProducts(newProduct){
                 <button class="button" onclick = handleUpdate(event,"${newProduct.serialNo}")>Update product</button>
             </div>
         </div>`
-    console.log(`html:${html}`)    
-    render.innerHTML=html
+    //console.log(`html:${html}`)    
+    render.innerHTML+=html
     render.style.position="absolute"
     render.style.top="250px"
     render.style.left="700px"
@@ -188,7 +188,7 @@ function presentItem(ev){
          
 }
 function handlePurchase(ev,serialNo){
-    console.log("handle purchase")
+  console.log("handle purchase")
   console.dir(ev)
   console.dir(serialNo)
     
@@ -204,9 +204,8 @@ function handlePurchase(ev,serialNo){
     console.log(productsCart)
 }
 let p = ''
-function payment1(){
-    try{
-    console.log(localStorage.cart)
+function payment(){
+   console.log(localStorage.cart)
    const pay = JSON.parse(localStorage.cart)
    pay.forEach(item=>{
         p += 
@@ -264,18 +263,16 @@ updRnd.style.backgroundColor="blue"
 output.style.position="absolute"
 output.style.top = "50px"
 output.style.left="350px"
-    }catch{}
-
-
-
+} catch (err) {
+    console.error(err);
+  }
 }
-
 function handleDelete(ev,serialNo){
+    console.log("handleDelete")
     console.log(serialNo)
     localStorage.removeItem(serialNo)
     let toDel=document.querySelector(`#${serialNo}`)
     toDel.remove()
-
 }
 
 function deleteItems(ev){
