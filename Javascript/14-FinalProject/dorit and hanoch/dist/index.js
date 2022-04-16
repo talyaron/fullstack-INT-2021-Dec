@@ -79,9 +79,9 @@ function renderProducts(newProduct) {
     console.log("we are at renderProducts");
     render = document.querySelector("#render");
     //let fileurl:URL = URL.createObjectURL(result["imageFile"])
-    html += "<div class=\"bigDiv\" id=\"" + newProduct.serialNo + "\">\n            <img src=" + newProduct.pImage + " width=\"100px\">\n            <div class=\"productDiv\" >\n                <div>name:" + newProduct.name + "</div>  \n                <div>serialNo:" + newProduct.serialNo + "</div>\n                <div>description: " + newProduct.description + "</div>\n                <div>price: " + newProduct.price + "</div>\n                <div>currency: " + newProduct.currency + "</div>\n                <button class=\"button\" onclick = handleDelete(event,\"" + newProduct.serialNo + "\")>Delete product</button>\n                <button class=\"button\" onclick = handleUpdate(event,\"" + newProduct.serialNo + "\")>Update product</button>\n            </div>\n        </div>";
+    html = "<div class=\"bigDiv\" id=\"" + newProduct.serialNo + "\">\n            <img src=" + newProduct.pImage + " width=\"100px\">\n            <div class=\"productDiv\" >\n                <div>name:" + newProduct.name + "</div>  \n                <div>serialNo:" + newProduct.serialNo + "</div>\n                <div>description: " + newProduct.description + "</div>\n                <div>price: " + newProduct.price + "</div>\n                <div>currency: " + newProduct.currency + "</div>\n                <button class=\"button\" onclick = handleDelete(event,\"" + newProduct.serialNo + "\")>Delete product</button>\n                <button class=\"button\" onclick = handleUpdate(event,\"" + newProduct.serialNo + "\")>Update product</button>\n            </div>\n        </div>";
     //console.log(`html:${html}`)    
-    render.innerHTML = html;
+    render.innerHTML += html;
     render.style.position = "absolute";
     render.style.top = "250px";
     render.style.left = "700px";

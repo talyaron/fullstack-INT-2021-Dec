@@ -122,7 +122,7 @@ function renderProducts(newProduct){
     console.log("we are at renderProducts")
     render=document.querySelector("#render")
     //let fileurl:URL = URL.createObjectURL(result["imageFile"])
-    html+=`<div class="bigDiv" id="${newProduct.serialNo}">
+    html=`<div class="bigDiv" id="${newProduct.serialNo}">
             <img src=${newProduct.pImage} width="100px">
             <div class="productDiv" >
                 <div>name:${newProduct.name}</div>  
@@ -135,7 +135,7 @@ function renderProducts(newProduct){
             </div>
         </div>`
     //console.log(`html:${html}`)    
-    render.innerHTML=html
+    render.innerHTML+=html
     render.style.position="absolute"
     render.style.top="250px"
     render.style.left="700px"
@@ -188,7 +188,7 @@ function presentItem(ev){
          
 }
 function handlePurchase(ev,serialNo){
-    console.log("handle purchase")
+  console.log("handle purchase")
   console.dir(ev)
   console.dir(serialNo)
     
@@ -205,7 +205,7 @@ function handlePurchase(ev,serialNo){
 }
 let p = ''
 function payment(){
-    console.log(localStorage.cart)
+   console.log(localStorage.cart)
    const pay = JSON.parse(localStorage.cart)
    pay.forEach(item=>{
         p += 
