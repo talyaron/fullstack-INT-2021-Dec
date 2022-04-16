@@ -128,15 +128,20 @@ function handlePurchase(ev, serialNo) {
     console.log(productsCart);
 }
 var p = '';
-function payment() {
-    console.log(localStorage.cart);
-    var pay = JSON.parse(localStorage.cart);
-    pay.forEach(function (item) {
-        p +=
-            "<div class=\"item1\">\n                            <img src=" + item.pImage + " width=\"100px\" )> \n                            <div>\n                                <div)'>name:" + item.name + "</div>  \n                                <div)'>serialNo:" + item.serialNo + "</div>\n                                <div)'>description: " + item.description + "</div>\n                                <div)'>price: " + item.price + "</div>\n                                <div)'>currency: " + item.currency + "</div>\n                                \n                            </div>\n                            \n                    </div>";
-    });
-    document.body.innerHTML = p;
-    document.body.innerHTML += "<br> <br> <img src=\"cart.png\" width = 20px>  <p  font-size= 3px> you got " + pay.length + " items'<p></p>";
+function payment1() {
+    try {
+        console.log(localStorage.cart);
+        var pay = JSON.parse(localStorage.cart);
+        pay.forEach(function (item) {
+            p +=
+                "<div class=\"item1\">\n                            <img src=" + item.pImage + " width=\"100px\"> \n                            <div>\n                                <div>name:" + item.name + "</div>  \n                                <div>serialNo:" + item.serialNo + "</div>\n                                <div>description: " + item.description + "</div>\n                                <div>price: " + item.price + "</div>\n                                <div>currency: " + item.currency + "</div>\n                                \n                            </div>\n                            \n                    </div>";
+        });
+        document.body.innerHTML = p;
+        document.body.innerHTML += "<br> <br> <img src=\"cart.png\" width = 20px>  <p> you got " + pay.length + " items'</p>";
+    }
+    catch (err) {
+        console.error(err);
+    }
 }
 function moveToPayment() {
     window.location.href = "cliant1.html";
@@ -148,7 +153,7 @@ function handleUpdate(ev, serialNo) {
     var prodToUpd = JSON.parse(Prodstring);
     var updRnd = document.querySelector("#updRnd");
     try {
-        html = "<div id=\"itemUpd\">\n    <p>Please update details</>\n    <form action=\"\" onsubmit=\"updateItems(event,\"" + prodToUpd.serialNo + "\")\">\n        <input type=\"text\" name=\"typeName\" value=\"" + prodToUpd.name + "\">\n        <input type=\"text\" name=\"description\" value=\"" + prodToUpd.description + "\">\n        <input type=\"number\" name=\"price\" value=\"" + prodToUpd.price + "\" >\n        <input type=\"text\" name=\"currency\" value=\"" + prodToUpd.currency + "\">\n        <button type=\"submit\">SEND</button> \n    </form>\n    <img id=\"output\" src=\"" + prodToUpd.pImage + "\" width=\"100px\"/>\n    </div>";
+        html = "<div id=\"itemUpd\">\n    <p>Please update details<p/>\n    <form action=\"\" onsubmit=\"updateItems(event,\"" + prodToUpd.serialNo + "\")\">\n        <input type=\"text\" name=\"typeName\" value=\"" + prodToUpd.name + "\">\n        <input type=\"text\" name=\"description\" value=\"" + prodToUpd.description + "\">\n        <input type=\"number\" name=\"price\" value=\"" + prodToUpd.price + "\" >\n        <input type=\"text\" name=\"currency\" value=\"" + prodToUpd.currency + "\">\n        <button type=\"submit\">SEND</button> \n    </form>\n    <img id=\"output\" src=\"" + prodToUpd.pImage + "\" width=\"100px\"/>\n    </div>";
         updRnd.innerHTML = html;
         updRnd.style.display = "flex";
         updRnd.style.flexDirection = "column";

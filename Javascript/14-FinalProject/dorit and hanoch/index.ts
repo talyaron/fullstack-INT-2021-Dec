@@ -204,19 +204,20 @@ function handlePurchase(ev,serialNo){
     console.log(productsCart)
 }
 let p = ''
-function payment(){
+function payment1(){
+    try{
     console.log(localStorage.cart)
    const pay = JSON.parse(localStorage.cart)
    pay.forEach(item=>{
         p += 
        `<div class="item1">
-                            <img src=${item.pImage} width="100px" )> 
+                            <img src=${item.pImage} width="100px"> 
                             <div>
-                                <div)'>name:${item.name}</div>  
-                                <div)'>serialNo:${item.serialNo}</div>
-                                <div)'>description: ${item.description}</div>
-                                <div)'>price: ${item.price}</div>
-                                <div)'>currency: ${item.currency}</div>
+                                <div>name:${item.name}</div>  
+                                <div>serialNo:${item.serialNo}</div>
+                                <div>description: ${item.description}</div>
+                                <div>price: ${item.price}</div>
+                                <div>currency: ${item.currency}</div>
                                 
                             </div>
                             
@@ -224,7 +225,10 @@ function payment(){
                 })
                    
                     document.body.innerHTML = p
-                    document.body.innerHTML += `<br> <br> <img src="cart.png" width = 20px>  <p  font-size= 3px> you got ${pay.length} items'<p></p>`
+                    document.body.innerHTML += `<br> <br> <img src="cart.png" width = 20px>  <p> you got ${pay.length} items'</p>`
+                }catch(err){
+                    console.error(err)
+                }
                 }
    
    
@@ -240,7 +244,7 @@ function handleUpdate(ev,serialNo){
     let updRnd:HTMLDivElement = document.querySelector("#updRnd")
     try{
     html=`<div id="itemUpd">
-    <p>Please update details</>
+    <p>Please update details<p/>
     <form action="" onsubmit="updateItems(event,"${prodToUpd.serialNo}")">
         <input type="text" name="typeName" value="${prodToUpd.name}">
         <input type="text" name="description" value="${prodToUpd.description}">
