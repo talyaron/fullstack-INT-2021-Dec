@@ -4,13 +4,10 @@ function handleAddTask(event) {
     event.preventDefault();
     var elements = event.target.elements;
     var result = {
-        heading: undefined,
-        description: undefined,
-        setReminderDate: undefined
+        heading: elements.heading.value,
+        description: elements.description.value,
+        setReminderDate: elements.setReminderDate.value
     };
-    var heading = elements.heading.value;
-    var description = elements.description.value;
-    var setReminderDate = elements.setReminderDate.value;
     for (var i = 0; i < elements.length; i++) {
         if (elements[i].name && elements[i].value) {
             result[elements[i].name] = elements[i].value;
@@ -21,13 +18,20 @@ function handleAddTask(event) {
     var task = document.createElement('div');
     task.classList.add('task');
     task.setAttribute('id', "" + generateid());
-    console.log(task);
-    timerStarter(heading, setReminderDate);
+    timerStarter(result.heading, result.setReminderDate);
+    timer();
     // Append a new task to the tasks container
-    task.innerHTML = "<div class='heading'>" + heading + "</div>\n    <div class='description'>" + description + "</div>\n    <div class='setReminderDate'>" + setReminderDate + "</div>\n    <div class=\"time\"></div> \n    <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>";
+    task.innerHTML = "<div class='heading'>" + result.heading + "</div>\n    <div class='description'>" + result.description + "</div>\n    <div class='setReminderDate'>" + result.setReminderDate + "</div>\n    <div class=\"time\"></div> \n    <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>";
     taskContainer.append(task);
     tasks.push(result);
     event.target.reset();
+    console.log(task);
+}
+function timer() {
+    var alltasks = document.querySelectorAll('.task.id');
+    alltasks.forEach(function (task) {
+        timerStarter(task.querySelector('.heading').innerHTML, task.querySelector('.setReminderDate').innerHTML);
+    });
 }
 // Remove tasks.
 function removeTask(event) {

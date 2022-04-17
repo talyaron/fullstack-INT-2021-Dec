@@ -2,11 +2,10 @@ const tasks: Array < task > = [];
 
 // Interface
 interface task {
-  heading: HTMLInputElement
-  description: HTMLInputElement
+  heading: HTMLInputElement,
+  description: HTMLInputElement,
   setReminderDate: HTMLInputElement
 }
-
 
 // Add task form
 function handleAddTask(event: any) {
@@ -14,14 +13,10 @@ function handleAddTask(event: any) {
 
   const elements = event.target.elements;
   const result: task = {
-    heading: undefined,
-    description: undefined,
-    setReminderDate: undefined
+    heading: elements.heading.value,
+    description: elements.description.value,
+    setReminderDate: elements.setReminderDate.value
   };
-  const heading: HTMLInputElement = elements.heading.value;
-  const description: HTMLInputElement = elements.description.value;
-  const setReminderDate: HTMLInputElement = elements.setReminderDate.value;
-
 
   for (let i = 0; i < elements.length; i++) {
     if (elements[i].name && elements[i].value) {
@@ -33,20 +28,31 @@ function handleAddTask(event: any) {
   let task = document.createElement('div');
   task.classList.add('task');
   task.setAttribute('id', `${generateid()}`);
-  console.log(task)
-  timerStarter(heading, setReminderDate);
+  timerStarter(result.heading, result.setReminderDate);
+  timer();
   
   // Append a new task to the tasks container
-  task.innerHTML = `<div class='heading'>${heading}</div>
-    <div class='description'>${description}</div>
-    <div class='setReminderDate'>${setReminderDate}</div>
+  task.innerHTML = `<div class='heading'>${result.heading}</div>
+    <div class='description'>${result.description}</div>
+    <div class='setReminderDate'>${result.setReminderDate}</div>
     <div class="time"></div> 
     <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>`;
 
   taskContainer.append(task);
   tasks.push(result);
   event.target.reset()
+  
+  console.log(task);
 }
+
+function timer () {
+  const alltasks = document.querySelectorAll('.task.id');
+  alltasks.forEach(task => {
+    timerStarter(task.querySelector('.heading').innerHTML, task.querySelector('.setReminderDate').innerHTML);
+  })
+}
+
+
 
 // Remove tasks.
 function removeTask(event) {
@@ -119,7 +125,7 @@ function timerStarter(heading, setReminderDate) {
 // Calculating the days, hours, minutes and seconds left
 function timeToText(time: number) {
   if (time >= 0) {
-    const days: string = timeToString(Math.floor(time / (1000 * 60 * 60 * 24)));
+    const days = timeToString(Math.floor(time / (1000 * 60 * 60 * 24)));
     const hours = timeToString(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
     const minutes = timeToString(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
     const seconds = timeToString(Math.floor((time % (1000 * 60)) / 1000));
