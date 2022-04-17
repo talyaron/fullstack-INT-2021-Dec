@@ -129,3 +129,8 @@ body .page .wrapper .item .upload {
   background-color: #baf5f5;
   border: 1px solid black;
 }
+
+.item1 {
+  width: 100px;
+  height: 200px;
+}

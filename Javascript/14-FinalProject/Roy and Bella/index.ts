@@ -1,39 +1,58 @@
+const tasks: Array < task > = [];
 
-const tasks: Array < object > = [];
+// Interface
+interface task {
+  heading: HTMLInputElement,
+  description: HTMLInputElement,
+  setReminderDate: HTMLInputElement
+}
 
 // Add task form
 function handleAddTask(event: any) {
   event.preventDefault();
 
   const elements = event.target.elements;
-  const result = {};
-  const heading: HTMLInputElement = elements.heading.value;
-  const description: HTMLInputElement =  elements.description.value;
-  const setReminderDate: HTMLInputElement =  elements.setReminderDate.value;
+  const result: task = {
+    heading: elements.heading.value,
+    description: elements.description.value,
+    setReminderDate: elements.setReminderDate.value
+  };
 
   for (let i = 0; i < elements.length; i++) {
     if (elements[i].name && elements[i].value) {
       result[elements[i].name] = elements[i].value;
     }
   }
-
   // Create new task
   const taskContainer: any = document.querySelector('.tasksContainer');
   let task = document.createElement('div');
   task.classList.add('task');
-
+  task.setAttribute('id', `${generateid()}`);
+  timerStarter(result.heading, result.setReminderDate);
+  timer();
+  
   // Append a new task to the tasks container
-  task.innerHTML = `<div class='heading'>${heading}</div>
-    <div class='description'>${description}</div>
-    <div class='setReminderDate'>Scheduled to: ${setReminderDate}</div> 
-   <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>`;
+  task.innerHTML = `<div class='heading'>${result.heading}</div>
+    <div class='description'>${result.description}</div>
+    <div class='setReminderDate'>${result.setReminderDate}</div>
+    <div class="time"></div> 
+    <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>`;
+
   taskContainer.append(task);
-
-  // Push a new task to the tasks array ("data base").
   tasks.push(result);
-  console.log(tasks);
-
+  event.target.reset()
+  
+  console.log(task);
 }
+
+function timer () {
+  const alltasks = document.querySelectorAll('.task.id');
+  alltasks.forEach(task => {
+    timerStarter(task.querySelector('.heading').innerHTML, task.querySelector('.setReminderDate').innerHTML);
+  })
+}
+
+
 
 // Remove tasks.
 function removeTask(event) {
@@ -56,6 +75,7 @@ function handleOpenForm(event) {
 
   // Form slides up
   addBtn.addEventListener('click', toggleSliderUp);
+
   function toggleSliderUp() {
     slide.classList.contains('slide-up'); {
       slide.classList.add('slide-up')
@@ -79,7 +99,54 @@ function handleOpenForm(event) {
   }
 }
 
-function calculate(){ 
-Math.round(Math.random() * (100 - 1) + 1);
-console.log(Math.round(Math.random() * (100 - 1) + 1));
+
+
+function timerStarter(heading, setReminderDate) {
+
+  const newReminderDate: any = setReminderDate;
+  const countDownDate: number = new Date(newReminderDate).getTime();
+  const runTimer = setInterval(showTime, 1000);
+
+  function showTime() {
+    const now: number = new Date().getTime();
+    const timeleft = countDownDate - now;
+    const textTime = timeToText(timeleft);
+    // Result is output to the specific element
+    document.querySelector(".time").innerHTML = textTime;
+    // Display the message when countdown is over
+    if (timeleft <= 0) {
+      clearInterval(runTimer);
+      alert(`'it's time to ${heading} `)
+    }
+  }
+}
+
+
+// Calculating the days, hours, minutes and seconds left
+function timeToText(time: number) {
+  if (time >= 0) {
+    const days = timeToString(Math.floor(time / (1000 * 60 * 60 * 24)));
+    const hours = timeToString(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+    const minutes = timeToString(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
+    const seconds = timeToString(Math.floor((time % (1000 * 60)) / 1000));
+    return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+  return '0d 0h 0m 0s';
+}
+
+// time to string function
+function timeToString(time: number): string {
+  if (time < 10) {
+    return '0' + time;
+  }
+  return `${time}`;
+}
+//set uniqid to the array's objects
+function generateid() {
+  let id = () => {
+    return Math.floor((1 + Math.random()) * 10000)
+      .toString()
+
+  }
+  return id();
 }

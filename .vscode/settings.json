@@ -3,5 +3,12 @@
     "compile-hero.disable-compile-files-on-did-save-code": false,
     "cSpell.words": [
         "moshe"
-    ]
+    ],
+    "window.autoDetectColorScheme": true,
+    "workbench.fontAliasing": "auto",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.trimAutoWhitespace": false,
+    "editor.bracketPairColorization.enabled": true,
+    "files.autoSave": "onFocusChange",
+    "editor.fontSize": 13,
 }

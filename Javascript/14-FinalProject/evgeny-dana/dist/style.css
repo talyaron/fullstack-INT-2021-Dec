@@ -20,11 +20,18 @@ body .Server_wrapper #root {
 }
 body .Server_wrapper #root .test {
   background-color: purple;
-  height: 10rem;
-  width: 40rem;
+  height: 12rem;
+  width: 25rem;
   display: flex;
   border-radius: 2rem;
   box-shadow: 2px 2px 5px rgba(67, 6, 93, 0.721);
+}
+body .Server_wrapper #root .test .outOfStuckText {
+  position: absolute;
+  font-size: 2em;
+  top: 8em;
+  left: 12em;
+  transform: rotate(-45deg);
 }
 body .Server_wrapper #root .test .test2 {
   display: flex;
