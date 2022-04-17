@@ -75,27 +75,35 @@ function addTask(event) {
     //-----------------------------------------------------------------
     var newTask = new task(title, content, dueDate, false, category);
     tasksArray.push(newTask);
-    updateHtmlTasksView(tasksArray.length - 1);
+    updateHtmlTaskView(tasksArray.length - 1);
     // for debug console purpose
     console.dir(tasksArray);
     console.log("tasks has " + tasksArray.length + " objects");
     console.dir(newTask);
 }
 // add the task from the array to the html by its givin index
-function updateHtmlTasksView(taskIndex) {
+function updateHtmlTaskView(taskIndex) {
     var HTML_tasks = document.querySelector(".tasks");
     var HTML_addTaskInput = document.createElement('div');
     HTML_tasks.append(HTML_addTaskInput);
     HTML_addTaskInput.classList.add('task');
     HTML_addTaskInput.innerHTML =
-        "<div class=\"task\" id=\"taskInde-" + taskIndex + "\">\n    <h1 class=\"title\">" + (taskIndex + 1) + ". " + tasksArray[taskIndex].title + "</h1>\n    <h2 class=\"contect\">" + tasksArray[taskIndex].content + "</h2>\n    <h3 class=\"dueDate\">" + tasksArray[taskIndex].dueDate + "</h3>\n    <h3 status=\"status\">" + tasksArray[taskIndex].status + "</h3>\n    <h3 status=\"category\">" + tasksArray[taskIndex].category + "</h3> \n    <button class=\"btn btn--delete\" onclick=\"deleteTask(" + taskIndex + ")\">Delete</button>\n    <input type=\"checkbox\" class=\"inputCheck\" name=\"check\" id=\"checkboxDone\"  \">\n    <input type=\"date\" class=\"inputDate\" name=\"dueDate\" id=\"dueDate\" >\n    <img class=\"editTaskBtn\" src=\"./images/edit.png\" alt=\"\">\n    </div>\n    ";
+        "<div class=\"task\" id=\"taskInde-" + taskIndex + "\">\n    <h1 class=\"title\">" + (taskIndex + 1) + ". " + tasksArray[taskIndex].title + "</h1>\n    <h2 class=\"contect\">" + tasksArray[taskIndex].content + "</h2>\n    <h3 class=\"dueDate\">" + tasksArray[taskIndex].dueDate + "</h3>\n    <h3 status=\"status\">" + tasksArray[taskIndex].status + "</h3>\n    <h3 status=\"category\">" + tasksArray[taskIndex].category + "</h3> \n    <button class=\"btn btn--delete\" onclick=\"deleteTask(" + taskIndex + ")\">Delete</button>\n    <input type=\"checkbox\" class=\"inputCheck\" name=\"check\" id=\"checkboxDone\">\n    <input type=\"date\" class=\"inputDate\" name=\"dueDate\" id=\"dueDate\" value=\"" + tasksArray[taskIndex].dueDate + "\">\n    <img class=\"editTaskBtn\" src=\"./images/edit.png\" alt=\"\">\n    </div>\n    ";
+}
+// clean the tasks view then recrate the html element for new array
+function tasksViewUpdate() {
+    document.querySelector(".tasks").innerHTML = ""; //clean current view
+    // insert update view
+    for (var i = 0; i < tasksArray.length; i++) {
+        updateHtmlTaskView(i);
+    }
 }
 // demo data for Development and Testing process
 function addTask_demo_DATA() {
     //------------------
     var newTask = new task("test title", "test content", new Date('08/04/2022'), false, "test category");
     tasksArray.push(newTask);
-    updateHtmlTasksView(tasksArray.length - 1);
+    updateHtmlTaskView(tasksArray.length - 1);
     // for debug console purpose
     console.dir(tasksArray);
     console.log("tasks has " + tasksArray.length + " objects");
@@ -103,6 +111,7 @@ function addTask_demo_DATA() {
 addTask_demo_DATA();
 function deleteTask(taskIndex) {
     tasksArray.splice(taskIndex, 1);
+    tasksViewUpdate();
     console.dir(tasksArray);
 }
 function addCategory(ev) {
@@ -111,4 +120,13 @@ function addCategory(ev) {
     newCategory.appendChild(li);
     CategoryArray.push(newCategory);
     // console.log(CategoryArray)
+}
+function submitAddTaskForm(event) {
+    event.preventDefault();
+    var newTask = new task(event.target.taskTitle.value, event.target.Content.value, new Date(event.target.dueDate.value), false, "test category");
+    tasksArray.push(newTask);
+    updateHtmlTaskView(tasksArray.length - 1);
+    // for debug console purpose
+    console.dir(tasksArray);
+    console.log("tasks has " + tasksArray.length + " objects");
 }

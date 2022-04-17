@@ -88,7 +88,7 @@ function addTask(event) {
     //-----------------------------------------------------------------
     let newTask = new task(title, content, dueDate, false, category);
     tasksArray.push(newTask);
-    updateHtmlTasksView(tasksArray.length - 1);
+    updateHtmlTaskView(tasksArray.length - 1);
 
     // for debug console purpose
     console.dir(tasksArray);
@@ -98,7 +98,7 @@ function addTask(event) {
 }
 
 // add the task from the array to the html by its givin index
-function updateHtmlTasksView(taskIndex) {
+function updateHtmlTaskView(taskIndex) {
     const HTML_tasks: HTMLElement = document.querySelector(".tasks");
     const HTML_addTaskInput = document.createElement('div');
     HTML_tasks.append(HTML_addTaskInput);
@@ -111,12 +111,23 @@ function updateHtmlTasksView(taskIndex) {
     <h3 status="status">${tasksArray[taskIndex].status}</h3>
     <h3 status="category">${tasksArray[taskIndex].category}</h3> 
     <button class="btn btn--delete" onclick="deleteTask(${taskIndex})">Delete</button>
-    <input type="checkbox" class="inputCheck" name="check" id="checkboxDone"  ">
-    <input type="date" class="inputDate" name="dueDate" id="dueDate" >
+    <input type="checkbox" class="inputCheck" name="check" id="checkboxDone">
+    <input type="date" class="inputDate" name="dueDate" id="dueDate" value="${tasksArray[taskIndex].dueDate}">
     <img class="editTaskBtn" src="./images/edit.png" alt="">
     </div>
     `;
 }
+
+// clean the tasks view then recrate the html element for new array
+function tasksViewUpdate(){
+
+    document.querySelector(".tasks").innerHTML = ""; //clean current view
+    
+    // insert update view
+    for(let i=0; i<tasksArray.length; i++){
+        updateHtmlTaskView(i);
+    }
+    }
 
 // demo data for Development and Testing process
 
@@ -124,7 +135,7 @@ function addTask_demo_DATA() {
     //------------------
     let newTask = new task(`test title`, `test content`, new Date('08/04/2022'), false, `test category`);
     tasksArray.push(newTask);
-    updateHtmlTasksView(tasksArray.length - 1);
+    updateHtmlTaskView(tasksArray.length - 1);
 
     // for debug console purpose
     console.dir(tasksArray);
@@ -135,10 +146,10 @@ addTask_demo_DATA()
 
 function deleteTask(taskIndex) {
     tasksArray.splice(taskIndex, 1)
-
+    tasksViewUpdate()
     console.dir(tasksArray);
-
 }
+
 function addCategory(ev){
     let li = document.createElement("li");
     li.innerText = ev.target.value ;
@@ -146,3 +157,18 @@ function addCategory(ev){
     CategoryArray.push(newCategory);
 // console.log(CategoryArray)
 }
+
+function submitAddTaskForm(event){
+    event.preventDefault();
+    let newTask = new task(event.target.taskTitle.value, 
+        event.target.Content.value, new Date(event.target.dueDate.value), false, `test category`);
+    tasksArray.push(newTask);
+    updateHtmlTaskView(tasksArray.length - 1);
+
+    // for debug console purpose
+    console.dir(tasksArray);
+    console.log(`tasks has ${tasksArray.length} objects`);
+
+
+}
+
