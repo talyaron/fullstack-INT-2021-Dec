@@ -51,7 +51,7 @@ function renderProducts() {
   let html = "";
   products.forEach((product) => {
     html += `<div class="megaTest" id="${product.id}">
-      <div class="test"  >
+      <div class="upload-product"  >
               <div class="outOfStuckText" id="noStock-${product.id}" style="display:none"><h2>out of stock</h2></div>
             <img src=${product.image}>
             <div class="test2" >

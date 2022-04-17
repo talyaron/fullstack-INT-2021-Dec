@@ -1,39 +1,71 @@
 body {
   height: 100vh;
+  background: linear-gradient(to left, #ff7900, #8800ff);
+  text-align: center;
+  font-family: "Open Sans Condensed", sans-serif;
 }
 body .Server_wrapper {
+  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 20px;
+  font-size: 16px;
+}
+body .Server_wrapper button {
+  color: gray;
+  border-radius: 10%;
+}
+body .Server_wrapper button ::-webkit-input-placeholder {
+  color: pink;
 }
 body .Server_wrapper .input_fields {
-  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  background-color: #faedcd54;
+  box-shadow: 2px 2px 5px #faedcd6e;
+  padding: 15px;
+  border-radius: 10%;
+  gap: 5px;
   height: 10rem;
-  width: 20rem;
+  width: 15rem;
+  margin-bottom: 0;
+  color: #3f898a;
+  letter-spacing: 0.05em;
+  text-shadow: 0 1px 0 #133d3e;
+  border-top-color: #9fb5b5;
+  border-left-color: #608586;
+  border-bottom-color: #1b4849;
+  border-right-color: #1e4d4e;
+}
+body .Server_wrapper .input_fields :focus {
+  background-color: rgba(0, 0, 0, 0.226);
 }
 body .Server_wrapper #root {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  color: blanchedalmond;
+  cursor: pointer;
 }
-body .Server_wrapper #root .test {
-  background-color: purple;
+body .Server_wrapper #root .upload-product {
+  background-color: #240046;
   height: 12rem;
   width: 25rem;
   display: flex;
   border-radius: 2rem;
   box-shadow: 2px 2px 5px rgba(67, 6, 93, 0.721);
+  position: relative;
 }
-body .Server_wrapper #root .test .outOfStuckText {
+body .Server_wrapper #root .upload-product .outOfStuckText {
   position: absolute;
   font-size: 2em;
   top: 8em;
   left: 12em;
   transform: rotate(-45deg);
 }
-body .Server_wrapper #root .test .test2 {
+body .Server_wrapper #root .upload-product .test2 {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -41,11 +73,11 @@ body .Server_wrapper #root .test .test2 {
   font-size: larger;
   position: relative;
 }
-body .Server_wrapper #root .test .test2 #stock_Text {
+body .Server_wrapper #root .upload-product .test2 #stock_Text {
   position: absolute;
   top: 4em;
 }
-body .Server_wrapper #root .test .test2 .NumInput {
+body .Server_wrapper #root .upload-product .test2 .NumInput {
   position: absolute;
   top: 9em;
   width: 4rem;
@@ -58,4 +90,5 @@ body .Server_wrapper #root img {
   width: 100%;
   height: 100%;
   border-radius: 2rem 0 0 2rem;
+  overflow: hidden;
 }
