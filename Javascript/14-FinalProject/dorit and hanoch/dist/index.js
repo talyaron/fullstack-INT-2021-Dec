@@ -138,10 +138,6 @@ function payment() {
     document.body.innerHTML = p;
     document.body.innerHTML += "<br> <br> <img src=\"cart.png\" width = 20px>  <p> you got " + pay.length + " items'</p>";
 }
-try { }
-catch (err) {
-    console.error(err);
-}
 function moveToPayment() {
     window.location.href = "cliant1.html";
 }
