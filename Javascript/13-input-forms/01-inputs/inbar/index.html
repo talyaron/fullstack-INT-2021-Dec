@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="./dist/index.css">
+</head>
+
+<body>
+    <div>
+        <input type="text" name="name" placeholder="Name" onChange="document.getElementById('name').innerHTML+=this.value">
+        <input type="email" placeholder="Email" onChange="document.getElementById('email').innerHTML+=this.value">
+        <input type="password" placeholder="Password" onChange="document.getElementById('password').innerHTML+=this.value">
+    </div>
+   <div id="name"></div>
+   <div id="email"></div>
+   <div id="password"></div>
+   
+    <script src="./dist/index.js"></script>
+</body>
+
+</html>
