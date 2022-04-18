@@ -15,6 +15,7 @@
 // }
 
 const htmlCart = document.querySelector(".cart");
+const totalToPay=document.querySelector(".totalToPay");
 // localStorage.setItem()
 
 //objects of products
@@ -24,12 +25,14 @@ interface Product {
   description: string;
   image?: String;
   id: string;
+  
  
 }
 
 interface cartProduct {
     id: string;
     quantity: number;
+
   }
 
 let milk: Product = {
@@ -64,7 +67,7 @@ let eggs: Product = {
   price: 21,
   description: "the eggs",
   image:
-    "https://www.pilotonline.com/resizer/GWUDdRA6RQWXzjV54peqFmgWBJA=/fit-in/415x276/smart/filters:fill(black)/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/4XSQCHH6YNA4TGVDT2FKCJTNQ4.jpg",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6bII5tIeCOVPE92gwVSLi1v_-WieT9qhIsg&usqp=CAU",
   id: uid(),
 
 };
@@ -160,23 +163,38 @@ function addMeToCart(event) {
     const currentProduct:cartProduct = {
         id:productId,
         quantity:1,
+    
     }
     cart.push(currentProduct);
     console.log(cart);
   }
   cartHtmlBuild();
+
 }
 function uid() {
   return `id-${Math.ceil(Math.random() * 1e8)}`;
 }
 
+
+
+
+
 function cartHtmlBuild () {
-  htmlCart.innerHTML = ``;
+  htmlCart.innerHTML = `<div class=”Header”>
+  <h3 class=”Heading”>Shopping Cart</h3>
+  </div>`;
   cart.forEach(product=> {
     const currentCartProduct: Product= arrayOfProducts.find(element=> element.id==product.id)
-    htmlCart.innerHTML += `<div class="parent"><img src="${currentCartProduct.image}" alt="${currentCartProduct.description}"><div id=${currentCartProduct.id} class="overlay"><div>${currentCartProduct.name}</div><div>${currentCartProduct.price}₪</div><div>quantity: ${product.quantity}`;
+    let totalPayProduct:any=(currentCartProduct.price)*(product.quantity);
+  
+htmlCart.innerHTML += `<div class="parentProduct"><img src="${currentCartProduct.image}" alt="${currentCartProduct.description}"><div id=${currentCartProduct.id} class="overlay"><div>${currentCartProduct.name}</div><div>${currentCartProduct.price}₪</div><div>quantity: ${product.quantity}<div>Total amount:${totalPayProduct}₪</div>`;
+    console.log(totalPayProduct)
+   
   })
 }
+
+
+
 
 // reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ })
 

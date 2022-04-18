@@ -9,6 +9,7 @@
 // function handleLoadIndex(){
 // }
 var htmlCart = document.querySelector(".cart");
+var totalToPay = document.querySelector(".totalToPay");
 var milk = {
     name: "milk",
     price: 6,
@@ -34,7 +35,7 @@ var eggs = {
     name: "eggs",
     price: 21,
     description: "the eggs",
-    image: "https://www.pilotonline.com/resizer/GWUDdRA6RQWXzjV54peqFmgWBJA=/fit-in/415x276/smart/filters:fill(black)/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/4XSQCHH6YNA4TGVDT2FKCJTNQ4.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6bII5tIeCOVPE92gwVSLi1v_-WieT9qhIsg&usqp=CAU",
     id: uid()
 };
 var tomato = {
@@ -124,10 +125,12 @@ function uid() {
     return "id-" + Math.ceil(Math.random() * 1e8);
 }
 function cartHtmlBuild() {
-    htmlCart.innerHTML = "";
+    htmlCart.innerHTML = "<div class=\u201DHeader\u201D>\n  <h3 class=\u201DHeading\u201D>Shopping Cart</h3>\n  </div>";
     cart.forEach(function (product) {
         var currentCartProduct = arrayOfProducts.find(function (element) { return element.id == product.id; });
-        htmlCart.innerHTML += "<div class=\"parent\"><img src=\"" + currentCartProduct.image + "\" alt=\"" + currentCartProduct.description + "\"><div id=" + currentCartProduct.id + " class=\"overlay\"><div>" + currentCartProduct.name + "</div><div>" + currentCartProduct.price + "\u20AA</div><div>quantity: " + product.quantity;
+        var totalPayProduct = (currentCartProduct.price) * (product.quantity);
+        htmlCart.innerHTML += "<div class=\"parentProduct\"><img src=\"" + currentCartProduct.image + "\" alt=\"" + currentCartProduct.description + "\"><div id=" + currentCartProduct.id + " class=\"overlay\"><div>" + currentCartProduct.name + "</div><div>" + currentCartProduct.price + "\u20AA</div><div>quantity: " + product.quantity + "<div>Total amount:" + totalPayProduct + "\u20AA</div>";
+        console.log(totalPayProduct);
     });
 }
 // reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ })
