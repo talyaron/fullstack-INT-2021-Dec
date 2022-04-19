@@ -93,7 +93,7 @@ nav {
 .sale-lable {
   width: 38px;
   height: 17px;
-  background-color: #f76b6a;
+  background-color: #cb1e66;
   color: #ffffff;
   font-weight: 400;
   display: flex;
@@ -112,7 +112,7 @@ nav {
   height: 0px;
   border-bottom: 5px solid transparent;
   border-left: 3px solid transparent;
-  border-top: 7px solid #f76b6a;
+  border-top: 7px solid #cb1e66;
   border-right: 5px solid transparent;
   position: absolute;
   left: 10%;
@@ -409,4 +409,9 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+h3 {
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
