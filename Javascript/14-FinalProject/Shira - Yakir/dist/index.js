@@ -102,7 +102,7 @@ function tasksViewUpdate() {
 function addTask_demo_DATA() {
     //------------------
     //------ create example Category-----
-    CategoryArray = ["כללי", "עבודה", "לימודים"];
+    CategoryArray.push("כללי", "עבודה", "לימודים");
     addCategoryUpdateView(CategoryArray);
     //-------------------------------------------
     //----------create example Task--------------
@@ -127,7 +127,7 @@ function addCategory(ev) {
     console.dir(CategoryArray);
 }
 function addCategoryUpdateView(CategoryArray) {
-    for (var i = 0; i < CategoryArray; i++) {
+    for (var i = 0; i < CategoryArray.length; i++) {
         var li = document.createElement("li");
         li.innerText = CategoryArray[i];
         newCategory.appendChild(li);
