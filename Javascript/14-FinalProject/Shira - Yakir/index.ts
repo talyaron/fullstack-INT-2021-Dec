@@ -203,6 +203,7 @@ handleSelectCategory()
 
 
 function selctCtg(event){
+    let choice = '';
     choice = event.target.value
     let input:any = document.querySelector('.ctgInput')
     input.innerHTML = choice;

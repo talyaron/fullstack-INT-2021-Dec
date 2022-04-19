@@ -156,6 +156,7 @@ function handleSelectCategory() {
 }
 handleSelectCategory();
 function selctCtg(event) {
+    var choice = '';
     choice = event.target.value;
     var input = document.querySelector('.ctgInput');
     input.innerHTML = choice;
