@@ -153,9 +153,15 @@ function handleSelectCategory() {
         option.text = CategoryArray[i];
         categoriesSelect.appendChild(option);
     }
-    // let Choice:string = ""
 }
 handleSelectCategory();
+function selctCtg(event) {
+    choice = event.target.value;
+    var input = document.querySelector('.ctgInput');
+    input.innerHTML = choice;
+    var categoriesSelect = document.querySelector('#selectCategory');
+    categoriesSelect.remove();
+}
 // let choice:string = ""
 // function handleChooseCategory(event:any){
 //     let option = document.createElement("option");

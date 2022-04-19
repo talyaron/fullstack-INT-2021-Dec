@@ -198,10 +198,17 @@ function handleSelectCategory(){
         categoriesSelect.appendChild(option);
     }
 
-// let Choice:string = ""
-
 }
 handleSelectCategory()
+
+
+function selctCtg(event){
+    choice = event.target.value
+    let input:any = document.querySelector('.ctgInput')
+    input.innerHTML = choice;
+    let categoriesSelect = document.querySelector('#selectCategory')
+    categoriesSelect.remove();
+}
 
 // let choice:string = ""
 
