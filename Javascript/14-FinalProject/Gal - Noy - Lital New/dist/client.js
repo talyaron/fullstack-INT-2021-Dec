@@ -106,6 +106,14 @@ arrayOfProducts.forEach(function (product) {
 function addMeToCart(event) {
     event.preventDefault();
     var productId = event.target.parentElement.id;
+    var productPrice = event.target.parentElement.price;
+    function totalPay() {
+        var balance = 0;
+        for (var key in productPrice) {
+            ++balance;
+        }
+        console.log(balance);
+    }
     var productInCartIndex = cart.findIndex(function (element) { return element.id == productId; });
     if (productInCartIndex != -1) {
         cart[productInCartIndex].quantity++;
@@ -114,7 +122,8 @@ function addMeToCart(event) {
     else {
         var currentProduct = {
             id: productId,
-            quantity: 1
+            quantity: 1,
+            price: productPrice
         };
         cart.push(currentProduct);
         console.log(cart);
@@ -124,11 +133,27 @@ function addMeToCart(event) {
 function uid() {
     return "id-" + Math.ceil(Math.random() * 1e8);
 }
+function countCart() {
+    var count = 0;
+    // loop through each key/value
+    for (var key in cart) {
+        // increase the count
+        ++count;
+    }
+}
 function cartHtmlBuild() {
-    htmlCart.innerHTML = "<div class=\u201DHeader\u201D>\n  <h3 class=\u201DHeading\u201D>Shopping Cart</h3>\n  </div>";
+    countCart();
+    var count = 0;
+    // loop through each key/value
+    for (var key in cart) {
+        // increase the count
+        ++count;
+    }
+    console.log("quantity of different products added to cart " + count);
+    htmlCart.innerHTML = "<div class=\u201DHeader\u201D><h3 class=\u201DHeading\u201D>Shopping Cart</h3></div><div class=\"quantityOfProducts\"><h3 class=\u201DHeading\u201D>products added to cart: " + count + "</h3></div>";
     cart.forEach(function (product) {
         var currentCartProduct = arrayOfProducts.find(function (element) { return element.id == product.id; });
-        var totalPayProduct = (currentCartProduct.price) * (product.quantity);
+        var totalPayProduct = currentCartProduct.price * product.quantity;
         htmlCart.innerHTML += "<div class=\"parentProduct\"><img src=\"" + currentCartProduct.image + "\" alt=\"" + currentCartProduct.description + "\"><div id=" + currentCartProduct.id + " class=\"overlay\"><div>" + currentCartProduct.name + "</div><div>" + currentCartProduct.price + "\u20AA</div><div>quantity: " + product.quantity + "<div>Total amount:" + totalPayProduct + "\u20AA</div>";
         console.log(totalPayProduct);
     });

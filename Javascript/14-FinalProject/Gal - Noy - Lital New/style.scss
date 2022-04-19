@@ -249,8 +249,14 @@ img {
     align-items: center;
 }
 
-h3 {
+.Header {
     margin-left: 1rem;
     margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+}
+h3{
+    color: rgb(203, 30, 101);
 }
