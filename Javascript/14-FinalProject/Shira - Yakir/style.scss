@@ -256,7 +256,7 @@ body {
     
         .tasks{
             position: relative;
-            margin-top: 340px;
+            margin-top: 450px;
             grid-area: tasks;
             // background-color: #3d48c1;
             // background-color: rgb(167, 176, 224);
@@ -265,11 +265,30 @@ body {
             padding:10px;
     
             .task{
+                position: relative;
+                
                background-color: rgb(252, 255, 237);
            
             }
-            .inputDate{
+
+            .inputCheck{
                 position: relative;
+                top: -267px;
+                left:-85px;
+                width: 20px;
+                height: 45px;
+            }
+            .done{
+                position: relative;
+                top: -370px;
+                left:30px;
+                width: 20px;
+                height: 45px;
+                color:#e5652e;
+                font-weight: bolder;
+            }
+            .inputDate{
+                position: absolute;
                 background-color: #e5652e;
                 left: 120px;
                 top:270px;
@@ -278,25 +297,19 @@ body {
                 bottom: 0px;
             }
             .editTaskBtn{
-                position: relative;
+                position: absolute;
                 right: 10px;
                 width: 35px;
                 height: 38px;
                 bottom: 10px;
             } 
-            .inputCheck{
-                position: relative;
-                top: 30px;
-                right:20px;
-                width: 20px;
-                height: 45px;
-            }
+
         }
         #addTaskForm{
             position: absolute;
             top:220px;
             right:280px;
-
+           
             #selectCategory{
                 width: fit-content;
             }
@@ -305,7 +318,6 @@ body {
                 width: 380px;
                 margin-top: 5px;
                 margin-bottom: 10px;
-
                 border-radius: 10px;
                 border: 1px solid rgba(0, 0, 0, 0.233);
             }

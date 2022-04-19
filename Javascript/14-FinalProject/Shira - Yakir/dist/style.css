@@ -149,17 +149,34 @@ body .tasksPage .categories li {
 }
 body .tasksPage .tasks {
   position: relative;
-  margin-top: 340px;
+  margin-top: 450px;
   grid-area: tasks;
   background-color: #1062b0;
   border-radius: 5px;
   padding: 10px;
 }
 body .tasksPage .tasks .task {
+  position: relative;
   background-color: #fcffed;
 }
-body .tasksPage .tasks .inputDate {
+body .tasksPage .tasks .inputCheck {
   position: relative;
+  top: -267px;
+  left: -85px;
+  width: 20px;
+  height: 45px;
+}
+body .tasksPage .tasks .done {
+  position: relative;
+  top: -370px;
+  left: 30px;
+  width: 20px;
+  height: 45px;
+  color: #e5652e;
+  font-weight: bolder;
+}
+body .tasksPage .tasks .inputDate {
+  position: absolute;
   background-color: #e5652e;
   left: 120px;
   top: 270px;
@@ -168,18 +185,11 @@ body .tasksPage .tasks .inputDate {
   bottom: 0px;
 }
 body .tasksPage .tasks .editTaskBtn {
-  position: relative;
+  position: absolute;
   right: 10px;
   width: 35px;
   height: 38px;
   bottom: 10px;
-}
-body .tasksPage .tasks .inputCheck {
-  position: relative;
-  top: 30px;
-  right: 20px;
-  width: 20px;
-  height: 45px;
 }
 body .tasksPage #addTaskForm {
   position: absolute;
