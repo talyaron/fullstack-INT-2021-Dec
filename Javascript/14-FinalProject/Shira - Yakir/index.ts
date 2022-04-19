@@ -133,6 +133,12 @@ function tasksViewUpdate(){
 
 function addTask_demo_DATA() {
     //------------------
+    //------ create example Category-----
+    CategoryArray = ["כללי","עבודה","לימודים"];
+    addCategoryUpdateView(CategoryArray);
+    //-------------------------------------------
+
+    //----------create example Task--------------
     let newTask = new task(`test title`, `test content`, new Date('08/04/2022'), false, `test category`);
     tasksArray.push(newTask);
     updateHtmlTaskView(tasksArray.length - 1);
@@ -151,12 +157,23 @@ function deleteTask(taskIndex) {
 }
 
 function addCategory(ev){
+    CategoryArray.push(ev.target.value);
     let li = document.createElement("li");
     li.innerText = ev.target.value ;
     newCategory.appendChild(li);
-    CategoryArray.push(newCategory);
-// console.log(CategoryArray)
+    console.dir(CategoryArray);
 }
+
+function addCategoryUpdateView(CategoryArray){
+    for(let i=0; i<CategoryArray; i++){
+        let li = document.createElement("li");
+        li.innerText = CategoryArray[i] ;
+        newCategory.appendChild(li);
+        console.dir(CategoryArray);
+    }
+}
+
+
 
 function submitAddTaskForm(event){
     event.preventDefault();
@@ -168,7 +185,5 @@ function submitAddTaskForm(event){
     // for debug console purpose
     console.dir(tasksArray);
     console.log(`tasks has ${tasksArray.length} objects`);
-
-
 }
 

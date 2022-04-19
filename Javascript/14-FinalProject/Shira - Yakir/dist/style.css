@@ -152,7 +152,7 @@ body .tasksPage .tasks .task {
   background-color: #fcffed;
 }
 body .tasksPage .tasks .inputDate {
-  position: absolute;
+  position: relative;
   background-color: #e5652e;
   left: 120px;
   top: 270px;
@@ -161,14 +161,14 @@ body .tasksPage .tasks .inputDate {
   bottom: 0px;
 }
 body .tasksPage .tasks .editTaskBtn {
-  position: absolute;
+  position: relative;
   right: 10px;
   width: 35px;
   height: 38px;
   bottom: 10px;
 }
 body .tasksPage .tasks .inputCheck {
-  position: absolute;
+  position: relative;
   top: 30px;
   right: 20px;
   width: 20px;
