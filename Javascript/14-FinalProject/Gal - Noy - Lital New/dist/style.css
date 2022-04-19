@@ -390,11 +390,12 @@ img {
 }
 
 .cart {
-  width: 70%;
+  width: 50%;
   height: 85%;
   background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0px 25px 40px #1687d933;
+  margin-left: 25%;
 }
 
 .overlay {
