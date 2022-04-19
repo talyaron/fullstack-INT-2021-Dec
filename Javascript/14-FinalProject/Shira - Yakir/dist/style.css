@@ -122,6 +122,7 @@ body .addTask {
   width: 20rem;
 }
 body .tasksPage {
+  position: relative;
   background-color: #4a83bd;
   width: 80%;
   display: grid;
@@ -139,10 +140,16 @@ body .tasksPage .addCategory {
 }
 body .tasksPage .categories {
   grid-area: categories;
+  min-height: 100px;
+  height: fit-content;
   font-weight: bolder;
+}
+body .tasksPage .categories li {
+  margin-top: 10px;
 }
 body .tasksPage .tasks {
   position: relative;
+  margin-top: 340px;
   grid-area: tasks;
   background-color: #1062b0;
   border-radius: 5px;
@@ -173,4 +180,16 @@ body .tasksPage .tasks .inputCheck {
   right: 20px;
   width: 20px;
   height: 45px;
+}
+body .tasksPage #addTaskForm {
+  position: absolute;
+  top: 220px;
+  right: 280px;
+}
+body .tasksPage #addTaskForm .categoryInput {
+  height: 40px;
+  width: 380px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.233);
 }

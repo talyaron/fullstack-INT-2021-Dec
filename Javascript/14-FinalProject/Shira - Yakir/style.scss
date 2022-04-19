@@ -220,6 +220,7 @@ body {
     }
 
     .tasksPage{
+        position: relative;
         // background-color: rgb(255, 255, 255);
         // background-color: #3176bc;
         background-color: #4a83bd;
@@ -244,11 +245,18 @@ body {
     
         .categories{
             grid-area: categories;
+            min-height: 100px;
+            height: fit-content;
             font-weight:bolder;
+            li{
+                margin-top: 10px;
+                // padding: 2px;
+            }
         }
     
         .tasks{
             position: relative;
+            margin-top: 340px;
             grid-area: tasks;
             // background-color: #3d48c1;
             // background-color: rgb(167, 176, 224);
@@ -284,7 +292,22 @@ body {
                 height: 45px;
             }
         }
-    }   
+        #addTaskForm{
+            position: absolute;
+            top:220px;
+            right:280px;
+
+            .categoryInput{
+                height: 40px;
+                width: 380px;
+                margin-top: 5px;
+                border-radius: 10px;
+                border: 1px solid rgba(0, 0, 0, 0.233);
+            }
+        }
+    }
+    
+   
 }
 
 

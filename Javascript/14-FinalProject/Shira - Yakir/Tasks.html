@@ -23,6 +23,12 @@
             <form id="addTaskForm" onsubmit="submitAddTaskForm(event)">
             <label for="addTask">Task Title</label>
             <input type="text" name="taskTitle" class="addTask" id="addTask" placeholder="+ Add Task" onblur="addTask(event)">
+
+            <label for="chooseCtg">Category</label>
+                <select name="ctgSelect" id="selectCategory">
+                    <option value="" disabled selected>Choose a Category</option>
+                </select>
+
             <label for="Content">Content</label>
             <input type="text" name="Content" id="">
             <label for="dueDate">Due Date</label>

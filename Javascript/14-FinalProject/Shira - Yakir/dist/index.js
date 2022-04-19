@@ -102,7 +102,7 @@ function tasksViewUpdate() {
 function addTask_demo_DATA() {
     //------------------
     //------ create example Category-----
-    CategoryArray.push("כללי", "עבודה", "לימודים");
+    CategoryArray.push("General", "Work", "Studies");
     addCategoryUpdateView(CategoryArray);
     //-------------------------------------------
     //----------create example Task--------------
@@ -143,3 +143,24 @@ function submitAddTaskForm(event) {
     console.dir(tasksArray);
     console.log("tasks has " + tasksArray.length + " objects");
 }
+function handleSelectCategory() {
+    var categoriesSelect = document.querySelector('#selectCategory');
+    // for(let i=0; i<CategoryArray.length; i++){
+    // categoriesSelect.innerHTML = `<option value="categoryy">${CategoryArray[i]}</option>`
+    for (var i = 0; i < CategoryArray.length; i++) {
+        var option = document.createElement("option");
+        option.value = CategoryArray[i];
+        option.text = CategoryArray[i];
+        categoriesSelect.appendChild(option);
+    }
+    // let Choice:string = ""
+}
+handleSelectCategory();
+// let choice:string = ""
+// function handleChooseCategory(event:any){
+//     let option = document.createElement("option");
+//     choice = event.target.value
+//     for (let i = 0; i < CategoryArray.length; i++) {
+//        option.innerHTML = CategoryArray[i]
+//     } 
+// }
