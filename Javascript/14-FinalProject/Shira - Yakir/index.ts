@@ -113,7 +113,6 @@ function updateHtmlTaskView(taskIndex) {
     <button class="btn btn--delete" onclick="deleteTask(${taskIndex})">Delete</button>
     <input type="checkbox" class="inputCheck" name="check" id="checkboxDone">
     <p class="done">Done</p>
-    <input type="date" class="inputDate" name="dueDate" id="dueDate" value="${tasksArray[taskIndex].dueDate}">
     <img class="editTaskBtn" src="./images/edit.png" alt="">
     </div>
     `;
@@ -211,6 +210,8 @@ function selctCtg(event){
     let categoriesSelect = document.querySelector('#selectCategory')
     categoriesSelect.remove();
 }
+
+document.getElementById("myBtn").addEventListener("click", displayDate);
 
 // let choice:string = ""
 

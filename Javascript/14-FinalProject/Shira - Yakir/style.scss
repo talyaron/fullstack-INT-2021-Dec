@@ -181,13 +181,16 @@ body {
         }
 
         &--delete{
+            position: absolute;
             background: none;
             background-color: #e5652e;
             font-size: small;
             width: 80px;
             height: 40px;
             text-align: center;
-            margin-bottom: 40px;
+            top: 8px;
+            right: 60px;
+
 
             &:hover{
                 background-color: #a24218;
@@ -266,22 +269,23 @@ body {
     
             .task{
                 position: relative;
-                
-               background-color: rgb(252, 255, 237);
+                height: 300px;
+                background-color: rgb(252, 255, 237);
            
             }
 
             .inputCheck{
                 position: relative;
-                top: -267px;
-                left:-85px;
+                top: -225px;
+                left:580px;
                 width: 20px;
                 height: 45px;
+                cursor: pointer;
             }
             .done{
                 position: relative;
-                top: -370px;
-                left:30px;
+                top: -302px;
+                left:610px;
                 width: 20px;
                 height: 45px;
                 color:#e5652e;
@@ -299,9 +303,10 @@ body {
             .editTaskBtn{
                 position: absolute;
                 right: 10px;
-                width: 35px;
-                height: 38px;
-                bottom: 10px;
+                width: 25px;
+                height: 28px;
+                top: 10px;
+                cursor: pointer;
             } 
 
         }
