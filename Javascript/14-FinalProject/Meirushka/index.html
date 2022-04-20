@@ -13,11 +13,14 @@
     </header>
  <main>
         <div class="container">
-            <form onsubmit="handleNote(event)">
+            <form onsubmit="handleNote(event)" id="todo-form">
 
-               <input type="text" name="note" placeholder="write a note" id="formNoteText">
+               <input type="text" name="note" placeholder="write a note" id="formTask">
         
-               <input type="submit" value="add note" id="formAddButton">
+               <input type="submit" value="add task" id="formAddButton">
+               
+               <input type="datetime-local" name="local-date" id="formDateTime">
+               
 
             </form>
             <div class="root"></div>
