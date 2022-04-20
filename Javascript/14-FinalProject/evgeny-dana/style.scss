@@ -2,7 +2,7 @@ body{
         height: 100vh ;
         background: linear-gradient(to left, #ff7900, #8800ff);
         text-align:center;
-        font-family: "Open Sans Condensed", sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
     .Server_wrapper{
         margin-top: 10px;
@@ -11,17 +11,13 @@ body{
         justify-content: center;
         flex-direction: column;
         gap: 20px;
-        font-size: 16px;
-        
-       
+        font-size: 16px;       
         button{ 
             color: gray;
             border-radius: 10%;
             ::-webkit-input-placeholder{
-                color: pink;
-            } 
+                color: pink; } 
         }
-        
         .input_fields{
             display: flex;
             flex-direction: column;
@@ -42,18 +38,13 @@ body{
             border-bottom-color: #1b4849;
             border-right-color: #1e4d4e;
             :focus { background-color: rgba(0, 0, 0, 0.226); }
-            
-
         }
-
         #root{
             display: flex;
             flex-direction: column;
             gap: 50px;
             color: blanchedalmond;
             cursor: pointer;
-            
-            
             .upload-product{
                 background-color: #240046;
                 height: 12rem;
@@ -62,14 +53,17 @@ body{
                 border-radius: 2rem;
                 box-shadow: 2px 2px 5px  rgba(67, 6, 93, 0.721);
                 position: relative;
+                &:hover {opacity: 1}
                 
                 .outOfStuckText{
                     position: absolute;
                     font-size: 2em;
                     top: 8em;
                     left: 12em;
-                    transform: rotate(-45deg);
+                    transform: translate(-200%, -115%);
+                    
                 }
+                
                 .test2{ 
                     display: flex;
                     flex-direction: column;
@@ -78,6 +72,7 @@ body{
                     align-items: center;
                     font-size: larger;
                     position: relative;
+                    &:hover {opacity: 0.5}
                     #stock_Text{
                         position: absolute;
                         top: 4em;
@@ -89,9 +84,13 @@ body{
                     }
                 }
             }
+            .upload-product--blur{
+                backdrop-filter: blur(2px)
+            }
             .updateProduct{
                 display: none;
                 font-size: larger;
+                
             }
             
             img{

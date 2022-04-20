@@ -13,7 +13,7 @@ var handleAddProduct = function (ev) {
     var name = ev.target.elements.name.value;
     var price = ev.target.elements.price.value;
     var id = uid();
-    // const imgSrc = URL.createObjectURL(image);
+    const imgSrc = URL.createObjectURL(image);
     var item = { id: id, image: image, name: name, price: price };
     products.push(item);
     localStorage.setItem('products', JSON.stringify(products));
