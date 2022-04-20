@@ -1,0 +1,39 @@
+/* Global styles */
+html, * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: 1.8rem/1.56 sans-serif;
+  color: #360066;
+  margin: 0;
+  padding: 0 3.2rem 2.4rem;
+  background: rgba(170, 130, 238, 0.595);
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+header, #todo-form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(green, yellow, red);
+}
+
+#formTask, #formAddButton, #formDateTime {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: #360066;
+  background-color: rgba(0, 157, 255, 0.852);
+}
+
+#formAddButton {
+  background-color: #47006645;
+}
