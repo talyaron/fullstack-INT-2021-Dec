@@ -1,0 +1,18 @@
+input {
+  width: 600px;
+  padding: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgba(84, 216, 240, 0.719);
+  border-radius: 10px;
+  width: 700px;
+  align-items: center;
+}
+
+button {
+  width: fit-content;
+}

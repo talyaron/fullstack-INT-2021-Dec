@@ -9,6 +9,7 @@
 // function handleLoadIndex(){
 // }
 var htmlCart = document.querySelector(".cart");
+var totalToPay = document.querySelector(".totalToPay");
 var milk = {
     name: "milk",
     price: 6,
@@ -34,7 +35,7 @@ var eggs = {
     name: "eggs",
     price: 21,
     description: "the eggs",
-    image: "https://www.pilotonline.com/resizer/GWUDdRA6RQWXzjV54peqFmgWBJA=/fit-in/415x276/smart/filters:fill(black)/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/4XSQCHH6YNA4TGVDT2FKCJTNQ4.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6bII5tIeCOVPE92gwVSLi1v_-WieT9qhIsg&usqp=CAU",
     id: uid()
 };
 var tomato = {
@@ -105,6 +106,14 @@ arrayOfProducts.forEach(function (product) {
 function addMeToCart(event) {
     event.preventDefault();
     var productId = event.target.parentElement.id;
+    var productPrice = event.target.parentElement.price;
+    function totalPay() {
+        var balance = 0;
+        for (var key in productPrice) {
+            ++balance;
+        }
+        console.log(balance);
+    }
     var productInCartIndex = cart.findIndex(function (element) { return element.id == productId; });
     if (productInCartIndex != -1) {
         cart[productInCartIndex].quantity++;
@@ -113,7 +122,8 @@ function addMeToCart(event) {
     else {
         var currentProduct = {
             id: productId,
-            quantity: 1
+            quantity: 1,
+            price: productPrice
         };
         cart.push(currentProduct);
         console.log(cart);
@@ -123,101 +133,32 @@ function addMeToCart(event) {
 function uid() {
     return "id-" + Math.ceil(Math.random() * 1e8);
 }
+function countCart() {
+    var count = 0;
+    // loop through each key/value
+    for (var key in cart) {
+        // increase the count
+        ++count;
+    }
+}
 function cartHtmlBuild() {
-    htmlCart.innerHTML = "";
+    countCart();
+    var count = 0;
+    // loop through each key/value
+    for (var key in cart) {
+        // increase the count
+        ++count;
+    }
+    console.log("quantity of different products added to cart " + count);
+    htmlCart.innerHTML = "<div class=\u201DHeader\u201D><h3 class=\u201DHeading\u201D>Shopping Cart</h3></div><div class=\"quantityOfProducts\"><h3 class=\u201DHeading\u201D>products added to cart: " + count + "</h3></div>";
     cart.forEach(function (product) {
         var currentCartProduct = arrayOfProducts.find(function (element) { return element.id == product.id; });
-        htmlCart.innerHTML += "<div class=\"parent\"><img src=\"" + currentCartProduct.image + "\" alt=\"" + currentCartProduct.description + "\"><div id=" + currentCartProduct.id + " class=\"overlay\"><div>" + currentCartProduct.name + "</div><div>" + currentCartProduct.price + "\u20AA</div><div>quantity: " + product.quantity;
+        var totalPayProduct = currentCartProduct.price * product.quantity;
+        htmlCart.innerHTML += "<div class=\"parentProduct\"><img src=\"" + currentCartProduct.image + "\" alt=\"" + currentCartProduct.description + "\"><div id=" + currentCartProduct.id + " class=\"overlay\"><div>" + currentCartProduct.name + "</div><div>" + currentCartProduct.price + "\u20AA</div><div>quantity: " + product.quantity + "<div>Total amount:" + totalPayProduct + "\u20AA</div>";
+        console.log(totalPayProduct);
     });
 }
 // reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ })
 // cart.forEach(function (par) {
 //     htmlCart.innerHTML += `<div class="parent"><img src="${par.src}" alt="${par.title}"><div id=${par.id} class="overlay"><div>${par.title}</div><div>${par.tags}₪</div><button onclick="addMeToCart(event)" class="addMe">Add</button></div></div>`;
 //   });
-// //selecting the array each product will be making its own div+img+p
-// //create a container for the shop
-// const container = document.getElementById("containerOfProducts");
-// let i: any = 0;
-// for (i = 0; i < arrayOfProducts.length; i++) {
-//   container.innerHTML += '<div id="product"></div>';
-//     console.log(`hey${container}`)
-// }
-// document.body.appendChild(container);
-// arrayOfProducts.forEach((product) => {
-//   // Create the div
-//   const newDivProduct: HTMLElement = document.createElement("div");
-//   newDivProduct.setAttribute("src", `${product.image}`);
-//   newDivProduct.setAttribute("width", "304");
-//   newDivProduct.setAttribute("height", "228");
-//   newDivProduct.setAttribute("alt", "divOfProduct");
-//   newDivProduct.setAttribute("id", "divProduct");
-//   newDivProduct.setAttribute("class", "imgProduct")
-//   document.body.appendChild(newDivProduct);
-//   // Create the add to cart btn
-//   const btnAddToCart = document.createElement("button");
-// //   btnAddToCart.innerText = "Add to Cart";
-// //   btnAddToCart.style.color = "white";
-// //   btnAddToCart.setAttribute("width", "100");
-// //   btnAddToCart.setAttribute("height", "80");
-// //   btnAddToCart.setAttribute("class", "btnaddToCart");
-// //   //function add to cart btn
-//   btnAddToCart.addEventListener("click", function (event) {
-//     let addProductToCart = this.getAttribute("data-addProductToCart");
-//     console.log("the product was added to cart successfully");
-//   });
-//   document.body.appendChild(btnAddToCart);
-//   //done add to cart button
-//   const done: HTMLElement = document.querySelector(".done");
-//   done.setAttribute("id", "btnDone");
-//   //   console.log(btnAddToCart);
-//   let added = false;
-//   btnAddToCart.addEventListener("click", () => {
-//     if (added) {
-//       btnAddToCart.style.color = "black";
-//       btnAddToCart.innerHTML = "Added";
-//       added = false;
-//     } else {
-//       added = true;
-//     }
-//   });
-//   // Create the img of product
-//   const imgProduct: HTMLImageElement = document.createElement("img");
-//   //   const container1 = document.getElementById('imgProduct');
-//   //   let b:any=0;
-//   //   for(b = 0; i < arrayOfProducts.length; i++){
-//   //    container1.innerHTML+='<div id="imgProduct"></div>';
-//   //    console.log(`hey${container1}`)
-//   //  }
-//   imgProduct.setAttribute("src", `${product.image}`);
-//   imgProduct.setAttribute("width", "250");
-//   imgProduct.setAttribute("height", "200");
-//   imgProduct.setAttribute("alt", "imgOfProduct");
-//   document.body.appendChild(imgProduct);
-//   imgProduct.setAttribute("class", "imgProduct");
-// //   Create the p description of product
-//   const descriptionProduct = document.createElement("p");
-//   const nameOfProduct = document.createTextNode(`${product.description}`);
-//   descriptionProduct.appendChild(nameOfProduct);
-//   const textOfProducts = document.getElementById("divProduct");
-//   textOfProducts.appendChild(descriptionProduct);
-// //   const descriptionProduct:any = document.createElement("p");
-// //   descriptionProduct.setAttribute("src", `${product.description}`);
-// //   descriptionProduct.setAttribute("width", "250");
-// //   descriptionProduct.setAttribute("height", "200");
-// //   descriptionProduct.setAttribute("alt", "imgOfProduct");
-// //   document.body.appendChild(descriptionProduct);
-// // //   descriptionProduct.setAttribute("class", "imgProduct");
-// // console.log(descriptionProduct)
-//   //   console.log(newDivProduct)
-//   //   console.log(btnAddToCart)
-//   //   console.log(imgProduct)
-//   //   console.log(descriptionProduct);
-//   // render the price of product
-//   const priceOfProduct = document.createElement("p");
-//   const price = document.createTextNode(`${product.price}`);
-//   priceOfProduct.appendChild(price);
-//   const priOfProducts = document.getElementById("divProduct");
-//   priOfProducts.appendChild(priceOfProduct);
-//   priOfProducts.setAttribute("class", "imgProduct");
-//   //   console.log(price);
-// });

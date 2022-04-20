@@ -1,0 +1,9 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.balloon {
+  width: 100px;
+  height: 200px;
+}
