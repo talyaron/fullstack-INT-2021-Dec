@@ -5,7 +5,9 @@ var formPassword = document.querySelector("#password");
 var formconfirmPassword = document.querySelector("#repeatPassword");
 var formSignUpMsg = document.querySelector("#signUpMsg");
 var formLoginMsg = document.querySelector("#loginMsg");
+var taskForm = document.querySelector('#addTaskForm');
 var newCategory = document.querySelector('.categories');
+var categoriesSelect = document.querySelector('#selectCategory');
 var tasksArray = []; // arays that contain the tasks
 var CategoryArray = []; // arays that contain the Categories
 //create task object
@@ -33,19 +35,24 @@ function handleSignUp(event) {
 }
 //    Login
 function handleLogin(ev) {
-    ev.preventDefault();
-    var LoginUserName = document.querySelector("#LoginUserName");
-    var LoginPassword = document.querySelector("#LoginPassword");
-    var htmlBody = document.querySelector("body");
-    var loginStatus = checkLogin(LoginUserName.value, LoginPassword.value);
-    if (loginStatus) {
-        htmlBody.style.background = "green";
-        formLoginMsg.innerHTML = "success Login";
-        window.location.href = "Tasks.html";
+    try {
+        ev.preventDefault();
+        var LoginUserName = document.querySelector("#LoginUserName");
+        var LoginPassword = document.querySelector("#LoginPassword");
+        var htmlBody = document.querySelector("body");
+        var loginStatus = checkLogin(LoginUserName.value, LoginPassword.value);
+        if (loginStatus) {
+            htmlBody.style.background = "green";
+            formLoginMsg.innerHTML = "success Login";
+            window.location.href = "Tasks.html";
+        }
+        else {
+            htmlBody.style.background = "red";
+            formLoginMsg.innerHTML = "Login Failed";
+        }
     }
-    else {
-        htmlBody.style.background = "red";
-        formLoginMsg.innerHTML = "Login Failed";
+    catch (error) {
+        console.error(error);
     }
 }
 // help function for Login
@@ -144,9 +151,6 @@ function submitAddTaskForm(event) {
     console.log("tasks has " + tasksArray.length + " objects");
 }
 function handleSelectCategory() {
-    var categoriesSelect = document.querySelector('#selectCategory');
-    // for(let i=0; i<CategoryArray.length; i++){
-    // categoriesSelect.innerHTML = `<option value="categoryy">${CategoryArray[i]}</option>`
     for (var i = 0; i < CategoryArray.length; i++) {
         var option = document.createElement("option");
         option.value = CategoryArray[i];
@@ -160,11 +164,9 @@ function selctCtg(event) {
     choice = event.target.value;
     var input = document.querySelector('.ctgInput');
     input.innerHTML = choice;
-    var categoriesSelect = document.querySelector('#selectCategory');
     categoriesSelect.remove();
 }
-document.getElementById("myBtn").addEventListener("click", displayDate);
-// let choice:string = ""
+// document.getElementById("myBtn").addEventListener("click", displayDate);
 // function handleChooseCategory(event:any){
 //     let option = document.createElement("option");
 //     choice = event.target.value

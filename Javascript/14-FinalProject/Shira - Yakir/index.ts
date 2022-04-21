@@ -6,7 +6,10 @@ const formPassword: HTMLInputElement = document.querySelector("#password");
 const formconfirmPassword: HTMLInputElement = document.querySelector("#repeatPassword");
 const formSignUpMsg: HTMLElement = document.querySelector("#signUpMsg");
 const formLoginMsg: HTMLElement = document.querySelector("#loginMsg");
+const taskForm:HTMLElement = document.querySelector('#addTaskForm')
 let newCategory = document.querySelector('.categories');
+let categoriesSelect = document.querySelector('#selectCategory')
+
 
 let tasksArray = []; // arays that contain the tasks
 let CategoryArray = [];  // arays that contain the Categories
@@ -36,6 +39,7 @@ function handleSignUp(event) {
 
 //    Login
 function handleLogin(ev) {
+    try{
     ev.preventDefault();
     const LoginUserName: HTMLInputElement =
         document.querySelector("#LoginUserName");
@@ -53,6 +57,10 @@ function handleLogin(ev) {
         htmlBody.style.background = "red";
         formLoginMsg.innerHTML = `Login Failed`;
     }
+} catch (error) {
+    console.error(error);
+  }
+
 }
 
 // help function for Login
@@ -178,19 +186,16 @@ function addCategoryUpdateView(CategoryArray){
 function submitAddTaskForm(event){
     event.preventDefault();
     let newTask = new task(event.target.taskTitle.value, 
-        event.target.Content.value, new Date(event.target.dueDate.value), false, `test category`);
+     event.target.Content.value, new Date(event.target.dueDate.value), false, `test category`);
     tasksArray.push(newTask);
     updateHtmlTaskView(tasksArray.length - 1);
-
+    
     // for debug console purpose
     console.dir(tasksArray);
     console.log(`tasks has ${tasksArray.length} objects`);
 }
 
 function handleSelectCategory(){
-    let categoriesSelect = document.querySelector('#selectCategory')
-    // for(let i=0; i<CategoryArray.length; i++){
-    // categoriesSelect.innerHTML = `<option value="categoryy">${CategoryArray[i]}</option>`
     for (let i = 0; i < CategoryArray.length; i++) {
         let option = document.createElement("option");
         option.value = CategoryArray[i];
@@ -201,19 +206,16 @@ function handleSelectCategory(){
 }
 handleSelectCategory()
 
-
 function selctCtg(event){
     let choice = '';
     choice = event.target.value
     let input:any = document.querySelector('.ctgInput')
     input.innerHTML = choice;
-    let categoriesSelect = document.querySelector('#selectCategory')
     categoriesSelect.remove();
 }
 
-document.getElementById("myBtn").addEventListener("click", displayDate);
+// document.getElementById("myBtn").addEventListener("click", displayDate);
 
-// let choice:string = ""
 
 // function handleChooseCategory(event:any){
 //     let option = document.createElement("option");

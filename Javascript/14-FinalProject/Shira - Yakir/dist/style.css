@@ -40,7 +40,7 @@ body .heading {
   margin-bottom: 48px;
   margin-top: 0;
   font-size: 38px;
-  background: linear-gradient(90deg, #613dc1 0%, #d8315b 100%);
+  background: #131379;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -70,21 +70,18 @@ body .btn {
   height: 4em;
   border-radius: 10em;
   border: none;
-  background: #613dc1;
-  background: linear-gradient(104deg, #613dc1 0%, rgba(160, 9, 9, 0.414) 100%);
+  background: linear-gradient(104deg, #1c0754 0%, rgba(252, 74, 4, 0.414) 100%);
+  background: linear-gradient(104deg, #4b09ff 0%, rgba(252, 87, 4, 0.414) 100%);
   color: white;
   padding: 8px 24px;
   font-size: 15px;
   font-weight: normal;
-  box-shadow: 0px 8px 20px rgba(216, 49, 91, 0.1);
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
 }
 body .btn:hover {
-  background-color: #2EE59D;
-  box-shadow: 0px 15px 32px rgba(216, 49, 91, 0.2);
-  color: #fff;
+  background-color: #f74302;
   transform: translateY(-4px);
 }
 body .btn--signUp, body .btn--login {
@@ -103,7 +100,6 @@ body .btn--delete {
 }
 body .btn--delete:hover {
   background-color: #a24218;
-  box-shadow: 0px 15px 32px rgba(216, 49, 91, 0.2);
 }
 body .categories {
   width: 210px;

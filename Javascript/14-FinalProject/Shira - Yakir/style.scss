@@ -116,11 +116,13 @@ body {
     }
 
     .heading {
+        //sign up & login titles 
         text-align: center;
         margin-bottom: 48px;
         margin-top: 0;
         font-size: 38px;
-        background: linear-gradient(90deg, rgb(97, 61, 193) 0%, rgba(216, 49, 91, 1) 100%);
+        // background: linear-gradient(90deg, rgb(52, 65, 146) 0%, rgb(247, 88, 2) 100%);
+        background: rgb(19, 19, 121);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -158,21 +160,23 @@ body {
         height: 4em;
         border-radius: 10em;
         border: none;
-        background: rgb(97, 61, 193);
+        // background: rgb(97, 61, 193);
         // background: linear-gradient(104deg, rgba(97, 61, 193, 1) 0%, rgba(216, 49, 91, 1) 100%);
-        background: linear-gradient(104deg, rgba(97, 61, 193, 1) 0%, rgba(160, 9, 9, 0.414) 100%);
+        background: linear-gradient(104deg, rgb(28, 7, 84) 0%, rgba(252, 74, 4, 0.414) 100%);
+        background: linear-gradient(104deg, rgb(75, 9, 255) 0%, rgba(252, 87, 4, 0.414) 100%);
+
         color: white;
         padding: 8px 24px;
         font-size: 15px;
         font-weight: normal;
-        box-shadow: 0px 8px 20px rgba(216, 49, 91, 0.1);
+        // box-shadow: 0px 8px 20px rgba(216, 49, 91, 0.1);
         transition: all 0.3s ease 0s;
         cursor: pointer;
         outline: none;
         &:hover {
-            background-color: #2EE59D;
-            box-shadow: 0px 15px 32px rgba(216, 49, 91, 0.2);
-            color: #fff;
+            background-color:  rgb(247, 67, 2);
+            // box-shadow: 0px 15px 32px rgba(216, 49, 91, 0.2);
+            // color: #fff;
             transform: translateY(-4px);
         }
 
@@ -194,7 +198,7 @@ body {
 
             &:hover{
                 background-color: #a24218;
-                box-shadow: 0px 15px 32px rgba(216, 49, 91, 0.2);
+                // box-shadow: 0px 15px 32px rgba(216, 49, 91, 0.2);
             }
         }
 
@@ -311,6 +315,7 @@ body {
 
         }
         #addTaskForm{
+            // visibility: hidden;
             position: absolute;
             top:220px;
             right:280px;
