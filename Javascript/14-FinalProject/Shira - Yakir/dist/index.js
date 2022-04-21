@@ -6,6 +6,7 @@ var formconfirmPassword = document.querySelector("#repeatPassword");
 var formSignUpMsg = document.querySelector("#signUpMsg");
 var formLoginMsg = document.querySelector("#loginMsg");
 var taskForm = document.querySelector('#addTaskForm');
+// const addNewCategory: HTMLElement = document.querySelector('.addCategory');
 var newCategory = document.querySelector('.categories');
 var categoriesSelect = document.querySelector('#selectCategory');
 var tasksArray = []; // arays that contain the tasks
@@ -125,13 +126,13 @@ function deleteTask(taskIndex) {
     tasksViewUpdate();
     console.dir(tasksArray);
 }
-function addCategory(ev) {
-    CategoryArray.push(ev.target.value);
-    var li = document.createElement("li");
-    li.innerText = ev.target.value;
-    newCategory.appendChild(li);
-    console.dir(CategoryArray);
-}
+// function addCategory(ev) {
+//     CategoryArray.push(ev.target.value);
+//     let li = document.createElement("li");
+//     li.innerText = ev.target.value;
+//     newCategory.appendChild(li);
+//     console.dir(CategoryArray);
+// }
 function addCategoryUpdateView(CategoryArray) {
     for (var i = 0; i < CategoryArray.length; i++) {
         var li = document.createElement("li");
@@ -173,3 +174,17 @@ function selctCtg(event) {
 //        option.innerHTML = CategoryArray[i]
 //     } 
 // }
+function addNewCtg(event) {
+    try {
+        if (event.keyCode == 13) {
+            CategoryArray.push(event.target.value);
+            var li = document.createElement("li");
+            li.innerText = event.target.value;
+            newCategory.appendChild(li);
+            console.dir(CategoryArray);
+        }
+    }
+    catch (error) {
+        console.error(error);
+    }
+}

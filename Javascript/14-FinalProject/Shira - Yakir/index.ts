@@ -6,7 +6,8 @@ const formPassword: HTMLInputElement = document.querySelector("#password");
 const formconfirmPassword: HTMLInputElement = document.querySelector("#repeatPassword");
 const formSignUpMsg: HTMLElement = document.querySelector("#signUpMsg");
 const formLoginMsg: HTMLElement = document.querySelector("#loginMsg");
-const taskForm:HTMLElement = document.querySelector('#addTaskForm')
+const taskForm: HTMLElement = document.querySelector('#addTaskForm');
+// const addNewCategory: HTMLElement = document.querySelector('.addCategory');
 let newCategory = document.querySelector('.categories');
 let categoriesSelect = document.querySelector('#selectCategory')
 
@@ -39,26 +40,26 @@ function handleSignUp(event) {
 
 //    Login
 function handleLogin(ev) {
-    try{
-    ev.preventDefault();
-    const LoginUserName: HTMLInputElement =
-        document.querySelector("#LoginUserName");
-    const LoginPassword: HTMLInputElement =
-        document.querySelector("#LoginPassword");
-    const htmlBody: HTMLElement = document.querySelector("body");
+    try {
+        ev.preventDefault();
+        const LoginUserName: HTMLInputElement =
+            document.querySelector("#LoginUserName");
+        const LoginPassword: HTMLInputElement =
+            document.querySelector("#LoginPassword");
+        const htmlBody: HTMLElement = document.querySelector("body");
 
-    const loginStatus = checkLogin(LoginUserName.value, LoginPassword.value);
-    if (loginStatus) {
-        formLoginMsg.innerHTML = `success Login`;
-        window.location.href = "Tasks.html";
+        const loginStatus = checkLogin(LoginUserName.value, LoginPassword.value);
+        if (loginStatus) {
+            formLoginMsg.innerHTML = `success Login`;
+            window.location.href = "Tasks.html";
 
-    } else {
-        htmlBody.style.background = "red";
-        formLoginMsg.innerHTML = `Login Failed`;
+        } else {
+            htmlBody.style.background = "red";
+            formLoginMsg.innerHTML = `Login Failed`;
+        }
+    } catch (error) {
+        console.error(error);
     }
-} catch (error) {
-    console.error(error);
-  }
 
 }
 
@@ -126,22 +127,22 @@ function updateHtmlTaskView(taskIndex) {
 }
 
 // clean the tasks view then recrate the html element for new array
-function tasksViewUpdate(){
+function tasksViewUpdate() {
 
     document.querySelector(".tasks").innerHTML = ""; //clean current view
-    
+
     // insert update view
-    for(let i=0; i<tasksArray.length; i++){
+    for (let i = 0; i < tasksArray.length; i++) {
         updateHtmlTaskView(i);
     }
-    }
+}
 
 // demo data for Development and Testing process
 
 function addTask_demo_DATA() {
     //------------------
     //------ create example Category-----
-    CategoryArray.push("General","Work","Studies");
+    CategoryArray.push("General", "Work", "Studies");
     addCategoryUpdateView(CategoryArray);
     //-------------------------------------------
 
@@ -163,18 +164,19 @@ function deleteTask(taskIndex) {
     console.dir(tasksArray);
 }
 
-function addCategory(ev){
-    CategoryArray.push(ev.target.value);
-    let li = document.createElement("li");
-    li.innerText = ev.target.value ;
-    newCategory.appendChild(li);
-    console.dir(CategoryArray);
-}
+// function addCategory(ev) {
+//     CategoryArray.push(ev.target.value);
+//     let li = document.createElement("li");
+//     li.innerText = ev.target.value;
+//     newCategory.appendChild(li);
+//     console.dir(CategoryArray);
+// }
 
-function addCategoryUpdateView(CategoryArray){
-    for(let i=0; i<CategoryArray.length; i++){
+
+function addCategoryUpdateView(CategoryArray) {
+    for (let i = 0; i < CategoryArray.length; i++) {
         let li = document.createElement("li");
-        li.innerText = CategoryArray[i] ;
+        li.innerText = CategoryArray[i];
         newCategory.appendChild(li);
         console.dir(CategoryArray);
     }
@@ -182,19 +184,19 @@ function addCategoryUpdateView(CategoryArray){
 
 
 
-function submitAddTaskForm(event){
+function submitAddTaskForm(event) {
     event.preventDefault();
-    let newTask = new task(event.target.taskTitle.value, 
-     event.target.Content.value, new Date(event.target.dueDate.value), false, `test category`);
+    let newTask = new task(event.target.taskTitle.value,
+        event.target.Content.value, new Date(event.target.dueDate.value), false, `test category`);
     tasksArray.push(newTask);
     updateHtmlTaskView(tasksArray.length - 1);
-    
+
     // for debug console purpose
     console.dir(tasksArray);
     console.log(`tasks has ${tasksArray.length} objects`);
 }
 
-function handleSelectCategory(){
+function handleSelectCategory() {
     for (let i = 0; i < CategoryArray.length; i++) {
         let option = document.createElement("option");
         option.value = CategoryArray[i];
@@ -205,10 +207,10 @@ function handleSelectCategory(){
 }
 handleSelectCategory()
 
-function selctCtg(event){
+function selctCtg(event) {
     let choice = '';
     choice = event.target.value
-    let input:any = document.querySelector('.ctgInput')
+    let input: any = document.querySelector('.ctgInput')
     input.innerHTML = choice;
     categoriesSelect.remove();
 }
@@ -223,4 +225,20 @@ function selctCtg(event){
 //        option.innerHTML = CategoryArray[i]
 //     } 
 // }
+
+function addNewCtg(event) {
+    try{
+        if(event.keyCode == 13) {
+            CategoryArray.push(event.target.value);
+            let li = document.createElement("li");
+            li.innerText = event.target.value;
+            newCategory.appendChild(li);
+            console.dir(CategoryArray);
+        }
+    }
+    catch (error) {
+        console.error(error);
+    }
+}
+
 
