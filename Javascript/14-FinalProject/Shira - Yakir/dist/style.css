@@ -133,6 +133,18 @@ body .tasksPage {
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   margin: 25px;
 }
+body .tasksPage .addTaskBtn {
+  height: 50px;
+  width: 200px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.186);
+}
+body .tasksPage .addTaskBtn .taskText {
+  color: rgba(0, 0, 0, 0.563);
+  margin-left: 20px;
+  text-rendering: auto;
+}
 body .tasksPage .addCategory {
   grid-area: addCategory;
 }
@@ -196,6 +208,7 @@ body .tasksPage #addTaskForm {
   position: absolute;
   top: 220px;
   right: 280px;
+  visibility: hidden;
 }
 body .tasksPage #addTaskForm #selectCategory {
   width: fit-content;

@@ -5,6 +5,7 @@ var formPassword = document.querySelector("#password");
 var formconfirmPassword = document.querySelector("#repeatPassword");
 var formSignUpMsg = document.querySelector("#signUpMsg");
 var formLoginMsg = document.querySelector("#loginMsg");
+var addTaskButton = document.querySelector('.addTaskBtn');
 var taskForm = document.querySelector('#addTaskForm');
 // const addNewCategory: HTMLElement = document.querySelector('.addCategory');
 var newCategory = document.querySelector('.categories');
@@ -142,6 +143,10 @@ function submitAddTaskForm(event) {
     // for debug console purpose
     console.dir(tasksArray);
     console.log("tasks has " + tasksArray.length + " objects");
+}
+addTaskButton.addEventListener("click", openTaskForm);
+function openTaskForm() {
+    taskForm.style.visibility = 'visible';
 }
 function handleSelectCategory() {
     for (var i = 0; i < CategoryArray.length; i++) {

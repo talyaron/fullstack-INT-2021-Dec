@@ -6,6 +6,7 @@ const formPassword: HTMLInputElement = document.querySelector("#password");
 const formconfirmPassword: HTMLInputElement = document.querySelector("#repeatPassword");
 const formSignUpMsg: HTMLElement = document.querySelector("#signUpMsg");
 const formLoginMsg: HTMLElement = document.querySelector("#loginMsg");
+const addTaskButton: HTMLElement = document.querySelector('.addTaskBtn');
 const taskForm: HTMLElement = document.querySelector('#addTaskForm');
 // const addNewCategory: HTMLElement = document.querySelector('.addCategory');
 let newCategory = document.querySelector('.categories');
@@ -189,6 +190,12 @@ function submitAddTaskForm(event) {
     console.log(`tasks has ${tasksArray.length} objects`);
 }
 
+
+addTaskButton.addEventListener("click", openTaskForm);
+function openTaskForm() {
+    taskForm.style.visibility = 'visible'
+}
+
 function handleSelectCategory() {
     for (let i = 0; i < CategoryArray.length; i++) {
         let option = document.createElement("option");
@@ -200,7 +207,7 @@ function handleSelectCategory() {
 }
 handleSelectCategory()
 
-let choice:string = '';
+let choice: string = '';
 
 function selctCtg(event) {
     choice = event.target.value
@@ -210,8 +217,8 @@ function selctCtg(event) {
 }
 
 function addNewCtg(event) {
-    try{
-        if(event.keyCode == 13) {
+    try {
+        if (event.keyCode == 13) {
             CategoryArray.push(event.target.value);
             let li = document.createElement("li");
             li.innerText = event.target.value;
