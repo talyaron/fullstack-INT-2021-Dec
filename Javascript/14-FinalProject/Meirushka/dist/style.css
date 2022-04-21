@@ -1,0 +1,55 @@
+/* Global styles */
+html, * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: 1.8rem/1.56 sans-serif;
+  color: #360066;
+  margin: 0;
+  padding: 0 3.2rem 2.4rem;
+  background: rgba(170, 130, 238, 0.595);
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+header, #todo-form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#007580, #bb00ff, #00ccff);
+  border: 5px;
+  border-style: double;
+  border-radius: 5vh;
+}
+
+h1 {
+  color: aqua;
+}
+
+#formTask, #formAddButton, #formDateTime {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border-color: #3d6600dc;
+  background-color: lavender;
+  border: 1vh;
+  border-style: double;
+}
+
+#formAddButton {
+  background-color: red;
+  border-radius: 3vh;
+  padding: 2vh;
+}
+
+header {
+  background-image: url(https://cdn.pixabay.com/photo/2020/08/07/15/36/matrix-5470930__340.jpg);
+  background-repeat: repeat-x;
+}
