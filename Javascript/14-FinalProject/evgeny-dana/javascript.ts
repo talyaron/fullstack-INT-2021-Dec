@@ -135,8 +135,10 @@ function outOfStockFunc(event, productId) {
   
   if (inStock === '0') {
      stock.style.display = "block"
+     stock.classList.add('upload-product--blur')
   } else {
     stock.style.display = "none"
+    
   }
   
 }
