@@ -122,6 +122,7 @@ function updateHtmlTaskView(taskIndex) {
     <input type="checkbox" class="inputCheck" name="check" id="checkboxDone">
     <p class="done">Done</p>
     <img class="editTaskBtn" src="./images/edit.png" alt="">
+    <p id="EditText">Edit</p>
     </div>
     `;
 }

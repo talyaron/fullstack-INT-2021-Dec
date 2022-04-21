@@ -173,19 +173,20 @@ body .tasksPage .tasks .task {
 body .tasksPage .tasks .inputCheck {
   position: relative;
   top: -225px;
-  left: 580px;
+  left: 608px;
   width: 20px;
   height: 45px;
   cursor: pointer;
 }
 body .tasksPage .tasks .done {
   position: relative;
-  top: -302px;
+  top: -267px;
   left: 610px;
   width: 20px;
   height: 45px;
   color: #e5652e;
   font-weight: bolder;
+  font-size: smaller;
 }
 body .tasksPage .tasks .inputDate {
   position: absolute;
@@ -203,6 +204,14 @@ body .tasksPage .tasks .editTaskBtn {
   height: 28px;
   top: 10px;
   cursor: pointer;
+}
+body .tasksPage .tasks #EditText {
+  position: absolute;
+  right: 10px;
+  top: 25px;
+  font-weight: bolder;
+  color: #e5652e;
+  font-size: smaller;
 }
 body .tasksPage #addTaskForm {
   position: absolute;
