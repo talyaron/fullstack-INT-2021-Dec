@@ -29,7 +29,6 @@ function handleAddTask(event: any) {
   task.classList.add('task');
   task.setAttribute('id', `${generateid()}`);
   timerStarter(result.heading, result.setReminderDate);
-  timer();
   
   // Append a new task to the tasks container
   task.innerHTML = `<div class='heading'>${result.heading}</div>
@@ -45,12 +44,6 @@ function handleAddTask(event: any) {
   console.log(task);
 }
 
-function timer () {
-  const alltasks = document.querySelectorAll('.task.id');
-  alltasks.forEach(task => {
-    timerStarter(task.querySelector('.heading').innerHTML, task.querySelector('.setReminderDate').innerHTML);
-  })
-}
 
 
 
@@ -112,7 +105,7 @@ function timerStarter(heading, setReminderDate) {
     const timeleft = countDownDate - now;
     const textTime = timeToText(timeleft);
     // Result is output to the specific element
-    document.querySelector(".time").innerHTML = textTime;
+    const time = document.querySelector(".time");
     // Display the message when countdown is over
     if (timeleft <= 0) {
       clearInterval(runTimer);

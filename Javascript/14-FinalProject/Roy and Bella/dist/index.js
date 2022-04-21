@@ -19,19 +19,12 @@ function handleAddTask(event) {
     task.classList.add('task');
     task.setAttribute('id', "" + generateid());
     timerStarter(result.heading, result.setReminderDate);
-    timer();
     // Append a new task to the tasks container
     task.innerHTML = "<div class='heading'>" + result.heading + "</div>\n    <div class='description'>" + result.description + "</div>\n    <div class='setReminderDate'>" + result.setReminderDate + "</div>\n    <div class=\"time\"></div> \n    <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>";
     taskContainer.append(task);
     tasks.push(result);
     event.target.reset();
     console.log(task);
-}
-function timer() {
-    var alltasks = document.querySelectorAll('.task.id');
-    alltasks.forEach(function (task) {
-        timerStarter(task.querySelector('.heading').innerHTML, task.querySelector('.setReminderDate').innerHTML);
-    });
 }
 // Remove tasks.
 function removeTask(event) {
@@ -83,7 +76,7 @@ function timerStarter(heading, setReminderDate) {
         var timeleft = countDownDate - now;
         var textTime = timeToText(timeleft);
         // Result is output to the specific element
-        document.querySelector(".time").innerHTML = textTime;
+        var time = document.querySelector(".time");
         // Display the message when countdown is over
         if (timeleft <= 0) {
             clearInterval(runTimer);
