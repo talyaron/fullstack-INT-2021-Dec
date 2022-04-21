@@ -164,13 +164,7 @@ function deleteTask(taskIndex) {
     console.dir(tasksArray);
 }
 
-// function addCategory(ev) {
-//     CategoryArray.push(ev.target.value);
-//     let li = document.createElement("li");
-//     li.innerText = ev.target.value;
-//     newCategory.appendChild(li);
-//     console.dir(CategoryArray);
-// }
+
 
 
 function addCategoryUpdateView(CategoryArray) {
