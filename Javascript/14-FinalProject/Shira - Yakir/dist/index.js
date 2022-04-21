@@ -42,7 +42,6 @@ function handleLogin(ev) {
         var htmlBody = document.querySelector("body");
         var loginStatus = checkLogin(LoginUserName.value, LoginPassword.value);
         if (loginStatus) {
-            htmlBody.style.background = "green";
             formLoginMsg.innerHTML = "success Login";
             window.location.href = "Tasks.html";
         }

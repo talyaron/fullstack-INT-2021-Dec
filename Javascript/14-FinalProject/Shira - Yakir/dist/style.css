@@ -70,7 +70,7 @@ body .btn {
   height: 4em;
   border-radius: 10em;
   border: none;
-  background: linear-gradient(104deg, #1c0754 0%, rgba(252, 74, 4, 0.414) 100%);
+  background: linear-gradient(104deg, #1c0754 0%, #f74302 100%);
   background: linear-gradient(104deg, #4b09ff 0%, rgba(252, 87, 4, 0.414) 100%);
   color: white;
   padding: 8px 24px;

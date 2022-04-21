@@ -49,7 +49,6 @@ function handleLogin(ev) {
 
     const loginStatus = checkLogin(LoginUserName.value, LoginPassword.value);
     if (loginStatus) {
-        htmlBody.style.background = "green";
         formLoginMsg.innerHTML = `success Login`;
         window.location.href = "Tasks.html";
 
