@@ -69,6 +69,8 @@ function checkLogin(check_username: String, check_password: string): Boolean {
     else return false;
 }
 
+
+
 //    tasks Page header Date VIEW
 function tasksPage() {
     let today = new Date();
@@ -83,16 +85,13 @@ tasksPage()
 
 // create NEW task in the array then display it on HTML
 function addTask(event) {
-
     // pass the arguments from the event to the object constractor 
     // and/or use some demo data for development and testing untile all set
-
     let title = event.target.value
     let content = `test content`;
     let dueDate = new Date(); // set current date
     let status = false;
     let category = "test category";
-
     //-----------------------------------------------------------------
     let newTask = new task(title, content, dueDate, false, category);
     tasksArray.push(newTask);
@@ -181,7 +180,7 @@ function addCategoryUpdateView(CategoryArray) {
 function submitAddTaskForm(event) {
     event.preventDefault();
     let newTask = new task(event.target.taskTitle.value,
-        event.target.Content.value, new Date(event.target.dueDate.value), false, `test category`);
+        event.target.Content.value, new Date(event.target.dueDate.value), false, choice);
     tasksArray.push(newTask);
     updateHtmlTaskView(tasksArray.length - 1);
 
@@ -201,8 +200,9 @@ function handleSelectCategory() {
 }
 handleSelectCategory()
 
+let choice:string = '';
+
 function selctCtg(event) {
-    let choice = '';
     choice = event.target.value
     let input: any = document.querySelector('.ctgInput')
     input.innerHTML = choice;

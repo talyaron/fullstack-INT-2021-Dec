@@ -136,7 +136,7 @@ function addCategoryUpdateView(CategoryArray) {
 }
 function submitAddTaskForm(event) {
     event.preventDefault();
-    var newTask = new task(event.target.taskTitle.value, event.target.Content.value, new Date(event.target.dueDate.value), false, "test category");
+    var newTask = new task(event.target.taskTitle.value, event.target.Content.value, new Date(event.target.dueDate.value), false, choice);
     tasksArray.push(newTask);
     updateHtmlTaskView(tasksArray.length - 1);
     // for debug console purpose
@@ -152,8 +152,8 @@ function handleSelectCategory() {
     }
 }
 handleSelectCategory();
+var choice = '';
 function selctCtg(event) {
-    var choice = '';
     choice = event.target.value;
     var input = document.querySelector('.ctgInput');
     input.innerHTML = choice;
