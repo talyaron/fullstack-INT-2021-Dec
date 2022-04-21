@@ -28,24 +28,19 @@ function handleAddTask(event: any) {
   let task = document.createElement('div');
   task.classList.add('task');
   task.setAttribute('id', `${generateid()}`);
-  timerStarter(result.heading, result.setReminderDate);
-  
+  let choosenId= task.id
+  timerStarter(result.heading, result.setReminderDate, choosenId);  
   // Append a new task to the tasks container
   task.innerHTML = `<div class='heading'>${result.heading}</div>
     <div class='description'>${result.description}</div>
     <div class='setReminderDate'>${result.setReminderDate}</div>
-    <div class="time"></div> 
+    <div class='time'></div>
     <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>`;
 
   taskContainer.append(task);
   tasks.push(result);
   event.target.reset()
-  
-  console.log(task);
 }
-
-
-
 
 // Remove tasks.
 function removeTask(event) {
@@ -94,18 +89,19 @@ function handleOpenForm(event) {
 
 
 
-function timerStarter(heading, setReminderDate) {
+function timerStarter(heading, setReminderDate, choosenId) {
 
   const newReminderDate: any = setReminderDate;
   const countDownDate: number = new Date(newReminderDate).getTime();
   const runTimer = setInterval(showTime, 1000);
-
+  
   function showTime() {
     const now: number = new Date().getTime();
     const timeleft = countDownDate - now;
     const textTime = timeToText(timeleft);
     // Result is output to the specific element
-    const time = document.querySelector(".time");
+    let time:any = document.getElementById(choosenId)
+    time.children[3].innerHTML=textTime 
     // Display the message when countdown is over
     if (timeleft <= 0) {
       clearInterval(runTimer);
@@ -113,6 +109,7 @@ function timerStarter(heading, setReminderDate) {
     }
   }
 }
+
 
 
 // Calculating the days, hours, minutes and seconds left
@@ -143,3 +140,4 @@ function generateid() {
   }
   return id();
 }
+
