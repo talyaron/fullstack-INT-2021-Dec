@@ -215,17 +215,6 @@ function selctCtg(event) {
     categoriesSelect.remove();
 }
 
-// document.getElementById("myBtn").addEventListener("click", displayDate);
-
-
-// function handleChooseCategory(event:any){
-//     let option = document.createElement("option");
-//     choice = event.target.value
-//     for (let i = 0; i < CategoryArray.length; i++) {
-//        option.innerHTML = CategoryArray[i]
-//     } 
-// }
-
 function addNewCtg(event) {
     try{
         if(event.keyCode == 13) {
