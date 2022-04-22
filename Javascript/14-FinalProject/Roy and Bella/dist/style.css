@@ -15,8 +15,8 @@ body {
 
 h1 {
   font-size: 1.5em;
-  padding: 0.1em 0.9em 0.1em 0.9em;
-  font-weight: 500;
+  padding: 0.1em 1em 0.1em 1em;
+  font-weight: 600;
 }
 
 .header {
@@ -25,8 +25,10 @@ h1 {
   background-color: white;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   box-sizing: border-box;
   padding: 1.4em;
+  padding-right: 1em;
   box-shadow: rgba(100, 100, 111, 0.119) 0px 7px 14px 0px;
 }
 .header .logo {
@@ -42,31 +44,34 @@ h1 {
   justify-content: space-between;
   align-items: center;
   margin-top: 0.4em;
+  padding: 0.5em 0;
 }
-.upperSection .allTasksBtn {
+.upperSection .sortingBtn {
   height: 3.2em;
   width: 8em;
-  margin-right: 1.5em;
-  background-color: #613dc1;
+  margin-right: 1.2em;
+  background-color: white;
   border: none;
-  color: white;
+  color: #595959;
   border-radius: 0.4em;
+  border: 1px solid #d7d7d7;
+  font-size: 1em;
 }
 
 .task {
   width: 100%;
-  max-height: 10em;
+  max-height: 12.2em;
   padding: 1.5em;
   border-radius: 8px;
   border: 1px solid #ededed;
   background-color: white;
   box-sizing: border-box;
   box-shadow: rgba(100, 100, 111, 0.119) 0px 7px 14px 0px;
-  margin-bottom: 0.8em;
+  margin-bottom: 1.3em;
   position: relative;
 }
 .task .heading {
-  font-size: 1.1em;
+  font-size: 1.2em;
   margin-bottom: 0.8em;
   font-weight: 600;
 }
@@ -83,7 +88,7 @@ h1 {
 }
 .task .description,
 .task .setReminderDate {
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: 300;
   color: gray;
   margin-bottom: 0.5em;
@@ -97,12 +102,15 @@ h1 {
   margin-bottom: 0;
   color: black;
 }
-.task .setReminderDate {
-  background-color: #e5defa;
-  padding: 0.4em;
+.task .time {
+  margin: 1em 0;
+  background-color: #eae6f7;
+  padding: 0.8em;
   border-radius: 0.3em;
-  font-weight: 400;
-  color: #3c3c3c;
+  font-weight: 600;
+  font-size: 1em;
+  color: #613dc1;
+  max-width: 16ch;
 }
 .task img {
   position: absolute;
@@ -112,8 +120,8 @@ h1 {
 }
 
 .app_wrapper {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   background-color: #f4f4f4;
   position: relative;
 }
@@ -123,21 +131,22 @@ h1 {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 24px 0px;
   border-radius: 3em;
   padding: 0.4em;
+  color: white;
   text-align: center;
   font-size: 2em;
   line-height: 1.1;
   position: absolute;
   bottom: 1.3em;
   right: 1em;
-  background-color: white;
+  background: linear-gradient(60deg, #613dc1 0%, #d8315b 100%);
   cursor: pointer;
 }
 .app_wrapper .tasksContainer {
   height: 66%;
   max-height: 74%;
+  width: 90%;
   overflow-y: scroll;
   overflow-x: hidden;
-  width: 90%;
   margin: auto;
   margin-top: 0.8em;
   padding: 1.2em;
@@ -147,8 +156,12 @@ h1 {
   align-items: center;
   box-sizing: border-box;
   border-radius: 0.8em;
-  background: white;
   background: linear-gradient(180deg, white 0%, rgba(255, 255, 255, 0.7525603992) 56%, rgba(255, 255, 255, 0) 100%);
+}
+@media (min-width: 768px) {
+  .app_wrapper .tasksContainer {
+    width: 97.4%;
+  }
 }
 
 .addTask {
@@ -203,7 +216,7 @@ h1 {
   margin-bottom: 0.3em;
   border-radius: 0.5em;
   border: none;
-  color: #613dc1;
+  color: black;
   padding: 1em;
   font-size: 1em;
   box-sizing: border-box;

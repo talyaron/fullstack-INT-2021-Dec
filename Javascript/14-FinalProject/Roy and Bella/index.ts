@@ -42,7 +42,18 @@ function handleAddTask(event: any) {
   event.target.reset()
 }
 
-// Remove tasks.
+// Sort tasks by date
+function handleSorting(event: any) {
+  event.preventDefault();
+
+  // const elements = event.target.elements;
+  // const result: task = {
+  //   heading: elements.heading.value,
+  //   description: elements.description.value,
+  //   setReminderDate: elements.setReminderDate.value
+  };
+
+// Remove tasks
 function removeTask(event) {
   event.preventDefault();
   const button = event.target;
@@ -53,7 +64,7 @@ function removeTask(event) {
   div.removeChild(array);
 }
 
-// Add new task (using 'handleTask' form).
+// Add new task (using 'handleTask' form)
 function handleOpenForm(event) {
   event.preventDefault();
   const addBtn = document.querySelector('.addBtn');
@@ -87,8 +98,7 @@ function handleOpenForm(event) {
   }
 }
 
-
-
+// Time starter function
 function timerStarter(heading, setReminderDate, choosenId) {
 
   const newReminderDate: any = setReminderDate;
@@ -110,8 +120,6 @@ function timerStarter(heading, setReminderDate, choosenId) {
   }
 }
 
-
-
 // Calculating the days, hours, minutes and seconds left
 function timeToText(time: number) {
   if (time >= 0) {
@@ -119,7 +127,7 @@ function timeToText(time: number) {
     const hours = timeToString(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
     const minutes = timeToString(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
     const seconds = timeToString(Math.floor((time % (1000 * 60)) / 1000));
-    return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    return `${days}d - ${hours}h - ${minutes}m - ${seconds}s`;
   }
   return '0d 0h 0m 0s';
 }
@@ -131,6 +139,7 @@ function timeToString(time: number): string {
   }
   return `${time}`;
 }
+
 //set uniqid to the array's objects
 function generateid() {
   let id = () => {

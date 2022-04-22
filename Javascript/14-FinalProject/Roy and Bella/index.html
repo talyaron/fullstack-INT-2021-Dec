@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Taskify App</title>
-    <link rel="stylesheet" href="dist/style.css">
+    <link rel='stylesheet' href='dist/style.css'>
 </head>
 
 <body>
@@ -14,11 +14,12 @@
     <div class='app_wrapper'>
         <div class='header'>
             <h3 class='logo'>Taskify</h3>
+            <img class='menuIcon' src='./images/menuIcon.svg' alt='menuIcon'>
         </div>
 
-        <div class="upperSection">
-            <h1>Your daily tasks</h1>
-            <button class='allTasksBtn'>All tasks</button>
+        <div class='upperSection'>
+            <h1>Your tasks</h1>
+            <button class='sortingBtn' type='submit' onclick='handleSorting(event)'>Sort by date</button>
         </div>
 
         <!-- Tasks container-->
@@ -28,13 +29,13 @@
         <div type='submit' class='addBtn' onclick='handleOpenForm(event)'> + </div>
 
 
-        <!-- Recieves the data that have been submitted, and pushes it into a " fake data base" array (tasks) -->
-        <form class="addTask slide" onsubmit='handleAddTask(event)'>
-            <label for="heading">Write a title</label>
+        <!-- Recieves the data that have been submitted, and pushes it into a ' fake data base' array (tasks) -->
+        <form class='addTask slide' onsubmit='handleAddTask(event)'>
+            <label for='heading'>Write a title</label>
             <input type='text' name='heading' placeholder='Task name' required>
-            <label for="description">Describe your task</label>
+            <label for='description'>Describe your task</label>
             <input type='text' name='description' class='description' placeholder='description' required>
-            <label for="setReminderDate">Set a reminder</label>
+            <label for='setReminderDate'>Set a reminder</label>
             <input type='datetime-local' name='setReminderDate' required>
 
             <button type='submit' class='saveBtn'>Save task</button>
@@ -43,7 +44,7 @@
     </div>
 
 
-    <script src="./dist/index.js"></script>
+    <script src='./dist/index.js'></script>
 </body>
 
 </html>
