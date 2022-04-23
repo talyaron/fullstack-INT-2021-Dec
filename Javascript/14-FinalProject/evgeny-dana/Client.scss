@@ -1,0 +1,42 @@
+ //Client Side 
+ .top_wrapper {
+    height: 300px;
+    width: 200px;
+    display: flex;
+    gap: 40px;       
+
+
+.category {
+    display: flex;
+    flex-direction: column;        
+    width: 300px;
+    img{
+        width: 100%;
+    }
+}
+}
+
+.Client_wrapper{
+    height: 70vh;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 150px;
+    
+
+}
+
+    
+.item{
+        background-color: rgb(255, 220, 233);
+        height: 300px;
+        width: 150px;
+        border-style:solid black 2px;
+        gap: 30px;
+        perspective: 50px;
+        box-shadow: gray 2px;
+        
+    }
+
+
