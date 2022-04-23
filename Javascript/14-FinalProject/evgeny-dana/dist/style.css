@@ -107,8 +107,13 @@ body .Server_wrapper #root .upload-product--blur {
   overflow: hidden;
 }
 body .Server_wrapper #root .updateProduct {
-  display: none;
-  font-size: larger;
+  background-color: #faedcd54;
+  box-shadow: 2px 2px 5px #faedcd6e;
+  padding: 15px;
+  border-radius: 10%;
+  gap: 5px;
+  height: 10rem;
+  width: 15rem;
 }
 body .Server_wrapper #root img {
   width: 100%;

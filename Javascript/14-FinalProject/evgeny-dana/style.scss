@@ -109,8 +109,14 @@ body{
                 opacity: 0.5; background-color: rgb(146, 148, 144); overflow:hidden
             }
             .updateProduct{
-                display: none;
-                font-size: larger; 
+            background-color: #faedcd54;
+            box-shadow: 2px 2px 5px #faedcd6e;
+            padding: 15px;
+            border-radius: 10%;
+            gap: 5px;
+            height: 10rem;
+            width: 15rem;
+                
             }
             img{
                 width: 100%;
