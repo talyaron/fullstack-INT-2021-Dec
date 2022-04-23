@@ -54,12 +54,11 @@ function renderProducts() {
       <div class="upload-product"  >
               <div class="outOfStuckText" id="noStock-${product.id}" style="display:none"><h2>out of stock</h2></div>
             <img src=${product.image}>
-            <div class="test2" >
-                  <div>name:${product.name}</div>
-                  <div>Price: ${product.price}</div>
+            <div class="productInfo" >
+                  <p>name:${product.name}</p>
+                  <p>Price: ${product.price}</p>
                   <button onclick="handleRemoveProduct('${product.id}')" class="btnDelete">delete</button>
                   <button onclick="showUpdateMenu('${product.id}')" class="btnUpdate">update</button>
-                  <p id="stock_Text"> stock</p>
                   <input onchange="outOfStockFunc(event, '${product.id}')" class="NumInput" name="stockNum" type="number" value="1" min="0" > 
             </div>
         </div>

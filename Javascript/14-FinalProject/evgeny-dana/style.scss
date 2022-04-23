@@ -2,16 +2,36 @@ body{
         height: 100vh ;
         background: linear-gradient(to left, #ff7900, #8800ff);
         text-align:center;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+        // font-family: 'Raleway', sans-serif;
+        // box-sizing: border-box;
+        
+*{      
+        font-family:monospace;
+        font-size: 1rem;
+        box-sizing: border-box;
+        button{
+            border-radius: 15%;
+        }
+        button:hover{
+            color: rgb(247, 110, 12);
+            background-color: cornflowerblue;
+            transition: 200ms;
+            cursor: pointer;
+        
+        }
+    }
+    
+   
+    //Admin Side
     .Server_wrapper{
         margin-top: 10px;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-items: left;
+        justify-content: left;
         flex-direction: column;
         gap: 20px;
         font-size: 16px;       
+        text-transform:uppercase;
         button{ 
             color: gray;
             border-radius: 10%;
@@ -44,8 +64,8 @@ body{
             flex-direction: column;
             gap: 50px;
             color: blanchedalmond;
-            cursor: pointer;
-            
+            cursor: pointer;   
+           
             .upload-product{
                 background-color: #240046;
                 height: 12rem;
@@ -55,7 +75,6 @@ body{
                 box-shadow: 2px 2px 5px  rgba(67, 6, 93, 0.721);
                 position: relative;
                 // &:hover {opacity: 0.5; background-color: chartreuse; overflow:hidden}
-                
                 .outOfStuckText{
                     position: absolute;
                     font-size: 2em;
@@ -65,18 +84,14 @@ body{
                     width: 100%;
                     height: 100%;
                     border-radius: 2rem;
-                    
                 }
-                
-                .test2{ 
+                .productInfo{ 
                     display: flex;
                     flex-direction: column;
                     width: 100%;
-                    
                     align-items: center;
                     font-size: larger;
                     position: relative;
-                   
                     #stock_Text{
                         position: absolute;
                         top: 4em;
@@ -84,8 +99,9 @@ body{
                     }
                     .NumInput{
                         position: absolute;
-                        top: 9em;
+                        top: 10rem;
                         width: 4rem;
+                        left: 30%;
                     }
                 }
             }
@@ -94,20 +110,42 @@ body{
             }
             .updateProduct{
                 display: none;
-                font-size: larger;
-                
+                font-size: larger; 
             }
-            
             img{
                 width: 100%;
                 height: 100%;
                 border-radius: 2rem 0 0 2rem;
                 overflow: hidden;
             }
-         
         }
-
     }
+    
+    //Client Side 
+    .Client_wrapper{
+        height: 70vh;
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-top: 150px;
+        
+    
+    }
+
+        
+    .item{
+            background-color: rgb(255, 220, 233);
+            height: 300px;
+            width: 150px;
+            border-style:solid black 2px;
+            gap: 30px;
+            perspective: 50px;
+            box-shadow: gray 2px;
+            
+        }
+    
+    
 
 
 

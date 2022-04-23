@@ -2,16 +2,30 @@ body {
   height: 100vh;
   background: linear-gradient(to left, #ff7900, #8800ff);
   text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body * {
+  font-family: monospace;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+body * button {
+  border-radius: 15%;
+}
+body * button:hover {
+  color: #f76e0c;
+  background-color: cornflowerblue;
+  transition: 200ms;
+  cursor: pointer;
 }
 body .Server_wrapper {
   margin-top: 10px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
   flex-direction: column;
   gap: 20px;
   font-size: 16px;
+  text-transform: uppercase;
 }
 body .Server_wrapper button {
   color: gray;
@@ -68,7 +82,7 @@ body .Server_wrapper #root .upload-product .outOfStuckText {
   height: 100%;
   border-radius: 2rem;
 }
-body .Server_wrapper #root .upload-product .test2 {
+body .Server_wrapper #root .upload-product .productInfo {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -76,15 +90,16 @@ body .Server_wrapper #root .upload-product .test2 {
   font-size: larger;
   position: relative;
 }
-body .Server_wrapper #root .upload-product .test2 #stock_Text {
+body .Server_wrapper #root .upload-product .productInfo #stock_Text {
   position: absolute;
   top: 4em;
   width: 100%;
 }
-body .Server_wrapper #root .upload-product .test2 .NumInput {
+body .Server_wrapper #root .upload-product .productInfo .NumInput {
   position: absolute;
-  top: 9em;
+  top: 10rem;
   width: 4rem;
+  left: 30%;
 }
 body .Server_wrapper #root .upload-product--blur {
   opacity: 0.5;
@@ -100,4 +115,21 @@ body .Server_wrapper #root img {
   height: 100%;
   border-radius: 2rem 0 0 2rem;
   overflow: hidden;
+}
+body .Client_wrapper {
+  height: 70vh;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 150px;
+}
+body .item {
+  background-color: #ffdce9;
+  height: 300px;
+  width: 150px;
+  border-style: solid black 2px;
+  gap: 30px;
+  perspective: 50px;
+  box-shadow: gray 2px;
 }
