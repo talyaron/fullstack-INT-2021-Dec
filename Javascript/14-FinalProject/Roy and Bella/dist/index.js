@@ -1,3 +1,4 @@
+// Tasks array ("data base")
 var tasks = [];
 // Add task form
 function handleAddTask(event) {
@@ -20,6 +21,7 @@ function handleAddTask(event) {
     task.setAttribute('id', "" + generateid());
     var choosenId = task.id;
     timerStarter(result.heading, result.setReminderDate, choosenId);
+    // handleSorting(taskContainer);
     // Append a new task to the tasks container
     task.innerHTML = "<div class='heading'>" + result.heading + "</div>\n    <div class='description'>" + result.description + "</div>\n    <div class='setReminderDate'>" + result.setReminderDate + "</div>\n    <div class='time'></div>\n    <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>";
     taskContainer.append(task);
@@ -119,7 +121,4 @@ function generateid() {
             .toString();
     };
     return id();
-}
-function a(a) {
-    throw new Error("Function not implemented.");
 }

@@ -1,6 +1,7 @@
+// Tasks array ("data base")
 const tasks: Array < task > = [];
 
-// Interface
+// Task interface
 interface task {
   heading: HTMLInputElement,
     description: HTMLInputElement,
@@ -30,6 +31,7 @@ function handleAddTask(event: any) {
   task.setAttribute('id', `${generateid()}`);
   let choosenId = task.id
   timerStarter(result.heading, result.setReminderDate, choosenId);
+  // handleSorting(taskContainer);
   // Append a new task to the tasks container
   task.innerHTML = `<div class='heading'>${result.heading}</div>
     <div class='description'>${result.description}</div>
@@ -148,6 +150,3 @@ function generateid() {
   return id();
 }
 
-function a(a: any) {
-  throw new Error("Function not implemented.");
-}

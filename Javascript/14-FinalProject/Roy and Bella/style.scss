@@ -120,6 +120,34 @@ h1 {
         top: 1.3em;
         width: 1.7em;
     }
+    // @media (min-width: 400px) {
+    //     img {
+    //         position: absolute;
+    //         left: 23em;
+    //         top: 1.3em;
+    //     }
+    // }
+    // @media (min-width: 768px) {
+    //     img {
+    //         position: absolute;
+    //         left: 41em;
+    //         top: 1.3em;
+    //     }
+    // }
+    // @media (max-width: 1200px) {
+    //     img {
+    //         position: absolute;
+    //         left: 67.4em;
+    //         top: 1.3em;
+    //     }
+    // }
+    // @media (max-width: 1920px) {
+    //     img {
+    //         position: absolute;
+    //         left: 97em;
+    //         top: 1.3em;
+    //     }
+    // }
 }
 
 // ----------------------------------------------------------------------------------------------------
@@ -160,7 +188,6 @@ h1 {
         max-height: 100%;
         width: 90%;
         overflow-y: scroll;
-        // overflow-x: hidden;
         margin: auto;
         margin-top: 0.8em;
         padding: 1.2em;
