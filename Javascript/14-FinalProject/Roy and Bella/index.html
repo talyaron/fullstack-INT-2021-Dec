@@ -19,7 +19,7 @@
 
         <div class='upperSection'>
             <h1>Your tasks</h1>
-            <button class='sortingBtn' type='submit' onclick='handleSorting(event)'>Sort by date</button>
+            <button class='sortingBtn' onclick='handleSorting(event)'>Sort by date</button>
         </div>
 
         <!-- Tasks container-->
@@ -27,6 +27,7 @@
 
         <!-- Overlay slides up with a form -->
         <div type='submit' class='addBtn' onclick='handleOpenForm(event)'> + </div>
+        <div class='gradientOverlay'></div>
 
 
         <!-- Recieves the data that have been submitted, and pushes it into a ' fake data base' array (tasks) -->

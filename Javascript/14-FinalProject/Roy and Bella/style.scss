@@ -10,7 +10,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: rgb(38, 38, 38);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -46,7 +46,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     margin-top: 0.4em;
-    padding: 0.5em 0;
+    padding: 0.2em 0;
     .sortingBtn {
         height: 3.2em;
         width: 8em;
@@ -112,7 +112,7 @@ h1 {
         font-weight: 600;
         font-size: 1em;
         color: rgb(97, 61, 193);
-        max-width: 16ch;
+        max-width: 16.2ch;
     }
     img {
         position: absolute;
@@ -124,10 +124,11 @@ h1 {
 
 // ----------------------------------------------------------------------------------------------------
 .app_wrapper {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-color: rgb(244, 244, 244);
     position: relative;
+    overflow: hidden;
     .addBtn {
         width: 1.2em;
         height: 1.2em;
@@ -143,13 +144,23 @@ h1 {
         right: 1em;
         background: linear-gradient(60deg, rgb(97, 61, 193) 0%, rgba(216, 49, 91, 1) 100%);
         cursor: pointer;
+        z-index: 1;
+    }
+    .gradientOverlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 17%;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7525603991596639) 56%, rgba(255, 255, 255, 0) 100%);
+        opacity: 1;
     }
     .tasksContainer {
-        height: 66%;
-        max-height: 74%;
+        height: 74%;
+        max-height: 100%;
         width: 90%;
         overflow-y: scroll;
-        overflow-x: hidden;
+        // overflow-x: hidden;
         margin: auto;
         margin-top: 0.8em;
         padding: 1.2em;

@@ -29,13 +29,11 @@ function handleAddTask(event) {
 // Sort tasks by date
 function handleSorting(event) {
     event.preventDefault();
-    // const elements = event.target.elements;
-    // const result: task = {
-    //   heading: elements.heading.value,
-    //   description: elements.description.value,
-    //   setReminderDate: elements.setReminderDate.value
+    var sortByDate = tasks.sort(function (a, b) {
+        return new Date(a.setReminderDate).getTime() - new Date(b.setReminderDate).getTime();
+    });
+    console.log(sortByDate);
 }
-;
 // Remove tasks
 function removeTask(event) {
     event.preventDefault();
@@ -121,4 +119,7 @@ function generateid() {
             .toString();
     };
     return id();
+}
+function a(a) {
+    throw new Error("Function not implemented.");
 }

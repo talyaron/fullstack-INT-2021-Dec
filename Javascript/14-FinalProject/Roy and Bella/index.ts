@@ -3,8 +3,8 @@ const tasks: Array < task > = [];
 // Interface
 interface task {
   heading: HTMLInputElement,
-  description: HTMLInputElement,
-  setReminderDate: HTMLInputElement
+    description: HTMLInputElement,
+    setReminderDate: HTMLInputElement
 }
 
 // Add task form
@@ -28,8 +28,8 @@ function handleAddTask(event: any) {
   let task = document.createElement('div');
   task.classList.add('task');
   task.setAttribute('id', `${generateid()}`);
-  let choosenId= task.id
-  timerStarter(result.heading, result.setReminderDate, choosenId);  
+  let choosenId = task.id
+  timerStarter(result.heading, result.setReminderDate, choosenId);
   // Append a new task to the tasks container
   task.innerHTML = `<div class='heading'>${result.heading}</div>
     <div class='description'>${result.description}</div>
@@ -45,13 +45,11 @@ function handleAddTask(event: any) {
 // Sort tasks by date
 function handleSorting(event: any) {
   event.preventDefault();
-
-  // const elements = event.target.elements;
-  // const result: task = {
-  //   heading: elements.heading.value,
-  //   description: elements.description.value,
-  //   setReminderDate: elements.setReminderDate.value
-  };
+  const sortByDate = tasks.sort((a: any, b: any) => {
+    return new Date(a.setReminderDate).getTime() - new Date(b.setReminderDate).getTime();
+  });
+  console.log(sortByDate);
+}
 
 // Remove tasks
 function removeTask(event) {
@@ -104,14 +102,14 @@ function timerStarter(heading, setReminderDate, choosenId) {
   const newReminderDate: any = setReminderDate;
   const countDownDate: number = new Date(newReminderDate).getTime();
   const runTimer = setInterval(showTime, 1000);
-  
+
   function showTime() {
     const now: number = new Date().getTime();
     const timeleft = countDownDate - now;
     const textTime = timeToText(timeleft);
     // Result is output to the specific element
-    let time:any = document.getElementById(choosenId)
-    time.children[3].innerHTML=textTime 
+    let time: any = document.getElementById(choosenId)
+    time.children[3].innerHTML = textTime
     // Display the message when countdown is over
     if (timeleft <= 0) {
       clearInterval(runTimer);
@@ -150,3 +148,6 @@ function generateid() {
   return id();
 }
 
+function a(a: any) {
+  throw new Error("Function not implemented.");
+}
