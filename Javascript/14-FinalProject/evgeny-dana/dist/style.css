@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(to left, #e7ddd4, teal);
+  background: linear-gradient(to left, white, rgba(186, 190, 184, 0.349));
   text-align: justify;
 }
 body * {
@@ -64,12 +64,12 @@ body * :focus {
   cursor: pointer;
 }
 .Server_wrapper #root .upload-product {
-  background-color: #9c67f177;
+  background-color: teal;
   height: 12rem;
   width: 25rem;
   display: flex;
-  border-radius: 2rem;
-  box-shadow: 3px 3px 5px rgba(245, 222, 179, 0.678);
+  border-radius: 0.3rem;
+  box-shadow: 3px 3px 5px rgba(121, 117, 111, 0.678);
   position: relative;
 }
 .Server_wrapper #root .upload-product .outOfStuckText {
@@ -126,12 +126,13 @@ body * :focus {
 #nav {
   height: 50px;
   width: 100%;
-  background-color: teal;
+  background-color: rgba(128, 87, 0, 0.836);
 }
 
 .top_wrapper {
   margin-top: 10vh;
   background-color: rgba(245, 222, 179, 0.733);
+  box-shadow: 3px 3px 5px rgba(245, 222, 179, 0.678);
   height: 300px;
   width: 100%;
   align-items: center;
@@ -139,12 +140,14 @@ body * :focus {
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
+  box-shadow: 3px 3px 5px rgba(185, 175, 155, 0.632);
 }
 
 .top_wrapper :hover {
   cursor: pointer;
   opacity: 0.7;
   transition: 500ms;
+  transform: perspective(2900px) rotateY(15deg);
 }
 
 #a:hover {
@@ -167,9 +170,11 @@ body * :focus {
   height: auto;
   transition: 0.5s ease;
   backface-visibility: hidden;
+  box-shadow: 3px 3px 5px rgba(63, 46, 33, 0.66);
+  border-radius: 0.3rem;
 }
 .category img img:hover {
-  background-color: rgba(247, 110, 12, 0.39);
+  background-color: rgba(63, 46, 33, 0.66);
 }
 
 .Client_wrapper {
@@ -179,14 +184,21 @@ body * :focus {
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding-top: 150px;
+  gap: 10px;
+}
+.Client_wrapper :hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 500ms;
+  transform: perspective(2900px) rotateY(15deg);
 }
 
 .item {
-  background-color: #ffdce9;
+  background-color: #1e4d4e;
   height: 300px;
-  width: 150px;
+  width: 170px;
   border-style: solid black 2px;
-  gap: 30px;
   perspective: 50px;
   box-shadow: gray 2px;
+  border-radius: 0.3rem;
 }
