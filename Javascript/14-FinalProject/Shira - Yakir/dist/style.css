@@ -1,6 +1,6 @@
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -116,13 +116,10 @@ body h2 {
 body .addCategory {
   margin-right: 3rem;
 }
-body .addTask {
-  width: 20rem;
-}
 body .tasksPage {
   position: relative;
   background-color: #4a83bd;
-  width: 80%;
+  width: 90%;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 150px 150px auto;
@@ -159,7 +156,9 @@ body .tasksPage .categories li {
 }
 body .tasksPage .tasks {
   position: relative;
-  margin-top: 450px;
+  width: 490px;
+  top: -160px;
+  left: 390px;
   grid-area: tasks;
   background-color: #1062b0;
   border-radius: 5px;
@@ -170,25 +169,25 @@ body .tasksPage .tasks .task {
   height: 300px;
   background-color: #fcffed;
 }
-body .tasksPage .tasks .inputCheck {
+body .tasksPage .tasks .task .inputCheck {
   position: relative;
-  top: -225px;
-  left: 608px;
+  top: -228px;
+  left: 310px;
   width: 20px;
   height: 45px;
   cursor: pointer;
 }
-body .tasksPage .tasks .done {
+body .tasksPage .tasks .task .done {
   position: relative;
   top: -267px;
-  left: 610px;
+  left: 310px;
   width: 20px;
   height: 45px;
   color: #e5652e;
   font-weight: bolder;
   font-size: smaller;
 }
-body .tasksPage .tasks .inputDate {
+body .tasksPage .tasks .task .inputDate {
   position: absolute;
   background-color: #e5652e;
   left: 120px;
@@ -197,7 +196,7 @@ body .tasksPage .tasks .inputDate {
   height: 10px;
   bottom: 0px;
 }
-body .tasksPage .tasks .editTaskBtn {
+body .tasksPage .tasks .task .editTaskBtn {
   position: absolute;
   right: 10px;
   width: 25px;
@@ -205,7 +204,7 @@ body .tasksPage .tasks .editTaskBtn {
   top: 10px;
   cursor: pointer;
 }
-body .tasksPage .tasks #EditText {
+body .tasksPage .tasks .task #EditText {
   position: absolute;
   right: 10px;
   top: 25px;
@@ -215,8 +214,10 @@ body .tasksPage .tasks #EditText {
 }
 body .tasksPage #addTaskForm {
   position: absolute;
+  width: 300px;
+  height: 300px;
   top: 220px;
-  right: 280px;
+  right: 540px;
   visibility: hidden;
 }
 body .tasksPage #addTaskForm #selectCategory {
@@ -224,7 +225,7 @@ body .tasksPage #addTaskForm #selectCategory {
 }
 body .tasksPage #addTaskForm .ctgInput {
   height: 40px;
-  width: 380px;
+  width: 300px;
   margin-top: 5px;
   margin-bottom: 10px;
   border-radius: 10px;
