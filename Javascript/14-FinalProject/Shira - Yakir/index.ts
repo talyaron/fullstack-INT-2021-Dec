@@ -117,10 +117,8 @@ function updateHtmlTaskView(taskIndex) {
     <h2 class="contect">${tasksArray[taskIndex].content}</h2>
     <h3 class="dueDate">${tasksArray[taskIndex].dueDate}</h3>
     <h3 status="status">${tasksArray[taskIndex].status}</h3>
-    <h3 status="category">${tasksArray[taskIndex].category}</h3> 
+    <h3 status="category">Category  :   ${tasksArray[taskIndex].category}</h3> 
     <button class="btn btn--delete" onclick="deleteTask(${taskIndex})">Delete</button>
-    <input type="checkbox" class="inputCheck" name="check" id="checkboxDone">
-    <p class="done">Done</p>
     <img class="editTaskBtn" src="./images/edit.png" alt="">
     <p id="EditText">Edit</p>
     </div>
@@ -148,7 +146,7 @@ function addTask_demo_DATA() {
     //-------------------------------------------
 
     //----------create example Task--------------
-    let newTask = new task(`test title`, `test content`, new Date('08/04/2022'), false, `test category`);
+    let newTask = new task(`Js project`, `create a game`, new Date('04/08/2022'), false, `Studies`);
     tasksArray.push(newTask);
     updateHtmlTaskView(tasksArray.length - 1);
 

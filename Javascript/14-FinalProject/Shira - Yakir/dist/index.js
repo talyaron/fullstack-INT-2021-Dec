@@ -96,7 +96,7 @@ function updateHtmlTaskView(taskIndex) {
     HTML_tasks.append(HTML_addTaskInput);
     HTML_addTaskInput.classList.add('task');
     HTML_addTaskInput.innerHTML =
-        "<div class=\"task\" id=\"taskInde-" + taskIndex + "\">\n    <h1 class=\"title\">" + (taskIndex + 1) + ". " + tasksArray[taskIndex].title + "</h1>\n    <h2 class=\"contect\">" + tasksArray[taskIndex].content + "</h2>\n    <h3 class=\"dueDate\">" + tasksArray[taskIndex].dueDate + "</h3>\n    <h3 status=\"status\">" + tasksArray[taskIndex].status + "</h3>\n    <h3 status=\"category\">" + tasksArray[taskIndex].category + "</h3> \n    <button class=\"btn btn--delete\" onclick=\"deleteTask(" + taskIndex + ")\">Delete</button>\n    <input type=\"checkbox\" class=\"inputCheck\" name=\"check\" id=\"checkboxDone\">\n    <p class=\"done\">Done</p>\n    <img class=\"editTaskBtn\" src=\"./images/edit.png\" alt=\"\">\n    <p id=\"EditText\">Edit</p>\n    </div>\n    ";
+        "<div class=\"task\" id=\"taskInde-" + taskIndex + "\">\n    <h1 class=\"title\">" + (taskIndex + 1) + ". " + tasksArray[taskIndex].title + "</h1>\n    <h2 class=\"contect\">" + tasksArray[taskIndex].content + "</h2>\n    <h3 class=\"dueDate\">" + tasksArray[taskIndex].dueDate + "</h3>\n    <h3 status=\"status\">" + tasksArray[taskIndex].status + "</h3>\n    <h3 status=\"category\">Category  :   " + tasksArray[taskIndex].category + "</h3> \n    <button class=\"btn btn--delete\" onclick=\"deleteTask(" + taskIndex + ")\">Delete</button>\n    <img class=\"editTaskBtn\" src=\"./images/edit.png\" alt=\"\">\n    <p id=\"EditText\">Edit</p>\n    </div>\n    ";
 }
 // clean the tasks view then recrate the html element for new array
 function tasksViewUpdate() {
@@ -114,7 +114,7 @@ function addTask_demo_DATA() {
     addCategoryUpdateView(CategoryArray);
     //-------------------------------------------
     //----------create example Task--------------
-    var newTask = new task("test title", "test content", new Date('08/04/2022'), false, "test category");
+    var newTask = new task("Js project", "create a game", new Date('04/08/2022'), false, "Studies");
     tasksArray.push(newTask);
     updateHtmlTaskView(tasksArray.length - 1);
     // for debug console purpose
