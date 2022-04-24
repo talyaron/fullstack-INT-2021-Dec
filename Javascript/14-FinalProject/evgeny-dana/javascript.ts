@@ -13,7 +13,7 @@ interface Product {
 ////////////////////////////////////////////////////////////////////////////////////
 //this is a temporary array for storing the new product cards
 let products: Array<Product> = [];
-
+let clientProducts: Array<any> = [];
 //////////////////////////////////////////////////////////////////////////////////////
 // this handles the button for adding a product
 const handleAddProduct = (ev: any) => {
@@ -30,7 +30,6 @@ const handleAddProduct = (ev: any) => {
   products.push(item);
 
 
- localStorage.setItem('products', JSON.stringify(products))
   renderProducts();
   ev.target.reset();
 };
@@ -41,25 +40,33 @@ function handleLoad(){
     console.log(products)
     renderProducts();
   }
-
+  
 } 
+function handleClientLoad(){
+  const stringToObj = localStorage.getItem('products')
+  if (stringToObj){
+    products = JSON.parse(stringToObj)
+  console.log(products)
+  renderClientProducts();
+  }
+}
 ////////////////////////////////////////////////////////////////////////////
 //this renders products
 function renderProducts() {
+  localStorage.setItem('products', JSON.stringify(products))
   const root = document.querySelector("#root");
 
   let html = "";
   products.forEach((product) => {
     html += `<div class="megaTest" id="${product.id}">
-      <div class="test"  >
+      <div class="upload-product"  >
               <div class="outOfStuckText" id="noStock-${product.id}" style="display:none"><h2>out of stock</h2></div>
             <img src=${product.image}>
-            <div class="test2" >
-                  <div>name:${product.name}</div>
-                  <div>Price: ${product.price}</div>
+            <div class="productInfo" >
+                  <p>name:${product.name}</p>
+                  <p>Price: ${product.price}</p>
                   <button onclick="handleRemoveProduct('${product.id}')" class="btnDelete">delete</button>
                   <button onclick="showUpdateMenu('${product.id}')" class="btnUpdate">update</button>
-                  <p id="stock_Text"> stock</p>
                   <input onchange="outOfStockFunc(event, '${product.id}')" class="NumInput" name="stockNum" type="number" value="1" min="0" > 
             </div>
         </div>
@@ -74,6 +81,21 @@ function renderProducts() {
 
   root.innerHTML = html;
 }
+ function renderClientProducts(){
+  const Client_wrapper = document.querySelector(".Client_wrapper")
+  
+  let html = "";
+  products.forEach((product) => {
+    html += `<div class="item">
+    <img src="${product.image}" alt="" id="item_Image">
+    <p>name:${product.name}</p>
+    <p>Price:${product.price}</p>
+    </div>`
+  });
+  
+  Client_wrapper.innerHTML = html;
+  
+ }
 ////////////////////////////////////////////////////////////////////////
 // this removes the product card
 function handleRemoveProduct(productId: string) {
@@ -135,8 +157,10 @@ function outOfStockFunc(event, productId) {
   
   if (inStock === '0') {
      stock.style.display = "block"
+     stock.classList.add('upload-product--blur')
   } else {
     stock.style.display = "none"
+    
   }
   
 }

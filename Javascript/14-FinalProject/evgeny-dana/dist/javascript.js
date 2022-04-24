@@ -5,6 +5,7 @@ var uid = function () {
 ////////////////////////////////////////////////////////////////////////////////////
 //this is a temporary array for storing the new product cards
 var products = [];
+var clientProducts = [];
 //////////////////////////////////////////////////////////////////////////////////////
 // this handles the button for adding a product
 var handleAddProduct = function (ev) {
@@ -16,7 +17,6 @@ var handleAddProduct = function (ev) {
     // const imgSrc = URL.createObjectURL(image);
     var item = { id: id, image: image, name: name, price: price };
     products.push(item);
-    localStorage.setItem('products', JSON.stringify(products));
     renderProducts();
     ev.target.reset();
 };
@@ -28,15 +28,32 @@ function handleLoad() {
         renderProducts();
     }
 }
+function handleClientLoad() {
+    var stringToObj = localStorage.getItem('products');
+    if (stringToObj) {
+        products = JSON.parse(stringToObj);
+        console.log(products);
+        renderClientProducts();
+    }
+}
 ////////////////////////////////////////////////////////////////////////////
 //this renders products
 function renderProducts() {
+    localStorage.setItem('products', JSON.stringify(products));
     var root = document.querySelector("#root");
     var html = "";
     products.forEach(function (product) {
-        html += "<div class=\"megaTest\" id=\"" + product.id + "\">\n      <div class=\"test\"  >\n              <div class=\"outOfStuckText\" id=\"noStock-" + product.id + "\" style=\"display:none\"><h2>out of stock</h2></div>\n            <img src=" + product.image + ">\n            <div class=\"test2\" >\n                  <div>name:" + product.name + "</div>\n                  <div>Price: " + product.price + "</div>\n                  <button onclick=\"handleRemoveProduct('" + product.id + "')\" class=\"btnDelete\">delete</button>\n                  <button onclick=\"showUpdateMenu('" + product.id + "')\" class=\"btnUpdate\">update</button>\n                  <p id=\"stock_Text\"> stock</p>\n                  <input onchange=\"outOfStockFunc(event, '" + product.id + "')\" class=\"NumInput\" name=\"stockNum\" type=\"number\" value=\"1\" min=\"0\" > \n            </div>\n        </div>\n        <form class=\"updateProduct\" id=\"update-" + product.id + "\" onsubmit=\"handleUpdateProduct(event, '" + product.id + "')\" style=\"display:none\">\n          <input type=\"text\" name=\"productName\" value=\"" + product.name + "\">\n          <input type=\"text\" name=\"newUrl\" placeholder=\"NEW Item Image url\">\n          <input type=\"text\" name=\"NewPrice\" value=\"" + product.price + "\">\n          <button type=\"submit\">send</button>\n    </form>\n     </div>";
+        html += "<div class=\"megaTest\" id=\"" + product.id + "\">\n      <div class=\"upload-product\"  >\n              <div class=\"outOfStuckText\" id=\"noStock-" + product.id + "\" style=\"display:none\"><h2>out of stock</h2></div>\n            <img src=" + product.image + ">\n            <div class=\"productInfo\" >\n                  <p>name:" + product.name + "</p>\n                  <p>Price: " + product.price + "</p>\n                  <button onclick=\"handleRemoveProduct('" + product.id + "')\" class=\"btnDelete\">delete</button>\n                  <button onclick=\"showUpdateMenu('" + product.id + "')\" class=\"btnUpdate\">update</button>\n                  <input onchange=\"outOfStockFunc(event, '" + product.id + "')\" class=\"NumInput\" name=\"stockNum\" type=\"number\" value=\"1\" min=\"0\" > \n            </div>\n        </div>\n        <form class=\"updateProduct\" id=\"update-" + product.id + "\" onsubmit=\"handleUpdateProduct(event, '" + product.id + "')\" style=\"display:none\">\n          <input type=\"text\" name=\"productName\" value=\"" + product.name + "\">\n          <input type=\"text\" name=\"newUrl\" placeholder=\"NEW Item Image url\">\n          <input type=\"text\" name=\"NewPrice\" value=\"" + product.price + "\">\n          <button type=\"submit\">send</button>\n    </form>\n     </div>";
     });
     root.innerHTML = html;
+}
+function renderClientProducts() {
+    var Client_wrapper = document.querySelector(".Client_wrapper");
+    var html = "";
+    products.forEach(function (product) {
+        html += "<div class=\"item\">\n    <img src=\"" + product.image + "\" alt=\"\" id=\"item_Image\">\n    <p>name:" + product.name + "</p>\n    <p>Price:" + product.price + "</p>\n    </div>";
+    });
+    Client_wrapper.innerHTML = html;
 }
 ////////////////////////////////////////////////////////////////////////
 // this removes the product card
@@ -93,6 +110,7 @@ function outOfStockFunc(event, productId) {
     var inStock = event.target.value;
     if (inStock === '0') {
         stock.style.display = "block";
+        stock.classList.add('upload-product--blur');
     }
     else {
         stock.style.display = "none";

@@ -1,10 +1,10 @@
+// Tasks array ("data base")
 const tasks: Array < task > = [];
-
-// Interface
+// Task interface
 interface task {
   heading: HTMLInputElement,
-  description: HTMLInputElement,
-  setReminderDate: HTMLInputElement
+    description: HTMLInputElement,
+    setReminderDate: HTMLInputElement
 }
 
 // Add task form
@@ -20,41 +20,39 @@ function handleAddTask(event: any) {
 
   for (let i = 0; i < elements.length; i++) {
     if (elements[i].name && elements[i].value) {
-      result[elements[i].name] = elements[i].value;
+     result[elements[i].name] = elements[i].value;
     }
   }
   // Create new task
   const taskContainer: any = document.querySelector('.tasksContainer');
-  let task = document.createElement('div');
+  const task = document.createElement('div');
   task.classList.add('task');
   task.setAttribute('id', `${generateid()}`);
-  timerStarter(result.heading, result.setReminderDate);
-  timer();
-  
+  let choosenId = task.id
+  timerStarter(result.heading, result.setReminderDate, choosenId);
+
   // Append a new task to the tasks container
   task.innerHTML = `<div class='heading'>${result.heading}</div>
     <div class='description'>${result.description}</div>
     <div class='setReminderDate'>${result.setReminderDate}</div>
-    <div class="time"></div> 
+    <div class='time'></div>
     <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>`;
 
   taskContainer.append(task);
   tasks.push(result);
   event.target.reset()
-  
-  console.log(task);
 }
 
-function timer () {
-  const alltasks = document.querySelectorAll('.task.id');
-  alltasks.forEach(task => {
-    timerStarter(task.querySelector('.heading').innerHTML, task.querySelector('.setReminderDate').innerHTML);
-  })
+// Sort tasks by date
+function handleSorting(event: any) {
+  event.preventDefault();
+  const sortByDate = tasks.sort((a: any, b: any) => {
+    return new Date(a.setReminderDate).getTime() - new Date(b.setReminderDate).getTime();
+  });
+  console.log(sortByDate);
 }
 
-
-
-// Remove tasks.
+// Remove tasks
 function removeTask(event) {
   event.preventDefault();
   const button = event.target;
@@ -65,7 +63,7 @@ function removeTask(event) {
   div.removeChild(array);
 }
 
-// Add new task (using 'handleTask' form).
+// Add new task (using 'handleTask' form)
 function handleOpenForm(event) {
   event.preventDefault();
   const addBtn = document.querySelector('.addBtn');
@@ -99,9 +97,8 @@ function handleOpenForm(event) {
   }
 }
 
-
-
-function timerStarter(heading, setReminderDate) {
+// Time starter function
+function timerStarter(heading, setReminderDate, choosenId) {
 
   const newReminderDate: any = setReminderDate;
   const countDownDate: number = new Date(newReminderDate).getTime();
@@ -112,7 +109,8 @@ function timerStarter(heading, setReminderDate) {
     const timeleft = countDownDate - now;
     const textTime = timeToText(timeleft);
     // Result is output to the specific element
-    document.querySelector(".time").innerHTML = textTime;
+    let time: any = document.getElementById(choosenId)
+    time.children[3].innerHTML = textTime
     // Display the message when countdown is over
     if (timeleft <= 0) {
       clearInterval(runTimer);
@@ -121,7 +119,6 @@ function timerStarter(heading, setReminderDate) {
   }
 }
 
-
 // Calculating the days, hours, minutes and seconds left
 function timeToText(time: number) {
   if (time >= 0) {
@@ -129,7 +126,7 @@ function timeToText(time: number) {
     const hours = timeToString(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
     const minutes = timeToString(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
     const seconds = timeToString(Math.floor((time % (1000 * 60)) / 1000));
-    return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    return `${days}d - ${hours}h - ${minutes}m - ${seconds}s`;
   }
   return '0d 0h 0m 0s';
 }
@@ -141,6 +138,7 @@ function timeToString(time: number): string {
   }
   return `${time}`;
 }
+
 //set uniqid to the array's objects
 function generateid() {
   let id = () => {
@@ -150,3 +148,4 @@ function generateid() {
   }
   return id();
 }
+

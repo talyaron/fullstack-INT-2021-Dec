@@ -24,16 +24,32 @@ header, #todo-form {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(green, yellow, red);
+  background: linear-gradient(#007580, #bb00ff, #00ccff);
+  border: 5px;
+  border-style: double;
+  border-radius: 5vh;
+}
+
+h1 {
+  color: aqua;
 }
 
 #formTask, #formAddButton, #formDateTime {
   padding: 0.5rem;
   font-size: 2rem;
-  border: #360066;
-  background-color: rgba(0, 157, 255, 0.852);
+  border-color: #3d6600dc;
+  background-color: lavender;
+  border: 1vh;
+  border-style: double;
 }
 
 #formAddButton {
-  background-color: #47006645;
+  background-color: red;
+  border-radius: 3vh;
+  padding: 2vh;
+}
+
+header {
+  background-image: url(https://cdn.pixabay.com/photo/2020/08/07/15/36/matrix-5470930__340.jpg);
+  background-repeat: repeat-x;
 }

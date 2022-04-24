@@ -235,8 +235,8 @@ img {
   width: 90%;
   height: 30%;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
 }
 
 .Header {

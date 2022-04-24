@@ -1,3 +1,4 @@
+// Tasks array ("data base")
 var tasks = [];
 // Add task form
 function handleAddTask(event) {
@@ -18,22 +19,23 @@ function handleAddTask(event) {
     var task = document.createElement('div');
     task.classList.add('task');
     task.setAttribute('id', "" + generateid());
-    timerStarter(result.heading, result.setReminderDate);
-    timer();
+    var choosenId = task.id;
+    timerStarter(result.heading, result.setReminderDate, choosenId);
     // Append a new task to the tasks container
-    task.innerHTML = "<div class='heading'>" + result.heading + "</div>\n    <div class='description'>" + result.description + "</div>\n    <div class='setReminderDate'>" + result.setReminderDate + "</div>\n    <div class=\"time\"></div> \n    <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>";
+    task.innerHTML = "<div class='heading'>" + result.heading + "</div>\n    <div class='description'>" + result.description + "</div>\n    <div class='setReminderDate'>" + result.setReminderDate + "</div>\n    <div class='time'></div>\n    <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>";
     taskContainer.append(task);
     tasks.push(result);
     event.target.reset();
-    console.log(task);
 }
-function timer() {
-    var alltasks = document.querySelectorAll('.task.id');
-    alltasks.forEach(function (task) {
-        timerStarter(task.querySelector('.heading').innerHTML, task.querySelector('.setReminderDate').innerHTML);
+// Sort tasks by date
+function handleSorting(event) {
+    event.preventDefault();
+    var sortByDate = tasks.sort(function (a, b) {
+        return new Date(a.setReminderDate).getTime() - new Date(b.setReminderDate).getTime();
     });
+    console.log(sortByDate);
 }
-// Remove tasks.
+// Remove tasks
 function removeTask(event) {
     event.preventDefault();
     var button = event.target;
@@ -42,7 +44,7 @@ function removeTask(event) {
     var div = array.parentNode;
     div.removeChild(array);
 }
-// Add new task (using 'handleTask' form).
+// Add new task (using 'handleTask' form)
 function handleOpenForm(event) {
     event.preventDefault();
     var addBtn = document.querySelector('.addBtn');
@@ -74,7 +76,8 @@ function handleOpenForm(event) {
         }
     }
 }
-function timerStarter(heading, setReminderDate) {
+// Time starter function
+function timerStarter(heading, setReminderDate, choosenId) {
     var newReminderDate = setReminderDate;
     var countDownDate = new Date(newReminderDate).getTime();
     var runTimer = setInterval(showTime, 1000);
@@ -83,7 +86,8 @@ function timerStarter(heading, setReminderDate) {
         var timeleft = countDownDate - now;
         var textTime = timeToText(timeleft);
         // Result is output to the specific element
-        document.querySelector(".time").innerHTML = textTime;
+        var time = document.getElementById(choosenId);
+        time.children[3].innerHTML = textTime;
         // Display the message when countdown is over
         if (timeleft <= 0) {
             clearInterval(runTimer);
@@ -98,7 +102,7 @@ function timeToText(time) {
         var hours = timeToString(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
         var minutes = timeToString(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
         var seconds = timeToString(Math.floor((time % (1000 * 60)) / 1000));
-        return days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+        return days + "d - " + hours + "h - " + minutes + "m - " + seconds + "s";
     }
     return '0d 0h 0m 0s';
 }
