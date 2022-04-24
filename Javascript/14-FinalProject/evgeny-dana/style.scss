@@ -152,7 +152,7 @@ body{
          box-shadow: 3px 3px 5px  rgba(245, 222, 179, 0.678);
          
          
-        height: 300px;
+        height: 400px;
         width: 100%;
         align-items: center;
         display: flex;
@@ -160,6 +160,7 @@ body{
         justify-content: center;
         gap: 40px; 
         box-shadow: 3px 3px 5px  rgba(185, 175, 155, 0.632);
+        
      }
     .top_wrapper :hover {
             cursor: pointer;
@@ -182,7 +183,7 @@ body{
     .category {
         display: flex;
         flex-direction: column;        
-        width: 300px;
+        width: 500px;
         
         
         img{
@@ -225,7 +226,7 @@ body{
 
         
     .item{
-            background-color: #1e4d4e;
+            background-color: #174433;
             height: 300px;
             width: 170px;
             border-style:solid black 2px;
