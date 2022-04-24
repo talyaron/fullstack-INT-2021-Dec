@@ -31,3 +31,6 @@
   perspective: 50px;
   box-shadow: gray 2px;
 }
+.item img {
+  width: 50px;
+}

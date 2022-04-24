@@ -13,7 +13,7 @@ interface Product {
 ////////////////////////////////////////////////////////////////////////////////////
 //this is a temporary array for storing the new product cards
 let products: Array<Product> = [];
-
+let clientProducts: Array<any> = [];
 //////////////////////////////////////////////////////////////////////////////////////
 // this handles the button for adding a product
 const handleAddProduct = (ev: any) => {
@@ -30,7 +30,6 @@ const handleAddProduct = (ev: any) => {
   products.push(item);
 
 
- localStorage.setItem('products', JSON.stringify(products))
   renderProducts();
   ev.target.reset();
 };
@@ -41,11 +40,20 @@ function handleLoad(){
     console.log(products)
     renderProducts();
   }
-
+  
 } 
+function handleClientLoad(){
+  const stringToObj = localStorage.getItem('products')
+  if (stringToObj){
+    products = JSON.parse(stringToObj)
+  console.log(products)
+  renderClientProducts();
+  }
+}
 ////////////////////////////////////////////////////////////////////////////
 //this renders products
 function renderProducts() {
+  localStorage.setItem('products', JSON.stringify(products))
   const root = document.querySelector("#root");
 
   let html = "";
@@ -73,6 +81,21 @@ function renderProducts() {
 
   root.innerHTML = html;
 }
+ function renderClientProducts(){
+  const Client_wrapper = document.querySelector(".Client_wrapper")
+  
+  let html = "";
+  products.forEach((product) => {
+    html += `<div class="item">
+    <img src="${product.image}" alt="" id="item_Image">
+    <p>name:${product.name}</p>
+    <p>Price:${product.price}</p>
+    </div>`
+  });
+  
+  Client_wrapper.innerHTML = html;
+  
+ }
 ////////////////////////////////////////////////////////////////////////
 // this removes the product card
 function handleRemoveProduct(productId: string) {
