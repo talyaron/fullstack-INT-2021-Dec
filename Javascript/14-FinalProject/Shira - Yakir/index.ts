@@ -10,7 +10,7 @@ const addTaskButton: HTMLElement = document.querySelector('.addTaskBtn');
 const taskForm: HTMLElement = document.querySelector('#addTaskForm');
 // const addNewCategory: HTMLElement = document.querySelector('.addCategory');
 let newCategory = document.querySelector('.categories');
-let categoriesSelect = document.querySelector('#selectCategory')
+let categoriesSelect: HTMLElement = document.querySelector('#selectCategory')
 
 
 let tasksArray = []; // arays that contain the tasks
@@ -142,6 +142,7 @@ function addTask_demo_DATA() {
     //------------------
     //------ create example Category-----
     CategoryArray.push("General", "Work", "Studies");
+
     addCategoryUpdateView(CategoryArray);
     //-------------------------------------------
 
@@ -196,15 +197,16 @@ function openTaskForm() {
 }
 
 function handleSelectCategory() {
+    console.dir(categoriesSelect);
     for (let i = 0; i < CategoryArray.length; i++) {
         let option = document.createElement("option");
         option.value = CategoryArray[i];
         option.text = CategoryArray[i];
         categoriesSelect.appendChild(option);
     }
-
+    console.dir(categoriesSelect);
 }
-handleSelectCategory()
+
 
 let choice: string = '';
 
@@ -212,7 +214,6 @@ function selctCtg(event) {
     choice = event.target.value
     let input: any = document.querySelector('.ctgInput')
     input.innerHTML = choice;
-    categoriesSelect.remove();
 }
 
 function addNewCtg(event) {
@@ -223,6 +224,7 @@ function addNewCtg(event) {
             li.innerText = event.target.value;
             newCategory.appendChild(li);
             console.dir(CategoryArray);
+            handleSelectCategory()
         }
     }
     catch (error) {

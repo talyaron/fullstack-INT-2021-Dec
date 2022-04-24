@@ -149,20 +149,20 @@ function openTaskForm() {
     taskForm.style.visibility = 'visible';
 }
 function handleSelectCategory() {
+    console.dir(categoriesSelect);
     for (var i = 0; i < CategoryArray.length; i++) {
         var option = document.createElement("option");
         option.value = CategoryArray[i];
         option.text = CategoryArray[i];
         categoriesSelect.appendChild(option);
     }
+    console.dir(categoriesSelect);
 }
-handleSelectCategory();
 var choice = '';
 function selctCtg(event) {
     choice = event.target.value;
     var input = document.querySelector('.ctgInput');
     input.innerHTML = choice;
-    categoriesSelect.remove();
 }
 function addNewCtg(event) {
     try {
@@ -172,6 +172,7 @@ function addNewCtg(event) {
             li.innerText = event.target.value;
             newCategory.appendChild(li);
             console.dir(CategoryArray);
+            handleSelectCategory();
         }
     }
     catch (error) {
