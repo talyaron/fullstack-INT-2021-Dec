@@ -114,7 +114,7 @@ h1 {
 }
 .task img {
   position: absolute;
-  left: 16.7em;
+  left: 15.3em;
   top: 1.3em;
   width: 1.7em;
 }
@@ -210,7 +210,7 @@ h1 {
   height: 12em;
 }
 .addTask .saveBtn {
-  height: 5.2em;
+  height: 12%;
   margin-bottom: 1em;
   border-radius: 50em;
   font-size: 1em;

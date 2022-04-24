@@ -1,6 +1,5 @@
 // Tasks array ("data base")
 const tasks: Array < task > = [];
-
 // Task interface
 interface task {
   heading: HTMLInputElement,
@@ -21,17 +20,17 @@ function handleAddTask(event: any) {
 
   for (let i = 0; i < elements.length; i++) {
     if (elements[i].name && elements[i].value) {
-      result[elements[i].name] = elements[i].value;
+     result[elements[i].name] = elements[i].value;
     }
   }
   // Create new task
   const taskContainer: any = document.querySelector('.tasksContainer');
-  let task = document.createElement('div');
+  const task = document.createElement('div');
   task.classList.add('task');
   task.setAttribute('id', `${generateid()}`);
   let choosenId = task.id
   timerStarter(result.heading, result.setReminderDate, choosenId);
-  // handleSorting(taskContainer);
+
   // Append a new task to the tasks container
   task.innerHTML = `<div class='heading'>${result.heading}</div>
     <div class='description'>${result.description}</div>

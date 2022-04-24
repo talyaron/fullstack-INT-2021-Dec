@@ -116,38 +116,10 @@ h1 {
     }
     img {
         position: absolute;
-        left: 16.7em;
+        left: 15.3em;
         top: 1.3em;
         width: 1.7em;
     }
-    // @media (min-width: 400px) {
-    //     img {
-    //         position: absolute;
-    //         left: 23em;
-    //         top: 1.3em;
-    //     }
-    // }
-    // @media (min-width: 768px) {
-    //     img {
-    //         position: absolute;
-    //         left: 41em;
-    //         top: 1.3em;
-    //     }
-    // }
-    // @media (max-width: 1200px) {
-    //     img {
-    //         position: absolute;
-    //         left: 67.4em;
-    //         top: 1.3em;
-    //     }
-    // }
-    // @media (max-width: 1920px) {
-    //     img {
-    //         position: absolute;
-    //         left: 97em;
-    //         top: 1.3em;
-    //     }
-    // }
 }
 
 // ----------------------------------------------------------------------------------------------------
@@ -242,7 +214,7 @@ h1 {
         height: 12em;
     }
     .saveBtn {
-        height: 5.2em;
+        height: 12%;
         margin-bottom: 1em;
         border-radius: 50em;
         font-size: 1em;
