@@ -1,3 +1,15 @@
+@font-face {
+  font-family: title;
+  src: url(../fonts/title.ttf);
+}
+@font-face {
+  font-family: menuFont;
+  src: url(../fonts/text.ttf);
+}
+@font-face {
+  font-family: money;
+  src: url(../fonts/ins.ttf);
+}
 body {
   background-image: url(" ../imgs/bg.jpg");
   background-repeat: no-repeat;
@@ -9,11 +21,14 @@ body p {
   font-size: 1.8rem;
 }
 body .cotar {
+  font-family: title;
   font-size: 5rem;
   text-align: center;
-  color: black;
+  color: white;
+  text-shadow: -6px -4px 0 #ab4100, 6px -1px 0 #ac5c00, -1px 1px 0 #b51500, 1px 1px 0 rgba(179, 107, 0, 0.768);
 }
 body .products {
+  font-family: menuFont;
   background-size: cover;
   background: radial-gradient(circle, white 0%, rgba(255, 255, 255, 0.697) 100%);
   display: grid;
@@ -23,6 +38,11 @@ body .products {
   font-size: 2rem;
   color: black;
   grid-template-columns: repeat(4, 20vw);
+}
+body .products p {
+  display: flex;
+  font-family: money;
+  flex-direction: row;
 }
 body .products .cube {
   display: flex;
@@ -44,6 +64,7 @@ body .products .cube img {
   }
 }
 body .cart {
+  font-family: money;
   background: radial-gradient(circle, white 0%, rgba(255, 255, 255, 0.697) 100%);
   border-radius: 2vh;
   display: flex;
@@ -53,12 +74,17 @@ body .cart {
 }
 body .cart .orderLine {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   margin: 1%;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 1vw;
 }
-body .cart .orderLine .plus {
+body .cart .orderLine .qty {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+body .cart .orderLine .qty .plus {
   width: 18px;
   height: 18px;
   background-color: white;
@@ -66,7 +92,7 @@ body .cart .orderLine .plus {
   border: 1px #a58c8c solid;
   border-radius: 50%;
 }
-body .cart .orderLine .minus {
+body .cart .orderLine .qty .minus {
   width: 18px;
   height: 18px;
   background-color: white;
@@ -74,16 +100,20 @@ body .cart .orderLine .minus {
   border: 1px #756565 solid;
   border-radius: 50%;
 }
-body .cart .circleCount {
+body .cart .orderLine .qty .circleCount {
   font-weight: bold;
   border-radius: 50px;
   right: 2vw;
 }
 body .cart-products p {
-  color: azure;
+  text-shadow: 3px 3px #060606;
+  color: white;
   font-weight: bold;
+  font-family: money;
 }
 body .cart-products .totalDiv {
+  font-family: menuFont;
+  padding: 4vw;
   font-weight: bold;
   font-size: 1.5rem;
   color: #eaff03;

@@ -2,28 +2,28 @@ const foodMenu: Array<any> = [
 
   {
 
-    type: "פרגית",
+    type: "Chicken",
     price: 30,
     img: 'imgs/pargit.jpg',
     count: 0,
 
   },
   {
-    type: "כבש",
+    type: "Lamb",
     price: 35,
     img: 'imgs/ceves.jpg',
     count: 0,
 
   },
   {
-    type: "צ'יפס",
+    type: "Fries",
     price: 15,
     img: 'imgs/fries.jpg',
     count: 0,
 
   },
   {
-    type: "ענבים",
+    type: "Grapes",
     price: 10,
     img: 'imgs/grapeJuice.jpg',
     count: 0,
@@ -46,8 +46,9 @@ function refreshPro() {
     <div class="cube">
     ${foodMenu[i].type}
     <img src="${foodMenu[i].img}" alt="">
-   ₪ ${foodMenu[i].price} 
-    <button id="${i}" onclick="clickAdd(event)">פנק אותי</button>
+    <p> ${foodMenu[i].price} INS </p> 
+
+    <button id="${i}" onclick="clickAdd(event)">Panek oti</button>
     </div>
 
     `
@@ -76,9 +77,15 @@ function order() {
   for (let i = 0; i < foodMenu.length; i++) {
 
     if (foodMenu[i].count != 0) {
-      cart.innerHTML += 
-       `<div class="orderLine">₪${foodMenu[i].type}: ${foodMenu[i].price}
-       <div class="circleCount">כמות</div> <div class="minus" id="${i}" onclick="minusCount(event)">-</div>${foodMenu[i].count}  <div class="plus" id="${i}" onclick="plusCount(event)">+</div></div>`
+      cart.innerHTML +=
+        `<div class="orderLine">
+      <div class="productName"> ${foodMenu[i].type}: ${foodMenu[i].price} </div>
+      <div class="qty">
+          <div class="circleCount">Qty</div>
+          <div class="minus" id="${i}" onclick="minusCount(event)">-</div>${foodMenu[i].count} <div class="plus" id="${i}"
+              onclick="plusCount(event)">+</div>
+      </div>
+  </div>` 
 
     }
     else {
@@ -93,7 +100,7 @@ function totalSum() {
   for (let i = 0; i < foodMenu.length; i++) {
     totalPrice += foodMenu[i].price * foodMenu[i].count
   }
-  totalDiv.innerText = `₪סה"כ : ${totalPrice}`
+  totalDiv.innerText = `Total: ${ totalPrice } `
 }
 
 function minusCount(ev){

@@ -1,24 +1,24 @@
 var foodMenu = [
     {
-        type: "פרגית",
+        type: "Chicken",
         price: 30,
         img: 'imgs/pargit.jpg',
         count: 0
     },
     {
-        type: "כבש",
+        type: "Lamb",
         price: 35,
         img: 'imgs/ceves.jpg',
         count: 0
     },
     {
-        type: "צ'יפס",
+        type: "Fries",
         price: 15,
         img: 'imgs/fries.jpg',
         count: 0
     },
     {
-        type: "ענבים",
+        type: "Grapes",
         price: 10,
         img: 'imgs/grapeJuice.jpg',
         count: 0
@@ -30,7 +30,7 @@ var totalDiv = document.querySelector(".totalDiv");
 var totalPrice = 0;
 function refreshPro() {
     for (var i = 0; i < foodMenu.length; i++) {
-        products.innerHTML += "\n    <div class=\"cube\">\n    " + foodMenu[i].type + "\n    <img src=\"" + foodMenu[i].img + "\" alt=\"\">\n   \u20AA " + foodMenu[i].price + " \n    <button id=\"" + i + "\" onclick=\"clickAdd(event)\">\u05E4\u05E0\u05E7 \u05D0\u05D5\u05EA\u05D9</button>\n    </div>\n\n    ";
+        products.innerHTML += "\n    <div class=\"cube\">\n    " + foodMenu[i].type + "\n    <img src=\"" + foodMenu[i].img + "\" alt=\"\">\n    <p> " + foodMenu[i].price + " INS </p> \n\n    <button id=\"" + i + "\" onclick=\"clickAdd(event)\">Panek oti</button>\n    </div>\n\n    ";
     }
 }
 function clickAdd(ev) {
@@ -47,7 +47,7 @@ function order() {
     for (var i = 0; i < foodMenu.length; i++) {
         if (foodMenu[i].count != 0) {
             cart.innerHTML +=
-                "<div class=\"orderLine\">\u20AA" + foodMenu[i].type + ": " + foodMenu[i].price + "\n       <div class=\"circleCount\">\u05DB\u05DE\u05D5\u05EA</div> <div class=\"minus\" id=\"" + i + "\" onclick=\"minusCount(event)\">-</div>" + foodMenu[i].count + "  <div class=\"plus\" id=\"" + i + "\" onclick=\"plusCount(event)\">+</div></div>";
+                "<div class=\"orderLine\">\n      <div class=\"productName\"> " + foodMenu[i].type + ": " + foodMenu[i].price + " </div>\n      <div class=\"qty\">\n          <div class=\"circleCount\">Qty</div>\n          <div class=\"minus\" id=\"" + i + "\" onclick=\"minusCount(event)\">-</div>" + foodMenu[i].count + " <div class=\"plus\" id=\"" + i + "\"\n              onclick=\"plusCount(event)\">+</div>\n      </div>\n  </div>";
         }
         else {
         }
@@ -57,7 +57,7 @@ function totalSum() {
     for (var i = 0; i < foodMenu.length; i++) {
         totalPrice += foodMenu[i].price * foodMenu[i].count;
     }
-    totalDiv.innerText = "\u20AA\u05E1\u05D4\"\u05DB : " + totalPrice;
+    totalDiv.innerText = "Total: " + totalPrice + " ";
 }
 function minusCount(ev) {
     console.log(ev);
