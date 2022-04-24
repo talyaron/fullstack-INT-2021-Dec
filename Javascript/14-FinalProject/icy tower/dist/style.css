@@ -32,7 +32,5 @@ body .rapper .step {
 body .rapper .player {
   width: 80px;
   position: fixed;
-  bottom: 40px;
-  left: 45vw;
-  transition: all 200ms;
+  transition: all 800ms;
 }
