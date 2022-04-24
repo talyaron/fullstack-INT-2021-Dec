@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  box-sizing: border-box;
+}
+
+.agentList {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.agentList img {
+  width: 400px;
+  margin: 20px;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+.chooseUrAgent {
+  display: flex;
+  justify-content: center;
+}
+
+.profileWrapper {
+  display: none;
+  max-width: 900px;
+  margin: 0 auto;
+  border: 2px solid black;
+  padding: 15px 10px;
+  margin-top: 90px;
+  overflow: auto;
+}
+
+.agentName {
+  display: inline-block;
+}
+
+.agentImg {
+  float: left;
+}
