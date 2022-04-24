@@ -120,6 +120,7 @@ function updateHtmlTaskView(taskIndex) {
     <h3 status="status">${tasksArray[taskIndex].status}</h3>
     <h3 status="category">Category  :   ${tasksArray[taskIndex].category}</h3> 
     <button class="btn btn--delete" onclick="deleteTask(${taskIndex})">Delete</button>
+    <button class="btn btn--Done" onclick="DoneTask(${taskIndex})">Done</button>
     <img class="editTaskBtn" src="./images/edit.png" alt="">
     <p id="EditText">Edit</p>
     </div>
@@ -165,8 +166,12 @@ function deleteTask(taskIndex) {
     console.dir(tasksArray);
 }
 
-
-
+function DoneTask(taskIndex) {
+    tasksArray[taskIndex].status = true;
+    tasksViewUpdate()
+    document.querySelector(`#taskInde-${taskIndex}`).style.background = "green";
+    console.dir(tasksArray);
+}
 
 function addCategoryUpdateView(CategoryArray) {
     for (let i = 0; i < CategoryArray.length; i++) {

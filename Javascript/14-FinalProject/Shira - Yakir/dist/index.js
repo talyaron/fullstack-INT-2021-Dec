@@ -97,7 +97,7 @@ function updateHtmlTaskView(taskIndex) {
     HTML_tasks.append(HTML_addTaskInput);
     HTML_addTaskInput.classList.add('task');
     HTML_addTaskInput.innerHTML =
-        "<div class=\"task\" id=\"taskInde-" + taskIndex + "\">\n    <h1 class=\"title\">" + (taskIndex + 1) + ". " + tasksArray[taskIndex].title + "</h1>\n    <h2 class=\"contect\">" + tasksArray[taskIndex].content + "</h2>\n    <h3 class=\"dueDate\">" + tasksArray[taskIndex].dueDate + "</h3>\n    <h3 status=\"status\">" + tasksArray[taskIndex].status + "</h3>\n    <h3 status=\"category\">Category  :   " + tasksArray[taskIndex].category + "</h3> \n    <button class=\"btn btn--delete\" onclick=\"deleteTask(" + taskIndex + ")\">Delete</button>\n    <img class=\"editTaskBtn\" src=\"./images/edit.png\" alt=\"\">\n    <p id=\"EditText\">Edit</p>\n    </div>\n    ";
+        "<div class=\"task\" id=\"taskInde-" + taskIndex + "\">\n    <h1 class=\"title\">" + (taskIndex + 1) + ". " + tasksArray[taskIndex].title + "</h1>\n    <h2 class=\"contect\">" + tasksArray[taskIndex].content + "</h2>\n    <h3 class=\"dueDate\">" + tasksArray[taskIndex].dueDate + "</h3>\n    <h3 status=\"status\">" + tasksArray[taskIndex].status + "</h3>\n    <h3 status=\"category\">Category  :   " + tasksArray[taskIndex].category + "</h3> \n    <button class=\"btn btn--delete\" onclick=\"deleteTask(" + taskIndex + ")\">Delete</button>\n    <button class=\"btn btn--Done\" onclick=\"DoneTask(" + taskIndex + ")\">Done</button>\n    <img class=\"editTaskBtn\" src=\"./images/edit.png\" alt=\"\">\n    <p id=\"EditText\">Edit</p>\n    </div>\n    ";
 }
 // clean the tasks view then recrate the html element for new array
 function tasksViewUpdate() {
@@ -126,6 +126,12 @@ addTask_demo_DATA();
 function deleteTask(taskIndex) {
     tasksArray.splice(taskIndex, 1);
     tasksViewUpdate();
+    console.dir(tasksArray);
+}
+function DoneTask(taskIndex) {
+    tasksArray[taskIndex].status = true;
+    tasksViewUpdate();
+    document.querySelector("#taskInde-" + taskIndex).style.background = "green";
     console.dir(tasksArray);
 }
 function addCategoryUpdateView(CategoryArray) {
