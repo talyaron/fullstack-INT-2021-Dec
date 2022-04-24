@@ -21,7 +21,6 @@ function handleAddTask(event) {
     task.setAttribute('id', "" + generateid());
     var choosenId = task.id;
     timerStarter(result.heading, result.setReminderDate, choosenId);
-    // handleSorting(taskContainer);
     // Append a new task to the tasks container
     task.innerHTML = "<div class='heading'>" + result.heading + "</div>\n    <div class='description'>" + result.description + "</div>\n    <div class='setReminderDate'>" + result.setReminderDate + "</div>\n    <div class='time'></div>\n    <div class='deletesvg'><img src=./images/delete.svg onclick=removeTask(event) ></div>";
     taskContainer.append(task);
@@ -31,10 +30,12 @@ function handleAddTask(event) {
 // Sort tasks by date
 function handleSorting(event) {
     event.preventDefault();
-    var sortByDate = tasks.sort(function (a, b) {
-        return new Date(a.setReminderDate).getTime() - new Date(b.setReminderDate).getTime();
-    });
-    console.log(sortByDate);
+    for (var i = 0; i < tasks.length; i++) {
+        var sortByDate = tasks.sort(function (a, b) {
+            return new Date(a.setReminderDate).getTime() - new Date(b.setReminderDate).getTime();
+        });
+        console.log(sortByDate);
+    }
 }
 // Remove tasks
 function removeTask(event) {

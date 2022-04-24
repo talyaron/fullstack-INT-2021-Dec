@@ -21,17 +21,17 @@ function handleAddTask(event: any) {
 
   for (let i = 0; i < elements.length; i++) {
     if (elements[i].name && elements[i].value) {
-      result[elements[i].name] = elements[i].value;
+     result[elements[i].name] = elements[i].value;
     }
   }
   // Create new task
   const taskContainer: any = document.querySelector('.tasksContainer');
-  let task = document.createElement('div');
+  const task = document.createElement('div');
   task.classList.add('task');
   task.setAttribute('id', `${generateid()}`);
   let choosenId = task.id
   timerStarter(result.heading, result.setReminderDate, choosenId);
-  // handleSorting(taskContainer);
+
   // Append a new task to the tasks container
   task.innerHTML = `<div class='heading'>${result.heading}</div>
     <div class='description'>${result.description}</div>
@@ -47,10 +47,12 @@ function handleAddTask(event: any) {
 // Sort tasks by date
 function handleSorting(event: any) {
   event.preventDefault();
+  for (let i = 0; i < tasks.length; i++) {
   const sortByDate = tasks.sort((a: any, b: any) => {
     return new Date(a.setReminderDate).getTime() - new Date(b.setReminderDate).getTime();
   });
   console.log(sortByDate);
+  }
 }
 
 // Remove tasks
