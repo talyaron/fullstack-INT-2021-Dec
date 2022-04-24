@@ -1,8 +1,14 @@
-console.log('hi');
 
-function plus(a,b){
-    return a+b
-}
+var express = require('express')
+var app = express()
 
-let res = plus(5,2)
-console.log(res)
+const port = 4000;
+
+app.get("/",(req,res)=>{
+    res.send("Hi I'm Shira")
+});
+
+
+app.listen(port, () =>{
+    console.log(`Server listening on port ${port}`)
+});
