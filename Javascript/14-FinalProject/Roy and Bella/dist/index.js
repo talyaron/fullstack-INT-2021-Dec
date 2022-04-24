@@ -30,12 +30,10 @@ function handleAddTask(event) {
 // Sort tasks by date
 function handleSorting(event) {
     event.preventDefault();
-    for (var i = 0; i < tasks.length; i++) {
-        var sortByDate = tasks.sort(function (a, b) {
-            return new Date(a.setReminderDate).getTime() - new Date(b.setReminderDate).getTime();
-        });
-        console.log(sortByDate);
-    }
+    var sortByDate = tasks.sort(function (a, b) {
+        return new Date(a.setReminderDate).getTime() - new Date(b.setReminderDate).getTime();
+    });
+    console.log(sortByDate);
 }
 // Remove tasks
 function removeTask(event) {

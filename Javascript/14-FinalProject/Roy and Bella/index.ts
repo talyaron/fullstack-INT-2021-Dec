@@ -1,6 +1,5 @@
 // Tasks array ("data base")
 const tasks: Array < task > = [];
-
 // Task interface
 interface task {
   heading: HTMLInputElement,
@@ -47,12 +46,10 @@ function handleAddTask(event: any) {
 // Sort tasks by date
 function handleSorting(event: any) {
   event.preventDefault();
-  for (let i = 0; i < tasks.length; i++) {
   const sortByDate = tasks.sort((a: any, b: any) => {
     return new Date(a.setReminderDate).getTime() - new Date(b.setReminderDate).getTime();
   });
   console.log(sortByDate);
-  }
 }
 
 // Remove tasks
