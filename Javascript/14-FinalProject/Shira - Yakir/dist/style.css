@@ -157,8 +157,8 @@ body .tasksPage .categories li {
 body .tasksPage .tasks {
   position: relative;
   width: 490px;
-  top: -160px;
-  left: 390px;
+  top: 0px;
+  left: 0px;
   grid-area: tasks;
   background-color: #1062b0;
   border-radius: 5px;

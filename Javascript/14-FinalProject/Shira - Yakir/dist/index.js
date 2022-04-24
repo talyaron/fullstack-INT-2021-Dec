@@ -7,7 +7,8 @@ var formSignUpMsg = document.querySelector("#signUpMsg");
 var formLoginMsg = document.querySelector("#loginMsg");
 var addTaskButton = document.querySelector('.addTaskBtn');
 var taskForm = document.querySelector('#addTaskForm');
-// const addNewCategory: HTMLElement = document.querySelector('.addCategory');
+var addNewCategory = document.querySelector('#addCategory');
+var tasksHTML = document.querySelector('.tasks');
 var newCategory = document.querySelector('.categories');
 var categoriesSelect = document.querySelector('#selectCategory');
 var tasksArray = []; // arays that contain the tasks
@@ -140,6 +141,7 @@ function submitAddTaskForm(event) {
     var newTask = new task(event.target.taskTitle.value, event.target.Content.value, new Date(event.target.dueDate.value), false, choice);
     tasksArray.push(newTask);
     updateHtmlTaskView(tasksArray.length - 1);
+    closeTaskForm();
     // for debug console purpose
     console.dir(tasksArray);
     console.log("tasks has " + tasksArray.length + " objects");
@@ -147,6 +149,11 @@ function submitAddTaskForm(event) {
 addTaskButton.addEventListener("click", openTaskForm);
 function openTaskForm() {
     taskForm.style.visibility = 'visible';
+    tasksHTML.style.visibility = 'hidden';
+}
+function closeTaskForm() {
+    taskForm.style.visibility = 'hidden';
+    tasksHTML.style.visibility = 'visible';
 }
 function handleSelectCategory() {
     console.dir(categoriesSelect);
@@ -173,6 +180,7 @@ function addNewCtg(event) {
             newCategory.appendChild(li);
             console.dir(CategoryArray);
             handleSelectCategory();
+            addNewCategory.value = "";
         }
     }
     catch (error) {

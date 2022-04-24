@@ -8,7 +8,8 @@ const formSignUpMsg: HTMLElement = document.querySelector("#signUpMsg");
 const formLoginMsg: HTMLElement = document.querySelector("#loginMsg");
 const addTaskButton: HTMLElement = document.querySelector('.addTaskBtn');
 const taskForm: HTMLElement = document.querySelector('#addTaskForm');
-// const addNewCategory: HTMLElement = document.querySelector('.addCategory');
+const addNewCategory: HTMLElement = document.querySelector('#addCategory');
+const tasksHTML: HTMLElement = document.querySelector('.tasks')
 let newCategory = document.querySelector('.categories');
 let categoriesSelect: HTMLElement = document.querySelector('#selectCategory')
 
@@ -184,7 +185,7 @@ function submitAddTaskForm(event) {
         event.target.Content.value, new Date(event.target.dueDate.value), false, choice);
     tasksArray.push(newTask);
     updateHtmlTaskView(tasksArray.length - 1);
-
+    closeTaskForm()
     // for debug console purpose
     console.dir(tasksArray);
     console.log(`tasks has ${tasksArray.length} objects`);
@@ -194,6 +195,12 @@ function submitAddTaskForm(event) {
 addTaskButton.addEventListener("click", openTaskForm);
 function openTaskForm() {
     taskForm.style.visibility = 'visible'
+    tasksHTML.style.visibility = 'hidden';
+}
+
+function closeTaskForm() {
+    taskForm.style.visibility = 'hidden'
+    tasksHTML.style.visibility = 'visible'
 }
 
 function handleSelectCategory() {
@@ -225,6 +232,7 @@ function addNewCtg(event) {
             newCategory.appendChild(li);
             console.dir(CategoryArray);
             handleSelectCategory()
+            addNewCategory.value = "";
         }
     }
     catch (error) {
