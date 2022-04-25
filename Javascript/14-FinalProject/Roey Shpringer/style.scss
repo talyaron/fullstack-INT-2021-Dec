@@ -39,3 +39,35 @@
 .agentImg{
     float: left;
 }
+
+.gameWrapper{
+    margin-top: 40px;
+}
+
+.gameBox{
+    margin: 0 auto;
+    height: 50px;
+    width: 800px;
+    background-color: gray;
+    border: 1px solid black;
+    position: relative;
+}
+
+.startButton{
+   display: flex;
+   justify-content: center;
+   margin-top: 10px;
+}
+
+.stopButton{
+
+}
+
+.line{
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    left: 0%;
+    background-color: red;
+    transition: 8s
+}
