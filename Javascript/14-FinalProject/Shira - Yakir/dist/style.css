@@ -217,3 +217,10 @@ body .tasksPage #addTaskForm #selectCategory {
   width: fit-content;
   margin-bottom: 10px;
 }
+
+@media screen and (max-width: 360px) {
+  .tasksPage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -303,17 +303,13 @@ body {
    
 }
 
-// @media screen and (max-width: 1169px) {
-//     body{
-//       width: 80%; /* The width is 100%, when the viewport is 800px or smaller */
-//       .appHeader{
-//         width: 100%; 
-//       }
-//     }
- 
-    
+@media screen and (max-width: 360px) {
+ .tasksPage{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+ }
 
-// }
+}
 
 
 
