@@ -20,6 +20,11 @@ var handleAddProduct = function (ev) {
     renderProducts();
     ev.target.reset();
 };
+function handleAddCart(productId) {
+    var itemcard = document.querySelector("#item-" + productId.id);
+    console.log(itemcard);
+    // localStorage.setItem('productCard',itemcard)
+}
 function handleLoad() {
     var stringProducts = localStorage.getItem('products');
     if (stringProducts) {
@@ -51,7 +56,7 @@ function renderClientProducts() {
     var Client_wrapper = document.querySelector(".Client_wrapper");
     var html = "";
     products.forEach(function (product) {
-        html += "<div class=\"item\">\n    <img src=\"" + product.image + "\" alt=\"\" id=\"item_Image\">\n    <p>name:" + product.name + "</p>\n    <p>Price:" + product.price + "</p>\n    </div>";
+        html += "<div class=\"item\" id=\"item-" + product.id + "\">\n    <img src=\"" + product.image + "\" alt=\"\" id=\"item_Image\">\n    <p>name:" + product.name + "</p>\n    <p>Price:" + product.price + "</p>\n    <button onclick=\"handleAddCart(" + product.id + ")\" >Add To Cart</button>\n    </div>";
     });
     Client_wrapper.innerHTML = html;
 }
