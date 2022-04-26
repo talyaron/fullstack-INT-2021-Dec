@@ -112,6 +112,17 @@ body .btn--Done {
 body .btn--Done:hover {
   background: #369f36;
 }
+body .btn--AddTask {
+  background-color: #e5652e;
+  width: 140px;
+  height: 40px;
+}
+body .btn--AddTask .taskText {
+  position: relative;
+  bottom: 8px;
+  font-size: large;
+  font-weight: bolder;
+}
 body .categories {
   width: 210px;
   background-color: #1062b0;
