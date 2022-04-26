@@ -174,16 +174,25 @@ function closeTaskForm() {
     tasksHTML.style.visibility = 'visible';
 }
 function handleSelectCategory() {
+    clearOptions();
     console.dir(categoriesSelect);
     console.dir(CategoryArray);
-    var option = document.createElement("option");
+    // let option = document.createElement("option");
     for (var i = 0; i < CategoryArray.length; i++) {
-        var option_1 = document.createElement("option");
-        option_1.value = CategoryArray[i];
-        option_1.text = CategoryArray[i];
-        categoriesSelect.appendChild(option_1);
+        var option = document.createElement("option");
+        option.value = CategoryArray[i];
+        option.text = CategoryArray[i];
+        categoriesSelect.appendChild(option);
+        console.log(CategoryArray[i]);
     }
     console.dir(categoriesSelect);
+}
+function clearOptions() {
+    var len;
+    len = categoriesSelect.options.length - 1;
+    for (var i = len; i > 0; i--) {
+        categoriesSelect.remove(i);
+    }
 }
 var choice = '';
 function selctCtg(event) {
@@ -191,8 +200,8 @@ function selctCtg(event) {
     var input = document.querySelector('.ctgInput');
     input.innerHTML = choice;
 }
+// handleSelectCategory()
 function addNewCtg(event) {
-    debugger;
     try {
         if (event.keyCode == 13) {
             CategoryArray.push(event.target.value);
@@ -200,12 +209,12 @@ function addNewCtg(event) {
             li.innerText = event.target.value;
             newCategory.appendChild(li);
             console.dir(CategoryArray);
-            handleSelectCategory();
             addNewCategory.value = "";
+            handleSelectCategory();
         }
     }
     catch (error) {
         console.error(error);
     }
 }
-handleSelectCategory();
+;

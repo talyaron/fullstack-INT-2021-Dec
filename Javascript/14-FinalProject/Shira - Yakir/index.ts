@@ -11,7 +11,7 @@ const taskForm: HTMLElement = document.querySelector('#addTaskForm');
 const addNewCategory: HTMLElement = document.querySelector('#addCategory');
 const tasksHTML: HTMLElement = document.querySelector('.tasks')
 let newCategory = document.querySelector('.categories');
-let categoriesSelect: HTMLElement = document.querySelector('#selectCategory')
+let categoriesSelect: any = document.querySelector('#selectCategory')
 let addTaskInputTxt = document.querySelector('#addTask'); 
 
 const defaultSelect = document.querySelector('#defaultSelect')
@@ -226,18 +226,29 @@ function closeTaskForm() {
 }
 
 function handleSelectCategory() {
+    clearOptions()
     console.dir(categoriesSelect);
     console.dir(CategoryArray);
-    let option = document.createElement("option");
+    // let option = document.createElement("option");
 
     for (let i = 0; i < CategoryArray.length; i++) {
         let option = document.createElement("option");
         option.value = CategoryArray[i];
         option.text = CategoryArray[i];
         categoriesSelect.appendChild(option);
+        console.log(CategoryArray[i])
+
     }
    
     console.dir(categoriesSelect);
+}
+
+function clearOptions(){
+   let len ;
+    len = categoriesSelect.options.length-1;
+    for (let i = len; i > 0; i--) {
+        categoriesSelect.remove(i);
+    }
 }
 
 
@@ -250,9 +261,10 @@ function selctCtg(event) {
     let input: any = document.querySelector('.ctgInput')
     input.innerHTML = choice;
 }
+            // handleSelectCategory()
+
 
 function addNewCtg(event) {
-    debugger;
     try {
         if (event.keyCode == 13) {
             CategoryArray.push(event.target.value);
@@ -260,14 +272,15 @@ function addNewCtg(event) {
             li.innerText = event.target.value;
             newCategory.appendChild(li);
             console.dir(CategoryArray);
-            handleSelectCategory()
             addNewCategory.value = "";
+            handleSelectCategory()
         }
     }
     catch (error) {
         console.error(error);
     }
 }
-handleSelectCategory()
+
+);
 
 
