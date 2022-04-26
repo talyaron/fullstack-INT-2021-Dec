@@ -132,7 +132,8 @@ function deleteTask(taskIndex) {
 function DoneTask(taskIndex) {
     tasksArray[taskIndex].status = true;
     tasksViewUpdate();
-    document.querySelector("#taskInde-" + taskIndex).style.background = "green";
+    document.querySelector("#taskInde-" + taskIndex).style.background = "rgb(77, 236, 77)";
+    tasksArray[taskIndex].title.style.textDecoration = "line-through"; //לא עובד
     console.dir(tasksArray);
 }
 function addCategoryUpdateView(CategoryArray) {
@@ -154,11 +155,17 @@ function submitAddTaskForm(event) {
     console.log("tasks has " + tasksArray.length + " objects");
     //TRY -  Shira
     // addTaskInputTxt.innerHTML = ''
+    // tasksArray.forEach(element =>{
+    //     tasksArray[element].innerHTML = ''
+    // });
 }
 addTaskButton.addEventListener("click", openTaskForm);
 function openTaskForm() {
     taskForm.style.visibility = 'visible';
     tasksHTML.style.visibility = 'hidden';
+    // tasksArray.forEach(element =>{
+    //     tasksArray[element].innerText = ''
+    // });
 }
 function closeTaskForm() {
     taskForm.style.visibility = 'hidden';
@@ -166,11 +173,13 @@ function closeTaskForm() {
 }
 function handleSelectCategory() {
     console.dir(categoriesSelect);
+    console.dir(CategoryArray);
+    var option = document.createElement("option");
     for (var i = 0; i < CategoryArray.length; i++) {
-        var option = document.createElement("option");
-        option.value = CategoryArray[i];
-        option.text = CategoryArray[i];
-        categoriesSelect.appendChild(option);
+        var option_1 = document.createElement("option");
+        option_1.value = CategoryArray[i];
+        option_1.text = CategoryArray[i];
+        categoriesSelect.appendChild(option_1);
     }
     console.dir(categoriesSelect);
 }
@@ -196,3 +205,4 @@ function addNewCtg(event) {
         console.error(error);
     }
 }
+handleSelectCategory();

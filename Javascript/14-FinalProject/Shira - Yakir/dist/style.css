@@ -70,8 +70,6 @@ body .btn {
   height: 4em;
   border-radius: 10em;
   border: none;
-  background: linear-gradient(104deg, #1c0754 0%, #f74302 100%);
-  background: linear-gradient(104deg, #4b09ff 0%, rgba(252, 87, 4, 0.414) 100%);
   color: white;
   padding: 8px 24px;
   font-size: 15px;
@@ -86,6 +84,8 @@ body .btn:hover {
 }
 body .btn--signUp, body .btn--login {
   font-size: 15px;
+  background: linear-gradient(104deg, #1c0754 0%, #f74302 100%);
+  background: linear-gradient(104deg, #4b09ff 0%, rgba(252, 87, 4, 0.414) 100%);
 }
 body .btn--delete {
   position: absolute;
@@ -100,6 +100,17 @@ body .btn--delete {
 }
 body .btn--delete:hover {
   background-color: #a24218;
+}
+body .btn--Done {
+  background-color: #4dec4d;
+  width: 80px;
+  height: 40px;
+  position: absolute;
+  top: 8px;
+  right: 150px;
+}
+body .btn--Done:hover {
+  background: #369f36;
 }
 body .categories {
   width: 210px;

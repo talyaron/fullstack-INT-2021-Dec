@@ -170,7 +170,8 @@ function deleteTask(taskIndex) {
 function DoneTask(taskIndex) {
     tasksArray[taskIndex].status = true;
     tasksViewUpdate()
-    document.querySelector(`#taskInde-${taskIndex}`).style.background = "green";
+    document.querySelector(`#taskInde-${taskIndex}`).style.background = "rgb(77, 236, 77)";
+    tasksArray[taskIndex].title.style.textDecoration = "line-through";//לא עובד
     console.dir(tasksArray);
 }
 
@@ -198,14 +199,24 @@ function submitAddTaskForm(event) {
 
     //TRY -  Shira
     // addTaskInputTxt.innerHTML = ''
-    
+    // tasksArray.forEach(element =>{
+    //     tasksArray[element].innerHTML = ''
+    // });
+
+
 }
 
 
 addTaskButton.addEventListener("click", openTaskForm);
 function openTaskForm() {
+   
     taskForm.style.visibility = 'visible'
     tasksHTML.style.visibility = 'hidden';
+
+    // tasksArray.forEach(element =>{
+    //     tasksArray[element].innerText = ''
+    // });
+
 }
 
 function closeTaskForm() {
@@ -215,14 +226,20 @@ function closeTaskForm() {
 
 function handleSelectCategory() {
     console.dir(categoriesSelect);
+    console.dir(CategoryArray);
+    let option = document.createElement("option");
+
     for (let i = 0; i < CategoryArray.length; i++) {
         let option = document.createElement("option");
         option.value = CategoryArray[i];
         option.text = CategoryArray[i];
         categoriesSelect.appendChild(option);
     }
+   
     console.dir(categoriesSelect);
 }
+
+
 
 
 let choice: string = '';
@@ -249,5 +266,6 @@ function addNewCtg(event) {
         console.error(error);
     }
 }
+handleSelectCategory()
 
 

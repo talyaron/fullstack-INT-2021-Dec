@@ -84,8 +84,8 @@ body {
         height: 4em;
         border-radius: 10em;
         border: none;
-        background: linear-gradient(104deg, rgb(28, 7, 84) 0%, rgb(247, 67, 2) 100%);
-        background: linear-gradient(104deg, rgb(75, 9, 255) 0%, rgba(252, 87, 4, 0.414) 100%);
+        // background: linear-gradient(104deg, rgb(28, 7, 84) 0%, rgb(247, 67, 2) 100%);
+        // background: linear-gradient(104deg, rgb(75, 9, 255) 0%, rgba(252, 87, 4, 0.414) 100%);
 
         color: white;
         padding: 8px 24px;
@@ -104,6 +104,8 @@ body {
 
         &--signUp, &--login{
             font-size: 15px;
+            background: linear-gradient(104deg, rgb(28, 7, 84) 0%, rgb(247, 67, 2) 100%);
+            background: linear-gradient(104deg, rgb(75, 9, 255) 0%, rgba(252, 87, 4, 0.414) 100%);
         }
 
         &--delete{
@@ -122,6 +124,19 @@ body {
                 background-color: #a24218;
                 // box-shadow: 0px 15px 32px rgba(216, 49, 91, 0.2);
             }
+        }
+        &--Done{
+            background-color: rgb(77, 236, 77);
+            width: 80px;
+            height: 40px;
+            position: absolute;
+            top: 8px;
+            right: 150px;
+            &:hover{
+                background:rgb(54, 159, 54);
+            }
+
+
         }
 
     } 
