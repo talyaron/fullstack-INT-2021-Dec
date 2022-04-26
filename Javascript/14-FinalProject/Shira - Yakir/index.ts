@@ -12,7 +12,11 @@ const addNewCategory: HTMLElement = document.querySelector('#addCategory');
 const tasksHTML: HTMLElement = document.querySelector('.tasks')
 let newCategory = document.querySelector('.categories');
 let categoriesSelect: HTMLElement = document.querySelector('#selectCategory')
-let addTaskInputTxt = document.querySelector('#addTask');
+let addTaskInputTxt = document.querySelector('#addTask'); 
+
+const defaultSelect = document.querySelector('#defaultSelect')
+// const option = document.querySelector('#defaultSelect')
+
 
 
 let tasksArray = []; // arays that contain the tasks
@@ -171,7 +175,7 @@ function DoneTask(taskIndex) {
     tasksArray[taskIndex].status = true;
     tasksViewUpdate()
     document.querySelector(`#taskInde-${taskIndex}`).style.background = "rgb(77, 236, 77)";
-    tasksArray[taskIndex].title.style.textDecoration = "line-through";//לא עובד
+    tasksArray[taskIndex].title.style.textDecoration = "line-through"; //CHECK//
     console.dir(tasksArray);
 }
 
@@ -197,11 +201,14 @@ function submitAddTaskForm(event) {
     console.dir(tasksArray);
     console.log(`tasks has ${tasksArray.length} objects`);
 
-    //TRY -  Shira
-    // addTaskInputTxt.innerHTML = ''
-    // tasksArray.forEach(element =>{
-    //     tasksArray[element].innerHTML = ''
-    // });
+        //Reset the fields of form:
+    addTaskInputTxt.value = "";
+    document.querySelector('#contentInput').value='';
+    document.querySelector('#dateInput').value = '';
+    var options = document.querySelectorAll('#selectCategory');
+    for (var i = 0, l = options.length; i < l; i++) {
+    options[i].value = defaultSelect.value;
+}
 
 
 }
@@ -209,14 +216,8 @@ function submitAddTaskForm(event) {
 
 addTaskButton.addEventListener("click", openTaskForm);
 function openTaskForm() {
-   
     taskForm.style.visibility = 'visible'
     tasksHTML.style.visibility = 'hidden';
-
-    // tasksArray.forEach(element =>{
-    //     tasksArray[element].innerText = ''
-    // });
-
 }
 
 function closeTaskForm() {
@@ -251,6 +252,7 @@ function selctCtg(event) {
 }
 
 function addNewCtg(event) {
+    debugger;
     try {
         if (event.keyCode == 13) {
             CategoryArray.push(event.target.value);

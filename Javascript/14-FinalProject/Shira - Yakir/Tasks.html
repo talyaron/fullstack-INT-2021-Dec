@@ -26,13 +26,13 @@
 
             <label for="chooseCtg">Category</label>
                 <select name="ctgSelect" id="selectCategory" onchange="selctCtg(event)">
-                    <option value="" disabled selected>Choose a Category</option>
+                    <option value="" id="defaultSelect" disabled selected>Choose a Category</option>
                 </select>
             <!-- <div class="ctgInput"></div> -->
-            <label for="Content">Content</label>
-            <input type="text" name="Content" id="">
+            <label for="Content" >Content</label>
+            <input type="text"  name="Content" id="contentInput">
             <label for="dueDate">Due Date</label>
-            <input type="datetime-local" name="dueDate" id="">
+            <input type="datetime-local" name="dueDate" id="dateInput">
             <button type="submit">Add Task</button>
             </form>
 
