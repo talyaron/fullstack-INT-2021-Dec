@@ -12,6 +12,7 @@ const addNewCategory: HTMLElement = document.querySelector('#addCategory');
 const tasksHTML: HTMLElement = document.querySelector('.tasks')
 let newCategory = document.querySelector('.categories');
 let categoriesSelect: HTMLElement = document.querySelector('#selectCategory')
+let addTaskInputTxt = document.querySelector('#addTask');
 
 
 let tasksArray = []; // arays that contain the tasks
@@ -194,6 +195,10 @@ function submitAddTaskForm(event) {
     // for debug console purpose
     console.dir(tasksArray);
     console.log(`tasks has ${tasksArray.length} objects`);
+
+    //TRY -  Shira
+    // addTaskInputTxt.innerHTML = ''
+    
 }
 
 

@@ -204,12 +204,5 @@ body .tasksPage #addTaskForm {
 }
 body .tasksPage #addTaskForm #selectCategory {
   width: fit-content;
-}
-body .tasksPage #addTaskForm .ctgInput {
-  height: 40px;
-  width: 300px;
-  margin-top: 5px;
   margin-bottom: 10px;
-  border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.233);
 }

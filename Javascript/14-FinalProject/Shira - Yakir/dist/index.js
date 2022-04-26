@@ -11,6 +11,7 @@ var addNewCategory = document.querySelector('#addCategory');
 var tasksHTML = document.querySelector('.tasks');
 var newCategory = document.querySelector('.categories');
 var categoriesSelect = document.querySelector('#selectCategory');
+var addTaskInputTxt = document.querySelector('#addTask');
 var tasksArray = []; // arays that contain the tasks
 var CategoryArray = []; // arays that contain the Categories
 //create task object
@@ -151,6 +152,8 @@ function submitAddTaskForm(event) {
     // for debug console purpose
     console.dir(tasksArray);
     console.log("tasks has " + tasksArray.length + " objects");
+    //TRY -  Shira
+    // addTaskInputTxt.innerHTML = ''
 }
 addTaskButton.addEventListener("click", openTaskForm);
 function openTaskForm() {
