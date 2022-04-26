@@ -37,11 +37,17 @@ function handleClick(ev) {
     console.log(ev.target.value);
 }
 function handleStart(ev) {
-    startButton.innerHTML = "<div class =\"pauseButton\"><button onclick=\"handlePause(event)\">Pause</button></div>";
+    startButton.innerHTML = "<div><button onclick=\"handlePause(event) class =\"pauseButton\"\">Pause</button></div>";
     console.log(ev);
     var linePosition = line.getBoundingClientRect();
     console.log(linePosition);
-    if (ev.isTrusted = true) {
-        line.style.left = "99.30%";
-    }
+    line.style.left = "99.30%";
+    newInterval(moveRight, 8000);
+}
+var pauseButton = document.querySelector(".pauseButton");
+function newInterval(func, time) {
+    return setInterval(func, time);
+}
+function moveRight() {
+    line.style.left = "0%";
 }
