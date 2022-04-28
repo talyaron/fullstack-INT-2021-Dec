@@ -8,12 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
+   <header>
         <h1>to do list app</h1>
-    </header>
- <main>
-        <div class="container">
-            <form onsubmit="handleNote(event)" id="todo-form">
+   </header>
+ 
+    <div class="container">
+        <form onsubmit="handleNote(event)" id="todo-form">
 
                <input type="text" name="note" placeholder="write a note" id="formTask">
         
@@ -22,13 +22,13 @@
                <input type="datetime-local" name="local-date" id="formDateTime">
                
 
-            </form>
-            <div class="root"></div>
-            <div id="note"></div>
+        </form>
+        <div class="root"></div>
+        <!-- <div id="note"></div> -->
 
-        </div>
-</main>
+    </div>
+
    
-    <script src="./dist/app.js"></script>
+        <script src="./dist/app.js"></script>
 </body>
 </html>

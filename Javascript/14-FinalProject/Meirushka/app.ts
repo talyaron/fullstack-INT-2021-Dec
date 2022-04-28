@@ -1,5 +1,5 @@
 // selectors
-const root = document.querySelector('.root')
+const root = document.querySelector('.root');
 // const note = document.querySelector('.note')
 // Functions
 
