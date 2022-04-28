@@ -281,6 +281,5 @@ function addNewCtg(event) {
     }
 }
 
-);
-
-
+//call function again, to initial select categories 
+handleSelectCategory()

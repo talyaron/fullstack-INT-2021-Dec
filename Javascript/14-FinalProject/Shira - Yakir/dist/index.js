@@ -217,4 +217,5 @@ function addNewCtg(event) {
         console.error(error);
     }
 }
-;
+//call function again, to initial select categories 
+handleSelectCategory();
