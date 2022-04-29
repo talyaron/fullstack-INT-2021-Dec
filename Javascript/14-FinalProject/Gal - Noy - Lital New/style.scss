@@ -51,15 +51,18 @@ nav {
 }
 
 .navigation {
+    width: 70%;
     display: flex;
+
     justify-content: space-between;
     align-items: center;
-    padding: 0px 45px;
-    margin-left: 20%;
+    padding: 10px;
+    position: relative;
+    left: 30%;
 }
 
 .logo img {
-    height: 200px;
+    height: 25vh;
 }
 
 .menu {
@@ -145,39 +148,42 @@ nav {
 
 
 .containerOfProducts {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 50%;
-    margin-top: 20px;
-    margin-left: 25%;
-    img {
-        height: 190px;
-        margin: 20px;
-        cursor: pointer;
-        position: relative;
+    display: flex;
+    position: relative;
+    left: 30%;
     
-    }
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 70%;
+
 
 }
 
 .parent {
     display: flex;
-    flex-grow: 0.5;
+    width: 20vw;
+
     flex-direction: column;
     align-items: center;
     border: 1px solid #f7f7f7;
     border-radius: 10px;
-    margin: 20px;
+    margin: 10px;
+    padding: 10px;
     border-color: rgb(203, 30, 101);
+    img {
+        height: 20vh;
 
+        margin: 10px;
+        cursor: pointer;
+        box-sizing:content-box;
+    
+    }
+    &:hover {
+        box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+    }
 
 
 }
-
-.parent:hover {
-    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
-}
-
 
 
 
@@ -251,9 +257,7 @@ button:hover,
     }
 }
 
-.overlay {
-    background-color: #c5d7e400;
-}
+
 
 .parentProduct {
     margin: auto;

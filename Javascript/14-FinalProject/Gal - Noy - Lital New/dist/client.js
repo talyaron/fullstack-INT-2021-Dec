@@ -109,7 +109,7 @@ arrayOfProducts.forEach(function (product) {
         },
     ];
     products.forEach(function (par) {
-        cont.innerHTML += "<div class=\"parent\"><img src=\"" + par.src + "\" alt=\"" + par.title + "\"><div id=" + par.id + " class=\"overlay\"><div>" + par.title + "</div><div>" + par.tags + "\u20AA</div><button onclick=\"addMeToCart(event)\" class=\"addMe\">Add</button></div></div>";
+        cont.innerHTML += "<div class=\"parent\"><img src=\"" + par.src + "\" alt=\"" + par.title + "\"><div id=" + par.id + "><div>" + par.title + "</div><div>" + par.tags + "\u20AA</div><button onclick=\"addMeToCart(event)\" class=\"addMe\">Add</button></div></div>";
     });
 });
 function addMeToCart(event) {
@@ -137,6 +137,7 @@ function addMeToCart(event) {
         cart.push(currentProduct);
     }
     var cartTotal = cartHtmlBuild();
+    localStorage.setItem('cartTotal', JSON.stringify(cartTotal));
     htmlCart.innerHTML += "<div>Total amount: " + cartTotal + "\u20AA";
     htmlCart.innerHTML += "<button onclick=\"alertFunction()\">Buy now!</button>";
 }
@@ -170,18 +171,15 @@ function cartHtmlBuild() {
         var currentCartProduct = arrayOfProducts.find(function (element) { return element.id == product.id; });
         var totalPayProduct = currentCartProduct.price * product.quantity;
         cartTotal += totalPayProduct;
-        htmlCart.innerHTML += "<div class=\"parentProduct\"><img src=\"" + currentCartProduct.image + "\" alt=\"" + currentCartProduct.description + "\"><div id=" + currentCartProduct.id + " class=\"overlay\"><div><b>" + currentCartProduct.name + "</b></div><div>" + currentCartProduct.price + "\u20AA</div><div>quantity: " + product.quantity + "<div>Total amount: " + totalPayProduct + "\u20AA</div>";
+        htmlCart.innerHTML += "<div class=\"parentProduct\"><img src=\"" + currentCartProduct.image + "\" alt=\"" + currentCartProduct.description + "\"><div id=" + currentCartProduct.id + "><div><b>" + currentCartProduct.name + "</b></div><div>" + currentCartProduct.price + "\u20AA</div><div>quantity: " + product.quantity + "<div>Total amount: " + totalPayProduct + "\u20AA</div>";
     });
     return cartTotal;
 }
 function setItem(product) {
     var _a, _b;
-    console.log("inside of setitm");
     var cartItems = localStorage.getItem('productInCart');
     cartItems = JSON.parse(cartItems);
-    console.log(cartItems);
     if (cartItems != null) {
-        console.log(cartItems);
         if (cartItems[product.id] == undefined) {
             cartItems = __assign(__assign({}, cartItems), (_a = {}, _a[product.id] = product, _a));
         }

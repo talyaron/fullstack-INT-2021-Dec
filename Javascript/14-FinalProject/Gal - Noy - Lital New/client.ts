@@ -131,7 +131,7 @@ arrayOfProducts.forEach((product) => {
     },
   ];
   products.forEach(function (par) {
-    cont.innerHTML += `<div class="parent"><img src="${par.src}" alt="${par.title}"><div id=${par.id} class="overlay"><div>${par.title}</div><div>${par.tags}₪</div><button onclick="addMeToCart(event)" class="addMe">Add</button></div></div>`;
+    cont.innerHTML += `<div class="parent"><img src="${par.src}" alt="${par.title}"><div id=${par.id}><div>${par.title}</div><div>${par.tags}₪</div><button onclick="addMeToCart(event)" class="addMe">Add</button></div></div>`;
   });
 });
 
@@ -168,6 +168,7 @@ function addMeToCart(event) {
 
   }
   const cartTotal: number = cartHtmlBuild();
+  localStorage.setItem('cartTotal', JSON.stringify(cartTotal));
   htmlCart.innerHTML += `<div>Total amount: ${cartTotal}₪`
   htmlCart.innerHTML += `<button onclick="alertFunction()">Buy now!</button>`
 }
@@ -211,7 +212,7 @@ function cartHtmlBuild() {
     );
     let totalPayProduct: any = currentCartProduct.price * product.quantity;
     cartTotal += totalPayProduct;
-    htmlCart.innerHTML += `<div class="parentProduct"><img src="${currentCartProduct.image}" alt="${currentCartProduct.description}"><div id=${currentCartProduct.id} class="overlay"><div><b>${currentCartProduct.name}</b></div><div>${currentCartProduct.price}₪</div><div>quantity: ${product.quantity}<div>Total amount: ${totalPayProduct}₪</div>`;
+    htmlCart.innerHTML += `<div class="parentProduct"><img src="${currentCartProduct.image}" alt="${currentCartProduct.description}"><div id=${currentCartProduct.id}><div><b>${currentCartProduct.name}</b></div><div>${currentCartProduct.price}₪</div><div>quantity: ${product.quantity}<div>Total amount: ${totalPayProduct}₪</div>`;
 
   });
 
@@ -219,12 +220,12 @@ function cartHtmlBuild() {
 }
 
 function setItem(product) {
-  console.log("inside of setitm")
+
   let cartItems: any = localStorage.getItem('productInCart');
   cartItems = JSON.parse(cartItems);
-  console.log(cartItems);
+
   if (cartItems != null) {
-    console.log(cartItems);
+
     if (cartItems[product.id] == undefined) {
       cartItems = {
         ...cartItems,
