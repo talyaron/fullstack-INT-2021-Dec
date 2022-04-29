@@ -20,3 +20,48 @@ function handleNote(ev: any) {
   console.log(result);
   root.innerHTML += `<div>${result.note}</div>`
 }  
+
+let todosArr: Array<any> = []
+
+const todoList:HTMLElement = document.querySelector('#todolist');
+const noOfTodos:HTMLElement = document.querySelector('#noOfTodos');
+
+const createTodo = (arr) => {
+  
+  todoList.innerHTML = "";
+  
+  arr.forEach((todo, id) => {
+    let list = document.createElement('li');
+    let spanWithValue = document.createElement('span');
+    let spanWithBtn = document.createElement('button')
+    spanWithValue.innerText = todo.value;
+    spanWithBtn.innerText = "X";
+    spanWithBtn.style.color = 'red';
+    
+    
+  
+  
+    spanWithBtn.addEventlistener("click", () => {
+      deleteTodo(id);
+    });
+    
+    list.appendChild(spanWithValue);
+    list.appendChild(spanWithBtn);
+  
+    todoList.appendChild(list);
+    
+    
+  }); 
+  
+  #noOfTodos.innerText = todosArr.length;
+  
+};
+
+cosnt deleteTodo = (index) =>{
+  todosArr.splice(index, 1);
+  createTodo(todosArr);
+};
+
+window.addEventListener ("load", () => {
+  createTodo(todosArr)
+});
