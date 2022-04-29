@@ -48,9 +48,9 @@
             </ul>
             <!--right-menu----------->
             <div class="right-menu">
-                <a href="javascript:void(0);" class="search">
-                    <i class="fas fa-search"></i>
-                    <input type="search" class="search" placeholder="welcome to OnlineShop">
+                <a href="https://www.shufersal.co.il/online/he/search?text=" target="_blank" class="search">
+                    <i id="searchBTN" class="fas fa-search"></i>
+                    <input  type="search" class="search" placeholder="welcome to OnlineShop">
                 </a>
                 <a href="javascript:void(0);" class="user">
                     <i class="far fa-user"></i>
@@ -67,14 +67,14 @@
 
     <div class="containerOfProducts"></div>
     <div class="imageTitle"></div>
-    <div class="addMe"></div>
     <div class="cart"></div>
     <div class="htmlCartQuantity"></div>
+    <div class="popup" onclick="myFunction()">Click me to toggle the popup!
+        <span class="popuptext" id="myPopup"><div class="cart"></div></span>
+    </div>
 
     <script src="./dist/client.js"></script>
 
 </body>
 
 </html>
-
-

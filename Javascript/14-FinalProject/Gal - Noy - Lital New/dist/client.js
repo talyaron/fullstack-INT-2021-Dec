@@ -88,7 +88,6 @@ var arrayOfProducts = [
 console.log(arrayOfProducts);
 var cart = [];
 arrayOfProducts.forEach(function (product) {
-    var btnAddToCart = document.querySelector(".addMe");
     var cont = document.querySelector(".containerOfProducts");
     var imageTitle = document.querySelector(".imageTitle");
     var products = [
@@ -149,6 +148,8 @@ function cartHtmlBuild() {
         // increase the count
         ++count;
     }
+    var htmlCartCount = document.querySelector(".num-cart-product");
+    htmlCartCount.innerHTML = "" + count;
     console.log("quantity of different products added to cart " + count);
     htmlCart.innerHTML = "<div class=\u201DHeader\u201D><h3 class=\u201DHeading\u201D>Shopping Cart</h3></div><div class=\"quantityOfProducts\"><h3 class=\u201DHeading\u201D>products added to cart: " + count + "</h3></div>";
     cart.forEach(function (product) {
@@ -162,3 +163,8 @@ function cartHtmlBuild() {
 // cart.forEach(function (par) {
 //     htmlCart.innerHTML += `<div class="parent"><img src="${par.src}" alt="${par.title}"><div id=${par.id} class="overlay"><div>${par.title}</div><div>${par.tags}₪</div><button onclick="addMeToCart(event)" class="addMe">Add</button></div></div>`;
 //   });
+// When the user clicks on div, open the popup
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}

@@ -120,7 +120,6 @@ console.log(arrayOfProducts);
 let cart: Array<cartProduct> = [];
 
 arrayOfProducts.forEach((product) => {
-  const btnAddToCart = document.querySelector(".addMe");
   const cont = document.querySelector(".containerOfProducts");
   const imageTitle = document.querySelector(".imageTitle");
   const products = [
@@ -191,6 +190,8 @@ function cartHtmlBuild() {
     // increase the count
     ++count;
   }
+  const htmlCartCount = document.querySelector(".num-cart-product");
+  htmlCartCount.innerHTML = `${count}`;
   console.log(`quantity of different products added to cart ${count}`);
   htmlCart.innerHTML = `<div class=”Header”><h3 class=”Heading”>Shopping Cart</h3></div><div class="quantityOfProducts"><h3 class=”Heading”>products added to cart: ${count}</h3></div>`;
   cart.forEach((product) => {
@@ -208,3 +209,8 @@ function cartHtmlBuild() {
 // cart.forEach(function (par) {
 //     htmlCart.innerHTML += `<div class="parent"><img src="${par.src}" alt="${par.title}"><div id=${par.id} class="overlay"><div>${par.title}</div><div>${par.tags}₪</div><button onclick="addMeToCart(event)" class="addMe">Add</button></div></div>`;
 //   });
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
