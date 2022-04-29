@@ -136,7 +136,7 @@ arrayOfProducts.forEach((product) => {
 });
 
 function addMeToCart(event) {
-
+  // setItem();
   event.preventDefault();
   const productId = event.target.parentElement.id;
   let productPrice = event.target.parentElement.price;
@@ -166,8 +166,13 @@ function addMeToCart(event) {
   }
   const cartTotal:number=cartHtmlBuild();
   htmlCart.innerHTML += `<div>Total amount: ${cartTotal}₪`
-  htmlCart.innerHTML += `<button type="submit">Buy now!</button>`
+  htmlCart.innerHTML += `<button onclick="alertFunction()">Buy now!</button>`
 }
+
+function alertFunction () {
+  alert("thank you for buying but we dont have payment system! :)");
+}
+
 function uid() {
   return `id-${Math.ceil(Math.random() * 1e8)}`;
 }
@@ -211,16 +216,34 @@ function cartHtmlBuild() {
   return cartTotal;
 }
 
+function setItem (product){
+  let cartItems:any = localStorage.getItem ('productsInCart');
+  cartItems = JSON.parse(cartItems);
+  
+  if (cartItems != null){
+    
+      if(cartItems[product.id]==undefined){
+        cartItems = {
+          ...cartItems,
+          [product.id]: product
+        }
+  }else{
+    cartItems={
+      [product.id]: product
+    }
+  }
+  
+  localStorage.setItem("productInCart", JSON.stringify
+  (cartItems));
+  
+  }
+}
 // reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ })
 
 // cart.forEach(function (par) {
 //     htmlCart.innerHTML += `<div class="parent"><img src="${par.src}" alt="${par.title}"><div id=${par.id} class="overlay"><div>${par.title}</div><div>${par.tags}₪</div><button onclick="addMeToCart(event)" class="addMe">Add</button></div></div>`;
 //   });
 // When the user clicks on div, open the popup
-function myFunction() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-}
 
 
 

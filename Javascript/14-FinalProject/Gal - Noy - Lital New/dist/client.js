@@ -3,6 +3,17 @@
 //   console.log(name)
 //   localStorage.setItem('name',JSON.stringify({name}));
 // }
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 // function handleLoadSeller(){
 //   const UserInput=JSON.parse(localStorage.getItem('name'));
 // }
@@ -103,6 +114,7 @@ arrayOfProducts.forEach(function (product) {
     });
 });
 function addMeToCart(event) {
+    // setItem();
     event.preventDefault();
     var productId = event.target.parentElement.id;
     var productPrice = event.target.parentElement.price;
@@ -129,7 +141,10 @@ function addMeToCart(event) {
     }
     var cartTotal = cartHtmlBuild();
     htmlCart.innerHTML += "<div>Total amount: " + cartTotal + "\u20AA";
-    htmlCart.innerHTML += "<button type=\"submit\">Buy now!</button>";
+    htmlCart.innerHTML += "<button onclick=\"alertFunction()\">Buy now!</button>";
+}
+function alertFunction() {
+    alert("thank you for buying but we dont have payment system! :)");
 }
 function uid() {
     return "id-" + Math.ceil(Math.random() * 1e8);
@@ -165,12 +180,24 @@ function cartHtmlBuild() {
     console.log(cartTotal);
     return cartTotal;
 }
+function setItem(product) {
+    var _a, _b;
+    var cartItems = localStorage.getItem('productsInCart');
+    cartItems = JSON.parse(cartItems);
+    if (cartItems != null) {
+        if (cartItems[product.id] == undefined) {
+            cartItems = __assign(__assign({}, cartItems), (_a = {}, _a[product.id] = product, _a));
+        }
+        else {
+            cartItems = (_b = {},
+                _b[product.id] = product,
+                _b);
+        }
+        localStorage.setItem("productInCart", JSON.stringify(cartItems));
+    }
+}
 // reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ })
 // cart.forEach(function (par) {
 //     htmlCart.innerHTML += `<div class="parent"><img src="${par.src}" alt="${par.title}"><div id=${par.id} class="overlay"><div>${par.title}</div><div>${par.tags}₪</div><button onclick="addMeToCart(event)" class="addMe">Add</button></div></div>`;
 //   });
 // When the user clicks on div, open the popup
-function myFunction() {
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("show");
-}
