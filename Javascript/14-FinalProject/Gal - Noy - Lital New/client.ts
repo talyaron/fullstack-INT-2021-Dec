@@ -115,7 +115,7 @@ const arrayOfProducts: Array<Product> = [
   coffee,
   toiletPaper,
 ];
-console.log(arrayOfProducts);
+
 
 let cart: Array<cartProduct> = [];
 
@@ -136,7 +136,7 @@ arrayOfProducts.forEach((product) => {
 });
 
 function addMeToCart(event) {
-  // setItem();
+
   event.preventDefault();
   const productId = event.target.parentElement.id;
   let productPrice = event.target.parentElement.price;
@@ -145,16 +145,19 @@ function addMeToCart(event) {
     for (let key in productPrice) {
       ++balance
     }
-    console.log(balance)
+
   }
 
   const productInCartIndex = cart.findIndex(
     (element) => element.id == productId
   );
-
+  const productInProductsArrayIndex = arrayOfProducts.findIndex(
+    (element) => element.id == productId
+  );
+  setItem(arrayOfProducts[productInProductsArrayIndex]);
   if (productInCartIndex != -1) {
     cart[productInCartIndex].quantity++;
-    console.log(cart);
+
   } else {
     const currentProduct: cartProduct = {
       id: productId,
@@ -162,14 +165,14 @@ function addMeToCart(event) {
       price: productPrice,
     };
     cart.push(currentProduct);
-    console.log(cart);
+
   }
-  const cartTotal:number=cartHtmlBuild();
+  const cartTotal: number = cartHtmlBuild();
   htmlCart.innerHTML += `<div>Total amount: ${cartTotal}₪`
   htmlCart.innerHTML += `<button onclick="alertFunction()">Buy now!</button>`
 }
 
-function alertFunction () {
+function alertFunction() {
   alert("thank you for buying but we dont have payment system! :)");
 }
 
@@ -192,7 +195,7 @@ function countCart() {
 
 function cartHtmlBuild() {
   countCart();
-  let cartTotal:number=0;
+  let cartTotal: number = 0;
   let count = 0;
   // loop through each key/value
   for (let key in cart) {
@@ -201,43 +204,43 @@ function cartHtmlBuild() {
   }
   const htmlCartCount = document.querySelector(".num-cart-product");
   htmlCartCount.innerHTML = `${count}`;
-  console.log(`quantity of different products added to cart ${count}`);
   htmlCart.innerHTML = `<div class=”Header”><h3 class=”Heading”>Shopping Cart</h3></div><div class="quantityOfProducts"><h3 class=”Heading”>products added to cart: ${count}</h3></div>`;
   cart.forEach((product) => {
     const currentCartProduct: Product = arrayOfProducts.find(
       (element) => element.id == product.id
     );
     let totalPayProduct: any = currentCartProduct.price * product.quantity;
-    cartTotal+=totalPayProduct;
+    cartTotal += totalPayProduct;
     htmlCart.innerHTML += `<div class="parentProduct"><img src="${currentCartProduct.image}" alt="${currentCartProduct.description}"><div id=${currentCartProduct.id} class="overlay"><div><b>${currentCartProduct.name}</b></div><div>${currentCartProduct.price}₪</div><div>quantity: ${product.quantity}<div>Total amount: ${totalPayProduct}₪</div>`;
-    console.log(totalPayProduct);
+
   });
-  console.log(cartTotal);
+
   return cartTotal;
 }
 
-function setItem (product){
-  let cartItems:any = localStorage.getItem ('productsInCart');
+function setItem(product) {
+  console.log("inside of setitm")
+  let cartItems: any = localStorage.getItem('productInCart');
   cartItems = JSON.parse(cartItems);
-  
-  if (cartItems != null){
-    
-      if(cartItems[product.id]==undefined){
-        cartItems = {
-          ...cartItems,
-          [product.id]: product
-        }
-  }else{
-    cartItems={
+  console.log(cartItems);
+  if (cartItems != null) {
+    console.log(cartItems);
+    if (cartItems[product.id] == undefined) {
+      cartItems = {
+        ...cartItems,
+        [product.id]: product
+      }
+    }
+  } else {
+    cartItems = {
       [product.id]: product
     }
   }
-  
-  localStorage.setItem("productInCart", JSON.stringify
-  (cartItems));
-  
-  }
+
+  localStorage.setItem("productInCart", JSON.stringify(cartItems));
+
 }
+
 // reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ })
 
 // cart.forEach(function (par) {

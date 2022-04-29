@@ -96,7 +96,6 @@ var arrayOfProducts = [
     coffee,
     toiletPaper,
 ];
-console.log(arrayOfProducts);
 var cart = [];
 arrayOfProducts.forEach(function (product) {
     var cont = document.querySelector(".containerOfProducts");
@@ -114,7 +113,6 @@ arrayOfProducts.forEach(function (product) {
     });
 });
 function addMeToCart(event) {
-    // setItem();
     event.preventDefault();
     var productId = event.target.parentElement.id;
     var productPrice = event.target.parentElement.price;
@@ -123,12 +121,12 @@ function addMeToCart(event) {
         for (var key in productPrice) {
             ++balance;
         }
-        console.log(balance);
     }
     var productInCartIndex = cart.findIndex(function (element) { return element.id == productId; });
+    var productInProductsArrayIndex = arrayOfProducts.findIndex(function (element) { return element.id == productId; });
+    setItem(arrayOfProducts[productInProductsArrayIndex]);
     if (productInCartIndex != -1) {
         cart[productInCartIndex].quantity++;
-        console.log(cart);
     }
     else {
         var currentProduct = {
@@ -137,7 +135,6 @@ function addMeToCart(event) {
             price: productPrice
         };
         cart.push(currentProduct);
-        console.log(cart);
     }
     var cartTotal = cartHtmlBuild();
     htmlCart.innerHTML += "<div>Total amount: " + cartTotal + "\u20AA";
@@ -168,33 +165,33 @@ function cartHtmlBuild() {
     }
     var htmlCartCount = document.querySelector(".num-cart-product");
     htmlCartCount.innerHTML = "" + count;
-    console.log("quantity of different products added to cart " + count);
     htmlCart.innerHTML = "<div class=\u201DHeader\u201D><h3 class=\u201DHeading\u201D>Shopping Cart</h3></div><div class=\"quantityOfProducts\"><h3 class=\u201DHeading\u201D>products added to cart: " + count + "</h3></div>";
     cart.forEach(function (product) {
         var currentCartProduct = arrayOfProducts.find(function (element) { return element.id == product.id; });
         var totalPayProduct = currentCartProduct.price * product.quantity;
         cartTotal += totalPayProduct;
         htmlCart.innerHTML += "<div class=\"parentProduct\"><img src=\"" + currentCartProduct.image + "\" alt=\"" + currentCartProduct.description + "\"><div id=" + currentCartProduct.id + " class=\"overlay\"><div><b>" + currentCartProduct.name + "</b></div><div>" + currentCartProduct.price + "\u20AA</div><div>quantity: " + product.quantity + "<div>Total amount: " + totalPayProduct + "\u20AA</div>";
-        console.log(totalPayProduct);
     });
-    console.log(cartTotal);
     return cartTotal;
 }
 function setItem(product) {
     var _a, _b;
-    var cartItems = localStorage.getItem('productsInCart');
+    console.log("inside of setitm");
+    var cartItems = localStorage.getItem('productInCart');
     cartItems = JSON.parse(cartItems);
+    console.log(cartItems);
     if (cartItems != null) {
+        console.log(cartItems);
         if (cartItems[product.id] == undefined) {
             cartItems = __assign(__assign({}, cartItems), (_a = {}, _a[product.id] = product, _a));
         }
-        else {
-            cartItems = (_b = {},
-                _b[product.id] = product,
-                _b);
-        }
-        localStorage.setItem("productInCart", JSON.stringify(cartItems));
     }
+    else {
+        cartItems = (_b = {},
+            _b[product.id] = product,
+            _b);
+    }
+    localStorage.setItem("productInCart", JSON.stringify(cartItems));
 }
 // reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ })
 // cart.forEach(function (par) {
