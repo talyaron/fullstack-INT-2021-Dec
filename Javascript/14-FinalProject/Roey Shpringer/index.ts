@@ -50,12 +50,16 @@ function handleClick(ev) {
 }
 
 function handleStart(ev) {
-    startButton.innerHTML = `<div><button onclick="handlePause(event) class ="pauseButton"">Pause</button></div>`
+    startButton.innerHTML = `<div><button onclick="handlePause(event)" class="pauseButton"">Pause</button></div>`
     console.log(ev);
     let linePosition = line.getBoundingClientRect()
     console.log(linePosition)
     line.style.left = `99.30%`
-    newInterval(moveRight, 8000)
+}
+
+function handlePause(ev){
+    console.log(line.getBoundingClientRect().left)
+    line.style.left = line.getBoundingClientRect().left
 }
 
 const pauseButton = document.querySelector(".pauseButton")

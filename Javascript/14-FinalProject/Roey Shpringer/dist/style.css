@@ -65,5 +65,6 @@
   height: 100%;
   left: 0%;
   background-color: red;
-  transition: 8s;
+  transition: 3s;
+  animation-direction: reverse;
 }
