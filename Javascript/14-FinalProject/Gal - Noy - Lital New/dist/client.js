@@ -127,7 +127,9 @@ function addMeToCart(event) {
         cart.push(currentProduct);
         console.log(cart);
     }
-    cartHtmlBuild();
+    var cartTotal = cartHtmlBuild();
+    htmlCart.innerHTML += "<div>Total amount: " + cartTotal + "\u20AA";
+    htmlCart.innerHTML += "<button type=\"submit\">Buy now!</button>";
 }
 function uid() {
     return "id-" + Math.ceil(Math.random() * 1e8);
@@ -142,6 +144,7 @@ function countCart() {
 }
 function cartHtmlBuild() {
     countCart();
+    var cartTotal = 0;
     var count = 0;
     // loop through each key/value
     for (var key in cart) {
@@ -155,9 +158,12 @@ function cartHtmlBuild() {
     cart.forEach(function (product) {
         var currentCartProduct = arrayOfProducts.find(function (element) { return element.id == product.id; });
         var totalPayProduct = currentCartProduct.price * product.quantity;
-        htmlCart.innerHTML += "<div class=\"parentProduct\"><img src=\"" + currentCartProduct.image + "\" alt=\"" + currentCartProduct.description + "\"><div id=" + currentCartProduct.id + " class=\"overlay\"><div>" + currentCartProduct.name + "</div><div>" + currentCartProduct.price + "\u20AA</div><div>quantity: " + product.quantity + "<div>Total amount:" + totalPayProduct + "\u20AA</div>";
+        cartTotal += totalPayProduct;
+        htmlCart.innerHTML += "<div class=\"parentProduct\"><img src=\"" + currentCartProduct.image + "\" alt=\"" + currentCartProduct.description + "\"><div id=" + currentCartProduct.id + " class=\"overlay\"><div><b>" + currentCartProduct.name + "</b></div><div>" + currentCartProduct.price + "\u20AA</div><div>quantity: " + product.quantity + "<div>Total amount: " + totalPayProduct + "\u20AA</div>";
         console.log(totalPayProduct);
     });
+    console.log(cartTotal);
+    return cartTotal;
 }
 // reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ })
 // cart.forEach(function (par) {
