@@ -216,7 +216,7 @@ body .tasksPage .tasks .task #EditText {
   color: #e5652e;
   font-size: smaller;
 }
-body .tasksPage #addTaskForm {
+body .tasksPage #addTaskForm, body .tasksPage #EditTaskForm {
   position: absolute;
   width: 300px;
   height: 300px;
@@ -224,7 +224,7 @@ body .tasksPage #addTaskForm {
   right: 540px;
   visibility: hidden;
 }
-body .tasksPage #addTaskForm #selectCategory {
+body .tasksPage #addTaskForm #selectCategory, body .tasksPage #EditTaskForm #selectCategory {
   width: fit-content;
   margin-bottom: 10px;
 }
