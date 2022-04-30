@@ -141,7 +141,7 @@ body .addCategory {
 body .tasksPage {
   position: relative;
   background-color: #4a83bd;
-  width: 90%;
+  width: 80%;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 150px 150px auto;
@@ -229,9 +229,12 @@ body .tasksPage #addTaskForm #selectCategory {
   margin-bottom: 10px;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 600px) {
   .tasksPage {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px 150px auto;
+    grid-template-areas: "appHeader appHeader" "addCategory addTask" "categories tasks";
   }
 }
