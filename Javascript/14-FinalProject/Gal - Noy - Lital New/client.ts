@@ -36,7 +36,7 @@ let milk: Product = {
   price: 6,
   description: "3% milk",
   image: "https://www.tnuva.co.il/uploads/f_606ee43fa87cf_1617880127.jpg",
-  id: uid(),
+  id: "milk",
 };
 let bread: Product = {
   name: "bread",
@@ -45,7 +45,7 @@ let bread: Product = {
   image:
     "https://www.einbar.co.il/wp-content/uploads/2020/08/%D7%9C%D7%97%D7%9D-%D7%99%D7%9C%D7%93%D7%99%D7%9D-%D7%9C%D7%90%D7%AA%D7%A8.jpg",
 
-  id: uid(),
+  id: "bread",
 };
 let butter: Product = {
   name: "butter",
@@ -53,7 +53,7 @@ let butter: Product = {
   description: "the butter",
   image:
     "https://ynet-images1.yit.co.il/picserver5/crop_images/2020/10/04/BJF90wPID/BJF90wPID_0_530_2560_1441_0_x-large.jpg",
-  id: uid(),
+  id: "butter",
 };
 let eggs: Product = {
   name: "eggs",
@@ -61,14 +61,14 @@ let eggs: Product = {
   description: "the eggs",
   image:
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6bII5tIeCOVPE92gwVSLi1v_-WieT9qhIsg&usqp=CAU",
-  id: uid(),
+  id: "eggs",
 };
 let tomato: Product = {
   name: "tomato",
   price: 3,
   description: "1kg tomato",
   image: "https://s3-us-west-2.amazonaws.com/melingoimages/Images/98055.jpg",
-  id: uid(),
+  id: "tomato",
 };
 
 let cabbage: Product = {
@@ -77,7 +77,7 @@ let cabbage: Product = {
   description: "1kg cabbage",
   image:
     "https://media.istockphoto.com/photos/green-cabbage-isolated-on-white-picture-id673162168?k=20&m=673162168&s=612x612&w=0&h=3QKF6zzzCAUL3pKxW6kVbZ7lUt1JUY_SchOUMyOHwhs=",
-  id: uid(),
+  id: "cabbage",
 };
 let tea: Product = {
   name: "tea",
@@ -85,7 +85,7 @@ let tea: Product = {
   description: "tea",
   image:
     "https://www.wallashops.co.il/on/demandware.static/-/Sites-wallashops-m-catalog/default/dwd19f9a45/productImages/images_from_feed/hury/9KA989DE9D/openfile_aspx_id_148684&type_png.jpg",
-  id: uid(),
+  id: "tea",
 };
 let coffee: Product = {
   name: "coffee",
@@ -93,7 +93,7 @@ let coffee: Product = {
   description: "coffee",
   image:
     "https://superpharmstorage.blob.core.windows.net/hybris/products/mobile/medium/7290000176062.jpg",
-  id: uid(),
+  id: "coffee",
 };
 let toiletPaper: Product = {
   name: "toilet paper",
@@ -101,7 +101,7 @@ let toiletPaper: Product = {
   description: "toilet paper",
   image:
     "https://h7z8m6j8.stackpathcdn.com/wp-content/uploads/2019/04/90-%D7%9E%D7%9E%D7%97%D7%98%D7%95%D7%AA-%D7%A4%D7%A0%D7%99%D7%9D-%D7%A7%D7%9C%D7%99%D7%A0%D7%A7%D7%A1-%D7%91%D7%95%D7%98%D7%99%D7%A7-%D7%91%D7%A7%D7%95%D7%A4%D7%A1%D7%90.jpg",
-  id: uid(),
+  id: "toilet-paper",
 };
 //making an array of the products
 const arrayOfProducts: Array<Product> = [
@@ -139,7 +139,8 @@ function addMeToCart(event) {
 
   event.preventDefault();
   const productId = event.target.parentElement.id;
-  let productPrice = event.target.parentElement.price;
+  const productPrice = event.target.parentElement.price;
+  const productName = event.target.parentElement.name;
   function totalPay() {
     let balance = 0;
     for (let key in productPrice) {
@@ -151,13 +152,13 @@ function addMeToCart(event) {
   const productInCartIndex = cart.findIndex(
     (element) => element.id == productId
   );
-  const productInProductsArrayIndex = arrayOfProducts.findIndex(
-    (element) => element.id == productId
-  );
-  setItem(arrayOfProducts[productInProductsArrayIndex]);
+  // const productInProductsArrayIndex = arrayOfProducts.findIndex(
+  //   (element) => element.id == productId
+  // );
+  // setItem(cart[productInCartIndex]);
+  
   if (productInCartIndex != -1) {
     cart[productInCartIndex].quantity++;
-
   } else {
     const currentProduct: cartProduct = {
       id: productId,
@@ -165,8 +166,12 @@ function addMeToCart(event) {
       price: productPrice,
     };
     cart.push(currentProduct);
-
   }
+  localStorage.removeItem("productInCart");
+  cart.forEach(product => {
+    console.log(product);
+    setItem(product);
+  });
   const cartTotal: number = cartHtmlBuild();
   localStorage.setItem('cartTotal', JSON.stringify(cartTotal));
   htmlCart.innerHTML += `<div>Total amount: ${cartTotal}₪`
@@ -177,9 +182,9 @@ function alertFunction() {
   alert("thank you for buying but we dont have payment system! :)");
 }
 
-function uid() {
-  return `id-${Math.ceil(Math.random() * 1e8)}`;
-}
+// function uid() {
+//   return `id-${Math.ceil(Math.random() * 1e8)}`;
+// }
 
 function countCart() {
   let count = 0;
@@ -249,5 +254,18 @@ function setItem(product) {
 //   });
 // When the user clicks on div, open the popup
 
+function loadCart(){
+  let storageCart = localStorage.getItem('productInCart');
+  storageCart = JSON.parse(storageCart);
+
+  if (storageCart) {
+    Object.values(storageCart).map(item =>{
+      console.log(item);
+      
+    })
+  }
+}
+
+loadCart();
 
 
