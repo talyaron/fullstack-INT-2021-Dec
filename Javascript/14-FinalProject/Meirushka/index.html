@@ -21,14 +21,14 @@
             <ul id="tasksList"></ul>
         </section>
         <footer>
-           <form  id="new_task_form">
+           <form onsubmit="handleNote(event)" id="new_task_form">
                 <input type="text" name="new_task_input" placeholder="Create New Task" id="new_task_input">
         
-                <button type="submit" value="add task" id="new_task_input_btn"></button>
+                <input type="submit" value="add task" id="new_task_input_btn" class="button">
            </form>
         </footer>  
     </div>
-
+     <div class="root"></div>  
    
         <script src="./dist/app.js"></script>
 </body>
