@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 // selectors
 const root = document.querySelector('.root');
 
@@ -33,4 +20,3 @@ function handleNote(ev: any) {
    console.log(result);
    root.innerHTML += `<div>${result.note}</div>`
 }  
-
