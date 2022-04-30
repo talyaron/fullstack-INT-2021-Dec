@@ -116,7 +116,7 @@ body {
             height: 40px;
             text-align: center;
             top: 8px;
-            right: 60px;
+            right: 20px;
 
 
             &:hover{
@@ -130,12 +130,26 @@ body {
             height: 40px;
             position: absolute;
             top: 8px;
-            right: 150px;
+            right: 120px;
             &:hover{
                 background:rgb(54, 159, 54);
             }
 
         }
+
+        &--Edit{
+            background-color: rgb(7, 138, 7);
+            width: 80px;
+            height: 40px;
+            position: absolute;
+            top: 8px;
+            right: 220px;
+            &:hover{
+                background:rgb(184, 235, 184);
+            }
+
+        }
+
         &--AddTask{
             background-color: #e5652e;
             width:140px;
@@ -280,7 +294,7 @@ body {
 
 
         }
-        #addTaskForm, #EditTaskForm{
+        #addTaskForm, #editTaskForm{
             position: absolute;
             width: 300px;
 

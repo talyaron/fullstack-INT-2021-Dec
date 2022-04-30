@@ -8,6 +8,7 @@ const formSignUpMsg: HTMLElement = document.querySelector("#signUpMsg");
 const formLoginMsg: HTMLElement = document.querySelector("#loginMsg");
 const addTaskButton: HTMLElement = document.querySelector('.btn--AddTask');
 const taskForm: HTMLElement = document.querySelector('#addTaskForm');
+const editForm: HTMLElement = document.querySelector('#editTaskForm');
 const addNewCategory: HTMLElement = document.querySelector('#addCategory');
 const tasksHTML: HTMLElement = document.querySelector('.tasks')
 let newCategory = document.querySelector('.categories');
@@ -124,8 +125,7 @@ function updateHtmlTaskView(taskIndex) {
     <h3 status="category">Category  :   ${tasksArray[taskIndex].category}</h3> 
     <button class="btn btn--delete" onclick="deleteTask(${taskIndex})">Delete</button>
     <button class="btn btn--Done" onclick="DoneTask(${taskIndex})">Done</button>
-    <button img class="editTaskBtn" src="./images/edit.png" alt="" onclick="EditTask(${taskIndex})></button>
-    <p Id="EditText-${taskIndex}">Edit</p>
+    <button class="btn btn--Edit" onclick="EditTask(${taskIndex})">Edit</button>
     </div>
     `;
 }
@@ -171,10 +171,10 @@ function deleteTask(taskIndex) {
 
 function EditTask(taskIndex) {
     tasksArray[taskIndex].status = true;
-    document.querySelector(`#taskIndex-${taskIndex}`).style.background = "rgb(77, 236, 77)";
-
-    
+    editForm.style.visibility = 'visible';
+    tasksHTML.style.visibility = 'hidden';   
 }
+
 
 function DoneTask(taskIndex) {
     tasksArray[taskIndex].status = true;
@@ -212,7 +212,7 @@ function submitAddTaskForm(event) {
     addTaskInputTxt.value = "";
     document.querySelector('#contentInput').value='';
     document.querySelector('#dateInput').value = '';
-    var options = document.querySelectorAll('#selectCategory');
+    var options = document.querySelectorAll('.selectCategory');
     for (var i = 0, l = options.length; i < l; i++) {
     options[i].value = defaultSelect.value;
 }
@@ -220,17 +220,20 @@ function submitAddTaskForm(event) {
 
 function submitEditTaskForm(event) {
     event.preventDefault();
-    let newTask = new task(event.target.taskTitle.value,
-        event.target.Content.value, new Date(event.target.dueDate.value), false, choice);
-    tasksArray.push(newTask);
-    updateHtmlTaskView(tasksArray.length - 1);
-    closeTaskForm()
+    let i:number=0;
+    tasksArray[i].title = event.target.taskTitle.value;
+    tasksArray[i].dueDate = new Date(event.target.dueDate.value);
+    tasksArray[i].status = false;
+    tasksArray[i] = choice;
+
+    closeEditForm()
+    
     // for debug console purpose
     console.dir(tasksArray);
     console.log(`tasks has ${tasksArray.length} objects`);
 
         //Reset the fields of form:
-    addTaskInputTxt.value = "";
+    editForm.value = "";
     document.querySelector('#contentInput').value='';
     document.querySelector('#dateInput').value = '';
     var options = document.querySelectorAll('.selectCategory');
@@ -247,15 +250,20 @@ function openTaskForm() {
     tasksHTML.style.visibility = 'hidden';
 }
 
-EditTask.addEventListener("click", editTaskForm)
-function editTaskForm() {
-taskForm.style.visibility = 'hidden';
-tasksHTML.style.visibility = 'hidden';
-}
+// EditTask.addEventListener("click", editTaskForm)
+// function editTaskForm() {
+// taskForm.style.visibility = 'hidden';
+// tasksHTML.style.visibility = 'hidden';
+// }
 
 
 function closeTaskForm() {
     taskForm.style.visibility = 'hidden';
+    tasksHTML.style.visibility = 'visible';
+}
+
+function closeEditForm() {
+    editForm.style.visibility = 'hidden';
     tasksHTML.style.visibility = 'visible';
 }
 

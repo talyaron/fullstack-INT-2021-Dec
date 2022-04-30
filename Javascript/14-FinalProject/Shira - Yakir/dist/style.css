@@ -80,7 +80,7 @@ body .btn--delete {
   height: 40px;
   text-align: center;
   top: 8px;
-  right: 60px;
+  right: 20px;
 }
 body .btn--delete:hover {
   background-color: #a24218;
@@ -91,10 +91,21 @@ body .btn--Done {
   height: 40px;
   position: absolute;
   top: 8px;
-  right: 150px;
+  right: 120px;
 }
 body .btn--Done:hover {
   background: #369f36;
+}
+body .btn--Edit {
+  background-color: #078a07;
+  width: 80px;
+  height: 40px;
+  position: absolute;
+  top: 8px;
+  right: 220px;
+}
+body .btn--Edit:hover {
+  background: #b8ebb8;
 }
 body .btn--AddTask {
   background-color: #e5652e;
@@ -216,7 +227,7 @@ body .tasksPage .tasks .task #EditText {
   color: #e5652e;
   font-size: smaller;
 }
-body .tasksPage #addTaskForm, body .tasksPage #EditTaskForm {
+body .tasksPage #addTaskForm, body .tasksPage #editTaskForm {
   position: absolute;
   width: 300px;
   height: 300px;
@@ -224,7 +235,7 @@ body .tasksPage #addTaskForm, body .tasksPage #EditTaskForm {
   right: 540px;
   visibility: hidden;
 }
-body .tasksPage #addTaskForm #selectCategory, body .tasksPage #EditTaskForm #selectCategory {
+body .tasksPage #addTaskForm #selectCategory, body .tasksPage #editTaskForm #selectCategory {
   width: fit-content;
   margin-bottom: 10px;
 }
