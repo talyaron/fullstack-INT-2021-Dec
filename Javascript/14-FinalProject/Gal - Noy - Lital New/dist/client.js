@@ -1,8 +1,3 @@
-// function handleSetName(event){
-//   let name=event.target.value;
-//   console.log(name)
-//   localStorage.setItem('name',JSON.stringify({name}));
-// }
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -14,11 +9,6 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-// function handleLoadSeller(){
-//   const UserInput=JSON.parse(localStorage.getItem('name'));
-// }
-// function handleLoadIndex(){
-// }
 var htmlCart = document.querySelector(".cart");
 var totalToPay = document.querySelector(".totalToPay");
 var milk = {
@@ -115,19 +105,9 @@ arrayOfProducts.forEach(function (product) {
 function addMeToCart(event) {
     event.preventDefault();
     var productId = event.target.parentElement.id;
-    var productPrice = event.target.parentElement.price;
-    var productName = event.target.parentElement.name;
-    function totalPay() {
-        var balance = 0;
-        for (var key in productPrice) {
-            ++balance;
-        }
-    }
     var productInCartIndex = cart.findIndex(function (element) { return element.id == productId; });
-    // const productInProductsArrayIndex = arrayOfProducts.findIndex(
-    //   (element) => element.id == productId
-    // );
-    // setItem(cart[productInCartIndex]);
+    var productInProductsArrayIndex = arrayOfProducts.findIndex(function (element) { return element.id == productId; });
+    var productPrice = arrayOfProducts[productInProductsArrayIndex].price;
     if (productInCartIndex != -1) {
         cart[productInCartIndex].quantity++;
     }
@@ -141,20 +121,14 @@ function addMeToCart(event) {
     }
     localStorage.removeItem("productInCart");
     cart.forEach(function (product) {
-        console.log(product);
         setItem(product);
     });
-    var cartTotal = cartHtmlBuild();
-    localStorage.setItem('cartTotal', JSON.stringify(cartTotal));
-    htmlCart.innerHTML += "<div>Total amount: " + cartTotal + "\u20AA";
-    htmlCart.innerHTML += "<button onclick=\"alertFunction()\">Buy now!</button>";
+    cartHtmlBuild();
 }
 function alertFunction() {
     alert("thank you for buying but we dont have payment system! :)");
+    emptyCart();
 }
-// function uid() {
-//   return `id-${Math.ceil(Math.random() * 1e8)}`;
-// }
 function countCart() {
     var count = 0;
     // loop through each key/value
@@ -174,14 +148,16 @@ function cartHtmlBuild() {
     }
     var htmlCartCount = document.querySelector(".num-cart-product");
     htmlCartCount.innerHTML = "" + count;
-    htmlCart.innerHTML = "<div class=\u201DHeader\u201D><h3 class=\u201DHeading\u201D>Shopping Cart</h3></div><div class=\"quantityOfProducts\"><h3 class=\u201DHeading\u201D>products added to cart: " + count + "</h3></div>";
+    htmlCart.innerHTML = "<div class=\u201DHeader\u201D><h2 class=\u201DHeading\u201D>Shopping Cart</h3></div><div class=\"quantityOfProducts\"><h3 class=\u201DHeading\u201D> " + count + " product(s) in cart</h3></div>";
     cart.forEach(function (product) {
         var currentCartProduct = arrayOfProducts.find(function (element) { return element.id == product.id; });
         var totalPayProduct = currentCartProduct.price * product.quantity;
         cartTotal += totalPayProduct;
-        htmlCart.innerHTML += "<div class=\"parentProduct\"><img src=\"" + currentCartProduct.image + "\" alt=\"" + currentCartProduct.description + "\"><div id=" + currentCartProduct.id + "><div><b>" + currentCartProduct.name + "</b></div><div>" + currentCartProduct.price + "\u20AA</div><div>quantity: " + product.quantity + "<div>Total amount: " + totalPayProduct + "\u20AA</div>";
+        htmlCart.innerHTML += "<div class=\"parentProduct\"><img src=\"" + currentCartProduct.image + "\" alt=\"" + currentCartProduct.description + "\"><div id=" + currentCartProduct.id + "><div><b>" + currentCartProduct.name + "</b></div><div>" + currentCartProduct.price + "\u20AA</div><div>quantity: " + product.quantity + "</div><div>Total amount: " + totalPayProduct + "\u20AA</div>";
     });
-    return cartTotal;
+    localStorage.setItem('cartTotal', JSON.stringify(cartTotal));
+    htmlCart.innerHTML += "<div class=\"total\">Total: " + cartTotal + "\u20AA</div>";
+    htmlCart.innerHTML += "<div class=\"buttonsDiv\"><button class=\"buyButton\" onclick=\"alertFunction()\">Buy now!</button><button class=\"deleteButton\" onclick=\"emptyCart()\"> <img src=\"https://img.icons8.com/small/32/000000/filled-trash.png\"/ class=\"deleteIcon\"></button></div>";
 }
 function setItem(product) {
     var _a, _b;
@@ -199,18 +175,19 @@ function setItem(product) {
     }
     localStorage.setItem("productInCart", JSON.stringify(cartItems));
 }
-// reduce(function(previousValue, currentValue, currentIndex, array) { /* ... */ })
-// cart.forEach(function (par) {
-//     htmlCart.innerHTML += `<div class="parent"><img src="${par.src}" alt="${par.title}"><div id=${par.id} class="overlay"><div>${par.title}</div><div>${par.tags}₪</div><button onclick="addMeToCart(event)" class="addMe">Add</button></div></div>`;
-//   });
-// When the user clicks on div, open the popup
 function loadCart() {
     var storageCart = localStorage.getItem('productInCart');
     storageCart = JSON.parse(storageCart);
     if (storageCart) {
         Object.values(storageCart).map(function (item) {
-            console.log(item);
+            cart.push(item);
         });
     }
+    cartHtmlBuild();
 }
 loadCart();
+function emptyCart() {
+    localStorage.removeItem('productInCart');
+    cart = [];
+    cartHtmlBuild();
+}

@@ -151,7 +151,7 @@ nav {
     display: flex;
     position: relative;
     left: 30%;
-    
+
     flex-wrap: wrap;
     justify-content: flex-start;
     width: 70%;
@@ -170,14 +170,16 @@ nav {
     margin: 10px;
     padding: 10px;
     border-color: rgb(203, 30, 101);
+
     img {
         height: 20vh;
 
         margin: 10px;
         cursor: pointer;
-        box-sizing:content-box;
-    
+        box-sizing: content-box;
+
     }
+
     &:hover {
         box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
     }
@@ -187,7 +189,8 @@ nav {
 
 
 
-.addMe ,button {
+.addMe,
+button {
     align-items: center;
     background-color: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -214,6 +217,7 @@ nav {
     vertical-align: baseline;
     width: auto;
 }
+
 button:hover,
 .addMe:hover,
 .addMe:focus {
@@ -235,6 +239,7 @@ button:hover,
 }
 
 .cart {
+    background-color: rgba(255, 184, 213, 0.406);
     position: fixed;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -251,9 +256,14 @@ button:hover,
     background-color: #ffffff;
     border-radius: 20px;
 
-    img{
+    img {
 
         width: 100px;
+    }
+    .total{
+        padding:15px;
+        font-size: large;
+        font-weight: bold;
     }
 }
 
@@ -277,7 +287,8 @@ button:hover,
     align-items: center;
 
 }
-h3{
+
+h3, h2 {
     color: rgb(203, 30, 101);
 }
 
@@ -289,10 +300,10 @@ h3{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
-  
-  /* The actual popup */
-  .popup .popuptext {
+}
+
+/* The actual popup */
+.popup .popuptext {
     visibility: hidden;
     width: 160px;
     background-color: #555;
@@ -305,10 +316,10 @@ h3{
     bottom: 125%;
     left: 50%;
     margin-left: -80px;
-  }
-  
-  /* Popup arrow */
-  .popup .popuptext::after {
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -317,23 +328,57 @@ h3{
     border-width: 5px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
-  }
-  
-  /* Toggle this class - hide and show the popup */
-  .popup .show {
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
-  }
-  
-  /* Add animation (fade in the popup) */
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }
-  
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.deleteButton {
+    width: 20%;
+
+}
+
+.deleteIcon {
+
+    box-sizing: content-box;
+
+}
+
+.buttonsDiv {
+    border: #555;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.buyButton {
+    font-weight: bolder;
+    font-size: large;
+    background-color: rgba(203, 30, 102, 0.372);
+}
