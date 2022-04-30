@@ -13,7 +13,6 @@ const tasksHTML: HTMLElement = document.querySelector('.tasks')
 let newCategory = document.querySelector('.categories');
 let categoriesSelect: any = document.querySelector('#selectCategory')
 let addTaskInputTxt = document.querySelector('#addTask'); 
-
 const defaultSelect = document.querySelector('#defaultSelect')
 // const option = document.querySelector('#defaultSelect')
 
@@ -175,7 +174,8 @@ function DoneTask(taskIndex) {
     tasksArray[taskIndex].status = true;
     tasksViewUpdate()
     document.querySelector(`#taskInde-${taskIndex}`).style.background = "rgb(77, 236, 77)";
-    tasksArray[taskIndex].title.style.textDecoration = "line-through"; //CHECK//
+    document.querySelector('.editTaskBtn').style.visibility = 'hidden';
+    tasksArray[0].title.style.textDecoration = "line-through"; //CHECK//
     console.dir(tasksArray);
 }
 
@@ -209,8 +209,6 @@ function submitAddTaskForm(event) {
     for (var i = 0, l = options.length; i < l; i++) {
     options[i].value = defaultSelect.value;
 }
-
-
 }
 
 

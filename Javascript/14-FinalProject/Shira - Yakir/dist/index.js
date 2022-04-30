@@ -135,7 +135,8 @@ function DoneTask(taskIndex) {
     tasksArray[taskIndex].status = true;
     tasksViewUpdate();
     document.querySelector("#taskInde-" + taskIndex).style.background = "rgb(77, 236, 77)";
-    tasksArray[taskIndex].title.style.textDecoration = "line-through"; //CHECK//
+    document.querySelector('.editTaskBtn').style.visibility = 'hidden';
+    tasksArray[0].title.style.textDecoration = "line-through"; //CHECK//
     console.dir(tasksArray);
 }
 function addCategoryUpdateView(CategoryArray) {
