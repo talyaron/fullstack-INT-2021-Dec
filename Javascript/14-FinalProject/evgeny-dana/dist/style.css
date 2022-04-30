@@ -137,7 +137,7 @@ body * :focus {
   width: 100%;
   align-items: center;
   display: flex;
-  flex-wrap: wrap;
+  flex-basis: 100%;
   justify-content: center;
   gap: 40px;
   box-shadow: 3px 3px 5px rgba(185, 175, 155, 0.632);
@@ -160,7 +160,6 @@ body * :focus {
 .category {
   display: flex;
   flex-direction: column;
-  width: 500px;
 }
 .category img {
   width: 100%;
@@ -184,13 +183,15 @@ body * :focus {
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding-top: 150px;
-  gap: 10px;
+  gap: 20px;
+  justify-content: center;
+  align-content: space-around;
 }
 .Client_wrapper :hover {
   cursor: pointer;
   opacity: 0.7;
   transition: 500ms;
-  transform: perspective(2900px) rotateY(15deg);
+  color: blanchedalmond;
 }
 
 .item {
