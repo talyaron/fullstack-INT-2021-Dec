@@ -11,3 +11,8 @@ body {
   background-color: blanchedalmond;
   border: black solid 2px;
 }
+.gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
