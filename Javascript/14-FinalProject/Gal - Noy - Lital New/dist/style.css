@@ -18,82 +18,72 @@ a {
   text-decoration: none;
 }
 
-nav {
+.nav {
   width: 100%;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
   z-index: 100;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
 }
-
-.social-call {
+.nav .social-call {
   height: 40px;
   border: 1px solid rgba(0, 0, 0, 0.05);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.social a {
+.nav .social a {
   margin: 0px 5px;
   color: rgba(0, 0, 0, 0.7);
   font-size: 0.9rem;
 }
-
-.phone {
+.nav .phone {
   color: rgba(0, 0, 0, 0.7);
   margin-left: 30px;
   font-size: 0.9rem;
 }
-
-.social a:hover {
+.nav .social a:hover {
   color: #cb1e65;
   transition: all ease 0.3s;
 }
-
-.navigation {
-  width: 70%;
+.nav .navigation {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  height: 10%;
+  justify-content: space-around;
   align-items: center;
   padding: 10px;
-  position: relative;
-  left: 30%;
 }
-
-.logo img {
-  height: 25vh;
+.nav .logo img {
+  height: 20vh;
 }
-
-.menu {
+.nav .menu {
   display: flex;
 }
-
-.menu li {
+.nav .menu li {
   position: relative;
   margin: 20px;
   display: flex;
   text-transform: uppercase;
   font-weight: 500;
 }
-
-.menu li a {
+.nav .menu li a {
   color: #555555;
 }
-
-.right-menu a {
+.nav .right-menu a {
   margin: 0px 10px;
   font-size: 1.2rem;
   color: rgba(0, 0, 0, 0.7);
 }
-
-.menu a:hover,
-.right-menu a:hover,
-.search-cancel:hover,
-.form-cancel:hover {
+.nav .menu a:hover,
+.nav .right-menu a:hover,
+.nav .search-cancel:hover,
+.nav .form-cancel:hover {
   color: #cb1e65;
   transition: all ease 0.3s;
 }
-
-.sale-lable {
+.nav .sale-lable {
   width: 38px;
   height: 17px;
   background-color: #cb1e66;
@@ -108,8 +98,7 @@ nav {
   top: -20px;
   right: -20px;
 }
-
-.sale-lable:after {
+.nav .sale-lable:after {
   content: "";
   width: 0px;
   height: 0px;
@@ -121,12 +110,10 @@ nav {
   left: 10%;
   top: 100%;
 }
-
-.fa-shopping-cart {
+.nav .fa-shopping-cart {
   position: relative;
 }
-
-.num-cart-product {
+.nav .num-cart-product {
   position: absolute;
   top: -17px;
   right: -17px;
@@ -230,11 +217,11 @@ button:hover,
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
-  top: 0;
+  top: 25%;
   left: 0;
   padding: 10px;
   width: 25%;
-  height: 100%;
+  height: 75%;
   font-size: 16px;
   background-color: #ffffff;
   border-radius: 20px;
@@ -266,7 +253,8 @@ button:hover,
   align-items: center;
 }
 
-h3, h2 {
+h3,
+h2 {
   color: #cb1e65;
 }
 
