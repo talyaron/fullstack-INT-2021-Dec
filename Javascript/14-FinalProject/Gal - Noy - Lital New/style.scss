@@ -19,168 +19,181 @@ a {
     text-decoration: none;
 }
 
-nav {
+.nav {
     width: 100%;
     box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
     z-index: 100;
-}
+    position: sticky;
+    top:0;
+    background-color: #ffffff;
 
-.social-call {
-    height: 40px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .social-call {
+        height: 40px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.social a {
-    margin: 0px 5px;
-    color: rgba(0, 0, 0, 0.7);
-    font-size: 0.9rem;
-}
+    .social a {
+        margin: 0px 5px;
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 0.9rem;
+    }
 
-.phone {
-    color: rgba(0, 0, 0, 0.7);
-    margin-left: 30px;
-    font-size: 0.9rem;
-}
+    .phone {
+        color: rgba(0, 0, 0, 0.7);
+        margin-left: 30px;
+        font-size: 0.9rem;
+    }
 
-.social a:hover {
-    color: rgb(203, 30, 101);
-    transition: all ease 0.3s;
-}
+    .social a:hover {
+        color: rgb(203, 30, 101);
+        transition: all ease 0.3s;
+    }
 
-.navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 45px;
-}
+    .navigation {
+        width: 100%;
+        display: flex;
+        height: 10%;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
 
-.logo img {
-    height: 200px;
-}
+    }
 
-.menu {
-    display: flex;
-}
+    .logo img {
+        height: 20vh;
+    }
 
-.menu li {
-    position: relative;
-    margin: 20px;
-    display: flex;
-    text-transform: uppercase;
-    font-weight: 500;
-}
+    .menu {
+        display: flex;
+    }
 
-.menu li a {
-    color: #555555;
-}
+    .menu li {
+        position: relative;
+        margin: 20px;
+        display: flex;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
 
-.right-menu a {
-    margin: 0px 10px;
-    font-size: 1.2rem;
-    color: rgba(0, 0, 0, 0.7);
-}
+    .menu li a {
+        color: #555555;
+    }
 
-.menu a:hover,
-.right-menu a:hover,
-.search-cancel:hover,
-.form-cancel:hover {
-    color: rgb(203, 30, 101);
-    transition: all ease 0.3s;
-}
+    .right-menu a {
+        margin: 0px 10px;
+        font-size: 1.2rem;
+        color: rgba(0, 0, 0, 0.7);
+    }
 
-.sale-lable {
-    width: 38px;
-    height: 17px;
-    background-color: rgb(203, 30, 102);
-    color: #ffffff;
-    font-weight: 400;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    position: absolute;
-    top: -20px;
-    right: -20px;
-}
+    .menu a:hover,
+    .right-menu a:hover,
+    .search-cancel:hover,
+    .form-cancel:hover {
+        color: rgb(203, 30, 101);
+        transition: all ease 0.3s;
+    }
 
-.sale-lable:after {
-    content: '';
-    width: 0px;
-    height: 0px;
-    border-bottom: 5px solid transparent;
-    border-left: 3px solid transparent;
-    border-top: 7px solid rgb(203, 30, 102);
-    border-right: 5px solid transparent;
-    position: absolute;
-    left: 10%;
-    top: 100%;
-}
+    .sale-lable {
+        width: 38px;
+        height: 17px;
+        background-color: rgb(203, 30, 102);
+        color: #ffffff;
+        font-weight: 400;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        position: absolute;
+        top: -20px;
+        right: -20px;
+    }
 
-.fa-shopping-cart {
-    position: relative;
-}
+    .sale-lable:after {
+        content: '';
+        width: 0px;
+        height: 0px;
+        border-bottom: 5px solid transparent;
+        border-left: 3px solid transparent;
+        border-top: 7px solid rgb(203, 30, 102);
+        border-right: 5px solid transparent;
+        position: absolute;
+        left: 10%;
+        top: 100%;
+    }
 
-.num-cart-product {
-    position: absolute;
-    top: -17px;
-    right: -17px;
-    width: 25px;
-    height: 25px;
-    font-size: 0.8rem;
-    border-radius: 50%;
-    background-color: rgb(203, 30, 101);
-    color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 400;
+    .fa-shopping-cart {
+        position: relative;
+    }
+
+    .num-cart-product {
+        position: absolute;
+        top: -17px;
+        right: -17px;
+        width: 25px;
+        height: 25px;
+        font-size: 0.8rem;
+        border-radius: 50%;
+        background-color: rgb(203, 30, 101);
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+    }
+
 }
 
 
 
 
 .containerOfProducts {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 90%;
-    margin-top: 20px;
-    margin-left: 50px;
+    display: flex;
+    position: relative;
+    left: 30%;
+
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 70%;
+
 
 }
 
 .parent {
     display: flex;
-    flex-grow: 0.5;
+    width: 20vw;
+
     flex-direction: column;
     align-items: center;
     border: 1px solid #f7f7f7;
     border-radius: 10px;
-    margin: 20px;
+    margin: 10px;
+    padding: 10px;
     border-color: rgb(203, 30, 101);
 
+    img {
+        height: 20vh;
+
+        margin: 10px;
+        cursor: pointer;
+        box-sizing: content-box;
+
+    }
+
+    &:hover {
+        box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+    }
 
 
 }
 
-.parent:hover {
-    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
-}
-
-img {
-    width: 200px;
-    height: 210px;
-    margin: 20px;
-    cursor: pointer;
-    position: relative;
-
-}
 
 
-.addMe {
+.addMe,
+button {
     align-items: center;
     background-color: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -208,6 +221,7 @@ img {
     width: auto;
 }
 
+button:hover,
 .addMe:hover,
 .addMe:focus {
     border-color: rgba(0, 0, 0, 0.15);
@@ -228,26 +242,45 @@ img {
 }
 
 .cart {
-    width: 50%;
-    height: 85%;
+    background-color: rgba(255, 184, 213, 0.406);
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    top: 25%;
+    left: 0;
+    padding: 10px;
+    width: 25%;
+    height: 75%;
+    font-size: 16px;
     background-color: #ffffff;
     border-radius: 20px;
-    box-shadow: 0px 25px 40px #1687d933;
-    margin-left: 25%;
+
+    img {
+
+        width: 100px;
+    }
+
+    .total {
+        padding: 15px;
+        font-size: large;
+        font-weight: bold;
+    }
 }
 
-.overlay {
-    background-color: #c5d7e400;
-}
+
 
 .parentProduct {
     margin: auto;
-    width: 90%;
-    height: 30%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    // align-items: center;
+    align-items: center;
+    padding: 15px;
+    border-bottom: rgb(128, 126, 126) solid 1px;
 }
 
 .Header {
@@ -258,7 +291,99 @@ img {
     align-items: center;
 
 }
-h3{
+
+h3,
+h2 {
     color: rgb(203, 30, 101);
 }
 
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.deleteButton {
+    width: 20%;
+
+}
+
+.deleteIcon {
+
+    box-sizing: content-box;
+
+}
+
+.buttonsDiv {
+    border: #555;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.buyButton {
+    font-weight: bolder;
+    font-size: large;
+    background-color: rgba(203, 30, 102, 0.372);
+}

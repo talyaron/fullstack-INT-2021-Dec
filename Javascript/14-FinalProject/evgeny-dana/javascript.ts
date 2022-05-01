@@ -33,6 +33,13 @@ const handleAddProduct = (ev: any) => {
   renderProducts();
   ev.target.reset();
 };
+function handleAddCart(productId){
+ const itemcard = document.querySelector(`#item-${productId.id}`)
+ console.log(itemcard)
+  // localStorage.setItem('productCard',itemcard)
+  
+}
+
 function handleLoad(){
   const stringProducts = localStorage.getItem('products')
   if (stringProducts){
@@ -81,15 +88,18 @@ function renderProducts() {
 
   root.innerHTML = html;
 }
+
+
  function renderClientProducts(){
   const Client_wrapper = document.querySelector(".Client_wrapper")
   
   let html = "";
   products.forEach((product) => {
-    html += `<div class="item">
+    html += `<div class="item" id="item-${product.id}">
     <img src="${product.image}" alt="" id="item_Image">
     <p>name:${product.name}</p>
     <p>Price:${product.price}</p>
+    <button onclick="handleAddCart(${product.id})" >Add To Cart</button>
     </div>`
   });
   
