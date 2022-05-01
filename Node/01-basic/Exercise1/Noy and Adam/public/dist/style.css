@@ -1,0 +1,25 @@
+body {
+  margin: 0 auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper {
+  width: 70%;
+  height: 50vh;
+  margin: auto;
+  padding: 10px;
+  background-color: #e3a38a;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper h1 {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.wrapper img {
+  width: 30%;
+}
