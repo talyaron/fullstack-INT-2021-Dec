@@ -1,6 +1,6 @@
-const myNodelist = document.getElementsByTagName("LI");
-let i;
-for (i = 0; i < myNodelist.length; i++) {
+// Create a "close" button and append it to each list item
+const myList:Element = document.getElementsByTagName("LI")
+for (let i = 0; i < myList.length; i++) {
   let span = document.createElement("SPAN");
   let txt = document.createTextNode("\u00D7");
   span.className = "close";
@@ -9,9 +9,9 @@ for (i = 0; i < myNodelist.length; i++) {
 }
 
 // Click on a close button to hide the current list item
-const close = document.getElementsByClassName("close");
-let i;
-for (i = 0; i < close.length; i++) {
+const close:Element = document.getElementsByClassName("close");
+
+for (let i = 0; i < close.length; i++) {
   close[i].onclick = function() {
     let div = this.parentElement;
     div.style.display = "none";
@@ -33,7 +33,7 @@ function newElement() {
   let t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
-    alert("You must write something!");
+    alert("Write something!");
   } else {
     document.getElementById("myUL").appendChild(li);
   }
@@ -45,10 +45,11 @@ function newElement() {
   span.appendChild(txt);
   li.appendChild(span);
 
-  for (i = 0; i < close.length; i++) {
+  for ( let i= 0; i < close.length; i++) {
     close[i].onclick = function() {
         let div = this.parentElement;
         div.style.display = "none";
       }
   }
 }
+
