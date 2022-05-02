@@ -13,6 +13,7 @@ const addNewCategory: HTMLElement = document.querySelector('#addCategory');
 const tasksHTML: HTMLElement = document.querySelector('.tasks')
 let newCategory = document.querySelector('.categories');
 let categoriesSelect: any = document.querySelector('.selectCategory')
+let editCategory: any = document.querySelector('.editCategory')
 let addTaskInputTxt = document.querySelector('#addTask'); 
 const defaultSelect = document.querySelector('#defaultSelect')
 // const option = document.querySelector('#defaultSelect')
@@ -226,9 +227,9 @@ function submitAddTaskForm(event) {
     document.querySelector('#contentInput').value='';
     document.querySelector('#dateInput').value = '';
     var options = document.querySelectorAll('.selectCategory');
-    for (var i = 0, l = options.length; i < l; i++) {
-    options[i].value = defaultSelect.value;
-}
+        for (var i = 0, l = options.length; i < l; i++) {
+        options[i].value = defaultSelect.value;
+    }
 }
 
 function submitEditTaskForm(event) {
@@ -294,6 +295,7 @@ function handleSelectCategory() {
         option.value = CategoryArray[i];
         option.text = CategoryArray[i];
         categoriesSelect.appendChild(option);
+        editCategory.appendChild(option);
         console.log(CategoryArray[i])
 
     }
@@ -306,6 +308,7 @@ function clearOptions(){
     len = categoriesSelect.options.length-1;
     for (let i = len; i > 0; i--) {
         categoriesSelect.remove(i);
+        editCategory.remove(i);
     }
 }
 

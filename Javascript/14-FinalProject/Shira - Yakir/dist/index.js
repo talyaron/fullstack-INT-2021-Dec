@@ -12,6 +12,7 @@ var addNewCategory = document.querySelector('#addCategory');
 var tasksHTML = document.querySelector('.tasks');
 var newCategory = document.querySelector('.categories');
 var categoriesSelect = document.querySelector('.selectCategory');
+var editCategory = document.querySelector('.editCategory');
 var addTaskInputTxt = document.querySelector('#addTask');
 var defaultSelect = document.querySelector('#defaultSelect');
 // const option = document.querySelector('#defaultSelect')
@@ -234,6 +235,7 @@ function handleSelectCategory() {
         option.value = CategoryArray[i];
         option.text = CategoryArray[i];
         categoriesSelect.appendChild(option);
+        editCategory.appendChild(option);
         console.log(CategoryArray[i]);
     }
     console.dir(categoriesSelect);
@@ -243,6 +245,7 @@ function clearOptions() {
     len = categoriesSelect.options.length - 1;
     for (var i = len; i > 0; i--) {
         categoriesSelect.remove(i);
+        editCategory.remove(i);
     }
 }
 var choice = '';
