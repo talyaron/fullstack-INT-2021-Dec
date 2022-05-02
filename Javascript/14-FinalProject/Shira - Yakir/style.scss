@@ -20,7 +20,6 @@ body {
         margin: 25px;
     }
 
-
     .heading {
         //sign up & login titles 
         text-align: center;
@@ -45,9 +44,6 @@ body {
         &:nth-last-child(3) {
             margin-bottom: 2em;
         }
-
-     
-      
     }
 
     input:focus {
@@ -339,7 +335,5 @@ body {
         "categories"
         "addTask"
         "tasks";
-
-
     }
 }
