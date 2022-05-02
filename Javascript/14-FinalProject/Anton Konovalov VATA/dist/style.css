@@ -1,0 +1,798 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+* h1 {
+  font-family: "Akshar", sans-serif;
+}
+* p {
+  font-family: "Nunito", sans-serif;
+}
+
+header {
+  background-color: #262626;
+}
+header .navbar {
+  margin-right: 6.5rem;
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+header .navbar .nav-branding {
+  font-size: 2rem;
+}
+header .navbar .nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+header .navbar .nav-menu .nav-item .nav-link {
+  transition: 0.7s ease;
+}
+header .navbar .nav-menu .nav-item .nav-link:hover {
+  color: dodgerblue;
+}
+header .navbar .nav-menu .nav-item:nth-child(4) {
+  display: flex;
+  gap: 10px;
+}
+header .navbar .nav-menu .nav-item:nth-child(4) .profText {
+  display: flex;
+  align-items: center;
+}
+header .navbar .nav-menu .nav-item:nth-child(4) .profText h1 {
+  cursor: pointer;
+  font-family: "Akshar", sans-serif;
+  font-size: 0.8rem;
+  color: azure;
+  text-align: center;
+  transition: 0.7s ease;
+  font-size: 1rem;
+}
+header .navbar .nav-menu .nav-item:nth-child(4) .profText h1:hover {
+  color: #b1b1b1;
+  text-decoration: underline;
+}
+header .navbar .hamburger {
+  display: none;
+  cursor: pointer;
+}
+header .navbar .hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+@media (max-width: 768px) {
+  header .navbar .hamburger {
+    display: block;
+    margin-right: 55px;
+  }
+  header .navbar .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  header .navbar .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  header .navbar .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  header .navbar .nav-menu {
+    position: absolute;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #262626;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  header .navbar .nav-menu .nav-item:nth-child(4) {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: fixed;
+    right: 15px;
+    top: -10px;
+  }
+  header .navbar .nav-menu .nav-item:nth-child(4) .profText {
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
+  header .navbar .nav-menu .nav-item:nth-child(4) .profText h1 {
+    font-family: "Akshar", sans-serif;
+    font-size: 1rem;
+    color: azure;
+  }
+  header .navbar .nav-item {
+    margin: 16px 0;
+  }
+  header .navbar .nav-menu.active {
+    left: 0;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+#profileImg {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.wrapper .productsAddProduct {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 90vw;
+  height: 100vh;
+  margin: 2rem auto;
+  display: flex;
+  row-gap: 2rem;
+  /* background-color: #262626; */
+}
+.wrapper .productsAddProduct .mainProductsPage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 2rem;
+  column-gap: 2rem;
+}
+.wrapper .productsAddProduct .mainProductsPage .productTemplate .productImage .editBtn {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-self: flex-end;
+  width: 2rem;
+  height: 2rem;
+  bottom: 17.5rem;
+  right: 0.5rem;
+  width: 18rem;
+}
+.wrapper .productsAddProduct .mainProductsPage .productTemplate .productImage .editBtn .iconEdit {
+  position: relative;
+  z-index: 2;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50%;
+  background-color: rgba(137, 137, 137, 0.493);
+}
+.wrapper .productsAddProduct .mainProductsPage .productTemplate .productImage .editBtn .iconEdit #editBtn {
+  fill: #dddddd;
+  stroke: #dddddd;
+  stroke-miterlimit: 10;
+  stroke-width: 1rem;
+}
+.wrapper .productsAddProduct .mainProductsPage .productTemplate .productImage .editBtn .iconEdit #editBtn:hover {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  fill: #fb096e;
+  stroke: #fb096e;
+}
+.wrapper .productsAddProduct .mainProductsPage .productTemplate .productImage .editBtn .iconEdit:hover {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(90deg);
+  background-color: rgba(255, 255, 255, 0);
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.wrapper .productsAddProduct .mainProductsPage .productTemplate .productImage img {
+  position: relative;
+  box-sizing: content-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 18rem;
+  height: 18rem;
+  z-index: 1;
+}
+.wrapper .productsAddProduct .mainProductsPage .productTemplate .productText {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.wrapper .productsAddProduct .mainProductsPage .productTemplate .productText h1 {
+  font-size: 1.2rem;
+}
+.wrapper .productsAddProduct .newProductsAdded {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 90vw;
+  row-gap: 2rem;
+  column-gap: 2rem;
+}
+.wrapper .productsAddProduct .newProductsAdded .productTemplate .productImage .editBtn {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-self: flex-end;
+  width: 2rem;
+  height: 2rem;
+  bottom: 17.5rem;
+  right: 0.5rem;
+  width: 18rem;
+}
+.wrapper .productsAddProduct .newProductsAdded .productTemplate .productImage .editBtn .iconEdit {
+  position: relative;
+  z-index: 2;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50%;
+  background-color: rgba(137, 137, 137, 0.493);
+}
+.wrapper .productsAddProduct .newProductsAdded .productTemplate .productImage .editBtn .iconEdit #editBtn {
+  fill: #dddddd;
+  stroke: #dddddd;
+  stroke-miterlimit: 10;
+  stroke-width: 1rem;
+}
+.wrapper .productsAddProduct .newProductsAdded .productTemplate .productImage .editBtn .iconEdit #editBtn:hover {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  fill: #fb096e;
+  stroke: #fb096e;
+}
+.wrapper .productsAddProduct .newProductsAdded .productTemplate .productImage .editBtn .iconEdit:hover {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(90deg);
+  background-color: rgba(255, 255, 255, 0);
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.wrapper .productsAddProduct .newProductsAdded .productTemplate .productImage img {
+  position: relative;
+  box-sizing: content-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 18rem;
+  height: 18rem;
+  z-index: 1;
+}
+.wrapper .productsAddProduct .newProductsAdded .productText {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.wrapper .productsAddProduct .newProductsAdded .productText h1 {
+  font-size: 1.2rem;
+}
+.wrapper .productsAddProduct .addProductPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+}
+.wrapper .productsAddProduct .addProductPage .product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18rem;
+  height: 18rem;
+  /* background-color: yellow; */
+}
+.wrapper .productsAddProduct .addProductPage .product img {
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+}
+.wrapper .productsAddProduct .addProductPage .product p {
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: #656565;
+}
+.wrapper .addProductTemplate {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+.wrapper .addProductTemplate form {
+  display: flex;
+  justify-content: space-between;
+  width: 60vw;
+  height: 60vh;
+  align-items: center;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+}
+.wrapper .addProductTemplate form .leftSide {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin-left: 5%;
+  display: flex;
+  overflow: hidden;
+}
+.wrapper .addProductTemplate form .leftSide #upload_img_label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 2px dashed #6a6a6a;
+  height: 40vh;
+  cursor: pointer;
+}
+.wrapper .addProductTemplate form .leftSide #upload_img_label .imageIcon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #656565;
+}
+.wrapper .addProductTemplate form .leftSide #upload_img_label .imageIcon .pint_mock_icon {
+  width: 16px;
+  height: 16px;
+}
+.wrapper .addProductTemplate form .leftSide #upload_img_label #productImageUpload {
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+}
+.wrapper .addProductTemplate form .leftSide #upload_img_label #productImageUpload2 {
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+}
+.wrapper .addProductTemplate form .leftSide #upload_img_label .actualImage {
+  width: 100%;
+  height: 80%;
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+.wrapper .addProductTemplate form .leftSide #upload_img_label .actualImage .pin_image {
+  width: 100%;
+  height: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper .addProductTemplate form .leftSide #upload_img_label .actualImage .pin_image img {
+  max-height: 100%;
+}
+.wrapper .addProductTemplate form .leftSide .textLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.wrapper .addProductTemplate form .rightSide {
+  margin-right: 5%;
+  width: 45%;
+}
+.wrapper .addProductTemplate form .rightSide .contentProduct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 40vh;
+}
+.wrapper .addProductTemplate form .rightSide .contentProduct .textRight {
+  margin-bottom: 20px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #c6c6c6;
+  outline: none;
+  font-size: 16px;
+  background-color: transparent;
+}
+.wrapper .addProductTemplate form .rightSide .contentProduct .sendAll {
+  width: 25%;
+  height: 15%;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #6a6a6a;
+  cursor: pointer;
+  background-color: transparent;
+}
+.wrapper .editProductTemplate {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+.wrapper .editProductTemplate .editTemplateUnique {
+  display: flex;
+  justify-content: space-between;
+  width: 60vw;
+  height: 60vh;
+  align-items: center;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+}
+.wrapper .editProductTemplate .editTemplateUnique .leftSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  margin-left: 1rem;
+}
+.wrapper .editProductTemplate .editTemplateUnique .leftSide #upload_img_label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 2px dashed #6a6a6a;
+  width: 80%;
+  height: 80%;
+  cursor: pointer;
+}
+.wrapper .editProductTemplate .editTemplateUnique .leftSide #upload_img_label .actualImage {
+  width: 100%;
+  height: 80%;
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+.wrapper .editProductTemplate .editTemplateUnique .leftSide #upload_img_label .actualImage .pin_image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper .editProductTemplate .editTemplateUnique .leftSide #upload_img_label .actualImage .pin_image img {
+  max-height: 100%;
+}
+.wrapper .editProductTemplate .editTemplateUnique .rightSide {
+  margin-right: 5%;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+.wrapper .editProductTemplate .editTemplateUnique .rightSide .rightText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 90%;
+  background-color: transparent;
+}
+.wrapper .editProductTemplate .editTemplateUnique .rightSide .rightText .productRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.wrapper .editProductTemplate .editTemplateUnique .rightSide .rightText .productRow .editBtn {
+  border-bottom: 2px solid #c6c6c6;
+}
+.wrapper .editProductTemplate .editTemplateUnique .rightSide .rightText .productRow .editBtn .iconEdit {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50%;
+  background-color: rgba(137, 137, 137, 0.493);
+}
+.wrapper .editProductTemplate .editTemplateUnique .rightSide .rightText .productRow .editBtn .iconEdit #editBtn {
+  fill: #dddddd;
+  stroke: #dddddd;
+  stroke-miterlimit: 10;
+  stroke-width: 1rem;
+}
+.wrapper .editProductTemplate .editTemplateUnique .rightSide .rightText .productRow .editBtn .iconEdit #editBtn:hover {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  fill: #fb096e;
+  stroke: #fb096e;
+}
+.wrapper .editProductTemplate .editTemplateUnique .rightSide .rightText .productRow .editBtn .iconEdit:hover {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(255, 255, 255, 0);
+}
+.wrapper .editProductTemplate .editTemplateUnique .rightSide .rightText .productRow h1 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-size: 1rem;
+  border-bottom: 2px solid #c6c6c6;
+}
+.wrapper .editProductTemplate .editTemplateUnique .rightSide .rightText .productRow h1 input {
+  display: flex;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  margin-left: 0.2rem;
+  color: #1c1c1c;
+}
+.wrapper .editProductTemplate .editTemplateUnique .rightSide .rightText .productRow h1 ::placeholder {
+  opacity: 1;
+  color: #2c2c2c8b;
+  font-family: "Akshar", sans-serif;
+}
+.wrapper .editProductTemplate .editTemplateUnique .rightSide .rightText #inputEditCard {
+  width: 50%;
+  margin-left: 0.2rem;
+}
+.wrapper .editProductTemplate .editTemplateUnique .rightSide .rightText #closeButtonWrapperId {
+  margin-top: 4.5rem;
+}
+.wrapper .editProductTemplate .editTemplateUnique .rightSide .closeButtonWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0.5rem;
+}
+.wrapper .editProductTemplate .editTemplateUnique .rightSide .closeButtonWrapper .closeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 1.8rem;
+  border: 1px solid black;
+  border-radius: 0.3rem;
+  background-color: #262626;
+  color: white;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-family: "Akshar", sans-serif;
+}
+.wrapper .editProductTemplate .editTemplateUnique .rightSide .closeButtonWrapper .closeButton:hover {
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0.2rem 0.2rem;
+  border: 0.5px solid #c6c6c65b;
+  color: #fb096e;
+}
+.wrapper .registration {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  margin: auto;
+  width: 65vw;
+  height: 50vh;
+  z-index: 10;
+  background-color: rgba(32, 32, 32, 0.945);
+  border-radius: 0.3rem;
+}
+.wrapper .registration h1 {
+  font-family: "Nunito", sans-serif;
+  color: #c6c6c6;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #c6c6c6;
+}
+.wrapper .registration form {
+  width: 50vw;
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wrapper .registration form input {
+  border: none;
+  border-bottom: 2px solid #c6c6c6;
+  outline: none;
+  background-color: transparent;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+  color: #c6c6c6;
+}
+.wrapper .registration form ::placeholder {
+  font-size: 1.2rem;
+  color: #c6c6c6;
+  opacity: 0.8;
+}
+.wrapper .registration form #SendBTN {
+  margin: 0 auto;
+  width: 4rem;
+  height: 2rem;
+  border: 1px solid black;
+  transition: 0.7s ease;
+  margin-top: 1rem;
+  border-radius: 0.2rem;
+}
+.wrapper .registration form #SendBTN:hover {
+  cursor: pointer;
+  box-shadow: 0.2rem 0.2rem;
+  border: 0.5px solid #c6c6c65b;
+  color: #fb096e;
+}
+.wrapper .profileTextTemplate {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.wrapper .profileTextTemplate #imageUserCard {
+  box-sizing: content-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 7rem;
+  height: 7rem;
+}
+.wrapper .profileTextTemplate .mainBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+  height: 50vh;
+  background-color: #d7d7d7;
+  border-radius: 8px;
+}
+.wrapper .profileTextTemplate .mainBox .form {
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 58vw;
+  height: 45vh;
+  border: 0.1rem solid #83838349;
+  border-radius: 8px;
+  padding: 1rem;
+}
+.wrapper .profileTextTemplate .mainBox .form #ImageProfile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 0.1rem dashed #838383;
+  width: 30%;
+}
+.wrapper .profileTextTemplate .mainBox .form #ImageProfile .uploadImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .profileTextTemplate .mainBox .form #ImageProfile .uploadImage .imageIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #525252;
+}
+.wrapper .profileTextTemplate .mainBox .form #ImageProfile .uploadImage .imageIcon img {
+  width: 1rem;
+  height: 1rem;
+}
+.wrapper .profileTextTemplate .mainBox .form #ImageProfile .uploadImage p {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+}
+.wrapper .profileTextTemplate .mainBox .form #ImageProfile #uploadImageProfile {
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+}
+.wrapper .profileTextTemplate .mainBox .form #rightTextProfileTextTemplate {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 1rem;
+  width: 50%;
+  height: 25vh;
+}
+.wrapper .profileTextTemplate .mainBox .form #rightTextProfileTextTemplate h1 {
+  font-size: 1rem;
+  border: none;
+  border-bottom: 2px solid #c6c6c6;
+  outline: none;
+}
+.wrapper .profileTextTemplate #closeButton {
+  position: fixed;
+  display: flex;
+  justify-content: end;
+  align-items: flex-start;
+  width: 58vw;
+  height: 45vh;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+.wrapper .profileTextTemplate #closeButton .backBox {
+  transition: 0.7s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #3a3a3a;
+}
+.wrapper .profileTextTemplate #closeButton .backBox .closeHaburgerLine1 {
+  position: relative;
+  top: -32%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 3px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+  transform: translateY(8px) rotate(45deg);
+}
+.wrapper .profileTextTemplate #closeButton .backBox .closeHaburgerLine2 {
+  position: relative;
+  top: -32%;
+  left: -25%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 3px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+  transform: translateY(8px) rotate(-45deg);
+}
+.wrapper .profileTextTemplate #closeButton .backBox:hover {
+  transition: 0.7s ease;
+  transform: rotate(180deg);
+  background-color: #fb096e;
+  width: 1.8rem;
+  height: 1.8rem;
+}
