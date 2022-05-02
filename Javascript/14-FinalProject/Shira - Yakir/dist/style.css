@@ -251,7 +251,7 @@ body .tasksPage #addTaskForm #selectCategory, body .tasksPage #editTaskForm #sel
   margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (min-width: 1000px) {
   .tasksPage {
     width: 100%;
     display: grid;
@@ -270,7 +270,7 @@ body .tasksPage #addTaskForm #selectCategory, body .tasksPage #editTaskForm #sel
     background-color: #4a83bd;
     width: 60%;
     display: grid;
-    grid-template-columns: 2fr;
+    grid-template-columns: 0.5fr;
     grid-template-rows: 150px, 150px, auto;
     grid-template-areas: "appHeader" "addCategory" "categories" "addTask" "tasks";
   }
