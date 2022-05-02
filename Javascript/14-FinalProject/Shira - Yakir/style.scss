@@ -199,7 +199,7 @@ body {
         background-color: #4a83bd;
         width: 100%;
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 0.5fr 2fr;
         grid-template-rows: 150px 150px auto;
         grid-template-areas: 
               "appHeader appHeader"
@@ -348,17 +348,20 @@ body {
 
 }
 @media only screen and (max-width: 500px) {
-    .taskPage{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        .appHeader{
-           position: relative;
-            width: fit-content;
+    .tasksPage{
+        position: relative;
+        background-color: #4a83bd;
+        width: 60%;
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-template-rows: 150px, 150px, auto;
+        grid-template-areas: 
+        "appHeader"
+        "addCategory"
+        "categories"
+        "addTask"
+        "tasks";
 
-        }
-     } 
+
+    }
 }
-
-
-

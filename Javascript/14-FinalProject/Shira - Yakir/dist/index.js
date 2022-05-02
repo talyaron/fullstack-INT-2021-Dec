@@ -16,7 +16,7 @@ var editCategory = document.querySelector('.editCategory');
 var addTaskInputTxt = document.querySelector('#addTask');
 var defaultSelect = document.querySelector('#defaultSelect');
 // const option = document.querySelector('#defaultSelect')
-var currentEditTaskID; // var for idinify what task to update
+var currentEditTaskID; // var for idinify what task to update on edit form
 var tasksArray = []; // arays that contain the tasks
 var CategoryArray = []; // arays that contain the Categories
 //create task object

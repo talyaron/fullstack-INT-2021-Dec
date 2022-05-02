@@ -17,7 +17,7 @@ let editCategory: any = document.querySelector('.editCategory')
 let addTaskInputTxt = document.querySelector('#addTask'); 
 const defaultSelect = document.querySelector('#defaultSelect')
 // const option = document.querySelector('#defaultSelect')
-let currentEditTaskID;  // var for idinify what task to update
+let currentEditTaskID:number;  // var for idinify what task to update on edit form
 
 
 
