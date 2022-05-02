@@ -26,6 +26,10 @@
             <p class="taskText">+Add New Task</p>
         </div>
 
+        <div class="btn  btn--checkAlerts" onclick="alertTaskPass()">
+            <p class="taskText">Check Alerts</p>
+        </div>
+
         <form id="addTaskForm" onsubmit="submitAddTaskForm(event)">
             <label for="addTask">Task Title</label>
             <input type="text" name="taskTitle" class="addTask" id="addTask" placeholder="+ Add Task">
@@ -33,9 +37,8 @@
             <label for="chooseCtg">Category</label>
             <select name="ctgSelect" class="selectCategory" onchange="selctCtg(event)">
                 <option value="" id="defaultSelect" disabled selected>Choose a Category</option>
-                <!-- <option></option> -->
             </select>
-            <!-- <div class="ctgInput"></div> -->
+          
             <label for="Content">Content</label>
             <input type="text" name="Content" id="contentInput">
             <label for="dueDate">Due Date</label>
@@ -43,20 +46,20 @@
             <button type="submit">Add Task</button>
         </form>
 
+        <!-- EDIT FORM  -->
         <form id="editTaskForm" onsubmit="submitEditTaskForm(event)">
-            <label for="addTask">Task Title</label>
-            <input type="text" name="taskTitle" class="addTask" id="addTask" placeholder="+ Add Task">
+            <label for="editTaskTitle">Task Title</label>
+            <input type="text" name="editTaskTitle" class="editTaskTitle" id="editTaskTitle" placeholder="+ Add Task">
 
-            <label for="chooseCtg">Category</label>
-            <select name="ctgSelect" class="selectCategory" onchange="selctCtg(event)">
+            <label for="editCategory">Category</label>
+            <select name="editCategory" class="editCategory" onchange="selctCtg(event)">
                 <option value="" id="defaultSelect" disabled selected>Choose a Category</option>
-                <!-- <option></option> -->
             </select>
-            <!-- <div class="ctgInput"></div> -->
-            <label for="Content">Content</label>
-            <input type="text" name="Content" id="contentInput">
-            <label for="dueDate">Due Date</label>
-            <input type="datetime-local" name="dueDate" id="dateInput">
+       
+            <label for="editContent">Content</label>
+            <input type="text" name="editContent" id="editContent">
+            <label for="editDueDate">Due Date</label>
+            <input type="datetime-local" name="editDueDate" id="editDueDate">
             <button type="submit">Finish Edit Task</button>
         </form>
 

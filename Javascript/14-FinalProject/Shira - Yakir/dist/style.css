@@ -118,6 +118,17 @@ body .btn--AddTask .taskText {
   font-size: large;
   font-weight: bolder;
 }
+body .btn--checkAlerts {
+  background-color: #e5652e;
+  width: 140px;
+  height: 40px;
+}
+body .btn--checkAlerts .taskText {
+  position: relative;
+  bottom: 8px;
+  font-size: large;
+  font-weight: bolder;
+}
 body .categories {
   width: 210px;
   background-color: #1062b0;

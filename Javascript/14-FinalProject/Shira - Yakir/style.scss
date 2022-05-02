@@ -162,6 +162,18 @@ body {
             }
         }
 
+        &--checkAlerts{
+            background-color: #e5652e;
+            width:140px;
+            height: 40px;
+            .taskText{
+                position: relative;
+                bottom: 8px;
+                font-size: large;
+                font-weight: bolder;
+            }
+        }
+
     } 
  
     .categories{

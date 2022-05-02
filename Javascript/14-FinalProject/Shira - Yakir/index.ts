@@ -16,6 +16,7 @@ let categoriesSelect: any = document.querySelector('.selectCategory')
 let addTaskInputTxt = document.querySelector('#addTask'); 
 const defaultSelect = document.querySelector('#defaultSelect')
 // const option = document.querySelector('#defaultSelect')
+let currentEditTaskID;  // var for idinify what task to update
 
 
 
@@ -128,6 +129,8 @@ function updateHtmlTaskView(taskIndex) {
     <button class="btn btn--Edit" onclick="EditTask(${taskIndex})">Edit</button>
     </div>
     `;
+
+    // alertTaskPass(); disable becuse its too muck every cange or reopn the page
 }
 
 // clean the tasks view then recrate the html element for new array
@@ -139,6 +142,7 @@ function tasksViewUpdate() {
     for (let i = 0; i < tasksArray.length; i++) {
         updateHtmlTaskView(i);
     }
+    // alertTaskPass(); disable becuse its too muck every cange or reopn the page
 }
 
 // demo data for Development and Testing process
@@ -170,9 +174,18 @@ function deleteTask(taskIndex) {
 }
 
 function EditTask(taskIndex) {
+    currentEditTaskID = taskIndex; // for later use when update save the update task
     tasksArray[taskIndex].status = true;
     editForm.style.visibility = 'visible';
     tasksHTML.style.visibility = 'hidden';   
+    hideAddBtn();   
+
+    // taskIndex
+    // show original data from the selected task in the edit form
+    document.querySelector('#editTaskTitle').value = tasksArray[taskIndex].title;
+    document.querySelector('#editContent').value = tasksArray[taskIndex].content;
+    document.querySelector('#editDueDate').value = tasksArray[taskIndex].dueDate;
+
 }
 
 
@@ -219,13 +232,14 @@ function submitAddTaskForm(event) {
 }
 
 function submitEditTaskForm(event) {
+    console.log(event);
     event.preventDefault();
-    let i:number=0;
-    tasksArray[i].title = event.target.taskTitle.value;
-    tasksArray[i].dueDate = new Date(event.target.dueDate.value);
-    tasksArray[i].status = false;
-    tasksArray[i] = choice;
-
+    tasksArray[currentEditTaskID].title = event.target.editTaskTitle.value;
+    tasksArray[currentEditTaskID].content = event.target.editContent.value;
+    // tasksArray[currentEditTaskID].dueDate = new Date(event.target.dueDate.value);
+    tasksArray[currentEditTaskID].status = false;
+    tasksArray[currentEditTaskID] = choice;
+    tasksViewUpdate()
     closeEditForm()
     
     // for debug console purpose
@@ -233,22 +247,22 @@ function submitEditTaskForm(event) {
     console.log(`tasks has ${tasksArray.length} objects`);
 
         //Reset the fields of form:
-    editForm.value = "";
-    document.querySelector('#contentInput').value='';
-    document.querySelector('#dateInput').value = '';
-    var options = document.querySelectorAll('.selectCategory');
-    for (var i = 0, l = options.length; i < l; i++) {
-    options[i].value = defaultSelect.value;
+    // editForm.value = "";
+    // document.querySelector('#contentInput').value='';
+    // document.querySelector('#dateInput').value = '';
+    // var options = document.querySelectorAll('.selectCategory');
+    // for (var i = 0, l = options.length; i < l; i++) {
+    // // options[i].value = defaultSelect.value;
 }
-}
-
-
 
 addTaskButton.addEventListener("click", openTaskForm);
 function openTaskForm() {
     taskForm.style.visibility = 'visible';
     tasksHTML.style.visibility = 'hidden';
+    hideAddBtn()
 }
+
+addTaskButton.addEventListener("click", alertTaskPass);
 
 // EditTask.addEventListener("click", editTaskForm)
 // function editTaskForm() {
@@ -260,11 +274,13 @@ function openTaskForm() {
 function closeTaskForm() {
     taskForm.style.visibility = 'hidden';
     tasksHTML.style.visibility = 'visible';
+    showAddBtn()
 }
 
 function closeEditForm() {
     editForm.style.visibility = 'hidden';
     tasksHTML.style.visibility = 'visible';
+    showAddBtn()
 }
 
 function handleSelectCategory() {
@@ -292,9 +308,6 @@ function clearOptions(){
         categoriesSelect.remove(i);
     }
 }
-
-
-
 
 let choice: string = '';
 
@@ -325,3 +338,36 @@ function addNewCtg(event) {
 
 //call function again, to initial select categories 
 handleSelectCategory()
+
+
+function hideAddBtn(){
+
+    document.querySelector('.btn--AddTask').style.visibility = "hidden";
+    
+}
+
+function showAddBtn(){
+
+    document.querySelector('.btn--AddTask').style.visibility = "visible";
+    
+}
+
+
+function alertTaskPass(){
+    let nowtime:Date = new Date (Date.now());
+    let d1:Date = new Date('2022-04-01');
+    tasksArray.forEach(element => {
+        try{
+     if (element.status == false) {
+        if( nowtime >= element.dueDate ){
+            alert(`Task Pass: ${element.title} at ${element.dueDate}`);
+        }
+    }
+        }
+        catch (error) {
+            console.error(error);
+        }
+
+    });
+}
+
