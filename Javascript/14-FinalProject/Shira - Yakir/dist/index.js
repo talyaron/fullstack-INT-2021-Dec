@@ -15,7 +15,6 @@ var categoriesSelect = document.querySelector(".selectCategory");
 var editCategory = document.querySelector(".editCategory");
 var addTaskInputTxt = document.querySelector("#addTask");
 var defaultSelect = document.querySelector("#defaultSelect");
-// const option = document.querySelector('#defaultSelect')
 var currentEditTaskID; // var for idinify what task to update on edit form
 var tasksArray = []; // arays that contain the tasks
 var CategoryArray = []; // arays that contain the Categories
@@ -113,7 +112,7 @@ function tasksViewUpdate() {
     }
     // alertTaskPass(); disable becuse its too muck every cange or reopn the page
 }
-// demo data for Development and Testing process
+//------demo data for Development and Testing process
 function addTask_demo_DATA() {
     //------------------
     //------ create example Category-----
@@ -204,11 +203,6 @@ function openTaskForm() {
     hideAddBtn();
 }
 addTaskButton.addEventListener("click", alertTaskPass);
-// EditTask.addEventListener("click", editTaskForm)
-// function editTaskForm() {
-// taskForm.style.visibility = 'hidden';
-// tasksHTML.style.visibility = 'hidden';
-// }
 function closeTaskForm() {
     taskForm.style.visibility = "hidden";
     tasksHTML.style.visibility = "visible";
@@ -223,7 +217,6 @@ function handleSelectCategory() {
     clearOptions();
     console.dir(categoriesSelect);
     console.dir(CategoryArray);
-    // let option = document.createElement("option");
     for (var i = 0; i < CategoryArray.length; i++) {
         var option = document.createElement("option");
         option.value = CategoryArray[i];
@@ -255,7 +248,6 @@ function selctCtg(event) {
     var selectCatg = document.querySelector(".ctgInput");
     selectCatg.innerHTML = choice;
 }
-// handleSelectCategory()
 function selctCtgEdit(event) {
     choice = event.target.value;
     var selectCatgEditForm = document.querySelector(".editCategory");
