@@ -5,16 +5,16 @@ var formPassword = document.querySelector("#password");
 var formconfirmPassword = document.querySelector("#repeatPassword");
 var formSignUpMsg = document.querySelector("#signUpMsg");
 var formLoginMsg = document.querySelector("#loginMsg");
-var addTaskButton = document.querySelector('.btn--AddTask');
-var taskForm = document.querySelector('#addTaskForm');
-var editForm = document.querySelector('#editTaskForm');
-var addNewCategory = document.querySelector('#addCategory');
-var tasksHTML = document.querySelector('.tasks');
-var newCategory = document.querySelector('.categories');
-var categoriesSelect = document.querySelector('.selectCategory');
-var editCategory = document.querySelector('.editCategory');
-var addTaskInputTxt = document.querySelector('#addTask');
-var defaultSelect = document.querySelector('#defaultSelect');
+var addTaskButton = document.querySelector(".btn--AddTask");
+var taskForm = document.querySelector("#addTaskForm");
+var editForm = document.querySelector("#editTaskForm");
+var addNewCategory = document.querySelector("#addCategory");
+var tasksHTML = document.querySelector(".tasks");
+var newCategory = document.querySelector(".categories");
+var categoriesSelect = document.querySelector(".selectCategory");
+var editCategory = document.querySelector(".editCategory");
+var addTaskInputTxt = document.querySelector("#addTask");
+var defaultSelect = document.querySelector("#defaultSelect");
 // const option = document.querySelector('#defaultSelect')
 var currentEditTaskID; // var for idinify what task to update on edit form
 var tasksArray = []; // arays that contain the tasks
@@ -27,7 +27,6 @@ function task(title, content, dueDate, status, category) {
     this.status = status; // true = task is Done , false= Task open
     this.category = category;
 }
-;
 //    SignUp
 function handleSignUp(event) {
     event.preventDefault();
@@ -80,7 +79,7 @@ function tasksPage() {
 tasksPage();
 // create NEW task in the array then display it on HTML
 function addTask(event) {
-    // pass the arguments from the event to the object constractor 
+    // pass the arguments from the event to the object constractor
     // and/or use some demo data for development and testing untile all set
     var title = event.target.value;
     var content = "test content";
@@ -99,11 +98,10 @@ function addTask(event) {
 // add the task from the array to the html by its givin index
 function updateHtmlTaskView(taskIndex) {
     var HTML_tasks = document.querySelector(".tasks");
-    var HTML_addTaskInput = document.createElement('div');
+    var HTML_addTaskInput = document.createElement("div");
     HTML_tasks.append(HTML_addTaskInput);
-    HTML_addTaskInput.classList.add('task');
-    HTML_addTaskInput.innerHTML =
-        "<div class=\"task\" id=\"taskIndex-" + taskIndex + "\">\n    <h1 class=\"title\">" + (taskIndex + 1) + ". " + tasksArray[taskIndex].title + "</h1>\n    <h2 class=\"contect\">" + tasksArray[taskIndex].content + "</h2>\n    <h3 class=\"dueDate\">" + tasksArray[taskIndex].dueDate + "</h3>\n    <h3 status=\"category\">Category  :   " + tasksArray[taskIndex].category + "</h3> \n    <button class=\"btn btn--delete\" onclick=\"deleteTask(" + taskIndex + ")\">Delete</button>\n    <button class=\"btn btn--Done\" onclick=\"DoneTask(" + taskIndex + ")\">Done</button>\n    <button class=\"btn btn--Edit\" onclick=\"EditTask(" + taskIndex + ")\">Edit</button>\n    </div>\n    ";
+    HTML_addTaskInput.classList.add("task");
+    HTML_addTaskInput.innerHTML = "<div class=\"task\" id=\"taskIndex-" + taskIndex + "\">\n    <h1 class=\"title\">" + (taskIndex + 1) + ". " + tasksArray[taskIndex].title + "</h1>\n    <h2 class=\"contect\">" + tasksArray[taskIndex].content + "</h2>\n    <h3 class=\"dueDate\">" + tasksArray[taskIndex].dueDate + "</h3>\n    <h3 status=\"category\">Category  :   " + tasksArray[taskIndex].category + "</h3> \n    <button class=\"btn btn--delete\" onclick=\"deleteTask(" + taskIndex + ")\">Delete</button>\n    <button class=\"btn btn--Done\" onclick=\"DoneTask(" + taskIndex + ")\">Done</button>\n    <button class=\"btn btn--Edit\" onclick=\"EditTask(" + taskIndex + ")\">Edit</button>\n    </div>\n    ";
     // alertTaskPass(); disable becuse its too muck every cange or reopn the page
 }
 // clean the tasks view then recrate the html element for new array
@@ -123,7 +121,7 @@ function addTask_demo_DATA() {
     addCategoryUpdateView(CategoryArray);
     //-------------------------------------------
     //----------create example Task--------------
-    var newTask = new task("Js project", "create a game", new Date('04/08/2022'), false, "Studies");
+    var newTask = new task("Js project", "create a game", new Date("04/08/2022"), false, "Studies");
     tasksArray.push(newTask);
     updateHtmlTaskView(tasksArray.length - 1);
     // for debug console purpose
@@ -139,20 +137,23 @@ function deleteTask(taskIndex) {
 function EditTask(taskIndex) {
     currentEditTaskID = taskIndex; // for later use when update save the update task
     tasksArray[taskIndex].status = true;
-    editForm.style.visibility = 'visible';
-    tasksHTML.style.visibility = 'hidden';
+    editForm.style.visibility = "visible";
+    tasksHTML.style.visibility = "hidden";
     hideAddBtn();
     // taskIndex
     // show original data from the selected task in the edit form
-    document.querySelector('#editTaskTitle').value = tasksArray[taskIndex].title;
-    document.querySelector('#editContent').value = tasksArray[taskIndex].content;
-    document.querySelector('#editDueDate').value = tasksArray[taskIndex].dueDate;
+    document.querySelector("#editTaskTitle").value = tasksArray[taskIndex].title;
+    document.querySelector("#editContent").value = tasksArray[taskIndex].content;
+    document.querySelector("#editDueDate").value = tasksArray[taskIndex].dueDate;
 }
 function DoneTask(taskIndex) {
     tasksArray[taskIndex].status = true;
-    document.querySelector("#taskIndex-" + taskIndex).style.background = "rgb(77, 236, 77)";
-    document.querySelector(".editTaskBtn-" + taskIndex).style.visibility = 'hidden';
-    document.querySelector("#.editTaskBtn-" + taskIndex).style.visibility = 'hidden';
+    document.querySelector("#taskIndex-" + taskIndex).style.background =
+        "rgb(77, 236, 77)";
+    document.querySelector(".editTaskBtn-" + taskIndex).style.visibility =
+        "hidden";
+    document.querySelector("#.editTaskBtn-" + taskIndex).style.visibility =
+        "hidden";
     tasksArray[taskIndex].title.style.textDecoration = "line-through"; //CHECK//
     console.dir(tasksArray);
 }
@@ -175,38 +176,31 @@ function submitAddTaskForm(event) {
     console.log("tasks has " + tasksArray.length + " objects");
     //Reset the fields of form:
     addTaskInputTxt.value = "";
-    document.querySelector('#contentInput').value = '';
-    document.querySelector('#dateInput').value = '';
-    var options = document.querySelectorAll('.selectCategory');
+    document.querySelector("#contentInput").value = "";
+    document.querySelector("#dateInput").value = "";
+    var options = document.querySelectorAll(".selectCategory");
     for (var i = 0, l = options.length; i < l; i++) {
         options[i].value = defaultSelect.value;
     }
 }
 function submitEditTaskForm(event) {
+    console.log(currentEditTaskID);
     console.log(event);
     event.preventDefault();
-    tasksArray[currentEditTaskID].title = event.target.editTaskTitle.value;
-    tasksArray[currentEditTaskID].content = event.target.editContent.value;
-    // tasksArray[currentEditTaskID].dueDate = new Date(event.target.dueDate.value);
-    tasksArray[currentEditTaskID].status = false;
-    tasksArray[currentEditTaskID] = choice;
+    // crate new obj to replace with the current task
+    var editTaskObj = new task(event.target.editTaskTitle.value, event.target.editContent.value, new Date(event.target.editDueDate.value), false, choice);
+    tasksArray[currentEditTaskID] = editTaskObj;
+    //   tasksArray.push(newTask);
     tasksViewUpdate();
     closeEditForm();
     // for debug console purpose
     console.dir(tasksArray);
     console.log("tasks has " + tasksArray.length + " objects");
-    //Reset the fields of form:
-    // editForm.value = "";
-    // document.querySelector('#contentInput').value='';
-    // document.querySelector('#dateInput').value = '';
-    // var options = document.querySelectorAll('.selectCategory');
-    // for (var i = 0, l = options.length; i < l; i++) {
-    // // options[i].value = defaultSelect.value;
 }
 addTaskButton.addEventListener("click", openTaskForm);
 function openTaskForm() {
-    taskForm.style.visibility = 'visible';
-    tasksHTML.style.visibility = 'hidden';
+    taskForm.style.visibility = "visible";
+    tasksHTML.style.visibility = "hidden";
     hideAddBtn();
 }
 addTaskButton.addEventListener("click", alertTaskPass);
@@ -216,13 +210,13 @@ addTaskButton.addEventListener("click", alertTaskPass);
 // tasksHTML.style.visibility = 'hidden';
 // }
 function closeTaskForm() {
-    taskForm.style.visibility = 'hidden';
-    tasksHTML.style.visibility = 'visible';
+    taskForm.style.visibility = "hidden";
+    tasksHTML.style.visibility = "visible";
     showAddBtn();
 }
 function closeEditForm() {
-    editForm.style.visibility = 'hidden';
-    tasksHTML.style.visibility = 'visible';
+    editForm.style.visibility = "hidden";
+    tasksHTML.style.visibility = "visible";
     showAddBtn();
 }
 function handleSelectCategory() {
@@ -235,6 +229,12 @@ function handleSelectCategory() {
         option.value = CategoryArray[i];
         option.text = CategoryArray[i];
         categoriesSelect.appendChild(option);
+        console.log(CategoryArray[i]);
+    }
+    for (var i = 0; i < CategoryArray.length; i++) {
+        var option = document.createElement("option");
+        option.value = CategoryArray[i];
+        option.text = CategoryArray[i];
         editCategory.appendChild(option);
         console.log(CategoryArray[i]);
     }
@@ -248,13 +248,19 @@ function clearOptions() {
         editCategory.remove(i);
     }
 }
-var choice = '';
+var choice = "";
+var choice2 = "";
 function selctCtg(event) {
     choice = event.target.value;
-    var input = document.querySelector('.ctgInput');
-    input.innerHTML = choice;
+    var selectCatg = document.querySelector(".ctgInput");
+    selectCatg.innerHTML = choice;
 }
 // handleSelectCategory()
+function selctCtgEdit(event) {
+    choice = event.target.value;
+    var selectCatgEditForm = document.querySelector(".editCategory");
+    selectCatgEditForm.innerHTML = choice2;
+}
 function addNewCtg(event) {
     try {
         if (event.keyCode == 13) {
@@ -271,17 +277,17 @@ function addNewCtg(event) {
         console.error(error);
     }
 }
-//call function again, to initial select categories 
+//call function again, to initial select categories
 handleSelectCategory();
 function hideAddBtn() {
-    document.querySelector('.btn--AddTask').style.visibility = "hidden";
+    document.querySelector(".btn--AddTask").style.visibility = "hidden";
 }
 function showAddBtn() {
-    document.querySelector('.btn--AddTask').style.visibility = "visible";
+    document.querySelector(".btn--AddTask").style.visibility = "visible";
 }
 function alertTaskPass() {
     var nowtime = new Date(Date.now());
-    var d1 = new Date('2022-04-01');
+    var d1 = new Date("2022-04-01");
     tasksArray.forEach(function (element) {
         try {
             if (element.status == false) {
