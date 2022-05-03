@@ -21,12 +21,10 @@ body {
     }
 
     .heading {
-        //sign up & login titles 
         text-align: center;
         margin-bottom: 48px;
         margin-top: 0;
         font-size: 38px;
-        // background: linear-gradient(90deg, rgb(52, 65, 146) 0%, rgb(247, 88, 2) 100%);
         background: rgb(19, 19, 121);
         -webkit-background-clip: text;
         background-clip: text;
@@ -62,21 +60,15 @@ body {
         height: 4em;
         border-radius: 10em;
         border: none;
-        // background: linear-gradient(104deg, rgb(28, 7, 84) 0%, rgb(247, 67, 2) 100%);
-        // background: linear-gradient(104deg, rgb(75, 9, 255) 0%, rgba(252, 87, 4, 0.414) 100%);
-
         color: white;
         padding: 8px 24px;
         font-size: 15px;
         font-weight: normal;
-        // box-shadow: 0px 8px 20px rgba(216, 49, 91, 0.1);
         transition: all 0.3s ease 0s;
         cursor: pointer;
         outline: none;
         &:hover {
             background-color:  rgb(247, 67, 2);
-            // box-shadow: 0px 15px 32px rgba(216, 49, 91, 0.2);
-            // color: #fff;
             transform: translateY(-4px);
         }
 
@@ -100,7 +92,6 @@ body {
 
             &:hover{
                 background-color: #a24218;
-                // box-shadow: 0px 15px 32px rgba(216, 49, 91, 0.2);
             }
         }
         &--Done{
@@ -157,8 +148,6 @@ body {
  
     .categories{
         width: 210px;
-        // border-right: solid 1px rgb(32, 13, 139);
-        // background-color: rgb(204, 211, 250);
         background-color: rgb(16, 98, 176);
         border-radius: 20px;
         padding: 10px;
@@ -176,7 +165,7 @@ body {
     .tasksPage{
         position: relative;
         background-color: #4a83bd;
-        width: 100%;
+        width:100%;
         display: grid;
         grid-template-columns: 0.5fr 2fr;
         grid-template-rows: 150px 150px auto;
@@ -203,7 +192,6 @@ body {
             margin-top: 0.5rem;
             margin-left: 1rem;
             }
-            //h3 - the Date:
             h3 {
             margin-right: 1rem;
             }
@@ -232,12 +220,10 @@ body {
             font-weight:bolder;
             li{
                 margin-top: 10px;
-                // padding: 2px;
             }
         }
     
         .tasks{
-            // position: absolute;
             position: relative;
             width: 490px;
             top: 0px;
@@ -306,7 +292,7 @@ body {
 
 @media only screen and (min-width: 1000px) {
  .tasksPage{
-    width: 100%;
+    width:60%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 150px 150px auto;
