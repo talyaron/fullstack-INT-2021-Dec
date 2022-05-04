@@ -10,11 +10,11 @@ function multi(a, b) {
   return Math.sqrt(a * b);
 }
 
-app.get("/", function (req, res) {
+app.get("/client.html", function (req, res) {
   res.send("Hi Lital");
 });
-app.get("/name", function (req, res) {
-  res.send("my first name is Lital");
+app.get("/name.html", function (req, res) {
+  res.send("Welcome back you are the Admin");
 });
 app.get("/multi", function (req, res) {
   res.send("<h1>".concat(multi(6, 7)));
