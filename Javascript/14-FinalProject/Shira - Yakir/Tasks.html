@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/style.css">
+    <title>Tasks</title>
+</head>
+
+<body>
+
+    <div class="tasksPage">
+
+        <div class="appHeader">
+            <img class="account" src="./images/avatar - Copy.jpg" alt=""
+                style="border-radius:50px; width: 43px; height: 43px; margin-top:5px; margin-left: 2px;">
+            <h1 class="myDay">My Day</h1>
+            <h3 id="todayDate"></h3>
+        </div>
+
+        <input type="text" class="addCategory" id="addCategory" placeholder="+ Add Category"
+            onkeydown="addNewCtg(event)">
+        <div class="btn  btn--AddTask">
+            <p class="taskText">+Add New Task</p>
+        </div>
+
+        <div class="btn  btn--checkAlerts" onclick="alertTaskPass()">
+            <p class="taskText">Check Alerts</p>
+        </div>
+
+        <form id="addTaskForm" onsubmit="submitAddTaskForm(event)">
+            <label for="addTask">Task Title</label>
+            <input type="text" name="taskTitle" class="addTask" id="addTask" placeholder="+ Add Task">
+
+            <label for="chooseCtg">Category</label>
+            <select name="ctgSelect" class="selectCategory" onchange="selctCtg(event)">
+                <option value="" id="defaultSelect" disabled selected>Choose a Category</option>
+            </select>
+          
+            <label for="Content">Content</label>
+            <input type="text" name="Content" id="contentInput">
+            <label for="dueDate">Due Date</label>
+            <input type="datetime-local" name="dueDate" id="dateInput">
+            <button type="submit">Add Task</button>
+        </form>
+
+        <!-- EDIT FORM  -->
+        <form id="editTaskForm" onsubmit="submitEditTaskForm(event)">
+            <label for="editTaskTitle">Task Title</label>
+            <input type="text" name="editTaskTitle" class="editTaskTitle" id="editTaskTitle" placeholder="+ Add Task">
+
+            <label for="editCategory">Category</label>
+            <select name="editCategory" class="editCategory" onchange="selctCtgEdit(event)">
+                <option value="" id="defaultSelect" disabled selected>Choose a Category</option>
+            </select>
+       
+            <label for="editContent">Content</label>
+            <input type="text" name="editContent" id="editContent">
+            <label for="editDueDate">Due Date</label>
+            <input type="datetime-local" name="editDueDate" id="editDueDate">
+            <button type="submit">Finish Edit Task</button>
+        </form>
+
+
+        <div class="categories">
+            <div id="Category">Categories:</div>
+        </div>
+
+        <div class="tasks">
+
+        </div>
+    </div>
+
+    <script src="./dist/index.js"></script>
+
+</body>
+
+</html>
