@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FFFFD0;
+  position: relative;
+}
+
+header nav {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  width: 6rem;
+  height: 15vh;
+  background-color: transparent;
+  bottom: 10%;
+  right: 0;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  box-shadow: inset 0 0 250px rgba(0, 45, 31, 0.5), inset 0 0 250px #FFFFD0;
+}
+header nav .arrownavbaropen {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  padding: 0.5rem;
+  width: 50%;
+  height: 60%;
+  border-right: 2px solid;
+}
+header nav .arrownavbarclose {
+  font-size: 2vw;
+  margin-left: 1.2rem;
+  display: none;
+}
+header nav .wrappernavbar {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 100%;
+  width: 50vw;
+}
+header nav .wrappernavbar .navbaricon {
+  font-size: 2em;
+  padding: 0 0.5rem;
+}
+
+.imgbackground {
+  width: 100%;
+  height: 40vh;
+  background-image: url("https://avondhupress.ie/wp-content/uploads/2018/08/Dog-In-Grass-Web-Stock-1920px@29-08-2018-181251.jpg");
+  background-position: center;
+  box-shadow: inset 0 -20px 10px white;
+  display: flex;
+  align-items: center;
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+  background-size: cover;
+}
+.imgbackground h1 {
+  padding: 0 15rem;
+  font-family: "Lily Script One";
+  font-size: 4rem;
+  width: 100vw;
+  color: transparent;
+  text-shadow: 0 0 2px #FFFFD0, 4px 4px black;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+main .about {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 3rem;
+  direction: rtl;
+}
+main .about h2 {
+  font-size: 2rem;
+  font-family: "Bellefair";
+}
+main .about p {
+  font-size: 1.5rem;
+  font-family: "Bellefair";
+}
+main .wrappertypes {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 3rem;
+  gap: 2rem;
+}
+main .wrappertypes .animaltype {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  border-radius: 25%;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  box-shadow: inset 0 -5px 20px black;
+}
+main .wrappertypes .animaltype h3 {
+  color: #FFFFD0;
+  text-shadow: 0 0 4px black;
+  font-size: 1.5rem;
+  font-family: "Oswald";
+}
+main .products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  direction: rtl;
+  margin-top: 2rem;
+  width: 90%;
+  height: fit-content;
+  gap: 2rem;
+  color: #007663;
+  background-color: transparent;
+  padding-bottom: 2rem;
+}
+main .products .container {
+  width: 100%;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+  padding-bottom: 3rem;
+  border-radius: 50% 100%/50% 100%;
+  border: ridge 5px rgba(128, 128, 128, 0.2);
+}
+main .products .container:nth-of-type(odd) {
+  border-radius: 100% 50%/100% 50%;
+}
+main .products .container h2 {
+  font-size: 2rem;
+  width: 100%;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+main .products .boxitems {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+main .products .boxitems .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 14.5vw;
+  height: 37vh;
+  border-radius: 1rem;
+  text-align: center;
+  color: #002D1F;
+  border: #002D1F solid 2px;
+  box-shadow: inset 0 0 250px rgba(0, 45, 31, 0.5), inset 0 0 250px #FFFFD0;
+}
+main .products .boxitems .item img {
+  width: 100%;
+  height: 65%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  box-shadow: inset 0 0 10px black;
+  border-bottom: #002D1F solid 1px;
+}
+main .products .boxitems .item .itemname {
+  font-size: 1.4rem;
+  font-family: "Frank Ruhl Libre";
+  font-weight: 600;
+}
+main .products .boxitems .item .price {
+  font-size: 1.3rem;
+  font-family: "Anek Latin";
+  font-weight: 600;
+}
+main .products .boxitems .item .addtocartbtn {
+  color: white;
+  width: fit-content;
+  font-size: 1.4rem;
+  font-family: "Bellefair";
+  background: #002D1F;
+  padding: 0.3rem;
+  border-radius: 20%;
+}
+
+.dog {
+  background-image: url("https://www.best4pet.co.il/wp-content/uploads/2021/06/rsz_beagle-beautiful-shot-dog-grass-1024x683.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cat {
+  background-image: url("https://previews.123rf.com/images/vvvita/vvvita1705/vvvita170500042/78086708-cat-sitting-in-the-grass-on-the-lawn.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.rabbit {
+  background-image: url("https://cdn.creatureandcoagency.com/uploads/2019/04/Rabbit-facts-featured.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+footer {
+  margin-top: 2rem;
+}
+footer .wrapperfooter {
+  width: 100%;
+  height: 30vh;
+  background-image: url("https://www.greenlawnfertilizing.com/wp-content/uploads/2019/04/beautiful-grass.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 20px 10px white;
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 30%;
+  border-top-right-radius: 30%;
+}
+
+.changemenu {
+  width: 100%;
+  height: 10vh;
+  background-color: rgba(242, 242, 242, 0.747);
+  display: flex;
+}
+.changemenu .mangermenu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  gap: 2rem;
+}
+.changemenu .mangermenu li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  height: 8vh;
+  padding: 1rem;
+  width: 7vw;
+  min-width: fit-content;
+  max-width: 10vw;
+  font-size: 1.5rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  cursor: pointer;
+}
