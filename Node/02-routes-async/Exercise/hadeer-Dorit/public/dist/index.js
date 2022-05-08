@@ -35,6 +35,6 @@ function handleImg2() {
     }
 }
 function renderImg(img) {
-    var root = document.querySelector("#root");
-    root.innerHTML = "<Img src=" + img + ">";
+    var image = document.querySelector("#imageToShow");
+    image.src = "" + img;
 }

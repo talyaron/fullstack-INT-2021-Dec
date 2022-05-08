@@ -33,8 +33,7 @@ function handleImg2(){
     }
 }
 function renderImg(img: string) {
-    const root: HTMLElement = document.querySelector("#root");
-  
-    root.innerHTML= `<Img src=${img}>`
+    const image: HTMLImageElement = document.querySelector("#imageToShow");
+    image.src = `${img}`;
   }
 
