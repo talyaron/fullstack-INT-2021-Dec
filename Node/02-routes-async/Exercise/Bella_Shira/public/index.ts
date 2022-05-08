@@ -1,10 +1,10 @@
 
 
-function makeImage() {
-   let img = document.innerHTML('img')
-   img.src = images[index];
-   document.getElementById('content').appendChild(img);
-}
+// function makeImage() {
+//    let img = document.innerHTML('img')
+//    img.src = images[index];
+//    document.getElementById('content').appendChild(img);
+// }
 
 async function handleGetImg1() {
     try {
