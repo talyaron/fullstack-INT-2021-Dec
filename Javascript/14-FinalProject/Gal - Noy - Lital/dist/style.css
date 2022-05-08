@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 80vh;
+}
+
+.containerOfProducts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+img {
+  width: 200px;
+  height: 100px;
+  margin: auto;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.image-wrapper image-desc {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.image-wrapper:hover image-desc {
+  display: block;
+}
