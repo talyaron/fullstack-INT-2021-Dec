@@ -243,3 +243,4 @@ function emptyCart() {
   cart = [];
   cartHtmlBuild();
 }
+
