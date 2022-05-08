@@ -1,0 +1,11 @@
+#root {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#root img1 {
+  width: 200px;
+}
+#root img2 {
+  width: 200px;
+}
