@@ -156,49 +156,6 @@
     }
   }
 
-  // annotation
-  // .textOverImage {
-  //   position: relative;
-  //   height: 24em;
-  //   margin: 4px;
-  //   background-size: 100%;
-  //   background-position: center;
-  //   transition: 0.7s;
-  // }
-  // .textOverImage:hover {
-  //   background-size: 90%;
-  // }
-  // .textOverImage:after {
-  //   position: absolute;
-  //   top: 100%;
-  //   bottom: 0;
-  //   left: 0;
-  //   right: 0;
-  //   white-space: pre-wrap;
-  //   overflow: hidden;
-  //   background-color: rgba(0, 0, 0, 0.688);
-  //   color: rgba(255, 255, 255, 0.614);
-  //   font-size: 18px;
-  //   text-align: center;
-  //   padding: 5px 8px;
-  //   opacity: 0;
-  //   content: attr(data-text);
-  //   transition: 0.8s ease-in-out;
-  //   border-radius: 10px;
-  // }
-
-  // .textOverImage:hover:after {
-  //   opacity: 1;
-  //   top: 0;
-  //   padding: 8px;
-  // }
-
-  // .textOverImage:first-line {
-  //   color: #fff;
-  //   font-size: 1.7em;
-  // }
-}
-
 .header {
   width: 100%;
   display: flex;
@@ -692,16 +649,3 @@ body.activeNav .nav .links>div:nth-child(5)>a {
     opacity: 1;
   }
 }
-
-// ranking classes
-// .green {
-//   color: lightgreen;
-// }
-
-// .orange {
-//   color: orange;
-// }
-
-// .red {
-//   color: red;
-// }
