@@ -21,7 +21,7 @@ function handleGetImg1() {
 
       const { data } =  axios.get("/api/img2");
       console.log(data)
-      const { user, error } = data;
+      const { img, error } = data;
       if (error) throw new Error(error);
      
       renderUser(imgs);
