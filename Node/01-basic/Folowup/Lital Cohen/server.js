@@ -6,11 +6,12 @@ app.use(express.static("public"))
 function multi(a,b){
     return Math.sqrt (a*b)
 }
-app.get("/",(req,res)=>{
+app.get("/client.html",(req,res)=>{
     res.send("Hi Lital")
 });
-app.get("/name",(req,res)=>{
-    res.send("my first name is Lital")
+app.get("/name.html",(req,res)=>{
+    res.send("Welcome back you are the Admin")
+   
 });
 
 app.get("/multi",(req,res)=>{
