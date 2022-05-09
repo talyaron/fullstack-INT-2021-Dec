@@ -1005,34 +1005,4 @@ function scrollToTop() {
   }
 }
 
-// const rootElement = document.documentElement;
-// function handleScroll() {
-//   try {
-//     const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
-//     if (rootElement.scrollTop / scrollTotal > 0.8) {
-//       scrollToTopBtn.classList.add("showBtn");
-//     } else {
-//       scrollToTopBtn.classList.remove("showBtn");
-//     }
-//   } catch (error) {
-//     console.log(error);
-//     // alert(error.message);
-//   }
-// }
 
-
-// star rating
-// for (let i = 0; i < rank.length; i++) {
-//   let rank = document.querySelectorAll(".rank");
-
-//   if (rank[i] >= 8) {
-
-//     rank[i].style.color = "green";
-//   } else if (rank <= 5) {
-
-//     rank[i].style.color = "orange";
-//   } else {
-
-//     rank[i].style.color = "red";
-//   }
-// }
