@@ -58,7 +58,7 @@ function handleGetJoke1() {
   
   function handleGetRandomMeme() {
     try {
-      // console.log(arrayOfMemes)
+      console.log("me")
       axios.get("/api/randomMeme").then(({ data }) => {
         console.log(data);
         const { arrayOfMemes, error } = data;
@@ -71,7 +71,7 @@ function handleGetJoke1() {
   }
   
   function renderMeme(arrayOfMemes:Meme) {
-    const root: HTMLElement = document.querySelector("#randomMeme");
+    const randomMeme: HTMLImageElement = document.querySelector("#randomMeme");
   
-    root.innerText = `my joke for you is: ${arrayOfMemes.image}`;
+    randomMeme.innerText = `my joke for you is: ${arrayOfMemes.image}`;
   }
