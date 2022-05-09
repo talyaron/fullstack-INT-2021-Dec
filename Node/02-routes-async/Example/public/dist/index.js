@@ -37,6 +37,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 function handleGetUser1() {
     try {
         console.log("get user 12");
+        renderLoader();
         axios
             .get("/api/user1")
             .then(function (_a) {
@@ -46,6 +47,7 @@ function handleGetUser1() {
             if (error)
                 throw new Error(error);
             console.log(user);
+            renderLoader();
             renderUser(user);
         })["catch"](function (err) { return console.error(err); });
     }
@@ -62,9 +64,11 @@ function handleGetUser2() {
                     _a.trys.push([0, 2, , 3]);
                     console.log("get user (1)");
                     console.log("get user After fetch (2)");
+                    renderLoader();
                     return [4 /*yield*/, axios.get("/api/user2")];
                 case 1:
                     data = (_a.sent()).data;
+                    renderLoader();
                     console.log(data);
                     console.log("get user After fetch (2.5)");
                     user = data.user, error = data.error;
@@ -84,6 +88,7 @@ function handleGetUser2() {
 }
 function handleGetUser3() {
     try {
+        renderLoader();
         axios.get("/api/user3").then(function (_a) {
             var data = _a.data;
             console.log(data);
@@ -91,6 +96,7 @@ function handleGetUser3() {
             if (error)
                 throw new Error(error);
             renderUser(user);
+            renderLoader();
         });
     }
     catch (error) {
@@ -100,4 +106,15 @@ function handleGetUser3() {
 function renderUser(user) {
     var root = document.querySelector("#root");
     root.innerText = "user " + user.name + " is " + user.age + " years old";
+}
+function renderLoader() {
+    var loader = document.querySelector('#loader');
+    if (!loader.classList.contains('lds-dual-ring')) {
+        loader.classList.add('lds-dual-ring');
+        console.log('add');
+    }
+    else {
+        loader.classList.remove('lds-dual-ring');
+        console.log('remove');
+    }
 }
