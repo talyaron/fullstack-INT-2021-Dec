@@ -11,7 +11,7 @@ interface meme{
 
 const memes:Array<meme> = [
     {name:"meme1" ,src:"./imgs/img1.png"},
-    {name:"meme2",src:"./imgs/img2.jpeg"},
+    {name:"meme2",src:"./imgs/img2.png"},
     {name:"meme3",src:"./imgs/img3.png"}
 ]
 
