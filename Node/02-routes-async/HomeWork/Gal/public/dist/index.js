@@ -4,7 +4,6 @@ function handleGetjoke1() {
         axios.get("/api/image").then(function (_a) {
             var data = _a.data;
             console.log(data);
-            // const imagetry = data;
             var picture = data.picture, error = data.error;
             if (error)
                 throw new Error(error);
@@ -20,7 +19,6 @@ function handleGetjoke2() {
         axios.get("/api/image").then(function (_a) {
             var data = _a.data;
             console.log(data);
-            // const imagetry = data;
             var picture = data.picture, error = data.error;
             if (error)
                 throw new Error(error);
@@ -36,7 +34,6 @@ function handleGetjoke3() {
         axios.get("/api/image").then(function (_a) {
             var data = _a.data;
             console.log(data);
-            // const imagetry = data;
             var picture = data.picture, error = data.error;
             if (error)
                 throw new Error(error);
@@ -48,6 +45,6 @@ function handleGetjoke3() {
     }
 }
 function renderPicture(picture) {
-    var image = document.querySelector("#imageToChange");
-    image.src = "" + picture.src;
+    var image = document.querySelector("#root");
+    image.innerHTML = "<img src= " + picture.src + " alt=\"meme\"/>";
 }
