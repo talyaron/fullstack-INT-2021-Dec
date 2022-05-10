@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var port = process.env.PORT || 4000;
+var port = process.env.PORT || 3000;
 app.use(express.static('public'));
 var jokes = [
     { name: "First", src: "./images/Meme1.jpg" },
