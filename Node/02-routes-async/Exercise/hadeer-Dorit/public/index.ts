@@ -1,4 +1,4 @@
-function handleImg1(){
+function handleClick1(){
     try {
         axios
           .get("/api/img1")
@@ -15,7 +15,7 @@ function handleImg1(){
         console.error(error); 
     }
 }
-function handleImg2(){
+function handleClick2(){
     try {
         axios
           .get("/api/img2")
@@ -33,7 +33,8 @@ function handleImg2(){
     }
 }
 function renderImg(img: string) {
-    const image: HTMLImageElement = document.querySelector("#imageToShow");
-    image.src = `${img}`;
+    const newImg: HTMLImageElement = document.querySelector("#imageToDisplay");
+  
+    newImg.src = `${img}`;
   }
 

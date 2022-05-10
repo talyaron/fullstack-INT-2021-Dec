@@ -1,7 +1,9 @@
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
+const { Interface } = require('readline');
 
+app.use(express.static('public'));
 app.use(express.static('public'))
 
 interface Img{
@@ -16,7 +18,7 @@ const imgs:Array<Img>= [
 app.get('/api/img1', (req, res)=>{
     try {
         
-        res.send({Img:imgs[0]['src']});
+        res.send({img:imgs[0]['src']});
 
     } catch (error) {
         res.send({error:error.message})
@@ -26,7 +28,7 @@ app.get('/api/img1', (req, res)=>{
 app.get('/api/img2', (req, res)=>{
     try {
         
-        res.send({Img:imgs[1]['src']});
+        res.send({img:imgs[1]['src']});
 
     } catch (error) {
         res.send({error:error.message})
@@ -35,5 +37,5 @@ app.get('/api/img2', (req, res)=>{
 
 
 app.listen(port, () => {
-    console.log(`Server listening on port ${port}`)
+    console.log(`Server listening on port http://localhost:${port}`)
   })
