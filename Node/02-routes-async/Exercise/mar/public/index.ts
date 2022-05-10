@@ -1,14 +1,13 @@
-function handleGetimg1() {
+function handleGetmeme1() {
   try {
-    console.log("get user 12");
-    axios
-      .get("/img1")
+    axios.get("/meme1")
       .then(({ data }) => {
         console.log(data);
-        const { img, error } = data;
+        const { memes, error } = data;
+       
         if (error) throw new Error(error);
-        console.log(img);
-        renderimg(img);
+        console.log(memes);
+        rendermeme(memes);
       })
       .catch((err) => console.error(err));
   } catch (error) {
@@ -16,19 +15,37 @@ function handleGetimg1() {
   }
 }
 
-async function handleGetimg2() {
+async function handleGetmeme2() {
   try {
-    const { data } = await axios.get("/img2");
+    const { data } = await axios.get("/meme2");
     console.log(data)
-    const { img, error } = data;
+    const { memes, error } = data;
     if (error) throw new Error(error);
-    renderimg(img)
+    rendermeme(memes)
   } catch (error) {
     console.error(error);
   }
 }
-function renderimg(images: img) {
-  const root: HTMLElement = document.querySelector("#root");
 
-  root.innerText = `The imag name is ${images.name} and his source is ${images.src}`;
+function handleGetmeme3() {
+  try {
+    axios.get("/meme3")
+      .then(({ data }) => {
+        console.log(data);
+        const { memes, error } = data;
+       
+        if (error) throw new Error(error);
+        console.log(memes);
+        rendermeme(memes);
+      })
+      .catch((err) => console.error(err));
+  } catch (error) {
+    console.error(error);
+  }
 }
+
+function rendermeme(meme:img) {
+    const image: HTMLImageElement = document.querySelector("#imageToChange");
+    image.src = `${meme.src}`;
+   
+  }
