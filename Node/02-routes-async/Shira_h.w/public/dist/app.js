@@ -34,58 +34,22 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-function handleGetmeme1() {
-    try {
-        axios.get("/meme1")
-            .then(function (_a) {
-            var data = _a.data;
-            console.log(data);
-            var memes = data.memes, error = data.error;
-            if (error)
-                throw new Error(error);
-            console.log(memes);
-            rendermeme(memes);
-        })["catch"](function (err) { return console.error(err); });
-    }
-    catch (error) {
-        console.error(error);
-    }
-}
-function handleGetmeme2() {
+function handleGetJoke1() {
     return __awaiter(this, void 0, void 0, function () {
-        var data, memes, error, error_1;
+        var data, joke, error, error_1;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
                     _a.trys.push([0, 2, , 3]);
-<<<<<<< HEAD
-                    return [4 /*yield*/, axios.get("/meme2")];
-=======
-<<<<<<< HEAD:Node/02-routes-async/Exercise/Bella_Shira/public/dist/index.js
-                    console.log("get image1");
-                    return [4 /*yield*/, axios.get("/api/image1")];
+                    console.log("get joke1");
+                    return [4 /*yield*/, axios.get("/api/joke1")];
                 case 1:
                     data = (_a.sent()).data;
                     console.log(data);
-                    image = data.image, error = data.error;
+                    joke = data.joke, error = data.error;
                     if (error)
                         throw new Error(error);
-                    renderImg(image);
-=======
-                    return [4 /*yield*/, axios.get("/img2")];
->>>>>>> 1dd32d837c74448d1bae1c337b3a87afd9abbe8e
-                case 1:
-                    data = (_a.sent()).data;
-                    console.log(data);
-                    memes = data.memes, error = data.error;
-                    if (error)
-                        throw new Error(error);
-<<<<<<< HEAD
-                    rendermeme(memes);
-=======
-                    renderimg(img);
->>>>>>> 67c347dc48daab84e3d221ccf14365f7bf7a27e3:Node/02-routes-async/Exercise/mar/public/dist/index.js
->>>>>>> 1dd32d837c74448d1bae1c337b3a87afd9abbe8e
+                    renderJoke(joke);
                     return [3 /*break*/, 3];
                 case 2:
                     error_1 = _a.sent();
@@ -96,24 +60,70 @@ function handleGetmeme2() {
         });
     });
 }
-function handleGetmeme3() {
-    try {
-        axios.get("/meme3")
-            .then(function (_a) {
-            var data = _a.data;
-            console.log(data);
-            var memes = data.memes, error = data.error;
-            if (error)
-                throw new Error(error);
-            console.log(memes);
-            rendermeme(memes);
-        })["catch"](function (err) { return console.error(err); });
-    }
-    catch (error) {
-        console.error(error);
-    }
+function handleGetJoke2() {
+    return __awaiter(this, void 0, void 0, function () {
+        var data, joke, error, error_2;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    _a.trys.push([0, 2, , 3]);
+                    console.log("get joke2");
+                    return [4 /*yield*/, axios.get("/api/joke2")];
+                case 1:
+                    data = (_a.sent()).data;
+                    console.log(data);
+                    joke = data.joke, error = data.error;
+                    if (error)
+                        throw new Error(error);
+                    renderJoke(joke);
+                    return [3 /*break*/, 3];
+                case 2:
+                    error_2 = _a.sent();
+                    console.error(error_2);
+                    return [3 /*break*/, 3];
+                case 3: return [2 /*return*/];
+            }
+        });
+    });
 }
-function rendermeme(meme) {
-    var image = document.querySelector("#imageToChange");
-    image.src = "" + meme.src;
+function handleGetJoke3() {
+    return __awaiter(this, void 0, void 0, function () {
+        var data, joke, error, error_3;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    _a.trys.push([0, 2, , 3]);
+                    console.log("get joke3");
+                    return [4 /*yield*/, axios.get("/api/joke3")];
+                case 1:
+                    data = (_a.sent()).data;
+                    console.log(data);
+                    joke = data.joke, error = data.error;
+                    if (error)
+                        throw new Error(error);
+                    renderJoke(joke);
+                    return [3 /*break*/, 3];
+                case 2:
+                    error_3 = _a.sent();
+                    console.error(error_3);
+                    return [3 /*break*/, 3];
+                case 3: return [2 /*return*/];
+            }
+        });
+    });
+}
+// function renderJoke(joke) {
+//   const root1: HTMLElement = document.querySelector("#root1");
+//   const root2: HTMLElement = document.querySelector("#root2");
+//   const root3: HTMLElement = document.querySelector("#root3");
+//   // root1.innerHTML = joke[0].title;
+//   // root1.innerHTML = joke[1].title;
+//   // root1.innerHTML = joke[2].title;
+//   root1.innerHTML = joke[0];
+//   root2.innerHTML = joke[1];
+//   root3.innerHTML = joke[2];
+// }
+function renderJoke(myjoke) {
+    var root = document.querySelector("#root");
+    root.innerHTML = "Hi! this cat:" + myjoke.title + " is " + myjoke.text + " ";
 }
