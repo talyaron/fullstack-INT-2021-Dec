@@ -9,18 +9,16 @@
 async function handleGetImg1() {
     try {
       console.log("get image1");
-    console.log("get user After fetch (2)");
+    // console.log("get user After fetch (2)");
       
       
       const { data } = await axios.get("/api/image1");
       console.log(data)
       const { image, error } = data;
-    console.log("get user After fetch (2.5)");
       
       if (error) throw new Error(error);
      
       renderImg(image);
-      console.log("get user After the end of fetch (3)");
 
     } catch (error) {
       console.error(error);

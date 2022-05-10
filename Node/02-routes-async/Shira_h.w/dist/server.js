@@ -9,7 +9,7 @@ var jokes = [
 ];
 app.get('/api/joke1', function (req, res) {
     try {
-        res.send({ joke: jokes[0] });
+        res.send({ myjoke: jokes[0] });
     }
     catch (error) {
         res.send({ error: error.message });
@@ -17,7 +17,7 @@ app.get('/api/joke1', function (req, res) {
 });
 app.get('/api/joke2', function (req, res) {
     try {
-        res.send({ joke: jokes[1] });
+        res.send({ myjoke: jokes[1] });
     }
     catch (error) {
         res.send({ error: error.message });
@@ -25,7 +25,7 @@ app.get('/api/joke2', function (req, res) {
 });
 app.get('/api/joke3', function (req, res) {
     try {
-        res.send({ joke: jokes[2] });
+        res.send({ myjoke: jokes[2] });
     }
     catch (error) {
         res.send({ error: error.message });

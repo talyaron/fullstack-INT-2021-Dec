@@ -42,17 +42,14 @@ function handleGetJoke1() {
                 case 0:
                     _a.trys.push([0, 2, , 3]);
                     console.log("get joke1");
-                    console.log("get user After fetch (2)");
                     return [4 /*yield*/, axios.get("/api/joke1")];
                 case 1:
                     data = (_a.sent()).data;
                     console.log(data);
                     joke = data.joke, error = data.error;
-                    console.log("get user After fetch (2.5)");
                     if (error)
                         throw new Error(error);
                     renderJoke(joke);
-                    console.log("get user After the end of fetch (3)");
                     return [3 /*break*/, 3];
                 case 2:
                     error_1 = _a.sent();
@@ -71,17 +68,14 @@ function handleGetJoke2() {
                 case 0:
                     _a.trys.push([0, 2, , 3]);
                     console.log("get joke2");
-                    console.log("get user After fetch (2)");
                     return [4 /*yield*/, axios.get("/api/joke2")];
                 case 1:
                     data = (_a.sent()).data;
                     console.log(data);
                     joke = data.joke, error = data.error;
-                    console.log("get user After fetch (2.5)");
                     if (error)
                         throw new Error(error);
                     renderJoke(joke);
-                    console.log("get user After the end of fetch (3)");
                     return [3 /*break*/, 3];
                 case 2:
                     error_2 = _a.sent();
@@ -100,17 +94,14 @@ function handleGetJoke3() {
                 case 0:
                     _a.trys.push([0, 2, , 3]);
                     console.log("get joke3");
-                    console.log("get user After fetch (2)");
                     return [4 /*yield*/, axios.get("/api/joke3")];
                 case 1:
                     data = (_a.sent()).data;
                     console.log(data);
                     joke = data.joke, error = data.error;
-                    console.log("get user After fetch (2.5)");
                     if (error)
                         throw new Error(error);
                     renderJoke(joke);
-                    console.log("get user After the end of fetch (3)");
                     return [3 /*break*/, 3];
                 case 2:
                     error_3 = _a.sent();
@@ -121,14 +112,18 @@ function handleGetJoke3() {
         });
     });
 }
-function renderJoke(joke) {
-    var root1 = document.querySelector("#root1");
-    var root2 = document.querySelector("#root2");
-    var root3 = document.querySelector("#root3");
-    // root1.innerHTML = joke[0].title;
-    // root1.innerHTML = joke[1].title;
-    // root1.innerHTML = joke[2].title;
-    root1.innerHTML = joke[0];
-    root2.innerHTML = joke[1];
-    root3.innerHTML = joke[2];
+// function renderJoke(joke) {
+//   const root1: HTMLElement = document.querySelector("#root1");
+//   const root2: HTMLElement = document.querySelector("#root2");
+//   const root3: HTMLElement = document.querySelector("#root3");
+//   // root1.innerHTML = joke[0].title;
+//   // root1.innerHTML = joke[1].title;
+//   // root1.innerHTML = joke[2].title;
+//   root1.innerHTML = joke[0];
+//   root2.innerHTML = joke[1];
+//   root3.innerHTML = joke[2];
+// }
+function renderJoke(myjoke) {
+    var root = document.querySelector("#root");
+    root.innerHTML = "Hi! this cat:" + myjoke.title + " is " + myjoke.text + " ";
 }

@@ -47,17 +47,14 @@ function handleGetImg1() {
                 case 0:
                     _a.trys.push([0, 2, , 3]);
                     console.log("get image1");
-                    console.log("get user After fetch (2)");
                     return [4 /*yield*/, axios.get("/api/image1")];
                 case 1:
                     data = (_a.sent()).data;
                     console.log(data);
                     image = data.image, error = data.error;
-                    console.log("get user After fetch (2.5)");
                     if (error)
                         throw new Error(error);
                     renderImg(image);
-                    console.log("get user After the end of fetch (3)");
                     return [3 /*break*/, 3];
                 case 2:
                     error_1 = _a.sent();
