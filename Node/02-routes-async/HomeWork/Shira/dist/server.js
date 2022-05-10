@@ -1,11 +1,11 @@
 var express = require('express');
 var app = express();
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 4000;
 app.use(express.static('public'));
 var jokes = [
-    { title: "First", text: "Bla" },
-    { title: "Second", text: "Bla Bla" },
-    { title: "Third", text: "Bla Bla Bla" },
+    { name: "First", src: "./images/Meme1.jpg" },
+    { name: "Second", src: "./images/Meme2.webp" },
+    { name: "Third", src: "./images/Meme3.jpg" },
 ];
 app.get('/api/joke1', function (req, res) {
     try {

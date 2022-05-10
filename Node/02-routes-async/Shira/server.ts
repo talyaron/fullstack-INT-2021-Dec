@@ -10,9 +10,9 @@ interface MyJoke{
 }
 
 const jokes:Array<MyJoke> = [
-  {name:"First", src:"Bla"},
-  {name:"Second", src:"Bla Bla"},
-  {name:"Third", src:"Bla Bla Bla"},
+  {name:"First", src:"./images/Meme1.jpg"},
+  {name:"Second", src:"./images/Meme2.webp"},
+  {name:"Third", src:"./images/Meme3.jpg"},
 ];
 
 
@@ -49,3 +49,4 @@ app.get('/api/joke1', (req, res)=>{
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`)
   })
+  
