@@ -36,7 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 function handleGetJoke1() {
     return __awaiter(this, void 0, void 0, function () {
-        var data, Myjoke, error, error_1;
+        var data, jokes, error, error_1;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -46,10 +46,10 @@ function handleGetJoke1() {
                 case 1:
                     data = (_a.sent()).data;
                     console.log(data);
-                    Myjoke = data.Myjoke, error = data.error;
+                    jokes = data.jokes, error = data.error;
                     if (error)
                         throw new Error(error);
-                    renderJoke(MyJoke);
+                    renderJoke(jokes);
                     return [3 /*break*/, 3];
                 case 2:
                     error_1 = _a.sent();
@@ -62,7 +62,7 @@ function handleGetJoke1() {
 }
 function handleGetJoke2() {
     return __awaiter(this, void 0, void 0, function () {
-        var data, MyJoke, error, error_2;
+        var data, jokes, error, error_2;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -72,10 +72,10 @@ function handleGetJoke2() {
                 case 1:
                     data = (_a.sent()).data;
                     console.log(data);
-                    MyJoke = data.MyJoke, error = data.error;
+                    jokes = data.jokes, error = data.error;
                     if (error)
                         throw new Error(error);
-                    renderJoke(MyJoke);
+                    renderJoke(jokes);
                     return [3 /*break*/, 3];
                 case 2:
                     error_2 = _a.sent();
@@ -88,7 +88,7 @@ function handleGetJoke2() {
 }
 function handleGetJoke3() {
     return __awaiter(this, void 0, void 0, function () {
-        var data, MyJoke, error, error_3;
+        var data, jokes, error, error_3;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -98,10 +98,10 @@ function handleGetJoke3() {
                 case 1:
                     data = (_a.sent()).data;
                     console.log(data);
-                    MyJoke = data.MyJoke, error = data.error;
+                    jokes = data.jokes, error = data.error;
                     if (error)
                         throw new Error(error);
-                    renderJoke(MyJoke);
+                    renderJoke(jokes);
                     return [3 /*break*/, 3];
                 case 2:
                     error_3 = _a.sent();
@@ -112,7 +112,7 @@ function handleGetJoke3() {
         });
     });
 }
-function renderJoke(MyJoke) {
+function renderJoke(jokes) {
     var root = document.querySelector("#root");
-    root.innerHTML = "<img src= " + MyJoke.src + " alt=\"meme\"/>";
+    root.innerHTML = "<img src= " + jokes.src + " alt=\"meme\"/>";
 }

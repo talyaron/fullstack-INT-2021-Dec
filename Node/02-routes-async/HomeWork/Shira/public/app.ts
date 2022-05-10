@@ -3,11 +3,11 @@ async function handleGetJoke1() {
       console.log("get joke1");
       const { data } = await axios.get("/api/joke1");
       console.log(data)
-      const { Myjoke, error } = data;
+      const { jokes, error } = data;
       
       if (error) throw new Error(error);
      
-      renderJoke(MyJoke);
+      renderJoke(jokes);
      
 
     } catch (error) {
@@ -22,11 +22,11 @@ async function handleGetJoke1() {
       
       const { data } = await axios.get("/api/joke2");
       console.log(data)
-      const { MyJoke, error } = data;
+      const { jokes, error } = data;
       
       if (error) throw new Error(error);
      
-      renderJoke(MyJoke);
+      renderJoke(jokes);
 
     } catch (error) {
       console.error(error);
@@ -39,11 +39,11 @@ async function handleGetJoke1() {
       
       const { data } = await axios.get("/api/joke3");
       console.log(data)
-      const { MyJoke, error } = data;
+      const { jokes, error } = data;
       
       if (error) throw new Error(error);
      
-      renderJoke(MyJoke);
+      renderJoke(jokes);
 
     } catch (error) {
       console.error(error);
@@ -51,8 +51,8 @@ async function handleGetJoke1() {
   }
 
 
-  function renderJoke(MyJoke: MyJoke) {
+  function renderJoke(jokes: MyJoke) {
     const root: HTMLElement = document.querySelector("#root");
   
-    root.innerHTML = `<img src= ${MyJoke.src} alt="meme"/>`;
+    root.innerHTML = `<img src= ${jokes.src} alt="meme"/>`;
   }
