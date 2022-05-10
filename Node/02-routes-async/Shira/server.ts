@@ -5,14 +5,14 @@ const port = process.env.PORT || 3000;
 app.use(express.static('public'))
 
 interface MyJoke{
-  title:string;
-  text:string;
+  name:string;
+  src:string;
 }
 
 const jokes:Array<MyJoke> = [
-  {title:"First", text:"Bla"},
-  {title:"Second", text:"Bla Bla"},
-  {title:"Third", text:"Bla Bla Bla"},
+  {name:"First", src:"Bla"},
+  {name:"Second", src:"Bla Bla"},
+  {name:"Third", src:"Bla Bla Bla"},
 ];
 
 
