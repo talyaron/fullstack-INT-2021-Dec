@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 4000;
+var Interface = require('readline').Interface;
+app.use(express.static('public'));
 app.use(express.static('public'));
 var imgs = [
     { src: 'https://us.123rf.com/450wm/clairev/clairev1608/clairev160800097/61499500-school-class-theme.jpg?ver=6', name: 'class1' },
