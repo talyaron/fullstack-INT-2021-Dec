@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Anek+Latin:wght@100;200;300;400;500;600;700&family=Beau+Rivage&family=Bellefair&family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Lily+Script+One&family=Lobster&family=Major+Mono+Display&family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Oleo+Script+Swash+Caps:wght@400;700&family=Oleo+Script:wght@400;700&family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./dist/style.css">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/8853bd68ac.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="managermenu">
+        <p class="mangeroptions section1" onclick="handleChooseSection(event)">Main Photo</p>
+        <p class="mangeroptions section2" onclick="handleChooseSection(event)">Gallery</p>
+        <p class="mangeroptions section3" onclick="handleChooseSection(event)">Products</p>
+        <p class="mangeroptions section4" onclick="handleChooseSection(event)">Section4</p>
+    </div>
+    <div class="changes">
+        <i class="fas fa-times closeicon" onclick="handleCloseIcon(event)"></i>
+        <div class="sec1 secstructor">
+            <h2>Main Photo</h2>
+            <h3 class="subject">Image</h3>
+            <input type="text" class="imgurlupload " placeholder="InsertURL" oninput="handleBackImgPhoto(event)">
+            <input type="file" class="imgfileupload" accept="'image/*" onchange="handleBackImgPhotoFile(event)">
+            <h3 class="subject">HeadLine Text</h3>
+            <input type="text" class="myfont inserttext " placeholder="Text" onkeyup="handleEditText(event)">
+            <input type="text" class="myfont fontsizeimgtext " placeholder="Size" onkeypress="handleFontSize(event)">
+            <input type="text" name="fontfamily" class="myfont" list="fontfamily" placeholder="Choose Font"
+                onchange="handleFontFamily(event)">
+            <datalist id="fontfamily">
+                <option value="Beau Rivage"></option>
+                <option value="Bellefair"></option>
+                <option value="Amaranth"></option>
+                <option value="Anek Latin"></option>
+                <option value="Cormorant Infant"></option>
+                <option value="Lily Script One"></option>
+            </datalist>
+            <input type="color" name="fontcolor" class="myfont colorsvg backcolor" onchange="handlePickColor(event)">
+            <input type="color" name="fontcolor" class="myfont strokesvg strokecolor" onchange="handlePickColor(event)">
+            <h3 class="subject">NavBar</h3>
+            <p class="explanation">*תוכל להחליף מיקומים של האופציות </p>
+            <button class="delete" draggable="true" ondragend="handleOnDrag(event)" ondragenter="handleOnEnter(event)"
+                ondrop="handleOnDropt(event)" ondragover="handleDragOver(event)"
+                ondragleave="handleDragLeave(event)">Delete</button>
+            <p class="explanation">*כדי למחוק את האופציה גרור אל כפתור המחיקה</p>
+            <input class="input createlement" type="text" placeholder="OptionName" onkeyup="handleEditText(event)">
+            <button class="btn" onclick="handleCreateElement(event)">Create</button>
+            <p class="explanation">*כדי ליצור אופציה חדשה רשום את השם ולחץ על כפתור יצירה</p>
+            <input type="color" name="fontbackcolor" class="myfont navbackground backgroundcolor"
+                onchange="handlePickColor(event)">
+            <input type="color" name="fonttextcolor" class="myfont navtextcolor textcolor"
+                onchange="handlePickColor(event)">
+        </div>
+        <div class="sec2 secstructor">
+            <h2>About</h2>
+            <h4 class="subject">Headline</h4>
+            <input type="text" class="myfont insertaboutheadline " placeholder="InsertText"
+                onkeyup="handleEditText(event)">
+            <input type="text" name="fontfamily" class="myfont aboutffheadlineinput" list="fontfamily"
+                placeholder="Change Font" onchange="handleFontFamily(event)">
+            <datalist id="fontfamily">
+                <option value="Beau Rivage"></option>
+                <option value="Bellefair"></option>
+                <option value="Amaranth"></option>
+                <option value="Anek Latin"></option>
+                <option value="Cormorant Infant"></option>
+                <option value="Lily Script One"></option>
+            </datalist>
+            <input type="text" class="myfont fontsizeheadlineabout " placeholder="Size"
+                onkeypress="handleFontSize(event)">
+            <input type="color" name="fonttextcolor" class="myfont colorheadlineabout textcolor"
+                onchange="handlePickColor(event)">
+
+            <h4 class="subject">Description</h4>
+            <textarea class="myfont descriptiontextabout " name="" id="" cols="20" rows="10" placeholder="Describe"
+                onkeyup="handleEditText(event)"></textarea>
+            <input type="text" name="fontfamily" class="myfont aboutffdescriptioninput" list="fontfamily"
+                placeholder="Change Font" onchange="handleFontFamily(event)">
+            <datalist id="fontfamily">
+                <option value="Beau Rivage"></option>
+                <option value="Bellefair"></option>
+                <option value="Amaranth"></option>
+                <option value="Anek Latin"></option>
+                <option value="Cormorant Infant"></option>
+                <option value="Lily Script One"></option>
+            </datalist>
+            <input type="text" class="myfont fontsizedescriptionabout" placeholder="Size"
+                onkeypress="handleFontSize(event)">
+            <input type="color" name="fonttextcolor" class="myfont colordescriptionabout textcolor"
+                onchange="handlePickColor(event)">
+
+            <h2>Gallery</h2>
+            <input type="text" class="myfont insertgalleryheadline " placeholder="InsertText"
+                onkeyup="handleEditText(event)">
+            <input type="text" name="fontfamily" class="myfont galleyffinput" list="fontfamily"
+                placeholder="Change Font" onchange="handleFontFamily(event)">
+            <datalist id="fontfamily">
+                <option value="Beau Rivage"></option>
+                <option value="Bellefair"></option>
+                <option value="Amaranth"></option>
+                <option value="Anek Latin"></option>
+                <option value="Cormorant Infant"></option>
+                <option value="Lily Script One"></option>
+            </datalist>
+            <input type="color" name="fontcolor" class="myfont textcolorgallery textcolor"
+                onchange="handlePickColor(event)">
+            <input type="color" name="fontcolor" class="myfont strokegallery strokecolor"
+                onchange="handlePickColor(event)">
+            <input type="color" name="fontcolor" class="myfont backcolorgallery strokecolor"
+                onchange="handlePickColor(event)">
+            <br>
+            <input type="file" class="imgfileupload" accept="'image/*" onchange="handleBackImgPhotoFile(event)">
+            <button class="btn btnaddimage" onclick="handleCreateElement(event)">Create</button>
+            <button class="delete" draggable="true" ondragend="handleOnDrag(event)" ondragenter="handleOnEnter(event)"
+                ondrop="handleOnDropt(event)" ondragover="handleDragOver(event)"
+                ondragleave="handleDragLeave(event)">Delete</button>
+        </div>
+        <div class="sec3 secstructor">
+
+        </div>
+    </div>
+
+    <header>
+        <div class="mainimg">
+            <svg class="mainheadline">
+                <text class="text" x="75%" y="95%">Club365</text>
+            </svg>
+        </div>
+        <nav class="navbar">
+            <ul class="ulnavbar">
+                <li class="navbaroption" draggable="true" ondragend="handleOnDrag(event)"
+                    ondragenter="handleOnEnter(event)" ondrop="handleOnDropt(event)" ondragover="handleDragOver(event)"
+                    ondragleave="handleDragLeave(event)">
+                    Home
+                </li>
+                <li class="navbaroption" draggable="true" ondragend="handleOnDrag(event)"
+                    ondragenter="handleOnEnter(event)" ondrop="handleOnDropt(event)" ondragover="handleDragOver(event)"
+                    ondragleave="handleDragLeave(event)">
+                    Products
+                </li>
+                <li class="navbaroption" draggable="true" ondragend="handleOnDrag(event)"
+                    ondragenter="handleOnEnter(event)" ondrop="handleOnDropt(event)" ondragover="handleDragOver(event)"
+                    ondragleave="handleDragLeave(event)">
+                    Tickets
+                </li>
+                <li class="navbaroption" draggable="true" ondragend="handleOnDrag(event)"
+                    ondragenter="handleOnEnter(event)" ondrop="handleOnDropt(event)" ondragover="handleDragOver(event)"
+                    ondragleave="handleDragLeave(event)">
+                    Reservation
+                </li>
+                <li class="navbaroption" draggable="true" ondragend="handleOnDrag(event)"
+                    ondragenter="handleOnEnter(event)" ondrop="handleOnDropt(event)" ondragover="handleDragOver(event)"
+                    ondragleave="handleDragLeave(event)"> Gallery
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="about">
+            <h2 class="aboutheadline">We Are Club365</h2>
+            <p class="aboutdescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error alias, et officia
+                tempora accusamus
+                adipisci quasi pariatur eos? Enim quas error sapiente placeat ipsum iste ipsam voluptate soluta dicta
+                ducimus Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quos aut, consequuntur fugiat
+                rem velit. Dolorum natus animi quod ipsam. Sunt neque tempore enim dolorum, aliquid numquam vitae veniam
+                facilis!</p>
+        </div>
+        <section class="gallerysec">
+            <h2 class="galleryheadline">Gallery Peek</h2>
+            <div class='carrousel'>
+                <i class="fas fa-angle-left backwards arrow" onclick="handleImageCarrousel(event)"></i>
+                <div class="carrouselimages">
+                </div>
+                <i class="fas fa-angle-right forward arrow" onclick="handleImageCarrousel(event)"></i>
+            </div>
+        </section>
+        <section class="productssec">
+            <h2>Products & Tickets</h2>
+            <div class="itemswrapper">
+                <div class="item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOko0E3RXvgxtRkgsvUWw44P3BVvqeL7v8MdeidJwKe5WS_f4N5p7d3Ht5jh386lXi80k&usqp=CAU"
+                        alt="">
+                    <div class="split">
+                        <h4 class="itemname">T-Shirt</h4>
+                        <p class="itemdescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                            omnis
+                            neque vel? Tenetur ab qui impedit distinctio officia doloribus.</p>
+                        <p class="price">1244$</p>
+                        <button class="btncart">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOko0E3RXvgxtRkgsvUWw44P3BVvqeL7v8MdeidJwKe5WS_f4N5p7d3Ht5jh386lXi80k&usqp=CAU"
+                        alt="">
+                    <div class="split">
+                        <h4 class="itemname">T-Shirt</h4>
+                        <p class="itemdescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                            omnis
+                            neque vel? Tenetur ab qui impedit distinctio officia doloribus.</p>
+                        <p class="price">1244$</p>
+                        <button class="btncart">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOko0E3RXvgxtRkgsvUWw44P3BVvqeL7v8MdeidJwKe5WS_f4N5p7d3Ht5jh386lXi80k&usqp=CAU"
+                        alt="">
+                    <div class="split">
+                        <h4 class="itemname">T-Shirt</h4>
+                        <p class="itemdescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                            omnis
+                            neque vel? Tenetur ab qui impedit distinctio officia.</p>
+                        <p class="price">1244$</p>
+                        <button class="btncart">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOko0E3RXvgxtRkgsvUWw44P3BVvqeL7v8MdeidJwKe5WS_f4N5p7d3Ht5jh386lXi80k&usqp=CAU"
+                        alt="">
+                    <div class="split">
+                        <h4 class="itemname">T-Shirt</h4>
+                        <p class="itemdescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                            omnis
+                            neque vel? Tenetur ab qui impedit distinctio officia doloribus.</p>
+                        <p class="price">1244$</p>
+                        <button class="btncart">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="item ticket">
+                    <img src="https://image.shutterstock.com/z/stock-vector-two-golden-vector-party-tickets-realistic-d-design-with-gold-confetti-on-white-background-event-772575979.jpg"
+                        alt="">
+                    <div class="split">
+                        <h4 class="itemname">Tickets</h4>
+                        <p class="itemdescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                            omnis
+                            neque vel? Tenetur ab qui impedit distinctio officia doloribus. Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Aperiam obcaecati maiores voluptatum recusandae ullam!
+                            Doloribus quis, ratione totam nostrum, maiores eligendi distinctio voluptatum tempora
+                            .</p>
+                        <p class="price">70$</p>
+                        <button class="btncart">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="formsec">
+            <form class="form" action="">
+                <i class="fab fa-twitter mediaicons"></i>
+                <fieldset>
+                    <legend>Reservation</legend>
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" name="name" class="informationinput">
+                    </div>
+                    <div>
+                        <label for="name">Phone</label>
+                        <input type="text" name="name" class="informationinput">
+                    </div>
+                    <p></p>
+                    <input type="button" name="signbtn" id="signbtn" value="Sign">
+                </fieldset>
+                <i class="fab fa-instagram mediaicons"></i>
+                <i class="fab fa-facebook-f mediaicons"></i>
+            </form>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="backimgfooter">
+            <p class="rights">All rights reserved to Club365 ®</p>
+        </div>
+    </footer>
+    <script src="./dist/script.js"></script>
+</body>
+
+</html>
