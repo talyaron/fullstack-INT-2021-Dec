@@ -1,63 +1,22 @@
-function handleGetUser1() {
+console.log("Connected!");
+function handleGetjoke1() {
     try {
-        console.log("get user 12");
-        renderLoader();
-        axios
-            .get("/api/1")
-            .then(function (_a) {
+        axios.get("/api/randomImage").then(function (_a) {
             var data = _a.data;
             console.log(data);
-            var user = data.user, error = data.error;
+            var imagetry = data;
+            var picture = data.picture, error = data.error;
             if (error)
                 throw new Error(error);
-            console.log(user);
-            renderLoader();
-            renderUser(user);
-        })["catch"](function (err) { return console.error(err); });
+            console.log(imagetry);
+            renderPicture(picture);
+        });
     }
     catch (error) {
         console.error(error);
     }
 }
-function handleGetUser2() {
-    try {
-        console.log("get user 12");
-        renderLoader();
-        axios
-            .get("/api/user1")
-            .then(function (_a) {
-            var data = _a.data;
-            console.log(data);
-            var user = data.user, error = data.error;
-            if (error)
-                throw new Error(error);
-            console.log(user);
-            renderLoader();
-            renderUser(user);
-        })["catch"](function (err) { return console.error(err); });
-    }
-    catch (error) {
-        console.error(error);
-    }
-}
-function handleGetUser3() {
-    try {
-        console.log("get user 12");
-        renderLoader();
-        axios
-            .get("/api/user1")
-            .then(function (_a) {
-            var data = _a.data;
-            console.log(data);
-            var user = data.user, error = data.error;
-            if (error)
-                throw new Error(error);
-            console.log(user);
-            renderLoader();
-            renderUser(user);
-        })["catch"](function (err) { return console.error(err); });
-    }
-    catch (error) {
-        console.error(error);
-    }
+function renderPicture(picture) {
+    var image = document.querySelector("#imageToChange");
+    image.src = "" + picture.src;
 }
