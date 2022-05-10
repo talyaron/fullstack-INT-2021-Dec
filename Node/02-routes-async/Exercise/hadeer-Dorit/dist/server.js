@@ -8,7 +8,7 @@ var imgs = [
 ];
 app.get('/api/img1', function (req, res) {
     try {
-        res.send({ Img: imgs[0] });
+        res.send({ img: imgs[0]['src'] });
     }
     catch (error) {
         res.send({ error: error.message });
@@ -16,7 +16,7 @@ app.get('/api/img1', function (req, res) {
 });
 app.get('/api/img2', function (req, res) {
     try {
-        res.send({ Img: imgs[1] });
+        res.send({ img: imgs[1]['src'] });
     }
     catch (error) {
         res.send({ error: error.message });

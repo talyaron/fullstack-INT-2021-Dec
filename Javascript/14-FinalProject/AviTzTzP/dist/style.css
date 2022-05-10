@@ -1,0 +1,428 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100%;
+  background-color: #000;
+  overflow-x: hidden;
+}
+
+.managermenu {
+  width: 100%;
+  height: max(10vh, 5rem);
+  background-color: black;
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+.managermenu p {
+  font-size: clamp(0.7rem, 1.5vw, 2rem);
+  border: 2px solid #fff;
+  padding: 1rem;
+  border-radius: 5%;
+}
+.changes {
+  position: fixed;
+  top: 0;
+  width: max(20%, 15rem);
+  height: 100vh;
+  background-color: #68667e;
+  z-index: 1;
+  display: none;
+}
+.changes .myfont {
+  width: 10rem;
+}
+.changes .closeicon {
+  display: flex;
+  justify-content: end;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  padding: 1rem;
+  cursor: pointer;
+}
+.changes .secstructor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+.changes .secstructor .imgurlupload {
+  padding: 0.7rem;
+  border-radius: 50px;
+  width: min(75%, 25vw);
+  border: 1px solid black;
+}
+.changes .secstructor .imgfileupload {
+  border-radius: 50px;
+  border: 1px solid black;
+  width: min(75%, 25vw);
+  background: white;
+}
+.changes .secstructor .imgfileupload::-webkit-file-upload-button {
+  background: black;
+  color: white;
+  padding: 0.7rem;
+  border-radius: 50px;
+  border: none;
+}
+.changes .secstructor .colorsvg {
+  position: relative;
+}
+.changes .secstructor .colorsvg::after {
+  content: "Fill Color";
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.strokecolor {
+  position: relative;
+}
+.strokecolor::after {
+  content: "Stroke Color";
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.backgroundcolor {
+  position: relative;
+}
+.backgroundcolor::after {
+  content: "BackgroundColor";
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.textcolor {
+  position: relative;
+}
+.textcolor::after {
+  content: "TextColor";
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+header {
+  width: 100vw;
+  height: max(30vh, 5rem);
+  background-color: white;
+}
+header .mainheadline {
+  font-size: max(2rem, 4vw);
+  fill: none;
+  stroke: white;
+  width: 100vw;
+  font-weight: 700;
+  height: 100%;
+  font-family: "oleo script";
+}
+header .mainimg {
+  display: flex;
+  align-items: center;
+  background-image: url("https://wallpaperaccess.com/full/2029165.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom-left-radius: 25%;
+  box-shadow: inset 0 -10px 50px white;
+  width: 100%;
+  height: max(30vh, 5rem);
+  color: white;
+}
+header .navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: min(10vh, 2.5rem);
+  background: white;
+}
+header .navbar .itementer {
+  background-color: rgba(128, 128, 128, 0.4);
+}
+header .navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: min(2rem, 2vw);
+}
+header .navbar ul li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  list-style: none;
+  font-size: clamp(0.9rem, 1vw, 2rem);
+  color: #8B03B5;
+  cursor: pointer;
+  font-weight: bold;
+}
+header .navbar ul li span {
+  color: #040520;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  margin: 2.5rem 0 0;
+}
+main .gallerysec {
+  display: flex;
+  flex-direction: column;
+  width: min(85%, 60rem);
+  height: min(50vh, 25rem);
+  border: white ridge 5px;
+  border-radius: 50px;
+  overflow: hidden;
+  margin: 4rem 0;
+}
+main .gallerysec h2 {
+  padding: 1rem 0;
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  color: #8B03B5;
+  font-family: "beau rivage";
+  text-decoration: underline;
+  text-align: center;
+  background-color: white;
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+}
+main .gallerysec .carrousel {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .gallerysec .carrousel .arrow {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: white;
+  font-size: 2rem;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+main .gallerysec .carrousel .carrouselimages {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  border: #8B03B5 solid 10px;
+}
+main .gallerysec .carrousel .carrouselimages .carrouselimage {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 19rem;
+}
+main .productssec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: fit-content;
+  background-color: #8B03B5;
+  padding-bottom: 2rem;
+}
+main .productssec h2 {
+  font-family: "beau rivage";
+  text-decoration: underline;
+  text-align: center;
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  color: black;
+  padding: 1rem;
+}
+main .productssec .itemswrapper {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 20rem);
+  gap: 1rem;
+}
+main .productssec .itemswrapper .item {
+  border: 2px solid white;
+  display: flex;
+}
+main .productssec .itemswrapper .item img {
+  width: 40%;
+}
+main .productssec .itemswrapper .item .split {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #EFC648;
+  text-align: center;
+  width: 60%;
+  padding: 1rem;
+  line-height: 1.5rem;
+  word-spacing: 0.5rem;
+  background-color: black;
+}
+main .productssec .itemswrapper .item .split .itemname {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  margin: 1rem 0 0;
+}
+main .productssec .itemswrapper .item .split .itemdescription {
+  text-align: center;
+  width: 50ch;
+  padding: 1rem;
+  background-color: black;
+  color: #EFC648;
+  border-radius: 10px;
+  border: 2px solid #efc648;
+  margin: 1rem 0;
+}
+main .productssec .itemswrapper .item .split .price {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+main .productssec .itemswrapper .item .split .btncart {
+  border: none;
+  background-color: black;
+  color: #EFC648;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+main .productssec .itemswrapper .ticket {
+  grid-column: 1/3;
+  height: 20rem;
+}
+main .productssec .itemswrapper .ticket img {
+  width: 30%;
+}
+main .productssec .itemswrapper .ticket .split {
+  justify-content: center;
+  width: 70%;
+}
+main .productssec .itemswrapper .ticket .split .itemdescription {
+  width: 75ch;
+}
+main .formsec {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 4rem;
+  width: 80%;
+  height: min(50vh, 25rem);
+}
+main .formsec .mediaicons {
+  color: transparent;
+  font-size: 2rem;
+  background-image: linear-gradient(to bottom, #8b03b5, #9f5ed1, #b896e6, #d7cbf5, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  cursor: pointer;
+}
+main .formsec .fa-instagram {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white;
+}
+main .formsec .fa-twitter {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main .formsec .fa-facebook-f {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+main .formsec fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  border: 0.4rem ridge white;
+  border-radius: 25px;
+  color: white;
+  width: min(85vw, 50rem);
+  height: 100%;
+}
+main .formsec fieldset legend {
+  font-size: 3rem;
+  margin: 2rem;
+  padding-right: 0.5rem;
+  font-family: "beau rivage";
+  color: #8B03B5;
+  font-weight: bold;
+}
+main .formsec fieldset #signbtn {
+  font-size: clamp(1.7rem, 2vw, 2.5rem);
+  font-family: "beau rivage";
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  background-color: transparent;
+  color: #8B03B5;
+}
+
+footer {
+  display: flex;
+  align-items: end;
+  width: 100%;
+  height: 20vh;
+  background-color: white;
+}
+footer .backimgfooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-image: url("https://wallpaperaccess.com/full/112112.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-right-radius: 25%;
+  box-shadow: inset 0 5px 15px white;
+  width: 100%;
+  height: max(15vh, 4rem);
+  color: white;
+}
+footer .backimgfooter .rights {
+  color: black;
+  font-size: 2rem;
+}
+
+.about {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  gap: 1rem;
+}
+.about h2 {
+  text-align: center;
+}
+.about .aboutdescription {
+  text-align: center;
+  width: 100ch;
+}

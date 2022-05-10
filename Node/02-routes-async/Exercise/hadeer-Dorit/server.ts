@@ -16,7 +16,7 @@ const imgs:Array<Img>= [
 app.get('/api/img1', (req, res)=>{
     try {
         
-        res.send({Img:imgs[0]});
+        res.send({img:imgs[0]['src']});
 
     } catch (error) {
         res.send({error:error.message})
@@ -26,7 +26,7 @@ app.get('/api/img1', (req, res)=>{
 app.get('/api/img2', (req, res)=>{
     try {
         
-        res.send({Img:imgs[1]});
+        res.send({img:imgs[1]['src']});
 
     } catch (error) {
         res.send({error:error.message})
