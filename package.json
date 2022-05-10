@@ -21,5 +21,6 @@
   "bugs": {
     "url": "https://github.com/talyaron/fullstack-INT-2021-Dec/issues"
   },
-  "homepage": "https://github.com/talyaron/fullstack-INT-2021-Dec#readme"
+  "homepage": "https://github.com/talyaron/fullstack-INT-2021-Dec#readme",
+  "devDependencies": {}
 }

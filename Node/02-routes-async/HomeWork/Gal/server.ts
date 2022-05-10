@@ -1,5 +1,4 @@
 const express = require('express');
-const { Interface } = require('readline');
 const app = express();
 const port = process.env.PORT || 4000;
 
@@ -20,23 +19,36 @@ const imageArray = [
 		name: 'woman',
 		src:
 			'https://img.freepik.com/free-photo/indoor-shot-beautiful-happy-african-american-woman-smiling-cheerfully-keeping-her-arms-folded-relaxing-indoors-after-morning-lectures-university_273609-1270.jpg?size=626&ext=jpg&ga=GA1.1.2011762371.1644019200'
-	}
+	},
+	
+	{
+	name: 'kid',
+	src:
+		'https://nationaltoday.com/wp-content/uploads/2021/04/Every-Kid-Healthy.jpg'
+}
+	
 ];
 
-app.listen(port, () => {
-	console.log(`server is listening on port ${port}`);
-});
-
-function getRandomArbitrary() {
+function getRandom() {
     return Math.round(Math.random());
   }
-
+  
+  
 app.get('/api/randomImage', (req, res)=>{
     try {
-            res.send({picture:imageArray[getRandomArbitrary()]});
+            res.send({picture:imageArray[getRandom()]});
        
     } catch (error) {
         res.send({error:error.message})
     }
 });
 
+app.listen(port, () => {
+	console.log(`server is listening on port ${port}`);
+});
+
+
+
+
+
+  
