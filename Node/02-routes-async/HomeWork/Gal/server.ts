@@ -30,7 +30,7 @@ const imageArray:Array<Picture> = [
 ];
 
   
-app.get('/api/randomImage', (req, res)=>{
+app.get('/api/Image', (req, res)=>{
     try {
             res.send({picture:imageArray[0]});
        
@@ -39,7 +39,7 @@ app.get('/api/randomImage', (req, res)=>{
     }
 });
 
-app.get('/api/randomImage', (req, res)=>{
+app.get('/api/Image', (req, res)=>{
     try {
             res.send({picture:imageArray[1]});
        
@@ -48,7 +48,7 @@ app.get('/api/randomImage', (req, res)=>{
     }
 });
 
-app.get('/api/randomImage', (req, res)=>{
+app.get('/api/Image', (req, res)=>{
     try {
             res.send({picture:imageArray[2]});
        
