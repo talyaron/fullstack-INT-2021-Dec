@@ -8,7 +8,7 @@ function handleGetMeme1() {
             var meme = data.meme, error = data.error;
             if (error)
                 throw new Error(error);
-            rendermeme(meme);
+            renderMeme(meme);
         });
     }
     catch (error) {
@@ -25,7 +25,7 @@ function handleGetMeme2() {
             var meme = data.meme, error = data.error;
             if (error)
                 throw new Error(error);
-            rendermeme(meme);
+            renderMeme(meme);
         });
     }
     catch (error) {
@@ -42,14 +42,14 @@ function handleGetMeme3() {
             var meme = data.meme, error = data.error;
             if (error)
                 throw new Error(error);
-            rendermeme(meme);
+            renderMeme(meme);
         });
     }
     catch (error) {
         console.error(error);
     }
 }
-function rendermeme(meme) {
+function renderMeme(meme) {
     var root = document.querySelector("#root");
     root.innerHTML = "<img src= " + meme.src + " alt=\"meme\"/>";
 }

@@ -7,7 +7,7 @@
         console.log(data);
         const { meme, error } = data;
         if (error) throw new Error(error);
-        rendermeme(meme);
+        renderMeme(meme);
       });
     } catch (error) {
       console.error(error);
@@ -22,7 +22,7 @@
         console.log(data);
         const { meme, error } = data;
         if (error) throw new Error(error);
-        rendermeme(meme);
+        renderMeme(meme);
       });
     } catch (error) {
       console.error(error);
@@ -37,7 +37,7 @@
         console.log(data);
         const { meme, error } = data;
         if (error) throw new Error(error);
-        rendermeme(meme);
+        renderMeme(meme);
       });
     } catch (error) {
       console.error(error);
@@ -45,7 +45,7 @@
   }
   
   
-  function rendermeme(meme: meme) {
+  function renderMeme(meme: meme) {
     const root: HTMLElement = document.querySelector("#root");
   
     root.innerHTML = `<img src= ${meme.src} alt="meme"/>`;
