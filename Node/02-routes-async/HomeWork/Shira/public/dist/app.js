@@ -115,4 +115,8 @@ function handleGetJoke3() {
 function renderJoke(jokes) {
     var root = document.querySelector("#root");
     root.innerHTML = "<img src= " + jokes.src + " alt=\"meme\"/>";
+    // if(jokes.src="Meme3.jpg"){
+    //   root.style.position="relative";
+    //   root.style.left="50vw"
+    // }
 }

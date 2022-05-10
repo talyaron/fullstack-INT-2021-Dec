@@ -55,4 +55,11 @@ async function handleGetJoke1() {
     const root: HTMLElement = document.querySelector("#root");
   
     root.innerHTML = `<img src= ${jokes.src} alt="meme"/>`;
+
+    // if(jokes.src="Meme3.jpg"){
+    //   root.style.position="relative";
+    //   root.style.left="50vw"
+    // }
+
+  
   }

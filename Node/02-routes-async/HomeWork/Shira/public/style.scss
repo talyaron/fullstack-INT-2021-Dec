@@ -10,17 +10,18 @@ body{
         margin-bottom: 20px;
         position: relative;
         left: 40vw;
-        #btn{background-color: palevioletred;
-            border-radius: 5px;
-            border: none;
-            width: 100px;
-            height: 40px;
+        #btn{
+        background-color: palevioletred;
+        border-radius: 5px;
+        border: none;
+        width: 100px;
+        height: 40px;
         }
         
+     }
+     #root{
+         position: relative;
+          left: 40vw;
+       }
+
     }
-    #root{
-        position: relative;
-        left: 40vw;
-        
-    }
-}
