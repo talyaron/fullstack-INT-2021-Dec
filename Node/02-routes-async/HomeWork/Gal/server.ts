@@ -9,7 +9,7 @@ interface Picture {
 	src: string;
 }
 
-const imageArray = [
+const imageArray:Array<Picture> = [
 	{
 		name: 'man',
 		src:
@@ -29,19 +29,34 @@ const imageArray = [
 	
 ];
 
-function getRandom() {
-    return Math.round(Math.random());
-  }
   
-  
-app.get('/api/randomImage', (req, res)=>{
+app.get('/api/Image', (req, res)=>{
     try {
-            res.send({picture:imageArray[getRandom()]});
+            res.send({picture:imageArray[0]});
        
     } catch (error) {
         res.send({error:error.message})
     }
 });
+
+app.get('/api/Image', (req, res)=>{
+    try {
+            res.send({picture:imageArray[1]});
+       
+    } catch (error) {
+        res.send({error:error.message})
+    }
+});
+
+app.get('/api/Image', (req, res)=>{
+    try {
+            res.send({picture:imageArray[2]});
+       
+    } catch (error) {
+        res.send({error:error.message})
+    }
+});
+
 
 app.listen(port, () => {
 	console.log(`server is listening on port ${port}`);
