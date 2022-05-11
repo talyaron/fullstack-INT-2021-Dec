@@ -1,6 +1,7 @@
 function handleGetUser1() {
   try {
     console.log("get user 12");
+
     axios
       .get("/api/user1")
       .then(({ data }) => {
@@ -11,6 +12,9 @@ function handleGetUser1() {
         renderUser(user);
       })
       .catch((err) => console.error(err));
+
+    console.log('try to do something')
+
   } catch (error) {
     console.error(error);
   }
@@ -20,13 +24,13 @@ async function handleGetUser2() {
   try {
     console.log("get user (1)");
     console.log("get user After fetch (2)");
-    
+
     const { data } = await axios.get("/api/user2");
     console.log(data)
     console.log("get user After fetch (2.5)");
     const { user, error } = data;
     if (error) throw new Error(error);
-   
+
     renderUser(user);
 
     console.log("get user After the end of fetch (3)");
