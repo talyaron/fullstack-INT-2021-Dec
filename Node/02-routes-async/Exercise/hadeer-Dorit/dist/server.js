@@ -25,5 +25,5 @@ app.get('/api/img2', function (req, res) {
     }
 });
 app.listen(port, function () {
-    console.log("Server listening on port " + port);
+    console.log("Server listening on port http://localhost:" + port);
 });
