@@ -5,7 +5,11 @@ app.use(express.static('public'));
 var memes = [
     { name: "meme1", src: "./imgs/img1.png" },
     { name: "meme2", src: "./imgs/img2.png" },
-    { name: "meme3", src: "./imgs/img3.png" }
+    { name: "meme3", src: "./imgs/img3.png" },
+    { name: "meme1", src: "./imgs/img1.png" },
+    { name: "meme2", src: "./imgs/img2.png" },
+    { name: "meme2", src: "./imgs/img2.png" },
+    { name: "meme2", src: "./imgs/img2.png" }
 ];
 app.get('/api/meme1', function (req, res) {
     try {
@@ -31,6 +35,16 @@ app.get('/api/meme3', function (req, res) {
     try {
         setTimeout(function () {
             res.send({ meme: memes[2] });
+        }, 100);
+    }
+    catch (error) {
+        res.send({ error: error.message });
+    }
+});
+app.get('/api/memeSurprise', function (req, res) {
+    try {
+        setTimeout(function () {
+            res.send({ meme: memes[Math.floor(Math.random() * memes.length)] });
         }, 100);
     }
     catch (error) {

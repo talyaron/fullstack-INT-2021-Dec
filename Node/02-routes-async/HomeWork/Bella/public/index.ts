@@ -44,9 +44,31 @@
     }
   }
   
+  function handleGetAllMemes() {
+    try {
+      axios
+      .get("/api/memeSurprise")
+      .then(({ data }) => {
+        console.log(data);
+        const { meme, error } = data;
+        if (error) throw new Error(error);
+        choosemMeme();
+        renderMeme(meme);
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  
+  function choosemMeme() {
+    const randomMeme = Math.floor(Math.random() * memes.length);
+    console.log(randomMeme);
+  }
   
   function renderMeme(meme: meme) {
     const root: HTMLElement = document.querySelector("#root");
   
     root.innerHTML = `<img src= ${meme.src} alt="meme"/>`;
   }
+  
+  
