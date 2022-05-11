@@ -67,7 +67,7 @@ function handleGetAllMemes() {
         console.error(error);
     }
 }
-function choosemMeme() {
+function choosemMeme(meme) {
     var randomMeme = Math.floor(Math.random() * memes.length);
     console.log(randomMeme);
 }

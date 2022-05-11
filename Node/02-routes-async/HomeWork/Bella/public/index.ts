@@ -60,7 +60,7 @@
     }
   }
   
-  function choosemMeme() {
+  function choosemMeme(meme: meme) {
     const randomMeme = Math.floor(Math.random() * memes.length);
     console.log(randomMeme);
   }

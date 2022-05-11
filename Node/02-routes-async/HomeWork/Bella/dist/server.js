@@ -6,10 +6,10 @@ var memes = [
     { name: "meme1", src: "./imgs/img1.png" },
     { name: "meme2", src: "./imgs/img2.png" },
     { name: "meme3", src: "./imgs/img3.png" },
-    { name: "meme1", src: "./imgs/img1.png" },
-    { name: "meme2", src: "./imgs/img2.png" },
-    { name: "meme2", src: "./imgs/img2.png" },
-    { name: "meme2", src: "./imgs/img2.png" }
+    { name: "meme1", src: "./imgs/img4.png" },
+    { name: "meme2", src: "./imgs/img5.png" },
+    { name: "meme2", src: "./imgs/img6.png" },
+    { name: "meme2", src: "./imgs/img7.png" }
 ];
 app.get('/api/meme1', function (req, res) {
     try {
@@ -44,7 +44,7 @@ app.get('/api/meme3', function (req, res) {
 app.get('/api/memeSurprise', function (req, res) {
     try {
         setTimeout(function () {
-            res.send({ meme: memes[Math.floor(Math.random() * memes.length)] });
+            res.send({ meme: memes[0] });
         }, 100);
     }
     catch (error) {
