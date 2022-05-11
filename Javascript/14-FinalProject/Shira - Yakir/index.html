@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/style.css">
+    <style>
+        body{
+            background-image: url(./images/gradient-background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+       <!-- Sign Up -->
+    <form onsubmit="handleSignUp(event)">
+        <h1 class="heading">Sign Up</h1>
+        <input type="text" name="UserName" id="UserName" placeholder="User name" required>
+
+        <input type="password" name="password" id="password" placeholder="Password" required>
+        <input type="password" name="repeatPassword" id="repeatPassword" placeholder="Repeat password">
+
+        <button class="btn btn--signUp" type="submit">Sign up</button>
+
+        <a class="login" href="">Alredy have an account? <span>Login</span></a>
+        <div id="signUpMsg"></div>
+
+    </form>
+
+       <!-- Login -->
+       <form onsubmit="handleLogin(event)">
+
+        <h1 class="heading">Login</h1>
+        <input type="text" name="LoginUserName" id="LoginUserName" placeholder="User name" required>
+        <input type="password" name="LoginPassword" id="LoginPassword" placeholder="Password" required>
+
+       <button class="btn btn--login">  Login </button>
+        <!-- <button type="submit">Login</button> -->
+       
+
+
+      
+        <a class="reset" href="">Forgot password?</a>
+       <div id="loginMsg"></div>
+
+    </form>
+
+    <script src="./dist/index.js"></script>
+</body>
+</html>

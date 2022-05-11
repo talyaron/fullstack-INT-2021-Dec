@@ -6,24 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dist/style.css">
-    <title>Document</title>
+    <title>Notes App</title>
 </head>
 
 <body>
-    <form onsubmit="handleNote(event)">
+    <!-- <form onsubmit="handleNote(event)">
 
-        <input type="text" name="note" placeholder="write a note">
-        <select name="formColor" id="formColor">
-            <option value="none">Select color</option>
-            <option value="red">Red</option>
-            <option value="green">Green</option>
-            <option value="blue">Blue</option>
-            <option value="yellow">Yellow</option>
-        </select>
+        <input type="text" name="note" placeholder="write a note" id="formNoteText">
+        
         <input type="submit" value="add note" id="formAddButton">
 
     </form>
     <div class="root"></div>
+    <div id="notes"></div> -->
+
+    <h1>Notes App</h1>
+  <form>
+    <textarea name="formNoteText" id="formNoteText" cols="50" rows="8" maxlength="300"></textarea>
+    <select name="formColor" id="formColor">
+      <option value="none">Select color</option>
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+      <option value="yellow">Yellow</option>
+    </select>
+    <button id="formAddButton">Add note</button>
+  </form>
+
+  <div id="notes"></div>
+
     <script src="./dist/index.js"></script>
 </body>
 

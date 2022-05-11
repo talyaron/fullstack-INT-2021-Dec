@@ -1,5 +1,27 @@
 {
-  "devDependencies": {
-    "@types/jquery": "^3.5.14"
-  }
+  "name": "fullstack-int-2021-dec",
+  "version": "1.0.0",
+  "description": "fullstack-INT-2021-Dec",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.18.1",
+    "git": "^0.1.5",
+    "mime": "^1.2.9",
+    "nodemon": "^2.0.16"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/talyaron/fullstack-INT-2021-Dec.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/talyaron/fullstack-INT-2021-Dec/issues"
+  },
+  "homepage": "https://github.com/talyaron/fullstack-INT-2021-Dec#readme",
+  "devDependencies": {}
 }

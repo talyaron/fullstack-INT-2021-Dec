@@ -1,32 +1,88 @@
 body {
-  height: 100vh;
+  background: linear-gradient(to left, white, rgba(186, 190, 184, 0.349));
+  text-align: justify;
 }
-body .Server_wrapper {
+body * {
+  font-family: monospace;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+body * button {
+  border-radius: 15%;
+}
+body * button:hover {
+  color: #f76e0c;
+  background-color: cornflowerblue;
+  transition: 200ms;
+  cursor: pointer;
+}
+body * :focus {
+  color: hotpink;
+}
+
+.Server_wrapper {
+  margin-top: 10px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
   flex-direction: column;
   gap: 20px;
+  font-size: 16px;
+  text-transform: uppercase;
 }
-body .Server_wrapper .input_fields {
-  background-color: aqua;
+.Server_wrapper button {
+  color: gray;
+  border-radius: 10%;
+}
+.Server_wrapper .input_fields {
+  display: flex;
+  flex-direction: column;
+  background-color: #faedcd54;
+  box-shadow: 2px 2px 5px #faedcd6e;
+  padding: 15px;
+  border-radius: 10%;
+  gap: 5px;
   height: 10rem;
-  width: 20rem;
+  width: 15rem;
+  margin-bottom: 0;
+  color: #3f898a;
+  letter-spacing: 0.05em;
+  text-shadow: 0 1px 0 #133d3e;
+  border-top-color: #9fb5b5;
+  border-left-color: #608586;
+  border-bottom-color: #1b4849;
+  border-right-color: #1e4d4e;
 }
-body .Server_wrapper #root {
+.Server_wrapper .input_fields :focus {
+  background-color: rgba(0, 0, 0, 0.226);
+}
+.Server_wrapper #root {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  color: blanchedalmond;
+  cursor: pointer;
 }
-body .Server_wrapper #root .test {
-  background-color: purple;
-  height: 10rem;
-  width: 40rem;
+.Server_wrapper #root .upload-product {
+  background-color: teal;
+  height: 12rem;
+  width: 25rem;
   display: flex;
-  border-radius: 2rem;
-  box-shadow: 2px 2px 5px rgba(67, 6, 93, 0.721);
+  border-radius: 0.3rem;
+  box-shadow: 3px 3px 5px rgba(121, 117, 111, 0.678);
+  position: relative;
 }
-body .Server_wrapper #root .test .test2 {
+.Server_wrapper #root .upload-product .outOfStuckText {
+  position: absolute;
+  font-size: 2em;
+  top: 8em;
+  left: 12em;
+  transform: translate(-96%, -133%);
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+}
+.Server_wrapper #root .upload-product .productInfo {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -34,21 +90,116 @@ body .Server_wrapper #root .test .test2 {
   font-size: larger;
   position: relative;
 }
-body .Server_wrapper #root .test .test2 #stock_Text {
+.Server_wrapper #root .upload-product .productInfo #stock_Text {
   position: absolute;
   top: 4em;
+  width: 100%;
 }
-body .Server_wrapper #root .test .test2 .NumInput {
+.Server_wrapper #root .upload-product .productInfo .NumInput {
   position: absolute;
-  top: 9em;
+  top: 10rem;
   width: 4rem;
+  left: 30%;
 }
-body .Server_wrapper #root .updateProduct {
-  display: none;
-  font-size: larger;
+.Server_wrapper #root .upload-product--blur {
+  opacity: 0.5;
+  background-color: #929490;
+  overflow: hidden;
 }
-body .Server_wrapper #root img {
+.Server_wrapper #root .updateProduct {
+  background-color: #faedcd54;
+  box-shadow: 2px 2px 5px #faedcd6e;
+  padding: 15px;
+  border-radius: 10%;
+  gap: 5px;
+  height: 10rem;
+  width: 15rem;
+  row-gap: 5px;
+}
+.Server_wrapper #root img {
   width: 100%;
   height: 100%;
   border-radius: 2rem 0 0 2rem;
+  overflow: hidden;
+}
+
+#nav {
+  height: 50px;
+  width: 100%;
+  background-color: rgba(128, 87, 0, 0.836);
+}
+
+.top_wrapper {
+  margin-top: 10vh;
+  background-color: rgba(245, 222, 179, 0.733);
+  box-shadow: 3px 3px 5px rgba(245, 222, 179, 0.678);
+  height: 400px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+  gap: 40px;
+  box-shadow: 3px 3px 5px rgba(185, 175, 155, 0.632);
+}
+
+.top_wrapper :hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 500ms;
+  transform: perspective(2900px) rotateY(15deg);
+}
+
+#a:hover {
+  cursor: pointer;
+  background-color: teal;
+  opacity: 0.9;
+  transition: 500ms;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+}
+.category img {
+  width: 100%;
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  box-shadow: 3px 3px 5px rgba(63, 46, 33, 0.66);
+  border-radius: 0.3rem;
+}
+.category img img:hover {
+  background-color: rgba(63, 46, 33, 0.66);
+}
+
+.Client_wrapper {
+  height: 70vh;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 150px;
+  gap: 20px;
+  justify-content: center;
+  align-content: space-around;
+}
+.Client_wrapper :hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 500ms;
+  color: blanchedalmond;
+}
+
+.item {
+  background-color: #174433;
+  height: 300px;
+  width: 170px;
+  border-style: solid black 2px;
+  perspective: 50px;
+  box-shadow: gray 2px;
+  border-radius: 0.3rem;
 }

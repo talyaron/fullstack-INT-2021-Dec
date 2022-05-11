@@ -1,0 +1,9 @@
+.astriod {
+  height: 50px;
+  width: 50px;
+  background-color: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 2s;
+}

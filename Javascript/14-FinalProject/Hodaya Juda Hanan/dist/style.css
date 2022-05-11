@@ -1,0 +1,23 @@
+p {
+  font-size: 1.8rem;
+}
+
+.cotar {
+  font-size: 5rem;
+  text-align: center;
+  color: black;
+}
+
+.products {
+  font-size: 2rem;
+  direction: rtl;
+  color: black;
+}
+.products img {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 105px;
+  height: 105px;
+  border-radius: 30%;
+}

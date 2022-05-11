@@ -1,3 +1,4 @@
+/* Global styles */
 html, * {
   box-sizing: border-box;
 }
@@ -14,9 +15,23 @@ body {
   background: #f5f5f5;
 }
 
+/* Form styles */
+textarea {
+  display: block;
+  border-radius: 0.4rem;
+}
+
+textarea,
 form select {
   background: #fff;
   border: 1px solid #520099;
+}
+
+form select,
+form button {
+  display: inline-block;
+  margin: 2rem 1rem 0 0;
+  height: 2rem;
 }
 
 #formAddButton {
@@ -31,9 +46,10 @@ form select {
 
 #formAddButton:hover {
   cursor: pointer;
-  background-color: #6fe600;
+  background-color: #e600e6;
 }
 
+/* Note Styles */
 #notes {
   display: flex;
   flex-wrap: wrap;

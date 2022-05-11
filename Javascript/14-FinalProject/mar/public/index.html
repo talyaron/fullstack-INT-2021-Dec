@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/cec039267b.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Montserrat:wght@100;200&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="dist/style.css">
+    <title>Book Store</title>
+    <style>
+        body {
+            background: #1c1c1cec;
+            color: rgb(0, 0, 0);
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="custom" onload="renderCustomer()">
+    <div class="header">
+        <div class="header__ImgLogo">
+            <img style="height: 7em;" class="headerNav__logo"
+                src="https://portjefflibrary.org/wp-content/uploads/2015/11/PJFL-logo-2015-v3-black.png" alt="">
+            <h1 class="header__title">STANDART <br> EBOOKS</h1>
+        </div>
+        <div class="header__navBar">
+            <ul>
+                <li style="font-size: 1em;"><a href=".\index.html">HOME</a></li>
+                <li onclick="handleSelectByGenre(event)" class="genreNav scienceF" id="scienceF"
+                    data-genreFilter="scienceF" value="scienceF">SCIENCE FICTION</li>
+                <li onclick="handleSelectByGenre(event)" class="genreNav detective" id="detective"
+                    data-genreFilter="detective" value="detective">DETECTIVE</li>
+                <li onclick="handleSelectByGenre(event)" class="genreNav adventures" id="adventures" class="genreNav"
+                    data-genreFilter="adventures" value="adventures">ADVENTURE</li>
+                <li onclick="handleSelectByGenre(event)" class="genreNav prose" id="prose" class="genreNav"
+                    data-genreFilter="prose" value="prose">PROSE</li>
+                <li onclick="handleSelectByGenre(event)" class="genreNav children" id="children"
+                    data-genreFilter="children" value="children">CHILDREN</li>
+                <li onclick="handleSelectByGenre(event)" class="genreNav all" id="all" data-genreFilter="all"
+                    value="all">ALL BOOKS</li>
+            </ul>
+            <div>
+                <span class="material-icons" id="cart-icon" style="cursor: pointer;">shopping_cart</span>
+                <div class="cart-notification" style="color:beige; ">0</div>
+            </div>
+        </div>
+    </div>
+    <img class="header__strapImg"
+        src="https://d1hbl61hovme3a.cloudfront.net/se3/NET/SE3_hero_banner_Adult-Librarians.jpg" alt="">
+    <div class="buttons">
+        <input class="filterByYear button " type='number' onkeyup="handleFilterByYear(event)"
+            placeholder="Year of publication">
+        <input class="filterByRank  button  " type='number' onkeyup="handleFilterByRank(event)" placeholder="Show rank">
+        <input class="filterByTitle button " type='text' onkeyup="handleFilterByTitle(event)"
+            placeholder="Search title">
+        <input class="filterByAuthor button " type='text' onkeyup="handleFilterByAuthor(event)"
+            placeholder="Search author">
+        <div class="buttons--sortAutor">
+            <button class="button" type="submit" id="ascenAuthor" onclick="handleAuthorAscen()"> Author A <ion-icon
+                    name="arrow-forward-outline"></ion-icon> Z </button>
+            <button class="button" type="submit" id="descenAuthor" onclick="handleAuthoreDescen()"> Author A <ion-icon
+                    name="arrow-back-outline"></ion-icon>
+            </button>
+        </div>
+        <div class="buttons--sortYear">
+            <button class="button" type="submit" id="ascenYear" onclick="handleYearAscen()"> Year <ion-icon
+                    name="arrow-up-outline"></ion-icon> </button>
+            <button class="button" type="submit" id="descenYear" onclick="handleYearDescen()"> Year <ion-icon
+                    name="arrow-down-outline"></ion-icon> </button>
+        </div>
+        <div class="buttons--sortRanking">
+            <button class="button" type="submit" id="ascenRanking" onclick="handleRankingAscen()"> Ranking
+                <ion-icon name="arrow-up-outline"></ion-icon>
+            </button>
+            <button class="button" type="submit" id="descenRanking" onclick="handleRankingeDescen()"> Ranking
+                <ion-icon name="arrow-down-outline"></ion-icon>
+            </button>
+        </div>
+    </div>
+    <!-- humburger -->
+    <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="nav">
+        <div class="textService ">
+            This terms of use agreement (the "Agreement") governs your use of the collection of Web pages and other
+            digital content
+            (the "Collections") available through the Internet Archive (the "Archive"). When accessing an archived page,
+            you will be
+            presented with the terms of use agreement. If you do not agree to these terms, please do not use the
+            Archive’s
+            Collections or its Web site (the "Site").
+        </div>
+        <div class="textAbout">
+            Standard Ebooks is a volunteer-driven effort to produce a collection of high quality, carefully formatted,
+            accessible,
+            open source, and free public domain ebooks that meet or exceed the quality of commercially produced ebooks.
+            The text and
+            cover art in our ebooks is already believed to be in the U.S. public domain, and Standard Ebooks dedicates
+            its own work
+            to the public domain, thus releasing the entirety of each ebook file into the public domain. All the ebooks
+            we produce
+            are distributed free of cost and free of U.S. copyright restrictions.
+        </div>
+        <div class="textContact">
+            Contact Information
+            If you would prefer to contact us by phone, our phone lines are open Monday to Saturday from 9am to 5:30pm
+            and on
+            Sundays from 10am to 4pm.
+
+            Phone lines are closed on Bank Holidays.
+
+            Please call: 0203 176 3838
+        </div>
+        <div class="links">
+            <div class="link"><a href=".\index.html">Home</a></div>
+            <div class="link linkService"><a href="#">Services</a></div>
+            <div class="link linkAbout"><a href="#">About</a></div>
+            <div class="link linkContact"><a href="#">Contact</a></div>
+        </div>
+    </div>
+
+    <div id="root"></div>
+
+    <div class='bask'>
+        <h2 class='bask__title' style="font-weight: 600">In your cart right now:</h2>
+        <div class='cart'></div>
+        <div class='bask__total' style="font-weight: 600">total is: <h3 id="total"></h3>
+            <button class="button_checkOut">Check Out</button>
+        </div>
+    </div>
+
+    <div class="buttons--scrollToTopBtn" style="display: flex; justify-content: center;">
+        <button class="button" id="scrollToTopBtn" style="display: inline-; justify-content: center;">Back to
+            top</button>
+    </div>
+
+    <div class="bottom">
+        <div class="bottom__services">
+            <a href="" style="font-size: large;">EXCLUSIVE SERVICES</a>
+            <a href="">Standart Books Services</a>
+            <a href="">Standart Books An Appointment</a>
+        </div>
+        <div class="bottom__help">
+            <a href="" style="font-size: large;">NEED HELP?</a>
+            <a href="">Contact Us</a>
+            <a href="">Shipping Services</a>
+            <a href="">Payment Options</a>
+            <a href="">Unsubscribe</a>
+        </div>
+        <div class="bottom__company">
+            <a href="" style="font-size: large;">THE COMPANY</a>
+            <a href="">About Standart Books</a>
+            <a href="">Standart Books Equilibrium</a>
+            <a href="">Code of Ethics</a>
+            <a href="">Careers</a>
+            <a href="">Privacy & Cookies</a>
+            <a href="">Corporate Information</a>
+        </div>
+        <div class="bottom__find">
+            <a href="" style="font-size: large;">FIND US ON</a>
+            <a href="">Facebook</a>
+            <a href="">Twitter</a>
+            <a href="">Instagram</a>
+            <a href="">YouTube</a>
+            <a href="">Pinterest</a>
+            <a href="">Snapchat</a>
+            <a href="">Unsubscribe</a>
+        </div>
+        <div class="bottom__sign">
+            <a href="" style="font-size: large;">SIGN UP FOR STANDART BOOKS UPDATES</a>
+            <p>By entering your email address<br> below, you consent to receiving<br> our newsletter with access<br>
+                to our latest collections,<br> events and initiatives. More<br> details on this are provided<br> in
+                our Privacy Policy</p>
+            <input type="email" name="" id="" placeholder="Email Adress"><br>
+            <p>STORE LOCATOR</p>
+            <input type="text" name="" id="" placeholder="City, Region, Contry">
+
+            <div class="bottom__sign__social-icons">
+
+                <div class="counter-container">
+                    <a
+                        href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"><i
+                            class="fab fa-twitter"></i></a>
+                    <div class="counter" data-target="1520"></div>
+                </div>
+                <div class="counter-container">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <div class="counter" data-target="890"></div>
+                </div>
+                <div class="counter-container">
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <div class="counter" data-target="930"></div>
+                </div>
+                <div class="counter-container">
+                    <a href="https://www.pinterest.com/"><i class="fab fa-pinterest"></i></a>
+                    <div class="counter" data-target="500"></div>
+                </div>
+                <div class="counter-container">
+                    <a href="https://il.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+                    <div class="counter" data-target="5478"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="storeRights">
+        <p style="color: rgb(129, 126, 126);">© 2016 - 2020 Standart Books S.p.A. - All rights reserved. SIAE LICENCE #
+            2294/I/1936 and 5647/I/1936</p>
+        <div class="clock"></div>
+    </div>
+    <script src="dist/index.js"></script>
+</body>
+
+</html>
