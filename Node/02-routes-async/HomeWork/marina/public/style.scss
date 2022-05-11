@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&family=Cairo:wght@300&family=Josefin+Sans:wght@300&family=Montserrat:wght@100;200&family=Rajdhani:wght@300&family=Red+Hat+Mono:wght@300;400&family=Special+Elite&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    background-color: rgba(36, 16, 91, 0.846);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2em;
+}
+
+button {
+    outline: none;
+    border: none;
+    padding: 10px;
+    margin: 2em;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(96, 98, 240);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.612);
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+.card {
+    img {
+        width: 500px;
+        max-height: 650px;
+        border-radius: 8px;
+        box-shadow: 2px 2px 20px black;
+    }
+    p{
+       text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.791);
+       font-size: 0.8em;
+    }
+}
+.text {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 1.7em;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.791);
+}
