@@ -16,7 +16,7 @@ var imageArray = [
         src: 'https://nationaltoday.com/wp-content/uploads/2021/04/Every-Kid-Healthy.jpg'
     }
 ];
-app.get('/api/Image', function (req, res) {
+app.get('/api/Image0', function (req, res) {
     try {
         res.send({ picture: imageArray[0] });
     }
@@ -24,7 +24,7 @@ app.get('/api/Image', function (req, res) {
         res.send({ error: error.message });
     }
 });
-app.get('/api/Image', function (req, res) {
+app.get('/api/Image1', function (req, res) {
     try {
         res.send({ picture: imageArray[1] });
     }
@@ -32,7 +32,7 @@ app.get('/api/Image', function (req, res) {
         res.send({ error: error.message });
     }
 });
-app.get('/api/Image', function (req, res) {
+app.get('/api/Image2', function (req, res) {
     try {
         res.send({ picture: imageArray[2] });
     }

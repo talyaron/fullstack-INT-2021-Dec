@@ -37,7 +37,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 console.log("Connected!");
 function handleGetjoke1() {
     return __awaiter(this, void 0, void 0, function () {
-        var data, joke, error, error_1;
+        var data, imageArray, error, error_1;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -46,7 +46,7 @@ function handleGetjoke1() {
                 case 1:
                     data = (_a.sent()).data;
                     console.log(data);
-                    joke = data.joke, error = data.error;
+                    imageArray = data.imageArray, error = data.error;
                     console.log("get user After fetch (2.5)");
                     if (error)
                         throw new Error(error);
@@ -64,7 +64,7 @@ function handleGetjoke1() {
 }
 function handleGetjoke2() {
     return __awaiter(this, void 0, void 0, function () {
-        var data, joke, error, error_2;
+        var data, imageArray, error, error_2;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -73,7 +73,7 @@ function handleGetjoke2() {
                 case 1:
                     data = (_a.sent()).data;
                     console.log(data);
-                    joke = data.joke, error = data.error;
+                    imageArray = data.imageArray, error = data.error;
                     console.log("get user After fetch (2.5)");
                     if (error)
                         throw new Error(error);
@@ -91,7 +91,7 @@ function handleGetjoke2() {
 }
 function handleGetjoke3() {
     return __awaiter(this, void 0, void 0, function () {
-        var data, joke, error, error_3;
+        var data, imageArray, error, error_3;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -100,7 +100,7 @@ function handleGetjoke3() {
                 case 1:
                     data = (_a.sent()).data;
                     console.log(data);
-                    joke = data.joke, error = data.error;
+                    imageArray = data.imageArray, error = data.error;
                     console.log("get user After fetch (2.5)");
                     if (error)
                         throw new Error(error);
@@ -116,7 +116,7 @@ function handleGetjoke3() {
         });
     });
 }
-function renderPicte(picture) {
-    var image = document.querySelector("#root");
-    image.innerHTML = "<img src= " + picture.src + " alt=\"meme\"/>";
+function renderPicte(_imageArray) {
+    var root = document.querySelector("#root");
+    root.innerHTML = 'picture ';
 }
