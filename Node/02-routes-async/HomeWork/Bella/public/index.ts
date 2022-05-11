@@ -52,7 +52,6 @@
         console.log(data);
         const { meme, error } = data;
         if (error) throw new Error(error);
-        choosemMeme();
         renderMeme(meme);
       });
     } catch (error) {
@@ -60,10 +59,10 @@
     }
   }
   
-  function choosemMeme(meme: meme) {
-    const randomMeme = Math.floor(Math.random() * memes.length);
-    console.log(randomMeme);
-  }
+//   function choosemMeme() {
+//     const randomMeme = Math.floor(Math.random() * memes.length);
+//     // console.log(randomMeme);
+//   }
   
   function renderMeme(meme: meme) {
     const root: HTMLElement = document.querySelector("#root");

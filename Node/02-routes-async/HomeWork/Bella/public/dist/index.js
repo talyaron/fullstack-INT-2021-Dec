@@ -59,7 +59,6 @@ function handleGetAllMemes() {
             var meme = data.meme, error = data.error;
             if (error)
                 throw new Error(error);
-            choosemMeme();
             renderMeme(meme);
         });
     }
@@ -67,10 +66,10 @@ function handleGetAllMemes() {
         console.error(error);
     }
 }
-function choosemMeme(meme) {
-    var randomMeme = Math.floor(Math.random() * memes.length);
-    console.log(randomMeme);
-}
+//   function choosemMeme() {
+//     const randomMeme = Math.floor(Math.random() * memes.length);
+//     // console.log(randomMeme);
+//   }
 function renderMeme(meme) {
     var root = document.querySelector("#root");
     root.innerHTML = "<img src= " + meme.src + " alt=\"meme\"/>";
