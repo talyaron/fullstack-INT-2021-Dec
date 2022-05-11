@@ -9,38 +9,37 @@ var memes = [
     { name: "meme4", src: "./imgs/img4.png" },
     { name: "meme5", src: "./imgs/img5.png" },
     { name: "meme6", src: "./imgs/img6.png" },
-    { name: "meme7", src: "./imgs/img7.png" }
+    { name: "meme7", src: "./imgs/img7.png" },
+    { name: "meme8", src: "./imgs/img8.png" },
+    { name: "meme9", src: "./imgs/img9.png" },
+    { name: "meme10", src: "./imgs/img10.png" }
 ];
-app.get('/api/meme1', function (req, res) {
-    try {
-        setTimeout(function () {
-            res.send({ meme: memes[0] });
-        }, 100);
-    }
-    catch (error) {
-        res.send({ error: error.message });
-    }
-});
-app.get('/api/meme2', function (req, res) {
-    try {
-        setTimeout(function () {
-            res.send({ meme: memes[1] });
-        }, 100);
-    }
-    catch (error) {
-        res.send({ error: error.message });
-    }
-});
-app.get('/api/meme3', function (req, res) {
-    try {
-        setTimeout(function () {
-            res.send({ meme: memes[2] });
-        }, 100);
-    }
-    catch (error) {
-        res.send({ error: error.message });
-    }
-});
+// app.get('/api/meme1', (req, res)=>{
+//     try {
+//         setTimeout(()=>{
+//             res.send({meme:memes[0]});
+//         },100)
+//     } catch (error) {
+//         res.send({error:error.message})
+//     }
+// });
+// app.get('/api/meme2', (req, res)=>{
+//     try {
+//         setTimeout(()=>{res.send({meme:memes[1]})
+//     },100)
+//     } catch (error) {
+//         res.send({error:error.message})
+//     }
+// })
+// app.get('/api/meme3', (req, res)=>{
+//     try {
+//         setTimeout(()=>{
+//             res.send({meme:memes[2]})
+//         },100 )
+//     } catch (error) {
+//         res.send({error:error.message})
+//     }
+// })
 app.get('/api/memeSurprise', function (req, res) {
     try {
         setTimeout(function () {
