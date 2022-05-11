@@ -56,7 +56,7 @@ async function handleGetjoke3() {
 function renderPicte(_imageArray) {
     const root:HTMLElement =document.querySelector("#root");
     
-    root.innerHTML = 'picture '
+    root.innerHTML = `picture ${picture.imageArray}`
   }
   
   

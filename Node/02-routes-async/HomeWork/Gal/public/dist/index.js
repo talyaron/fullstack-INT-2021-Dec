@@ -118,5 +118,5 @@ function handleGetjoke3() {
 }
 function renderPicte(_imageArray) {
     var root = document.querySelector("#root");
-    root.innerHTML = 'picture ';
+    root.innerHTML = "picture " + picture.imageArray;
 }
