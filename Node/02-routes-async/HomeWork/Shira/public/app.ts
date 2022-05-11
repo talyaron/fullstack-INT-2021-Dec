@@ -1,3 +1,5 @@
+const root: HTMLElement = document.querySelector("#root");
+
 async function handleGetJoke1() {
     try {
       console.log("get joke1");
@@ -6,7 +8,8 @@ async function handleGetJoke1() {
       const { joke, error } = data;
       
       if (error) throw new Error(error);
-     
+      root.style.position="relative";
+      root.style.left="32vw"
       renderJoke(joke);
      
 
@@ -25,7 +28,8 @@ async function handleGetJoke1() {
       const { joke, error } = data;
       
       if (error) throw new Error(error);
-     
+      root.style.position="relative";
+      root.style.left="42vw"
       renderJoke(joke);
 
     } catch (error) {
@@ -35,14 +39,14 @@ async function handleGetJoke1() {
   async function handleGetJoke3() {
     try {
       console.log("get joke3");
-      
-      
+  
       const { data } = await axios.get("/api/joke3");
       console.log(data)
       const { joke, error } = data;
       
       if (error) throw new Error(error);
-     
+      root.style.position="relative";
+      root.style.left="54vw"
       renderJoke(joke);
 
     } catch (error) {
@@ -52,14 +56,6 @@ async function handleGetJoke1() {
 
 
   function renderJoke(jokes: joke) {
-    const root: HTMLElement = document.querySelector("#root");
-  
     root.innerHTML = `<img src= ${jokes.src} alt="meme"/>`;
-
-    // if(jokes.src="Meme3.jpg"){
-    //   root.style.position="relative";
-    //   root.style.left="50vw"
-    // }
-
   
   }

@@ -4,8 +4,9 @@ var port = process.env.PORT || 3000;
 app.use(express.static('public'));
 var jokes = [
     { name: "First", src: "./images/Meme1.jpg" },
-    { name: "Second", src: "./images/Meme2.webp" },
+    { name: "Second", src: "./images/Meme2.jpg" },
     { name: "Third", src: "./images/Meme3.jpg" },
+    ,
 ];
 app.get('/api/joke1', function (req, res) {
     try {

@@ -12,8 +12,9 @@ interface joke{
   
   const jokes:Array<joke> = [
     {name:"First", src:"./images/Meme1.jpg"},
-    {name:"Second", src:"./images/Meme2.webp"},
+    {name:"Second", src:"./images/Meme2.jpg"},
     {name:"Third", src:"./images/Meme3.jpg"},
+    ,
   ];
   
   
