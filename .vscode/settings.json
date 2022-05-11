@@ -9,6 +9,6 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.trimAutoWhitespace": false,
     "editor.bracketPairColorization.enabled": true,
-    "files.autoSave": "onFocusChange",
+    "files.autoSave": "off",
     "editor.fontSize": 13,
 }
