@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 4000;
+var Interface = require('readline').Interface;
+app.use(express.static('public'));
 app.use(express.static('public'));
 var imgs = [
     { src: 'https://us.123rf.com/450wm/clairev/clairev1608/clairev160800097/61499500-school-class-theme.jpg?ver=6', name: 'class1' },
@@ -8,7 +10,7 @@ var imgs = [
 ];
 app.get('/api/img1', function (req, res) {
     try {
-        res.send({ Img: imgs[0] });
+        res.send({ img: imgs[0]['src'] });
     }
     catch (error) {
         res.send({ error: error.message });
@@ -16,12 +18,12 @@ app.get('/api/img1', function (req, res) {
 });
 app.get('/api/img2', function (req, res) {
     try {
-        res.send({ Img: imgs[1] });
+        res.send({ img: imgs[1]['src'] });
     }
     catch (error) {
         res.send({ error: error.message });
     }
 });
 app.listen(port, function () {
-    console.log("Server listening on port " + port);
+    console.log("Server listening on port http://localhost:" + port);
 });

@@ -1,0 +1,27 @@
+body{
+    background-image: url(https://t4.ftcdn.net/jpg/01/64/26/17/360_F_164261744_NnHLBEta2yJ4X4X75XjCbRuO1K0CvVZ8.jpg);
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    h1{
+        position: relative;
+        left: 42vw;
+    }
+    .buttons{
+        margin-bottom: 20px;
+        position: relative;
+        left: 40vw;
+        #btn{
+        background-color: palevioletred;
+        border-radius: 5px;
+        border: none;
+        width: 100px;
+        height: 40px;
+        }
+        
+     }
+     #root{
+         position: relative;
+          left: 40vw;
+       }
+
+    }

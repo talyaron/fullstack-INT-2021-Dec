@@ -48,6 +48,7 @@ function handleGetUser1() {
             console.log(user);
             renderUser(user);
         })["catch"](function (err) { return console.error(err); });
+        console.log('try to do something');
     }
     catch (error) {
         console.error(error);

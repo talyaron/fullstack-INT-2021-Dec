@@ -1,0 +1,8 @@
+#jokeToDisplay {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  left: 250px;
+  top: 250px;
+}
