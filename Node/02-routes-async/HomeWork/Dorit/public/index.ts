@@ -1,8 +1,4 @@
-interface Joke{
-  text:string,
-  type:number
-}
-interface Meme{
+interface JokeMeme{
   text:string,
   type:number
 }
@@ -15,7 +11,7 @@ function handleDisplay(){
             console.log(data);
             const { joke, error } = data;
             if (error) throw new Error(error);
-            console.log(joke);
+            console.log(joke.type);
             renderJoke(joke);
           })
           .catch((err) => console.error(err));
@@ -25,13 +21,14 @@ function handleDisplay(){
     }
 }
 
-function renderJoke(joke: Joke) {
+function renderJoke(joke: JokeMeme) {
     const newJoke:HTMLElement = document.querySelector("#jokeToDisplay");
-    if (joke.type=2){
+    console.log(joke.type)
+    if (joke.type===2){
       newJoke.innerHTML = `<img src= ${joke.text} alt="joke"/>`;
-    }else if(joke.type=1){
-      newJoke.innerHTML=`${joke.text}`
-    }  
+    }else if(joke.type===1){
+      newJoke.innerText=`${joke.text}`
+    }
   }
 
 
