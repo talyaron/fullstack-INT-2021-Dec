@@ -1,4 +1,4 @@
-function handleJoke() {
+function handleDisplay() {
     try {
         axios
             .get("/api/Joke")
@@ -18,5 +18,10 @@ function handleJoke() {
 }
 function renderJoke(joke) {
     var newJoke = document.querySelector("#jokeToDisplay");
-    newJoke.innerHTML = "" + joke;
+    if (joke.type = 2) {
+        newJoke.innerHTML = "<img src= " + joke.text + " alt=\"joke\"/>";
+    }
+    else if (joke.type = 1) {
+        newJoke.innerHTML = "" + joke.text;
+    }
 }

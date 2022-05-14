@@ -1,4 +1,13 @@
-function handleJoke(){
+interface Joke{
+  text:string,
+  type:number
+}
+interface Meme{
+  text:string,
+  type:number
+}
+
+function handleDisplay(){
     try {
         axios
           .get("/api/Joke")
@@ -16,9 +25,13 @@ function handleJoke(){
     }
 }
 
-function renderJoke(joke: string) {
+function renderJoke(joke: Joke) {
     const newJoke:HTMLElement = document.querySelector("#jokeToDisplay");
-  
-    newJoke.innerHTML = `${joke}`;
+    if (joke.type=2){
+      newJoke.innerHTML = `<img src= ${joke.text} alt="joke"/>`;
+    }else if(joke.type=1){
+      newJoke.innerHTML=`${joke.text}`
+    }  
   }
+
 
