@@ -1,10 +1,16 @@
+
+
+interface User{
+  name: string;
+  age: number;
+}
+
 function handleGetUser1() {
   try {
-    console.log("get user 12");
+    // @ts-ignore: cannot find module 'axios'
     axios
-      .get("/api/user1")
+      .get("/api/user1") //event loop
       .then(({ data }) => {
-        console.log(data);
         const { user, error } = data;
         if (error) throw new Error(error);
         console.log(user);
@@ -18,18 +24,15 @@ function handleGetUser1() {
 
 async function handleGetUser2() {
   try {
-    console.log("get user (1)");
-    console.log("get user After fetch (2)");
-    
-    const { data } = await axios.get("/api/user2");
-    console.log(data)
-    console.log("get user After fetch (2.5)");
+   
+   // @ts-ignore: cannot find module 'axios'
+    const  {data}  = await axios.get("/api/user2"); //event loop
+    console.log('data arrived')
     const { user, error } = data;
     if (error) throw new Error(error);
    
     renderUser(user);
 
-    console.log("get user After the end of fetch (3)");
   } catch (error) {
     console.error(error);
   }
@@ -37,6 +40,7 @@ async function handleGetUser2() {
 
 function handleGetUser3() {
   try {
+    // @ts-ignore: cannot find module 'axios'
     axios.get("/api/user3").then(({ data }) => {
       console.log(data);
       const { user, error } = data;
@@ -53,3 +57,4 @@ function renderUser(user: User) {
 
   root.innerText = `user ${user.name} is ${user.age} years old`;
 }
+

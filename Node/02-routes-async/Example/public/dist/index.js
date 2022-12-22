@@ -36,12 +36,11 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 function handleGetUser1() {
     try {
-        console.log("get user 12");
+        // @ts-ignore: cannot find module 'axios'
         axios
-            .get("/api/user1")
+            .get("/api/user1") //event loop
             .then(function (_a) {
             var data = _a.data;
-            console.log(data);
             var user = data.user, error = data.error;
             if (error)
                 throw new Error(error);
@@ -60,18 +59,14 @@ function handleGetUser2() {
             switch (_a.label) {
                 case 0:
                     _a.trys.push([0, 2, , 3]);
-                    console.log("get user (1)");
-                    console.log("get user After fetch (2)");
                     return [4 /*yield*/, axios.get("/api/user2")];
                 case 1:
                     data = (_a.sent()).data;
-                    console.log(data);
-                    console.log("get user After fetch (2.5)");
+                    console.log('data arrived');
                     user = data.user, error = data.error;
                     if (error)
                         throw new Error(error);
                     renderUser(user);
-                    console.log("get user After the end of fetch (3)");
                     return [3 /*break*/, 3];
                 case 2:
                     error_1 = _a.sent();
@@ -84,6 +79,7 @@ function handleGetUser2() {
 }
 function handleGetUser3() {
     try {
+        // @ts-ignore: cannot find module 'axios'
         axios.get("/api/user3").then(function (_a) {
             var data = _a.data;
             console.log(data);

@@ -9,17 +9,18 @@ var users = [
 ];
 app.get('/api/user1', function (req, res) {
     try {
-        setTimeout(function () {
-            res.send({ user: users[0] });
-        }, 500);
+        res.send({ user: users[0] });
     }
     catch (error) {
         res.send({ error: error.message });
     }
 });
+//route for user 2
 app.get('/api/user2', function (req, res) {
     try {
-        setTimeout(function () { res.send({ user: users[1] }); }, 5000);
+        setTimeout(function () {
+            res.send({ user: users[1] });
+        }, 3000);
     }
     catch (error) {
         res.send({ error: error.message });
@@ -27,9 +28,7 @@ app.get('/api/user2', function (req, res) {
 });
 app.get('/api/user3', function (req, res) {
     try {
-        setTimeout(function () {
-            res.send({ user: users[2] });
-        }, 10000);
+        res.send({ user: users[2] });
     }
     catch (error) {
         res.send({ error: error.message });
