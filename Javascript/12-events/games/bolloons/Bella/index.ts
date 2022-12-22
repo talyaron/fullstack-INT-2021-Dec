@@ -1,64 +1,65 @@
+const balloons: NodeListOf<HTMLImageElement> = document.querySelectorAll('.redBalloon')
+console.dir(balloons)
 
-// const getRandom = (min:number, max:number) => Math.floor(Math.random()*(max-min+1)+min);
+//making the balloons go up//
+moveBalloonsUp(balloons)
+function moveBalloonsUp(balloons: NodeListOf<HTMLImageElement>) {
+    balloons.forEach(redBalloon =>{
+    moveBalloonOnly(redBalloon)
 
-const balloons:any = document.querySelectorAll('.baloonns');
+    redBalloon.addEventListener("click", balloonExplodes);
 
-const container = document.querySelector ('.container');
-
-let i=0
-for (i; i<4; i++) {
-
-const balloons = document.createElement ('img');
-balloons.src = "./balloons.png"
-balloons.width = 200;
-
-container.appendChild (balloons);
+    // const aBalloon: HTMLImageElement = document.querySelector("balloonId");
+    }
+    )
 }
 
 
-function moveBalloons() {
-    balloons.forEach(element => {
-        element.style.top = `-12vh`;
-        element.style.left = `${getRandom()}vw`;
-    });
+function moveBalloonOnly(redBalloon: HTMLImageElement){
+    redBalloon.style.top = '112vh'
+    redBalloon.style.left = `${Math.random()*90}vw`
+ 
+    setInterval(()=> {
+        redBalloon.style.top ='-20vh'
+
+    },500)
+}
+//Create a function for a new balloon//
+function createNewBalloon(){
+const balloonId = newId();
+document.body.innerHTML +=`<img id='${balloonId}' class='redBalloon'src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Red_Balloon_%28Vector%29.svg"/>`
+const redBalloon:HTMLImageElement =document.querySelector(`#${balloonId}`)
+console.log(`The ID: ${balloonId}`)
+
+moveBalloonOnly(redBalloon)
 }
 
-function getRandom() {
-    let random = Math.floor(Math.random() * 100);
-    return random;
+//setInterval(createNewBalloon, 6000)
+
+
+//Create random id number for each balloon/
+
+function newId(){
+    return `id-${Math.ceil(Math.random()*1e8)}`
+
 }
 
-moveBalloons()
-setInterval(moveBalloons, 1000);
+//Create a function for a flying balloon at a random time//
+(function loop() {
+    let rand = Math.round(Math.random() * 10);
+    setTimeout(function () {
+        createNewBalloon();
+        console.log("Create after " + rand + " seconds");
+        loop();
+    }, rand * 1000);
+}());
 
-// create balloon
-// -> move balloon
-// in random times....
+//When you press the balloon, the balloon explodes//
 
-// const balloons:NodeListOf<HTMLImageElement> = document.querySelectorAll('.balloon')
-// console.dir(balloons)
-
-// function createBalloon(){
-//     const balloonId = uid();
-//     document.body.innerHTML += `<img id='${balloonId}' class='balloon' src="./dist/balloons.png"/>`
-
-//     const balloon:HTMLImageElement = document.querySelector(`#${balloonId}`);
-//     moveBalloon(balloon);
-// }
-
-// function moveBalloon(balloon:HTMLImageElement){
-
-//     balloon.style.top = '112vh';
-//     balloon.style.left = `${Math.random()*90}vw`
-//     setTimeout(()=>{
-//         balloon.style.top = '-12vh';
-        
-//     },100)
-// }
-
-// setInterval(createBalloon,1000)
-
-
-// function uid(){
-//     return `id-${Math.ceil(Math.random()*1e8)}`
-// }
+function balloonExplodes(event) {
+    event as HTMLElement;
+    let audio = new Audio("./dist/audio.mp3");
+    audio.play();
+    event.target.src = "./dist/boom.png";
+  }
+  

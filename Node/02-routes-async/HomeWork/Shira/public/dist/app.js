@@ -34,6 +34,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var root = document.querySelector("#root");
 function handleGetJoke1() {
     return __awaiter(this, void 0, void 0, function () {
         var data, joke, error, error_1;
@@ -49,6 +50,8 @@ function handleGetJoke1() {
                     joke = data.joke, error = data.error;
                     if (error)
                         throw new Error(error);
+                    root.style.position = "relative";
+                    root.style.left = "32vw";
                     renderJoke(joke);
                     return [3 /*break*/, 3];
                 case 2:
@@ -75,6 +78,8 @@ function handleGetJoke2() {
                     joke = data.joke, error = data.error;
                     if (error)
                         throw new Error(error);
+                    root.style.position = "relative";
+                    root.style.left = "42vw";
                     renderJoke(joke);
                     return [3 /*break*/, 3];
                 case 2:
@@ -101,6 +106,8 @@ function handleGetJoke3() {
                     joke = data.joke, error = data.error;
                     if (error)
                         throw new Error(error);
+                    root.style.position = "relative";
+                    root.style.left = "54vw";
                     renderJoke(joke);
                     return [3 /*break*/, 3];
                 case 2:
@@ -113,10 +120,5 @@ function handleGetJoke3() {
     });
 }
 function renderJoke(jokes) {
-    var root = document.querySelector("#root");
     root.innerHTML = "<img src= " + jokes.src + " alt=\"meme\"/>";
-    // if(jokes.src="Meme3.jpg"){
-    //   root.style.position="relative";
-    //   root.style.left="50vw"
-    // }
 }

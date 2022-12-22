@@ -1,17 +1,25 @@
-span {
+body {
+  margin: 0%;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-image: url(https://www.nlspacecampus.eu/cache/3/1920x1080/mob-shutterstock-481251031-20210610135721_1920x1080.jpg);
+}
+
+.wrapper1 {
+  transition: all 4000ms ease-in-out;
+  animation-name: rotate360;
+  height: 10vh;
+  position: relative;
   display: inline-block;
-  position: absolute;
-  transition: all 1000ms ease-in-out;
+  transition: all 2s;
 }
-span img {
-  width: 100%;
+.wrapper1 img {
   height: 100%;
-  /* ENDLESS ROTATE */
-  animation: rotate 4s linear infinite;
-  width: 24vw;
-  height: 24vh;
+  animation: 5s rotate360 infinite linear;
 }
-@keyframes rotate {
+
+@keyframes rotate360 {
   to {
     transform: rotate(360deg);
   }

@@ -1,48 +1,62 @@
 console.log(`Connected!`)
 
-function handleGetjoke1() {
-    try {
-        axios.get("/api/image").then(({ data }) => {
-          console.log(data);
-          const { picture, error } = data;
-          if (error) throw new Error(error);
-          renderPicture(picture);
-        });
-      } catch (error) {
-        console.error(error);
-      }
-}
-
-function handleGetjoke2() {
+async function handleGetjoke1() {
   try {
-      axios.get("/api/image").then(({ data }) => {
-        console.log(data);
-        const { picture, error } = data;
-        if (error) throw new Error(error);
-        renderPicture(picture);
-      });
-    } catch (error) {
-      console.error(error);
-    }
+    const { data } = await axios.get("/api/image0");
+    console.log(data)
+    const {imageArray, error } = data;
+  console.log("get user After fetch (2.5)");
+    
+    if (error) throw new Error(error);
+   
+    renderPicte(imageArray);
+    console.log("get user After the end of fetch (3)");
+
+  } catch (error) {
+    console.error(error);
+  }
 }
 
-function handleGetjoke3() {
+
+async function handleGetjoke2() {
   try {
-      axios.get("/api/image").then(({ data }) => {
-        console.log(data);
-        const { picture, error } = data;
-        if (error) throw new Error(error);
-        renderPicture(picture);
-      });
-    } catch (error) {
-      console.error(error);
-    }
+    const { data } = await axios.get("/api/image1");
+    console.log(data)
+    const { imageArray, error } = data;
+  console.log("get user After fetch (2.5)");
+    
+    if (error) throw new Error(error);
+   
+    renderPicte(imageArray);
+    console.log("get user After the end of fetch (3)");
+
+  } catch (error) {
+    console.error(error);
+  }
 }
 
-function renderPicture(picture:) {
-    const image: HTMLImageElement = document.querySelector("#root");
 
-    image.innerHTML = `<img src= ${picture.src} alt="meme"/>`;
+async function handleGetjoke3() {
+  try {
+    const { data } = await axios.get("/api/image2");
+    console.log(data)
+    const { imageArray, error } = data;
+  console.log("get user After fetch (2.5)");
+    
+    if (error) throw new Error(error);
+   
+    renderPicte(imageArray);
+    console.log("get user After the end of fetch (3)");
+
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+function renderPicte(_imageArray) {
+    const root:HTMLElement =document.querySelector("#root");
+    
+    root.innerHTML = `picture ${picture.imageArray}`
   }
   
   

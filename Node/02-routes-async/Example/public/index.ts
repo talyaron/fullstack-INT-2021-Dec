@@ -17,6 +17,9 @@ function handleGetUser1() {
         renderUser(user);
       })
       .catch((err) => console.error(err));
+
+    console.log('try to do something')
+
   } catch (error) {
     console.error(error);
   }
@@ -30,7 +33,7 @@ async function handleGetUser2() {
     console.log('data arrived')
     const { user, error } = data;
     if (error) throw new Error(error);
-   
+
     renderUser(user);
 
   } catch (error) {
